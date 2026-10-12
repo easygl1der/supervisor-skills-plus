@@ -20,29 +20,29 @@ Run by: experiment-workflow, pre-submission-reviewer
   paper does not say the package "recomputes every number" unless that was
   run and checked.
 - Why: Reviewers open the package to test exactly these promises.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, pre-submission-reviewer
-- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; arc:01-checklist/checklist.md AT5; arc:chat:group@2026-10-03T20:20
+- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; arc:01-checklist/checklist.md AT5; arc:chat:group@2026-10-03T20:20; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### AR-02 Analysis code moves to the package the same day
 - [ ] Check: Every analysis script that produced a printed number is in the
   package; scripts written late for revised findings were moved the day they
   were written.
 - Why: Late analysis code was the part missing from the package at the deadline.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow
-- Src: arc:chat:group@2026-10-03T20:21; arc:chat:group@2026-10-03T20:22; note:n08§5#16
+- Src: arc:chat:group@2026-10-03T20:21; arc:chat:group@2026-10-03T20:22; note:n08§5#16; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### AR-03 No secrets or frozen copies in the wrong repository
 - [ ] Check: No secrets, tokens, credentials or local databases are committed
   to any repository; frozen data is not copied into the manuscript repository.
 - Why: Secrets leak with the artifact; data copies drift from the frozen version.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, research-records
-- Src: arc:RP-04@v2; arc:FP-04@v2; arc:FP-05@v2; arc:01-checklist/checklist.md AT7
+- Src: arc:RP-04@v2; arc:FP-04@v2; arc:FP-05@v2; arc:01-checklist/checklist.md AT7; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Build and reproduction
 
@@ -80,10 +80,10 @@ Run by: experiment-workflow, pre-submission-reviewer
 - [ ] Check: The linked package is non-empty from the first day after the
   deadline; the README directory guide may follow, but code and data are there.
 - Why: Reviewers may open the link as soon as they are assigned.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, research-supervisor
-- Src: arc:chat:group@2026-10-03T23:16; arc:chat:group@2026-10-02T06:36; note:n08§5#15
+- Src: arc:chat:group@2026-10-03T23:16; arc:chat:group@2026-10-02T06:36; note:n08§5#15; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 4. Statements about the artifact
 
@@ -102,7 +102,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - [ ] Check: A project page, if any, matches the final paper (title, numbers,
   claims) and is updated in the same pass as the paper.
 - Why: A stale page contradicts the paper reviewers are reading.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow
-- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H8; arc:01-checklist/checklist.md AT6
+- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H8; arc:01-checklist/checklist.md AT6; user:2026-10-13 (promoted: failure had a clear bad outcome)

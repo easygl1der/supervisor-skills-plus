@@ -52,3 +52,4 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - New scripts: check_checklists.py (format, unique IDs, owners), check_sources.py (resolves arc:/note:/up:/skill: citations against notes and the private archive; role-based aliases for archive paths that contain names).
 - Checks: lint 13 skills clean; check_checklists 192 items clean; check_sources 851 resolved, 0 failed; shared-sync in sync.
 - Waiting for user review before merge.
+- 2026-10-13: user chose option 3; 40 items with clear bad outcomes promoted to confirmed (100 confirmed of 175 items in checklists + se + fse). Merged to main.

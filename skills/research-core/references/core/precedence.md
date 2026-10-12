@@ -110,3 +110,11 @@ Evidence from one project can still be `confirmed` when the owner decides it
 (`user:<date>`) or a published guide states it. Everything else from the
 first evidence project starts as `candidate`, except venue rules quoted from
 the official call.
+
+On 2026-10-13 the owner promoted items from the first evidence project whose
+failure had a clear bad outcome (desk-reject risk, research integrity, lost
+or overwritten work, anonymity leak, claims contradicted by the paper's own
+data) from `candidate` to `confirmed`. Their `Src` ends with
+`user:2026-10-13 (promoted: ...)`. Other first-project items stay candidates
+until a second project or a published guide supports them.
+

@@ -122,10 +122,10 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 ### FS-03 No appendix as padding
 - [ ] Check: No appendix fills pages; useful content moves into the body, the rest into the replication package with a pointer.
 - Why: Senior co-authors expected reviewers to skip it and read padding as a rejection signal.
-- Status: candidate
+- Status: confirmed
 - Scope: venue:fse
 - Owner: paper-polish, journal-adapt, pre-submission-reviewer
-- Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f
+- Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-04 Page shortfall filled by priority
 - [ ] Check: A short paper is filled by expanding thin results with explanation and examples, then method detail, then background gaps, then implications and threats.
@@ -186,26 +186,26 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 ### FS-11 Plain-text abstract in the form
 - [ ] Check: The abstract pasted into the submission form is plain text with no macros, labels or LaTeX commands.
 - Why: Macros in the form abstract render as raw commands.
-- Status: candidate
+- Status: confirmed
 - Scope: venue:fse
 - Owner: pre-submission-reviewer
-- Src: arc:chat:group@2026-10-03T18:37; arc:msr:4af1aff
+- Src: arc:chat:group@2026-10-03T18:37; arc:msr:4af1aff; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-12 Form metadata a day early
 - [ ] Check: Authors, conflicts, topics and corresponding author are entered at least a day before the deadline, conflicts by the co-author who knows the ties.
 - Why: Conflict entry took hours on deadline day in the evidence project.
-- Status: candidate
+- Status: confirmed
 - Scope: venue:fse
 - Owner: research-supervisor, pre-submission-reviewer
-- Src: arc:chat:group@2026-10-03T17:28; note:n08§5
+- Src: arc:chat:group@2026-10-03T17:28; note:n08§5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-13 Upload early
 - [ ] Check: A complete PDF is uploaded well before the deadline and replaced later if needed.
 - Why: The editor and the submission site both failed near the deadline.
-- Status: candidate
+- Status: confirmed
 - Scope: venue:fse
 - Owner: research-supervisor, pre-submission-reviewer
-- Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T23:18; note:n08§5
+- Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T23:18; note:n08§5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-14 Citations verified
 - [ ] Check: Every reference is checked against DBLP or the publisher, with the audit kept.

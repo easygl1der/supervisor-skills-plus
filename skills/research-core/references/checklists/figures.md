@@ -67,10 +67,10 @@ Run by: figure-designer, drawio-reconstruction
   spacing locally; when a panel is too small, its key text is enlarged or a
   panel is rotated before the figure is split.
 - Why: Local shrinking can break the template rules and makes floats unreadable.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: figure-designer, paper-polish
-- Src: arc:chat:group@2026-10-01T09:20; arc:chat:group@2026-10-03T11:32; note:n07§A.8 FR9; note:n07§A.8 FR13
+- Src: arc:chat:group@2026-10-01T09:20; arc:chat:group@2026-10-03T11:32; note:n07§A.8 FR9; note:n07§A.8 FR13; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Figure and text mirroring
 
@@ -196,20 +196,20 @@ Run by: figure-designer, drawio-reconstruction
   regenerated in the same commit; when a caption changed, the figure was
   re-read; previews were regenerated or deleted.
 - Why: Captions edited after the deadline no longer matched their figures.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: figure-designer, experiment-workflow
-- Src: arc:ol:ba3f1ee; arc:msr:836ee75; note:n07§A.8 FR14
+- Src: arc:ol:ba3f1ee; arc:msr:836ee75; note:n07§A.8 FR14; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FG-20 Renderers run from the replication package
 - [ ] Check: Every figure renderer runs from the replication package on the
   released data, with no hard-coded counts and no path into a private
   repository.
 - Why: A renderer that needs private files cannot be checked by artifact reviewers.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: figure-designer, experiment-workflow
-- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; note:n07§A.7; note:n07§A.8 FR16
+- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; note:n07§A.7; note:n07§A.8 FR16; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 5. Process and files
 

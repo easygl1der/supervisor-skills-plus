@@ -34,10 +34,10 @@ Field and venue profiles add items with their own prefixes; load those whose
   commit. Every Blocker it found has an owner and is treated as stop-ship.
 - Why: In the evidence project the final read-only check named the identity
   leak that later had to be fixed after the deadline; its Blockers had no owners.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, research-supervisor, check-loop
-- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B1; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B2; note:n08§5#37; note:n07§B.3
+- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B1; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B2; note:n08§5#37; note:n07§B.3; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### MA-02 No reviewer-visible markers
 - [ ] Check: The compiled PDF and the source contain no todo macros, `TODO`
@@ -68,10 +68,10 @@ Field and venue profiles add items with their own prefixes; load those whose
   conclusion than in the results.
 - Why: Cross-section mismatches were the largest single audit list in the
   evidence project's final check.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, check-loop, paper-polish
-- Src: arc:01-checklist/checklist.md A5; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md; arc:@senior-a-comments:79-100; note:n07§B.5
+- Src: arc:01-checklist/checklist.md A5; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md; arc:@senior-a-comments:79-100; note:n07§B.5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### MA-05 Devil's-advocate pass
 - [ ] Check: A devil's-advocate pass lists the strongest objections a

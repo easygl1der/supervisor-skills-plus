@@ -59,10 +59,10 @@ Run by: idea-evaluator, pre-submission-reviewer
   as the annotator's or model's reading, not as ground truth, wherever they
   are used.
 - Why: Treating a weak measure as fact overstates every claim built on it.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, paper-writer, check-loop
-- Src: arc:CF-14@v2; arc:TH-05@v2; arc:01-checklist/checklist.md C3; arc:msr:643836a; note:n06§2.6
+- Src: arc:CF-14@v2; arc:TH-05@v2; arc:01-checklist/checklist.md C3; arc:msr:643836a; note:n06§2.6; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### TH-06 Reference labels are not an oracle
 - [ ] Check: Threats state that reference labels are a consensus of the study
@@ -108,10 +108,10 @@ Run by: idea-evaluator, pre-submission-reviewer
 - [ ] Check: No result that contradicts the paper's framing was dropped; such
   results are reported and discussed.
 - Why: Dropping inconvenient results is selective reporting.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, experiment-workflow, check-loop
-- Src: arc:CF-18@v2
+- Src: arc:CF-18@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 4. Threats agree with results
 
@@ -120,7 +120,7 @@ Run by: idea-evaluator, pre-submission-reviewer
   report per group before pooling") is actually done in the results.
 - Why: A threat paragraph that promises an analysis the paper lacks is easy
   to catch.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, check-loop
-- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H12
+- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H12; user:2026-10-13 (promoted: failure had a clear bad outcome)

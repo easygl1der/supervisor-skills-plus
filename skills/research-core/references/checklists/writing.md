@@ -208,10 +208,10 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
   example severity, effort or size when only labels or elapsed time were
   measured).
 - Why: Reviewers check claims against the method section.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: paper-writer, check-loop, pre-submission-reviewer
-- Src: arc:CF-12@v2; arc:01-checklist/checklist.md W9; arc:msr:9c69675
+- Src: arc:CF-12@v2; arc:01-checklist/checklist.md W9; arc:msr:9c69675; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### WR-21 Causal words need a causal design
 - [ ] Check: Causal verbs appear only with a causal design; otherwise the

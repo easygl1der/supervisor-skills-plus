@@ -39,10 +39,10 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   version, codebook version) are the same everywhere they are printed and in
   the package.
 - Why: Mismatched identifiers suggest results come from different data.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, check-loop
-- Src: arc:RS-14@v2; arc:RP-07@v2
+- Src: arc:RS-14@v2; arc:RP-07@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Agreement values
 
@@ -64,10 +64,10 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   into one headline.
 - Why: Several values with one name made the evidence project's agreement
   story inconsistent.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, paper-writer, check-loop
-- Src: arc:10-requirements/DECISION-HINTS.md U1; arc:01-checklist/checklist.md C2
+- Src: arc:10-requirements/DECISION-HINTS.md U1; arc:01-checklist/checklist.md C2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-06 Reporting rule written once and applied everywhere
 - [ ] Check: The rule for which values print (which run, which threshold,
@@ -75,10 +75,10 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   the data availability statement.
 - Why: A rule applied in one section and broken in another reads as
   selective reporting.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, check-loop, research-records
-- Src: arc:msr:9c69675; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H1
+- Src: arc:msr:9c69675; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H1; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 3. Fixed before results
 
@@ -105,20 +105,20 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - [ ] Check: The analysis follows the planned tests; any unplanned analysis
   is labelled exploratory in the text.
 - Why: Unlabelled post-hoc analyses inflate false positives.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow, idea-evaluator
-- Src: arc:RS-01@v2; arc:RS-03@v2
+- Src: arc:RS-01@v2; arc:RS-03@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-10 Prompt versions logged
 - [ ] Check: When a model labels or generates data, each prompt version is
   kept with its agreement on the reference set, any rollback, and a one-line
   reason for the change.
 - Why: Without a version log, the reported result cannot be tied to a prompt.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: experiment-workflow
-- Src: note:n08§5#22
+- Src: note:n08§5#22; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-11 Disagreements turned into numbered rules
 - [ ] Check: Each annotation disagreement that changed the guidelines is

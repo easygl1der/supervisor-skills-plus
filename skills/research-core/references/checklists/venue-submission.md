@@ -70,10 +70,10 @@ Run by: pre-submission-reviewer
   not need to be in the paper (long definitions, label tables) is in the
   replication package with a pointer and, if needed, a compact table.
 - Why: Reviewers do not read padding appendices, and they cost pages.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: paper-polish, pre-submission-reviewer
-- Src: arc:chat:group@2026-10-01T08:47; arc:chat:group@2026-10-01T08:48; arc:chat:group@2026-10-01T09:26; arc:msr:464168f; note:n08§5#11
+- Src: arc:chat:group@2026-10-01T08:47; arc:chat:group@2026-10-01T08:48; arc:chat:group@2026-10-01T09:26; arc:msr:464168f; note:n08§5#11; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-07 Figure descriptions match the layout
 - [ ] Check: Where the template requires figure descriptions (alt text),
@@ -102,25 +102,25 @@ Run by: pre-submission-reviewer
   author were entered in the submission system at least a day before the
   deadline; the co-author who knows the community entered the conflicts.
 - Why: Form problems found in the last hours compete with paper fixes.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, research-supervisor
-- Src: arc:chat:group@2026-10-01T21:05; arc:chat:group@2026-10-03T17:28; note:n08§5#31
+- Src: arc:chat:group@2026-10-01T21:05; arc:chat:group@2026-10-03T17:28; note:n08§5#31; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-10 Plain-text abstract in the form
 - [ ] Check: The abstract pasted into the submission form is plain text with
   no macros, labels or markup.
 - Why: Macros do not compile in the form and show as raw code.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer
-- Src: arc:chat:group@2026-10-03T18:40; arc:chat:group@2026-10-03T18:43; note:n08§5#30
+- Src: arc:chat:group@2026-10-03T18:40; arc:chat:group@2026-10-03T18:43; note:n08§5#30; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-11 Early complete upload
 - [ ] Check: A complete PDF was uploaded well before the deadline and then
   replaced by later versions.
 - Why: Editors and submission systems go down near deadlines.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: pre-submission-reviewer, research-supervisor
-- Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T19:59; note:n08§5#4
+- Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T19:59; note:n08§5#4; user:2026-10-13 (promoted: failure had a clear bad outcome)

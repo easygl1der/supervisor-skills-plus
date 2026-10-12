@@ -60,10 +60,10 @@ Run by: pre-submission-reviewer, experiment-workflow
 - [ ] Check: The anonymous artifact presents itself through a complete README
   rather than a rendered project web page.
 - Why: Web pages carry names in templates and metadata that are easy to miss.
-- Status: candidate
+- Status: confirmed
 - Scope: venue:double-anonymous
 - Owner: experiment-workflow, pre-submission-reviewer
-- Src: arc:chat:group@2026-10-06T05:09; note:n08§5#13
+- Src: arc:chat:group@2026-10-06T05:09; note:n08§5#13; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### DB-06 Mirror refreshed and re-checked after every change
 - [ ] Check: After every artifact change, including after the deadline and
@@ -71,10 +71,10 @@ Run by: pre-submission-reviewer, experiment-workflow
   search re-run on the mirrored copy.
 - Why: A stale mirror can hide a leak in the source, and a refresh can
   publish one.
-- Status: candidate
+- Status: confirmed
 - Scope: venue:double-anonymous
 - Owner: experiment-workflow, pre-submission-reviewer
-- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H8; arc:01-checklist/checklist.md AT2; note:n08§2.7; unverified (co-author origin of the item)
+- Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H8; arc:01-checklist/checklist.md AT2; note:n08§2.7; unverified (co-author origin of the item); user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### DB-07 Artifact name and citation are venue-neutral
 - [ ] Check: The artifact's name and suggested citation do not name the venue
@@ -93,7 +93,7 @@ Run by: pre-submission-reviewer, experiment-workflow
   and none appear in their history.
 - Why: Private material in a shared repository leaks identity and other
   people's work.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records, experiment-workflow, pre-submission-reviewer
-- Src: arc:msr:f1c7df8; arc:msr:c8adb43; arc:01-checklist/checklist.md AT7; note:n08§5#8
+- Src: arc:msr:f1c7df8; arc:msr:c8adb43; arc:01-checklist/checklist.md AT7; note:n08§5#8; user:2026-10-13 (promoted: failure had a clear bad outcome)

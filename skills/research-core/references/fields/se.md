@@ -238,10 +238,10 @@ reference, not targets. [src: note:n06§3] (candidate)
 ### SE-04 Calendar time is not effort
 - [ ] Check: No sentence reads time-to-close as effort, labour, cost or difficulty.
 - Why: Only tracker time was measured.
-- Status: candidate
+- Status: confirmed
 - Scope: field:se
 - Owner: paper-polish, check-loop
-- Src: arc:CF-29@v2; note:n02§8
+- Src: arc:CF-29@v2; note:n02§8; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-05 Durations: censoring and import artifacts
 - [ ] Check: Open items are handled by a survival estimate or an explicit statement, and items closed by a tracker import or migration are excluded from durations and disclosed.
@@ -286,10 +286,10 @@ reference, not targets. [src: note:n06§3] (candidate)
 ### SE-10 Text-coded strategy and code size
 - [ ] Check: Claims about change size rest on diff statistics, not on text-coded strategy labels.
 - Why: Text-derived strategy says nothing about code size.
-- Status: candidate
+- Status: confirmed
 - Scope: field:se
 - Owner: check-loop, pre-submission-reviewer
-- Src: arc:CF-13@v2; note:n07§B.5
+- Src: arc:CF-13@v2; note:n07§B.5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-11 Stratify before pooling
 - [ ] Check: Every pooled result is checked per group; a dominant group gets an equal-weight view; exceptions are named in the same sentence.
@@ -350,10 +350,10 @@ reference, not targets. [src: note:n06§3] (candidate)
 ### SE-18 No appendix as padding
 - [ ] Check: Under an all-in page limit no appendix fills pages; a compact codebook table stays in the body, definitions go to the package.
 - Why: Senior co-authors judged padding appendices a rejection risk.
-- Status: candidate
+- Status: confirmed
 - Scope: field:se
 - Owner: journal-adapt, paper-polish, pre-submission-reviewer
-- Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f
+- Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-19 Strongest counter-argument
 - [ ] Check: A written strongest counter-argument to the main claim exists and the paper answers it.

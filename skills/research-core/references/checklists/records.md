@@ -50,10 +50,10 @@ Run by: research-records, research-supervisor, feedback-to-revision
   explicitly and checked; sync filters keep non-manuscript files out of the
   shared editor.
 - Why: Co-authors kept editing a copy that the push had not updated.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records
-- Src: arc:CO-02@v2; arc:chat:1on1@2026-09-29T11:10; arc:CO-04@v2; arc:msr:c93ef1f
+- Src: arc:CO-02@v2; arc:chat:1on1@2026-09-29T11:10; arc:CO-04@v2; arc:msr:c93ef1f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-05 Diffstat read after agent writes
 - [ ] Check: After every agent write to a shared document the diffstat was
@@ -69,10 +69,10 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - [ ] Check: In the last 24 hours before the deadline one channel was used,
   one person edited at a time, and the pen was handed over explicitly.
 - Why: Parallel edits in the last hours caused a merge storm and lost edits.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-supervisor, research-records
-- Src: note:n08§1.3; note:n08§5#3
+- Src: note:n08§1.3; note:n08§5#3; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-07 Senior bulk edits checked against agreed requirements
 - [ ] Check: A large edit from a co-author was compared with earlier agreed
@@ -88,10 +88,10 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - [ ] Check: Agents commit only when a human asks, stay out of sections a
   human fenced off, and close only notes marked as agent-resolvable.
 - Why: Unasked agent commits and closures hid work and notes.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records, feedback-to-revision, check-loop
-- Src: arc:CO-05@v2; arc:CO-06@v2; arc:msr:9809b8c; note:n08§5#7
+- Src: arc:CO-05@v2; arc:CO-06@v2; arc:msr:9809b8c; note:n08§5#7; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-09 Dashboards are views
 - [ ] Check: The authoritative state of data and reviews is a file that can
@@ -110,10 +110,10 @@ Run by: research-records, research-supervisor, feedback-to-revision
   has a one-line note (why, owner, restore condition) and appears in
   `docs/STATUS.md`; all are decided before the final pass.
 - Why: A parked result disappeared from the paper for a day unnoticed.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records, paper-writer, check-loop
-- Src: arc:msr:7c705c9; arc:msr:5262231; note:n06§2.9
+- Src: arc:msr:7c705c9; arc:msr:5262231; note:n06§2.9; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 3. Feedback closure
 
@@ -242,10 +242,10 @@ Run by: research-records, research-supervisor, feedback-to-revision
   diff, page); a tick without evidence is reported as unknown.
 - Why: Ticked items in the evidence project were contradicted by the final
   paper, and verified items stayed unticked.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records, check-loop, pre-submission-reviewer
-- Src: note:n07§B.3; note:n07§B.4; arc:RS-17@v2
+- Src: note:n07§B.3; note:n07§B.4; arc:RS-17@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-24 Checklist provenance verified by hand
 - [ ] Check: Every checklist item's source was written by hand from a primary
@@ -253,10 +253,10 @@ Run by: research-records, research-supervisor, feedback-to-revision
   the item stays advisory.
 - Why: Keyword-matched provenance named the wrong person for many items and
   turned agent suggestions into a senior's comments.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records, lessons-harvest, research-core
-- Src: note:n07§B.4; arc:01-checklist/enriched/README.md
+- Src: note:n07§B.4; arc:01-checklist/enriched/README.md; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 6. After submission
 
@@ -264,7 +264,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - [ ] Check: After the deadline the submitted version was synced back into
   the repository and tagged.
 - Why: The repository otherwise ends before the submitted text.
-- Status: candidate
+- Status: confirmed
 - Scope: core
 - Owner: research-records
-- Src: note:n08§1.2; note:n08§5#40
+- Src: note:n08§1.2; note:n08§5#40; user:2026-10-13 (promoted: failure had a clear bad outcome)
