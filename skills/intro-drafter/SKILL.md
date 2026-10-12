@@ -1,13 +1,14 @@
 ---
 name: intro-drafter
 description: >-
-  Drafts the Introduction prose for a technical paper, guided internally by
-  a six-paragraph flowchart: background and running example, existing
-  limitations, problem essence and goal, key challenges, solution overview,
-  contributions. Positions the paper as Technique or New Problem/Setting,
-  aligns contributions with challenges, and weaves verified citations.
-  Outputs flowing prose by default, or an outline on request. Use when the
-  user asks to draft, outline, or restructure an Introduction.
+  Drafts the Introduction prose for a research paper. Technique and
+  new-problem papers (AI/ML/systems) follow a six-paragraph flowchart:
+  background and running example, limitations, goal, challenges, solution
+  overview, contributions. RQ-driven empirical studies follow a route from
+  outsider context through research-question blocks to contributions.
+  Weaves verified citations and outputs flowing prose by default, or an
+  outline on request. Use when the user asks to draft, outline, or
+  restructure an Introduction.
 license: CC-BY-NC-SA-4.0
 ---
 
@@ -61,6 +62,42 @@ See: references/evidence-discipline.md and references/prose-delivery.md
 - Prose exists and needs polishing: `paper-polish`.
 - The user wants a submission-readiness verdict: `pre-submission-reviewer`.
 
+## Step 0: Load context
+
+Load `research-core` and follow its Step 0:
+
+1. Read `research.yaml`: `field`, `venue`, `paper_type`, `review` (page
+   budget), `source_of_truth.numbers`.
+2. Load the core rules `precedence.md`, `claims-evidence.md` and
+   `body-text.md`.
+3. Load the field profile `fields/<field>.md` (its "Paper types",
+   "Typical structure" introduction line, "What reviewers and advisors
+   care about" and "Known disagreements", which settle the contribution
+   format) and the venue profile `venues/<venue>.md` when it exists.
+4. Load the `writing` checklist and the field additions whose scope
+   matches.
+5. If `paper-writer` Phase 0 produced a claim ledger, read it: findings
+   and numbers in the Introduction come from it.
+
+Without `research.yaml`, decide the route from the user's material (RQs
+with findings mean the empirical route; a method with challenges means the
+six-paragraph route) and say which route was taken.
+
+## Choose the route
+
+| Paper | Route |
+|---|---|
+| `technique` or new problem/setting (AI/ML, databases, systems) | Core procedure below: six paragraphs, challenges mapped to modules |
+| `empirical-study` (RQ-driven mining, survey or qualitative study) | Empirical route below |
+| `benchmark` | `benchmark-paper-template` |
+| `theory` or `field: math` | `paper-writer` math route (statement-driven introduction) |
+| Non-STEM by method | `paper-writer` CER planning |
+
+The six-paragraph flowchart and its limitations-to-challenges-to-modules
+chain come from AI/ML and database conference practice. Do not force an
+empirical study or a theorem paper through it: an RQ-driven study has no
+modules, and inventing "challenges" for it produces the wrong paper type.
+
 ## Pre-check: STEM or not
 
 The six-paragraph model (background, limitations, goal, challenges,
@@ -71,7 +108,10 @@ whose CER planning covers those paradigms, while all evidence rules still
 apply. The test is the research method: experiments, benchmarks, models, or
 algorithms come here; everything else routes to `paper-writer`.
 
-## Core procedure (STEM)
+## Core procedure (STEM technique and new-problem papers)
+
+This procedure is AI/ML/systems-oriented (the challenges-to-modules
+chain). Empirical studies use the empirical route further below.
 
 Internal thinking first, prose second. None of the intermediate thinking is
 printed.
@@ -167,10 +207,47 @@ gaps the user should fill, a paragraph written tentatively for lack of
 input, or the running-example request from Step 3. No tables, no lists, no
 severity labels. Nothing useful to say means no note at all.
 
+## Empirical route (RQ-driven studies)
+
+For papers that answer research questions rather than propose a method.
+[src: note:n06§3; arc:@senior-a-comments:8-29; arc:CF-01@v2; arc:CF-03@v2] (candidate)
+
+See: references/empirical-intro.md
+
+Internal planning, then prose, as in the core procedure:
+
+1. **Inputs.** The final RQs; for each RQ two or three findings with their
+   claim-ledger rows; the prior work or assumption each RQ tests, with
+   citations; the phenomenon figure if the author has one; one exemplar
+   introduction from the target venue for a comparable niche topic. A
+   missing input is reported in the closing note, never invented.
+2. **Outsider question first.** The opening blocks say what the studied
+   object is and why its problems cost something a general reader of the
+   venue cares about, then why the data source matters to the field and
+   how this domain differs, before any method.
+3. **Gap.** What prior work covers and misses; the assumptions carried
+   over from other domains, each cited; then "To our knowledge, no prior
+   work ..." once.
+4. **Scope sentence**, then "We investigate N research questions."
+5. **One RQ block per research question**: the question in full and in
+   bold; one sentence of the form "<why the field cares>, so we <what this
+   RQ tests>"; two or three scoped "We find that ..." sentences taken
+   from the ledger.
+6. **Method in one sentence** (data, instrument, validation, application).
+7. **Contributions in the venue's format**: itemized or not, as the venue
+   profile or `journal-adapt` decides; each contribution points to a
+   section or artifact.
+8. **Roadmap** paragraph, unless the venue's exemplars omit it.
+
+Tense, numbers and hedging follow the field profile. Whether RQ findings
+carry exact numbers is decided once for the paper, with the abstract,
+summary boxes and conclusion.
+
 ## What the user receives
 
 - Six paragraphs of Introduction prose separated by blank lines, citations
-  as `[1]`, `[2]`, ...
+  as `[1]`, `[2]`, ... (empirical route: the blocks above, with RQ
+  questions in bold and contributions in the venue's format).
 - A References list right after the prose, when citations are present.
 - Optionally, one one-to-three-line plain note.
 
@@ -188,6 +265,10 @@ then the five consistency checks (running-example loop,
 limitations-to-challenges, goal-to-contribution-1, challenge-to-module
 mapping, contribution-to-section mapping). The same internal planning,
 externalized once, on request.
+
+For the empirical route the outline lists each block's purpose and points,
+each RQ with its why sentence and the ledger rows behind its findings, and
+the checks in section 7 of references/empirical-intro.md.
 
 ## Tone references
 
@@ -209,3 +290,39 @@ through that skill's references when finer wording support is needed.
 Follow an explicit language request first; a named Chinese journal or
 Chinese thesis means Chinese prose; otherwise default to English. Never
 infer the output language from the language of the user's message.
+
+## Checklist
+
+Run the research-core `writing` checklist items this skill owns, plus the
+field additions whose scope matches, on the drafted Introduction:
+
+- WR-03 outsider question answered first; WR-04 research questions (or
+  contributions) stated in full; WR-05 exemplar for introducing the niche
+  read; WR-24 novelty claims scoped and stated once.
+- Also, because the Introduction carries findings: WR-16 number diet,
+  WR-18 hedging, WR-19 scope, WR-20 nothing claimed that was not measured.
+- Field additions: SE-01 for `field: se`; ML-01, ML-02, ML-06 for
+  `field: ai-ml` (six-paragraph route); the owned items of other loaded
+  profiles. FG-17 when the Introduction has a figure.
+
+Report each item as pass, fail, n/a or unknown with evidence (the sentence
+or block, the ledger row). `candidate` items are advisory. The report goes
+to the author outside the prose; the delivered Introduction stays clean.
+
+## Outputs
+
+- The Introduction prose and its References list.
+- An optional closing note of at most three lines.
+- On request: the outline (Outline mode) and the checklist report.
+
+## Hand-offs
+
+- After drafting: `check-loop` for the multi-round research-fit,
+  venue-fit and language checks.
+- AI tone in the draft or in pasted text: `deai-writing`.
+- Comments on the Introduction from co-authors, advisors or reviewers:
+  `feedback-to-revision`.
+- Contribution-list format or the venue's way of introducing a niche:
+  `journal-adapt`.
+- The rest of the paper, or the claim ledger the findings need:
+  `paper-writer`.

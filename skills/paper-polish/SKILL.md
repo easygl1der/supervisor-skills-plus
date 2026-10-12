@@ -38,6 +38,29 @@ said.
 - The user wants the paper's logic skeleton planned. Use `tech-paper-template`.
 - The user wants a reviewer-style audit of the manuscript. Use
   `pre-submission-reviewer`.
+- The user wants repeated rounds until the text passes (research fit, then
+  venue fit, then language), or a whole-manuscript loop with a round
+  budget. Use `check-loop`. This skill stays a single pass.
+
+## Step 0: Load context
+
+Load `research-core` and follow its Step 0:
+
+1. Read `research.yaml`: `field`, `venue`, `paper_type`, `review` (page
+   budget, appendix rule), `style.overlays`.
+2. Load the core rules `precedence.md`, `claims-evidence.md`,
+   `body-text.md` and `deai.md`.
+3. Load the field profile `fields/<field>.md` ("Tone and phrasing",
+   "Typical structure", "Known disagreements"), the venue profile
+   `venues/<venue>.md` when it exists, and only the overlays that
+   `style.overlays` names.
+4. Load the `writing` checklist and the field additions whose scope
+   matches.
+5. If a term table exists in the project (from `paper-writer` or the
+   appendix), load it: polishing never changes a locked term.
+
+Without `research.yaml`, polish with the generic conventions below and say
+that no field or venue profile was applied.
 
 ## The overriding rule: stay faithful to the author's meaning
 
@@ -119,6 +142,37 @@ A workable sequence; it is a method, not a ritual:
 4. **Account for the changes.** Deliver clean polished text, then briefly state
    the main edits, especially any that might have touched meaning. Details in
    "How to deliver".
+
+This is one pass. When the author wants the text checked again after the
+edits, or wants research fit and venue fit checked before language, hand
+off to `check-loop`, which runs rounds with an oscillation guard and a
+round budget. Do not loop here.
+
+## Field- and venue-aware pass
+
+The loaded profiles change what "better" means in step 3:
+
+- **Section shapes** come from the field profile when it has them (for an
+  empirical SE paper: bold scoped finding, figure or table sentence with
+  its numbers, detail; an "RQn Summary" box without recommendations). The
+  generic section conventions below apply where the profile is silent. A
+  conflict is settled by the precedence order in research-core.
+- **Tone, tense and hedging** follow the field profile's "Tone and
+  phrasing"; where the profile lists a point as Unknown (for example
+  tense of findings in SE), keep the author's choice and make it
+  consistent.
+- **Venue rules**: page budget, abstract limit, anonymity wording,
+  required sections. Report the page effect of large cuts or expansions.
+- **Overlays only when switched on.** Punctuation bans (semicolons,
+  dashes, colons) and similar team or advisor preferences apply only when
+  `style.overlays` or the venue profile names them; otherwise do not
+  enforce them, because blanket bans produce uniform prose.
+- **Reader logic.** For Results, Methods and RQ transitions, also check
+  analysis units, number density, comparison words, metric definitions,
+  attribution and hedging, implications leaking into Results, and RQ
+  chaining. Fix what is pure language; flag what touches a claim.
+
+See: references/reader-logic.md
 
 ## Polish by section conventions
 
@@ -265,3 +319,40 @@ Follow an explicit language request first. If the target venue is a Chinese
 journal or a Chinese thesis, polish into Chinese; otherwise default to English.
 Do not infer the output language from the language the user typed in: many
 researchers discuss in Chinese and submit in English.
+
+## Checklist
+
+After the pass, run the research-core `writing` checklist items this skill
+owns, plus the field additions whose scope matches, on the polished text:
+
+- Structure and framing: WR-06, WR-07, WR-08, WR-09, WR-10, WR-11.
+- Terms: WR-12, WR-14, WR-15.
+- Numbers and hedging: WR-16, WR-18.
+- Abstract and conclusion: WR-25, WR-26, WR-27.
+- Bibliography: WR-29, WR-30 (when the bibliography is in scope).
+- Style: WR-31 (de-AI contract), WR-32 (punctuation bans only from an
+  overlay or the venue), WR-33 (no scaffolding or preambles).
+- Field additions: SE-04, SE-07, SE-12, SE-13, SE-18 for `field: se`;
+  MT-02, MT-04, MT-05 for `field: math`.
+
+Report each item as pass, fail, n/a or unknown with evidence (file and
+line or the quoted sentence). `candidate` items are advisory. Items the
+pass could not fix without changing meaning are listed for the author,
+not forced.
+
+## Outputs
+
+- Polished text (in place in files, or in the reply for pasted text).
+- Three to five change notes, plus the before/after list for
+  meaning-risk edits.
+- The checklist report, kept out of the manuscript.
+
+## Hand-offs
+
+- Multi-round checking, or a re-check after these edits: `check-loop`.
+- Heavy AI tone, or a de-AI audit under the full contract: `deai-writing`.
+- Comments from co-authors, advisors or reviewers to work through:
+  `feedback-to-revision`.
+- A section that needs redrafting rather than polishing: `paper-writer`.
+- A claim the data may not support: `pre-submission-reviewer` or
+  `idea-evaluator`.
