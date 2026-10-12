@@ -1,0 +1,59 @@
+# research.yaml: per-project configuration read by every skill in this library.
+# Copy to the project root and fill in. Keep private URLs here only if the repo is private.
+
+project: my-study                    # short slug
+field: se                            # research-core/references/fields/<field>.md (se, ai-ml, math, stats, causal)
+subfield: ""                         # optional, e.g. msr-empirical
+venue: ""                            # research-core/references/venues/<venue>.md, e.g. fse
+venue_year: null
+paper_type: empirical-study          # technique | benchmark | empirical-study | theory | survey | thesis | assignment
+stage: idea                          # idea | design | experiments | writing | figures | internal-review | submission | rebuttal | camera-ready
+
+deadline:
+  date: null                         # ISO date-time with timezone, e.g. 2026-10-02T23:59-12:00
+  source: ""                         # official call URL and fetch date; never a remembered date
+
+review:
+  double_blind: true
+  page_budget: {body: null, refs: null}
+  appendix_allowed: null
+
+repos:
+  paper: {url: "", main_file: main.tex}
+  overleaf: {git_url: "", sync: manual, mode: ff-only}   # never copy-over sync
+  research: {url: ""}
+  artifact: {url: "", anonymous_mirror: ""}
+
+source_of_truth:                     # one writable source per artifact; record switches in docs/adr/
+  paper: git                         # git | overleaf
+  data: research-repo
+  numbers: analysis/numbers.json
+
+data:
+  location: ""                       # drive | huggingface | zenodo | s3 | local
+  manifest: data/MANIFEST.tsv
+  lfs_patterns: []
+
+experiments:
+  backend: local                     # local | colab | vps
+  notebook: ""
+  runs_log: docs/runs.md
+
+records:
+  dir: docs
+  linear: {enabled: false, team: "", project: ""}
+
+style:
+  exemplars: refs/exemplars/         # PDFs or extracted markdown for journal-adapt
+  dynamic_skill: ""                  # output folder of journal-adapt
+  overlays: []                       # e.g. [no-semicolons-no-dashes]
+
+figures:
+  icon_libs: []                      # local icon library paths; see drawio-reconstruction
+
+people:                              # roles only, no names
+  - {role: senior-a, comment_macro: '\seniorA', agent_may_resolve: true}
+  - {role: student, comment_macro: '\todo', agent_may_resolve: false}
+
+check_loop:
+  max_rounds: 3

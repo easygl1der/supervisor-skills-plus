@@ -44,3 +44,12 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - Keep `Co-Authored-By: Claude ...` in commit messages. This overrides upstream `CONTRIBUTING.md` lines 30 and 63 for this fork; CONTRIBUTING will be amended in Phase 4 to say so. (The lint ban on attribution strings inside SKILL.md and reference bodies still applies.)
 - Every local skill without a LICENSE file is user-authored and may be vendored. Exception handling: passages that notes/02 identified as copied from third parties inside those skills (anti-accretive-docs references copied from brian-bell's skills, architecture-decision-records material based on affaan-m/ECC, the lecture-deck transcription in lecture-paper-revision, the unnamed reviewer suite behind se-paper-reviewer) are rewritten in our own words or attributed, not copied verbatim.
 - 2026-10-13: user approved DESIGN.md. Added per-field icon registry (to research in Phase 4) and guidance records (`docs/guidance/`, actions with follow-up). Statistics and causal-inference profiles stay blank stubs. Phase 4 starts.
+
+## Phase 4: Implement
+
+### Group 1: research-core (branch feat/research-core, 2026-10-13)
+- SKILL.md; core rules (8 files); field profiles se (evidenced, 55 rules, SE-01..19), ai-ml and math (partial), stats and causal (blank stubs per user); overlay no-semicolons-no-dashes; venues/_template and fse (draft, FS-01..14); 9 checklists (142 items, 49 confirmed / 93 candidate); experts/README; 10 project templates incl. guidance-record.md.
+- New scripts: check_checklists.py (format, unique IDs, owners), check_sources.py (resolves arc:/note:/up:/skill: citations against notes and the private archive; role-based aliases for archive paths that contain names).
+- Checks: lint 13 skills clean; check_checklists 192 items clean; check_sources 851 resolved, 0 failed; shared-sync in sync.
+- Waiting for user review before merge.
+- 2026-10-13: user chose option 3; 40 items with clear bad outcomes promoted to confirmed (100 confirmed of 175 items in checklists + se + fse). Merged to main.
