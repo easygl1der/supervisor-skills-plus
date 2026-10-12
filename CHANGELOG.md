@@ -4,6 +4,55 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [3.0.0-plus] - 2026-10-13
+
+Supervisor-Skills Plus, private fork of HKUSTDial/Supervisor-Skills.
+
+### Upstream sync
+
+- Forked from upstream `main` at `5f9432d` (2026-10-12). Upstream branch
+  `chore/sync-drawio-reconstruction` deliberately not merged (hard-coded
+  `~/.codex` paths); revisit when upstream merges it.
+
+### Added
+
+- `research-core`: core rules (claims and evidence, body text, de-AI
+  contract, feedback loop, figures, records, integrity, precedence and source
+  formats), field profiles (`se` evidenced; `ai-ml`, `math` partial; `stats`,
+  `causal` stubs), venue profiles (`fse` draft, template), nine checklists
+  with sourced items and a candidate/confirmed/deprecated lifecycle, expert
+  notes store, project templates (`research.yaml`, STATUS, TODO, ADR, log,
+  guidance record, response table, claim ledger, runs log, data manifest).
+- New skills: `research-supervisor`, `experiment-workflow`, `journal-adapt`
+  (vendored from the owner's skill, MIT), `deai-writing` (merge of three de-AI
+  skills; includes MIT text from avoid-ai-writing by Conor Bronsdon),
+  `check-loop`, `feedback-to-revision`, `research-records`,
+  `lessons-harvest`.
+- Scripts: `check_checklists.py`, `check_sources.py` (resolves every
+  `[src: ...]` against notes, upstream files and the private evidence
+  archive), `install.sh` (symlink install for Claude Code, Codex, Cursor with
+  backup of retired local skills), and per-skill scripts (PDF comment
+  extraction, marker listing, guidance review, sync guard, span guard,
+  numbers check, anonymity grep, data manifest, icon index, TikZ render,
+  rule-candidate finder, session brief, paper scaffold).
+- Handbook case 6.4 (zh/en): anonymized process case of an empirical SE paper.
+- `INSTALL.md`, `DESIGN.md`, `PROGRESS.md`, evidence notes in `notes/`.
+
+### Changed
+
+- Strengthened upstream skills: `paper-writer`, `intro-drafter`,
+  `paper-polish`, `pre-submission-reviewer`, `rebuttal-guidance`,
+  `idea-evaluator`, `figure-designer`, `drawio-reconstruction`; descriptions
+  of `tech-paper-template` and `benchmark-paper-template` now state their
+  AI/ML and systems scope. `vibe-research-workflow` links to records and
+  experiments.
+- `paper-polish/references/ai-tone-guardrails.md` (canonical) now includes
+  the extra words flagged by `pre-submission-reviewer`; copies re-synced.
+- `CONTRIBUTING.md`: this fork allows a `Co-Authored-By` trailer in commits;
+  sourcing and anonymization rules for research-core.
+
 ## [2.1.0] - 2026-07-10
 
 ### Added

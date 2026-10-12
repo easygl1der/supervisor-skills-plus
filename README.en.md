@@ -6,6 +6,9 @@
 
 # Supervisor-Skills: Ten years of PhD-advisor research experience, distilled into your AI co-advisor.
 
+> **Supervisor-Skills Plus (private fork).** Adds a field-aware research layer: `research-core` (rules, field and venue profiles, sourced checklists), nine new skills for experiments, feedback, records, checking and learning, and handbook case 6.4. See [skills/README.en.md](skills/README.en.md#supervisor-skills-plus-additional-skills-private-fork), [INSTALL.md](INSTALL.md) and [DESIGN.md](DESIGN.md).
+
+
 > From idea conception to paper submission, covering the full research lifecycle.
 
 English · [中文](README.md)

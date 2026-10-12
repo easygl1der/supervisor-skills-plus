@@ -6,6 +6,9 @@
 
 # Supervisor-Skills: 将博导十年科研经验，炼化为你的 AI 副导师。
 
+> **Supervisor-Skills Plus（私有 fork）**：新增按领域适配的研究层：`research-core`（规则、领域与会议 profile、带出处的 checklist），九个覆盖实验、意见、记录、检查与经验沉淀的新 skill，以及手册案例 6.4。见 [skills/README.md](skills/README.md)、[INSTALL.md](INSTALL.md) 和 [DESIGN.md](DESIGN.md)。
+
+
 [English](README.en.md) · 中文
 
 <p align="center">

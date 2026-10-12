@@ -251,3 +251,25 @@ For questions, feedback, or to bring Supervisor-Skills to your own lab, please e
 ---
 
 [English] | [中文](README.md)
+
+## Supervisor-Skills Plus: additional skills (private fork)
+
+This fork adds a shared foundation, field and venue profiles, sourced checklists and nine skills for the whole research process, in any field. Every skill loads `research-core` first and reads the project's `research.yaml`. Setup: [INSTALL.md](../INSTALL.md); design: [DESIGN.md](../DESIGN.md).
+
+| Skill | What it does |
+|---|---|
+| [research-supervisor](research-supervisor/SKILL.md) | Entry point: sets up a project, detects the stage, shows blockers, open reviewer notes and overdue guidance, routes to the next skills |
+| [research-core](research-core/SKILL.md) | Core rules, field profiles (SE, AI/ML, math; statistics and causal inference as stubs), venue profiles, nine sourced checklists, project templates |
+| [experiment-workflow](experiment-workflow/SKILL.md) | Corpus freeze, frozen gold, prompt/model versions, runs log, numbers traced to scripts, data placement, anonymized replication artifact |
+| [journal-adapt](journal-adapt/SKILL.md) | Style skill, venue profile and field-profile proposals from exemplar papers, with a consensus threshold; check mode for check-loop |
+| [deai-writing](deai-writing/SKILL.md) | Removes AI tells by intent, with an editing contract and an audit mode |
+| [check-loop](check-loop/SKILL.md) | Bounded multi-round check: research fit, then venue and field style, then language; oscillation guard; round log |
+| [feedback-to-revision](feedback-to-revision/SKILL.md) | Comment IDs, triage, one change per comment, verification against the diff, response table; expert guidance records with follow-up |
+| [research-records](research-records/SKILL.md) | `docs/STATUS.md`, TODO, ADRs, logs, sources of truth, sync guard, optional Linear mirror |
+| [lessons-harvest](lessons-harvest/SKILL.md) | After each paper or expert advice, turns feedback and notes into sourced rule candidates for research-core |
+
+Upstream skills strengthened in this fork: paper-writer (claim ledger, field skeletons, math route), intro-drafter (empirical RQ-driven route), paper-polish (field and venue aware), pre-submission-reviewer (threats, double-blind, artifact, venue, integrity passes; devil's advocate; submission-day runbook), rebuttal-guidance (response table input, venue-neutral formats), idea-evaluator (empirical and theory routes), figure-designer (archive figure rules, TikZ loop), drawio-reconstruction (replication workflow, icon sourcing registry).
+
+### Track 3: empirical study, any field
+
+research-supervisor → idea-evaluator → experiment-workflow → paper-writer (+ intro-drafter) → figure-designer / drawio-reconstruction → check-loop → feedback-to-revision (co-author rounds) → pre-submission-reviewer → rebuttal-guidance → lessons-harvest. research-records runs alongside all of them.
