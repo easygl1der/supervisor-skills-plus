@@ -64,6 +64,11 @@ transformative, surpass, excel, breakthrough.
 
 **Chinese**: 卓越、首次、唯一、最高、完美、碾压、遥遥领先、颠覆性、最优。
 
+**Also flagged by `pre-submission-reviewer`** (merged into this list in
+Supervisor-Skills Plus): general-purpose, is capable of, sentence-initial
+"Yet", differentiate, reveal, exhibit superior capability, exceed, highlight
+the potential of, profound challenges, rigid.
+
 Safer replacement directions:
 
 - prove: show / suggest, depending on evidence
