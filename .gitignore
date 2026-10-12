@@ -33,3 +33,6 @@ evals/latest-report.md
 # Temp
 *.tmp
 *.log
+
+# Private, non-anonymized material (never commit)
+private/
