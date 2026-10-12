@@ -53,6 +53,27 @@ writing begins.
 - The user asks to evaluate a benchmark contribution specifically.
   Use `benchmark-paper-template` (separate plugin) in targeted mode.
 
+## Step 0: Load context
+
+Load `research-core`: the precedence file, `core/claims-evidence.md`, the
+field profile named by `field` in `research.yaml` (its "Paper types" and
+"What reviewers and advisors care about" sections supply venue-fit
+criteria), the venue profile when `venue` is set, and the checklist
+`threats.md` (design-time items). From `research.yaml` read `field`,
+`subfield`, `paper_type`, `venue`, `deadline` and `stage`.
+
+Without `research.yaml`, ask for the field and the intended paper type, or
+hand off to `research-supervisor`.
+
+Route by `paper_type` (or by the method classification in Step 1):
+
+- `technique` or `benchmark` in AI/ML or systems: the STEM path below.
+- `empirical-study` (mining, survey, interview, controlled experiment,
+  observational data): the empirical-study route.
+- `theory`: the theory route.
+
+See: references/empirical-and-theory-routes.md
+
 ## Core procedure
 
 ### Step 1: First impression and paper-type positioning
@@ -66,7 +87,10 @@ the user to restate.
 While restating, classify the research paradigm **by method, not by
 department name**: experiments, benchmarks, ablations, or model
 architectures mean STEM (continue with the five dimensions and fatal
-flaws below); text analysis, archives, or conceptual argument mean
+flaws below), except that an empirical study (mining software
+repositories, surveys of developers, observational data) and a theorem
+paper take the routes in `references/empirical-and-theory-routes.md`;
+text analysis, archives, or conceptual argument mean
 humanities; surveys, interviews, statistics, or fieldwork mean
 empirical social science; regressions, IV, DID, RDD, or panel data
 mean finance or economics; statutes, cases, or doctrine mean law.
@@ -123,6 +147,19 @@ within the lifecycle), stop here and emit the verdict directly:
 
 If no CRITICAL flaw is found, continue to Step 3.
 
+### Step 2b: Empirical-study and theory routes
+
+For an empirical study, run the design audit from the routes file: the
+research-question set, population and sampling frame, construct validity,
+data availability, and the threats foreseeable at design time (run
+`threats.md` TH-01, TH-04 and TH-08 now, plus the field profile's design
+items). For a theorem paper, state the result and the proof technique and
+run the theory checks. A design threat that more data collection cannot
+remove is recorded now as a threat with its mechanism, not discovered
+after weeks of collection. The routes file gives substitute scoring
+dimensions; use them in Step 4 instead of Higher / Faster / Stronger /
+Cheaper / Broader when those do not fit.
+
 ### Step 3: Lifecycle and capability matching
 
 See: references/lifecycle-capability-matching.md for the six-category
@@ -168,7 +205,8 @@ sections cover both rules in detail.
 
 For non-STEM paradigms, score the substitute dimensions from
 references/domain-evaluation-frameworks.md instead, under the same
-discipline.
+discipline. For the empirical-study and theory routes, score the
+substitute dimensions from references/empirical-and-theory-routes.md.
 
 ### Step 5: Paradigm-shift probe
 
@@ -308,6 +346,9 @@ section 7 with verdict Reject and Pivot.*
 
 Disruptive potential: <none, possible, strong>.
 
+### 5b. Design audit (empirical-study or theory route only)
+<the route's output block from references/empirical-and-theory-routes.md>
+
 ### 6. Feasibility
 | Risk | Level | Mitigation |
 |---|---|---|
@@ -325,3 +366,34 @@ Top three actions to take first:
 1. ...
 2. ...
 3. ...
+
+## Checklist
+
+Besides the integrity gate above, run the design-time items of the
+research-core `threats.md` checklist (TH-01 scope of general claims, TH-04
+data gaps moved to threats early, TH-08 alternative explanations named)
+and the field profile's design items (for SE: SE-02 mining method
+essentials, SE-03 dual denominators, SE-19 strongest counter-argument).
+Report each as pass, fail, n/a or unknown with the evidence from the idea
+description; at idea stage most are `unknown` with the question that would
+settle them.
+
+## Outputs
+
+- The evaluation in the Output format above, with section 5b for the
+  empirical-study and theory routes.
+- A list of design-time threats with their mechanisms, ready for the
+  threats section of the paper and for `docs/TODO.md`.
+- When a design decision is made on the basis of the verdict (frozen
+  corpus, sampling plan, RQ set), a pointer to record it as an ADR.
+
+## Hand-offs
+
+- Literature search for novelty and related work: `deep-research`.
+- Data collection, sampling runs and frozen references:
+  `experiment-workflow`.
+- Recording design decisions with rejected alternatives:
+  `research-records`.
+- Paper structure once the idea is accepted: `tech-paper-template` or
+  `benchmark-paper-template` for AI/ML and systems papers; `paper-writer`
+  with the field profile for empirical studies and theory papers.
