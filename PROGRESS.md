@@ -16,3 +16,9 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
   - The 12 "upstream copies" are not installed locally; the upstream repo is their source.
   - `msr-tpa-rq-method-borrow` and `adams-sail-issue-mining` are not in `~/.claude/skills`; they exist in the archive at `03-skills/`.
   - All other listed local skills are present. License files found only in `avoid-ai-writing` (LICENSE), `drawio-architecture`, `drawio-flowchart`, `linear` (LICENSE.txt). The rest need a frontmatter/README license check in Phase 1.
+
+## Phase 1: Read (2026-10-12)
+
+- User feedback on local skills (reply 2): journal-adapt and deai-paper-writing are good; wants to know what humanize-paper actually does; se-paper-* capture an SE writing style worth keeping and the writing → refinement → review structure is liked, but output quality was poor when tried with Fable 5.1. Licensing of skills without LICENSE files is still unanswered; treated as "provenance unknown" until checked.
+- notes/03-archive-map.md written from the archive index files and folder survey. Found: deadline inconsistency (TIMELINE "~10-12" vs venue file 10-02 AoE and last commit 10-03 19:38), a misattributed provenance line in checklist v2 (CF-01), and the `\hao{}`/`\todo{}` review protocol in `msr:9809b8c`.
+- notes/01 and notes/02 delegated to two read-only subagents; to be reviewed before reporting.
