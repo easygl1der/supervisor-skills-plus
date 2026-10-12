@@ -98,7 +98,7 @@ Notable find for the feedback skill: commit `9809b8c` ("hao's comments", 2026-09
 ### `08-inventory/` (1 file)
 Pointers to live repos not vendored: research repo, paper repo, Overleaf checkout, replication repo (`msr-tpa-replication` + anonymous mirror), box export, skills hub.
 
-### `09-paper-snapshot/` (109 files, 24 images) — final paper state, HEAD `87bf139` (2026-10-03 19:38).
+### `09-paper-snapshot/` (109 files, 24 images) — last paper-repo state, HEAD `87bf139` (2026-10-03 19:38). Not identical to the submitted version (see §6).
 `main.tex` (title at line 116), `main.pdf`, `sections/01-introduction … 09-conclusion, A-terms, A-appendix`, `refs.bib`, `codebook-labels.tex`, `figures/` (incl. `study-workflow-UPDATE-PLAN.md`, `enhance_intro_failure_modes.py`), `VERSION_LIST.md` (all 105 commits one per line), copies of `REVISION-SUMMARY.md` and `BUILD.md`. Feeds notes/06 (final state of each section) and the anonymized case study.
 
 ### `10-requirements/` (12 files)
@@ -138,8 +138,8 @@ In public files the source label stays (e.g. `msr:9809b8c`) but the private arch
 
 ## 6. Inconsistencies to resolve in Phase 2
 
-- **Deadline.** `TIMELINE.md` lists "~2026-10-12 FSE 2027 投稿锚点（群聊语境）" and the 09-20 meeting said "12 号" orally, but `10-requirements/venue/fse-2027-requirements.md` gives Fri 2 Oct 2026 AoE (= 3 Oct 19:59 China), and the paper repo's last commit `87bf139` is 2026-10-03 19:38, with the group chat on 10-03 handling PC conflicts and the abstract. Hypothesis: the real deadline was 10-03 19:59 CST; verify against transcript before stating it.
-- **Title history.** Plan title → "Proof Engineering in the Wild" → "What Breaks…" (current `main.tex:116`) → "Maintaining Proof Assistants…" (per DEM-295, not in archive). Use only `main.tex` as truth.
+- **Deadline.** `TIMELINE.md` lists "~2026-10-12 FSE 2027 投稿锚点（群聊语境）" and the 09-20 meeting said "12 号" orally, but `10-requirements/venue/fse-2027-requirements.md` gives Fri 2 Oct 2026 AoE (= 3 Oct 19:59 China), and the paper repo's last commit `87bf139` is 2026-10-03 19:38, with the group chat on 10-03 handling PC conflicts and the abstract. Resolved in notes/04: deadline 10-03 19:59 CST (submission-site screenshot in chat, PDF uploaded 19:56); the site went down at the deadline and was reopened.
+- **Title history and the submitted version.** Plan title → "Proof Engineering in the Wild" → "What Breaks…" (`09-paper-snapshot/main.tex:116`, `msr:87bf139`) → "Maintaining Proof Assistants…" (set on Overleaf by Senior co-author A at `ol:a610d1d` 10-03 19:38:54, reverted 10 s later by the sync bot at `ol:214cc0c`, restored in `ol:ba3f1ee` on 10-04). Resolved in notes/04: **the submitted paper is not `87bf139`**; `09-paper-snapshot/` is the last git-side state, not the submitted PDF. No submitted PDF or hash is in the archive.
 - **Agent vs human comments.** `adams-skill-revision-comments.md` and Cursor summaries are agent-produced; the feedback table must label comment origin (human senior / relayed advisor / agent).
 
 ## 7. What feeds which Phase 2 note
