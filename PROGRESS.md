@@ -38,6 +38,7 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 
 - DESIGN.md v1 drafted: 20-skill tree, `research-core` foundation (core rules, field and venue profiles, checklists, templates), per-skill procedures, check-loop as a separate orchestrator, local-first records with optional Linear mirror, research.yaml schema, data placement, case 6.4 proposal, open questions Q1–Q9.
 - STOP: waiting for the user's review.
+- 2026-10-13: user asked for icon sourcing in drawio-reconstruction and a way to keep research-core growing with new papers, fields and expert notes; added `lessons-harvest` (21 skills) and §3.4. User answered case 6.4, fields, expert notes, old-skill handling; remaining questions decided by Claude per user delegation (DESIGN §12).
 
 ## Decisions from the user (2026-10-12)
 - Keep `Co-Authored-By: Claude ...` in commit messages. This overrides upstream `CONTRIBUTING.md` lines 30 and 63 for this fork; CONTRIBUTING will be amended in Phase 4 to say so. (The lint ban on attribution strings inside SKILL.md and reference bodies still applies.)
