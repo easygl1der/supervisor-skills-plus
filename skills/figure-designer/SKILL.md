@@ -52,6 +52,20 @@ self-contained caption, honest axis ranges).
 
 ## Core procedure
 
+### Step 0: Load context
+
+Load `research-core`: `references/core/figures.md`, the field profile named
+by `research.yaml` `field` (its "Figures and tables" section), the venue
+profile (`venue`), and the `figures` checklist. From `research.yaml` read
+`field`, `venue`, `paper_type`, `stage`, `source_of_truth.numbers` (where
+figure numbers must come from), `review.page_budget` and `figures.icon_libs`.
+
+The three-figure framing below (motivated example, solution overview,
+experimental results, "highlight Ours") is written for AI/ML and systems
+technique papers. For empirical studies, theory papers and other paper
+types, keep Steps 3 to 8 and add the archive rules (Step 6b), which come
+from an empirical software engineering paper.
+
 ### Step 1: Figure-type identification
 
 Decide which of the three core types the figure is. If the user's
@@ -102,7 +116,13 @@ Default recommendations:
   Figma (polish).
 - Experimental Results: Matplotlib or Seaborn in a reusable
   `plot_utils.py` script.
-- LaTeX-integrated figures: TikZ or PGFPlots.
+- LaTeX-integrated figures: TikZ or PGFPlots. Develop them in the
+  render-and-inspect loop (standalone render, PNG inspection, review note)
+  with `scripts/render_tikz.py`.
+- Diagrams that replicate a reference image or sketch: hand off to
+  `drawio-reconstruction`; icons come from its licensed icon registry.
+
+See: references/tikz-review.md
 
 ### Step 6: Universal rule audit
 
@@ -120,6 +140,31 @@ Verify every proposed or existing figure against:
 - No 3D effects, no chartjunk.
 
 Flag every violation with severity.
+
+### Step 6b: Archive rules audit
+
+See: references/archive-figure-rules.md
+
+Run FR1 to FR21 on top of the universal rules. Always:
+
+- **Overview mirrors methodology.** Number the boxes; one bold run-in per
+  box in the method text, same order, same names; two-way count check
+  after every redraw (FR1, FR2).
+- **Table or figure.** A grid of numbers is a table, never a figure panel;
+  one or two numbers go in prose (FR6, FR8).
+- **Numbers from scripts.** Inventory every number in the figure and map
+  it to a script output or ledger row; a number copied from a sketch, an
+  AI image or a reference figure is a placeholder (FR3). This is how an
+  unverified agreement value entered a paper's text in the evidence
+  project.
+- **AI sketch, native rebuild, human redline.** AI images explore layout
+  only (FR4); remove AI-look markers (FR5).
+- **Sync.** Renderer, PDF, caption and preview change in the same commit
+  (FR14); renderers run from the replication package (FR16).
+- **One message per figure.** Decide between alternatives (FR10); keep one
+  source file per figure and record which draft won (FR15).
+- **Agent plans.** Check any agent-written figure plan against the latest
+  human feedback before executing it (FR20).
 
 ### Step 7: Integrity gate
 
@@ -158,6 +203,10 @@ Before returning the design:
 7. **[inspection]** For experimental results, the chart type
    matches the data type (time-series uses line, multi-method
    comparison uses grouped bar, trade-off uses scatter).
+8. **[inspection]** Every number shown in the figure has a recorded
+   script or ledger source, or is marked as a placeholder.
+9. **[user-verify]** For an overview figure, the box-to-step table
+   from Step 6b matches in both directions on the current text.
 
 If any [inspection] check fails, mark the design as "needs user
 attention". For [user-verify] items, surface them to the user as
@@ -200,8 +249,44 @@ items they must confirm before submission.
 - [ ] No chartjunk: <pass or fail>
 
 ### 7. Integrity gate result
-- Gate 1-7: <pass or fail>
+- Gate 1-9: <pass or fail>
 
 ### 8. Severity summary
 - <n> CRITICAL, <m> MAJOR, <k> MINOR
 - Top three actions first: ...
+
+### 9. Archive rules and number trace
+- FR rules violated: <list with FR ids>
+- Box-to-step table (overview only): <rows>
+- Numbers in figure: <label -> script or ledger key, or placeholder>
+
+## Checklist
+
+Run the `research-core` `figures` checklist items this skill owns: FG-01 to
+FG-08, FG-10 to FG-22 and FG-24 to FG-26 (FG-09 and FG-23 are shared with
+`drawio-reconstruction`; run them when the figure is an overview or uses
+icons). Report each item as pass, fail, n/a or unknown with evidence: the
+rendered PNG or PDF page inspected, the box-to-step table, the number trace,
+the commit that regenerated the PDF. Vision-only items without an image are
+`unknown`, not `pass`.
+
+## Outputs
+
+- The design report in the Output format above.
+- For TikZ figures: `tikz/figures/<name>.tex`, rendered PDF and PNG, and
+  `tikz/review/<name>-review.md`.
+- The box-to-step table and the figure number trace, saved next to the
+  figure source or in the project records.
+- Checklist results with evidence.
+
+## Hand-offs
+
+- Faithful replication of a sketch, reference image or AI mock-up, and
+  icon sourcing: `drawio-reconstruction`.
+- Method text that must change to mirror the overview: `paper-writer`.
+- Introduction figure and its running example: `intro-drafter`.
+- Number traces that reach the analysis scripts: `experiment-workflow`
+  and `check-loop`.
+- Senior or reviewer comments on figures: `feedback-to-revision`.
+- Draft decisions (which variant won and why): `research-records`.
+- Final pre-submission figure review: `pre-submission-reviewer`.

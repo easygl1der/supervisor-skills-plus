@@ -13,6 +13,22 @@ Resolve `SKILL_DIR` to the absolute directory containing this `SKILL.md` before 
 
 All commands below use `$SKILL_DIR` to mean that resolved absolute directory.
 
+## Step 0: Load Context
+
+When the diagram is a figure for a paper, load `research-core`:
+`references/core/figures.md`, the field profile named by `research.yaml`
+`field`, the venue profile, and the `figures` checklist. From
+`research.yaml` read `field` (which icon libraries to prefer),
+`figures.icon_libs` (local icon library folders; env `ICON_LIBS` also
+works), `source_of_truth.numbers` (where figure numbers must come from) and
+`repos.paper` (where the figure source lives). For slides, UI screenshots
+and other non-paper diagrams, skip this step.
+
+Note: an unmerged upstream branch (`chore/sync-drawio-reconstruction`) adds
+producer and reviewer separation with hashed PASS/FIX ledgers but
+hard-codes `~/.codex` paths. It is deliberately not merged here; take it
+when upstream merges it, then remove the fixed paths.
+
 ## Fidelity Contract
 
 The primary goal is visual fidelity to the reference image. Editability is secondary.
@@ -27,6 +43,8 @@ Never silently rewrite the user's content. If the user asks for larger fonts or 
 
 - **Layout-only refinement**: increase font size, resize boxes, improve spacing, align elements, adjust line breaks without changing words.
 - **Content compression**: shorten sentences, remove details, rewrite labels. Ask permission before doing this.
+
+Fidelity covers layout, style, text and icons. It does not cover the truth of data values. When the reference is a sketch, an AI image, a mock-up or another paper's figure, every number in it is a placeholder until re-sourced from the project's scripts (see "Reference Is A Sketch" below).
 
 ## Batch Folder Workflow
 
@@ -101,6 +119,25 @@ Each inventory item must include:
 
 Do not begin final delivery until all visible inventory items are accepted or explicitly reported as unresolved.
 
+## Layout Fingerprint And Module-First Build
+
+See: references/replication-workflow.md
+
+Before generating XML, write `LAYOUT_FINGERPRINT.md`: reference size and background, modules with approximate bounds, contents and internal connectors per module, cross-module connectors, style tokens, what stays editable, uncertainty, and the list of data values shown in the reference.
+
+For figures with several panels, lanes or many crossing connectors, build one module at a time (one generator function per module), export each module alone, and compare it with the matching reference region in a side-by-side crop under `qa/`. Module crops are the primary review surface; the full preview is the integration check. Add cross-module connectors only after every module is accepted.
+
+## Reference Is A Sketch: Re-source Data Values
+
+When the reference is a sketch, an AI-generated image, a co-author's mock-up or a figure from another paper:
+
+1. List every number, date, count and statistic in the reference in `DATA_VALUES.md` with status `UNVERIFIED`.
+2. Place visible placeholders in the replica, not the copied values.
+3. Re-source each value from the project's scripts or number ledger (`research.yaml` `source_of_truth.numbers`) and record the key; values without a source stay placeholders and are reported.
+4. Never copy a value from the replica into the paper text.
+
+In the evidence project an agreement value on a reference image was copied by the replica and entered the method text in the same commit, with no computation behind it.
+
 ## Reconstruction Strategy
 
 Use the best medium for visual fidelity. Do not globally default all non-text visuals to screenshots, and do not globally redraw all visuals as SVG. The deciding question is: which method best matches the reference after export?
@@ -153,6 +190,19 @@ Blocking medium defects:
 - blurry crop of a simple icon when a clean shape-level SVG would match better
 - cropped complex artwork with visible background seams, halos, missing strokes, clipped shadows, or unrelated neighboring text/borders
 - missing prominent icon, decorative mark, or detailed visual
+
+## Icon Sourcing
+
+See: references/icon-sources.md
+
+Before tracing, cropping or inventing an icon, find a real one, in this order:
+
+1. draw.io built-in stencils (shape search);
+2. local icon libraries registered in `references/icon-sources.md` and listed in `research.yaml` `figures.icon_libs` or env `ICON_LIBS`, searched with `python "$SKILL_DIR/scripts/icon_index.py" search "<concept>"`; prefer libraries tagged with the project's field;
+3. web search for an icon repository; read its licence, clone it into `~/.cache/supervisor-skills/icons/`, index it and add it to the registry;
+4. only then a simple native shape or original SVG.
+
+Every icon used gets a row in `<figure>_icons/ATTRIBUTION.tsv` (source, path, licence as read from the source, author, retrieval date), written with `icon_index.py attribute` or by hand for stencils and originals. Never trace a logo or brand mark. For paper figures, a crop of someone else's figure is not an icon source; use it only for a layout draft and replace it before submission. Crops remain the right medium for the user's own screenshots and artwork.
 
 ## Icon Reconstruction Discipline
 
@@ -264,8 +314,10 @@ Hard failures:
 1. Identify the reference image and target output directory.
 2. Create or update the batch manifest when processing folders or multiple images.
 3. For each image, create the reference inventory and style token notes.
-4. Rebuild the diagram with native Draw.io elements wherever feasible for text and structure.
+3a. Write `LAYOUT_FINGERPRINT.md` with the module map and, if the reference is a sketch or AI image, `DATA_VALUES.md` with every value marked `UNVERIFIED`.
+4. Rebuild the diagram with native Draw.io elements wherever feasible for text and structure, module by module for dense figures, with module QA crops under `qa/`.
 5. Classify every non-text visual with the medium decision rules.
+5a. Source icons in the Icon Sourcing order and record each in `<figure>_icons/ATTRIBUTION.tsv`.
 6. Use source-image crops or transparent PNGs for complex/style-specific visuals; use SVG/native only for simple clean icons that pass shape/style matching.
 7. Export a PNG preview with Draw.io CLI.
 8. Run the checker. Treat any layout failure as a blocking defect, not a warning.
@@ -278,6 +330,7 @@ Default outputs:
 - `<name>.drawio`
 - `<name>.png`
 - `<name>.audit.md` for batch or complex reconstructions
+- `LAYOUT_FINGERPRINT.md`, `qa/` module crops, `<name>_icons/ATTRIBUTION.tsv`, and `DATA_VALUES.md` when the reference is a sketch
 
 ## Mandatory Visual Audit
 
@@ -349,3 +402,23 @@ Keep the final response short:
 - Link to the rendered `.png` preview.
 - Mention whether crops or SVG/native elements were used for major visual elements.
 - Mention any remaining manual review point, especially if visual audit items remain unresolved.
+
+## Checklist
+
+For paper figures, run the `research-core` `figures` checklist items this skill shares: FG-07 (box and step numbering survives the rebuild), FG-09 (one integrated overview), FG-18 (numbers re-sourced), FG-21 (AI image used for layout only), FG-22 (AI-look markers not copied from the reference), FG-23 (icons from licensed libraries, attribution file complete) and FG-26 (agent figure plan checked against the latest human feedback). Report each as pass, fail, n/a or unknown with evidence: the module crops, `DATA_VALUES.md`, `ATTRIBUTION.tsv`, the export and checker output.
+
+## Outputs
+
+- `<name>.drawio` and `<name>.png` (one source file per figure).
+- `<name>.audit.md`, `LAYOUT_FINGERPRINT.md` and `qa/` module crops for complex figures.
+- `<name>_icons/` with icon files and `ATTRIBUTION.tsv`.
+- `DATA_VALUES.md` with the status of every value when the reference is a sketch.
+- Checklist results with evidence.
+
+## Hand-offs
+
+- Design decisions (paradigm, table or figure, AI-look removal, mirroring the method text): `figure-designer`.
+- Method text that must match the rebuilt overview: `paper-writer`.
+- Values that need a script or ledger source: `experiment-workflow` and `check-loop`.
+- Redline comments from co-authors: `feedback-to-revision`.
+- Which draft or variant won and why: `research-records`.
