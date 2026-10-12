@@ -45,7 +45,7 @@ The original Chinese curriculum by the methodology author lives at `handbook/`. 
 - `handbook/03_Paper_Writing/` — paper lifecycle, Introduction flowchart, technical and benchmark templates, writing checklist.
 - `handbook/04_Scientific_Plotting/` — motivated, overview, experimental figures and a drawing checklist.
 - `handbook/05_Vibe_Research/` — AI-assisted research workflow and practitioner notes.
-- `handbook/06_Case_Studies/` — Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026) Introduction analyses.
+- `handbook/06_Case_Studies/` — Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026) Introduction analyses, plus 6.4, an anonymized process case of an empirical SE paper under deadline.
 
 ## Supporting documentation
 

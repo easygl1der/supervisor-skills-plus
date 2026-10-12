@@ -127,7 +127,8 @@ Supervisor-Skills/
 │   └── 06_Case_Studies/               # Chapter 6: top-venue case studies
 │       ├── 6.1_ICML_2025_Alpha-SQL写作剖析.md
 │       ├── 6.2_ICLR_2025_AFlow写作剖析.md
-│       └── 6.3_VLDB_2026_LEAD写作剖析.md
+│       ├── 6.3_VLDB_2026_LEAD写作剖析.md
+│       └── 6.4_实证软工论文投稿过程剖析.md
 │
 ├── handbook-en/                       # 📖 English mirror of the handbook
 │
@@ -160,7 +161,7 @@ This section preserves the systematic theoretical framework for deep reading and
 | **Chapter 3: Paper writing** | Full paper lifecycle, Introduction flowchart, technical / benchmark paper templates, writing checklist | [3.1 Essentials](handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md) / [3.2 Intro flowchart](handbook-en/03_Paper_Writing/3.2_introduction-writing-flowchart.md) / [3.3 Technical template](handbook-en/03_Paper_Writing/3.3_technical-paper-template.md) / [3.4 Benchmark template](handbook-en/03_Paper_Writing/3.4_benchmark-paper-template.md) / [3.5 Writing checklist](handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md) |
 | **Chapter 4: Scientific plotting** | Motivated / overview / results figures and a drawing checklist | [4.1 Motivated example](handbook-en/04_Scientific_Plotting/4.1_motivated-example-figure.md) / [4.2 Solution overview](handbook-en/04_Scientific_Plotting/4.2_solution-overview-figure.md) / [4.3 Experimental results](handbook-en/04_Scientific_Plotting/4.3_experimental-results-figure.md) / [4.4 Checklist](handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md) |
 | **Chapter 5: Vibe Research** | Vibe Research / Coding / Figure / Writing in practice | [5.1 Intro](handbook-en/05_Vibe_Research/5.1_vibe-research-and-vibe-coding.md) / [5.2 Practitioner notes](handbook-en/05_Vibe_Research/5.2_liboyan-practical-notes.md) |
-| **Chapter 6: Top-venue case studies** | Alpha-SQL (ICML'25), AFlow (ICLR'25), LEAD (VLDB'26) Introduction analyses | [6.1 Alpha-SQL](handbook-en/06_Case_Studies/6.1_icml2025-alpha-sql-analysis.md) / [6.2 AFlow](handbook-en/06_Case_Studies/6.2_iclr2025-aflow-analysis.md) / [6.3 LEAD](handbook-en/06_Case_Studies/6.3_vldb2026-lead-analysis.md) |
+| **Chapter 6: Top-venue case studies** | Alpha-SQL (ICML'25), AFlow (ICLR'25), LEAD (VLDB'26) Introduction analyses | [6.1 Alpha-SQL](handbook-en/06_Case_Studies/6.1_icml2025-alpha-sql-analysis.md) / [6.2 AFlow](handbook-en/06_Case_Studies/6.2_iclr2025-aflow-analysis.md) / [6.3 LEAD](handbook-en/06_Case_Studies/6.3_vldb2026-lead-analysis.md) / [6.4 Empirical SE process](handbook-en/06_Case_Studies/6.4_empirical-se-paper-process-case.md) |
 
 The Chinese originals live at [`handbook/`](handbook/) with the same chapter structure.
 
