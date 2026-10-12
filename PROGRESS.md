@@ -23,18 +23,22 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - notes/03-archive-map.md written from the archive index files and folder survey. Found: deadline inconsistency (TIMELINE "~10-12" vs venue file 10-02 AoE and last commit 10-03 19:38), a misattributed provenance line in checklist v2 (CF-01), and the `\hao{}`/`\todo{}` review protocol in `msr:9809b8c`.
 - notes/01 and notes/02 delegated to two read-only subagents; to be reviewed before reporting.
 
-## Phase 2: Mine the evidence (paused 2026-10-12 by user)
+## Phase 2: Mine the evidence (2026-10-12, resumed after a pause and completed)
 
-Done and reviewed (key claims spot-checked against patches and chat):
-- notes/04-timeline-and-process.md: deadline was 10-03 19:59 CST, not ~10-12; the submitted paper is not `msr:87bf139` (title change `ol:a610d1d` reverted by sync bot `ol:214cc0c`, restored `ol:ba3f1ee`); κ = 0.74 has no computation record (first appears in `msr:393f596`).
-- notes/08-process-tips.md: source-of-truth flips, sync-bot overwrite 20 min before deadline, agent Overleaf writes deleting large parts of main.tex (`ol:b2ad042`, `ol:3ae9fd3`), index.html anonymity leak, 40 candidate lessons.
-- notes/03 corrected (submitted version, deadline).
-- Integrity flags reported to the user: κ = 0.74 untraceable (FINAL-CHECKLIST-2026-10-02 B1); 14 held-out gold cells changed after viewing model output with the 0.65 bar set at the same time (`11-*/tree/docs/notes/gold-review/overlay-high14-review.md`).
+- notes/04-timeline-and-process.md: deadline 10-03 19:59 CST (not ~10-12); the submitted paper is not `msr:87bf139`; source of truth flipped three times; κ = 0.74 has no computation record.
+- notes/05-feedback-revision-table.md: 111 revision requests with IDs; 61% verified addressed, 16% partial, 9% superseded, 2% not addressed, 12% no evidence; median latency 9.5 h; `\hao`/`\todo` protocol and its failures; six worked examples.
+- notes/06-section-evolution.md: per-section timelines, 12 cross-section rewrite patterns, SE empirical paper skeleton with measured word counts, identifying-excerpt list.
+- notes/07-figures-and-checklists.md: figure iteration chains, 21 figure rules (FR1–FR21), checklist version chain, provenance audit (90/140 v2 items mislabelled), classification of reusable items into target checklists. Found that κ = 0.74 entered via a reference image copied by the agent-built draw.io replica (`LAYOUT_FINGERPRINT.md`, `msr:393f596`).
+- notes/08-process-tips.md: 40 candidate lessons with citations.
+- Key claims spot-checked by the main session against patches and chat (title revert, sync-bot overwrite, κ introduction replacing "we do not report human--human agreement" in threats, overlay disclosure deleted in `msr:5262231`, `\todo` markers removed in `msr:815305e`, replica fingerprint wording).
+- Integrity flags reported to the user (κ = 0.74; held-out gold edited after viewing model output).
+- notes/partial/ removed; its content is integrated into notes/05 and notes/06.
 
-Incomplete (agents stopped on pause), in notes/partial/:
-- 05-feedback-revision-table.PARTIAL.md (partial draft; the B-chat/PDF and group-chat sub-miners were stopped).
-- 06-section-evolution.PARTIAL.md plus three saved helper reports: 06a RQ1, 06b design/methodology, 06c RQ2/RQ3. Missing: intro + conclusion (report finished but not captured), related work + appendix, threats/implications.
-- 07-figures-and-checklists: not written.
+## Phase 3: Design (2026-10-12)
 
-To resume: rerun Phase 2 for notes/05, 06, 07 using the partial files as input, then Phase 3 (DESIGN.md, STOP).
-Open questions to the user (asked, unanswered): commit attribution vs upstream CONTRIBUTING; authorship/licence of local skills without LICENSE; anonymization level for case 6.4.
+- DESIGN.md v1 drafted: 20-skill tree, `research-core` foundation (core rules, field and venue profiles, checklists, templates), per-skill procedures, check-loop as a separate orchestrator, local-first records with optional Linear mirror, research.yaml schema, data placement, case 6.4 proposal, open questions Q1–Q9.
+- STOP: waiting for the user's review.
+
+## Decisions from the user (2026-10-12)
+- Keep `Co-Authored-By: Claude ...` in commit messages. This overrides upstream `CONTRIBUTING.md` lines 30 and 63 for this fork; CONTRIBUTING will be amended in Phase 4 to say so. (The lint ban on attribution strings inside SKILL.md and reference bodies still applies.)
+- Every local skill without a LICENSE file is user-authored and may be vendored. Exception handling: passages that notes/02 identified as copied from third parties inside those skills (anti-accretive-docs references copied from brian-bell's skills, architecture-decision-records material based on affaan-m/ECC, the lecture-deck transcription in lecture-paper-revision, the unnamed reviewer suite behind se-paper-reviewer) are rewritten in our own words or attributed, not copied verbatim.
