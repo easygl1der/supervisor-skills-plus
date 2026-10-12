@@ -162,7 +162,7 @@ The library must get better with every paper, assignment and new field (user req
 
 ### 3.5 Templates (`assets/templates/`)
 
-`research.yaml` (§8.2), `STATUS.md`, `TODO.md`, `adr-0000-template.md`, `log-entry.md`, `response-table.md` (feedback/rebuttal table, §4 feedback-to-revision), `claim-ledger.md`, `runs-log.md`, `data-manifest.tsv`.
+`research.yaml` (§8.2), `STATUS.md`, `TODO.md`, `adr-0000-template.md`, `log-entry.md`, `response-table.md` (feedback/rebuttal table, §4 feedback-to-revision), `guidance-record.md` (expert guidance, §4.15), `claim-ledger.md`, `runs-log.md`, `data-manifest.tsv`.
 
 ## 4. Skills one by one
 
@@ -252,6 +252,7 @@ Unchanged procedures; descriptions say "field: ai-ml/systems"; `research-supervi
 - **Icon sourcing (user request 2026-10-13).** Before tracing or inventing an icon, find a real one, in this order:
   1. draw.io built-in stencils (e.g. the GitHub logo was taken from the built-in stencil, not traced, `overview-reference-replica/LAYOUT_FINGERPRINT.md`);
   2. local icon libraries registered in `references/icon-sources.md` and located through `research.yaml` `figures.icon_libs` or env `ICON_LIBS` (no hard-coded home paths; the local skills hard-code `/Users/yitwah/...`, `[n02 §0]`): NN-Models-drawio-library (pastel NN blocks, from `nn-models-drawio-library`), BioIcons and Health Icons (from `scientific-illustration-ppt`, whose `index_assets.py` / `search_assets.py` are vendored and generalized into one icon index);
+  2b. the registry is **per field** (user request 2026-10-13: "we can have more, in our research field"): each library is tagged with fields (se, ai-ml, math, stats, causal, bio, general) and kinds (logos, concept icons, NN blocks, diagrams). Phase 4 researches candidates per field with web search (for example open logo sets for software tools and platforms, general concept icon sets, draw.io stencil packs, scientific icon sets) and records each one only after reading its licence; nothing enters the registry from memory;
   3. web search for an icon repository or set when nothing local fits; clone into a cache (`~/.cache/supervisor-skills/icons/`), index it, and add it to the registry;
   4. only then draw a simple native shape.
   Every used icon gets a row in `<figure>_icons/ATTRIBUTION.tsv` (source repo, path, licence as read from the repo at fetch time, author, retrieval date); licences are read from the source, never assumed. The archive's replica already kept `SVG_ASSETS.md` provenance (`05-figures-tables/sources/drawio/overview-reference-replica/`).
@@ -268,7 +269,17 @@ Unchanged procedures; descriptions say "field: ai-ml/systems"; `research-supervi
   6. *Verify.* For each ID compare the claimed change with the actual diff; re-check after merges, because stale-base pushes and sync bots reverted verified fixes (`[n05 §5.3]`).
   7. *Page delta.* Track page effect of cuts and expansions.
   8. *Close.* Response table: ID, short quote, decision (accept / partial / decline + reason / superseded-by), change summary, location after change, commit SHA, verification status. This table becomes the rebuttal or response letter (`rebuttal-guidance`).
-- **Checklist:** `master` feedback items (all IDs closed or listed open; no hidden markers).
+- **Guidance mode (user request 2026-10-13).** For expert guidance on a paper or an experiment (meeting, call, chat, email, relayed advice), write one record `docs/guidance/YYYY-MM-DD-<role>-<topic>.md` from `assets/templates/guidance-record.md`:
+  - *Who and channel:* role (never a name in shared files), meeting / chat / email / relay, who relayed it.
+  - *Scenario:* what we showed them (paper version or commit, figure, result, experiment state), and the question we asked.
+  - *What they said:* short verbatim quotes in the original language, with timestamps.
+  - *What they mean:* our interpretation, marked as interpretation; open points to clarify with them.
+  - *Points to notice:* risks, red lines, assumptions they challenged.
+  - *Actions:* `G-<date>-<n>` items with owner, due date or milestone, done-criterion, and links to TODO and FB IDs.
+  - *Decision:* accept, partial, or decline with reason (ADR when it sets a rule).
+  - *Follow-up check:* status per action (open / done with commit or run id / dropped with reason).
+  `feedback-to-revision guidance-review` lists open and overdue actions and checks "done" claims against commits and runs. `research-supervisor` shows overdue guidance at session start; `lessons-harvest` reads these records. Evidence that this was missing: early meetings were only partly archived (`GAPS.md`; `[n04]`), the relayed advisor read an outdated version so one of seven points was already obsolete (`[n05 §5.1]`), and the decisive 09-10 threats pivot survived only because someone wrote `04-comms/20260910-zhimin-d4d5-threats/README.md` with decision, mechanism and "do not" list.
+- **Checklist:** `master` feedback items (all IDs closed or listed open; no hidden markers; no overdue guidance actions).
 - **Outputs:** `docs/feedback/<round>.md` table; commits.
 - **Evidence and examples (anonymized in the skill):** 111 requests across channels, 61% verified addressed, median latency 9.5 h (`[n05 §3]`); `\hao`/`\todo` protocol and its failures (`msr:9809b8c`, `msr:815305e`, `msr:ac172bd`, `msr:5776349`; `[n05 §5.2]`); six worked examples (`[n05 §4]`).
 
@@ -347,6 +358,7 @@ docs/
 ├── adr/          NNNN-title.md: context, ≥2 alternatives, decision, consequences, supersedes
 ├── log/          YYYY-MM-DD-<topic>.md, append-only dated notes (meetings, check-loop reports)
 ├── feedback/     response tables per round (feedback-to-revision)
+├── guidance/     expert guidance records with actions and follow-up (feedback-to-revision guidance mode)
 └── runs.md       experiment runs log (experiment-workflow)
 ```
 
