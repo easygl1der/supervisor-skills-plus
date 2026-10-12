@@ -29,6 +29,7 @@ SHARED = {
     ],
     "paper-polish/references/ai-tone-guardrails.md": [
         "paper-writer/references/ai-tone-guardrails.md",
+        "deai-writing/references/ai-tone-guardrails.md",
     ],
     "paper-polish/references/section-conventions.md": [
         "paper-writer/references/section-conventions.md",

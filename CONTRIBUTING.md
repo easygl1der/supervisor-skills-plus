@@ -27,7 +27,7 @@ Each skill directory at `skills/<name>/` contains:
 - All `See: references/X.md` pointers must resolve to existing files.
 - No nested references (`SKILL.md -> refs/a.md -> refs/b.md` is illegal).
 - Reference files shared across skills are duplicated per consuming skill (skills stay self-contained); each copy carries a header naming its canonical, and copies must stay byte-identical to the canonical below the header (`python scripts/check_shared_sync.py`).
-- Commits must not contain "Claude", "Co-Authored-By: Claude", or Anthropic attribution.
+- Upstream rule: commits must not contain "Claude", "Co-Authored-By: Claude", or Anthropic attribution. **This private fork (Supervisor-Skills Plus) allows a `Co-Authored-By` trailer in commit messages** (owner decision 2026-10-12). Skill and reference files still must not contain attribution strings; `lint_skills.py` enforces that.
 
 ## Running the linter
 
@@ -60,4 +60,13 @@ Conventional Commits:
 - `chore: ...` for routine maintenance
 - `refactor(<area>): ...` for refactoring
 
-Commits must not include any Claude or Anthropic attribution.
+Upstream: commits must not include any Claude or Anthropic attribution. In this fork a `Co-Authored-By` trailer is allowed (see Hard rules).
+
+## Supervisor-Skills Plus additions
+
+- Shared rules, field and venue profiles, checklists and project templates live in `skills/research-core`. Do not put project-specific rules there; those belong in the project repo (`docs/adr/`, overlays).
+- Every rule and checklist item carries a source (`[src: ...]` or `- Src:`), in the formats listed in `skills/research-core/references/core/precedence.md`, and a status (`candidate`, `confirmed`, `deprecated`). Rules without a source go under "Unknown".
+- Never write a person's name in skill files; use roles. Archive paths that contain names are cited through the aliases in `scripts/check_sources.py`.
+- Run all four checks before merging: `lint_skills.py`, `check_shared_sync.py`, `check_checklists.py`, `check_sources.py`.
+- New rules usually arrive through `lessons-harvest` on a `learn/<source>` branch.
+

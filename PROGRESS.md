@@ -59,3 +59,10 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - research-records (branch feat/research-records, based on feedback branch): SKILL.md with 7 tasks; references adr, sources-and-sync, anti-accretion (restated, third-party text not copied), linear-mirror; scripts sync_guard.py (refuses non-fast-forward sync; tested on a simulated overwrite).
 - Checks: lint 15 skills clean; checklists 192 clean; sources 924 resolved, 0 failed; shared-sync clean.
 - Waiting for user review before merge.
+
+### Groups 3-8 and Phase 5 (2026-10-13, user: "merge, continue till finally done")
+- Six parallel workstreams (conventions in notes/09) built: deai-writing, check-loop; paper-writer, paper-polish, intro-drafter strengthened; journal-adapt (vendored, MIT kept), lessons-harvest; figure-designer, drawio-reconstruction (icon registry of 20 libraries with licences read on 2026-10-13); pre-submission-reviewer, rebuttal-guidance, idea-evaluator, template descriptions; experiment-workflow, research-supervisor, vibe links.
+- Main session: handbook 6.4 zh/en (process case, generic domain), private/CASE.md (gitignored), README/skills README/llms.txt Plus sections, CONTRIBUTING fork rules, CHANGELOG 3.0.0-plus, INSTALL.md, scripts/install.sh (tested in a fake HOME), CI runs the two new checkers.
+- Quality pass: privacy grep (no names, counts or domain names in skills or 6.4), AI-tell and accretion grep (only legitimate list entries), banned-word lists unified into the canonical ai-tone-guardrails, all citations re-resolved.
+- Final checks: lint 21 skills clean; check_checklists 192 items clean; check_sources 1397 resolved, 0 failed (in CI mode without the archive: arc: citations skipped); shared-sync 6 copies in sync. Smoke test: session_brief on a template project flags hidden markers, missing deadline source, stale STATUS.
+- Known limits: render_tikz.py not render-tested (no TeX here); stats and causal profiles are stubs; no reviewer-report evidence for rebuttal rules.

@@ -1,14 +1,13 @@
 ---
 name: pre-submission-reviewer
 description: >-
-  Runs a pre-submission review of a technical paper across five
-  dimensions: macro logic, writing details, English grammar, LaTeX
-  formatting, and figure quality. Uses a reviewer-style severity
-  taxonomy (CRITICAL / MAJOR / MINOR) and flags banned AI-tone
-  vocabulary and em-dash misuse. Use when the user asks to 'review
-  this paper', 'audit before submission', 'check the draft', 'find
-  issues', 'proofread', or within one week of a submission
-  deadline.
+  Runs a pre-submission review of a technical paper across five dimensions
+  (macro logic, writing details, English grammar, LaTeX formatting, figure
+  quality) with CRITICAL / MAJOR / MINOR severity, then runs the
+  research-core threats, double-blind, artifact, venue-submission and
+  integrity checklists, a devil's-advocate pass and a submission-day runbook. Use when
+  the user asks to 'review this paper', 'audit before submission', 'check
+  the draft', 'proofread', or one day to one week before a deadline.
 license: CC-BY-4.0
 ---
 
@@ -32,6 +31,15 @@ The output is not a rewrite. It is a prioritised list of findings
 with severity tags; the author decides which to fix. CRITICAL items
 should block submission until addressed.
 
+This fork adds four things on top of the five dimensions: Step 0 loads
+`research-core` (field and venue profiles, checklists); Step 7a runs the
+research-core sub-checklists (threats, double-blind, artifact,
+venue-submission, integrity) by item ID; Step 7b runs a devil's-advocate
+pass; and a submission-day runbook covers the last 24 hours. The five
+dimensions remain the review's core; their DB/ML-conference defaults
+(Introduction flowchart, ablations, three or more datasets) yield to the
+field profile when one is loaded.
+
 ## When to use this skill
 
 - Three to five days before a submission deadline.
@@ -40,6 +48,9 @@ should block submission until addressed.
 - After a camera-ready revision, before sending the final version.
 - After any major rewrite (rebuttal responses, Section 3 overhaul).
 - When the user suspects AI-tone contamination in a section.
+- One day before the deadline, as a read-only full check (see "One day
+  before the deadline" below).
+- On submission day, for the runbook only.
 
 ## When NOT to use this skill
 
@@ -48,11 +59,34 @@ should block submission until addressed.
 - The user wants structural advice rather than review. Use the
   drafting skills instead.
 
+## Step 0: Load context
+
+Load `research-core`: the precedence file, `core/claims-evidence.md` and
+`core/integrity.md`; the field profile named by `field` in `research.yaml`;
+the venue profile named by `venue` (with its CONFIRM items); and the
+checklists `master.md`, `threats.md`, `double-blind.md`, `artifact.md`,
+`venue-submission.md` and `integrity.md`, plus field and venue additions
+whose `Scope` matches (for example `SE-` and `FS-` items).
+
+From `research.yaml` read `field`, `paper_type`, `venue`, `deadline`
+(date and source), `review.double_blind`, `review.page_budget`,
+`review.appendix_allowed`, `repos.artifact` (including
+`anonymous_mirror`) and `source_of_truth.paper`. Name the commit or the
+PDF under review; every finding refers to that version.
+
+If `research.yaml` is missing, ask for field, venue and deadline source,
+or hand off to `research-supervisor`. A deadline without an official
+source is reported as a finding (VS-01).
+
 ## Core procedure
 
-### Step 0: paradigm and venue fit
+### Step 0b: paradigm and venue fit
 
-Before the dimensional review, settle two things.
+Before the dimensional review, settle two things. When a field profile is
+loaded, it sets the paradigm and its weights (for example the SE profile
+weights threats, replication and dual denominators, and a theory paper
+under `math` treats proofs as the evidence); the list below is the
+fallback.
 
 **Paradigm**, judged by research method, because what counts as a
 severe problem differs by paradigm:
@@ -228,13 +262,60 @@ For each section, check that the section's content matches the
 guide's canonical structure (for example, Abstract's five-sentence
 formula: what, why, challenges, how, results).
 
+### Step 7a: Research-core sub-checklist passes
+
+Run each file below item by item. Do not restate its items in the review;
+cite the item ID, report pass, fail, n/a or unknown, and give the evidence
+(quoted line, page, command output, commit). A tick without evidence is
+`unknown`.
+
+| File | IDs | Focus in this skill |
+|---|---|---|
+| `threats.md` | TH-01..TH-11 | Scope of claims, alternative explanations, threats agree with results |
+| `double-blind.md` | DB-01..DB-08 | Only when `review.double_blind` is true (DB-08 always) |
+| `artifact.md` | AR-01..AR-09 | Package holds and regenerates what the paper promises |
+| `venue-submission.md` | VS-01..VS-11 | Official call, page limit on the PDF, template, form fields, upload timing |
+| `integrity.md` | IN-01..IN-13 | Traceable numbers, agreement values, frozen reference, AI-use disclosure |
+
+Then run the field and venue additions in scope (for SE, among others
+SE-15 four threat categories, SE-17 DBLP-checked bibliography, SE-18 no
+appendix as padding; for a venue profile its `FS-` style items) and the
+`master.md` gate items MA-01..MA-06.
+
+Severity mapping:
+
+- A `confirmed` item that fails and touches a desk-reject cause named by
+  the venue (anonymity, format, fabricated citations or results) is
+  CRITICAL and a Blocker.
+- Any other failing `confirmed` item is MAJOR.
+- A failing `candidate` item is reported as advisory (MINOR); it does not
+  block.
+- `unknown` on a desk-reject item is treated as a Blocker until evidence
+  exists.
+
+Checks that need commands (identity search over the artifact and mirror,
+page count on the compiled PDF, compile log, script output against the
+manuscript) are run read-only; paste the command and a short output.
+Without shell or repository access, report those items `unknown` and say
+which command the author must run.
+
+### Step 7b: Devil's-advocate pass
+
+For each main claim (abstract, contributions, research-question answers),
+write the strongest counter-argument a hostile but fair reviewer could
+build from the paper's own numbers, tables and threats, and say where the
+paper answers it. This is MA-05 and, for SE, SE-19.
+
+See: references/devils-advocate-pass.md
+
 ### Step 8: Integrity gate
 
 Run the checks in the Integrity gate section below.
 
 ### Step 9: Output
 
-Emit the review in the Output format below.
+Emit the review in the Output format below, including the sub-checklist
+results, the devil's-advocate pass and the Blocker list.
 
 ## Severity taxonomy
 
@@ -248,6 +329,10 @@ Emit the review in the Output format below.
   chart type mismatched with data.
 - **MINOR**: polish. Example: two long sentences that could be
   split; default Matplotlib styling; single article error.
+
+Findings from the Step 7a sub-checklists and the Step 7b
+devil's-advocate pass use the same taxonomy; Step 7a states how checklist
+status maps to severity.
 
 Severity honesty cuts both ways. A review that lists a dozen MINOR
 items while missing the one rejection-level flaw sends the author to
@@ -319,8 +404,81 @@ and the delivered review stays free of internal checking rituals.
 ### Banned-vocabulary and em-dash scan
 <list with line references>
 
+### Sub-checklist results (Step 7a)
+| ID | Result | Evidence | Severity |
+|---|---|---|---|
+| DB-04 | pass or fail or n/a or unknown | <command output, page, line> | <per mapping> |
+
+Only failing and unknown items are listed in full; passing items are
+counted per file.
+
+### Devil's-advocate pass (Step 7b)
+<strongest counter-argument per main claim, the paper's answer or its
+absence, and the resulting finding>
+
+### Blockers and TODOs
+| Blocker | Item or finding | Owner | TODO entry |
+|---|---|---|---|
+
 ### Final score (1-10)
 <score>
 
 ### Submission recommendation
 - <Ready to submit | Needs 1-2 days more work | Needs major revision before submission>
+
+## One day before the deadline
+
+Run the whole skill read-only at least one day before the deadline,
+against a named commit and its compiled PDF (MA-01). Read-only means no
+edits to the paper, the artifact or the mirror during the run. When the
+run ends, turn every Blocker into a `docs/TODO.md` entry with an owner and
+a due time on the same day, and report the list to the authors; a Blocker
+without an owner is how a predicted problem survives the deadline. In the
+evidence project the final read-only check named the identity leak in the
+artifact's project page; its Blockers had no owners, and the leak was
+fixed only after the deadline, once a senior co-author raised it again.
+[src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B2; arc:chat:group@2026-10-06T05:09; note:n08§5#37; note:n07§B.3] (confirmed)
+
+Re-run Step 7a (only the files touched since) after each later batch of
+fixes, because late edits re-introduced removed font shrinking in the
+evidence project. [src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G3; note:n08§3] (candidate)
+
+## Submission day
+
+On the deadline day, switch from review to the runbook: early complete
+upload, one editor at a time, plain-text abstract, metadata already
+entered, anonymous mirror re-checked, and after the deadline the
+submitted version synced back and tagged.
+
+See: references/submission-day-runbook.md
+
+## Checklist
+
+This skill runs, and reports pass, fail, n/a or unknown with evidence:
+
+- `master.md` MA-01..MA-06 (MA-05 is the devil's-advocate pass);
+- `threats.md`, `double-blind.md`, `artifact.md`, `venue-submission.md`,
+  `integrity.md` in full;
+- field and venue additions whose `Scope` matches the project.
+
+`writing.md` and `figures.md` are covered by Dimensions 1 to 5 and by
+`check-loop`; cite their IDs when a dimension finding matches one.
+
+## Outputs
+
+- The review in the Output format above, naming the commit or PDF reviewed.
+- A Blocker list, each Blocker copied into `docs/TODO.md` with an owner.
+- On submission day: the runbook with each step marked done, skipped with
+  a reason, or open.
+
+## Hand-offs
+
+- Fixing findings raised as comments: `feedback-to-revision` (each finding
+  becomes an `FB-AG-<nn>` item).
+- Language and style rounds after fixes: `check-loop`, `paper-polish`.
+- Artifact rebuild, anonymous mirror and number regeneration:
+  `experiment-workflow`.
+- Recording the source-of-truth switch, the tag and the TODOs:
+  `research-records`.
+- Reviewer reports after submission: `feedback-to-revision`, then
+  `rebuttal-guidance`.

@@ -251,3 +251,25 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 ---
 
 [English](README.en.md) | [中文]
+
+## Supervisor-Skills Plus：新增 skill（私有 fork）
+
+本 fork 新增了共享底座、领域与会议 profile、带出处的 checklist，以及九个覆盖整个研究流程、适用于不同领域的 skill。每个 skill 都先加载 `research-core` 并读取项目的 `research.yaml`。安装见 [INSTALL.md](../INSTALL.md)，设计见 [DESIGN.md](../DESIGN.md)。
+
+| Skill | 作用 |
+|---|---|
+| [research-supervisor](research-supervisor/SKILL.md) | 入口：初始化项目，判断阶段，列出阻塞项、未处理的批注和过期的指导行动项，分派到下一个 skill |
+| [research-core](research-core/SKILL.md) | 通用规则、领域 profile（SE、AI/ML、数学；统计和因果推断暂为空框架）、会议 profile、九份带出处的 checklist、项目模板 |
+| [experiment-workflow](experiment-workflow/SKILL.md) | 冻结语料与金标、prompt/模型版本、runs 日志、数字可追溯到脚本、数据存放、匿名复现包 |
+| [journal-adapt](journal-adapt/SKILL.md) | 从范文生成写作风格 skill、会议 profile 和领域 profile 提案（带共识阈值）；为 check-loop 提供检查模式 |
+| [deai-writing](deai-writing/SKILL.md) | 按意图去 AI 味，带编辑约定和只报告的审查模式 |
+| [check-loop](check-loop/SKILL.md) | 有轮数上限的多轮检查：研究层面 → 会议与领域风格 → 语言；防止来回改；记录每轮日志 |
+| [feedback-to-revision](feedback-to-revision/SKILL.md) | 意见编号、分类、一条意见一个改动、对照 diff 核实、回复表；专家指导记录与回查 |
+| [research-records](research-records/SKILL.md) | `docs/STATUS.md`、TODO、ADR、日志、source of truth、同步保护、可选 Linear 镜像 |
+| [lessons-harvest](lessons-harvest/SKILL.md) | 每篇论文结束或收到专家意见后，把意见和笔记沉淀为带出处的候选规则，进入 research-core |
+
+本 fork 加强的 upstream skill：paper-writer、intro-drafter、paper-polish、pre-submission-reviewer、rebuttal-guidance、idea-evaluator、figure-designer、drawio-reconstruction。
+
+### 路线 3：实证研究（任意领域）
+
+research-supervisor → idea-evaluator → experiment-workflow → paper-writer（+ intro-drafter）→ figure-designer / drawio-reconstruction → check-loop → feedback-to-revision（合作者改稿轮次）→ pre-submission-reviewer → rebuttal-guidance → lessons-harvest。research-records 全程伴随。

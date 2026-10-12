@@ -6,6 +6,9 @@
 
 # Supervisor-Skills: 将博导十年科研经验，炼化为你的 AI 副导师。
 
+> **Supervisor-Skills Plus（私有 fork）**：新增按领域适配的研究层：`research-core`（规则、领域与会议 profile、带出处的 checklist），九个覆盖实验、意见、记录、检查与经验沉淀的新 skill，以及手册案例 6.4。见 [skills/README.md](skills/README.md)、[INSTALL.md](INSTALL.md) 和 [DESIGN.md](DESIGN.md)。
+
+
 [English](README.en.md) · 中文
 
 <p align="center">
@@ -122,7 +125,8 @@ Supervisor-Skills/
 │   └── 06_Case_Studies/               # 第六章：顶会论文写作剖析案例
 │       ├── 6.1_ICML_2025_Alpha-SQL写作剖析.md
 │       ├── 6.2_ICLR_2025_AFlow写作剖析.md
-│       └── 6.3_VLDB_2026_LEAD写作剖析.md
+│       ├── 6.3_VLDB_2026_LEAD写作剖析.md
+│       └── 6.4_实证软工论文投稿过程剖析.md
 │
 ├── skills/                            # 🛠️ 提炼出的可执行 AI Skills
 │   ├── idea-evaluator/                # 构思与调研阶段技能
@@ -154,7 +158,7 @@ Supervisor-Skills/
 | **第三章：论文写作** | 科研论文全流程、Introduction思考模型、技术类/Benchmark类论文模板、写作Checklist | [3.1 全流程](handbook/03_Paper_Writing/3.1_完成一篇科研论文你需要做几件事情.md) / [3.2 Intro模型](handbook/03_Paper_Writing/3.2_Introduction写作的思考模型.md) / [3.3 技术类模板](handbook/03_Paper_Writing/3.3_技术类Full_Paper思考模板.md) / [3.4 Benchmark模板](handbook/03_Paper_Writing/3.4_Benchmark与Evaluation类论文思考模板.md) / [3.5 Checklist](handbook/03_Paper_Writing/3.5_写作细节与Checklist.md) |
 | **第四章：科研作图** | 动机图、总览图、实验图的设计范式与绘图Checklist | [4.1 动机图](handbook/04_Scientific_Plotting/4.1_Motivated_Example_Figure.md) / [4.2 总览图](handbook/04_Scientific_Plotting/4.2_Solution_Overview_Figure.md) / [4.3 实验图](handbook/04_Scientific_Plotting/4.3_Experimental_Results_Figure.md) / [4.4 Checklist](handbook/04_Scientific_Plotting/4.4_绘图Checklist与工具速查表.md) |
 | **第五章：前沿实战** | Vibe Research/Coding/Figure/Writing 入门与实战经验 | [5.1 入门指南](handbook/05_Vibe_Research/5.1_Vibe_Research与Vibe_Coding入门.md) / [5.2 实战经验](handbook/05_Vibe_Research/5.2_李伯岩实战经验分享与会议纪要.md) |
-| **第六章：顶会案例** | Alpha-SQL (ICML'25)、AFlow (ICLR'25)、LEAD (VLDB'26) 写作思路剖析 | [6.1 Alpha-SQL](handbook/06_Case_Studies/6.1_ICML_2025_Alpha-SQL写作剖析.md) / [6.2 AFlow](handbook/06_Case_Studies/6.2_ICLR_2025_AFlow写作剖析.md) / [6.3 LEAD](handbook/06_Case_Studies/6.3_VLDB_2026_LEAD写作剖析.md) |
+| **第六章：顶会案例** | Alpha-SQL (ICML'25)、AFlow (ICLR'25)、LEAD (VLDB'26) 写作思路剖析 | [6.1 Alpha-SQL](handbook/06_Case_Studies/6.1_ICML_2025_Alpha-SQL写作剖析.md) / [6.2 AFlow](handbook/06_Case_Studies/6.2_ICLR_2025_AFlow写作剖析.md) / [6.3 LEAD](handbook/06_Case_Studies/6.3_VLDB_2026_LEAD写作剖析.md) / [6.4 实证软工投稿过程](handbook/06_Case_Studies/6.4_实证软工论文投稿过程剖析.md) |
 
 ### 🛠️ Skills：提炼出的可执行 AI Skills
 

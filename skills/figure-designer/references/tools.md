@@ -11,6 +11,7 @@
 7. Plotly
 8. OmniGraffle
 9. What to avoid
+10. Icons and block libraries
 
 ## 1. Decision heuristic
 
@@ -122,3 +123,15 @@ co-authors.
   hand sketches. Freehand drawing lacks alignment discipline.
 - **AI image generators** for paper figures. They cannot produce
   the structured content academic figures require.
+  Use them for layout exploration only, then rebuild natively and run a
+  human redline pass (FR4 in `archive-figure-rules.md`).
+
+## 10. Icons and block libraries
+
+Do not trace icons or logos from other figures. Take them from a licensed
+library and record the licence next to the figure source
+(`<figure>_icons/ATTRIBUTION.tsv`). The per-field registry (software logos,
+concept icon sets, neural-network block libraries such as
+NN-Models-drawio-library, TikZ diagram collections, scientific icon sets)
+and the local icon index script live in the `drawio-reconstruction` skill
+(`references/icon-sources.md`, `scripts/icon_index.py`).

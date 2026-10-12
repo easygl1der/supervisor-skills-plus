@@ -169,6 +169,14 @@ continuing. Because most bullets are [user-attest], the skill's
 effective value is the reminder at session start, not a runtime
 block.
 
+## Records and experiments
+
+- Checkpoint before destructive agent edits and read the diffstat after
+  any agent write to a shared document: `research-records` (Task 4).
+- Runs log, frozen gold, prompt versions, numbers file and replication
+  artifact for agent-run experiments: `experiment-workflow`.
+- Where the project stands and which skill comes next: `research-supervisor`.
+
 ## Output format
 
 ### 1. Phase

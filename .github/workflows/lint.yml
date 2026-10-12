@@ -19,3 +19,7 @@ jobs:
         run: python scripts/lint_skills.py
       - name: Shared-reference sync check
         run: python scripts/check_shared_sync.py
+      - name: Checklist format check
+        run: python scripts/check_checklists.py
+      - name: Source citation check (archive citations skipped in CI)
+        run: python scripts/check_sources.py

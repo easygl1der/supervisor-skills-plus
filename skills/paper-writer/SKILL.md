@@ -62,6 +62,29 @@ see references/evidence-discipline.md.
 - The logic skeleton is not settled: `tech-paper-template` first.
 - The idea itself is unvetted: `idea-evaluator`.
 
+## Step 0: Load context
+
+Before Phase 1, load `research-core` and follow its own Step 0:
+
+1. Read `research.yaml` at the project root: `field`, `subfield`, `venue`,
+   `paper_type`, `stage`, `review` (page budget, appendix rule),
+   `source_of_truth.numbers`, `style.overlays`.
+2. Load the core rules this skill applies: `precedence.md`,
+   `claims-evidence.md`, `body-text.md`, `integrity.md`.
+3. Load the field profile `fields/<field>.md` (its "Paper types", "Typical
+   structure", "Tone and phrasing" and "Known disagreements" sections drive
+   Phase 3 and Phase 4) and the venue profile `venues/<venue>.md` when it
+   exists. Overlays load only when `style.overlays` names them.
+4. Load the `writing` checklist plus the field additions whose scope
+   matches (for example `SE-` or `MT-` items).
+5. Tell the user which profiles loaded and their status. A `stub` profile
+   adds no rules; say so instead of guessing field conventions.
+
+Without `research.yaml`, ask for field, venue and paper type in one
+question, or offer the research-core template. When a profile and this
+skill disagree, the order in `precedence.md` decides (venue call, recorded
+decision, venue profile, field profile, core, overlay, this skill).
+
 ## Capability check (run once per session)
 
 This skill uses two environment capabilities and degrades honestly when they
@@ -82,8 +105,41 @@ and any degradation is disclosed.
 
 ## Workflow
 
-Six phases. A full paper walks all of them explicitly; a single section runs
-the same phases in lighter form, but never skips Evidence or Review.
+Six phases, preceded by Phase 0 whenever the text reports results, numbers
+or proofs. A full paper walks all of them explicitly; a single section runs
+the same phases in lighter form, but never skips the claim ledger, Evidence
+or Review.
+
+### Phase 0: Claim ledger, numbers before prose
+
+Fluent prose written before the numbers are fixed is the main reason
+generated drafts fail: numbers and scope get patched in afterwards, or
+plausible ones get invented. [src: note:n02§11.5; note:n07§A.1] (confirmed)
+
+1. **Collect the verified numbers.** Read them from `docs/STATUS.md`
+   ("Verified numbers": number, script, output file, commit) or from the
+   numbers file named in `research.yaml` `source_of_truth.numbers` (for
+   example `analysis/numbers.json`). A number found anywhere else (old
+   drafts, chat, figures, memory) is not used until it is traced to one of
+   these.
+2. **Build the claim ledger** from the research-core template
+   `assets/templates/claim-ledger.md`, saved as `docs/claims/<section>.md`:
+   one row per claim with number, scope and denominator, source (script and
+   output, or citation), code commit, data version, and whether a hedge is
+   needed. For a theorem paper the ledger lists proof obligations instead
+   (references/math-paper.md, section 1).
+3. **Numbers into the manuscript before prose.** Put the tables and
+   copyable numbers each section needs into the manuscript (or macros
+   generated from the numbers file) before drafting the sentences around
+   them. [src: arc:04-comms/20260920-msritp-meeting/README.md; note:n08§5#28] (candidate)
+4. **Report gaps.** A planned claim with no ledger row is listed for the
+   author; it is not drafted. A number that differs between STATUS and the
+   numbers file stops the section until the author resolves it.
+
+During Phase 4 every sentence with a number maps to a ledger row. The
+ledger is a working file and never appears in the manuscript.
+
+See: references/evidence-discipline.md
 
 ### Phase 1: Scope
 
@@ -129,16 +185,41 @@ Route by paradigm and section:
 
 | Case | Route |
 |---|---|
-| STEM Introduction | hand off to `intro-drafter` (six-paragraph internal scaffold) |
+| STEM Introduction | hand off to `intro-drafter` (six-paragraph scaffold for technique papers; RQ-driven route for empirical studies) |
 | STEM other sections | references/section-guidance.md content contracts |
 | Non-STEM, any section | plan each paragraph on a CER skeleton: Claim (what should the reader believe), Evidence (what supports it, at which level), Reasoning (why that evidence supports it), Role (motivate, situate, propose, execute, present, interpret, qualify, or connect) |
 | Benchmark papers | plan in `benchmark-paper-template`, then return here |
 
+**Skeleton by paper type.** `paper_type` from `research.yaml` selects the
+section skeleton from the field profile's "Typical structure"; the venue
+profile adjusts lengths and required sections. When the field profile has
+no skeleton for the type, use the matching file below and say so.
+
+| `paper_type` | Skeleton |
+|---|---|
+| `empirical-study` (RQ-driven mining, survey or qualitative study) | field profile, else references/empirical-study-skeleton.md |
+| `theory`, or `field: math` | field profile `math.md`, plus references/math-paper.md |
+| `technique` | field profile; section-guidance.md; `tech-paper-template` for the logic chain |
+| `benchmark` | `benchmark-paper-template` |
+| `survey`, `thesis` | CER planning per paragraph; the field profile when it has a skeleton |
+
+See: references/empirical-study-skeleton.md
+See: references/math-paper.md
+
 For a full paper, produce a chapter blueprint as a working file: section,
-role, main judgment, evidence IDs, open gaps. For STEM work, check the logic
-chain end to end: limitations feed the key idea, the key idea raises the
-challenges, modules answer challenges one to one, contributions cover the
-modules. Broken links get fixed in the plan, never papered over in prose.
+role, main judgment, evidence IDs (ledger rows), open gaps. Then check the
+chain that fits the paper type end to end:
+
+- **Technique papers** (the AI/ML/systems chain): limitations feed the key
+  idea, the key idea raises the challenges, modules answer challenges one
+  to one, contributions cover the modules.
+- **Empirical studies**: the gap motivates each RQ, each RQ has a figure or
+  table that answers it and ledger rows behind its findings, each RQ leaves
+  the premise for the next, and each implication cites an RQ.
+- **Theorem papers**: every statement has its assumptions, every
+  dependency is proved or cited, and the main theorem's proof closes.
+
+Broken links get fixed in the plan, never papered over in prose.
 
 All of this is internal. None of it appears in the deliverable.
 
@@ -173,6 +254,14 @@ Hard writing rules:
    same finding appears in at most three sections.
 7. **No internal scaffolding in the output.** CER skeletons, paradigm calls,
    chain checks all stay silent.
+8. **Field and venue shapes.** Paragraph shapes, tone, tense and hedging
+   follow the loaded field profile and its "Known disagreements" decisions
+   (for an empirical study: bold scoped finding, then the figure or table
+   sentence with its numbers, then detail; no recommendations in Results).
+   Punctuation bans apply only when an overlay or the venue switches them
+   on.
+9. **Current content only.** No revision narration and no study-plan voice
+   ("the plan predicted", "as updated"); history belongs in `docs/`.
 
 ### Phase 4.5: Red flags (stop signals while writing)
 
@@ -282,3 +371,42 @@ If drafting reveals that the problem is not "how to write it" but "does the
 core claim hold", say so plainly in the delivery note and point to
 `pre-submission-reviewer` or `idea-evaluator`. Never write a defense for a
 claim the user's own data undermines.
+
+## Checklist
+
+Run the research-core `writing` checklist items this skill owns, plus the
+field additions whose scope matches, on the drafted text:
+
+- Before drafting: WR-01 (claim ledger first), WR-02 (numbers before prose).
+- Framing and structure: WR-03, WR-04, WR-06, WR-07, WR-08, WR-11.
+- Terms: WR-12, WR-13, WR-14.
+- Numbers and claims: WR-16 to WR-24.
+- Abstract and conclusion: WR-25, WR-26, WR-27.
+- Citations: WR-28.
+- Field additions: SE-01, SE-02, SE-03, SE-06, SE-08, SE-09, SE-11 to
+  SE-15, SE-17 for `field: se`; MT-01, MT-04, MT-06, MT-07 for
+  `field: math`; the owned items of other loaded profiles.
+
+Report each item as pass, fail, n/a or unknown with evidence (file and
+line, ledger row, command output). A tick without evidence is unknown.
+`candidate` items are advisory. In Final mode, a `confirmed` item that
+fails blocks delivery. The report goes to the author with the delivery
+note or to `docs/log/`; it never enters the manuscript.
+
+## Outputs
+
+- The prose or manuscript file (Phase 6).
+- `docs/claims/<section>.md`: the claim ledger or proof-obligation ledger.
+- Working files on request: Evidence Map, chapter blueprint.
+- The checklist report and a list of gaps (claims without ledger rows,
+  open proof obligations, numbers that disagree between sources).
+
+## Hand-offs
+
+- After a draft: `check-loop` for the multi-round research-fit, venue-fit
+  and language checks; offer it at the end of every full-section delivery.
+- AI tone found in the draft or in co-authors' text: `deai-writing`.
+- Comments from co-authors, advisors or reviewers on the draft:
+  `feedback-to-revision`.
+- A single light language pass: `paper-polish`.
+- Venue style from exemplar papers, contribution-list format: `journal-adapt`.

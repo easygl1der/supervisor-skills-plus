@@ -1,6 +1,15 @@
 ---
 name: benchmark-paper-template
-description: Structures Benchmark and Evaluation papers using the five-pillar framework (Research Gap, Construction Pipeline, Evaluation Framework, Empirical Findings, optional Companion Method). Returns a completeness audit, a six-part Introduction logic chain, a Section 2-7 skeleton, and a pre-submission checklist. Use when writing a benchmark paper, structuring a benchmark paper, checking whether a benchmark idea is substantive, drafting a benchmark Introduction, or planning the data-construction pipeline or experiments.
+description: >-
+  Structures AI/ML and systems Benchmark and Evaluation papers with the
+  five-pillar framework (Research Gap, Construction Pipeline, Evaluation
+  Framework, Empirical Findings, optional Companion Method). Returns a
+  completeness audit, a six-part Introduction logic chain, a Section 2-7
+  skeleton, and a pre-submission checklist. Empirical-study, theory and
+  statistics papers go to paper-writer with the research-core field profile.
+  Use when writing or structuring a benchmark paper, checking whether a
+  benchmark idea is substantive, or planning its construction pipeline or
+  experiments.
 license: CC-BY-4.0
 ---
 

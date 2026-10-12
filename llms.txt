@@ -36,6 +36,19 @@ Eleven anchor skills under `skills/` cover the full paper lifecycle.
 - [drawio-reconstruction](skills/drawio-reconstruction/SKILL.md): rebuilds reference images, paper figures, and screenshots into editable Draw.io files with PNG previews and visual audits.
 - [pre-submission-reviewer](skills/pre-submission-reviewer/SKILL.md): paradigm-aware reviewer self-check covering macro logic, writing detail, grammar, LaTeX format, and figure quality, with retrieval-grounded novelty and citation-completeness checks.
 
+Supervisor-Skills Plus (private fork) adds:
+
+- [research-supervisor](skills/research-supervisor/SKILL.md): project setup, stage detection, routing.
+- [research-core](skills/research-core/SKILL.md): core rules, field and venue profiles, sourced checklists, templates.
+- [experiment-workflow](skills/experiment-workflow/SKILL.md): freeze, gold, versions, runs, traceable numbers, replication artifact.
+- [journal-adapt](skills/journal-adapt/SKILL.md): style and venue profiles from exemplar papers.
+- [deai-writing](skills/deai-writing/SKILL.md): AI-tell removal by intent.
+- [check-loop](skills/check-loop/SKILL.md): bounded research-fit, style and language check loop.
+- [feedback-to-revision](skills/feedback-to-revision/SKILL.md): comment IDs, verified changes, response tables, expert guidance records.
+- [research-records](skills/research-records/SKILL.md): STATUS, ADRs, logs, sources of truth, sync guard.
+- [lessons-harvest](skills/lessons-harvest/SKILL.md): grows research-core from finished projects and expert notes.
+- [rebuttal-guidance](skills/rebuttal-guidance/SKILL.md): rebuttal and response letters (upstream skill, listed here for completeness).
+
 ## Reader curriculum
 
 The original Chinese curriculum by the methodology author lives at `handbook/`. An English mirror lives at `handbook-en/`. Both are organized into six chapters.
@@ -45,7 +58,7 @@ The original Chinese curriculum by the methodology author lives at `handbook/`. 
 - `handbook/03_Paper_Writing/` — paper lifecycle, Introduction flowchart, technical and benchmark templates, writing checklist.
 - `handbook/04_Scientific_Plotting/` — motivated, overview, experimental figures and a drawing checklist.
 - `handbook/05_Vibe_Research/` — AI-assisted research workflow and practitioner notes.
-- `handbook/06_Case_Studies/` — Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026) Introduction analyses.
+- `handbook/06_Case_Studies/` — Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026) Introduction analyses, plus 6.4, an anonymized process case of an empirical SE paper under deadline.
 
 ## Supporting documentation
 
