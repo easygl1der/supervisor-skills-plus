@@ -53,3 +53,9 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - Checks: lint 13 skills clean; check_checklists 192 items clean; check_sources 851 resolved, 0 failed; shared-sync in sync.
 - Waiting for user review before merge.
 - 2026-10-13: user chose option 3; 40 items with clear bad outcomes promoted to confirmed (100 confirmed of 175 items in checklists + se + fse). Merged to main.
+
+### Group 2: feedback-to-revision + research-records (2026-10-13)
+- feedback-to-revision (branch feat/feedback-to-revision): SKILL.md with revision mode (A1-A6) and guidance mode (B); references intake-and-triage, apply-and-verify, guidance-mode (example built from archived threats-pivot notes; action rows marked illustrative), worked-examples (6, anonymized); scripts extract_pdf_comments.py (vendored), list_markers.py (live, commented-out, iffalse, hidden-notes, parked), guidance_review.py (open/overdue/no-evidence actions; unverified feedback rows). Tested: list_markers on the archived paper snapshot finds 4 commented-out notes, 1 live note, 5 parked blocks; guidance_review on a synthetic project flags overdue and no-evidence actions.
+- research-records (branch feat/research-records, based on feedback branch): SKILL.md with 7 tasks; references adr, sources-and-sync, anti-accretion (restated, third-party text not copied), linear-mirror; scripts sync_guard.py (refuses non-fast-forward sync; tested on a simulated overwrite).
+- Checks: lint 15 skills clean; checklists 192 clean; sources 924 resolved, 0 failed; shared-sync clean.
+- Waiting for user review before merge.
