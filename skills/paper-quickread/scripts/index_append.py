@@ -6,7 +6,7 @@ Usage:
     python index_append.py --selftest
 
 Entry fields: id (required, e.g. arXiv id, DOI, or book slug), kind
-(paper | book | concept), title, path (relative to the index), date
+(paper | book | concept | map), title, path (relative to the index), date
 (YYYY-MM-DD), and optional tags, field, artifact (quickread | study |
 style-card | session ...).
 

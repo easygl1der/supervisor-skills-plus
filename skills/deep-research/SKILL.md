@@ -5,9 +5,10 @@ description: >-
   freezes research questions, searches from multiple adversarial
   perspectives, verifies every citation, synthesizes evidence into a MECE
   taxonomy with in-sentence cross-comparison, and answers the research
-  questions in an evidence-first report. Use when the user asks for a
-  literature review, a survey of a field, research landscape mapping, or a
-  deep dive into what is known about a topic.
+  questions in an evidence-first report; also maps papers already read into
+  an evolution map and gap list. Use when the user asks for a literature
+  review, a survey of a field, research landscape mapping, a deep dive, or
+  a literature map of reading cards.
 license: CC-BY-NC-SA-4.0
 ---
 
@@ -30,6 +31,8 @@ up front and back-filled.
 - "Survey this direction for me." "What is the state of X?"
 - "What are the key works, debates, and open problems in this area?"
 - "I need a literature review before committing to this topic."
+- "Make a literature map of the papers I have read" (literature-map mode,
+  below).
 
 ## When NOT to use this skill
 
@@ -49,6 +52,20 @@ up front and back-filled.
   search perspective runs as its own agent with a clean context; without
   them, run the perspectives serially yourself. The method does not change,
   only the execution.
+
+## Modes
+
+- **Survey** (default): the workflow below, from research questions
+  outward to the literature.
+- **Literature map**: from what the user has read inward. Input is a batch
+  of `paper-quickread` cards and `study` notes found through the reading
+  root's `index.json`; output is an evolution map (read versus cited-only
+  nodes, typed edges, study-kit ELK figure), a comparison table with
+  sources, an evidence-backed candidate gap list, and next reads by
+  backward and forward citation chaining. The citation protocol and hedge
+  ladder apply unchanged; Step 0 to Phase 2 below do not.
+
+See: references/literature-map.md
 
 ## Step 0: freeze the research brief
 
@@ -207,3 +224,6 @@ retrieval for some literature) are disclosed in a short note.
 - Wants prose written or polished: `paper-writer` / `paper-polish`.
 - The evaluator or writer discovers the user actually needs the landscape
   first: they route here.
+- A literature map needs more cards: `paper-quickread` per paper; a gap
+  from the map worth testing in the current project: `research-bridge`;
+  a map feeding a proposal's background section: `proposal-writer`.
