@@ -7,7 +7,8 @@ Checks (exit 1 on any failure, warnings exit 0):
 - nine "## n." headings in order 1..9, none empty
 - exactly two tags (frontmatter `tags: [a, b]`)
 - body length outside tables, code and formulas: CJK chars + English words
-  <= max (default 900; target 700 is reported as a warning)
+  <= max (default 900 Chinese characters, or 600 words for an English card;
+  the targets 700 and 450 are reported as warnings)
 - results table (section 5): every data row has a non-empty last column
 - contributions (section 6): 3 to 5 bullets, each with a tag
   【证明】【实证】【猜想】【引用】 or [proved]/[empirical]/[conjectured]/[cited]
@@ -39,14 +40,21 @@ def body_len(text: str) -> int:
     return cjk + words
 
 
+def is_english(text: str) -> bool:
+    return len(re.findall(r"[\u3400-\u9fff]", text)) < len(re.findall(r"[A-Za-z][A-Za-z\-']*", text))
+
+
 def table_rows(sec: str) -> list[list[str]]:
     rows = [l for l in sec.splitlines() if l.strip().startswith("|")]
     rows = [r for r in rows if not re.match(r"^\s*\|[\s:\-|]+\|\s*$", r)]
     return [[c.strip() for c in r.strip().strip("|").split("|")] for r in rows[1:]]
 
 
-def check(text: str, max_chars: int = 900) -> tuple[list[str], list[str]]:
+def check(text: str, max_chars: int | None = None) -> tuple[list[str], list[str]]:
     errs, warns = [], []
+    # English cards are counted in words: target 450, limit 600 (template-9.md)
+    target, default = (450, 600) if is_english(text) else (700, 900)
+    max_chars = max_chars or default
     secs, order = sections(text)
     if order != list(range(1, 10)):
         errs.append(f"headings '## 1.'..'## 9.' expected in order, found {order}")
@@ -60,8 +68,8 @@ def check(text: str, max_chars: int = 900) -> tuple[list[str], list[str]]:
     n = body_len(text)
     if n > max_chars:
         errs.append(f"body length {n} > {max_chars}")
-    elif n > 700:
-        warns.append(f"body length {n} above target 700")
+    elif n > target:
+        warns.append(f"body length {n} above target {target}")
     if 5 in secs:
         rows = table_rows(secs[5])
         if not rows:
@@ -119,6 +127,9 @@ tags: [synthetic-control, panel-causal]
     bad = good.replace("Table 1 |\n## 6", " |\n## 6").replace("- 【猜想】c（§5）\n", "")
     e, _ = check(bad)
     assert any("without source" in x for x in e) and any("3-5" in x for x in e), e
+    long_en = good + "\nwords " * 650
+    e, _ = check(long_en)
+    assert any("> 600" in x for x in e), e
     print("check_quickread selftest ok")
 
 
@@ -129,7 +140,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(2)
-    mx = int(sys.argv[sys.argv.index("--max-chars") + 1]) if "--max-chars" in sys.argv else 900
+    mx = int(sys.argv[sys.argv.index("--max-chars") + 1]) if "--max-chars" in sys.argv else None
     errs, warns = check(open(sys.argv[1], encoding="utf-8").read(), mx)
     for w in warns:
         print("WARN", w)

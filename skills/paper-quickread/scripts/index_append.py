@@ -12,9 +12,10 @@ style-card | session ...).
 
 Rules:
 - The file is a JSON list. Existing entries are never modified or removed.
-- If an entry with the same id and kind exists, a new event is appended to
-  "events" of a NEW record line instead of editing the old one; readers take
-  the latest record per id. This keeps the file append-only for git diffs.
+- If an entry with the same id and kind exists, a NEW record is appended with
+  the next "seq" and "supersedes" pointing at the previous seq; the old record
+  is never edited. Readers take the highest seq per id and kind. This keeps the
+  file append-only for git diffs.
 """
 from __future__ import annotations
 

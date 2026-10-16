@@ -67,8 +67,10 @@ follows the user's language when the user writes in another.
    `stage` and the RQs or summary in `docs/STATUS.md` for section 9.
 3. Resolve the reading root (where outputs go):
    `research.yaml` `reading.dir` if set; else `<project>/reading/` when the
-   working directory is a research project; else `$STUDY_VAULT` when set;
-   else `./reading/`. Say which one was used.
+   working directory is a research project; else the study vault found by
+   `skills/study/scripts/vault.py where` (`$STUDY_VAULT`, then
+   `~/.config/study/vault`, then `~/study-vault`); else `./reading/`. Say
+   which one was used.
 
 ## Workflow
 

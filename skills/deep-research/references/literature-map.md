@@ -35,7 +35,8 @@ in the cards.
 
 Resolve the reading root exactly as `paper-quickread` Step 0 does:
 `research.yaml` `reading.dir`; else `<project>/reading/` inside a research
-project; else `$STUDY_VAULT`; else `./reading/`. Say which root was used.
+project; else the study vault (`$STUDY_VAULT`, then `~/.config/study/vault`,
+then `~/study-vault`, as resolved by the study skill's `vault.py where`); else `./reading/`. Say which root was used.
 
 Read `<reading-root>/index.json`. It is append-only: several records may
 share an `id`; take every record per id (one per artifact: `quickread`,
