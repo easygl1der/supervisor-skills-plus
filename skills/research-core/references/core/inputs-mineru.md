@@ -44,7 +44,16 @@ page or from memory.
 ## Readability gate
 
 After conversion check: headings present and in order, equations intact
-(spot-check three), tables not flattened, figure files saved. Report pages
+(spot-check three), tables not flattened, figure files saved.
+
+Tables need the closest look: MinerU can merge neighbouring cells, so a row
+of five estimates may arrive as three cells and the column order is then
+ambiguous. Recover the mapping from the paper's own prose (results are
+usually restated in the text) or from the TeX source with consent, and
+record "column order checked against <section>" in the output. If neither
+settles it, do not copy those numbers; say the table could not be read.
+The fast no-token route returns Markdown only (no figure files); note that
+figures were not extracted. [src: up:skills/study/evals/reading/papers/2026-10-16_arkhangelsky_sdid/quickread.md] (candidate) Report pages
 converted, route used and any damaged regions before using the text.
 Quote page, section, table, figure and equation labels from the original,
 not MinerU's internal numbering.
