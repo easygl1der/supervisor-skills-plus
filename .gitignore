@@ -36,3 +36,6 @@ evals/latest-report.md
 
 # Private, non-anonymized material (never commit)
 private/
+
+# study kit dependencies (npm i in skills/study/kit)
+node_modules/

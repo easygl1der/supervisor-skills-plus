@@ -139,8 +139,9 @@ M1 establish a territory (claim centrality, generalize, review prior work),
 M2 establish a niche (counter-claim, indicate a gap, raise a question,
 continue a tradition), M3 occupy the niche (state purpose, announce
 findings, state value, outline structure). Use these tags for field B's
-move sequence; add a free tag only when no CARS move fits, and say so.
-[src: lit:swales1990genre]
+move sequence; add a free tag only when no CARS move fits, and say so. The sub-move names follow common summaries of the model; check
+them against the book before quoting them as Swales' wording.
+[src: lit:swales1990genre] (candidate)
 
 Sources: Swales, J. M. (1990). *Genre Analysis: English in Academic and
 Research Settings*. Cambridge University Press.

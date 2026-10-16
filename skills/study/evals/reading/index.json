@@ -1,0 +1,28 @@
+[
+ {
+  "id": "arXiv:1812.09970",
+  "kind": "paper",
+  "title": "Synthetic Difference in Differences",
+  "path": "papers/2026-10-16_arkhangelsky_sdid/quickread.md",
+  "date": "2026-10-16",
+  "tags": [
+   "panel-policy-evaluation",
+   "synthetic-control-weighting"
+  ],
+  "field": "causal",
+  "artifact": "quickread",
+  "seq": 1,
+  "supersedes": null
+ },
+ {
+  "id": "arXiv:1812.09970",
+  "kind": "paper",
+  "title": "Synthetic Difference in Differences",
+  "path": "papers/2026-10-16_arkhangelsky_sdid/insights.md",
+  "date": "2026-10-16",
+  "artifact": "study",
+  "field": "causal",
+  "seq": 2,
+  "supersedes": 1
+ }
+]

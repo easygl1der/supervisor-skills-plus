@@ -42,7 +42,7 @@ memory only. [src: user:2026-10-16] (confirmed)
 The field names for patterns (writing patterns, structure signals,
 reusable phrasing, venue signals) and the per-section dimensions follow
 existing paper-mining tools; the move labels follow Swales' CARS model.
-Details in `notes/10-reading-sources.md`. [src: lit:swales1990genre] (confirmed)
+Details in `notes/10-reading-sources.md`. [src: lit:swales1990genre] (candidate; sub-move names from secondary summaries)
 
 ## 4. Hand-off to style-mine
 

@@ -1,0 +1,199 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>PML ch4 concept map</title>
+<style>body{margin:0;background:#f7f7f4;font:16px "PingFang SC","Noto Sans CJK SC",sans-serif;color:#17191c}#fig{display:inline-block;padding:24px}
+.cap{color:#575c63;margin-top:10px}.cap b{color:#17191c}</style></head><body><div id="fig"><svg width="1365pt" height="282pt"
+ viewBox="0.00 0.00 1365.46 282.14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 278.14)">
+<title>G</title>
+<!-- iid -->
+<g id="node1" class="node">
+<title>iid</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M94.41,-127.14C94.41,-127.14 12,-127.14 12,-127.14 6,-127.14 0,-121.14 0,-115.14 0,-115.14 0,-93 0,-93 0,-87 6,-81 12,-81 12,-81 94.41,-81 94.41,-81 100.41,-81 106.41,-87 106.41,-93 106.41,-93 106.41,-115.14 106.41,-115.14 106.41,-121.14 100.41,-127.14 94.41,-127.14"/>
+<text text-anchor="middle" x="53.2" y="-110.47" font-family="PingFang SC" font-size="13.00">iid 假设</text>
+<text text-anchor="middle" x="53.2" y="-91.72" font-family="PingFang SC" font-size="13.00">§4.2.1, Eq. 4.3</text>
+</g>
+<!-- lik -->
+<g id="node2" class="node">
+<title>lik</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M271.19,-127.14C271.19,-127.14 210.53,-127.14 210.53,-127.14 204.53,-127.14 198.53,-121.14 198.53,-115.14 198.53,-115.14 198.53,-93 198.53,-93 198.53,-87 204.53,-81 210.53,-81 210.53,-81 271.19,-81 271.19,-81 277.19,-81 283.19,-87 283.19,-93 283.19,-93 283.19,-115.14 283.19,-115.14 283.19,-121.14 277.19,-127.14 271.19,-127.14"/>
+<text text-anchor="middle" x="240.86" y="-110.47" font-family="PingFang SC" font-size="13.00">似然 p(D|θ)</text>
+<text text-anchor="middle" x="240.86" y="-91.72" font-family="PingFang SC" font-size="13.00">Eq. 4.2</text>
+</g>
+<!-- iid&#45;&gt;lik -->
+<g id="edge1" class="edge">
+<title>iid&#45;&gt;lik</title>
+<path fill="none" stroke="#575c63" d="M106.42,-104.07C132.64,-104.07 164.26,-104.07 190.13,-104.07"/>
+<polygon fill="#575c63" stroke="#575c63" points="189.8,-106.52 196.8,-104.07 189.8,-101.62 189.8,-106.52"/>
+<text text-anchor="middle" x="148.91" y="-109.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">拆成乘积</text>
+<polyline fill="none" stroke="#575c63" points="171.41,-104.07 126.41,-104.07 149.08,-104.07"/>
+</g>
+<!-- mle -->
+<g id="node3" class="node">
+<title>mle</title>
+<path fill="#e7ebfa" stroke="#2c4cd0" stroke-width="2" d="M504.98,-147.14C504.98,-147.14 432.32,-147.14 432.32,-147.14 426.32,-147.14 420.32,-141.14 420.32,-135.14 420.32,-135.14 420.32,-113 420.32,-113 420.32,-107 426.32,-101 432.32,-101 432.32,-101 504.98,-101 504.98,-101 510.98,-101 516.98,-107 516.98,-113 516.98,-113 516.98,-135.14 516.98,-135.14 516.98,-141.14 510.98,-147.14 504.98,-147.14"/>
+<text text-anchor="middle" x="468.65" y="-130.47" font-family="PingFang SC" font-size="13.00">MLE</text>
+<text text-anchor="middle" x="468.65" y="-111.72" font-family="PingFang SC" font-size="13.00">Eq. 4.5 / 4.7</text>
+</g>
+<!-- lik&#45;&gt;mle -->
+<g id="edge2" class="edge">
+<title>lik&#45;&gt;mle</title>
+<path fill="none" stroke="#575c63" d="M283.54,-107.76C319.47,-110.94 371.65,-115.57 411.3,-119.08"/>
+<polygon fill="#575c63" stroke="#575c63" points="410.86,-121.5 418.05,-119.68 411.3,-116.62 410.86,-121.5"/>
+<text text-anchor="middle" x="355.32" y="-123.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">取最大</text>
+<polyline fill="none" stroke="#575c63" points="372.19,-118.07 338.44,-118.07 356.06,-114.19"/>
+</g>
+<!-- nll -->
+<g id="node4" class="node">
+<title>nll</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M756.39,-56.14C756.39,-56.14 667.98,-56.14 667.98,-56.14 661.98,-56.14 655.98,-50.14 655.98,-44.14 655.98,-44.14 655.98,-22 655.98,-22 655.98,-16 661.98,-10 667.98,-10 667.98,-10 756.39,-10 756.39,-10 762.39,-10 768.39,-16 768.39,-22 768.39,-22 768.39,-44.14 768.39,-44.14 768.39,-50.14 762.39,-56.14 756.39,-56.14"/>
+<text text-anchor="middle" x="712.18" y="-39.47" font-family="PingFang SC" font-size="13.00">负对数似然 NLL</text>
+<text text-anchor="middle" x="712.18" y="-20.72" font-family="PingFang SC" font-size="13.00">Eq. 4.6</text>
+</g>
+<!-- mle&#45;&gt;nll -->
+<g id="edge3" class="edge">
+<title>mle&#45;&gt;nll</title>
+<path fill="none" stroke="#575c63" d="M517.64,-102.32C524.11,-99.55 530.68,-96.81 536.98,-94.32 573.4,-79.89 614.75,-65.28 648.02,-53.95"/>
+<polygon fill="#575c63" stroke="#575c63" points="648.58,-56.35 654.42,-51.78 647.01,-51.71 648.58,-56.35"/>
+<text text-anchor="middle" x="576.35" y="-100.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">等价于最小化</text>
+<polyline fill="none" stroke="#575c63" points="610.1,-95.07 542.6,-95.07 568.59,-82.18"/>
+</g>
+<!-- bern -->
+<g id="node8" class="node">
+<title>bern</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M763.14,-132.14C763.14,-132.14 661.23,-132.14 661.23,-132.14 655.23,-132.14 649.23,-126.14 649.23,-120.14 649.23,-120.14 649.23,-98 649.23,-98 649.23,-92 655.23,-86 661.23,-86 661.23,-86 763.14,-86 763.14,-86 769.14,-86 775.14,-92 775.14,-98 775.14,-98 775.14,-120.14 775.14,-120.14 775.14,-126.14 769.14,-132.14 763.14,-132.14"/>
+<text text-anchor="middle" x="712.18" y="-115.47" font-family="PingFang SC" font-size="13.00">伯努利：θ = N₁/N</text>
+<text text-anchor="middle" x="712.18" y="-96.72" font-family="PingFang SC" font-size="13.00">Eq. 4.25</text>
+</g>
+<!-- mle&#45;&gt;bern -->
+<g id="edge7" class="edge">
+<title>mle&#45;&gt;bern</title>
+<path fill="none" stroke="#575c63" d="M517.95,-121.07C553.04,-118.89 601.07,-115.91 640.48,-113.46"/>
+<polygon fill="#575c63" stroke="#575c63" points="640.4,-115.92 647.23,-113.04 640.1,-111.03 640.4,-115.92"/>
+<text text-anchor="middle" x="576.35" y="-125.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">例：伯努利</text>
+<polyline fill="none" stroke="#575c63" points="604.48,-120.07 548.23,-120.07 575.6,-117.49"/>
+</g>
+<!-- gauss -->
+<g id="node9" class="node">
+<title>gauss</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M761.26,-274.14C761.26,-274.14 663.1,-274.14 663.1,-274.14 657.1,-274.14 651.1,-268.14 651.1,-262.14 651.1,-262.14 651.1,-240 651.1,-240 651.1,-234 657.1,-228 663.1,-228 663.1,-228 761.26,-228 761.26,-228 767.26,-228 773.26,-234 773.26,-240 773.26,-240 773.26,-262.14 773.26,-262.14 773.26,-268.14 767.26,-274.14 761.26,-274.14"/>
+<text text-anchor="middle" x="712.18" y="-257.47" font-family="PingFang SC" font-size="13.00">高斯：均值与方差</text>
+<text text-anchor="middle" x="712.18" y="-238.72" font-family="PingFang SC" font-size="13.00">Eq. 4.35–4.36</text>
+</g>
+<!-- mle&#45;&gt;gauss -->
+<g id="edge8" class="edge">
+<title>mle&#45;&gt;gauss</title>
+<path fill="none" stroke="#575c63" d="M494.07,-148.06C506.25,-159.12 521.63,-171.82 536.98,-181.07 570.06,-201 609.84,-217.48 643.04,-229.43"/>
+<polygon fill="#575c63" stroke="#575c63" points="642.04,-231.68 649.46,-231.71 643.68,-227.06 642.04,-231.68"/>
+<text text-anchor="middle" x="576.35" y="-223.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">例：高斯</text>
+<polyline fill="none" stroke="#575c63" points="598.85,-218.07 553.85,-218.07 585.27,-206.13"/>
+</g>
+<!-- ols -->
+<g id="node11" class="node">
+<title>ols</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M776.64,-203.14C776.64,-203.14 647.73,-203.14 647.73,-203.14 641.73,-203.14 635.73,-197.14 635.73,-191.14 635.73,-191.14 635.73,-169 635.73,-169 635.73,-163 641.73,-157 647.73,-157 647.73,-157 776.64,-157 776.64,-157 782.64,-157 788.64,-163 788.64,-169 788.64,-169 788.64,-191.14 788.64,-191.14 788.64,-197.14 782.64,-203.14 776.64,-203.14"/>
+<text text-anchor="middle" x="712.18" y="-186.47" font-family="PingFang SC" font-size="13.00">线性回归：MLE = OLS</text>
+<text text-anchor="middle" x="712.18" y="-167.72" font-family="PingFang SC" font-size="13.00">Eq. 4.59</text>
+</g>
+<!-- mle&#45;&gt;ols -->
+<g id="edge9" class="edge">
+<title>mle&#45;&gt;ols</title>
+<path fill="none" stroke="#575c63" d="M517.76,-137.22C524.21,-138.9 530.75,-140.56 536.98,-142.07 566.4,-149.21 598.77,-156.44 627.54,-162.65"/>
+<polygon fill="#575c63" stroke="#575c63" points="626.71,-164.98 634.07,-164.05 627.74,-160.19 626.71,-164.98"/>
+<text text-anchor="middle" x="576.35" y="-164.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">高斯噪声下</text>
+<polyline fill="none" stroke="#575c63" points="604.48,-159.07 548.23,-159.07 579.98,-152.14"/>
+</g>
+<!-- erm -->
+<g id="node12" class="node">
+<title>erm</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M1040.42,-56.14C1040.42,-56.14 922.01,-56.14 922.01,-56.14 916.01,-56.14 910.01,-50.14 910.01,-44.14 910.01,-44.14 910.01,-22 910.01,-22 910.01,-16 916.01,-10 922.01,-10 922.01,-10 1040.42,-10 1040.42,-10 1046.42,-10 1052.42,-16 1052.42,-22 1052.42,-22 1052.42,-44.14 1052.42,-44.14 1052.42,-50.14 1046.42,-56.14 1040.42,-56.14"/>
+<text text-anchor="middle" x="981.22" y="-39.47" font-family="PingFang SC" font-size="13.00">经验风险最小化 ERM</text>
+<text text-anchor="middle" x="981.22" y="-20.72" font-family="PingFang SC" font-size="13.00">Eq. 4.60</text>
+</g>
+<!-- nll&#45;&gt;erm -->
+<g id="edge11" class="edge">
+<title>nll&#45;&gt;erm</title>
+<path fill="none" stroke="#575c63" d="M768.84,-33.07C807.24,-33.07 858.86,-33.07 901.47,-33.07"/>
+<polygon fill="#575c63" stroke="#575c63" points="901.35,-35.52 908.35,-33.07 901.35,-30.62 901.35,-35.52"/>
+<text text-anchor="middle" x="842.39" y="-38.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">换成任意损失</text>
+<polyline fill="none" stroke="#575c63" points="876.14,-33.07 808.64,-33.07 842.77,-33.07"/>
+</g>
+<!-- emp -->
+<g id="node5" class="node">
+<title>emp</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M278.32,-46.14C278.32,-46.14 203.41,-46.14 203.41,-46.14 197.41,-46.14 191.41,-40.14 191.41,-34.14 191.41,-34.14 191.41,-12 191.41,-12 191.41,-6 197.41,0 203.41,0 203.41,0 278.32,0 278.32,0 284.32,0 290.32,-6 290.32,-12 290.32,-12 290.32,-34.14 290.32,-34.14 290.32,-40.14 284.32,-46.14 278.32,-46.14"/>
+<text text-anchor="middle" x="240.86" y="-29.47" font-family="PingFang SC" font-size="13.00">经验分布 p_D</text>
+<text text-anchor="middle" x="240.86" y="-10.72" font-family="PingFang SC" font-size="13.00">Eq. 4.10</text>
+</g>
+<!-- kl -->
+<g id="node6" class="node">
+<title>kl</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M489.98,-46.14C489.98,-46.14 447.32,-46.14 447.32,-46.14 441.32,-46.14 435.32,-40.14 435.32,-34.14 435.32,-34.14 435.32,-12 435.32,-12 435.32,-6 441.32,0 447.32,0 447.32,0 489.98,0 489.98,0 495.98,0 501.98,-6 501.98,-12 501.98,-12 501.98,-34.14 501.98,-34.14 501.98,-40.14 495.98,-46.14 489.98,-46.14"/>
+<text text-anchor="middle" x="468.65" y="-29.47" font-family="PingFang SC" font-size="13.00">KL 散度</text>
+<text text-anchor="middle" x="468.65" y="-10.72" font-family="PingFang SC" font-size="13.00">Eq. 4.11</text>
+</g>
+<!-- emp&#45;&gt;kl -->
+<g id="edge4" class="edge">
+<title>emp&#45;&gt;kl</title>
+<path fill="none" stroke="#575c63" d="M290.58,-23.07C331.2,-23.07 388.41,-23.07 426.7,-23.07"/>
+<polygon fill="#575c63" stroke="#575c63" points="426.53,-25.52 433.53,-23.07 426.53,-20.62 426.53,-25.52"/>
+<text text-anchor="middle" x="355.32" y="-28.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">作为 p 代入</text>
+<polyline fill="none" stroke="#575c63" points="384.94,-23.07 325.69,-23.07 355.54,-23.07"/>
+</g>
+<!-- kl&#45;&gt;nll -->
+<g id="edge5" class="edge">
+<title>kl&#45;&gt;nll</title>
+<path fill="none" stroke="#575c63" d="M502.18,-22.63C513.23,-22.51 525.64,-22.38 536.98,-22.32 571.98,-22.13 580.79,-20.36 615.73,-22.32 625.91,-22.89 636.68,-23.8 647.16,-24.86"/>
+<polygon fill="#575c63" stroke="#575c63" points="646.78,-27.28 653.99,-25.58 647.29,-22.41 646.78,-27.28"/>
+<text text-anchor="middle" x="576.35" y="-28.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">去掉常数后就是</text>
+<polyline fill="none" stroke="#575c63" points="615.73,-23.07 536.98,-23.07 576.38,-21.51"/>
+</g>
+<!-- map -->
+<g id="node7" class="node">
+<title>map</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M260.32,-198.14C260.32,-198.14 221.41,-198.14 221.41,-198.14 215.41,-198.14 209.41,-192.14 209.41,-186.14 209.41,-186.14 209.41,-164 209.41,-164 209.41,-158 215.41,-152 221.41,-152 221.41,-152 260.32,-152 260.32,-152 266.32,-152 272.32,-158 272.32,-164 272.32,-164 272.32,-186.14 272.32,-186.14 272.32,-192.14 266.32,-198.14 260.32,-198.14"/>
+<text text-anchor="middle" x="240.86" y="-181.47" font-family="PingFang SC" font-size="13.00">MAP</text>
+<text text-anchor="middle" x="240.86" y="-162.72" font-family="PingFang SC" font-size="13.00">Eq. 4.9</text>
+</g>
+<!-- map&#45;&gt;mle -->
+<g id="edge6" class="edge">
+<title>map&#45;&gt;mle</title>
+<path fill="none" stroke="#575c63" d="M272.57,-168.44C304.52,-161.51 355.97,-150.24 400.32,-140.07 403.91,-139.25 407.6,-138.39 411.32,-137.52"/>
+<polygon fill="#575c63" stroke="#575c63" points="411.76,-139.94 418.02,-135.96 410.64,-135.17 411.76,-139.94"/>
+<text text-anchor="middle" x="355.32" y="-164.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">均匀先验时退化为</text>
+<polyline fill="none" stroke="#575c63" points="400.32,-159.07 310.32,-159.07 351.53,-151.09"/>
+</g>
+<!-- unb -->
+<g id="node10" class="node">
+<title>unb</title>
+<path fill="#ffffff" stroke="#836000" d="M1054.3,-274.14C1054.3,-274.14 908.14,-274.14 908.14,-274.14 902.14,-274.14 896.14,-268.14 896.14,-262.14 896.14,-262.14 896.14,-240 896.14,-240 896.14,-234 902.14,-228 908.14,-228 908.14,-228 1054.3,-228 1054.3,-228 1060.3,-228 1066.3,-234 1066.3,-240 1066.3,-240 1066.3,-262.14 1066.3,-262.14 1066.3,-268.14 1060.3,-274.14 1054.3,-274.14"/>
+<text text-anchor="middle" x="981.22" y="-257.47" font-family="PingFang SC" font-size="13.00">除以 N−1：无偏但非 MLE</text>
+<text text-anchor="middle" x="981.22" y="-238.72" font-family="PingFang SC" font-size="13.00">Eq. 4.38</text>
+</g>
+<!-- gauss&#45;&gt;unb -->
+<g id="edge10" class="edge">
+<title>gauss&#45;&gt;unb</title>
+<path fill="none" stroke="#575c63" stroke-dasharray="5,2" d="M773.45,-251.07C807.05,-251.07 849.63,-251.07 887.4,-251.07"/>
+<polygon fill="#575c63" stroke="#575c63" points="887.37,-253.52 894.37,-251.07 887.37,-248.62 887.37,-253.52"/>
+<text text-anchor="middle" x="842.39" y="-256.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">方差对比</text>
+<polyline fill="none" stroke="#575c63" points="864.89,-251.07 819.89,-251.07 842.22,-251.07"/>
+</g>
+<!-- sur -->
+<g id="node13" class="node">
+<title>sur</title>
+<path fill="#ffffff" stroke="#8e8e8a" d="M1345.46,-56.14C1345.46,-56.14 1218.8,-56.14 1218.8,-56.14 1212.8,-56.14 1206.8,-50.14 1206.8,-44.14 1206.8,-44.14 1206.8,-22 1206.8,-22 1206.8,-16 1212.8,-10 1218.8,-10 1218.8,-10 1345.46,-10 1345.46,-10 1351.46,-10 1357.46,-16 1357.46,-22 1357.46,-22 1357.46,-44.14 1357.46,-44.14 1357.46,-50.14 1351.46,-56.14 1345.46,-56.14"/>
+<text text-anchor="middle" x="1282.13" y="-39.47" font-family="PingFang SC" font-size="13.00">替代损失：log / hinge</text>
+<text text-anchor="middle" x="1282.13" y="-20.72" font-family="PingFang SC" font-size="13.00">Eq. 4.66–4.67</text>
+</g>
+<!-- erm&#45;&gt;sur -->
+<g id="edge12" class="edge">
+<title>erm&#45;&gt;sur</title>
+<path fill="none" stroke="#575c63" d="M1052.68,-33.07C1096.23,-33.07 1152.33,-33.07 1198.04,-33.07"/>
+<polygon fill="#575c63" stroke="#575c63" points="1197.93,-35.52 1204.93,-33.07 1197.93,-30.62 1197.93,-35.52"/>
+<text text-anchor="middle" x="1136.55" y="-38.37" font-family="PingFang SC" font-size="11.00" fill="#575c63">0&#45;1 损失难优化时用</text>
+<polyline fill="none" stroke="#575c63" points="1186.8,-33.07 1086.3,-33.07 1136.95,-33.07"/>
+</g>
+</g>
+</svg>
+
+
+<div class="cap"><b>图 1</b>　第 4 章 §4.1–4.3 的依赖：MLE 是中心，KL 解释它为什么合理，ERM 把它推广到任意损失（Murphy, PML 1, 方程号如图）。</div></div>
+<script>window.__READY=true</script></body></html>

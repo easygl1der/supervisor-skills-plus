@@ -18,12 +18,20 @@ environment.
 | # | Route | How | Limits and privacy |
 |---|---|---|---|
 | 1 | MinerU MCP | tool `mineru_parse_documents_smart` (local PDF path or URL) | the owner's wrapper server; splits long PDFs past upstream page and size limits; `model='pipeline'` default, `model='vlm'` for hard layouts |
-| 2 | MinerU official CLI | `mineru-open-api flash-extract <pdf> -o <dir>` (no token); `mineru-open-api extract` with a token for long files | flash: 20 pages and 10 MB per call; uploads the file to mineru.net, so ask before sending an unpublished manuscript |
+| 2 | MinerU official CLI | precision: `mineru-open-api extract <pdf> -l en -o <dir> [--pages 137-196]` with the token in `MINERU_TOKEN`; flash: `mineru-open-api flash-extract <pdf> -o <dir>` (no token) | precision: up to 600 pages, keeps figures and tables (HTML), prefer it; flash: 20 pages and 10 MB, Markdown only, can merge table cells. Both upload the file to mineru.net, so ask before sending an unpublished manuscript |
 | 3 | Local MinerU | `mineru -p <pdf> -o <dir>` | needs a local install |
 
 Splitting a long PDF into page ranges before route 2 is allowed (page
-splitting does not read text). Record the page range in the output's
-metadata.
+splitting does not read text); precision mode takes `--pages` directly.
+Record the page range and the route in the output's metadata.
+
+The token lives in the user's shell environment (for example a private env
+file sourced from the shell profile), never in a repository, a skill file
+or a command line that gets logged. Check it with
+`mineru-open-api auth --verify`; if a shell tool does not inherit the
+profile, source that env file in the same command. If route 1 points at a
+local tunnel that is down, say so and move to route 2 for published papers
+only. [src: user:2026-10-16] (confirmed)
 
 ## On failure: stop
 
@@ -52,8 +60,10 @@ ambiguous. Recover the mapping from the paper's own prose (results are
 usually restated in the text) or from the TeX source with consent, and
 record "column order checked against <section>" in the output. If neither
 settles it, do not copy those numbers; say the table could not be read.
-The fast no-token route returns Markdown only (no figure files); note that
-figures were not extracted. [src: up:skills/study/evals/reading/papers/2026-10-16_arkhangelsky_sdid/quickread.md] (candidate) Report pages
+The fast no-token route returns Markdown only (no figure files) and merged
+Table 1 cells in the SDID test where precision mode did not; note that
+figures were not extracted, and rerun tables with precision mode when a
+token is available. [src: up:skills/study/evals/reading/papers/2026-10-16_arkhangelsky_sdid/quickread.md] (candidate) Report pages
 converted, route used and any damaged regions before using the text.
 Quote page, section, table, figure and equation labels from the original,
 not MinerU's internal numbering.

@@ -1,0 +1,28 @@
+digraph G {
+  rankdir=LR; nodesep=0.35; ranksep=0.55; bgcolor="transparent";
+  node [shape=box, style="rounded,filled", fillcolor="#ffffff", color="#8e8e8a", fontname="PingFang SC", fontsize=13, margin="0.14,0.06"];
+  edge [decorate=true, color="#575c63", fontname="PingFang SC", fontsize=11, fontcolor="#575c63", arrowsize=0.7];
+  iid   [label="iid 假设\n§4.2.1, Eq. 4.3"];
+  lik   [label="似然 p(D|θ)\nEq. 4.2"];
+  mle   [label="MLE\nEq. 4.5 / 4.7", fillcolor="#e7ebfa", color="#2c4cd0", penwidth=2];
+  nll   [label="负对数似然 NLL\nEq. 4.6"];
+  emp   [label="经验分布 p_D\nEq. 4.10"];
+  kl    [label="KL 散度\nEq. 4.11"];
+  map   [label="MAP\nEq. 4.9"];
+  bern  [label="伯努利：θ = N₁/N\nEq. 4.25"];
+  gauss [label="高斯：均值与方差\nEq. 4.35–4.36"];
+  unb   [label="除以 N−1：无偏但非 MLE\nEq. 4.38", color="#836000"];
+  ols   [label="线性回归：MLE = OLS\nEq. 4.59"];
+  erm   [label="经验风险最小化 ERM\nEq. 4.60"];
+  sur   [label="替代损失：log / hinge\nEq. 4.66–4.67"];
+  iid -> lik  [label="拆成乘积"];
+  lik -> mle  [label="取最大"];
+  mle -> nll  [label="等价于最小化"];
+  emp -> kl   [label="作为 p 代入"];
+  kl  -> nll  [label="去掉常数后就是"];
+  map -> mle  [label="均匀先验时退化为"];
+  mle -> bern [label="例：伯努利"]; mle -> gauss [label="例：高斯"]; mle -> ols [label="高斯噪声下"];
+  gauss -> unb [label="方差对比", style=dashed];
+  nll -> erm  [label="换成任意损失"];
+  erm -> sur  [label="0-1 损失难优化时用"];
+}

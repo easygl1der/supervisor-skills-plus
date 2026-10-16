@@ -1,0 +1,24 @@
+# sample entries from the 2026-10-16 eval run (simulated learner)
+- concept: synthetic difference in differences
+  aliases: [SDID]
+  field: causal
+  proficiency_self: studied-rusty
+  proficiency_ai: can-use
+  sources: ["Arkhangelsky et al., arXiv:1812.09970, §1–§4.1"]
+  prereqs: [method-difference-in-differences, method-synthetic-control]
+  last_restatement: {date: 2026-10-16, result: "mechanism 3/3; conditions 2/3; boundaries 1/2", note: concepts/method-synthetic-did.md}
+  notes: first thought SDID removes the parallel-trends assumption
+- concept: synthetic control
+  field: causal
+  proficiency_self: studied-rusty
+  proficiency_ai: null
+  sources: ["Abadie et al., California tobacco example (as the learner recalled it)"]
+- concept: maximum likelihood estimation
+  aliases: [MLE, 最大似然]
+  field: stats
+  proficiency_self: can-use
+  proficiency_ai: can-use
+  sources: ["Murphy, PML 1, §4.2, §4.7.6 (PDF pp. 137–196)"]
+  prereqs: [def-likelihood, def-kl-divergence]
+  last_restatement: {date: 2026-10-16, result: "mechanism 3/3; conditions 2/2; boundaries 1/2", note: concepts/method-mle.md}
+  notes: treated "MLE is unbiased" as general
