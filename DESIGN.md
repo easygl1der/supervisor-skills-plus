@@ -36,7 +36,7 @@ Principles, each grounded in what went wrong or right in the evidence:
 
 ## 2. Final skill tree and folder structure
 
-### 2.1 Skill tree (21 skills)
+### 2.1 Skill tree (25 skills, plus the `journal-adapt` pointer)
 
 | Stage | Skill | Origin | One line |
 |---|---|---|---|
@@ -61,10 +61,16 @@ Principles, each grounded in what went wrong or right in the evidence:
 | Records | `research-records` | anti-accretive-docs + architecture-decision-records + research-docs-linear-lifecycle | `docs/STATUS.md`, `TODO.md`, `adr/`, `log/`; source-of-truth rules; optional Linear mirror |
 | Workflow | `vibe-research-workflow` | upstream | Agent-assisted research habits; links to records and experiments |
 | Learning | `lessons-harvest` | new | After each paper or when expert notes arrive, turn feedback, logs and notes into sourced rule candidates for `research-core` (§3.4) |
+| Reading | `paper-quickread` | new | Nine-section quick read of one paper (700-character target); `--style` adds a style card for `style-mine` |
+| Reading | `study` | new | Understanding-first study of a paper, textbook chapter or concept: restatement, three-layer diagnosis, correction, learner profile in a separate study vault, HTML visual kit |
+| Reading | `research-bridge` | new | From what was read or studied to the current project: transfer checks and a minimal validation experiment with a kill criterion |
+| Proposal | `proposal-writer` | new | Thesis proposals, research plans and grant applications from RQ to timeline and risks |
+
+The reading skills (`paper-quickread`, `study`, `research-bridge`, `deep-research` literature-map mode) work without `research.yaml`; `research-supervisor` routes them by intent before stage (`docs/adr/`). `journal-adapt` stays as a pointer to `style-mine` so old installs keep resolving.
 
 Retired as separate skills (stay installed on the machine; not vendored): `se-paper-writing`, `se-paper-refinement`, `se-paper-reviewer`, `deai-paper-writing`, `avoid-ai-writing`, `humanize-paper`, `parse-pdf-comments`, `collaborative-review-notes`, `drawio-figure-replication`, `tikz-diagram-review`, `anti-accretive-docs`, `architecture-decision-records`, `research-docs-linear-lifecycle`, `paper`. Not merged at all: `drawio-architecture`, `drawio-flowchart`, `linear`, `aris-auto-research`, `takenotes`, `writing-beats`, `writing-fragments`, `storytelling`, `writing-shape` (one rule moves to core), `nn-models-drawio-library` and `scientific-illustration-ppt` (pointers only), `lecture-paper-revision` (rules paraphrased into `fields/se.md`). Project-only (stay in the project repo, not the library): `adams-sail-issue-mining`, `msr-tpa-rq-method-borrow`; their method (rules from a corpus of exemplar papers with a consensus threshold) becomes the `style-mine` procedure. Reasons per skill: `notes/02-local-skills-verdicts.md` §9–§10.
 
-Why 21 and not fewer: each new skill owns a distinct state file or loop (`feedback` table, `check-loop` round log, `docs/STATUS.md`, runs log). Folding them into existing skills would push those SKILL.md files past the 500-line lint limit (`[n01 §2.1]`).
+Why this many and not fewer: each new skill owns a distinct state file or loop (`feedback` table, `check-loop` round log, `docs/STATUS.md`, runs log). Folding them into existing skills would push those SKILL.md files past the 500-line lint limit (`[n01 §2.1]`).
 
 ### 2.2 Repository layout
 

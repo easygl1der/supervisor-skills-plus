@@ -6,6 +6,29 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+- Reading-and-learning layer that works without `research.yaml`:
+  `paper-quickread` (nine-section quick read, `--style` style card,
+  `check_quickread.py`, append-only `index_append.py`), `study`
+  (understanding-first protocol, three-layer diagnosis, learner profile in a
+  separate study vault via `vault.py`, paper / book / concept modes, HTML
+  visual kit with steppers and a render checker), `research-bridge`, and a
+  literature-map mode in `deep-research`.
+- `proposal-writer` for thesis proposals, research plans and grant
+  applications.
+- `research-core` `inputs-mineru.md` (MinerU-only input, precision CLI route,
+  stop on failure, table readability gate) and filled `fields/causal.md` and
+  `fields/stats.md` candidate rules.
+- Eval runs with real outputs in `skills/study/evals/` (SDID paper, Murphy
+  PML1 ch. 4, Lomuto partition stepper, bridge, proposal and literature map).
+- `THIRD_PARTY.md` at the root; ADRs in `docs/adr/`.
+
+### Changed
+- `journal-adapt` merged into `style-mine` (Dissect / Accumulate / Apply);
+  `skills/journal-adapt/` is now a pointer.
+- `research-supervisor` routes reading and learning requests by intent before
+  stage.
+
 ## [3.0.0-plus] - 2026-10-13
 
 Supervisor-Skills Plus, private fork of HKUSTDial/Supervisor-Skills.

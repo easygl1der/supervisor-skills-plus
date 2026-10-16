@@ -15,7 +15,7 @@ license: CC-BY-NC-SA-4.0
 
 ## Overview
 
-With twenty other skills, the main cost is knowing which one to run. This
+With more than twenty other skills, the main cost is knowing which one to run. This
 skill reads the project's state, says where the project stands and what is
 blocking it, and names the next one to three skills with a reason for each.
 It writes only the project set-up files at init. Drafting, reviewing,
@@ -30,11 +30,35 @@ when the deadline was (`note:n04` §5 S1-S10, §1.1, §1.5).
 - Start of a work session on a project ("where are we?", "what next?").
 - A new project, or a repo with no `research.yaml`.
 - The user is unsure which skill fits a request.
+- A reading or learning request (a paper, a textbook chapter, a concept,
+  a set of papers, a proposal): route by intent, with or without a project.
 
 ## When NOT to use this skill
 
 - The user already named the task and the skill: go straight there.
 - Any actual work: drafting, polishing, reviewing, running, recording.
+
+## Reading and learning: route by intent
+
+These requests do not need `research.yaml` and never trigger init. Route
+on what the user asked for, before any stage logic:
+
+| Request | Skill |
+|---|---|
+| a quick structured read of one paper; its writing style (`--style`) | `paper-quickread` |
+| understand a concept, a paper in depth, or a textbook chapter | `study` |
+| map a body of literature, find gaps, plan next reads | `deep-research` (literature-map mode) |
+| "can I use this in my project?", a minimal validation experiment | `research-bridge` |
+| thesis proposal, research plan, grant application | `proposal-writer` |
+| a style profile from exemplar papers | `style-mine` |
+
+Priority: an explicit reading or learning intent wins over the stage table;
+if a project exists, mention its stage in one line and continue with the
+routed skill. Usual chain: `paper-quickread` (triage) then `study`
+(understanding) then `research-bridge` (use in a project) then
+`idea-evaluator` or `experiment-workflow`; several cards then
+`deep-research` literature-map; a plan then `proposal-writer`.
+[src: user:2026-10-16] (confirmed)
 
 ## Step 0: Load context
 
@@ -99,7 +123,7 @@ brief showed (a blocker, a marker count, days to deadline).
 | Stage | Skills (first choice first) |
 |---|---|
 | no `research.yaml` | `research-supervisor` init, then `research-records`; `research-core` is loaded by every skill |
-| idea | `idea-evaluator`, `deep-research` |
+| idea | `idea-evaluator`, `deep-research`, `research-bridge` (an idea came from a paper or concept just studied) |
 | design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `research-records` (ADRs) |
 | experiments | `experiment-workflow`, `research-records`, `vibe-research-workflow` (agent coding habits) |
 | writing | `paper-writer`, `intro-drafter`, `tech-paper-template` (technique, AI/ML), `benchmark-paper-template` (benchmark, AI/ML), `style-mine` (venue or field profile missing), `deai-writing` |

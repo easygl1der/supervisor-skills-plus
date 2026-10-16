@@ -66,3 +66,11 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - Quality pass: privacy grep (no names, counts or domain names in skills or 6.4), AI-tell and accretion grep (only legitimate list entries), banned-word lists unified into the canonical ai-tone-guardrails, all citations re-resolved.
 - Final checks: lint 21 skills clean; check_checklists 192 items clean; check_sources 1397 resolved, 0 failed (in CI mode without the archive: arc: citations skipped); shared-sync 6 copies in sync. Smoke test: session_brief on a template project flags hidden markers, missing deadline source, stale STATUS.
 - Known limits: render_tikz.py not render-tested (no TeX here); stats and causal profiles are stubs; no reviewer-report evidence for rebuttal rules.
+
+## Phase 6: Reading and learning layer (2026-10-16 to 2026-10-17)
+
+- Built from `docs/handoff/supervisor-plus-reading-upgrade-SPEC.md`: style-mine (journal-adapt merged), paper-quickread, study (with the visual kit), research-bridge, proposal-writer, deep-research literature-map mode, research-supervisor routing by intent. Decisions in `docs/adr/0001`-`0017`.
+- SPEC claims checked and corrected: journal-adapt never called the MinerU MCP tool; the explainer page had no data block; elkjs is EPL-2.0, not MIT.
+- MinerU: MCP server not reachable this session (local tunnel down); official CLI precision mode with the user's token converted SDID (69 pp.) and PML1 ch. 4 (60 pp.). Flash mode merged Table 1 cells; precision did not.
+- Evals in `skills/study/evals/`: SDID quickread + study (two diagnosis rounds), PML1 ch. 4 book mode (suspected erratum in Exercise 4.9), Lomuto partition stepper, bridge (project and general), proposal (novelty risk R1 confirmed by the paper's appendix §8), literature map.
+- Checks: lint_skills 26 clean; check_checklists 208 clean; check_sources 1412 resolved, 0 failed; check_shared_sync 6 in sync; all kit renders with empty warnings.

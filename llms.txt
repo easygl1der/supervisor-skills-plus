@@ -48,6 +48,12 @@ Supervisor-Skills Plus (private fork) adds:
 - [research-records](skills/research-records/SKILL.md): STATUS, ADRs, logs, sources of truth, sync guard.
 - [lessons-harvest](skills/lessons-harvest/SKILL.md): grows research-core from finished projects and expert notes.
 - [rebuttal-guidance](skills/rebuttal-guidance/SKILL.md): rebuttal and response letters (upstream skill, listed here for completeness).
+- [paper-quickread](skills/paper-quickread/SKILL.md): nine-section quick read of one paper; `--style` style card. No research.yaml needed.
+- [study](skills/study/SKILL.md): understanding-first study of papers, textbook chapters and concepts with restatement, diagnosis, a learner vault and an HTML visual kit. No research.yaml needed.
+- [research-bridge](skills/research-bridge/SKILL.md): from a studied paper or concept to the current project, with a minimal validation experiment.
+- [proposal-writer](skills/proposal-writer/SKILL.md): thesis proposals, research plans, grant applications.
+- deep-research literature-map mode: evolution map, comparison table and gaps from quick-read cards.
+- `journal-adapt` is a pointer to style-mine.
 
 ## Reader curriculum
 

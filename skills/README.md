@@ -254,7 +254,7 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 
 ## Supervisor-Skills Plus：新增 skill（私有 fork）
 
-本 fork 新增了共享底座、领域与会议 profile、带出处的 checklist，以及九个覆盖整个研究流程、适用于不同领域的 skill。每个 skill 都先加载 `research-core` 并读取项目的 `research.yaml`。安装见 [INSTALL.md](../INSTALL.md)，设计见 [DESIGN.md](../DESIGN.md)。
+本 fork 新增了共享底座、领域与会议 profile、带出处的 checklist，以及十三个覆盖整个研究流程、适用于不同领域的 skill。项目类 skill 先加载 `research-core` 并读取项目的 `research.yaml`；读与学类 skill 没有项目也能用。安装见 [INSTALL.md](../INSTALL.md)，设计见 [DESIGN.md](../DESIGN.md)。
 
 | Skill | 作用 |
 |---|---|
@@ -269,6 +269,20 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 | [lessons-harvest](lessons-harvest/SKILL.md) | 每篇论文结束或收到专家意见后，把意见和笔记沉淀为带出处的候选规则，进入 research-core |
 
 本 fork 加强的 upstream skill：paper-writer、intro-drafter、paper-polish、pre-submission-reviewer、rebuttal-guidance、idea-evaluator、figure-designer、drawio-reconstruction。
+
+### 读与学（不需要 research.yaml）
+
+读论文、学教材、学概念不依赖项目阶段，没有 `research.yaml` 也能用；research-supervisor 按意图优先分派。PDF 一律经 MinerU 转换，失败就停。
+
+| Skill | 作用 |
+|---|---|
+| [paper-quickread](paper-quickread/SKILL.md) | 九段式快读一篇论文（约 700 字），主张与证据对照、数字带出处；`--style` 另出风格卡交给 style-mine |
+| [study](study/SKILL.md) | 理解优先的学习：论文 / 教材 / 概念三种模式；讲动机、例子、联系和图，要求复述，按机制 / 条件 / 边界诊断并从你的联想出发纠正；学习档案放单独的 study-vault 仓库；HTML（SVG + KaTeX）图与分步演示 |
+| [research-bridge](research-bridge/SKILL.md) | 把读到、学到的东西接回当前项目：能不能用、怎么用、最小验证实验与放弃标准 |
+| [proposal-writer](proposal-writer/SKILL.md) | 开题报告、研究计划、基金申请：RQ、文献缺口、方法与可行性、时间线、风险与备选 |
+| [deep-research](deep-research/SKILL.md) 文献地图模式 | 从一批快读卡片和学习笔记画出演化图、对比表和空白点清单 |
+
+路线 4：paper-quickread（筛）→ study（懂）→ research-bridge（用）→ idea-evaluator / experiment-workflow；读够几篇 → deep-research 文献地图 → proposal-writer。
 
 ### 路线 3：实证研究（任意领域）
 

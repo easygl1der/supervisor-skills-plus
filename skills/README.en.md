@@ -254,7 +254,7 @@ For questions, feedback, or to bring Supervisor-Skills to your own lab, please e
 
 ## Supervisor-Skills Plus: additional skills (private fork)
 
-This fork adds a shared foundation, field and venue profiles, sourced checklists and nine skills for the whole research process, in any field. Every skill loads `research-core` first and reads the project's `research.yaml`. Setup: [INSTALL.md](../INSTALL.md); design: [DESIGN.md](../DESIGN.md).
+This fork adds a shared foundation, field and venue profiles, sourced checklists and thirteen skills for the whole research process, in any field. Project skills load `research-core` first and read the project's `research.yaml`; the reading-and-learning skills also work without a project. Setup: [INSTALL.md](../INSTALL.md); design: [DESIGN.md](../DESIGN.md).
 
 | Skill | What it does |
 |---|---|
@@ -269,6 +269,20 @@ This fork adds a shared foundation, field and venue profiles, sourced checklists
 | [lessons-harvest](lessons-harvest/SKILL.md) | After each paper or expert advice, turns feedback and notes into sourced rule candidates for research-core |
 
 Upstream skills strengthened in this fork: paper-writer (claim ledger, field skeletons, math route), intro-drafter (empirical RQ-driven route), paper-polish (field and venue aware), pre-submission-reviewer (threats, double-blind, artifact, venue, integrity passes; devil's advocate; submission-day runbook), rebuttal-guidance (response table input, venue-neutral formats), idea-evaluator (empirical and theory routes), figure-designer (archive figure rules, TikZ loop), drawio-reconstruction (replication workflow, icon sourcing registry).
+
+### Reading and learning (no research.yaml needed)
+
+Reading papers, textbooks and concepts does not depend on a project stage; these skills work without `research.yaml`, and research-supervisor routes them by intent first. PDFs go through MinerU only; on failure the skill stops.
+
+| Skill | What it does |
+|---|---|
+| [paper-quickread](paper-quickread/SKILL.md) | Nine-section quick read of one paper (about 700 characters), claims against evidence with sources; `--style` adds a style card for style-mine |
+| [study](study/SKILL.md) | Understanding-first study of a paper, a textbook chapter or a concept: motivation, example, links and pictures, a required restatement, diagnosis by mechanism / conditions / boundaries, correction from the learner's own associations; learner profile in a separate study-vault repo; HTML (SVG + KaTeX) figures and steppers |
+| [research-bridge](research-bridge/SKILL.md) | From what was read or studied to the current project: can it be used, how, and a minimal validation experiment with a kill criterion |
+| [proposal-writer](proposal-writer/SKILL.md) | Thesis proposals, research plans, grant applications: RQ, literature gap, method and feasibility, timeline, risks and alternatives |
+| [deep-research](deep-research/SKILL.md) literature-map mode | Evolution map, comparison table and gap list from a set of quick-read cards and study notes |
+
+Track 4: paper-quickread (triage) → study (understand) → research-bridge (use) → idea-evaluator / experiment-workflow; after several papers → deep-research literature map → proposal-writer.
 
 ### Track 3: empirical study, any field
 
