@@ -1,0 +1,36 @@
+---
+config:
+  theme: base
+  themeVariables: {fontSize: 16px}
+---
+flowchart TB
+  subgraph S1["① 生活场景：新闻说『喝咖啡的人更长寿』"]
+    direction LR
+    s1["📰 观察研究：咖啡组平均多活 3 岁"] --> s2["🤔 是咖啡的功劳，还是喝咖啡的人本来就不一样？"]
+  end
+  subgraph S2["② 变量"]
+    direction LR
+    T["☕ T：每天喝咖啡"]:::t
+    Y["🧓 Y：寿命"]:::y
+    Z["💰 Z：收入 / 生活习惯"]:::conf
+  end
+  subgraph S3["③ 因果图 DAG"]
+    direction LR
+    Z2["💰 Z"]:::conf ==> T2["☕ T"]:::t
+    Z2 ==> Y2["🧓 Y"]:::y
+    T2 -. "τ = ?" .-> Y2
+    BD["🚪 后门路径 T ← Z → Y：<br/>Z 必须调整"]:::note
+  end
+  subgraph S4["④ 估计策略"]
+    direction LR
+    E1["📊 分层 / 回归调整 Z"] --> E2["⚖️ 倾向得分加权"] --> E3["🔍 敏感性分析：<br/>还有没测到的 U 吗？"]
+  end
+  subgraph S5["⑤ 结论"]
+    R["✅ 控制 Z 后组内斜率 ≈ 0<br/>→ 相关性主要来自混杂"]:::ok
+  end
+  S1 --> S2 --> S3 --> S4 --> S5
+  classDef conf fill:#ffe066,stroke:#e67700,stroke-width:2px
+  classDef t fill:#a5d8ff,stroke:#1864ab,stroke-width:2px
+  classDef y fill:#b2f2bb,stroke:#2b8a3e,stroke-width:2px
+  classDef note fill:#fff0f6,stroke:#c2255c,stroke-dasharray:4 3
+  classDef ok fill:#d3f9d8,stroke:#2b8a3e,stroke-width:3px

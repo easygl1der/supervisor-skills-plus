@@ -1,0 +1,27 @@
+/* adapted from visual-explainer (MIT, (c) 2025 Nico Bailon) — Paper·light register, offline CJK fonts */
+:root{color-scheme:light;--bg:#f7f7f4;--surface:#fff;--border:#e3e3dc;--border-bright:#8e8e8a;--text:#17191c;--text-dim:#575c63;--accent:#2c4cd0;--ok:#1d7443;--warn:#836000;--risk:#b3301d;--info:#1b6a94;--accent-dim:rgb(44 76 208/.14);--ok-dim:rgb(29 116 67/.13);--risk-dim:rgb(179 48 29/.12);
+--sans:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif;--disp:"Noto Serif CJK SC","Songti SC",serif;--mono:"Noto Sans Mono CJK SC","DejaVu Sans Mono",monospace;--ease:cubic-bezier(.16,1,.3,1)}
+html{font-size:17px}body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 var(--sans)}
+main,#fig{max-width:64rem;margin:0 auto;padding:2rem 1.5rem;box-sizing:border-box}
+.kicker{font:600 .75rem var(--mono);color:var(--text-dim);letter-spacing:.08em}.kicker:before{content:"";display:inline-block;width:1.5rem;height:2px;background:var(--accent);vertical-align:middle;margin-right:.5rem}
+h1{font:500 2.2rem/1.15 var(--disp);margin:.6rem 0}h2{font:500 1.625rem/1.2 var(--disp);margin:3rem 0 1rem}
+.lead{font-size:1.15rem;color:var(--text-dim);max-width:46ch;margin:.25rem 0 1rem}.lead b{color:var(--text)}
+figure{margin:1.25rem 0}.frame{background:var(--bg) radial-gradient(var(--border) 1px,transparent 1px) 0 0/16px 16px;border:1px solid var(--border);border-radius:10px;padding:1.25rem;overflow-x:auto}
+figcaption{color:var(--text-dim);margin-top:.6rem}figcaption code,.fign{font:600 .8rem var(--mono);color:var(--text)}
+svg{max-width:100%;height:auto}svg text{font-family:var(--sans);fill:var(--text);font-size:15px}
+.sh{fill:var(--surface);stroke:var(--border-bright);stroke-width:1.5}.key .sh,.sh.key{fill:var(--accent-dim);stroke:var(--accent);stroke-width:2}
+.e{fill:none;stroke:var(--text-dim);stroke-width:1.75;marker-end:url(#ah)}.e.hot{stroke:var(--accent);stroke-width:2.75}.e.risk{stroke:var(--risk);stroke-dasharray:6 5}.e.async{stroke-dasharray:6 5}
+.el{font:13px var(--mono)!important;fill:var(--text-dim)!important;paint-order:stroke;stroke:var(--bg);stroke-width:5px}.sub{font-size:12px!important;fill:var(--text-dim)!important}
+.mono{font-family:var(--mono)!important}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14.5rem,1fr));gap:1rem}.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem}
+.chip{font:600 .75rem var(--mono);border:1px solid currentColor;border-radius:4px;padding:0 .4rem}.ok{color:var(--ok)}.risk{color:var(--risk)}.warn{color:var(--warn)}.info{color:var(--info)}
+/* stepper */
+[data-s]{transition:opacity .45s var(--ease),transform .45s var(--ease)}[data-s].off{opacity:0;pointer-events:none}[data-s].dim{opacity:.2}
+.now .sh,.sh.now{stroke:var(--accent);stroke-width:2.5}.e.now{stroke:var(--accent);stroke-width:2.75}
+.ve-co circle{fill:var(--surface);stroke:var(--accent);stroke-width:1.75}.ve-co text{fill:var(--accent);font:600 13px var(--mono);text-anchor:middle;dominant-baseline:central}.ve-co.now circle{fill:var(--accent)}.ve-co.now text{fill:var(--surface)}
+.ve-player{display:flex;gap:.5rem;align-items:center;margin-top:.75rem;font:600 .8rem var(--mono)}
+.ve-player button{font:600 .8rem var(--mono);background:var(--surface);border:1px solid var(--border-bright);border-radius:4px;padding:.25rem .6rem;cursor:pointer}.ve-player button:focus-visible,.ve-player button:hover{border-color:var(--accent);outline:none}
+.ve-player input{flex:1;accent-color:var(--accent)}.ve-pos{color:var(--text-dim);min-width:3.5rem}
+.ve-cap{min-height:3.2em;margin:.5rem 0 0;color:var(--text);font-size:1rem}.ve-cap b{color:var(--accent)}
+@media (prefers-reduced-motion:reduce){[data-s]{transition:none}}
+@media print{.ve-player{display:none}}

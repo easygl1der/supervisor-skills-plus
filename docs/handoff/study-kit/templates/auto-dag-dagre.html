@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- 自动布局因果 DAG（elkjs，浏览器内）。只写 nodes/edges，不写坐标。节点 >6 个时用这个。 -->
+<link rel="stylesheet" href="../vendor/katex.min.css"><link rel="stylesheet" href="../vendor/kit.css">
+<script src="../vendor/katex.min.js"></script><script src="../vendor/elk.bundled.js"></script><script src="../vendor/dagre.min.js"></script><script src="../vendor/kit.js"></script>
+<style>.label{font-family:var(--serif);font-size:13px}.node .katex{font-size:1.15em}</style></head><body>
+<div id="fig"><div id="dag"></div><div class="caption" id="cap"></div></div>
+<script>
+const SPEC = { layout:"dagre", direction:'RIGHT', r:24,
+  nodes:[{id:'G',label:'$G$'},{id:'A',label:'$A$'},{id:'E',label:'$E$'},{id:'I',label:'$I$'},{id:'D',label:'$D$',dashed:true},
+         {id:'S',label:'$S$'},{id:'T',label:'$T$',color:'var(--c1)'},{id:'H',label:'$H$'},{id:'B',label:'$B$'},{id:'Y',label:'$Y$',color:'var(--c2)'}],
+  edges:[{from:'G',to:'E'},{from:'A',to:'I'},{from:'E',to:'I'},{from:'I',to:'T'},{from:'D',to:'T'},{from:'S',to:'T'},{from:'S',to:'B'},
+         {from:'I',to:'H'},{from:'A',to:'H'},{from:'T',to:'B'},{from:'B',to:'Y'},{from:'H',to:'Y'},{from:'T',to:'Y',dashed:true,color:'var(--c1)'},{from:'G',to:'Y'}] };
+const CAPTION = '$G$ 基因 · $A$ 年龄 · $E$ 教育 · $I$ 收入 · $D$ 离咖啡店距离（工具） · $S$ 睡眠 · $T$ 咖啡 · $H$ 医疗 · $B$ 血压 · $Y$ 寿命';
+const t0 = performance.now();
+drawDAG(SPEC, document.getElementById('dag')).then(()=>{ document.getElementById('cap').innerHTML = tex(CAPTION); document.title='layout '+(performance.now()-t0).toFixed(0)+'ms'; window.__READY = true; });
+</script></body></html>

@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../vendor/katex.min.css"><link rel="stylesheet" href="../vendor/ve/ve.css"><script src="../vendor/katex.min.js"></script><script src="../vendor/auto-render.min.js"></script><script src="../vendor/ve/stepper.js"></script>
+<!-- 模板：stepper-proof（stepper，改数据/SVG 即可）。parts 用 data-s="k"（第 k 步出现）或 data-s="0 k"（一直画、第 k 步点亮）；data-only="k" 只在第 k 步出现。说明写在 ol.ve-capsrc 或 window.CAPS。打开时显示全图。渲染：../render.sh x.html x.png --full --steps [--gif] -->
+<title>OLS unbiased</title></head><body><main id="fig">
+<div class="kicker">数理统计 · 证明分步</div><h1>OLS 无偏只靠一条假设：$E[\varepsilon\mid X]=0$</h1>
+<p class="lead">每一步只做一个变形，并<b>标明用到了什么</b>。高亮行是当前步。</p>
+<figure class="ve-steps" data-steps="5"><div class="frame" style="font-size:1.15rem">
+<style>.pf{display:grid;grid-template-columns:2.2rem 1fr 15rem;gap:.4rem 1rem;align-items:center}.pf>div{padding:.35rem .5rem;border-radius:4px}.pf .now{background:var(--accent-dim)}.why{font:600 .8rem var(--mono);color:var(--text-dim)}.n{font:600 .8rem var(--mono);color:var(--accent)}</style>
+<div class="pf">
+<span class="n" data-s="1">①</span><div data-s="1 1">$\hat\beta=(X^\top X)^{-1}X^\top y$</div><span class="why" data-s="1">OLS 定义（正规方程）</span>
+<span class="n" data-s="2">②</span><div data-s="2 2">$=(X^\top X)^{-1}X^\top(X\beta+\varepsilon)$</div><span class="why" data-s="2">模型 $y=X\beta+\varepsilon$</span>
+<span class="n" data-s="3">③</span><div data-s="3 3">$=\beta+(X^\top X)^{-1}X^\top\varepsilon$</div><span class="why" data-s="3">$(X^\top X)^{-1}X^\top X=I$（需满秩）</span>
+<span class="n" data-s="4">④</span><div data-s="4 4">$E[\hat\beta\mid X]=\beta+(X^\top X)^{-1}X^\top\,E[\varepsilon\mid X]$</div><span class="why" data-s="4">条件期望线性，$X$ 视为已知</span>
+<span class="n" data-s="5">⑤</span><div data-s="5 5">$=\beta$ &nbsp;⇒&nbsp; $E[\hat\beta]=\beta$</div><span class="why risk" data-s="5">★ 外生性 $E[\varepsilon\mid X]=0$；再用迭代期望</span>
+</div></div>
+<ol class="ve-capsrc"><li>从定义出发：$\hat\beta$ 是 $y$ 的线性函数。</li><li>代入真实模型，把 $y$ 拆成“信号 + 噪声”。</li><li>信号部分精确还原 $\beta$；剩下的偏差项只含 $\varepsilon$。</li><li>对 $X$ 取条件期望，矩阵可以提出来。</li><li>关键一步：<b>外生性</b>让偏差项期望为 0。混杂（遗漏变量与 $X$ 相关）恰好破坏这一步 → 联系到因果推断。</li></ol>
+<figcaption><span class="fign">图 1</span> 推导的唯一“实质”假设在第 ⑤ 步；同方差、正态都没用到。</figcaption></figure></main>
+<script>renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:false}]});veInit();window.__READY=true</script></body></html>

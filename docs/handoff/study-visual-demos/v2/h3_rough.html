@@ -1,0 +1,11 @@
+<html><head><meta charset=utf-8><script src="https://unpkg.com/roughjs@4.6.6/bundled/rough.js"></script>
+<style>body{margin:0;background:#fdfdf8;font-family:'LXGW WenKai'}</style></head><body><svg id=s width=1000 height=560></svg><script>
+const s=document.getElementById('s'),rc=rough.svg(s);const add=e=>s.appendChild(e);
+function box(x,y,w,h,f,t,sub){add(rc.rectangle(x,y,w,h,{fill:f,fillStyle:'hachure',roughness:2,strokeWidth:2}));txt(x+w/2,y+h/2,t,30);if(sub)txt(x+w/2,y+h/2+32,sub,18,'#555')}
+function txt(x,y,t,sz,c='#222'){const e=document.createElementNS('http://www.w3.org/2000/svg','text');e.setAttribute('x',x);e.setAttribute('y',y);e.setAttribute('text-anchor','middle');e.setAttribute('font-size',sz);e.setAttribute('fill',c);e.setAttribute('font-family','LXGW WenKai');e.textContent=t;add(e)}
+function arr(x1,y1,x2,y2,c='#333',d){add(rc.line(x1,y1,x2,y2,{stroke:c,strokeWidth:2.5,strokeLineDash:d}));const a=Math.atan2(y2-y1,x2-x1);[0.5,-0.5].forEach(k=>add(rc.line(x2,y2,x2-18*Math.cos(a+k),y2-18*Math.sin(a+k),{stroke:c,strokeWidth:2.5})))}
+txt(500,50,'混杂示意（手绘风）',34);
+box(400,90,200,100,'#ffe082','💰 收入','混杂因素');box(80,360,220,100,'#bcaaa4','☕ 喝咖啡','处理 T');box(700,360,220,100,'#a5d6a7','🧓 长寿','结果 Y');
+arr(420,190,240,355);arr(580,190,760,355);arr(305,410,695,410,'#d32f2f',[10,10]);
+txt(500,395,'看起来相关，但不是因果',20,'#d32f2f');txt(270,270,'买得起',20);txt(740,270,'医疗更好',20);txt(500,520,'后门路径：咖啡 ← 收入 → 长寿　→ 需要调整收入',22,'#1565c0');
+</script></body></html>

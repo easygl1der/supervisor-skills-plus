@@ -1,0 +1,5 @@
+:root{--ink:#1f2328;--muted:#6e7781;--bg:#fff;--c1:#2563eb;--c2:#ea580c;--c3:#16a34a;--c4:#9333ea;--warn:#dc2626;--paper:#fffdf7;
+--font:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei","LXGW WenKai",sans-serif;--serif:"Noto Serif CJK SC","Songti SC",serif}
+body{margin:0;background:var(--bg);font-family:var(--font);color:var(--ink)}
+#fig{display:inline-block;padding:24px 32px;background:var(--bg)}
+.caption{font-family:var(--serif);font-size:15px;text-align:center;margin-top:6px}

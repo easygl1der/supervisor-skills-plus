@@ -1,0 +1,7 @@
+\documentclass{article}\usepackage{CJKutf8}\usepackage{tikz}\pagestyle{empty}\usetikzlibrary{arrows.meta,positioning}
+\begin{document}\begin{CJK}{UTF8}{gbsn}\begin{tikzpicture}[v/.style={circle,draw,thick,minimum size=12mm},>={Stealth[length=3mm]},thick]
+\node[v](X){$X$};\node[v,below left=18mm and 22mm of X](T){$T$};\node[v,below right=18mm and 22mm of X](Y){$Y$};
+\node[v,left=22mm of T,dashed](Z){$Z$};
+\draw[->](X)--node[above left]{\small 收入}(T);\draw[->](X)--(Y);\draw[->,dashed](T)--node[below]{$\tau=?$}(Y);\draw[->](Z)--node[below]{\small 工具}(T);
+\node[below=6mm of T,xshift=22mm,align=center]{\small $X$：收入，$T$：咖啡，$Y$：寿命，$Z$：离咖啡店距离};
+\end{tikzpicture}\end{CJK}\end{document}

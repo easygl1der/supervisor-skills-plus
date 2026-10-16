@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- 四格漫画：起-承-转-合讲一个概念的 motivation。rough.js 画手绘边框（离线 vendor）。 -->
+<link rel="stylesheet" href="../vendor/katex.min.css"><link rel="stylesheet" href="../vendor/kit.css"><script src="../vendor/katex.min.js"></script><script src="../vendor/rough.js"></script><script src="../vendor/kit.js"></script>
+<style>#grid{display:grid;grid-template-columns:repeat(4,220px);gap:18px}.p{position:relative;height:250px;padding:14px;box-sizing:border-box}
+.p canvas{position:absolute;inset:0}.n{position:relative;font-size:12px;color:var(--muted)}.emo{position:relative;font-size:46px;text-align:center;margin:8px 0}
+.say{position:relative;background:var(--paper);border-radius:12px;padding:8px 10px;font-size:14px;line-height:1.45;font-family:"LXGW WenKai",var(--font)}
+h2{margin:0 0 12px;font-size:20px}</style></head><body>
+<div id="fig"><h2 id="title"></h2><div id="grid"></div><div class="caption" id="cap"></div></div>
+<script>
+const TITLE='四格看懂：混杂';
+const PANELS=[{emo:'📰☕',say:'新闻：喝咖啡的人更长寿！'},{emo:'🤔➡️☕',say:'那我也每天多喝几杯？'},{emo:'💰☕🧓',say:'等等，有钱人既爱喝咖啡，医疗也更好。'},{emo:'📊💰',say:'按收入分组比较，差别大多不见了：收入是混杂 $X$。'}];
+const CAPTION='起：观察到相关 → 承：直觉当成因果 → 转：发现共同原因 → 合：调整混杂';
+const g=document.getElementById('grid');PANELS.forEach((p,i)=>{const d=document.createElement('div');d.className='p';
+ d.innerHTML=`<canvas width="220" height="250"></canvas><div class="n">${['起','承','转','合'][i]}</div><div class="emo">${p.emo}</div><div class="say">${tex(p.say)}</div>`;g.appendChild(d);
+ rough.canvas(d.querySelector('canvas')).rectangle(4,4,212,242,{roughness:1.6,stroke:'#333',strokeWidth:2,seed:i+1});});
+document.getElementById('title').textContent=TITLE;document.getElementById('cap').textContent=CAPTION;window.__READY=true;
+</script></body></html>

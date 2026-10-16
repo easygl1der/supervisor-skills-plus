@@ -1,0 +1,17 @@
+h1_flat_cards	1060ms	exit=0
+h2_comic	968ms	exit=0
+h3_rough	1157ms	exit=0
+h4_dark	1044ms	exit=0
+h5_textbook	905ms	exit=0
+h6_iv	1131ms	exit=0
+g1_graphviz	127ms	exit=0
+d1_sketch	1228ms	exit=0
+m1_elk	1550ms	exit=0
+m2_mindmap	1139ms	exit=0
+m3_timeline	905ms	exit=0
+p1_xkcd	919ms	exit=0
+p2_plotly	2953ms	exit=0
+p3_vega	872ms	exit=0
+t1_tikz	763ms	exit=0
+e1_excalidraw(download only)	1703ms
+a1_anim	6737ms	exit=0

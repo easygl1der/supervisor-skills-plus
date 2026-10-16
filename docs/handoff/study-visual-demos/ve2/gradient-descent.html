@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../study-kit/vendor/katex.min.css"><link rel="stylesheet" href="../../study-kit/vendor/ve/ve.css"><script src="../../study-kit/vendor/katex.min.js"></script><script src="../../study-kit/vendor/auto-render.min.js"></script><script src="../../study-kit/vendor/ve/stepper.js"></script>
+<title>gradient descent</title></head><body><main id="fig">
+<svg width="0" height="0" style="position:absolute"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs></svg>
+<div class="kicker">机器学习 · 训练循环</div><h1>学习率决定梯度下降是收敛、爬行还是发散</h1>
+<p class="lead">同一个碗形损失 $L(w)=w^2$，每步 $w\leftarrow w-\eta\,\nabla L$。<b>只改 $\eta$</b>，轨迹截然不同。</p>
+<figure class="ve-steps" data-steps="6"><div class="frame"><svg id="gd" viewBox="0 0 900 330" role="img" aria-label="三种学习率下的梯度下降轨迹"></svg></div>
+<ol class="ve-capsrc"><li>起点 $w_0=2.6$，三个学习率同时出发。</li><li>第 1 步：$\eta=0.1$ 走一小步；$\eta=0.45$ 几乎直达谷底；$\eta=1.05$ 越过谷底到对面更高处。</li><li>第 2 步：小学习率仍在爬行。</li><li>第 3 步：$\eta=1.05$ 每步 $|w|$ 乘 $|1-2\eta|=1.1$ → 振荡放大。</li><li>第 4 步：合适的 $\eta$ 已收敛。</li><li>结论：凸二次下需 $0&lt;\eta&lt;1$ 才收敛；$\eta\approx0.5$ 一步到位（本例的解析值，非经验）。</li></ol>
+<figcaption><span class="fign">图 1</span> 三条轨迹并排（small multiples）：唯一变量是学习率。</figcaption></figure></main>
+<script>
+const etas=[[0.1,'η = 0.1 爬行','var(--warn)'],[0.45,'η = 0.45 收敛','var(--ok)'],[1.05,'η = 1.05 发散','var(--risk)']];
+const g=document.getElementById('gd');let h='';
+etas.forEach(([eta,lab,col],i)=>{const ox=20+i*295,W=270,sx=w=>ox+W/2+w*45,sy=L=>296-L*25,cl=v=>Math.max(-3,Math.min(3,v));
+ let d='';for(let w=-3;w<=3.01;w+=.1)d+=(d?'L':'M')+sx(w).toFixed(1)+' '+sy(w*w).toFixed(1);
+ h+=`<path d="${d}" fill="none" stroke="var(--border-bright)" stroke-width="1.5"/><text x="${ox+10}" y="24" style="fill:${col};font-weight:600">${lab}</text>`;
+ let w=2.6,wf;for(let k=0;k<=5;k++){const nw=w-eta*2*w; if(k<5){const c=Math.max(-3,Math.min(3,nw));h+=`<path class="e" data-s="${k+2}" style="stroke:${col}" d="M${sx(cl(w))} ${sy(cl(w)**2)}L${sx(c)} ${sy(c*c)}"/>`;}
+  const c=Math.max(-3,Math.min(3,w));h+=`<circle data-s="${k+1}" cx="${sx(c)}" cy="${sy(c*c)}" r="6" fill="${col}" stroke="var(--surface)" stroke-width="2"/>`;if(k===4)wf=nw;w=nw;}
+ h+=`<text class="el" x="${ox+10}" y="318">5 次更新后 |w| = ${Math.abs(wf).toFixed(2)}${Math.abs(wf)>3?"（已出图）":""}</text>`;});
+g.innerHTML=h;
+</script>
+<script>renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:false}]});veInit();window.__READY=true</script></body></html>

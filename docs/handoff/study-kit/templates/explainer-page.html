@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>混杂与工具变量</title>
+<!-- 模板：explainer-page（概念讲解页，VE Paper 风格）。页型：结论式标题 → 直觉图 → 机制 → 边界/small multiples → 要记住的。渲染：../render.sh x.html x.png --full --figures -->
+<link rel="stylesheet" href="../vendor/katex.min.css">
+<style>
+:root{color-scheme:light;--bg:#f7f7f4;--surface:#fff;--border:#e3e3dc;--border-bright:#8e8e8a;--text:#17191c;--text-dim:#575c63;--accent:#2c4cd0;--ok:#1d7443;--warn:#836000;--risk:#b3301d;--info:#1b6a94;--accent-dim:rgb(44 76 208/.14);
+--t-label:.75rem;--t-body:1rem;--t-lead:1.25rem;--t-h2:1.625rem;--t-h1:2.6rem;--font:"Atkinson Hyperlegible Next","Noto Sans CJK SC","PingFang SC",sans-serif;--disp:"Newsreader","Noto Serif CJK SC",serif;--mono:"Atkinson Hyperlegible Mono","Noto Sans Mono CJK SC",monospace}
+html{font-size:17px}body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 var(--font)}
+main{max-width:64rem;margin:0 auto;padding:3rem 1.5rem}
+.kicker{font:600 var(--t-label) var(--mono);color:var(--text-dim);letter-spacing:.08em}.kicker:before{content:"";display:inline-block;width:1.5rem;height:2px;background:var(--accent);vertical-align:middle;margin-right:.5rem}
+h1{font:500 var(--t-h1)/1.12 var(--disp);margin:.75rem 0}h2{font:500 var(--t-h2)/1.2 var(--disp);margin:4.5rem 0 1rem}
+.lead{font-size:var(--t-lead);color:var(--text-dim);max-width:44ch}.lead b{color:var(--text)}
+figure{margin:1.5rem 0}.frame{background:var(--bg) radial-gradient(var(--border) 1px,transparent 1px) 0 0/16px 16px;border:1px solid var(--border);border-radius:10px;padding:1.5rem}
+figcaption{color:var(--text-dim);margin-top:.75rem}figcaption code{font:600 .8rem var(--mono);color:var(--text)}
+svg text{font-family:var(--font);fill:var(--text);font-size:15px}.sh{fill:var(--surface);stroke:var(--border-bright);stroke-width:1.5}.key .sh{fill:var(--accent-dim);stroke:var(--accent);stroke-width:2}
+.e{fill:none;stroke:var(--text-dim);stroke-width:1.75;marker-end:url(#ah)}.hot{stroke:var(--risk);stroke-width:2.75;stroke-dasharray:6 5}.el{font:13px var(--mono)!important;fill:var(--text-dim)!important;paint-order:stroke;stroke:var(--bg);stroke-width:5px}
+.sub{font-size:12px!important;fill:var(--text-dim)!important}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14.5rem,1fr));gap:1rem}.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem}
+.chip{font:600 var(--t-label) var(--mono);border:1px solid currentColor;border-radius:4px;padding:0 .4rem}.ok{color:var(--ok)}.risk{color:var(--risk)}.warn{color:var(--warn)}
+.card h3{font-size:1rem;margin:.5rem 0 .25rem}.card p{margin:0;color:var(--text-dim);font-size:.9rem}
+ol.rem li{margin:.3rem 0}
+</style></head><body><main>
+<svg width="0" height="0" style="position:absolute"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs></svg>
+<div class="kicker">因果推断 · 概念讲解</div>
+<h1>喝咖啡的人更长寿，不代表咖啡让人长寿</h1>
+<p class="lead">收入同时推高<b>咖啡消费</b>和寿命，制造出一条非因果的关联。工具变量借一个只经由咖啡起作用的外生推动，把这条路绕开。</p>
+
+<figure><div class="frame"><svg viewBox="0 0 900 300" role="img" aria-label="收入是咖啡与长寿的共同原因">
+<path class="e" d="M450 92 L230 200"/><path class="e" d="M450 92 L670 200"/><path class="e hot" d="M300 225 H595"/>
+<text class="el" x="300" y="138">买得起更多</text><text class="el" x="580" y="138">医疗更好</text><text class="el" x="390" y="214" style="fill:var(--risk)!important">观察到的关联 ≠ 因果</text>
+<g class="key"><rect class="sh" x="380" y="40" width="140" height="52" rx="6"/><text x="450" y="64" text-anchor="middle">收入 U</text><text class="sub" x="450" y="82" text-anchor="middle">混杂（常未观测）</text></g>
+<g><rect class="sh" x="160" y="200" width="140" height="52" rx="6"/><text x="230" y="224" text-anchor="middle">喝咖啡 T</text><text class="sub" x="230" y="242" text-anchor="middle">处理</text></g>
+<g><rect class="sh" x="600" y="200" width="140" height="52" rx="6"/><text x="670" y="224" text-anchor="middle">寿命 Y</text><text class="sub" x="670" y="242" text-anchor="middle">结果</text></g>
+</svg></div><figcaption><code>Fig. 1</code> 后门路径 T ← U → Y 开着，所以 $E[Y\mid T=1]-E[Y\mid T=0]$ 混入了收入的作用。</figcaption></figure>
+
+<h2>按收入分层后，差距消失</h2>
+<div class="grid">
+<div class="card"><span class="chip risk">■ 不分层</span><h3>全体人群</h3><p>咖啡组寿命更高（示意）</p></div>
+<div class="card"><span class="chip ok">● 低收入组</span><h3>组内比较</h3><p>两组寿命接近（示意）</p></div>
+<div class="card"><span class="chip ok">● 高收入组</span><h3>组内比较</h3><p>两组寿命接近（示意）</p></div>
+</div>
+<p style="color:var(--text-dim)">前提：收入可观测。若 U 测不到，分层做不了 → 需要工具变量。</p>
+
+<h2>工具变量：离咖啡店的距离 Z</h2>
+<figure><div class="frame"><svg viewBox="0 0 900 300" role="img" aria-label="工具变量 Z 只通过 T 影响 Y">
+<path class="e" d="M600 92 L310 200"/><path class="e" d="M600 92 L730 200"/><path class="e" style="stroke:var(--accent);stroke-width:2.75" d="M170 226 H222"/><path class="e" d="M370 226 H655"/>
+<path class="e" style="stroke:var(--risk);stroke-dasharray:6 5" d="M120 200 C 200 60, 520 40, 660 205"/>
+<text class="el" x="150" y="190">① 相关</text><text class="el" x="350" y="104" style="fill:var(--risk)!important">② 排他：此路不得存在 ✕</text><text class="el" x="40" y="290">③ Z 与 U 独立</text><text class="el" x="480" y="216">效应 τ</text>
+<g class="key"><rect class="sh" x="40" y="200" width="130" height="52" rx="6"/><text x="105" y="224" text-anchor="middle">距离 Z</text><text class="sub" x="105" y="242" text-anchor="middle">工具变量</text></g>
+<g><rect class="sh" x="230" y="200" width="140" height="52" rx="6"/><text x="300" y="230" text-anchor="middle">喝咖啡 T</text></g>
+<g><rect class="sh" x="660" y="200" width="140" height="52" rx="6"/><text x="730" y="230" text-anchor="middle">寿命 Y</text></g>
+<g><rect class="sh" x="530" y="40" width="140" height="52" rx="6" stroke-dasharray="6 5"/><text x="600" y="72" text-anchor="middle">收入 U</text></g>
+</svg></div><figcaption><code>Fig. 2</code> 三个条件都成立时，$\hat\tau_{IV}=\dfrac{\mathrm{Cov}(Z,Y)}{\mathrm{Cov}(Z,T)}$ 估出的是<b>顺从者</b>的局部效应 LATE。</figcaption></figure>
+
+<h2>要记住的</h2>
+<ol class="rem"><li>相关 ≠ 因果：先找共同原因。</li><li>能测到混杂 → 分层/调整；测不到 → 找工具变量。</li><li>IV 估的是 LATE，不是全体 ATE；弱工具变量会放大偏差。</li></ol>
+</main>
+<script src="../vendor/katex.min.js"></script><script src="../vendor/auto-render.min.js"></script>
+<script>renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:false}]});window.__READY=true</script>
+</body></html>

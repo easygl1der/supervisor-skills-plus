@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- 教科书风因果 DAG。改 SPEC 即可；layout:'manual' 用 x/y，'elk'/'dagre' 自动布局。离线：../vendor -->
+<link rel="stylesheet" href="../vendor/katex.min.css"><link rel="stylesheet" href="../vendor/kit.css">
+<script src="../vendor/katex.min.js"></script><script src="../vendor/elk.bundled.js"></script><script src="../vendor/dagre.min.js"></script><script src="../vendor/kit.js"></script>
+<style>.node .katex{font-size:1.25em} .label{font-family:var(--serif)}</style></head><body>
+<div id="fig"><div id="dag"></div><div class="caption" id="cap"></div></div>
+<script>
+const SPEC = { layout:'manual', width:720, height:300, r:30,
+  nodes:[{id:'X',label:'$X$',x:465,y:50},{id:'T',label:'$T$',x:280,y:225},{id:'Y',label:'$Y$',x:655,y:225},{id:'Z',label:'$Z$',x:55,y:225,dashed:true}],
+  edges:[{from:'X',to:'T',label:'收入',side:'right',labelOffset:30},{from:'X',to:'Y'},{from:'T',to:'Y',dashed:true,label:'$\\tau=?$',side:'right',labelOffset:18},{from:'Z',to:'T',label:'工具',side:'right'}] };
+const CAPTION = '$X$：收入，$T$：咖啡，$Y$：寿命，$Z$：离咖啡店距离';
+drawDAG(SPEC, document.getElementById('dag')).then(()=>{ document.getElementById('cap').innerHTML = tex(CAPTION); window.__READY = true; });
+</script></body></html>
