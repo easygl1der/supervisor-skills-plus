@@ -1,0 +1,22 @@
+# FICTIONAL eval project for research-bridge (2026-10-16). Not a real study.
+project: ci-bugfix
+field: se
+subfield: msr-empirical
+venue: ""
+paper_type: empirical-study
+stage: design
+
+experiments:
+  backend: local
+  runs_log: docs/runs.md
+
+data:
+  location: local
+  manifest: data/MANIFEST.tsv
+
+records:
+  dir: docs
+  linear: {enabled: false}
+
+reading:
+  dir: ../../reading        # the eval reading root with the SDID folder

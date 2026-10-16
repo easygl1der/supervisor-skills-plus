@@ -51,6 +51,9 @@ style:
 figures:
   icon_libs: []                      # local icon library paths; see drawio-reconstruction
 
+reading:
+  dir: ""                            # optional: where paper-quickread / study write reading notes; default <project>/reading/
+
 people:                              # roles only, no names
   - {role: senior-a, comment_macro: '\seniorA', agent_may_resolve: true}
   - {role: student, comment_macro: '\todo', agent_may_resolve: false}
