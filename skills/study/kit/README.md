@@ -2,6 +2,7 @@
 - `references/visuals.md`：作图规范（选型、规则、自检循环）
 - `templates/`：textbook-dag、auto-dag-elk / auto-dag-dagre、scene-cards、comic-4panel、mind-map（全部离线可用，依赖 `vendor/`）
 - `render.sh` / `render.mjs`：headless Chrome 渲染 + 自检。首次运行 `npm i`（只装 playwright-core，用系统 Chrome；`CHROME=/path` 可指定）
+- `kit.js` `drawDAG(spec)` 选项：`layout`（manual / elk / dagre）、`r` 与节点级 `r`、`fitLabels`（圈按标签放大）、`labelsAsNodes`（elk/dagre：边标签变成文字节点，进标签的那段不画箭头）、`spacing:{node, layer}`；多条边进同一个圈时，箭头沿圆周分开（约 ±70°）。
 - `vendor/`：KaTeX 0.19 + fonts（MIT）、rough.js（MIT）、dagre（MIT）、elkjs（EPL-2.0，未修改，见仓库 `THIRD_PARTY.md`），kit.js / kit.css（本工具包）
 复制模板 → 改顶部数据块 → `./render.sh x.html` → 看 PNG → 嵌进笔记。
 

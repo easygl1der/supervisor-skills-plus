@@ -28,6 +28,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `skills/journal-adapt/` is now a pointer.
 - `research-supervisor` routes reading and learning requests by intent before
   stage.
+- Study kit `drawDAG`: edge labels as layout nodes (`labelsAsNodes`), per-node
+  radius and `fitLabels`, `spacing`, and arrowheads spread around a node that
+  many edges enter.
 
 ## [3.0.0-plus] - 2026-10-13
 

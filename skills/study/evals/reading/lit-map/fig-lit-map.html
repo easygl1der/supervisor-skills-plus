@@ -6,7 +6,7 @@
 <div id="fig"><div id="dag"></div><div class="caption" id="cap"></div></div>
 <script>
 // 文献地图：实线圈 = 已读（有卡片）；灰色虚线圈 = 未读（只在 SDID §1/§6/§8 里被引）。边色 = 关系类型，边上写动词。
-// 每条关系的动词做成一个无圈的“标签节点”参与 elk 布局，这样标签有自己的位置，不压在别的边上。
+// labelsAsNodes：每条关系的动词由 kit 变成参与 elk 布局的文字节点，标签有自己的位置，不压在别的边上。
 const READ = {color:'#2c4cd0', fill:'#eef1fb'}, CITED = {color:'#8e8e8a', dashed:true};
 const U = s => s + '<span style="font-size:11px;color:#6e7781"> 未读</span>';
 const C = {ext:'#1f2328', relax:'#2c4cd0', comp:'#b3301d', apply:'#1d7443'};
@@ -19,16 +19,11 @@ const REL = [['DID','SDID','加权局部化','ext'],['SC','DIFP','只需平行',
   ['SC','ASC','回归增强','ext'],['ASC','SDID','线性近等价','comp'],['IFE','MC','核范数正则','ext'],
   ['IFE','SDID','不需已知秩','relax'],['MC','SDID','同表对比','comp'],['HCW','SDID','不需平稳','relax'],
   ['BAL','SDID','平衡因子','ext'],['DID','PT','检验后推断','ext'],['PT','SDID','前期建权重','comp'],['SDID','STAG','逐日期重复','apply']];
-const SPEC = { layout:'elk', direction:'RIGHT', r:40, nodes:[...PAPERS], edges:[] };
-REL.forEach(([f,t,v,k],i) => { const L='L'+i, col=C[k];
-  SPEC.nodes.push({id:L, label:`<span style="color:${col};font-size:14px;white-space:nowrap">${v}</span>`, color:'none', fill:'none'});
-  SPEC.edges.push({from:f,to:L,color:col,noArrow:true},{from:L,to:t,color:col}); });
+const SPEC = { layout:'elk', direction:'RIGHT', r:34, fitLabels:true, labelsAsNodes:true, spacing:{node:28, layer:56}, nodes:[...PAPERS],
+  edges: REL.map(([f,t,v,k]) => ({from:f, to:t, label:v, color:C[k]})) };
 const CAPTION = '图 1　SDID 把 DID 与 SC 两条线合到一个加权回归里；除 SDID 外都未读，关系取自 SDID §1、§6、§8。'
  + '<br><span style="font-size:13px">边色：黑 = 扩展　蓝 = 放松假设　红 = 竞争　绿 = 应用到；实线圈 = 已读，灰虚线圈 = 未读</span>';
 const t0 = performance.now();
 drawDAG(SPEC, document.getElementById('dag')).then(()=>{
-  // 进标签节点的那一段不画箭头：A —动词→ B 读作一条边
-  const paths = [...document.querySelectorAll('#dag svg > path')];
-  SPEC.edges.forEach((e,i) => { if (e.noArrow) paths[i].removeAttribute('marker-end'); });
   document.getElementById('cap').innerHTML = tex(CAPTION); document.title='layout '+(performance.now()-t0).toFixed(0)+'ms'; window.__READY = true; });
 </script></body></html>

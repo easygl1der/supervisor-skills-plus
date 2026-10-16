@@ -12,7 +12,7 @@ Graphviz 只在节点多、需要自动排版且浏览器内 elkjs/dagre 不够�
 | 讲 motivation / 生活场景 | `scene-cards.html` | 3–5 个实体 + 带动词的箭头；第一次见到概念 |
 | 讲“它解决了什么问题”的故事 | `comic-4panel.html` | 起-承-转-合：现象 → 直觉错误 → 发现问题 → 新概念 |
 | 严谨结构 / 正式笔记 | `textbook-dag.html` | ≤6 个节点、手摆坐标；因果 DAG、定理依赖 |
-| 大图 / 结构还在变 | `auto-dag-elk.html`（默认）；`-dagre` 备用 | >6 个节点，只写 nodes/edges，浏览器内自动布局；边按布局算出的路径画成曲线，不会穿过节点。实测 elk 交叉更少 |
+| 大图 / 结构还在变 | `auto-dag-elk.html`（默认）；`-dagre` 备用 | >6 个节点，只写 nodes/edges，浏览器内自动布局；边按布局算出的路径画成曲线，不会穿过节点。实测 elk 交叉更少。边上有动词时加 `labelsAsNodes:true`（标签变成参与布局的文字节点，不压线）；标签比圈长时加 `fitLabels:true` 或单个节点 `r`；太散或太挤调 `spacing:{node, layer}`（默认 40 / 90）。例：`evals/reading/lit-map/fig-lit-map.html` |
 | 几十个节点 | Graphviz `dot -Tsvg`，SVG 嵌进 HTML | 浏览器布局仍乱时才用；边标签多时加 `decorate=true`（标签用细线连到边，不会认错边） |
 | 心智模型 / 诊断复述 | `mind-map.html` | 中心概念 + 三层（核心机制 / 成立条件 / 边界与推论）；叶子 status=ok/fix/new 着色 |
 | 数据直觉 | matplotlib / Vega-Lite（另生成） | 只有在有真实或明确标注“模拟”的数据时 |
