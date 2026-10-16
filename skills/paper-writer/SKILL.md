@@ -409,4 +409,4 @@ note or to `docs/log/`; it never enters the manuscript.
 - Comments from co-authors, advisors or reviewers on the draft:
   `feedback-to-revision`.
 - A single light language pass: `paper-polish`.
-- Venue style from exemplar papers, contribution-list format: `journal-adapt`.
+- Venue style from exemplar papers, contribution-list format: `style-mine`.

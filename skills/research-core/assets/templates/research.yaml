@@ -44,8 +44,8 @@ records:
   linear: {enabled: false, team: "", project: ""}
 
 style:
-  exemplars: refs/exemplars/         # PDFs or extracted markdown for journal-adapt
-  dynamic_skill: ""                  # output folder of journal-adapt
+  exemplars: refs/exemplars/         # PDFs or extracted markdown for style-mine
+  dynamic_skill: ""                  # output folder of style-mine
   overlays: []                       # e.g. [no-semicolons-no-dashes]
 
 figures:

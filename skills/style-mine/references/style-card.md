@@ -8,7 +8,7 @@
 5. Readability gate for converted papers
 
 The Paper Style Card is the unit of evidence for every rule this skill
-produces. Fields A to J come from the original journal-adapt skill. Fields K
+produces. Fields A to J come from the original skill (then called journal-adapt). Fields K
 (claims and evidence) and L (threats and limitations) were added because
 style cards that only describe rhetoric missed the evidence conventions that
 reviewers check. [src: note:n02§1]
@@ -71,6 +71,8 @@ B. INTRODUCTION ARCHITECTURE
 - Literature positioning: standalone section | integrated into intro | both
 - Roadmap: explicit section-by-section | narrative | absent
 - Intro length: <approx paragraphs>
+- Move sequence: <one tag per paragraph, in order, e.g. M1-territory, M1-centrality, M2-gap, M2-question, M3-purpose, M3-findings, M3-structure>
+- Paragraph functions and transitions: <one line per paragraph: function, and how it hands over to the next>
 
 C. CONTRIBUTION EXPRESSION
 - Voice: "we show" | "this paper" | "our model" | mixed
@@ -114,6 +116,7 @@ I. WHAT THIS PAPER DOES NOT DO
 
 J. DISTINCTIVE PATTERNS
 <2-4 rhetorical or structural moves specific to this paper, described as moves, no quotes>
+- Sentence templates (3-5): <abstracted with placeholders, e.g. "Although [prior approach] handles [case], it requires [assumption], which fails when [condition]." Never a copied sentence; no topic words left in the template>
 
 K. CLAIMS AND EVIDENCE CONVENTIONS
 - Number reporting: <exact values | rounded | ranges; denominators named or not>
@@ -129,12 +132,28 @@ L. THREATS AND LIMITATIONS
 - Style: operational (what was done about each threat) | generic
 ```
 
+### Move tags
+
+Introduction moves follow Swales' CARS model (Create a Research Space):
+M1 establish a territory (claim centrality, generalize, review prior work),
+M2 establish a niche (counter-claim, indicate a gap, raise a question,
+continue a tradition), M3 occupy the niche (state purpose, announce
+findings, state value, outline structure). Use these tags for field B's
+move sequence; add a free tag only when no CARS move fits, and say so.
+[src: lit:swales1990genre]
+
+Sources: Swales, J. M. (1990). *Genre Analysis: English in Academic and
+Research Settings*. Cambridge University Press.
+
 ## 4. Where cards are saved
 
 - With a `research.yaml`: `<style.dynamic_skill>/cards/<paper_id>.md`
   (for example `.style/fse/cards/fse_001.md`).
 - Without one: `<corpus_folder>/_style_cards/<paper_id>_style_card.md`, as in
   the original skill.
+- From `paper-quickread --style`: next to the quickread note
+  (`<reading-dir>/papers/<paper>/style-card.md`); Accumulate copies it into
+  the venue corpus when the venue is aggregated.
 
 Cards hold only structural descriptions, so they may be kept in a project
 repo. Converted full texts of copyrighted papers stay out of any public repo.

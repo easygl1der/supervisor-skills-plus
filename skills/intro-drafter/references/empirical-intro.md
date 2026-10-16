@@ -107,7 +107,7 @@ start of the Results section; Results can then open with the finding.
 - **Contributions** follow the venue: some SE venues expect an itemized
   list (study, instrument, evidence on the tested assumptions, dataset
   and package), while many mining-study exemplars use none. The venue
-  profile, or `journal-adapt` reading the venue's exemplars, decides.
+  profile, or `style-mine` reading the venue's exemplars, decides.
   Contributions are claims the paper delivers; each points to a section
   or artifact. [src: note:n02§10; note:n02§11] (candidate)
 - **Roadmap**: one paragraph naming the sections in order. It was cut and

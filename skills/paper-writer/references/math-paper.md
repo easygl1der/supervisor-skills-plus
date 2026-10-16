@@ -56,7 +56,7 @@ measured numbers. One row per statement:
   definition, statement, proof idea, example or remark, pointer to the
   appendix for heavy derivation. [src: skill:academic-author-team] (confirmed)
 - Introduce an equation in words before displaying it.
-  [src: skill:academic-author-team; skill:journal-adapt] (confirmed)
+  [src: skill:academic-author-team; skill:style-mine] (confirmed)
 
 ## 3. Proofs in the body and the appendix
 

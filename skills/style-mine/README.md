@@ -1,4 +1,4 @@
-# journal-adapt
+# style-mine
 
 Builds a corpus-grounded, reviewable writing skill for one manuscript and one
 destination from exemplar papers, then revises the manuscript section by
@@ -9,7 +9,7 @@ and a report-only check used by `check-loop`.
 
 ## Origin and licence
 
-Written by the library owner as the standalone `journal-adapt` skill
+Written by the library owner as the standalone `journal-adapt` skill, renamed `style-mine` on 2026-10-16 when it became the library's single style memory
 ("journal-adapt-writing-skill", version 1.1), whose README declared the MIT
 licence. Vendored here on 2026-10-13 and extended. The original
 `INSTALLATION.md` and repository README were not copied; the base rules moved

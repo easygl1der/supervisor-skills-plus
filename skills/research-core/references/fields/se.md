@@ -352,7 +352,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Senior co-authors judged padding appendices a rejection risk.
 - Status: confirmed
 - Scope: field:se
-- Owner: journal-adapt, paper-polish, pre-submission-reviewer
+- Owner: style-mine, paper-polish, pre-submission-reviewer
 - Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-19 Strongest counter-argument
@@ -375,7 +375,7 @@ here. [src: note:n02§11]
 - **Hedging**: hedge interpretations only (core rule).
 - **Contribution list**: two former skills want two to four numbered
   bullets; six MSR and journal exemplars use none; the evidence paper
-  itemized them. Decided per venue by `journal-adapt`.
+  itemized them. Decided per venue by `style-mine`.
 - **Abstract length**: former rules say 150 to 200 or 150 to 250 words; the
   exemplar ran 190 to 270. The venue form limit decides.
 - **Headline numbers**: senior co-authors trimmed and restored exact numbers

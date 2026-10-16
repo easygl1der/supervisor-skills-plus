@@ -24,7 +24,7 @@ upstream notation rules. Core rules are not repeated here.
    owner's mathematical prose style, which `paper` loads before drafting.
 3. Owner skills `proof-review-math`, `theorem-search-math` and
    `formalize-lean4`: proof review, theorem retrieval and Lean checking.
-4. Owner skill `journal-adapt`, base rules `general_academic.md`.
+4. Owner skill `style-mine`, base rules `general_academic.md`.
 5. Upstream notation and equation rules:
    `handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md`,
    `skills/pre-submission-reviewer/references/latex-rules.md`,
@@ -75,7 +75,7 @@ record. The concerns below come from the owner's proof-review workflow.
   [src: skill:paper] (confirmed)
 - Assumptions of each theorem are stated explicitly; say what fails when
   an assumption is dropped where that is known.
-  [src: skill:paper; skill:journal-adapt] (confirmed)
+  [src: skill:paper; skill:style-mine] (confirmed)
 
 ## Tone and phrasing
 - Dense, rigorous working-note voice: enough motivation to orient the
@@ -86,7 +86,7 @@ record. The concerns below come from the owner's proof-review workflow.
   follows" when the step is structurally important.
   [src: skill:paper] (confirmed)
 - Introduce an equation in words before displaying it.
-  [src: skill:journal-adapt; skill:academic-author-team] (confirmed)
+  [src: skill:style-mine; skill:academic-author-team] (confirmed)
 - Each symbol has one meaning; introduce it near its first use; keep
   notation consistent across sections. Use as few symbols as possible and
   add a notation table when more than six are in common use.
@@ -141,7 +141,7 @@ Other figure conventions for mathematics papers are Unknown.
   `\label` and `\cref`; never use `\tag{}` for references.
   [src: skill:paper; skill:academic-author-team] (confirmed)
 - Every numbered equation is referenced in the text; otherwise use an
-  unnumbered environment. [src: up:skills/pre-submission-reviewer/references/latex-rules.md; skill:journal-adapt] (confirmed)
+  unnumbered environment. [src: up:skills/pre-submission-reviewer/references/latex-rules.md; skill:style-mine] (confirmed)
 - Use `\mathbf` for vectors and `\boldsymbol` for matrices (not `\bm`),
   `\mathbb{I}` for the indicator, `\mathbb{P}` and `\mathbb{E}` for
   probability and expectation, `n_1` and never Unicode subscripts, and no
@@ -256,5 +256,5 @@ Other figure conventions for mathematics papers are Unknown.
 
 ## Changelog
 - 0.1 (2026-10-13): created from the owner's paper, style, proof-review,
-  theorem-search and formalization skills, journal-adapt general rules and
+  theorem-search and formalization skills, style-mine general rules and
   upstream notation rules.

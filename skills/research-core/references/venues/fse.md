@@ -96,7 +96,7 @@ later, which the organizers announced. [src: note:n08§3]
   [src: arc:chat:group@2026-10-03T19:45; note:n08§5] (candidate)
 
 ## Style from exemplars
-Not yet filled by `journal-adapt` from accepted FSE papers. Until it is, use
+Not yet filled by `style-mine` from accepted FSE papers. Until it is, use
 the SE field profile's typical structure, which was measured on one
 submission to this track, not on accepted papers. Contribution-list format
 at FSE: Unknown. [src: note:n06§3; note:n02§10]
@@ -124,7 +124,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Senior co-authors expected reviewers to skip it and read padding as a rejection signal.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: paper-polish, journal-adapt, pre-submission-reviewer
+- Owner: paper-polish, style-mine, pre-submission-reviewer
 - Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-04 Page shortfall filled by priority

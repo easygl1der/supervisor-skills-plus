@@ -28,7 +28,7 @@ paper). [src: up:DESIGN.md; user:2026-10-13]
 | Other logs | `docs/log/*.md` | Incidents: lost work, overwritten edits, late discoveries, desk-reject risks |
 | STATUS | `docs/STATUS.md` | Parked items, open risks, what was cut at the end and why |
 | Git history | `git log`, `git log -p` on the paper and research repos | Trims and restores, reverts, late large diffs, fix commits that cite FB or G ids; used to verify that a lesson really happened |
-| Revision logs | `<manuscript>_revised/revision_summary.md` (journal-adapt) | "Rule candidate: YES" lines |
+| Revision logs | `<manuscript>_revised/revision_summary.md` (style-mine) | "Rule candidate: YES" lines |
 | Expert notes | see section 7 | Advisor and co-author comments, reviewer reports, published writing guides, the owner's own lessons |
 
 Read the records first, git last. Git confirms or refutes what the records
@@ -219,7 +219,7 @@ Anonymization:
    table in research-core's SKILL.md.
 3. Ask the owner for 5 to 10 exemplar papers (target journals or top venues
    of the field) and any expert sources (guides, advisor notes).
-4. Run `journal-adapt` in Profile mode on the exemplars. It returns
+4. Run `style-mine` in Profile mode on the exemplars. It returns
    `field-proposals.md` with rule lines, each with its supporting `lit:`
    keys and the consensus threshold, plus Known disagreements and Unknown
    entries.

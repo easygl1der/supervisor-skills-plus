@@ -72,7 +72,7 @@ Typical flow:
 |---|---|
 | Idea and design | idea-evaluator, deep-research |
 | Experiments | experiment-workflow, research-records |
-| Writing | paper-writer, intro-drafter, journal-adapt, check-loop |
+| Writing | paper-writer, intro-drafter, style-mine, check-loop |
 | Figures | figure-designer, drawio-reconstruction |
 | Feedback and guidance | feedback-to-revision |
 | Before submission | pre-submission-reviewer |

@@ -76,6 +76,7 @@ See: references/core/precedence.md
 | `references/core/records.md` | Records outside the paper, sources of truth, sync rules |
 | `references/core/integrity.md` | Agreement numbers, frozen gold, pre-set bars, AI-use disclosure, traceable numbers |
 | `references/core/precedence.md` | What wins when rules conflict; how to cite sources |
+| `references/core/inputs-mineru.md` | PDF input only through MinerU; routes; stop on failure |
 
 See: references/core/claims-evidence.md
 See: references/core/body-text.md
@@ -84,6 +85,7 @@ See: references/core/feedback-loop.md
 See: references/core/figures.md
 See: references/core/records.md
 See: references/core/integrity.md
+See: references/core/inputs-mineru.md
 
 ## Field profiles
 

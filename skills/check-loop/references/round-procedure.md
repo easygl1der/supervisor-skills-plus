@@ -39,7 +39,7 @@ are recorded, the oscillation guard, and the stop rules.
    - spans the user names as locked (an abstract already entered in a
      submission form, a paragraph an advisor signed off).
 5. **Inputs per check.** Claim ledger and numbers file
-   (`source_of_truth.numbers`); field profile; venue profile; journal-adapt
+   (`source_of_truth.numbers`); field profile; venue profile; style-mine
    dynamic skill (`style.dynamic_skill`); overlays (`style.overlays`).
    Note any input that is missing; its items become `unknown`, not `pass`.
 6. **Authorization.** Ask once before round 1: "apply authorized edits" (the
@@ -89,7 +89,7 @@ data, a new analysis or a decision is `needs-author`.
 
 ## 4. Check 2: venue and field style fit
 
-Run `journal-adapt` in check mode with the project's dynamic skill and the
+Run `style-mine` in check mode with the project's dynamic skill and the
 venue profile. It reports deviations; the loop decides what to apply.
 
 - Structure and section order against the venue and field profile
@@ -109,7 +109,7 @@ opted in), `repeat` (raised in an earlier round: counts as a returning
 finding for the oscillation stop). Keep the JA id in the log row next to the
 CL id.
 
-If `journal-adapt` or the dynamic skill is not available, run the venue and
+If `style-mine` or the dynamic skill is not available, run the venue and
 field profile items only and mark corpus-derived items `unknown`. Structural
 moves (reordering sections, merging subsections) are `needs-author` unless
 the user asked for them; check 2 applies wording-level fixes only.

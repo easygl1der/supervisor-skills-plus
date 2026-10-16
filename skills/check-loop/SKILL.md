@@ -3,7 +3,7 @@ name: check-loop
 description: >-
   Runs a bounded multi-round check over a manuscript: research-writing fit
   first (claims, scope, hedges, numbers, threats), then venue and field style
-  through journal-adapt, then language through a de-AI audit, with a
+  through style-mine, then language through a de-AI audit, with a
   regression re-run of the research check. Applies only authorized edits,
   records each with its rule, blocks reversions and locked-decision flips,
   and writes a dated round log. Use when a draft needs repeated checking
@@ -28,7 +28,7 @@ Each round runs three checks and one re-run:
 1. **Research-writing fit**: claims within evidence, scope words, hedges on
    model-read data, numbers that match the claim ledger or numbers file,
    threats coverage.
-2. **Venue and field style fit**: `journal-adapt` check mode with the venue
+2. **Venue and field style fit**: `style-mine` check mode with the venue
    profile.
 3. **Language and de-AI**: `deai-writing` in `audit` mode plus any overlays.
 4. **Regression**: check 1 again on the spans check 3 changed.
@@ -118,13 +118,13 @@ For round k = 1 .. `max_rounds`:
    file with denominators (WR-01, WR-16, WR-17, IN-01 to IN-03), agreement
    values (IN-04 to IN-06), threats coverage (TH-08, TH-10, TH-11), and the
    field's prefixed items. Never correct a number from memory.
-2. **Check 2, venue and field style fit.** `journal-adapt` check mode with the
+2. **Check 2, venue and field style fit.** `style-mine` check mode with the
    dynamic skill and venue profile: structure, section lengths against the
    page budget, contribution format, tone and tense, citation form, required
    sections. Pass it the round number, ADRs and term table; it returns
    `JA-r<k>-<nn>` findings with status `open`, `locked`, `advisory` or
    `repeat`. Only `open` findings can be applied; `repeat` counts toward the
-   oscillation stop. Without `journal-adapt` or a dynamic skill, run the
+   oscillation stop. Without `style-mine` or a dynamic skill, run the
    profile items only and mark corpus items `unknown`. Structural moves are
    `needs-author`.
 3. **Check 3, language and de-AI.** `deai-writing` `audit` mode (profile
@@ -234,6 +234,6 @@ Items with `Status: candidate` are advisory unless the user opted in.
 - Rule conflicts and questioned locked decisions: `research-records` (ADR).
 - TODO and STATUS updates: `research-records`.
 - Remaining comments from people: `feedback-to-revision`.
-- Venue style rules missing from the profile: `journal-adapt`.
+- Venue style rules missing from the profile: `style-mine`.
 - Submission gates after the loop: `pre-submission-reviewer`.
 - Recurring findings across projects: `lessons-harvest` reads the logs.

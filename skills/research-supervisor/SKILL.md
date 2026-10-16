@@ -63,7 +63,7 @@ Then copy `research-core` `assets/templates/research.yaml` to the project
 root, fill it, and show the diff before writing. Hand the `docs/` set-up
 (STATUS, TODO, ADR 0001 for sources of truth, runs log, `.gitignore` for
 private material) to `research-records` Task 1. A field with no profile
-loads `_template.md`; offer `journal-adapt` to build one.
+loads `_template.md`; offer `style-mine` to build one.
 
 ## Step 2: Session brief
 
@@ -102,7 +102,7 @@ brief showed (a blocker, a marker count, days to deadline).
 | idea | `idea-evaluator`, `deep-research` |
 | design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `research-records` (ADRs) |
 | experiments | `experiment-workflow`, `research-records`, `vibe-research-workflow` (agent coding habits) |
-| writing | `paper-writer`, `intro-drafter`, `tech-paper-template` (technique, AI/ML), `benchmark-paper-template` (benchmark, AI/ML), `journal-adapt` (venue or field profile missing), `deai-writing` |
+| writing | `paper-writer`, `intro-drafter`, `tech-paper-template` (technique, AI/ML), `benchmark-paper-template` (benchmark, AI/ML), `style-mine` (venue or field profile missing), `deai-writing` |
 | figures | `figure-designer`, `drawio-reconstruction` |
 | internal-review | `feedback-to-revision`, `check-loop`, `paper-polish` |
 | submission | `pre-submission-reviewer`, `check-loop`, `experiment-workflow` (artifact, numbers check) |

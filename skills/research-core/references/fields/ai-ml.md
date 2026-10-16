@@ -21,7 +21,7 @@ are not repeated here.
 2. Upstream skills with references: tech-paper-template, benchmark-paper-
    template, intro-drafter, paper-writer, pre-submission-reviewer,
    figure-designer, idea-evaluator, rebuttal-guidance.
-3. Owner skill `journal-adapt`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
+3. Owner skill `style-mine`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
 4. Upstream map of AI/ML assumptions: `notes/01-upstream-map.md` §4 to §5.
 5. Exemplar papers analysed by the handbook case studies (Intro analyses
    only): Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026). Full
@@ -62,7 +62,7 @@ are not repeated here.
   [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/pre-submission-reviewer/references/section-guides.md] (confirmed)
 - Experiments run setup, end-to-end comparison against all baselines,
   further comparisons (scalability, model size), ablation, then analysis.
-  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:journal-adapt] (confirmed)
+  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine] (confirmed)
 - Benchmark papers follow gap, benchmark, evaluation, insights,
   opportunities, with Figure 1 a running example, Table 1 a comparison with
   at least five benchmarks, and Figure 2 the construction pipeline.
@@ -95,23 +95,23 @@ are not repeated here.
   "we demonstrated". [src: up:skills/intro-drafter/SKILL.md] (confirmed)
 - Active voice with "we"; intuition before formalism; contributions as
   delivered facts, not intentions; justify non-obvious design choices
-  ("we use X instead of Y because"). [src: skill:journal-adapt] (confirmed)
+  ("we use X instead of Y because"). [src: skill:style-mine] (confirmed)
 - Avoid self-description as "novel", "state-of-the-art" or "simple yet
   effective", and do not open with a claim that deep learning revolutionized
-  a field. [src: skill:journal-adapt; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
+  a field. [src: skill:style-mine; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 
 ## Citation norms
 - Numeric citations by first appearance; a six-paragraph Introduction
   typically carries 15 to 25 verified references.
   [src: up:skills/intro-drafter/SKILL.md] (confirmed)
 - Cite the three to five most relevant papers per claim, not ten or more.
-  [src: skill:journal-adapt] (confirmed)
+  [src: skill:style-mine] (confirmed)
 - DB community: take BibTeX from DBLP and use venue abbreviations (SIGMOD,
   VLDB, ICDE, TKDE). [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - Related Work is grouped by approach; for each group state what it does,
   what it cannot do, and how this paper differs. Criticise the closest work
   concretely and less-related work lightly.
-  [src: skill:journal-adapt; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
+  [src: skill:style-mine; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 
 ## Figures and tables
 - Three figure types carry the paper: the motivated example (Figure 1,
@@ -128,12 +128,12 @@ are not repeated here.
   [src: up:handbook-en/04_Scientific_Plotting/4.3_experimental-results-figure.md] (confirmed)
 - Main results table lists all baselines and all metrics with the best
   result in bold (benchmarks: best and second best marked).
-  [src: skill:journal-adapt; up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
+  [src: skill:style-mine; up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
 
 ## Rigor and threats
 - Setup names at least three real datasets (DB-lab rule), the metrics, the
   baselines and implementation details: optimizer, learning rate,
-  hardware and seeds. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:journal-adapt] (confirmed)
+  hardware and seeds. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine] (confirmed)
 - Tune every baseline with the same effort and its best known
   configuration; document the effort.
   [src: up:skills/benchmark-paper-template/references/experiments.md] (confirmed)
@@ -141,7 +141,7 @@ are not repeated here.
   runs, and the decoding temperature; add significance tests where they
   apply. [src: up:skills/benchmark-paper-template/references/experiments.md; up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
 - Report secondary metrics (latency, cost) beside accuracy, and say where
-  the method fails. [src: skill:journal-adapt; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
+  the method fails. [src: skill:style-mine; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - LLM-as-judge scores are validated against human ratings before use.
   [src: up:skills/benchmark-paper-template/references/benchmark-design.md] (confirmed)
 - Document how training and prompt contamination of evaluation data is
@@ -188,7 +188,7 @@ are not repeated here.
 - Status: confirmed
 - Scope: field:ml
 - Owner: experiment-workflow, paper-writer, check-loop
-- Src: skill:journal-adapt; up:skills/benchmark-paper-template/references/experiments.md
+- Src: skill:style-mine; up:skills/benchmark-paper-template/references/experiments.md
 
 ### ML-05 Variance reported
 - [ ] Check: Non-deterministic results show mean and standard deviation over
@@ -228,18 +228,18 @@ are not repeated here.
 
 ## Known disagreements
 - Number of contributions: three or four (handbook) versus at most three
-  (journal-adapt ML rules) versus two to four (benchmark checklist). Decide
-  per venue via journal-adapt.
-  [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; skill:journal-adapt; up:skills/benchmark-paper-template/references/checklist.md]
+  (style-mine ML rules) versus two to four (benchmark checklist). Decide
+  per venue via style-mine.
+  [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; skill:style-mine; up:skills/benchmark-paper-template/references/checklist.md]
 - Challenges paragraph: required in the DB-style Introduction, while the
   handbook notes that AI conferences often go straight to the method.
   [src: up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md]
 - "To the best of our knowledge": listed as an anti-pattern by
-  journal-adapt; the core novelty rule keeps "to our knowledge" once.
-  [src: skill:journal-adapt; arc:msr:9c69675]
+  style-mine; the core novelty rule keeps "to our knowledge" once.
+  [src: skill:style-mine; arc:msr:9c69675]
 - Related Work position: second to last preferred (handbook) versus after
-  the Introduction or integrated, used consistently (journal-adapt).
-  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:journal-adapt]
+  the Introduction or integrated, used consistently (style-mine).
+  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine]
 - AI drafting: the handbook forbids LLM-generated content outright, while
   paper-writer drafts prose under evidence rules. Follow the venue and the
   team's ADR. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; note:n01§4.5]
@@ -260,4 +260,4 @@ are not repeated here.
 
 ## Changelog
 - 0.1 (2026-10-13): created from upstream handbook and skills and the
-  journal-adapt ML base rules.
+  style-mine ML base rules.

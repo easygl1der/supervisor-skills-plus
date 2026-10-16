@@ -39,7 +39,7 @@ REQUIRED = ["Check", "Status", "Scope", "Owner", "Src"]
 PLANNED = {
     "research-supervisor", "research-core", "experiment-workflow", "deai-writing",
     "check-loop", "feedback-to-revision", "research-records", "lessons-harvest",
-    "journal-adapt",
+    "style-mine", "paper-quickread", "study", "research-bridge", "proposal-writer",
 }
 
 

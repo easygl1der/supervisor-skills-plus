@@ -74,7 +74,7 @@ severity LOW and marked `advisory`.
 ## 5. Report format
 
 ```
-# journal-adapt check: <target> (round <r>, <date>)
+# style-mine check: <target> (round <r>, <date>)
 Dynamic skill: <path, date>   Venue profile: <file, version>   Field: <code, status>
 Coverage: full | reduced (<reason>)
 
@@ -93,7 +93,7 @@ Return the report to `check-loop`, which records it in its round log.
 ## 6. Standalone use
 
 Run outside check-loop when the user asks "does this section fit the
-venue?". Write the report to `docs/log/<date>-journal-adapt-check.md` (use
+venue?". Write the report to `docs/log/<date>-style-mine-check.md` (use
 the research-core `log-entry.md` header) and make no edits. To act on the
 findings, use Phase 2 of this skill (one section at a time, with a revision
 log) or `check-loop`.

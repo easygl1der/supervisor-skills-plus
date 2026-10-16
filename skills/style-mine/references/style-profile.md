@@ -6,7 +6,7 @@
 3. Priority stack P1 to P5
 4. Where the files go
 
-Both formats come from the original journal-adapt skill. Additions: each
+Both formats come from the original skill (then called journal-adapt). Additions: each
 pattern row carries its support count (`k/n`), every row names the paper IDs
 that show it, and the dynamic skill marks which rules passed the consensus
 threshold (see the profile-output reference for the threshold).

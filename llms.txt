@@ -41,7 +41,7 @@ Supervisor-Skills Plus (private fork) adds:
 - [research-supervisor](skills/research-supervisor/SKILL.md): project setup, stage detection, routing.
 - [research-core](skills/research-core/SKILL.md): core rules, field and venue profiles, sourced checklists, templates.
 - [experiment-workflow](skills/experiment-workflow/SKILL.md): freeze, gold, versions, runs, traceable numbers, replication artifact.
-- [journal-adapt](skills/journal-adapt/SKILL.md): style and venue profiles from exemplar papers.
+- [style-mine](skills/style-mine/SKILL.md): style and venue profiles from exemplar papers.
 - [deai-writing](skills/deai-writing/SKILL.md): AI-tell removal by intent.
 - [check-loop](skills/check-loop/SKILL.md): bounded research-fit, style and language check loop.
 - [feedback-to-revision](skills/feedback-to-revision/SKILL.md): comment IDs, verified changes, response tables, expert guidance records.

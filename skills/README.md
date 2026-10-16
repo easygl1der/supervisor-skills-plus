@@ -261,7 +261,7 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 | [research-supervisor](research-supervisor/SKILL.md) | 入口：初始化项目，判断阶段，列出阻塞项、未处理的批注和过期的指导行动项，分派到下一个 skill |
 | [research-core](research-core/SKILL.md) | 通用规则、领域 profile（SE、AI/ML、数学；统计和因果推断暂为空框架）、会议 profile、九份带出处的 checklist、项目模板 |
 | [experiment-workflow](experiment-workflow/SKILL.md) | 冻结语料与金标、prompt/模型版本、runs 日志、数字可追溯到脚本、数据存放、匿名复现包 |
-| [journal-adapt](journal-adapt/SKILL.md) | 从范文生成写作风格 skill、会议 profile 和领域 profile 提案（带共识阈值）；为 check-loop 提供检查模式 |
+| [style-mine](style-mine/SKILL.md) | 从范文生成写作风格 skill、会议 profile 和领域 profile 提案（带共识阈值）；为 check-loop 提供检查模式 |
 | [deai-writing](deai-writing/SKILL.md) | 按意图去 AI 味，带编辑约定和只报告的审查模式 |
 | [check-loop](check-loop/SKILL.md) | 有轮数上限的多轮检查：研究层面 → 会议与领域风格 → 语言；防止来回改；记录每轮日志 |
 | [feedback-to-revision](feedback-to-revision/SKILL.md) | 意见编号、分类、一条意见一个改动、对照 diff 核实、回复表；专家指导记录与回查 |

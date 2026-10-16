@@ -235,7 +235,7 @@ Internal planning, then prose, as in the core procedure:
    from the ledger.
 6. **Method in one sentence** (data, instrument, validation, application).
 7. **Contributions in the venue's format**: itemized or not, as the venue
-   profile or `journal-adapt` decides; each contribution points to a
+   profile or `style-mine` decides; each contribution points to a
    section or artifact.
 8. **Roadmap** paragraph, unless the venue's exemplars omit it.
 
@@ -323,6 +323,6 @@ to the author outside the prose; the delivered Introduction stays clean.
 - Comments on the Introduction from co-authors, advisors or reviewers:
   `feedback-to-revision`.
 - Contribution-list format or the venue's way of introducing a niche:
-  `journal-adapt`.
+  `style-mine`.
 - The rest of the paper, or the claim ledger the findings need:
   `paper-writer`.

@@ -264,7 +264,7 @@ Items with `Status: candidate` are advisory.
 
 - Multi-round checking with research and venue fit: `check-loop`.
 - Claims beyond the evidence, a missing spine or ledger: `paper-writer`.
-- Venue style deviations: `journal-adapt` check mode.
+- Venue style deviations: `style-mine` check mode.
 - Single-pass fluency and grammar: `paper-polish`.
 - Inline co-author and reviewer notes: `feedback-to-revision`.
 - Figures that look generated: `figure-designer`.

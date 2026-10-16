@@ -28,7 +28,7 @@ As listed by the call.
 Form fields (plain-text abstract, topics, conflicts), who enters conflicts.
 
 ## Style from exemplars
-Filled by `journal-adapt` from accepted papers at this venue: structure,
+Filled by `style-mine` from accepted papers at this venue: structure,
 lengths, contribution format, tone. Each item names its exemplars.
 
 ## Checklist additions
