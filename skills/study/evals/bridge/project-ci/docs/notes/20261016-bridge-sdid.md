@@ -25,7 +25,7 @@ verdict: 改造后用
 | 元素 | 来源 | 我的项目 | 类比在哪里断 |
 |---|---|---|---|
 | Unit | 州；38 个对照州 + 加州（quickread §5, Table 1） | repository | repo 规模、活跃度差异远大于州间差异（补）；影响单位间同方差（见 §3 A3） |
-| Treatment / timing | 所有处理单位同一时刻开始（block assignment，Eq. 4.2 前定义） | 首次加入 CI 配置的月份，各 repo 不同（staggered） | **断**：原文估计量与定理不覆盖交错开始（quickread §8「我们的判断」） |
+| Treatment / timing | 所有处理单位同一时刻开始（block assignment，Eq. 4.2 前定义） | 首次加入 CI 配置的月份，各 repo 不同（staggered） | **断**，但作者给了桥：正文估计量与定理只覆盖 block；附录 §8 建议按采用日期各做一次 SDID 再加权平均 |
 | Outcome | 人均卷烟消费（包/人/年，Table 1） | repo-月 的 bug 修复时间中位数 | 修复时间右偏、低活跃月份可能缺失（补）；更要紧的是 CI 可能改变「什么算 bug、何时关闭」本身（见 §3 新增 B1） |
 | Comparison | 单位权重 ω 选出的加权对照州，只要求与处理组平行（Eq. 2.1，截距 ω₀） | 从不采用的 repo 池，加权 | 对照池里需要有与处理 repo 走势相像的 repo；没有的话权重做不到平行（reflection Q3） |
 | Time structure | 年度，1970–2000（Table 1） | 月度 | 月度噪声更大、序列相关更强（补）；A4 要求序列相关「不能太强」（quickread §4） |
@@ -40,7 +40,7 @@ verdict: 改造后用
 | A2 分配可依赖 $L$ 但不依赖噪声 $E$（Eq. 3.5） | **未知，最脆弱** | 补：查采用前几个月是否有 bug 修复时间异常上升（“修 bug 太慢 → 引入 CI”）；对应 reflection Q2 的加税例子 | 分配依赖冲击，权重再好也去不掉偏差（reflection Q2） | 只能靠论证 + 处理前异常检查；进 threats |
 | A3 单位间误差独立，单位内可序列相关，跨单位同方差（§3, §4；placebo 依赖同方差，Algorithm 4） | 独立：基本是（补，需查共享贡献者）；同方差：**否，可能性大** | 补：按 repo 规模分层看处理前残差方差 | placebo SE 失真 | 结果变量取对数或按活跃度分层（补）；SE 方法换 bootstrap 需 N_tr 足够（Algorithm 2，条件待核） |
 | A4 信噪比、序列相关不太强、Γ 随时间稳定（§4 正文；正式条件在转写范围外） | 未知 | 原文条件未核（quickread §4、method §5） | 理论保证不成立 | 先 study §4.3 定理条件，或接受只有模拟证据 |
-| Block assignment（Eq. 4.2 前定义） | **否** | STATUS：adoption 月份各异 | 原文估计量不直接适用 | 按 cohort 分别做 SDID 再聚合；Stata `sdid` 的实现覆盖 staggered adoption [lit:clarke2024]（聚合方式未核，交 deep-research） |
+| Block assignment（Eq. 4.2 前定义） | **否** | STATUS：adoption 月份各异 | 原文估计量不直接适用 | 按 cohort 分别做 SDID 再聚合：这正是原文附录 §8 的做法（权重为各批次处理单元占比）；Stata `sdid` 的实现覆盖 staggered adoption [lit:clarke2024]；该做法的推断原文未给定理 |
 | 新增 B1：CI 不改变结果变量的定义（bug 标签、关闭流程） | 未知 | 补：比较采用前后 bug 标签使用率、自动关闭比例 | 测到的是记录方式变化而非修复速度 | 换结果定义（如只看人工关闭）或在 threats 中限定 |
 | 新增 B2：采用 CI 时没有同期的其他流程变化 | 未知 | 补：同月是否同时引入 code review bot、迁移仓库等 | 效应混入其他变化（quickread §8：作者也要求用历史背景排除同期冲击，§4） | 排除同期变化的 repo，或作为 threats |
 
@@ -71,7 +71,7 @@ verdict: 改造后用
 ## 6. 交接
 - experiment-workflow：冻结面板快照与 cohort 定义；把 SESOI 和 kill criterion 写进 run 脚本的 bar；在 `docs/runs.md` 记 placebo run。
 - research-records：验证结束后写 ADR「主方法：TWFE DID + per-cohort SDID 并列」，拒绝的备选写清（只用 TWFE；只用 SDID）。
-- deep-research：核对 staggered SDID 的聚合方式与推断（Clarke et al. 2024；原文 AER 版附录是否有 staggered 讨论，未核）；查 MSR 里 CI 采用效应的既有研究（novelty）。
+- deep-research：核对 staggered SDID 的聚合方式与推断（Clarke et al. 2024；arXiv 版附录 §8 已有按日期分组的做法，2026-10-17 核对；推断性质未核）；查 MSR 里 CI 采用效应的既有研究（novelty）。
 - study：A4 的正式条件（§4.3 Theorem 1）还没核；若要在论文里引定理，先补这一块（concept note 的「待解决的问题」已列）。
 - idea-evaluator：不需要；研究问题没变，只换估计策略。
 

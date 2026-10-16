@@ -38,7 +38,7 @@ $\hat\tau=\hat\delta_{\rm tr}-\sum_{i=1}^{N_{\rm co}}\hat\omega_i\hat\delta_i$�
 
 - 结果模型 $Y=L+W\circ\tau+E$（Eq. 4.1），$L=\Gamma\Upsilon^\top$ 低秩。
 - 分配：$D_i$ 可依赖 $\alpha_i$ 和 $M_i$，但独立于 $E_i$（Eq. 3.5 与脚注 6 前的说明）。
-- Estimand：处理组处理后各期效应的平均（Eq. 4.2，block assignment）。
+- Estimand：处理组处理后各期效应的平均（Eq. 4.2，block assignment）。交错采纳见附录 §8：按每个采用日期构造 block 子样本（按单位或按时间切分），分别估计再加权平均。
 - 正式的一致性与渐近正态定理在 §4.3（Theorem 1），已转写，条件未逐条核。
 - 推断（§5）：bootstrap（Algorithm 2）、jackknife（Algorithm 3，$N_{\rm tr}=1$ 时无定义）、placebo（Algorithm 4，依赖单位间同方差）。
 - 原文疑点（待核）：Table 4 图注说前三列是 Placebo、最后三列是 bootstrap，而表头顺序是 Bootstrap / Jackknife / Placebo。
