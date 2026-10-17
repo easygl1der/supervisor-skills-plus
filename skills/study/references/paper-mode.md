@@ -28,13 +28,19 @@ concept note in the vault.
 
 ## 2. Order of work
 
-1. Read `quickread.md` (or write it) to fix the paper's claims and numbers.
+1. **Primary source first.** Run `source-priority.md` (resolve PDF →
+   MinerU → session opener). Use `quickread.md` only to pick concepts and
+   reading order; verify every claim and number against the paper before
+   teaching. `summary.md` and `transcript.md` are orientation and
+   cross-links, not evidence.
 2. Choose the 2 to 4 concepts the paper's argument depends on (for a causal
    paper typically: the estimand, the identifying assumption, the
    estimator's key move, the inference method).
 3. For each, run the protocol; write `insights.md` and `method.md` as the
    concepts settle, not before.
 4. End with `reflection.md`.
+
+See: `source-priority.md` (conflicts, assigned-readings packs).
 
 ## 3. insights.md
 

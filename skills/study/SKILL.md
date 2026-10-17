@@ -42,7 +42,9 @@ One concept at a time, each round follows the same protocol
 Defaults that hold in every mode: give hints, not answers; ask one question
 at a time; keep replies short; copy formulas and numbers from the source
 with locations; mark steps you add as added; never invent a citation, year
-or number.
+or number. **Paper mode:** name the loaded PDF and MinerU route in the
+session opener (`source-priority.md` §5); do not teach claims from
+`summary.md` or `transcript.md` alone.
 
 ## When to use this skill
 
@@ -71,11 +73,16 @@ or number.
    otherwise fall back to `./reading/` and say so). Read
    `profile/knowledge.yaml`, `profile/misconceptions.md`, and the concept
    notes related to today's topic.
-3. Material: a PDF goes through MinerU only (`inputs-mineru.md`; stop if no
-   route works). A paper already read by `paper-quickread` reuses its folder
-   and `source/paper.md`.
+3. Material: in **paper mode**, follow `references/source-priority.md`
+   (official PDF first; MinerU Markdown second; repo `summary.md`,
+   `transcript.md`, `quickread.md` for orientation only). PDF text via
+   `research-core` → `references/core/inputs-mineru.md`; stop if no route
+   works. Reuse `source/paper.md` only when the MinerU route and PDF path
+   are on record. **Concept/book** modes: user text or chapter PDF as
+   today; summaries still cannot be sole evidence for numbers or theorems.
 
 See: references/learner-profile.md
+See: references/source-priority.md (paper mode)
 
 ## Mode
 
@@ -167,6 +174,8 @@ Report pass, fail or n/a with evidence:
 
 - MinerU route recorded for any PDF; formulas and numbers have locations;
   added steps marked.
+- Paper mode: opener states primary PDF (path or id) and MinerU route;
+  priority-4 repo aids not used as sole evidence (`source-priority.md`).
 - Every concept round had a restatement, or the notes-only choice is
   recorded.
 - Diagnosis gives a per-layer result and a label per point; misconceptions

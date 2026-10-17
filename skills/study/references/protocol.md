@@ -27,7 +27,9 @@ session.
 
 **0. Locate (one or two sentences).** Why this concept now (which paper,
 which research question), which related concepts the vault already records.
-If a prerequisite has no record, ask one multiple-choice question about it
+In paper mode the session opener already names the primary PDF
+(`source-priority.md` §5); do not locate from `summary.md` alone. If a
+prerequisite has no record, ask one multiple-choice question about it
 (`learner-profile.md` section 3) before going on. If the learner gave no
 reason, infer it from the material or the project; ask only when nothing
 fits.
