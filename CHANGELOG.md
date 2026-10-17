@@ -7,6 +7,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- `style-mine` intake without MCP: `scripts/intake_search.py` (Crossref +
+  OpenAlex; Semantic Scholar with a key) searches the top-4 statistics
+  journals or an author and filters a publication list into exemplars;
+  append-only queue, human-gated promotion. Author profiles and the
+  author/venue conflict table (`references/author-profile.md`). ADR 0018.
 - Light polish of `research-bridge` and `proposal-writer` (architecture
   unchanged): process/pipeline common breaks; a non-estimator bridge eval
   (`evals/general-process/`); `references/zh-kaiti-register.md` for Chinese

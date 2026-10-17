@@ -1,13 +1,13 @@
 ---
 name: style-mine
 description: >-
-  Mines writing style from exemplar papers in three loops: dissect one paper
-  into a Paper Style Card, accumulate cards into venue and field profiles
-  under a consensus threshold, and apply a profile to revise or check a
-  manuscript without adding facts. Also borrows analysis methods from related
-  work. Use when adapting a paper to a journal or conference, building a
-  venue or field profile, receiving a card from paper-quickread --style, or
-  running round 2 of check-loop.
+  Mines writing style from exemplar papers: dissect one paper into a Style
+  Card, accumulate cards into venue, field or author profiles under a
+  consensus threshold, and apply a profile to revise or check a manuscript
+  without adding facts. Finds exemplars by journal or author through public
+  APIs. Use when adapting a paper to a journal, building a venue, field or
+  author profile, searching a journal's new papers, receiving a
+  paper-quickread --style card, or running check-loop round 2.
 license: MIT
 argument-hint: "e.g. 'dissect this exemplar', 'build a venue profile from these 6 accepted papers', 'revise my intro for the target journal'"
 ---
@@ -54,7 +54,9 @@ old folder keeps a pointer. [src: note:n02§1; user:2026-10-12; user:2026-10-16]
    threshold are never stated as rules.
 6. **Research-core is changed only through review.** Venue profiles and
    field proposals are shown as a diff and handed to `lessons-harvest`;
-   nothing is merged without the owner's approval.
+   nothing is merged without the owner's approval. Scheduled runs may
+   append to the intake queue but never edit cards into rules, profiles
+   into `confirmed`, or any skill file.
 
 ## When to use this skill
 
@@ -98,6 +100,26 @@ like a card made here: file it under the venue or field corpus
 (`<style.dynamic_skill>/cards/` or a `style/<venue>/cards/` folder in the
 study vault), give it a paper ID, and count it only when the venue's corpus
 is aggregated. One card never becomes a rule.
+
+### Intake and author profiles
+
+Exemplars can be found without any MCP server: `scripts/intake_search.py`
+calls Crossref and OpenAlex (and Semantic Scholar when
+`SEMANTIC_SCHOLAR_API_KEY` is set) to list a journal's new papers with a
+causal keyword mark, list an author's works after a human picks the right
+author ID, or filter an owner-curated publication list into an exemplar
+table. Set `INTAKE_MAILTO` for the polite pools; keys stay in the
+environment. Results go to `<STYLE_VAULT>/monitor/queue.jsonl` for the
+owner to keep or skip. Full text, PDF caching and MinerU stay with the VPS
+literature pipeline, not this skill.
+
+An author profile is built from cards like a venue profile but kept
+separate (`authors/<slug>/`), and stacks with a venue profile: venue genre
+rules win over author voice, and every clash goes into the author/venue
+conflict table instead of being resolved silently.
+
+See: references/intake.md
+See: references/author-profile.md
 
 ## Step 0: Load context
 
@@ -304,6 +326,10 @@ and line, diff, or the card IDs):
 - In Profile mode, the research-core rules for profiles: every rule line has
   a `[src: ...]` and a status; `check_checklists.py` passes for new items;
   RC-24 (provenance written by hand, not machine-matched).
+- Intake and author mode: every exemplar comes from the queue or the
+  owner's publication list (none typed from memory); the author ID was
+  picked by a human; author and venue rules sit in separate files; each
+  author/venue clash has a row in `conflicts.md`.
 - This skill's own gates: P1 content unchanged (diff shows no change to
   citations, math, numbers, labels); support counts match the source keys;
   no corpus text quoted.
@@ -316,6 +342,9 @@ and line, diff, or the card IDs):
   `revision_summary.md` with rule candidates.
 - Profile mode: a venue profile draft in research-core format and
   `field-proposals.md`, plus the diff shown to the user.
+- Intake: lines appended to `<STYLE_VAULT>/monitor/queue.jsonl`; author
+  mode: `authors/<slug>/exemplars.md`, `cards/`, `profile.md` (draft until
+  confirmed) and `conflicts.md`.
 - Method card mode: `method-cards/*.md`, `transfer-matrix.md`, and
   implementation briefs on request.
 - Check mode: a findings report (returned to `check-loop` or written to

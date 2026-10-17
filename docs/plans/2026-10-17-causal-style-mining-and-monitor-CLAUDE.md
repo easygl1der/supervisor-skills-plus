@@ -14,7 +14,8 @@ Goal: a repeatable pipeline so we learn (a) how causal papers are written in JAS
 ## Hard constraints
 
 - Do **not** rewrite unrelated skills in a drive-by.
-- Do **not** treat **Apify** (or any single vendor) as required. Investigation (see `docs/plans/2026-10-17-causal-style-mining-investigation.md`) **recommends Crossref + OpenAlex**, with JASA RSS as an optional sidecar. **Do not bind or implement auto-monitor until the owner confirms.** Until then: manual DOI/TOC list is enough to prove MinerU → `paper-quickread --style` → vault cards.
+- Intake is **bound to skill-local APIs, not MCP** (owner, 2026-10-17): run `python skills/style-mine/scripts/intake_search.py journal|author|exemplars ...` (Crossref + OpenAlex; Semantic Scholar only with `SEMANTIC_SCHOLAR_API_KEY`; set `INTAKE_MAILTO`). See `skills/style-mine/references/intake.md`. No Apify. Fulltext resolve, cache download and MinerU stay on the VPS Academic MCP / Lit Scout; do not add them to style-mine.
+- Scheduled runs may append to `<STYLE_VAULT>/monitor/queue.jsonl` only; cards, profiles and rules are promoted after owner confirmation.
 - Never paraphrase paper findings into cards/rules; rhetoric and structure only.
 - Never write PDFs or full-text transcripts into this public/skills repo.
 - Author profile ≠ venue profile (separate paths under vault).

@@ -1,5 +1,7 @@
 # 计划：统计四大刊因果风格监测 + 刘汉中作者风格挖掘
 
+> **Status 2026-10-17 (owner decisions):** intake is implemented as skill-local APIs, not MCP (`skills/style-mine/scripts/intake_search.py`, usage in `skills/style-mine/references/intake.md`); author profiles and the author/venue conflict table are in `skills/style-mine/references/author-profile.md`; promotion stays human-gated (ADR 0018). Where the text below says the intake is recommended but not bound, this status supersedes it.
+
 > 状态：草案（M0 + 进货调查） · 日期：2026-10-17（Asia/Singapore）  
 > 仓库：`easygl1der/supervisor-skills-plus`（本仓）  
 > 配套会话提示：同目录 `2026-10-17-causal-style-mining-and-monitor-CLAUDE.md`  
@@ -66,7 +68,7 @@ paper-quickread --style              monitor/logs/
 - **Supervisor-skills-plus**：只保留**消费侧** skill（`style-mine`、`paper-quickread`、路由等）。不在本仓建监测数据库。
 - **causal-style-vault**（拟新建私有仓，或暂用本机目录 + 后迁仓）：唯一风格记忆与监测日志。
 - **hanzhong-liu-research**：作者范文与组内论文索引的**来源**（已存在：`easygl1der/hanzhong-liu-research`），不把版权受限全文推到公开 fork。
-- **Intake**：接口形状先定（`monitor/queue.yaml` 字段）。**推荐实现 = Crossref polite pool + OpenAlex enrich**（附录 §2）；**在主人确认前不得写成已绑定**，也不得改成 Apify。
+- **Intake: skill-local APIs, not MCP** (owner decision 2026-10-17). `skills/style-mine/scripts/intake_search.py` queries Crossref (discovery by ISSN, works by ORCID) and OpenAlex (abstract, OA status, author disambiguation) directly; Semantic Scholar only when `SEMANTIC_SCHOLAR_API_KEY` is set. Queue is `<STYLE_VAULT>/monitor/queue.jsonl` (append-only; fields in `skills/style-mine/references/intake.md`). Fulltext, PDF cache and MinerU stay on the VPS Academic MCP / Lit Scout. No Apify.
 
 ---
 

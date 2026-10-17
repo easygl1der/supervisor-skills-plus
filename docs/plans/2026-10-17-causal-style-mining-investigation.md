@@ -1,5 +1,7 @@
 # 调查附录：因果风格监测进货、外部 skill、刘组语料（2026-10-17）
 
+> **Outcome 2026-10-17:** the recommended stack (Crossref + OpenAlex, Semantic Scholar optional) was adopted as skill-local API calls in `skills/style-mine/scripts/intake_search.py`, not through academic-mcp. The evidence below is unchanged.
+
 > 附属 `2026-10-17-causal-style-mining-and-monitor.md`。本文件只记调查证据与建议，不改 skill、不建 vault、不创建 routine、不晋升 `research-core`。  
 > 调查日：2026-10-17。环境：supervisor-skills-plus Cloud Agent；GitHub MCP 可读 `easygl1der/hanzhong-liu-research`（private）。
 

@@ -22,3 +22,4 @@ their `docs/adr/`). Format: `skills/research-core/assets/templates/adr-0000-temp
 | [0015](0015-reading-routing-priority.md) | Reading and learning requests route by intent, without research.yaml | accepted | 2026-10-16 |
 | [0016](0016-proposal-draft-markers.md) | proposal-writer keeps visible gap markers in Draft mode | accepted | 2026-10-16 |
 | [0017](0017-skill-licences.md) | New skills use the repo licence; the owner's earlier skill stays MIT | accepted | 2026-10-16 |
+| [0018](0018-style-intake-and-author-profiles.md) | Style intake through skill-local APIs; author profiles beside venue profiles | accepted | 2026-10-17 |
