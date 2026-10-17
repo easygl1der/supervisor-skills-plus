@@ -38,6 +38,7 @@ Optional dependencies:
 | Repo checks (`scripts/lint_skills.py`) | `python3 -m pip install -r requirements-lint.txt` (PyYAML) |
 | PDF comment extraction (`feedback-to-revision`) | `python3 -m pip install pymupdf` |
 | Figure checks (`drawio-reconstruction`, `figure-designer`) | draw.io desktop or CLI; see each skill |
+| Group-meeting Beamer (`group-beamer`) | TeX Live or BasicTeX plus `tlmgr install latexmk moloch beamertheme-simpleplus ctex`; `brew install poppler` for `pdftoppm`. Do not install a full MacTeX tree from the skill. |
 
 ## 2. Update
 

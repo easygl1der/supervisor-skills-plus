@@ -65,8 +65,9 @@ Load `research-core` (core rules in `references/core/records.md` and
 
 1. If `docs/` is missing, ask before creating it. Copy `STATUS.md`,
    `TODO.md`, `adr-0000-template.md` (as `docs/adr/template.md`),
-   `log-entry.md`, `runs-log.md` (as `docs/runs.md`) from `research-core`
-   `assets/templates/`. Create `docs/adr/README.md` with an index table.
+   `log-entry.md`, `group-meeting-log.md`, `runs-log.md` (as `docs/runs.md`) from `research-core`
+   `assets/templates/`.
+   Create `docs/adr/README.md` with an index table.
 2. Fill **Sources of truth** in STATUS and write ADR 0001 recording them.
 3. Add private paths to `.gitignore` from day one (chat exports, other
    people's papers, local notes) so they never reach the shared paper repo.
@@ -137,6 +138,19 @@ flows from files to Linear, never the reverse; no reports pasted into Linear.
 Use the Linear MCP when available.
 
 See: references/linear-mirror.md
+
+## Task 8: Group-meeting decks
+
+When `group-beamer` finishes a meeting deck:
+
+1. Write `docs/log/<date>-group-meeting.md` from the research-core
+   `group-meeting-log.md` template. The "Next steps" list is the input for
+   the following weekly report (each item later marked done / partial /
+   dropped).
+2. Store `.tex`, PDF and exported notes under `docs/meetings/<date>/`.
+3. Do not invent next steps that were not on the approved outline.
+
+See: references/group-meetings.md
 
 ## Checklist
 

@@ -170,7 +170,9 @@ The `academic` profile is the default for manuscripts. In it, technical
 senses are kept (robust statistics, test harness, software ecosystem, loss
 landscape), bold claim sentences and contribution lists pass where the field
 or venue profile prescribes them, hedging follows "interpretations, not
-measurements", and punctuation rules defer to venue and overlays.
+measurements", and punctuation rules defer to venue and overlays. The
+`slides` profile is for Beamer decks (`group-beamer` calls `audit` with
+it); speaker notes stay on `academic`.
 
 The canonical banned-word list is `paper-polish`'s
 `ai-tone-guardrails.md`; a synced copy ships here.

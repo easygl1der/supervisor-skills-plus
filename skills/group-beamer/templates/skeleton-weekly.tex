@@ -1,0 +1,110 @@
+% skeleton-weekly.tex -- group-beamer weekly-report (Chinese, advisor)
+% Theme: moloch-cjk (installed Moloch + CJK wrapper). Compile:
+%   skills/group-beamer/scripts/build.sh --theme moloch-cjk templates/skeleton-weekly.tex
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{groupbeamer-moloch}
+
+\title{本周进展：识别与估计}
+\subtitle{组会周报（顾问）}
+\author{报告人}
+\institute{研究组}
+\date{2026-10-17}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \note{开场：一句话说明本周只推进了识别，没有新的点估计。}
+\end{frame}
+
+\begin{frame}{本周结论：识别草案已写，估计仍缺数据}
+  \begin{equation*}
+    \tau = E[Y(1)-Y(0)]
+  \end{equation*}
+  \begin{itemize}
+    \item 目标量已写成有限总体 ATE；待顾问确认总体。
+    \item 识别依赖条件独立；敏感性分析仍为 TODO。
+    \item 没有新的数值结果（数据冻结未完成）。
+  \end{itemize}
+  \note{先报结论。数字全缺时说 TODO，不要编。}
+\end{frame}
+
+\begin{frame}{上周下一步：完成 / 部分 / 放弃}
+  \vspace{4pt}
+  \begin{tabular}{lll}
+    \toprule
+    条目 & 状态 & 说明 \\
+    \midrule
+    写清 \(\tau\) 的总体 & 完成 & STATUS 已改 \\
+    跑安慰剂模拟 & 部分 & 缺对照表 TODO \\
+    换估计量 & 放弃 & 先锁识别 \\
+    \bottomrule
+  \end{tabular}
+  \note{每一行都来自上次 docs/log 的下一步；没有日志就说没有。}
+\end{frame}
+
+\begin{frame}{结果：本周无可报告的估计}
+  \vspace{4pt}
+  \begin{tabular}{lc}
+    \toprule
+    量 & 值 \\
+    \midrule
+    \(\hat\tau\) & TODO \\
+    \(n\) & TODO \\
+    \bottomrule
+  \end{tabular}
+  \begin{block}{原因}
+    数据冻结脚本未跑完（commit TODO）。
+  \end{block}
+  \note{结果页只放数字。因果读法留到讨论，这里没有讨论。}
+\end{frame}
+
+\begin{frame}{阻塞}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item 对照州名单未锁定。
+      \item 安慰剂次数 \(B\) 未定。
+    \end{itemize}
+    \column{0.48\textwidth}
+    \begin{equation*}
+      \mathrm{se}_{\mathrm{pl}}^{2}
+      = \tfrac{1}{B}\sum_{b}(\hat\tau_b-\bar\tau)^{2}
+    \end{equation*}
+  \end{columns}
+  \note{阻塞要具体。标准差公式提醒还没有跑。}
+\end{frame}
+
+\begin{frame}{需要顾问拍板}
+  \begin{itemize}
+    \item \(\tau\) 用有限总体还是超总体？
+    \item 敏感性分析先做哪一条违反路径？
+  \end{itemize}
+  \begin{alertblock}{请选一条}
+    有限总体 ATE，或超总体 \(E[Y(1)-Y(0)]\)。
+  \end{alertblock}
+  \note{问完停顿。不要自己替顾问选。}
+\end{frame}
+
+\begin{frame}{下一步（有日期与责任人）}
+  \vspace{4pt}
+  \begin{tabular}{lll}
+    \toprule
+    事项 & 谁 & 日期 \\
+    \midrule
+    冻结对照名单 & 报告人 & 2026-10-20 \\
+    安慰剂 \(B{=}200\) 草案 & 报告人 & 2026-10-24 \\
+    \bottomrule
+  \end{tabular}
+  \note{结束前把两件事读一遍。杀实验标准：名单无法从公开来源复现则停。}
+\end{frame}
+
+\appendix
+\begin{frame}{附录}
+  \begin{equation*}
+    Y_i = Z_i Y_i(1) + (1-Z_i)Y_i(0)
+  \end{equation*}
+  \note{仅在被问到潜在结果定义时翻到这里。}
+\end{frame}
+
+\end{document}

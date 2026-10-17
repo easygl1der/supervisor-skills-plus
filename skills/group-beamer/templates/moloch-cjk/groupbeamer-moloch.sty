@@ -1,0 +1,13 @@
+%% groupbeamer-moloch.sty
+%% Wrapper only: loads the TeX Live Moloch package and CJK.
+%% Contains no Moloch source. Moloch remains CC-BY-SA-4.0 (jolars/moloch).
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{groupbeamer-moloch}[2026/10/17 group-beamer Moloch CJK wrapper]
+\mode<presentation>
+\usetheme{moloch}
+% Regular title format: CJK fonts have no small caps.
+\molochset{titleformat=regular}
+\RequirePackage{ctex}
+\RequirePackage{amsmath,amssymb,booktabs,graphicx,tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\mode<all>
