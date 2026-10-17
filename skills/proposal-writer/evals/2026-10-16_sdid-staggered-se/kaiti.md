@@ -1,7 +1,7 @@
 ---
 eval: proposal-writer
 genre: thesis proposal (kaiti report, PhD)
-project: fictional; built only on the SDID reading notes in ../../reading/papers/2026-10-16_arkhangelsky_sdid/
+project: fictional; built only on the SDID reading notes in ../../../study/evals/reading/papers/2026-10-16_arkhangelsky_sdid/
 date: 2026-10-16
 mode: Draft
 sources_read: quickread.md, insights.md, reflection.md, method.md (same folder as above)

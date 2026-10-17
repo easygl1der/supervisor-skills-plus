@@ -8,7 +8,7 @@ verdict: 改造后用
 ---
 # 学以致用：SDID → ci-bugfix
 
-> Eval run 1 of research-bridge, project mode. Project is fictional (`../../research.yaml`, `../STATUS.md`). Reading root: `research.yaml` `reading.dir` → `skills/study/evals/reading/`. Learner level for SDID: `proficiency_ai: can-use`（knowledge.yaml），够用，不先转 study。
+> Eval run 1 of research-bridge, project mode. Project is fictional (`../../research.yaml`, `../STATUS.md`). Reading root: `research.yaml` `reading.dir` → `skills/study/evals/reading/` (shared with study evals). Learner level for SDID: `proficiency_ai: can-use`（knowledge.yaml），够用，不先转 study。
 
 ## 0. 一句话结论
 **改造后用**：按 adoption cohort 分别做 SDID 再聚合，和现有 TWFE DID 并列报告；因为 SDID 正好针对「对照池整体不平行」这个痛点（单位权重只要求加权后平行，Eq. 2.1），但原文只覆盖 block assignment（Eq. 4.2），而 placebo 标准误依赖单位间同方差（Algorithm 4）。最便宜的证伪测试：在处理前数据上做 placebo-in-time，看假处理日的估计是否远离 0、权重是否压在一两个 repo 上。
