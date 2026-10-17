@@ -83,6 +83,14 @@ Never changed by a style edit; report findings inside them instead:
 - LaTeX structure: environments, macro definitions, comments, `\iffalse`
   parked blocks, reviewer-note macros.
 
+In a Beamer deck (`slides` profile) also protect: overlay and frame options
+(`[fragile]`, `[t]`, `\againframe`, labels used by backup hyperlinks),
+`\note{}` placement (its text may be edited under `academic`, but a note is
+never moved to another frame or merged), `TODO` markers for missing data
+(they stay until the owner supplies the number), and any number copied with
+a table or page reference. Shortening a bullet must not drop its hedge or the
+assumption it depends on.
+
 A general style request does not lift protection. Edit protected content only
 when the user names it as in scope and the change cannot corrupt data,
 citations or attribution.

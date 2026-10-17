@@ -231,23 +231,37 @@ Profiles decide whether a rule applies and how strictly.
 - **`docs`** (from upstream): project READMEs and `docs/` files. Clarity over
   voice.
 - **`technical-blog`** (from upstream): public write-ups of the work.
+- **`slides`** (new; Beamer decks from `group-beamer`): frame titles and
+  frame bodies only; `\note{}` text is checked under `academic`. Terse
+  fragments and bullets are expected and are not findings. What is checked:
+  one hedge per claim (no stacked hedges, no unhedged causal claim); a selling
+  point is stated once per deck, not repeated across title, bullets and the
+  summary slide; no "not X but Y" contrasts; no punchy closer or slogan as the
+  last bullet or final slide (end on a discussion question); marketing
+  adjectives (novel, powerful, remarkable, seamless) rationed to one per deck;
+  title verb strength at or below the claim level of the slide's evidence:
+  proved ("shows", "proves") / numerical evidence ("suggests", "in our
+  simulations") / causal under stated assumptions ("under A1 to A3, X raises
+  Y") / exploratory ("we explore", "first look"). A causal verb on a slide
+  whose assumptions are not listed on that slide or the one before is P0.
+  [src: up:docs/handoff/group-beamer-notes.md] (candidate)
 
-| Rule | academic | academic-response | docs | technical-blog |
-|---|---|---|---|---|
-| Em-dashes | defer: venue or overlay; else density P2 (about 1 per paragraph) | same | relaxed | strict (about 1 per 1,000 words) |
-| Semicolons, colons | defer: venue or overlay; never a default ban | same | skip | skip |
-| Bold | relaxed (field-prescribed bold claims pass) | relaxed | relaxed | strict |
-| Bullets | relaxed (venue contribution lists pass) | relaxed | skip | relaxed |
-| Hedging | special: hedge interpretations, not measurements | same | relaxed | relaxed |
-| Tier 1A words | strict, with the technical keeps in section 3 | strict | relaxed | partial |
-| Rationed items (section 4) | strict | relaxed | skip | relaxed |
-| Revision narration | strict | skip | relaxed | relaxed |
-| Significance and novelty inflation | extra strict | strict | relaxed | strict |
-| Copula avoidance | strict | relaxed | skip | relaxed |
-| Uniform paragraph length | strict, except where the field profile fixes a shape | relaxed | relaxed | strict |
-| Transition chains | strict | relaxed | relaxed | strict |
-| Rhetorical questions | strict (research questions themselves pass) | strict | strict | strict |
-| Chatbot artifacts, placeholders | extra strict | extra strict | strict | strict |
+| Rule | academic | academic-response | docs | technical-blog | slides |
+|---|---|---|---|---|---|
+| Em-dashes | defer: venue or overlay; else density P2 (about 1 per paragraph) | same | relaxed | strict (about 1 per 1,000 words) | relaxed (titles and bullets) |
+| Semicolons, colons | defer: venue or overlay; never a default ban | same | skip | skip | skip |
+| Bold | relaxed (field-prescribed bold claims pass) | relaxed | relaxed | strict | relaxed (one emphasis per slide) |
+| Bullets | relaxed (venue contribution lists pass) | relaxed | skip | relaxed | skip (bullets are the form) |
+| Hedging | special: hedge interpretations, not measurements | same | relaxed | relaxed | strict: one hedge per claim; title verb at or below claim level |
+| Tier 1A words | strict, with the technical keeps in section 3 | strict | relaxed | partial | strict |
+| Rationed items (section 4) | strict | relaxed | skip | relaxed | strict, counted per deck |
+| Revision narration | strict | skip | relaxed | relaxed | strict |
+| Significance and novelty inflation | extra strict | strict | relaxed | strict | extra strict (titles too) |
+| Copula avoidance | strict | relaxed | skip | relaxed | skip |
+| Uniform paragraph length | strict, except where the field profile fixes a shape | relaxed | relaxed | strict | skip |
+| Transition chains | strict | relaxed | relaxed | strict | skip (transitions live in `\note{}`) |
+| Rhetorical questions | strict (research questions themselves pass) | strict | strict | strict | relaxed (one discussion question on the last slide passes) |
+| Chatbot artifacts, placeholders | extra strict | extra strict | strict | strict | extra strict (`TODO` for missing data passes) |
 
 "Defer" means: apply the rule exactly as the venue profile or the overlay in
 `research.yaml` `style.overlays` states it; with neither, report only density
@@ -255,7 +269,9 @@ outliers as P2 judgment calls. "Extra strict" means every instance is
 reviewed, not only repeats. "Skip" means the rule does not apply in that
 profile.
 
-Inference when no profile is named: `.tex` files and manuscript Markdown use
+Inference when no profile is named: a `.tex` file whose `\documentclass`
+is `beamer` (or that contains `\begin{frame}`) uses `slides` for frames and
+`academic` for `\note{}`; other `.tex` files and manuscript Markdown use
 `academic`; a file named like a response or rebuttal uses
 `academic-response`; files under `docs/` use `docs`. Say which profile was
 used when it changed a finding.
