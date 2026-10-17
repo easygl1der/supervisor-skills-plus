@@ -1,6 +1,6 @@
 # ADR 0001: journal-adapt merged into style-mine; stub kept
 
-Status: accepted
+Status: accepted; the pointer stub was removed by ADR 0019
 Date: 2026-10-16
 Deciders: owner (SPEC §3.4), Claude Code (stub details)
 

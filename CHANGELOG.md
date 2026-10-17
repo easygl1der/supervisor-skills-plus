@@ -6,6 +6,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Removed
+- `skills/journal-adapt/` pointer stub; `style-mine` is the only name (ADR 0019).
+
 ### Added
 - `style-mine` intake without MCP: `scripts/intake_search.py` (Crossref +
   OpenAlex; Semantic Scholar with a key) searches the top-4 statistics

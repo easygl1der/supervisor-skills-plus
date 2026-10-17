@@ -5,7 +5,7 @@ their `docs/adr/`). Format: `skills/research-core/assets/templates/adr-0000-temp
 
 | ADR | Title | Status | Date |
 |---|---|---|---|
-| [0001](0001-style-mine-merge.md) | journal-adapt merged into style-mine; stub kept | accepted | 2026-10-16 |
+| [0001](0001-style-mine-merge.md) | journal-adapt merged into style-mine; stub kept (stub removed by 0019) | accepted | 2026-10-16 |
 | [0002](0002-third-party-register.md) | One root THIRD_PARTY.md for vendored code and borrowed ideas | accepted | 2026-10-16 |
 | [0003](0003-quickread-length-and-sections.md) | paper-quickread: nine fixed sections, 700 target, 900 cap | accepted | 2026-10-16 |
 | [0004](0004-study-single-skill.md) | study is one skill with submodules in references/ | accepted | 2026-10-16 |
@@ -23,3 +23,4 @@ their `docs/adr/`). Format: `skills/research-core/assets/templates/adr-0000-temp
 | [0016](0016-proposal-draft-markers.md) | proposal-writer keeps visible gap markers in Draft mode | accepted | 2026-10-16 |
 | [0017](0017-skill-licences.md) | New skills use the repo licence; the owner's earlier skill stays MIT | accepted | 2026-10-16 |
 | [0018](0018-style-intake-and-author-profiles.md) | Style intake through skill-local APIs; author profiles beside venue profiles | accepted | 2026-10-17 |
+| [0019](0019-remove-journal-adapt-stub.md) | Remove the journal-adapt pointer stub | accepted | 2026-10-17 |

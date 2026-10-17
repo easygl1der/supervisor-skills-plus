@@ -53,7 +53,6 @@ Supervisor-Skills Plus (private fork) adds:
 - [research-bridge](skills/research-bridge/SKILL.md): from a studied paper or concept to the current project, with a minimal validation experiment.
 - [proposal-writer](skills/proposal-writer/SKILL.md): thesis proposals, research plans, grant applications.
 - deep-research literature-map mode: evolution map, comparison table and gaps from quick-read cards.
-- `journal-adapt` is a pointer to style-mine.
 
 ## Reader curriculum
 
