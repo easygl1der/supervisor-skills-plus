@@ -16,11 +16,11 @@ use the generic lens in section 2 only when the call gives none.
 
 | Funder or genre | Criteria (paraphrased; quote the current call) | Source |
 |---|---|---|
-| NSF | Two criteria, Intellectual Merit and Broader Impacts, each judged on five elements: potential to advance knowledge or benefit society; creative, original or potentially transformative concepts; a well-reasoned, well-organized plan on a sound rationale with a mechanism to assess success; qualifications of the team; adequate resources | [src: guide:https://research.okstate.edu/faculty-resources/proposal-development-resources/proposal-writing-resources/writing-understand-nsf-merit-review@2026-10-16] (candidate) |
-| NIH (simplified framework, most research project grants due on or after 2025-01-25) | Factor 1 Importance of the Research (significance and innovation, scored 1 to 9); Factor 2 Rigor and Feasibility (approach, scored 1 to 9); Factor 3 Expertise and Resources (judged sufficient or not, not scored); all feed the Overall Impact score | [src: guide:https://www.grants.nih.gov/policy-and-compliance/policy-topics/peer-review/simplifying-review/framework@2026-10-16] (candidate) |
+| NSF | Two criteria, Intellectual Merit and Broader Impacts, each judged on the same elements (advance knowledge or benefit society; creative or potentially transformative concepts; a well-reasoned plan with a way to assess success; qualifications; adequate resources). Quote the current PAPPG or solicitation if it adds criteria. | [src: guide:https://www.nsf.gov/funding/merit-review@2026-10-17; guide:https://www.nsf.gov/policies/pappg/24-1/ch-3-proposal-processing-review@2026-10-17] (confirmed) |
+| NIH (simplified framework, most research project grants due on or after 2025-01-25) | Factor 1 Importance of the Research (significance and innovation, scored 1 to 9); Factor 2 Rigor and Feasibility (approach, scored 1 to 9); Factor 3 Expertise and Resources (judged sufficient or not, not scored); all feed the Overall Impact score. Confirm the FOA still uses this framework. | [src: guide:https://www.grants.nih.gov/policy-and-compliance/policy-topics/peer-review/simplifying-review/framework@2026-10-17] (confirmed) |
 | ERC | Excellence as the sole criterion, applied to the project (ground-breaking nature or potential impact, ambition beyond the state of the art, feasibility of methodology, timescale and resources) and to the PI | [src: guide:https://projektservice-mathematik.univie.ac.at/funding-open-calls/erc/evaluation@2026-10-16] (candidate) |
-| NSFC General Program | Important scientific significance and research value, sufficient theoretical basis, novel academic ideas, clear objectives, concrete content, feasible plan; the chosen scientific-problem attribute justified | [src: guide:https://kyc.gdufe.edu.cn (General Program filling instructions, fetched 2026-10-16)] (candidate) |
-| Thesis proposal panel | Use the school's review form. Typical items: significance of the topic, command of the literature, clarity and feasibility of contents and plan, innovation, workload and schedule | [src: guide:https://pe.upc.edu.cn (graduate school kaiti notices, fetched 2026-10-16)] (candidate) |
+| NSFC General Program | For 2026 mianshang / Youth C, follow the year's official template (rationale, content, foundation). Scoring language still reads as scientific significance, theoretical basis, novelty, clear objectives, concrete content, feasible plan; confirm in the current guide and ISIS help. | [src: guide:https://www.nsfc.gov.cn/p1/3381/2821/99242.html@2026-10-17] (confirmed structure); filling-instruction paraphrases from university research offices stay (candidate) |
+| Thesis proposal panel | The school's review form wins. Copy its items onto the call sheet before scoring. Do not use this table's typical items (significance, literature command, feasibility, innovation, workload) as a substitute when the form exists. | [src: guide:https://pe.upc.edu.cn (graduate school kaiti notices, fetched 2026-10-16)] (candidate example notices only) |
 | PhD application | Usually unwritten: a clear question, fit with the group, a method that matches the question, realistic scope | this skill's default |
 
 ## 2. Generic lens
@@ -42,7 +42,7 @@ direction, or high, medium, low:
 Before scoring, answer the eight questions from the draft alone, quoting
 the sentence that answers each. A question the draft cannot answer is a
 finding.
-[src: guide:https://www.darpa.mil/about/heilmeier-catechism@2026-10-16] (confirmed)
+[src: guide:https://www.darpa.mil/about/heilmeier-catechism@2026-10-17] (confirmed)
 
 1. What are you trying to do, with no jargon?
 2. How is it done today, and what are the limits of current practice?

@@ -48,7 +48,9 @@ where Y fails, such as Z, are not covered by the works retrieved in
 
 Avoid in a proposal: "will prove", "will solve", "revolutionary",
 "the first" without retrieval, "we will try to", "explore" as the main
-verb of an aim, and lists of activities in place of aims.
+verb of an aim, and lists of activities in place of aims. Chinese kaiti
+sentence frames (problem first, numbered innovation points, deliverable
+milestones) are in zh-kaiti-register.md.
 
 ## 3. The one-page summary pattern
 

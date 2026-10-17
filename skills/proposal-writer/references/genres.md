@@ -96,16 +96,19 @@ independent, each with a first milestone.
 
 ## 5. NSFC General and Young Scientists programs
 
-From 2026 the NSFC slimmed the application body for the General Program
-(mianshang) and Young Scientists Fund category C: the body has three parts,
-rationale (lixiang yiju: why the research and what its value is), research
-content (organized by the applicant's own logic, without the preset
-sub-outline), and research foundation (prior work and results). The fixed
-headings for research plan, technical route and methods are no longer
-imposed, nor the separation of research objectives from key scientific
-questions; the body should in principle not exceed 30 pages, and brevity
-is encouraged. Confirm against the year's official template and guide.
-[src: guide:https://www.news.cn/fortune/20251230/2c7e7a4de64d4c959160d164e11679b5/c.html@2026-10-16] (confirmed)
+For the 2026 cycle, NSFC's own site describes a slimmer body for the
+General Program (mianshang) and Young Scientists Fund category C: three
+parts, rationale (立项依据: why the work and what its value is), research
+content (the applicant's own logic; no preset sub-outline), and research
+foundation (prior accumulation and conditions). Fixed headings for
+research plan, technical route and methods are no longer imposed for
+those two types; the body should in principle not exceed 30 pages.
+Other program types may keep older outlines. Always download the year's
+template from ISIS rather than reuse a saved file or a news paraphrase.
+Verified 2026-10-17 against official NSFC pages (not wire-service reprints).
+[src: guide:https://www.nsfc.gov.cn/p1/3381/2821/99242.html@2026-10-17; guide:https://www.nsfc.gov.cn/p1/3381/2824/99667.html@2026-10-17] (confirmed)
+ISIS: https://grants.nsfc.gov.cn . The 2026 application-and-closing notice
+says applicants must log in after 2026-01-15 and fill the latest form.
 
 | Part (Chinese heading) | Elements | What to put there |
 |---|---|---|
@@ -134,22 +137,27 @@ scientific question must match.
 | Broader Impacts (separately labeled section) | E5 | Required as its own heading |
 | Results from Prior NSF Support | E3 | When applicable; capped within the description |
 
-Commonly reported limits: 15 pages for the Project Description including
-visuals unless the solicitation says otherwise; prior-support results up
-to 5 pages within that; no URLs in the body. A separate labeled
-Intellectual Merit section is no longer required, but its content is still
-scored. Verify against the current PAPPG and the solicitation.
-[src: guide:https://research.rutgers.edu/sites/default/files/2021-08/proposal-section-by-section-guidance.pdf@2026-10-16; guide:https://hco.cfa.harvard.edu/files/2023/05/nsf_23-1_outline.pdf@2026-10-16] (candidate)
+Example limits from PAPPG NSF 24-1 (do not treat as a frozen default):
+Project Description including visuals may not exceed 15 pages unless the
+solicitation or an authorized deviation says otherwise; Results from Prior
+NSF Support are limited to five pages within that; no URLs in the body.
+A separately labeled Intellectual Merit heading is not required, but the
+criterion is still scored; Broader Impacts remains its own labeled
+section. Verify every number against the current PAPPG and the
+solicitation before writing the call sheet.
+[src: guide:https://www.nsf.gov/policies/pappg/24-1/ch-2-proposal-preparation@2026-10-17] (confirmed as PAPPG 24-1 example)
 
 ## 7. ERC Part B1 and B2
 
 Part B1 holds the extended synopsis (assessed at step 1); Part B2 holds
 the full scientific proposal with sections on the state of the art and
-objectives and on methodology (assessed at step 2). For the 2024 Advanced
-Grant, B2 sections (a) and (b) were limited to 14 pages and the synopsis
-to 5 pages, references excluded. Reports of a renamed structure in later
-calls exist; confirm limits in the current Information for Applicants.
-[src: guide:https://projektservice-mathematik.univie.ac.at/fileadmin/user_upload/p_projektservice_mathematik/PDFs/EU/ERC/2024/ERCat3_PreparingAdG_FFG_2024_Feb.pdf@2026-10-16] (candidate)
+objectives and on methodology (assessed at step 2). Older Advanced Grant
+calls used example limits such as a 5-page synopsis and 14 pages for B2
+sections (a) and (b), references excluded. Those numbers are historical
+examples only. Confirm structure and limits in the current Information
+for Applicants for the exact call (Starting / Consolidator / Advanced
+and year). Do not copy last year's page count from memory.
+[src: guide:https://projektservice-mathematik.univie.ac.at/fileadmin/user_upload/p_projektservice_mathematik/PDFs/EU/ERC/2024/ERCat3_PreparingAdG_FFG_2024_Feb.pdf@2026-10-16] (candidate; 2024 AdG briefing, not the live call)
 
 | Section | Elements | Notes |
 |---|---|---|
@@ -159,17 +167,19 @@ calls exist; confirm limits in the current Information for Applicants.
 
 ## 8. NIH Specific Aims and Research Strategy
 
-The Specific Aims page is one page and the most read page of the
-application. A common layout: opening paragraph on the problem and its
-importance; what is known and the gap; the long-term goal, the objective
-of this application and the central hypothesis; two or three aims, each a
-short heading plus approach and expected outcome; a closing paragraph on
-expected outcomes and impact.
-[src: guide:https://www.casrai.org/guides/nih-specific-aims-page@2026-10-16; guide:https://poorvucenter.yale.edu/media/621/download@2026-10-16] (candidate)
+A common Specific Aims layout (opening on the problem; known and missing;
+long-term goal, objective and central hypothesis; two or three aims;
+closing on outcomes and impact) is widely taught. Treat "one page" and
+the Significance / Innovation / Approach split as examples until the
+funding opportunity announcement (FOA) is read; mechanism and FOA win.
+[src: guide:https://www.casrai.org/guides/nih-specific-aims-page@2026-10-16; guide:https://poorvucenter.yale.edu/media/621/download@2026-10-16] (candidate layout guides)
 
-The Research Strategy follows with Significance, Innovation and Approach;
-page limits depend on the mechanism, so read the funding opportunity. The
-specific-aims pattern also works as the first page of any proposal,
+The simplified peer-review framework (Importance; Rigor and Feasibility;
+Expertise and Resources) applies to most research project grants with due
+dates on or after 2025-01-25; confirm on the current NIH page.
+[src: guide:https://www.grants.nih.gov/policy-and-compliance/policy-topics/peer-review/simplifying-review/framework@2026-10-17] (confirmed)
+
+The specific-aims pattern also works as the first page of any proposal,
 including a kaiti report summary.
 
 ## 9. Length budget by element

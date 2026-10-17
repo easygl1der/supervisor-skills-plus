@@ -21,7 +21,7 @@ paper reports what was found; a proposal promises what will be done, shows
 why it can be done by this person in this time, and says how everyone will
 know whether it worked. The same idea therefore needs a different structure
 and a different register from the paper it may later become.
-[src: guide:https://www.darpa.mil/about/heilmeier-catechism@2026-10-16] (confirmed)
+[src: guide:https://www.darpa.mil/about/heilmeier-catechism@2026-10-17] (confirmed)
 
 The skill works in a fixed order: read the call, build the proposal spine,
 check it against evidence and reviewers, then write prose. Prose comes last
@@ -121,7 +121,7 @@ before any section prose:
    eight questions (what, how it is done today and its limits, what is new
    and why it should work, who cares, risks, cost, duration, mid-term and
    final exams).
-   [src: guide:https://www.darpa.mil/about/heilmeier-catechism@2026-10-16] (confirmed)
+   [src: guide:https://www.darpa.mil/about/heilmeier-catechism@2026-10-17] (confirmed)
 2. **Research question(s).** Each question is answerable within the
    duration and names its object, its comparison and the evidence that
    would answer it. For a causal question, the estimand is defined before
@@ -223,14 +223,21 @@ the reviewer looks for them.
   register; the facts stay from the ledger.
 - Field conventions (what counts as rigor, typical threats) come from the
   loaded field profile, not from this skill.
+- For a Chinese thesis proposal, use the sentence patterns in
+  `references/zh-kaiti-register.md` (problem first, gap-organized review,
+  one innovation axis per point, deliverable milestones). Do not invent
+  school word counts.
+
+See: references/zh-kaiti-register.md
 
 **Draft markers, a deliberate difference from paper prose.** In Draft mode
-an unresolved citation stays visible as `[cite needed: <what it must
-support>]` and an unresolved fact as `[to verify: <question>]`, so the
-user sees every gap; the Chinese equivalents are allowed in Chinese
-drafts. Content the skill adds beyond the user's material is marked as an
-addition. In Final mode no marker remains: each is resolved by retrieval,
-by the user, or by deleting the sentence.
+(ADR 0016; `docs/adr/0016-proposal-draft-markers.md`) an unresolved
+citation stays visible as `[cite needed: <what it must support>]` and an
+unresolved fact as `[to verify: <question>]`, so the user sees every gap;
+the Chinese equivalents are allowed in Chinese drafts. Content the skill
+adds beyond the user's material is marked as an addition. In Final mode
+no marker remains: each is resolved by retrieval, by the user, or by
+deleting the sentence.
 
 ### Phase 6: Reviewer pass
 
@@ -278,7 +285,7 @@ line, ledger row, call-sheet line). A tick without evidence is unknown.
   past tense with sources, no planned result written as found.
 - **PW-10 Reviewer criteria answered.** Each quoted criterion has a named
   section that answers it.
-- **PW-11 Limits met; Final mode has no markers.**
+- **PW-11 Limits met; Final mode has no markers** (ADR 0016).
 - From research-core: CI-01 (estimand before estimator, `field: causal`
   or any causal question), WR-19 (claims scoped), WR-21 (causal words need
   a causal design), WR-24 (novelty scoped and stated once), WR-28 (every
@@ -301,6 +308,16 @@ Under `docs/proposal/` in the project (or a folder the user names):
 - `review.md`: the reviewer-lens scores, top three weaknesses, and the
   Checklist report.
 - Optional figures from the study kit (HTML plus PNG).
+
+Draft mode may keep `[cite needed]` / `[to verify]` markers; Final mode
+must not (ADR 0016).
+
+## Evals
+
+Worked draft and reviewer pass:
+`evals/2026-10-16_sdid-staggered-se/` (kaiti.md, review.md). The 2026-10-17
+note in kaiti.md is the example that novelty retrieval must run before
+drafting. `skills/study/evals/proposal/` is a pointer only.
 
 ## Hand-offs
 
