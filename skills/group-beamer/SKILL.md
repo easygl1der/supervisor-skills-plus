@@ -156,6 +156,14 @@ Report each item as pass, fail, n/a or unknown, with evidence (page,
   `academic`.
 - Notes exported; deck and log saved through `research-records` Task 8.
 
+## Evals
+
+Real runs, compiled and checked: `evals/2026-10-17-weekly/` (Chinese,
+advisor, with the research-records meeting log) and
+`evals/2026-10-17-paper-talk-sdid/` (English, peer, SDID; numbers checked
+against the paper's tables). Each has `slides.tex`, `slides.pdf` and the
+exported `notes.md`.
+
 ## Outputs
 
 - Approved outline, then a compiling `.tex` and PDF.

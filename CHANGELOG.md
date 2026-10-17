@@ -17,6 +17,14 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   undefined citations and references), `lint_deck.py`, `render_pages.sh`,
   `export_notes.py`. ADR 0020. `research-records` Task 8 and the research-core
   `group-meeting-log.md` template store each meeting.
+- `group-beamer` evals compiled with TinyTeX (`evals/2026-10-17-weekly/`,
+  `evals/2026-10-17-paper-talk-sdid/`). Fixes found by the run: scripts were
+  not executable; `check_log.py` reported warnings on the previous page;
+  `export_notes.py` numbered notes by order instead of by frame and kept
+  LaTeX escapes; `build.sh` picked a theme from comments; the Moloch wrapper
+  now fills blocks so decision questions show as a box; the weekly skeleton
+  gained a kill-criterion column and lost an unsourced number;
+  `render_pages.sh` uses `pymupdf` instead of the deprecated `fitz`.
 - `deai-writing` `slides` profile: Beamer detection, a `slides` column in the
   tolerance matrix, and protected deck elements in the editing contract.
 - `style-mine` intake without MCP: `scripts/intake_search.py` (Crossref +

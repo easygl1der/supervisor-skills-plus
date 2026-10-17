@@ -118,3 +118,10 @@ Not done:
 - `check_log.py` now also flags undefined `\ref` (backup-slide links); selftest updated.
 - `group-preferences.md` left as the owner's empty slot.
 - Not done: no sample decks compiled (no TeX on this machine); Step 4 verification still open.
+
+## group-beamer Step 4: compiled and checked (2026-10-17)
+
+- TeX set up on SG without admin rights: TinyTeX (`~/Library/TinyTeX`) plus `tlmgr install beamer moloch ctex xecjk fandol booktabs pgf pgfopts etoolbox`; PyMuPDF in a scratch venv for page renders. Homebrew poppler was still building from source (macOS 13) at the time of the run.
+- Built and inspected: both skeletons, the weekly skeleton under all three themes, a Chinese advisor weekly report on the vault style run (with its meeting log), and the SDID paper talk (numbers checked against the paper's Table 1 and Table 2). All compile with no box or reference issues after fixes; lint clean.
+- Bugs fixed (CHANGELOG): non-executable scripts, off-by-one page mapping in `check_log.py`, note numbering and escapes in `export_notes.py`, theme detection from comments, unboxed Moloch blocks, missing kill-criterion column, an unsourced number, deprecated `fitz` import.
+- Still open: lint's text-only rule pushes authors toward filler formulas on discussion slides (seen in the SDID deck); owner to decide whether to relax it.

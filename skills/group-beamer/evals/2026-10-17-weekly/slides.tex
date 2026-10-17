@@ -1,0 +1,142 @@
+% group-beamer eval: weekly-report, Chinese, audience advisor.
+% Sources: causal-style-vault PR #1 (commit bfd54c9): authors/hanzhong-liu/profile.md,
+% authors/hanzhong-liu/conflicts.md, venues/*/profile.md, monitor/queue.jsonl.
+% The target author is named by role only (repo rule: no real names in skill files).
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{groupbeamer-moloch}
+
+\title{因果风格挖掘：作者档与四大刊档已出草稿}
+\subtitle{组会周报（顾问）}
+\author{报告人}
+\institute{研究组}
+\date{2026-10-17}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \note{开场一句：本周把目标作者的风格档和四大刊的期刊档都做成了草稿，需要老师拍板三件事。}
+\end{frame}
+
+\begin{frame}{本周结论：作者档与四个期刊档都有了草稿，均未确认}
+  \begin{tabular}{lr}
+    \toprule
+    产出 & 数量 \\
+    \midrule
+    作者风格卡 & 30 \\
+    其中计入统计（一作或通讯 19，末位 4） & 23 \\
+    期刊风格卡（四刊各 7） & 28 \\
+    进货队列（四刊 2026 年以来） & 88 \\
+    \bottomrule
+  \end{tabular}
+  \begin{itemize}
+    \item 全部在 vault 的 PR \#1 里，状态是草稿，没有进任何规则文件。
+  \end{itemize}
+  \note{只读数字和位置。强调：都是草稿，规则晋升要老师确认。数字来自 PR \#1（commit bfd54c9）：作者卡在 authors 目录，期刊卡在 venues 目录，队列在 monitor/queue.jsonl。}
+\end{frame}
+
+\begin{frame}{上周下一步：没有上次组会记录，本页不打标记}
+  \begin{tabular}{ll}
+    \toprule
+    项 & 状态 \\
+    \midrule
+    上次组会记录 \texttt{docs/log/*-group-meeting.md} & 不存在 \\
+    \bottomrule
+  \end{tabular}
+  \begin{itemize}
+    \item 不凭记忆补上周的下一步；从本次记录开始累积。
+  \end{itemize}
+  \note{这是第一次用组会记录。下周开始，本页逐条标完成、部分、放弃。}
+\end{frame}
+
+\begin{frame}{结果：目标作者最稳定的写法（计入 23 篇中的篇数）}
+  \begin{tabular}{lrr}
+    \toprule
+    写法 & 全部 \(k/23\) & 一作或通讯 \(k/19\) \\
+    \midrule
+    结果先关联已有结论（特例到推广） & 21 & 18 \\
+    贡献用散文写，不编号 & 20 & 16 \\
+    定理后一段以 Theorem 开头解释 & 20 & 17 \\
+    新条件与已有条件比强弱 & 19 & 16 \\
+    先讲缺口再接上 & 18 & 15 \\
+    引言末有路线段 & 15 & 12 \\
+    \bottomrule
+  \end{tabular}
+  \note{来源：profile.md 的 Voice markers 表。路线段一行要特别说明：上周 4 篇草稿说没有路线段，是检索词漏了 proceeds as follows，已更正。}
+\end{frame}
+
+\begin{frame}{和期刊的冲突集中在 AoS 与可复现声明}
+  \begin{tabular}{lll}
+    \toprule
+    维度 & 期刊（\(k/7\)） & 作者习惯 \\
+    \midrule
+    真实数据一节 & AoS 6 篇没有 & 多数有 \\
+    正文模拟 & AoS 5 篇不放正文 & 几乎都放正文 \\
+    代码或数据声明 & JRSS-B 7 篇都有 & arXiv 版很少 \\
+    结果关联已有结论 & 四刊都是 6 或 7 & 21/23 \\
+    \bottomrule
+  \end{tabular}
+  \note{来源：conflicts.md。最后一行是一致项，放在这里说明不是处处冲突。所有文本都是 arXiv 版，已发表版可能不同。}
+\end{frame}
+
+\begin{frame}{阻塞：两条规则要先定，期刊档才可用}
+  \begin{itemize}
+    \item 风格卡里能否保留 8 词以下的套语原文；现在一律截到 5 词。
+    \item 权重约定：一作或通讯算全权重，末位算低权重，中间作者只作背景。
+  \end{itemize}
+  \[
+    w_{\text{paper}} \in \{\text{全},\ \text{低},\ 0\}
+  \]
+  \note{这两条不定，后面每次加卡都会反复改计数。}
+\end{frame}
+
+\begin{frame}{需要老师拍板}
+  \begin{alertblock}{请选}
+    \begin{itemize}
+      \item 套语原文：(a) 允许 8 词以下；(b) 保持截断。
+      \item 权重约定：(a) 照上页；(b) 末位也算全权重。
+      \item PR \#1：(a) 合并为草稿；(b) 先改再合。
+    \end{itemize}
+  \end{alertblock}
+  \note{逐条念，记下选择，写进本次组会记录的 Decisions。}
+\end{frame}
+
+\begin{frame}{下一步（有日期、责任人与放弃标准）}
+  \begin{tabular}{llll}
+    \toprule
+    事项 & 谁 & 日期 & 放弃标准 \\
+    \midrule
+    按拍板结果改计数 & 报告人 & 2026-10-20 & 无 \\
+    补第三个期刊的一作卡 & 报告人 & 2026-10-24 & 找不到合法全文则改用通讯卡 \\
+    对照已发表版核对两篇 & 报告人 & 2026-10-24 & 无开放版本则标未核 \\
+    \bottomrule
+  \end{tabular}
+  \note{这三行写进 docs/log 的 Next steps，下周逐条标记。}
+\end{frame}
+
+\begin{frame}{讨论：作者习惯和期刊惯例冲突时，组里默认听谁的？}
+  \[
+    \text{期刊体裁} \;>\; \text{作者语气} \;>\; \text{领域档} \;>\; \text{通用规则}
+  \]
+  \begin{itemize}
+    \item 这是现在的覆盖顺序；想听老师是否同意。
+  \end{itemize}
+  \note{用问题收尾，不总结口号。}
+\end{frame}
+
+\appendix
+\begin{frame}{附录：计数口径}
+  \begin{tabular}{lr}
+    \toprule
+    卡的类别 & 篇数 \\
+    \midrule
+    一作或通讯（全权重） & 19 \\
+    末位（低权重） & 4 \\
+    中间作者与回应文（只作背景） & 6 \\
+    中文综述（单独的语体） & 1 \\
+    \bottomrule
+  \end{tabular}
+  \note{合计 30。来源：profile.md 的 Counts 段。}
+\end{frame}
+
+\end{document}
