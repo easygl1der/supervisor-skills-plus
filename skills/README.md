@@ -278,8 +278,8 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 |---|---|
 | [paper-quickread](paper-quickread/SKILL.md) | 九段式快读一篇论文（约 700 字），主张与证据对照、数字带出处；`--style` 另出风格卡交给 style-mine |
 | [study](study/SKILL.md) | 理解优先的学习：论文 / 教材 / 概念三种模式；讲动机、例子、联系和图，要求复述，按机制 / 条件 / 边界诊断并从你的联想出发纠正；学习档案放单独的 study-vault 仓库；HTML（SVG + KaTeX）图与分步演示 |
-| [research-bridge](research-bridge/SKILL.md) | 把读到、学到的东西接回当前项目：能不能用、怎么用、最小验证实验与放弃标准 |
-| [proposal-writer](proposal-writer/SKILL.md) | 开题报告、研究计划、基金申请：RQ、文献缺口、方法与可行性、时间线、风险与备选 |
+| [research-bridge](research-bridge/SKILL.md) | 把读到、学到的东西接回当前项目：能不能用、怎么用、最小验证实验与放弃标准。评测在 [`research-bridge/evals/`](research-bridge/evals/) |
+| [proposal-writer](proposal-writer/SKILL.md) | 开题报告、研究计划、基金申请：RQ、文献缺口、方法与可行性、时间线、风险与备选。评测在 [`proposal-writer/evals/`](proposal-writer/evals/) |
 | [deep-research](deep-research/SKILL.md) 文献地图模式 | 从一批快读卡片和学习笔记画出演化图、对比表和空白点清单 |
 
 路线 4：paper-quickread（筛）→ study（懂）→ research-bridge（用）→ idea-evaluator / experiment-workflow；读够几篇 → deep-research 文献地图 → proposal-writer。
