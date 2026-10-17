@@ -156,7 +156,7 @@ See: references/experts/README.md
 ## Project templates
 
 `assets/templates/` holds `research.yaml`, `STATUS.md`, `TODO.md`,
-`adr-0000-template.md`, `log-entry.md`, `guidance-record.md`,
+`adr-0000-template.md`, `log-entry.md`, `group-meeting-log.md`, `guidance-record.md`,
 `response-table.md`, `claim-ledger.md`, `runs-log.md` and
 `data-manifest.tsv`. Copy them into a project; never edit them in place for
 one project.
