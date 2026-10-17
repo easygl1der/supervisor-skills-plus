@@ -51,6 +51,7 @@ on what the user asked for, before any stage logic:
 | "can I use this in my project?", a minimal validation experiment | `research-bridge` |
 | thesis proposal, research plan, grant application | `proposal-writer` |
 | a style profile from exemplar papers | `style-mine` |
+| group-meeting slides, weekly report, paper talk | `group-beamer` |
 
 Priority: an explicit reading or learning intent wins over the stage table;
 if a project exists, mention its stage in one line and continue with the
