@@ -1,0 +1,211 @@
+% skeleton-paper-talk.tex -- group-beamer paper-talk on Arkhangelsky et al. SDID
+% Numbers copied from skills/study/evals/.../quickread.md (Table 1, arXiv:1812.09970).
+% Theme: simpleplus-cjk. Compile:
+%   skills/group-beamer/scripts/build.sh --theme simpleplus-cjk templates/skeleton-paper-talk.tex
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{groupbeamer-simpleplus}
+
+\title{Synthetic Difference in Differences}
+\subtitle{Critical paper talk (group meeting)}
+\author{Arkhangelsky, Athey, Hirshberg, Imbens, Wager}
+\institute{arXiv:1812.09970 (July 2021 version)}
+\date{Presenter / 2026-10-17}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \note{State the one-line claim: weighted TWFE with unit and time weights.}
+\end{frame}
+
+\begin{frame}{The aim is causal: ATT for a block-treated panel}
+  \begin{equation*}
+    \tau = \frac{1}{N_{\mathrm{tr}}T_{\mathrm{post}}}
+    \sum_{i \in \mathrm{tr}}\sum_{t \in \mathrm{post}}
+    \bigl(Y_{it}(1)-Y_{it}(0)\bigr)
+  \end{equation*}
+  \begin{itemize}
+    \item Unit, time, intervention: states, years, a single adoption date.
+    \item Presenter's reading of Eq.~4.2 (block assignment). Staggered
+      adoption is backup, not this talk.
+  \end{itemize}
+  \note{If someone asks about staggered adoption, defer to the appendix.}
+\end{frame}
+
+\begin{frame}{Paper card (presenter's filling)}
+  \vspace{4pt}
+  \begin{tabular}{ll}
+    \toprule
+    Field & This paper \\
+    \midrule
+    Estimand & Block ATT (Eq.~4.2); labelled if vague \\
+    Identification & Low-rank \(L\) plus \(E[E\mid W,L]=0\) \\
+    Key assumption & Assignment may depend on \(L\), not on \(E\) \\
+    Main result & CA: SDID \(-15.6\) (se \(8.4\)), Table 1 \\
+    Biggest threat & Placebo designs are zero-effect \\
+    \bottomrule
+  \end{tabular}
+  \note{Unstated bits in the card are flagged in the quickread, not invented.}
+\end{frame}
+
+\begin{frame}{Identification: knowledge vs convenience}
+  \begin{itemize}
+    \item A1 outcome \(Y=L+W\circ\tau+E\), \(L\) low rank (knowledge).
+    \item A2 \(E[E\mid W,L]=0\) (knowledge; untestable).
+    \item A3 unit-independence of \(E\), homoskedasticity (convenience
+      for placebo se).
+  \end{itemize}
+  \begin{equation*}
+    E[E \mid W, L] = 0
+  \end{equation*}
+  \begin{block}{What breaks}
+    If assignment depends on \(E\), \(\tau\) is not identified; a better
+    estimator does not close that gap.
+  \end{block}
+  \note{Rank A2 as the strong one. Do not upgrade A3 into identification.}
+\end{frame}
+
+\begin{frame}{Method: unit weights, time weights, then TWFE}
+  \begin{equation*}
+    (\hat\tau^{\mathrm{sdid}},\hat\mu,\hat\alpha,\hat\beta)
+    = \arg\min \sum_{i,t}
+    \omega_i\lambda_t \bigl(Y_{it}-\mu-\alpha_i-\beta_t-W_{it}\tau\bigr)^{2}
+  \end{equation*}
+  \begin{itemize}
+    \item \(\omega\): pre-treatment trends parallel, intercept allowed.
+    \item \(\lambda\): pre periods that predict the post mean.
+  \end{itemize}
+  \note{Eq.~1.1 in the paper. DID is the same regression with flat weights.}
+\end{frame}
+
+\begin{frame}{DAG sketch: assignment may use \(L\), not \(E\)}
+  \begin{tikzpicture}[
+      node distance=1.4cm, auto,
+      obs/.style={circle, draw, minimum size=7mm},
+      cf/.style={circle, draw, dashed, minimum size=7mm}
+    ]
+    \node[obs] (L) {\(L\)};
+    \node[obs, right=of L] (W) {\(W\)};
+    \node[obs, below=of W] (Y) {\(Y\)};
+    \node[cf, left=of Y] (E) {\(E\)};
+    \draw[->] (L) -- (W);
+    \draw[->] (L) -- (Y);
+    \draw[->] (W) -- (Y);
+    \draw[->, dashed] (E) -- (Y);
+  \end{tikzpicture}
+  \note{Solid observed factors. Dashed error. No arrow from E to W under A2.}
+\end{frame}
+
+\begin{frame}{California pack-sales estimate (Table 1)}
+  \vspace{4pt}
+  \begin{tabular}{lrr}
+    \toprule
+    Estimator & \(\hat\tau\) & se (placebo) \\
+    \midrule
+    SDID & \(-15.6\) & \(8.4\) \\
+    SC   & \(-19.6\) & \(9.9\) \\
+    DID  & \(-27.3\) & \(17.7\) \\
+    \bottomrule
+  \end{tabular}
+  \begin{itemize}
+    \item Units: packs per person per year, 1970--2000, 38 controls.
+  \end{itemize}
+  \note{Read the numbers. Do not say SDID caused a smaller effect.}
+\end{frame}
+
+\begin{frame}{Causal reading holds only under A1--A2}
+  \begin{itemize}
+    \item Under A1--A2, SDID estimates the block ATT, not DID's ATT
+      under parallel trends.
+    \item Sensitivity: none reported for assignment-on-\(E\).
+    \item Placebo RMSE (CPS baseline): SDID \(0.028\), DID \(0.049\)
+      (Table 2, 1000 draws). Zero-effect design.
+  \end{itemize}
+  \begin{equation*}
+    \widehat{\mathrm{RMSE}}_{\mathrm{CPS}}(\mathrm{SDID}) = 0.028
+  \end{equation*}
+  \note{Hernan split: numbers were the previous slide; this is the reading.}
+\end{frame}
+
+\begin{frame}{Link to our project (fill or TODO)}
+  \begin{itemize}
+    \item If we have few treated units and doubtful parallel trends,
+      SDID is a robustness check beside DID and SC.
+    \item Confirm a common adoption date before using Eq.~4.2.
+    \item Project RQ: TODO.
+  \end{itemize}
+  \begin{equation*}
+    \hat\tau^{\mathrm{did}}
+    = \arg\min \sum_{i,t}(Y_{it}-\mu-\alpha_i-\beta_t-W_{it}\tau)^{2}
+  \end{equation*}
+  \note{Do not claim our data fit SDID until STATUS says so.}
+\end{frame}
+
+\begin{frame}{Reproducibility: violate A2 in a placebo}
+  \begin{equation*}
+    W_i = \mathbf{1}\{E_{i1}>\mathrm{median}(E_{\cdot 1})\}
+  \end{equation*}
+  \begin{itemize}
+    \item Simulate assignment that depends on \(E\); report bias of SDID
+      vs DID vs SC (TODO: not run in this skeleton).
+    \item Optional 60-min segment: replicate Table 1 side by side.
+  \end{itemize}
+  \note{This is a plan, not a result. Keep TODO visible.}
+\end{frame}
+
+\begin{frame}{What would change my mind}
+  \begin{itemize}
+    \item A non-zero-effect simulation where SDID bias exceeds DID.
+    \item Formal conditions for staggered adoption (appendix §8 is a
+      recipe, not a theorem in the quickread).
+  \end{itemize}
+  \begin{equation*}
+    \hat\tau^{\mathrm{sdid}} - \hat\tau^{\mathrm{did}}
+    \quad\text{is not a test of } E[E\mid W,L]=0.
+  \end{equation*}
+  \begin{block}{Limit}
+    Theory in the talk is block assignment only.
+  \end{block}
+  \note{Invite the group to name another killer check.}
+\end{frame}
+
+\begin{frame}{Discussion: should we treat SC/SDID mismatch as a warning?}
+  \begin{itemize}
+    \item Paper: when SC and SDID disagree, SDID is usually more
+      credible (§2.2). Quickread tag: conjectured.
+    \item California has no ground truth.
+  \end{itemize}
+  \begin{equation*}
+    \mathrm{sign}(\hat\tau^{\mathrm{sdid}}-\hat\tau^{\mathrm{sc}})
+    \quad\text{is not a test of A2.}
+  \end{equation*}
+  \note{End on the question, not a slogan.}
+\end{frame}
+
+\begin{frame}{References}
+  \vspace{4pt}
+  \begin{tabular}{ll}
+    \toprule
+    Source & Use \\
+    \midrule
+    arXiv:1812.09970 & Tables 1--2 (quickread card) \\
+    arXiv:2305.18793 & Ding notation defaults \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Thank you}
+  \begin{equation*}
+    \tau \;=\; E[Y(1)-Y(0)\mid \text{block assignment}]
+  \end{equation*}
+\end{frame}
+
+\appendix
+\begin{frame}{Backup: staggered adoption is not this estimand}
+  \begin{equation*}
+    \hat\tau = \sum_{g} \pi_g \hat\tau_g^{\mathrm{sdid}}
+  \end{equation*}
+  \note{Appendix §8 recipe. No theorem in the card. Hyperlink from slide 2.}
+\end{frame}
+
+\end{document}
