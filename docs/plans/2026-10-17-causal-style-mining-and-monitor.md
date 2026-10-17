@@ -1,15 +1,16 @@
 # 计划：统计四大刊因果风格监测 + 刘汉中作者风格挖掘
 
-> 状态：草案（M0） · 日期：2026-10-17（Asia/Singapore）  
+> 状态：草案（M0 + 进货调查） · 日期：2026-10-17（Asia/Singapore）  
 > 仓库：`easygl1der/supervisor-skills-plus`（本仓）  
 > 配套会话提示：同目录 `2026-10-17-causal-style-mining-and-monitor-CLAUDE.md`  
+> 调查附录：同目录 `2026-10-17-causal-style-mining-investigation.md`（进货实测、外部 skill、刘组仓定位）  
 > **本任务不改写任何 skill 实现**；本文件只定计划，供后续 Claude Code 单会话执行。
 
 ## 0. 给打开本仓的 Claude：一句话意图
 
 我们要建一条**可重复的进货与晋升管线**：定时（或半自动）发现 JASA / JRSSB / AoS / Biometrika 上与因果推断相关的新文；每篇走 MinerU → `paper-quickread --style` → 风格卡入库到私有 `causal-style-vault`；用现有 `style-mine`（拆 / 攒 / 用）攒期刊与领域档案；另从 `easygl1der/hanzhong-liu-research`（汉中流 / 刘组工作区）收齐刘汉中已发表范文，挖**作者档**（与期刊档分开）。规则晋升进 `research-core` **必须经主人确认**；禁止每日自动改 core。
 
-**进货/监测的具体数据源尚未敲定（TBD）**——对话里曾误听成 Apify，**不要把 Apify 写成必选或默认实现**。实现监测前先读主人澄清；在此之前可先用人工 DOI/TOC 列表把「转写 → 卡 → vault」跑通。读完本计划 + 同目录 CLAUDE 提示即可理解意图；细节（过滤器措辞、目录微调、是否新建 vault 仓）留给会话内自主决定，但硬约束不可破。
+**进货/监测：调查已给出推荐栈，绑定仍须主人确认。** 对话里曾误听成 Apify，**不要把 Apify 写成必选或默认实现**。2026-10-17 实测（见调查附录）：默认应用 **Crossref ISSN 过滤 + OpenAlex 补全 + 人工关键词初筛**；JASA 可用 T&F RSS 旁路；academic-mcp / S2 / 通用爬虫不当主环。在主人书面确认自动监测前，用人工 DOI/TOC 把「转写 → 卡 → vault」跑通。读完本计划 + 调查附录 + 同目录 CLAUDE 提示即可理解意图；细节（过滤器措辞、目录微调、是否新建 vault 仓）留给会话内自主决定，但硬约束不可破。
 
 ---
 
@@ -50,20 +51,22 @@
 ## 3. 架构（三层）
 
 ```
-[进货 Intake · 源 TBD]           [记忆 Vault]                         [消费 Skills]
-可插拔发现层（待主人澄清）         causal-style-vault (private)         supervisor-skills-plus
-  · 四大刊新文 / TOC / DOI           venues/jasa|jrssb|aos|biometrika/     style-mine (dissect/accumulate/apply)
-  · 因果过滤                         authors/hanzhong-liu/                paper-quickread --style
-MinerU 转写                          field/causal/                        lessons-harvest
-paper-quickread --style              cards/ + profiles/ + changelog/      research-core (仅主人批准后)
-                                     monitor/logs/
-刘组仓 hanzhong-liu-research ──► authors/hanzhong-liu/ exemplars
+[进货 Intake · 推荐 Crossref+OpenAlex，绑定待确认]
+可插拔发现层                         [记忆 Vault]                         [消费 Skills]
+  1 Crossref ISSN + from-pub-date    causal-style-vault (private)         supervisor-skills-plus
+  2 OpenAlex 摘要/OA 字段              venues/jasa|jrssb|aos|biometrika/     style-mine (dissect/accumulate/apply)
+  3 JASA RSS 旁路（T&F uasa20）        authors/hanzhong-liu/                paper-quickread --style
+  4 人工 DOI / 人筛 keep-skip          field/causal/                        lessons-harvest
+MinerU 转写                          cards/ + profiles/ + changelog/      research-core (仅主人批准后)
+paper-quickread --style              monitor/logs/
+刘组仓 publications.json ──────► authors/hanzhong-liu/ exemplars
+  （catalog.json ≠ 刘 CV）
 ```
 
 - **Supervisor-skills-plus**：只保留**消费侧** skill（`style-mine`、`paper-quickread`、路由等）。不在本仓建监测数据库。
 - **causal-style-vault**（拟新建私有仓，或暂用本机目录 + 后迁仓）：唯一风格记忆与监测日志。
 - **hanzhong-liu-research**：作者范文与组内论文索引的**来源**（已存在：`easygl1der/hanzhong-liu-research`），不把版权受限全文推到公开 fork。
-- **Intake**：接口形状先定（`monitor/queue.yaml` 字段），**具体抓取工具名留空 / TBD**，避免错误绑定。
+- **Intake**：接口形状先定（`monitor/queue.yaml` 字段）。**推荐实现 = Crossref polite pool + OpenAlex enrich**（附录 §2）；**在主人确认前不得写成已绑定**，也不得改成 Apify。
 
 ---
 
@@ -86,7 +89,7 @@ paper-quickread --style              cards/ + profiles/ + changelog/      resear
 1. **Author profile 类型**：与 venue/field 并列的第三种档案（例：`authors/hanzhong-liu/`），叠用规则：venue 管体裁与刊规，author 管论证习惯与中文/双语语体。
 2. **Monitor pipeline**：发现（TBD）→ 队列 → MinerU → quickread+style → vault。
 3. **Vault 仓与目录约定**（见下节）。
-4. **与刘组仓的衔接**：从 `papers/`、`publications.json`、`catalog.json`、`s2-author.json` 等列出刘老师范文，再 dissect。
+4. **与刘组仓的衔接**：范文清单 **只从** `papers/publications.json` filter（38 条，2026-08-28）；`catalog.json` 是背景文不是刘 CV；S2 只有 27 篇、不完整。远程 git **不含 PDF**（gitignore）。见附录 §4。
 
 ---
 
@@ -114,7 +117,11 @@ paper-quickread --style              cards/ + profiles/ + changelog/      resear
 | **franklee16 等二次拷贝的 AJS** | 无 | **不要引用**无根 LICENSE 的拷贝仓；只用 brycewang 上游（SPEC D19） |
 | **通用 academic-writing skills**（如 jamditis 等） | CRediT、预注册、OA/披露 LLM 等**流程检查清单**可启发 proposal-writer / pre-submission，与「刊风挖掘」正交 | 不并入 style-mine；会话若要借用，写到对应 skill 的 candidate 笔记，不写进 venue profile |
 | **「用范文训个人文风 digital twin」类教程** | 与我们「5–10 篇 + 人确认」同构；可借鉴「样本要像自己」的选篇标准（刘老师线） | 不要做成营销文风 skill；不要无审批判自动覆盖 profile |
-| **SNL-UCSB rhetorical moves / claude-scholar paper-miner 等**（若会话检索到） | 修辞动作标签、主张—证据切分的命名 | 是否引入新标签体系：仅当现有 A–L 卡不够用时再扩展；扩展前写一页 ADR 草案 |
+| **SNL-UCSB rhetorical moves / claude-scholar paper-miner 等**（10-16 已读原文） | 修辞动作标签、主张—证据切分的命名 | 是否引入新标签体系：仅当现有 A–L 卡不够用时再扩展；扩展前写一页 ADR 草案 |
+| **WantongC/journal-adapt-writing-skill** | 已是本仓 style-mine 上游 | 不要再 vendor 一份平行 skill |
+| **RTCartist/paper-suite `venue-adapt`**（2026-10-17 打开 SKILL） | lab/user exemplar 与 venue overlay 分层；不足 3 篇只算 calibration | PyMuPDF 抽取；把语料原句写进 profile |
+| **ShaishavMaisuria `match-style`** | author vs venue 冲突记入本地 memory 的思路 | 第二套 `.paper-memory/profile.yml` |
+| **fuhaoda/stats-paper-writing-agent-skills**（CC0） | Apply/check：摘要句数、notation/repro 启发式 | 用 JDS 无关检查项冒充四大刊刊风 |
 
 ### 5.3 统计四大刊的现实缺口
 
@@ -122,7 +129,15 @@ JASA、JRSSB、AoS、Biometrika **没有**像 AJS 那样可直接安装的成熟
 
 - **Borrow**：AJS 经济计量刊的「维度列表」当检查提纲；
 - **Must build**：本计划的监测 + vault + exemplar accumulate；
-- **Leave to session**：具体关键词表、TOC 解析脚本、要不要 Graphviz 文献地图，执行时自定。
+- **Leave to session**：具体关键词表微调、TOC 解析脚本、要不要 Graphviz 文献地图，执行时自定。
+
+### 5.5 2026-10-17 随访（摘要）
+
+完整证据见 [`2026-10-17-causal-style-mining-investigation.md`](2026-10-17-causal-style-mining-investigation.md)。
+
+- 统计四大刊 **仍无** AJS 深度包。
+- style-mine 已有 `user_exemplar` corpus role，**还没有**独立 author profile 输出类型；叠用规则应写进 accumulate 文档（M2），不是新 skill。
+- 新借思路止于 overlay / calibration / CC0 统计写作检查；**不**扩大 A–L，除非 ADR。
 
 ### 5.4 自主权边界（给 Claude）
 
@@ -134,7 +149,12 @@ JASA、JRSSB、AoS、Biometrika **没有**像 AJS 那样可直接安装的成熟
 
 ## 6. 管线步骤（期刊因果文）
 
-1. **发现（源 TBD）**：待主人澄清监测工具后，写入 `monitor/README.md`。在此之前用**人工维护的 DOI/TOC 列表**或已有学术检索结果填 `monitor/queue.yaml`。过滤：causal、IV、RDD、DID/SDID、matching、potential outcomes、identification 等（细则写在 vault `monitor/filters.md`，可迭代）。
+1. **发现（推荐栈，绑定待确认）**：
+   - **主源**：Crossref `GET /works?filter=issn:{eISSN},from-pub-date:{since},type:journal-article`，请求带 `mailto=`。eISSN：JASA `1537-274X`，JRSS-B `1467-9868`，AoS `2168-8966`，Biometrika `1464-3510`。钉电子 ISSN，避开 AoAS / 旧 JRSS-B Methodological。
+   - **补全**：OpenAlex 同 ISSN + `oa_status` / concepts。宽 `search=causal` **假阳性高**（本会话 JASA 2025+ count=132）；不能当唯一过滤器。
+   - **旁路**：JASA RSS `https://www.tandfonline.com/feed/rss/uasa20`（本会话 200 XML）。OUP/IMS RSS 在自动化出口上 403/404/bot 页，**不**当 v1 必选。
+   - **不当主源**：Apify、academic-mcp（dblp 偏向且本会话 MCP error）、S2 刊级 TOC。
+   - 主人确认前：用**人工 DOI/TOC** 填 `monitor/queue.yaml`。过滤词见附录；细则进 vault `monitor/filters.md`。v1 = 关键词打标 + **每周人筛**，不上分类器。
 2. **去重入库队**：doi、标题、刊名、日期、来源 URL、状态（new / fetched / transcribed / carded / skipped）。
 3. **MinerU**：仅用既有 MinerU 路径转写；失败则停并记日志（与 `research-core` inputs-mineru 一致）。
 4. **paper-quickread --style**：产出九段快读 + `style-card.md`；快读可进阅读目录，**风格卡必须进 vault** 对应 `venues/<slug>/cards/`。
@@ -152,16 +172,19 @@ JASA、JRSSB、AoS、Biometrika **没有**像 AJS 那样可直接安装的成熟
 
 ## 7. 刘汉中作者线
 
-1. **定位仓库**：`git clone git@github.com:easygl1der/hanzhong-liu-research.git`（私有；汉中流 / 刘组研究工作区）。本机若已有则 `git pull`。
+步骤细节与「json filter 结果」见调查附录 §4。**禁止**在本仓手写一篇新论文表。
+
+1. **定位仓库**：私有仓 **已确认存在** `easygl1der/hanzhong-liu-research`。`git clone git@github.com:easygl1der/hanzhong-liu-research.git`；本机若已有则 `git pull`。Cloud 挖风格只需 git 里的 json/md，不必为 PDF 拉整树。
 2. **收齐范文清单**（只修辞学习，不外发版权全文）：
-   - `papers/publications.json`、`papers/catalog.json`、`papers/s2-author.json`、`papers/papers.md`
-   - `papers/by-author/`（若有刘老师本人条目则优先）
-   - `group/` 介绍与已有笔记中的发表列表
-   - 公开主页 / Google Scholar / S2 交叉核对（记入 vault `authors/hanzhong-liu/SOURCE.md`）
-3. **Exemplar 集**：在 vault 建 `authors/hanzhong-liu/exemplars.md`（bib 级元数据 + 本地 transcript 路径指针）；PDF 留在刘组仓或本机学习副本，**不**推到 supervisor-skills-plus。
-4. **Dissect**：逐篇 `style-mine` dissect（或 quickread `--style` 后转入 author 卡目录 `authors/hanzhong-liu/cards/`）。
-5. **Accumulate（author）**：达阈值后出 **author profile**（候选）；与 JASA 等 venue profile **分开文件**；Apply 时可「venue + author」叠用。
-6. **中文开题/综述**：若范文含中文计划书/综述，卡片标注 `register: zh-academic`，与英刊卡片分栏，避免把中文语体规则误写入英文 venue。
+   - **权威**：`papers/publications.json`（38 `items`，`updated: 2026-08-28`）+ 可读表 `papers/papers.md`
+   - **不要当全集**：`papers/catalog.json`（6 条背景：丁鹏/Jiang–Ding/Li–Wager 等）；`papers/s2-author.json`（S2 27 篇 vs json 38）
+   - `papers/by-author/liu-hanzhong/`：README 有写；**GitHub 远程列表未见该目录**（PDF gitignore）。本机学习副本可能有
+   - `group/PROFILE.md`：系站 / Scholar / S2 / arXiv；排除同名 `2510.10196`
+   - PROFILE 提到的 `scripts/enrich_hanzhong_liu.py`：**本会话在 GitHub tree 未找到文件**
+3. **Exemplar 集**：vault `authors/hanzhong-liu/exemplars.md` 只含 bib 字段 + 本地 transcript 指针。筛法：`status=published` 且一作/通讯优先；四大刊 published 的 filter 结果（同一 json SHA `a9aaaeb`）为 **JASA×3、JRSS-B×1、Biometrika×3、AoS×0**——完整题名留在 json / 附录，不在本仓复制成第二份 CV。
+4. **Dissect**：逐篇 `style-mine` dissect（或 quickread `--style` 后转入 `authors/hanzhong-liu/cards/`）。有 arXiv 则用已有 LaTeX transcript，不先上 MinerU。
+5. **Accumulate（author）**：达阈值后出 **author profile**（候选）；与 venue profile **分开文件**；Apply 时 venue 体裁 > author 语体，冲突进表。
+6. **中文开题/综述**：json 中「in Chinese」条目标 `register: zh-academic`，与英刊卡分栏。
 
 ---
 
@@ -225,12 +248,14 @@ JASA、JRSSB、AoS、Biometrika **没有**像 AJS 那样可直接安装的成熟
 
 ### 未决问题（Open questions）
 
-1. **监测/进货的具体工具与数据源是什么？**（最高优先；曾误听，待主人澄清）
-2. `causal-style-vault` 新建独立私有仓，还是先放在 `hanzhong-liu-research` 子树再迁出？
-3. 因果过滤：规则关键词 vs 分类器 vs 人工初筛，v1 选哪档？
-4. Author profile 的 schema：复用 venue 的 A–L 子集，还是另加「论证节奏 / 中文贡献编号」字段？
+1. **是否采纳推荐进货栈（Crossref 主 + OpenAlex 补 + JASA RSS 旁路），从而结束「源 TBD」？** 调查建议采纳；**在主人点头前仍不实现自动监测、不写死厂商。** Apify 建议否决。
+2. `causal-style-vault` 新建独立私有仓，还是先放在 `hanzhong-liu-research` 子树再迁出？（建议：独立私有仓，避免与刘组 PDF gitignore 策略搅在一起；过渡期可用本机目录。）
+3. 因果过滤：调查建议 **v1 = 关键词 + 每周人筛**（OpenAlex 宽搜假阳性已证实）。是否同意不上分类器？
+4. Author profile schema：建议 **复用 A–L + `register` + overlay 冲突表**，暂不扩字段。是否同意？
 5. 周报投递渠道：邮件 / Slack / 仅写 vault？
-6. 是否与 Social Monitor / Notion 文献精读打通，还是严格分离？
+6. 是否与 Social Monitor / Notion 文献精读打通，还是严格分离？（SPEC D17：Notion 默认同步不进 skill。）
+7. Author 范文是否只计「一作/通讯 + published」，组内学生一作、刘老师参与的是否进第二盘？
+8. 刘组 `scripts/enrich_*.py` 若不在 git 里，是否还要当刷新路径，还是只读 json？
 
 ---
 
@@ -242,14 +267,15 @@ JASA、JRSSB、AoS、Biometrika **没有**像 AJS 那样可直接安装的成熟
 - [x] Claude 会话提示 `docs/plans/2026-10-17-causal-style-mining-and-monitor-CLAUDE.md`
 - [x] CHANGELOG / handoff 指针
 - [x] 外部风格 skill 调研节（§5）
-- [ ] **不**改 skill 代码（本阶段约束）
-- [ ] 进货源：**TBD**（等主人澄清后再开 M1 自动化部分）
+- [x] 2026-10-17 调查附录：进货排序、外部 skill 随访、刘组仓定位（不编造篇目）
+- [x] **不**改 skill 代码（本阶段约束）
+- [ ] 进货源：**推荐栈已写，绑定待主人确认**（确认前不接自动监测）
 
 ### M1 — Vault + 进货骨架
 
 - 创建 `causal-style-vault`（或暂定路径）目录：`venues/`、`authors/hanzhong-liu/`、`field/causal/`、`monitor/`、`changelog/`
-- `monitor/README.md`：队列契约；进货源写 TBD 或已澄清名称
-- 克隆/定位 `hanzhong-liu-research`，写出刘老师 exemplars 初稿清单
+- `monitor/README.md`：队列契约；进货源写 `recommended: crossref+openalex` 或主人确认后的名称；**禁止**默认 Apify
+- 从 `publications.json` filter 写出刘老师 exemplars 初稿（四大刊 published 7 篇作种子，见附录）；不手编 CV
 - 端到端手动跑 **1** 篇四大刊因果文：MinerU → quickread `--style` → 卡入 vault（可用人工 DOI）
 
 ### M2 — 作者档 + 达阈值前的批量
@@ -307,10 +333,11 @@ causal-style-vault/
 - `skills/lessons-harvest/`（唯一进 core 的闸门）
 - `skills/research-core/` venues & fields（晋升目标，只读直至批准）
 - `docs/handoff/supervisor-plus-reading-upgrade-SPEC.md`（读与学总 SPEC；含 AJS 引用约定）
-- `docs/handoff/journal-skills-scan-2026-10-16.md`（若存在，期刊 skill 扫描）
-- 私有仓 `easygl1der/hanzhong-liu-research`（刘组范文来源）
-- MinerU 相关工具（转写）
-- 进货工具：**TBD**（勿默认 Apify）
+- `docs/handoff/journal-skills-scan-2026-10-16.md`、`docs/handoff/paper-quickread-skill-scan-2026-10-16.md`、`notes/10-reading-sources.md`
+- `docs/plans/2026-10-17-causal-style-mining-investigation.md`（本轮进货/语料/外部 skill 证据）
+- 私有仓 `easygl1der/hanzhong-liu-research`（范文来源 = `papers/publications.json`）
+- MinerU 相关工具（转写）；刘组有 arXiv 的用 LaTeX e-print
+- 进货：**推荐 Crossref + OpenAlex**（附录）；勿默认 Apify；academic-mcp 非 TOC 主环
 
 ---
 
@@ -320,3 +347,4 @@ causal-style-vault/
 | --- | --- |
 | 2026-10-17 | 初稿：架构、vault、刘组仓作者线、节奏、M0–M3、Claude 会话提示 |
 | 2026-10-17 | 进货源改为 **TBD**（纠正误听 Apify）；新增 §5 外部风格 skill 调研（borrow vs leave） |
+| 2026-10-17 | 调查：推荐 Crossref+OpenAlex；否决默认 Apify；刘组仓定位与 json filter；外部 skill 随访；附录 `…-investigation.md` |

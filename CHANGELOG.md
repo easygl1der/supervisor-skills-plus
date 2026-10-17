@@ -11,9 +11,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `docs/plans/2026-10-17-causal-style-mining-and-monitor.md`, Claude session
   prompt `docs/plans/2026-10-17-causal-style-mining-and-monitor-CLAUDE.md`,
   and handoff pointer `docs/handoff/causal-style-mining-plan-2026-10-17.md`.
-  Intake source left TBD; vault + 刘汉中 author line + style-mine promote gate;
-  survey of external journal skills (borrow vs leave). No skill rewrites in
-  this docs commit.
+  Follow-up investigation
+  `docs/plans/2026-10-17-causal-style-mining-investigation.md`: ranked intake
+  (Crossref + OpenAlex recommended; Apify not default), external style-skill
+  borrow list, and Liu corpus discovery via `hanzhong-liu-research`
+  `publications.json` (no invented paper list). Promote gate unchanged.
+  No skill rewrites; no daily auto-merge into research-core.
 
 - Reading-and-learning layer that works without `research.yaml`:
   `paper-quickread` (nine-section quick read, `--style` style card,
