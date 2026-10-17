@@ -19,4 +19,4 @@ records:
   linear: {enabled: false}
 
 reading:
-  dir: ../../reading        # the eval reading root with the SDID folder
+  dir: ../../../study/evals/reading        # shared study eval reading root (SDID folder)

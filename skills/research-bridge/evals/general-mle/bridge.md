@@ -8,7 +8,7 @@ date: 2026-10-16
 ---
 # 学以致用（通用模式）：MLE
 
-> Eval run 2 of research-bridge, general mode. No `research.yaml`. The skill asked one question: 「当前项目是什么？一两句话：研究问题、数据、现在用的方法或卡在哪。」 The simulated user answered 「还没定，先给通用的」, so the card gives general heuristics only. In real use this file sits next to the concept note (`concepts/`); here it is stored under `skills/study/evals/bridge/`. Learner level: `proficiency_ai: can-use`; recorded misconception: 曾把「MLE 无偏」当成普遍成立（knowledge.yaml notes）。
+> Eval run 2 of research-bridge, general mode. No `research.yaml`. The skill asked one question: 「当前项目是什么？一两句话：研究问题、数据、现在用的方法或卡在哪。」 The simulated user answered 「还没定，先给通用的」, so the card gives general heuristics only. In real use this file sits next to the concept note (`concepts/`); here it is stored under `skills/research-bridge/evals/general-mle/`. Learner level: `proficiency_ai: can-use`; recorded misconception: 曾把「MLE 无偏」当成普遍成立（knowledge.yaml notes）。
 
 ## 1. 可移植的核心（一句话，不带领域词）
 给数据写一个概率模型，选让观测到的数据「最不意外」的参数；等价于让模型分布在 KL 意义下贴近数据的经验分布（notes 结果 A，Eq. 4.10–4.15）。

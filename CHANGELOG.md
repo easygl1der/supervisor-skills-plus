@@ -7,6 +7,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- Light polish of `research-bridge` and `proposal-writer` (architecture
+  unchanged): process/pipeline common breaks; a non-estimator bridge eval
+  (`evals/general-process/`); `references/zh-kaiti-register.md` for Chinese
+  kaiti sentence frames; Evals sections and ADR 0016 cross-links.
 - Plan for causal style mining and top-4 stats journal monitoring:
   `docs/plans/2026-10-17-causal-style-mining-and-monitor.md`, Claude session
   prompt `docs/plans/2026-10-17-causal-style-mining-and-monitor-CLAUDE.md`,
@@ -31,10 +35,22 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   stop on failure, table readability gate) and filled `fields/causal.md` and
   `fields/stats.md` candidate rules.
 - Eval runs with real outputs in `skills/study/evals/` (SDID paper, Murphy
-  PML1 ch. 4, Lomuto partition stepper, bridge, proposal and literature map).
+  PML1 ch. 4, Lomuto partition stepper, literature map) and, after the
+  2026-10-17 polish, bridge/proposal cards under each skill's `evals/`.
 - `THIRD_PARTY.md` at the root; ADRs in `docs/adr/`.
 
 ### Changed
+- Bridge and proposal eval cards moved from `skills/study/evals/{bridge,proposal}/`
+  to `skills/research-bridge/evals/` and `skills/proposal-writer/evals/`;
+  old paths keep README pointers. Shared SDID reading notes stay under
+  `skills/study/evals/reading/`.
+- NSFC 2026 three-part body cited from official NSFC pages (2026-10-17);
+  NSF/ERC/NIH page counts treated as examples to verify against the current
+  PAPPG / Information for Applicants / FOA. Heilmeier re-checked on the
+  DARPA page the same day.
+- Bridge literature entries marked confirmed where a DOI or publisher page
+  was checked; Cartwright and Hardie remains candidate (book, full text not
+  verified).
 - `journal-adapt` merged into `style-mine` (Dissect / Accumulate / Apply);
   `skills/journal-adapt/` is now a pointer.
 - `research-supervisor` routes reading and learning requests by intent before

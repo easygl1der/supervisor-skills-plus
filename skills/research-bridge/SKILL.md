@@ -34,14 +34,16 @@ Three habits make the card worth more than a gut feeling
 - **Map relations, not surface features.** A source method works because of
   a structure (who is treated, what is compared, what is assumed); the
   mapping table says where that structure exists in the project and where
-  the analogy breaks. [src: lit:gentner1983] (candidate)
+  the analogy breaks. [src: lit:gentner1983] (confirmed)
 - **Assumptions travel, results do not.** Every identifying or modelling
   assumption of the source is checked against the project's setting with
   evidence; a result proved or measured in the source is never quoted as if
-  it held in the project. [src: lit:cartwright2012; lit:pearl2014] (candidate)
+  it held in the project. Formal transport formulas need a selection
+  diagram and are not solved here. [src: lit:cartwright2012] (candidate);
+  [src: lit:pearl2014] (confirmed)
 - **Decide before you look.** Expected result, kill criterion and the list
   of variants to try are fixed before the test runs, so a method is not
-  kept because one of many tries looked good. [src: lit:nosek2018; lit:gelman2014] (candidate)
+  kept because one of many tries looked good. [src: lit:nosek2018; lit:gelman2014] (confirmed)
 
 The skill does not score novelty or feasibility (`idea-evaluator`), run or
 freeze experiments (`experiment-workflow`), or write decision records
@@ -221,6 +223,17 @@ Report pass, fail or n/a with evidence:
 The card itself: source and target, mapping table, assumption-transfer
 table, verdict with how, validation test, hand-offs.
 
+## Evals
+
+Worked cards (real outputs, not stubs) live in `evals/`: project-mode
+SDID, general-mode MLE, and a non-estimator process bridge (notebook
+habit to `experiment-workflow`). `skills/study/evals/bridge/` is a
+pointer to those paths. Shared reading notes stay under
+`skills/study/evals/reading/`.
+
+This skill does not compute Pearl-Bareinboim transport formulas or run
+do-calculus. The card checks assumptions at mapping level only.
+
 ## Hand-offs
 
 - The bridge shapes a new idea or changes the paper's scope:
@@ -235,14 +248,22 @@ table, verdict with how, validation test, hand-offs.
 
 ## Sources
 
+Bibliographic records checked 2026-10-17; full texts were not re-read for
+this polish. Cartwright and Hardie remains candidate (book; ISBN only).
+
 - lit:gentner1983: Gentner, D. (1983). Structure-mapping: A theoretical
   framework for analogy. Cognitive Science, 7(2), 155-170.
+  DOI 10.1207/s15516709cog0702_3 (confirmed)
 - lit:cartwright2012: Cartwright, N., and Hardie, J. (2012). Evidence-Based
   Policy: A Practical Guide to Doing It Better. Oxford University Press.
+  ISBN 9780199841622 (candidate; full text not verified)
 - lit:pearl2014: Pearl, J., and Bareinboim, E. (2014). External validity:
   From do-calculus to transportability across populations. Statistical
-  Science, 29(4), 579-595.
+  Science, 29(4), 579-595. DOI 10.1214/14-STS486 (confirmed)
 - lit:nosek2018: Nosek, B. A., Ebersole, C. R., DeHaven, A. C., and Mellor,
   D. T. (2018). The preregistration revolution. PNAS, 115(11), 2600-2606.
+  DOI 10.1073/pnas.1708274114 (confirmed)
 - lit:gelman2014: Gelman, A., and Loken, E. (2014). The statistical crisis
   in science. American Scientist, 102, 460-465.
+  https://www.americanscientist.org/article/the-statistical-crisis-in-science
+  (confirmed article page; no single Crossref DOI used here)
