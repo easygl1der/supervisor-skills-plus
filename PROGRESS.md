@@ -86,4 +86,21 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - Prompt `docs/handoff/group-beamer-PROMPT.md` (commit 65ce3ad). Read research-records, paper-quickread, deai-writing, figure-designer, style-mine, research-core causal and stats profiles.
 - Step 1 notes: `docs/handoff/group-beamer-notes.md` (11 references; licences verified; corrections to the prompt listed at the top).
 - No TeX on SG, Studio or iMac; compile verification waits for an install decision.
-- Step 2 design proposal given in chat; waiting for the owner's "continue" before adding `skills/group-beamer/`.
+- Step 2 design proposal saved as `docs/handoff/group-beamer-proposal.md`. Paused by the owner after Step 2: Steps 3 to 5 (implementation, deai-writing `slides` profile, ADR, sample decks, compile checks) not done.
+
+## Status at pause (2026-10-17)
+
+Done:
+- 25 skills on main, all four lint scripts clean. Reading-and-learning layer (paper-quickread, study with visual kit, research-bridge, proposal-writer, deep-research literature map), style-mine merged from journal-adapt (stub removed, ADR 0019), research-supervisor intent routing, ADRs 0001-0019.
+- Study kit: edge labels as layout nodes, per-node size and spacing, arrows spread around busy nodes.
+- style-mine intake without MCP: `intake_search.py` (Crossref + OpenAlex; Semantic Scholar with a key, paced 1.2 s; 429 backoff), live-tested on all three sources; author profiles and author/venue conflict table.
+- Private vault `easygl1der/causal-style-vault`: 4 author cards for one statistician (Biometrika 2020/2023, JASA 2024/2025), draft author profile with transcript-verified support counts, pending conflict table, intake queue of 88 papers from the four journals.
+- group-beamer: Steps 0-2 (reference notes, proposal).
+
+Not done:
+- group-beamer Steps 3-5; no TeX installed on SG, Studio or iMac.
+- Owner review of the draft author profile; ruling on hard rule 3 (short stock phrases in style cards).
+- Venue profiles for JASA / Biometrika (needed to fill the conflict table); more author cards (third venue, more first-author papers).
+- Real-learner tests of study (all learner turns so far simulated); runs in Cursor, Codex and Claude.ai.
+- MinerU MCP route (tunnel down this session; the official CLI precision route was used).
+- Six upstream skills still declare CC-BY-4.0 in frontmatter.
