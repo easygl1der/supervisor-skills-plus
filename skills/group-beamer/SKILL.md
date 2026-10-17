@@ -145,7 +145,8 @@ Report each item as pass, fail, n/a or unknown, with evidence (page,
 - `check_log.py`: no overfull box above 10pt and no undefined reference or
   citation; every box inspected on the rendered page.
 - `lint_deck.py`: no overlay commands, at most 7 bullets and 2 boxes per
-  slide, no `\tiny`, text-only slides at most 30 percent.
+  slide, no `\tiny`, text-only slides at most 30 percent (frames marked
+  `% gb:text-ok` with a reason are exempt; no filler formulas).
 - Title verbs at or below the claim level; results slides carry no causal
   verb; the causal reading names its assumptions.
 - Weekly report: every item from the last log is marked done, partial or

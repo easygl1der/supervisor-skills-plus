@@ -128,16 +128,13 @@
 \end{frame}
 
 \begin{frame}{Link to our project (fill or TODO)}
+  % gb:text-ok project link is prose by nature
   \begin{itemize}
     \item If we have few treated units and doubtful parallel trends,
       SDID is a robustness check beside DID and SC.
     \item Confirm a common adoption date before using Eq.~4.2.
     \item Project RQ: TODO.
   \end{itemize}
-  \begin{equation*}
-    \hat\tau^{\mathrm{did}}
-    = \arg\min \sum_{i,t}(Y_{it}-\mu-\alpha_i-\beta_t-W_{it}\tau)^{2}
-  \end{equation*}
   \note{Do not claim our data fit SDID until STATUS says so.}
 \end{frame}
 
@@ -170,15 +167,13 @@
 \end{frame}
 
 \begin{frame}{Discussion: should we treat SC/SDID mismatch as a warning?}
+  % gb:text-ok closing discussion question
   \begin{itemize}
     \item Paper: when SC and SDID disagree, SDID is usually more
       credible (§2.2). Quickread tag: conjectured.
-    \item California has no ground truth.
+    \item California has no ground truth, so a mismatch alone does not
+      tell us which estimator is wrong.
   \end{itemize}
-  \begin{equation*}
-    \mathrm{sign}(\hat\tau^{\mathrm{sdid}}-\hat\tau^{\mathrm{sc}})
-    \quad\text{is not a test of A2.}
-  \end{equation*}
   \note{End on the question, not a slogan.}
 \end{frame}
 

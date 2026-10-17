@@ -25,6 +25,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now fills blocks so decision questions show as a box; the weekly skeleton
   gained a kill-criterion column and lost an unsourced number;
   `render_pages.sh` uses `pymupdf` instead of the deprecated `fitz`.
+  `lint_deck.py` exempts frames marked `% gb:text-ok <reason>` from the
+  text-only share, and the sample decks lost their filler formulas.
 - `deai-writing` `slides` profile: Beamer detection, a `slides` column in the
   tolerance matrix, and protected deck elements in the editing contract.
 - `style-mine` intake without MCP: `scripts/intake_search.py` (Crossref +

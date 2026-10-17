@@ -2,7 +2,9 @@
 """Static checks for a group-beamer .tex deck.
 
 Fails on overlay commands, more than 7 bullets or 2 boxes in a frame,
-\\tiny, or a text-only share above 30%.
+\\tiny, or a text-only share above 30%. A frame containing the comment
+"% gb:text-ok <reason>" (a discussion or decision slide) is not counted as
+text-only.
 
 Usage:
   lint_deck.py <file.tex>
@@ -62,8 +64,12 @@ def is_text_only(body: str) -> bool:
     return SUBSTANTIVE.search(body) is None
 
 
+TEXT_OK = "GBTEXTOKMARK"  # survives comment stripping
+
+
 def lint(text: str) -> list[str]:
-    src = strip_comments(text)
+    # "% gb:text-ok <reason>" exempts a discussion or decision frame from the text-only share
+    src = strip_comments(text.replace("% gb:text-ok", TEXT_OK + "%"))
     errors: list[str] = []
     for m in OVERLAY_CMD.finditer(src):
         errors.append(f"overlay command \\{m.group(1)}")
@@ -83,7 +89,7 @@ def lint(text: str) -> list[str]:
             errors.append(f"frame {i}: {n_item} bullets (max 7)")
         if n_box > 2:
             errors.append(f"frame {i}: {n_box} boxes (max 2)")
-        if is_text_only(body):
+        if is_text_only(body) and TEXT_OK not in body:
             text_only += 1
     share = text_only / len(fr)
     if share > 0.30 + 1e-9:
@@ -129,6 +135,10 @@ plain
 """
     err2 = lint(good)
     assert err2 == [], err2
+    # two text-only frames of four fail (50%), unless the discussion frame is marked (25%)
+    disc = "\\begin{frame}{A}\\begin{tabular}{c}1\\end{tabular}\\end{frame}\n\\begin{frame}{C}\\begin{tabular}{c}2\\end{tabular}\\end{frame}\n\\begin{frame}{B}x\\end{frame}\n\\begin{frame}{Q}%s\nWhat next?\\end{frame}\n"
+    assert any("text-only" in e for e in lint(disc % ""))
+    assert lint(disc % "% gb:text-ok discussion question") == []
     print("lint_deck: selftest ok")
     return 0
 

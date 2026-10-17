@@ -12,6 +12,10 @@ TikZ, colour, pacing, endings.
 - At least one formula, figure, table, theorem, or algorithm. Text-only
   slides at most 30% of the deck. A slide with at most 3 short text-only
   bullets must be merged or enriched.
+- Discussion, decision, blocker and link-to-project slides may be text
+  only: mark the frame with a comment `% gb:text-ok <reason>` and
+  `lint_deck.py` leaves it out of the 30% count. Never add a formula only to
+  pass the lint; a filler equation is a finding in the visual review.
 - One idea per slide. Worked example within 2 slides of a definition.
   Theorem and proof on separate slides.
 
