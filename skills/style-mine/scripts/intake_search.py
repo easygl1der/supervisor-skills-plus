@@ -9,8 +9,10 @@ Usage:
 
 Sources: Crossref (discovery by ISSN, works by ORCID) and OpenAlex (abstract,
 OA status, author disambiguation) by default; Semantic Scholar is added only
-when SEMANTIC_SCHOLAR_API_KEY is set. Set INTAKE_MAILTO (an email) for the
-Crossref and OpenAlex polite pools. Keys come from the environment only.
+when SEMANTIC_SCHOLAR_API_KEY is set (calls spaced 1.2 s apart). Set
+INTAKE_MAILTO (an email) for the Crossref and OpenAlex polite pools. Keys come
+from the environment only. On HTTP 429 or 5xx the script waits Retry-After, or
+8, 15, 30 s, then gives up.
 
 journal: lists articles since --since, marks each with the causal keywords it
 hits (title or abstract) and prints hits only unless --all.
@@ -52,18 +54,39 @@ MAILTO = os.environ.get("INTAKE_MAILTO", "")
 S2_KEY = os.environ.get("SEMANTIC_SCHOLAR_API_KEY", "")
 
 
+BACKOFF = (8, 15, 30)  # seconds after a 429 or 5xx when the server sends no Retry-After
+S2_GAP = 1.2  # Semantic Scholar: at least 1 s between calls; 1.2 s leaves margin
+_s2_last = 0.0
+
+
+def wait_for(attempt: int, retry_after: str | None) -> float:
+    return float(retry_after) if retry_after and retry_after.isdigit() else BACKOFF[attempt]
+
+
 def get(url: str, headers: dict | None = None, body: bytes | None = None) -> dict:
     h = {"User-Agent": f"style-mine-intake/1.0 (mailto:{MAILTO or 'unset'})", **(headers or {})}
-    for attempt in range(4):
+    for attempt in range(len(BACKOFF) + 1):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, body, h), timeout=60) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 502, 503) and attempt < 3:
-                time.sleep(2 ** attempt * 2)
+            if e.code in (429, 500, 502, 503) and attempt < len(BACKOFF):
+                s = wait_for(attempt, e.headers.get("Retry-After"))
+                print(f"intake: HTTP {e.code}, retrying in {s:.0f} s", file=sys.stderr)
+                time.sleep(s)
                 continue
             raise SystemExit(f"intake: HTTP {e.code} from {url.split('?')[0]}")
     raise SystemExit("intake: unreachable")
+
+
+def s2get(path: str, params: dict) -> dict:
+    """Semantic Scholar call, spaced S2_GAP apart; only reached when SEMANTIC_SCHOLAR_API_KEY is set."""
+    global _s2_last
+    time.sleep(max(0.0, _s2_last + S2_GAP - time.monotonic()))
+    try:
+        return get(f"https://api.semanticscholar.org/graph/v1/{path}?" + q(params), {"x-api-key": S2_KEY})
+    finally:
+        _s2_last = time.monotonic()
 
 
 def q(params: dict) -> str:
@@ -151,9 +174,8 @@ def journal(arg: str, since: str, n: int, show_all: bool) -> list[dict]:
             r["keyword_hits"] = sorted(set(r["keyword_hits"] + hits(abstract_text(w.get("abstract_inverted_index")))))
             r["oa_status"], r["oa_url"] = oa_fields(w)
     if S2_KEY:
-        d = get("https://api.semanticscholar.org/graph/v1/paper/search/bulk?" + q(
-            {"query": "causal | treatment effect | identification", "venue": name, "year": f"{since[:4]}-",
-             "fields": "title,externalIds,publicationDate,authors"}), {"x-api-key": S2_KEY})
+        d = s2get("paper/search/bulk", {"query": "causal | treatment effect | identification", "venue": name,
+                                        "year": f"{since[:4]}-", "fields": "title,externalIds,publicationDate,authors"})
         recs += [record((p.get("externalIds") or {}).get("DOI"), p.get("title") or "", slug, p.get("publicationDate") or "",
                         [a["name"] for a in p.get("authors", [])], "semanticscholar") for p in d.get("data", [])]
     recs = merge(recs)
@@ -169,8 +191,7 @@ def author(name: str, oa_id: str, s2_id: str, since: str) -> list[dict]:
             inst = ", ".join(i.get("display_name", "") for i in (a.get("last_known_institutions") or [])[:2])
             print(f"openalex {a['id'].rsplit('/', 1)[-1]}\t{a['display_name']}\tworks={a.get('works_count')}\t{inst}\torcid={a.get('orcid') or '-'}")
         if S2_KEY:
-            d = get("https://api.semanticscholar.org/graph/v1/author/search?" + q(
-                {"query": name, "fields": "name,paperCount,affiliations"}), {"x-api-key": S2_KEY})
+            d = s2get("author/search", {"query": name, "fields": "name,paperCount,affiliations"})
             for a in d.get("data", [])[:10]:
                 print(f"s2 {a['authorId']}\t{a['name']}\tpapers={a.get('paperCount')}\t{', '.join(a.get('affiliations') or [])}")
         print("intake: pick one ID and rerun with --openalex-id or --s2-id", file=sys.stderr)
@@ -190,8 +211,7 @@ def author(name: str, oa_id: str, s2_id: str, since: str) -> list[dict]:
             recs += [from_crossref(it, (it.get("container-title") or [""])[0])
                      for it in crossref_items(f"orcid:{orcid},from-pub-date:{since}", 200)]
     if s2_id and S2_KEY:
-        d = get(f"https://api.semanticscholar.org/graph/v1/author/{s2_id}/papers?" + q(
-            {"fields": "title,externalIds,venue,publicationDate,authors", "limit": 500}), {"x-api-key": S2_KEY})
+        d = s2get(f"author/{s2_id}/papers", {"fields": "title,externalIds,venue,publicationDate,authors", "limit": 500})
         recs += [record((p.get("externalIds") or {}).get("DOI"), p.get("title") or "", p.get("venue") or "",
                         p.get("publicationDate") or "", [x["name"] for x in p.get("authors", [])], "semanticscholar")
                  for p in d.get("data", []) if (p.get("publicationDate") or "9999") >= since]
@@ -257,6 +277,20 @@ def selftest() -> None:
                                              {"title": "U", "venue": "arXiv", "authors": ["X"]}]}))
         t = exemplars(str(pub), "Ann Author", True)
         assert "first+corresponding" in t and "arXiv:1" in t and "| U |" not in t
+    assert wait_for(0, "12") == 12 and [wait_for(i, None) for i in range(3)] == [8, 15, 30]
+    global get, S2_KEY  # offline: stub the network and the clock
+    calls, slept, real_get, real_sleep, real_key = [], [], get, time.sleep, S2_KEY
+    get = lambda url, headers=None, body=None: calls.append(url) or {"data": [], "results": [], "message": {"items": []}}
+    time.sleep = lambda s: slept.append(s)
+    try:
+        S2_KEY = ""
+        journal("jasa", "2026-01-01", 5, True)
+        assert not any("semanticscholar" in c for c in calls), "S2 must be skipped without a key"
+        S2_KEY = "test"
+        s2get("author/search", {}); s2get("author/search", {})
+        assert slept[-1] > 1.0, "second S2 call must wait about S2_GAP"
+    finally:
+        get, time.sleep, S2_KEY = real_get, real_sleep, real_key
     print("intake_search selftest ok")
 
 

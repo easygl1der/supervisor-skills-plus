@@ -37,8 +37,17 @@ export SEMANTIC_SCHOLAR_API_KEY="..."              # optional
 python skills/style-mine/scripts/intake_search.py --selftest
 ```
 
-Without `INTAKE_MAILTO` the script warns; Crossref may answer HTTP 429, and
-the script backs off and retries three times.
+Without `INTAKE_MAILTO` the script warns and Crossref may answer HTTP 429.
+On 429 or 5xx every source waits the server's `Retry-After`, or 8, 15 and
+30 s, then stops with the error. Semantic Scholar calls are spaced at least
+1.2 s apart and are skipped entirely when the key is unset (`--s2-id` then
+prints a notice). No Academic MCP is involved at any step.
+
+Flags (`intake_search.py --help`): `journal <slug|ISSN> [--since DATE]
+[--max N] [--all] [--queue FILE]`; `author "<name>" [--openalex-id ID]
+[--s2-id ID] [--since DATE] [--queue FILE]`; `exemplars <publications.json>
+--author "<name>" [--top4]`; `--selftest`. `--since` defaults to 1 January
+of the current year; `--max` (Crossref rows) defaults to 200.
 
 ## 3. Journal search
 

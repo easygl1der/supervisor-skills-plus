@@ -8,11 +8,11 @@ Skill-local bibliography search for corpus building. **No Academic MCP.**
 
 ```bash
 export INTAKE_MAILTO="you@example.org"   # Crossref / OpenAlex polite pool
-# export SEMANTIC_SCHOLAR_API_KEY=...    # optional
+# export SEMANTIC_SCHOLAR_API_KEY=...    # optional; calls spaced 1.2 s
 
 python intake_search.py --selftest
 python intake_search.py journal jasa --since 2026-06-01
-python intake_search.py author "Hanzhong Liu" --openalex-id A...
+python intake_search.py author "<author name>" --openalex-id A...
 python intake_search.py exemplars /path/to/publications.json --author "..." --top4
 ```
 

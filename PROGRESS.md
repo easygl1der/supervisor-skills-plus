@@ -74,3 +74,9 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - MinerU: MCP server not reachable this session (local tunnel down); official CLI precision mode with the user's token converted SDID (69 pp.) and PML1 ch. 4 (60 pp.). Flash mode merged Table 1 cells; precision did not.
 - Evals in `skills/study/evals/`: SDID quickread + study (two diagnosis rounds), PML1 ch. 4 book mode (suspected erratum in Exercise 4.9), Lomuto partition stepper, bridge (project and general), proposal (novelty risk R1 confirmed by the paper's appendix §8), literature map.
 - Checks: lint_skills 26 clean; check_checklists 208 clean; check_sources 1412 resolved, 0 failed; check_shared_sync 6 in sync; all kit renders with empty warnings.
+
+## Style-mine intake refinement (2026-10-17)
+
+- Followed `docs/handoff/style-mine-intake-PROMPT.md`; no Academic MCP. `intake_search.py`: Semantic Scholar calls spaced 1.2 s and skipped without a key; 429/5xx wait Retry-After or 8, 15, 30 s. `--selftest` covers both offline (stubbed network and clock).
+- Live smoke with `INTAKE_MAILTO`: `journal jasa --since 2026-01-01` returned 25 rows; `author` without an ID printed candidates and stopped. S2 with a key not run (no key on this machine).
+- Docs aligned to `--help` (`references/intake.md` flag list; README pointed to the right script name).
