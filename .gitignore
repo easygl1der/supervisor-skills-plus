@@ -37,5 +37,21 @@ evals/latest-report.md
 # Private, non-anonymized material (never commit)
 private/
 
+# group-beamer: latex aux, rendered pages, local SYSU logos
+skills/group-beamer/**/*.aux
+skills/group-beamer/**/*.fdb_latexmk
+skills/group-beamer/**/*.fls
+skills/group-beamer/**/*.nav
+skills/group-beamer/**/*.out
+skills/group-beamer/**/*.snm
+skills/group-beamer/**/*.synctex.gz
+skills/group-beamer/**/*.toc
+skills/group-beamer/**/*.vrb
+skills/group-beamer/**/*.xdv
+skills/group-beamer/templates/*.pdf
+skills/group-beamer/templates/*-pages/
+skills/group-beamer/templates/sysu-like/logos/*.png
+skills/group-beamer/templates/sysu-like/logos/*.pdf
+
 # study kit dependencies (npm i in skills/study/kit)
 node_modules/
