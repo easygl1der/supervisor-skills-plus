@@ -72,6 +72,14 @@ fields:
 No quotes or paraphrases from the papers (hard rule 3): structure and
 rhetoric only.
 
+Check each support count twice: against the cards, and, where a pattern has
+a surface marker (a stock phrase, a missing roadmap sentence, numbered
+Remarks), by counting it over the transcripts. In the first author run
+(2026-10-17) the count demoted two habits that single cards had flagged as
+author voice (1 of 4 papers each) and confirmed one that no card had
+listed. Keep a column for first-author support: corresponding-author papers
+may carry the first author's or the group's habits.
+
 ## 5. Author/venue conflict table and overlay order
 
 When both profiles apply, the order is: venue call and author instructions
