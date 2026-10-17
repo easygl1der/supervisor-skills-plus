@@ -6,6 +6,10 @@ section without adding facts or changing technical content. In this library
 it also writes research-core venue profiles and field-profile proposals
 (with a consensus threshold), method cards for borrowing analysis methods,
 and a report-only check used by `check-loop`.
+## Corpus intake
+
+Exemplar search is **skill-local** (`scripts/intake.py`, Crossref + OpenAlex, optional Semantic Scholar via `SEMANTIC_SCHOLAR_API_KEY`). Do not use Academic MCP for this path. See `references/intake.md`.
+
 
 ## Origin and licence
 
