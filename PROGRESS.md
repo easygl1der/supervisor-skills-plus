@@ -104,3 +104,8 @@ Not done:
 - Real-learner tests of study (all learner turns so far simulated); runs in Cursor, Codex and Claude.ai.
 - MinerU MCP route (tunnel down this session; the official CLI precision route was used).
 - Six upstream skills still declare CC-BY-4.0 in frontmatter.
+
+## Style run in the vault (2026-10-17)
+
+- `causal-style-vault` PR #1 (branch `style-run-2026-10-17`): 30 author cards and a rebuilt author profile (n = 23 counted; role weights), 7 cards plus a draft profile each for JASA, JRSS-B, AoS and Biometrika (run in parallel), and a filled author/venue conflict table. All draft; nothing promoted to skills or research-core.
+- Lesson for style-mine: phrase counts must include variant wordings ("proceeds as follows", "structured as follows"); the narrower search produced a wrong "no roadmap" claim in the 4-card draft.
