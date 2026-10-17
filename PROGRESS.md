@@ -86,7 +86,7 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - Prompt `docs/handoff/group-beamer-PROMPT.md` (commit 65ce3ad). Read research-records, paper-quickread, deai-writing, figure-designer, style-mine, research-core causal and stats profiles.
 - Step 1 notes: `docs/handoff/group-beamer-notes.md` (11 references; licences verified; corrections to the prompt listed at the top).
 - No TeX on SG, Studio or iMac; compile verification waits for an install decision.
-- Step 2 design proposal saved as `docs/handoff/group-beamer-proposal.md`. Paused by the owner after Step 2: Steps 3 to 5 (implementation, deai-writing `slides` profile, ADR, sample decks, compile checks) not done.
+- Step 2 design proposal saved as `docs/handoff/group-beamer-proposal.md`. Step 3 was implemented in a later session (PR #3: skill, templates, scripts, ADR 0020, research-records Task 8, routing).
 
 ## Status at pause (2026-10-17)
 
@@ -109,3 +109,12 @@ Not done:
 
 - `causal-style-vault` PR #1 (branch `style-run-2026-10-17`): 30 author cards and a rebuilt author profile (n = 23 counted; role weights), 7 cards plus a draft profile each for JASA, JRSS-B, AoS and Biometrika (run in parallel), and a filled author/venue conflict table. All draft; nothing promoted to skills or research-core.
 - Lesson for style-mine: phrase counts must include variant wordings ("proceeds as follows", "structured as follows"); the narrower search produced a wrong "no roadmap" claim in the 4-card draft.
+
+## group-beamer polish (2026-10-17)
+
+- Checked HEAD at f1f1d0d with `skills/group-beamer/` present. Added CHANGELOG, README (root and skills, zh and en) and DESIGN rows.
+- Finished the deai-writing `slides` profile: profile bullet, `slides` column in the tolerance matrix, Beamer detection in profile inference (`patterns.md` section 8), protected deck elements in `editing-contract.md` section 4.
+- SKILL.md filled against the proposal: Modes table with the critical paper-talk slides, Audience section, Accumulation across meetings (load, mark, carry forward, escalate after three partial meetings), and a Checklist. `weekly-report.md` gained the carry-forward rule.
+- `check_log.py` now also flags undefined `\ref` (backup-slide links); selftest updated.
+- `group-preferences.md` left as the owner's empty slot.
+- Not done: no sample decks compiled (no TeX on this machine); Step 4 verification still open.

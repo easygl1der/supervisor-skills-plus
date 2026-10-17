@@ -36,7 +36,7 @@ Principles, each grounded in what went wrong or right in the evidence:
 
 ## 2. Final skill tree and folder structure
 
-### 2.1 Skill tree (25 skills)
+### 2.1 Skill tree (26 skills)
 
 | Stage | Skill | Origin | One line |
 |---|---|---|---|
@@ -65,6 +65,7 @@ Principles, each grounded in what went wrong or right in the evidence:
 | Reading | `study` | new | Understanding-first study of a paper, textbook chapter or concept: restatement, three-layer diagnosis, correction, learner profile in a separate study vault, HTML visual kit |
 | Reading | `research-bridge` | new | From what was read or studied to the current project: transfer checks and a minimal validation experiment with a kill criterion |
 | Proposal | `proposal-writer` | new | Thesis proposals, research plans and grant applications from RQ to timeline and risks |
+| Meetings | `group-beamer` | new | Beamer decks for group meetings: weekly report that loads last week's next steps, and critical paper talk; compile and box checks; meetings logged through `research-records` (ADR 0020) |
 
 The reading skills (`paper-quickread`, `study`, `research-bridge`, `deep-research` literature-map mode) work without `research.yaml`; `research-supervisor` routes them by intent before stage (`docs/adr/`).
 

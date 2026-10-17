@@ -36,6 +36,11 @@ and shorten "decisions needed".
 If no prior group-meeting log exists, say so on slide 3 and skip the marks.
 Do not reconstruct next steps from memory.
 
+Partial items carry forward into the new Next steps with their original
+date. An item partial three meetings in a row becomes a blocker or a
+decision for the advisor. A dropped item is shown once with its reason,
+then leaves the list.
+
 ## `progress` variant
 
 Replace "this week" with the topic status: what is locked, what is open,

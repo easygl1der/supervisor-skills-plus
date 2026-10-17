@@ -35,6 +35,44 @@ CJK via `ctex`. Not Marp, not PPTX.
 - Understanding a paper before you can present it: `study`.
 - Figures that are not slides: `figure-designer`.
 
+## Modes
+
+| Mode | Slides | Spine |
+|---|---|---|
+| `weekly-report` | 6 to 10 | conclusions first; last week's next steps marked done / partial / dropped; results with sources; blockers; decisions needed; next steps with owner, date and kill criterion |
+| `progress` (under weekly-report) | 10 to 14 | the same spine by topic: what is locked, what is open, the next experiment or lemma |
+| `paper-talk` | 12 to 18 | the paper's section tree mapped to slide groups, then the critical slides below |
+
+Critical slides every paper talk carries (`paper-talk.md`, `causal-slides.md`):
+
+1. Paper card: Question, Estimand, Identification, Key assumption, Main
+   result, Robustness, Biggest threat, External validity. An unstated
+   estimand is a finding; our reading is labelled "presenter's
+   interpretation".
+2. Identifying assumptions ranked by strength, each marked knowledge-based
+   or convenience, with what breaks when it fails.
+3. Results as numbers with table or page; no causal verb on that slide. The
+   causal reading and its assumptions go on the discussion slide.
+4. Claim against evidence, from the quickread tags (proved / empirical /
+   conjectured). A slide may narrow a paper's claim, never strengthen it.
+5. Link to our project (from a `research-bridge` card when one exists).
+6. Reproducibility: rerun, or simulate under a violated assumption.
+7. A closing discussion question for the group, not a slogan.
+
+## Audience
+
+`audience: advisor` (default) or `peer` changes placement, never facts.
+
+- Advisor: conclusions, blockers and decisions needed come first; each
+  decision is a boxed question with options; derivations, proofs, extra
+  robustness tables and notation go to `\appendix`, each backup slide
+  hyperlinked from the main slide it supports.
+- Peer: derivations and experiment details stay in the main body when they
+  are the point of the meeting; in a paper talk the replication and
+  assumption-violation slides move into the main body.
+- Both: one idea per slide, sentence titles, fewer slides than minutes,
+  the simple sufficient condition before the general theorem.
+
 ## Step 0: Load context
 
 1. Mode: `weekly-report` (default audience `advisor`) or `paper-talk`.
@@ -66,6 +104,27 @@ CJK via `ctex`. Not Marp, not PPTX.
    `research-records` Task 8: `docs/log/<date>-group-meeting.md` and
    `docs/meetings/<date>/` (`.tex`, PDF, notes).
 
+## Accumulation across meetings
+
+Each meeting leaves a record that the next weekly report reads:
+
+1. After the meeting, `research-records` writes
+   `docs/log/<date>-group-meeting.md` from the research-core
+   `group-meeting-log.md` template: mode, audience, what happened, decisions
+   (linked ADRs) and the Next steps table (item, owner, date, kill
+   criterion). Next steps come from the approved outline or the spoken
+   close, never from memory.
+2. The next weekly report loads the latest such log and marks every item
+   done, partial or dropped, with a one-line reason for partial and dropped.
+   Items are not silently removed; a dropped item stays visible once.
+3. Partial items carry forward into the new Next steps with their original
+   date shown. An item partial for three meetings in a row is raised as a
+   blocker or a decision for the advisor.
+4. With no prior log, slide 3 says so and the marks are skipped.
+5. Decks and notes stay under `docs/meetings/<date>/`; STATUS keeps only the
+   current state. Paper talks are logged the same way, and their
+   link-to-project slide is a candidate input for `research-bridge`.
+
 See: references/weekly-report.md
 See: references/paper-talk.md
 See: references/audience.md
@@ -74,6 +133,28 @@ See: references/quality-gates.md
 See: references/speaker-notes.md
 See: references/causal-slides.md
 See: references/group-preferences.md
+
+## Checklist
+
+Report each item as pass, fail, n/a or unknown, with evidence (page,
+`check_log.py` or `lint_deck.py` output, log entry):
+
+- The outline was approved before drafting.
+- No invented numbers; every number has a table, page, script or commit,
+  and missing data is `TODO`.
+- `check_log.py`: no overfull box above 10pt and no undefined reference or
+  citation; every box inspected on the rendered page.
+- `lint_deck.py`: no overlay commands, at most 7 bullets and 2 boxes per
+  slide, no `\tiny`, text-only slides at most 30 percent.
+- Title verbs at or below the claim level; results slides carry no causal
+  verb; the causal reading names its assumptions.
+- Weekly report: every item from the last log is marked done, partial or
+  dropped.
+- Paper talk: paper card, ranked assumptions, reproducibility slide and a
+  closing discussion question are present.
+- `deai-writing` `audit` with the `slides` profile ran; notes checked under
+  `academic`.
+- Notes exported; deck and log saved through `research-records` Task 8.
 
 ## Outputs
 

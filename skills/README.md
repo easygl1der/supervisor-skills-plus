@@ -254,7 +254,7 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 
 ## Supervisor-Skills Plus：新增 skill（私有 fork）
 
-本 fork 新增了共享底座、领域与会议 profile、带出处的 checklist，以及十三个覆盖整个研究流程、适用于不同领域的 skill。项目类 skill 先加载 `research-core` 并读取项目的 `research.yaml`；读与学类 skill 没有项目也能用。安装见 [INSTALL.md](../INSTALL.md)，设计见 [DESIGN.md](../DESIGN.md)。
+本 fork 新增了共享底座、领域与会议 profile、带出处的 checklist，以及十四个覆盖整个研究流程、适用于不同领域的 skill。项目类 skill 先加载 `research-core` 并读取项目的 `research.yaml`；读与学类 skill 没有项目也能用。安装见 [INSTALL.md](../INSTALL.md)，设计见 [DESIGN.md](../DESIGN.md)。
 
 | Skill | 作用 |
 |---|---|
@@ -280,9 +280,10 @@ Benchmark 管线比技术论文更强调阶段先后，每个环节都要先于�
 | [study](study/SKILL.md) | 理解优先的学习：论文 / 教材 / 概念三种模式；讲动机、例子、联系和图，要求复述，按机制 / 条件 / 边界诊断并从你的联想出发纠正；学习档案放单独的 study-vault 仓库；HTML（SVG + KaTeX）图与分步演示 |
 | [research-bridge](research-bridge/SKILL.md) | 把读到、学到的东西接回当前项目：能不能用、怎么用、最小验证实验与放弃标准。评测在 [`research-bridge/evals/`](research-bridge/evals/) |
 | [proposal-writer](proposal-writer/SKILL.md) | 开题报告、研究计划、基金申请：RQ、文献缺口、方法与可行性、时间线、风险与备选。评测在 [`proposal-writer/evals/`](proposal-writer/evals/) |
+| [group-beamer](group-beamer/SKILL.md) | 组会 Beamer：周报（6–10 页，自动读上周 next steps 标 done / partial / dropped）与批判式论文报告（12–18 页，estimand、识别假设、可复现性）；advisor / peer 两种受众；latexmk + XeLaTeX 编译检查，组会记录交给 research-records。周报需要项目记录，论文报告不需要 |
 | [deep-research](deep-research/SKILL.md) 文献地图模式 | 从一批快读卡片和学习笔记画出演化图、对比表和空白点清单 |
 
-路线 4：paper-quickread（筛）→ study（懂）→ research-bridge（用）→ idea-evaluator / experiment-workflow；读够几篇 → deep-research 文献地图 → proposal-writer。
+路线 4：paper-quickread（筛）→ study（懂）→ research-bridge（用）→ idea-evaluator / experiment-workflow；读够几篇 → deep-research 文献地图 → proposal-writer；组会讲一篇 → group-beamer paper-talk。
 
 ### 路线 3：实证研究（任意领域）
 

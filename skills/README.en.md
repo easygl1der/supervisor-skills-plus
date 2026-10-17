@@ -254,7 +254,7 @@ For questions, feedback, or to bring Supervisor-Skills to your own lab, please e
 
 ## Supervisor-Skills Plus: additional skills (private fork)
 
-This fork adds a shared foundation, field and venue profiles, sourced checklists and thirteen skills for the whole research process, in any field. Project skills load `research-core` first and read the project's `research.yaml`; the reading-and-learning skills also work without a project. Setup: [INSTALL.md](../INSTALL.md); design: [DESIGN.md](../DESIGN.md).
+This fork adds a shared foundation, field and venue profiles, sourced checklists and fourteen skills for the whole research process, in any field. Project skills load `research-core` first and read the project's `research.yaml`; the reading-and-learning skills also work without a project. Setup: [INSTALL.md](../INSTALL.md); design: [DESIGN.md](../DESIGN.md).
 
 | Skill | What it does |
 |---|---|
@@ -280,9 +280,10 @@ Reading papers, textbooks and concepts does not depend on a project stage; these
 | [study](study/SKILL.md) | Understanding-first study of a paper, a textbook chapter or a concept: motivation, example, links and pictures, a required restatement, diagnosis by mechanism / conditions / boundaries, correction from the learner's own associations; learner profile in a separate study-vault repo; HTML (SVG + KaTeX) figures and steppers |
 | [research-bridge](research-bridge/SKILL.md) | From what was read or studied to the current project: can it be used, how, and a minimal validation experiment with a kill criterion. Evals: [`research-bridge/evals/`](research-bridge/evals/) |
 | [proposal-writer](proposal-writer/SKILL.md) | Thesis proposals, research plans, grant applications: RQ, literature gap, method and feasibility, timeline, risks and alternatives. Evals: [`proposal-writer/evals/`](proposal-writer/evals/) |
+| [group-beamer](group-beamer/SKILL.md) | Group-meeting Beamer decks: weekly report (6 to 10 slides, loads last week's next steps and marks them done / partial / dropped) and critical paper talk (12 to 18 slides with estimand, identification and reproducibility slides); advisor or peer audience; latexmk + XeLaTeX compile checks; meetings logged through research-records. Weekly reports read the project's records; paper talks need none |
 | [deep-research](deep-research/SKILL.md) literature-map mode | Evolution map, comparison table and gap list from a set of quick-read cards and study notes |
 
-Track 4: paper-quickread (triage) → study (understand) → research-bridge (use) → idea-evaluator / experiment-workflow; after several papers → deep-research literature map → proposal-writer.
+Track 4: paper-quickread (triage) → study (understand) → research-bridge (use) → idea-evaluator / experiment-workflow; after several papers → deep-research literature map → proposal-writer; presenting one at group meeting → group-beamer paper-talk.
 
 ### Track 3: empirical study, any field
 

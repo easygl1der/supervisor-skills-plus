@@ -6,10 +6,19 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Removed
-- `skills/journal-adapt/` pointer stub; `style-mine` is the only name (ADR 0019).
-
 ### Added
+- `group-beamer`: Beamer decks for group meetings in two modes, `weekly-report`
+  (with the `progress` variant; loads last week's next steps from the
+  research-records log and marks them done / partial / dropped) and a critical
+  `paper-talk` (paper card, ranked identifying assumptions, results without
+  causal verbs, reproducibility slide, closing discussion question); advisor
+  or peer audience; Moloch (installed), vendored SimplePlus and an own
+  SYSU-like theme; `build.sh`, `check_log.py` (boxes mapped to pages,
+  undefined citations and references), `lint_deck.py`, `render_pages.sh`,
+  `export_notes.py`. ADR 0020. `research-records` Task 8 and the research-core
+  `group-meeting-log.md` template store each meeting.
+- `deai-writing` `slides` profile: Beamer detection, a `slides` column in the
+  tolerance matrix, and protected deck elements in the editing contract.
 - `style-mine` intake without MCP: `scripts/intake_search.py` (Crossref +
   OpenAlex; Semantic Scholar with a key) searches the top-4 statistics
   journals or an author and filters a publication list into exemplars;
@@ -46,6 +55,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   PML1 ch. 4, Lomuto partition stepper, literature map) and, after the
   2026-10-17 polish, bridge/proposal cards under each skill's `evals/`.
 - `THIRD_PARTY.md` at the root; ADRs in `docs/adr/`.
+
+### Removed
+- `skills/journal-adapt/` pointer stub; `style-mine` is the only name (ADR 0019).
 
 ### Changed
 - Bridge and proposal eval cards moved from `skills/study/evals/{bridge,proposal}/`

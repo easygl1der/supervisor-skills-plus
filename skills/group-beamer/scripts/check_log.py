@@ -7,8 +7,8 @@ Maps warnings to shipout page numbers using [N markers. Severity:
   hbox < 1pt   -> ignore
   underfull    -> info, unless badness == 10000 (then warn)
 
-Also flags undefined control sequence, undefined citation, and multiply
-defined labels as critical.
+Also flags undefined control sequence, undefined citation, undefined
+reference, and multiply defined labels as critical.
 
 Usage:
   check_log.py <file.log>
@@ -33,6 +33,7 @@ OVERFULL_RE = re.compile(
 SHIPOUT_RE = re.compile(r"\[(\d+)(?:\s|\])")
 UNDEF_CS = re.compile(r"Undefined control sequence")
 UNDEF_CITE = re.compile(r"Citation [`'].*[`'] on page \d+ undefined")
+UNDEF_REF = re.compile(r"Reference [`'].*[`'] on page \d+ undefined")
 MULTIDEF = re.compile(r"Label [`'].*[`'] multiply defined")
 
 
@@ -113,6 +114,16 @@ def parse_log(text: str) -> list[dict[str, object]]:
                     "text": line.strip(),
                 }
             )
+        elif UNDEF_REF.search(line):  # backup-slide hyperlinks break silently otherwise
+            issues.append(
+                {
+                    "severity": "critical",
+                    "kind": "undefined-ref",
+                    "page": None,
+                    "line": i + 1,
+                    "text": line.strip(),
+                }
+            )
         elif MULTIDEF.search(line):
             issues.append(
                 {
@@ -159,6 +170,7 @@ def selftest() -> int:
         r"! Undefined control sequence." + "\n"
         "Citation `foo' on page 2 undefined\n"
         "Label `bar' multiply defined\n"
+        "LaTeX Warning: Reference `fig:x' on page 2 undefined on input line 9.\n"
     )
     issues = parse_log(sample)
     kinds = [i["kind"] for i in issues]
@@ -173,6 +185,7 @@ def selftest() -> int:
     assert any(i["kind"] == "underfull-hbox" and i["severity"] == "warn" for i in issues)
     assert any(i["kind"] == "underfull-vbox" and i["severity"] == "info" for i in issues)
     assert "undefined-cs" in kinds
+    assert "undefined-ref" in kinds
     assert "undefined-cite" in kinds
     assert "multiply-defined" in kinds
     assert pages[0] == 1
