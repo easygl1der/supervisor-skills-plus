@@ -80,3 +80,10 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - Followed `docs/handoff/style-mine-intake-PROMPT.md`; no Academic MCP. `intake_search.py`: Semantic Scholar calls spaced 1.2 s and skipped without a key; 429/5xx wait Retry-After or 8, 15, 30 s. `--selftest` covers both offline (stubbed network and clock).
 - Live smoke with `INTAKE_MAILTO`: `journal jasa --since 2026-01-01` returned 25 rows; `author` without an ID printed candidates and stopped. S2 with a key not run (no key on this machine).
 - Docs aligned to `--help` (`references/intake.md` flag list; README pointed to the right script name).
+
+## group-beamer: Steps 0 to 2 (2026-10-17)
+
+- Prompt `docs/handoff/group-beamer-PROMPT.md` (commit 65ce3ad). Read research-records, paper-quickread, deai-writing, figure-designer, style-mine, research-core causal and stats profiles.
+- Step 1 notes: `docs/handoff/group-beamer-notes.md` (11 references; licences verified; corrections to the prompt listed at the top).
+- No TeX on SG, Studio or iMac; compile verification waits for an install decision.
+- Step 2 design proposal given in chat; waiting for the owner's "continue" before adding `skills/group-beamer/`.
