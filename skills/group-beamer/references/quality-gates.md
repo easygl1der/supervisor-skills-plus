@@ -17,6 +17,18 @@ deai-writing, ship rule.
 `latexmk`, `moloch`, `beamertheme-simpleplus`, `ctex`, `pdftoppm`). It
 does not install anything.
 
+Setup without admin rights (tested on macOS 13, 2026-10-17): TinyTeX from
+the official `rstudio/tinytex` installer into `~/Library/TinyTeX`, then
+`tlmgr install beamer moloch ctex xecjk fandol booktabs pgf pgfopts
+etoolbox`. Put `~/Library/TinyTeX/bin/universal-darwin` on `PATH` yourself;
+pass no argument to the installer script (its first positional argument is
+a folder for keeping the downloaded archive). Page rendering falls back to
+PyMuPDF when poppler's `pdftoppm` is missing; on older macOS, Homebrew may
+build poppler from source, which takes long.
+
+A warning is reported on the page whose `[N` shipout marker follows it in
+the log (TeX prints the marker after building the page).
+
 ## Log parser
 
 Overfull `\hbox` greater than 10pt is critical; 1 to 10pt is a warning;

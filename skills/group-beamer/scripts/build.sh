@@ -57,15 +57,14 @@ need latexmk "tlmgr install latexmk"
 need xelatex "install TeX Live (BasicTeX is enough) then tlmgr install latexmk collection-xetex"
 
 detect_theme() {
-  local src
-  src="$(cat "$TEX")"
-  if [[ "$src" == *"groupbeamer-sysu"* ]] || [[ "$src" == *"sysu-like"* ]]; then
-    echo "sysu-like"
-  elif [[ "$src" == *"groupbeamer-simpleplus"* ]] || [[ "$src" == *"SimplePlus"* ]]; then
-    echo "simpleplus-cjk"
-  else
-    echo "moloch-cjk"
-  fi
+  # read only the active \usepackage{groupbeamer-*} line; comments and prose must not pick the theme
+  local pkg
+  pkg="$(grep -v '^[[:space:]]*%' "$TEX" | grep -o 'usepackage{groupbeamer-[a-z]*}' | head -1 || true)"
+  case "$pkg" in
+    *groupbeamer-sysu*) echo "sysu-like" ;;
+    *groupbeamer-simpleplus*) echo "simpleplus-cjk" ;;
+    *) echo "moloch-cjk" ;;
+  esac
 }
 
 if [[ -z "$THEME" ]]; then

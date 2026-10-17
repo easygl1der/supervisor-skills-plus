@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Parse a XeLaTeX/latexmk .log for overfull and underfull boxes.
 
-Maps warnings to shipout page numbers using [N markers. Severity:
+Maps each warning to the page whose [N shipout marker follows it. Severity:
   hbox > 10pt  -> critical
   hbox 1-10pt  -> warn
   hbox < 1pt   -> ignore
@@ -46,13 +46,12 @@ def page_map(text: str) -> list[tuple[int, int]]:
 
 
 def page_at(marks: list[tuple[int, int]], pos: int) -> int | None:
-    current: int | None = None
+    # TeX prints [N when page N ships, after the warnings raised while building it,
+    # so a warning belongs to the first marker after it (or the last page if none follows).
     for idx, page in marks:
-        if idx <= pos:
-            current = page
-        else:
-            break
-    return current
+        if idx > pos:
+            return page
+    return marks[-1][1] if marks else None
 
 
 def classify_overfull(kind: str, box: str, pt: float | None, badness: int | None) -> str | None:
@@ -178,7 +177,7 @@ def selftest() -> int:
     pages = [i["page"] for i in issues]
     assert "overfull-hbox" in kinds
     assert sevs[0] == "critical" and issues[0]["pt"] == 12.5
-    assert issues[0]["page"] == 1
+    assert issues[0]["page"] == 2  # printed after [1], before [2]: built on page 2
     assert sevs[1] == "warn"
     # 0.4pt ignored
     assert not any(i.get("pt") == 0.4 for i in issues)
@@ -188,7 +187,7 @@ def selftest() -> int:
     assert "undefined-ref" in kinds
     assert "undefined-cite" in kinds
     assert "multiply-defined" in kinds
-    assert pages[0] == 1
+    assert pages[0] == 2
     print("check_log: selftest ok")
     return 0
 

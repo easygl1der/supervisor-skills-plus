@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Export Beamer \\note{...} bodies to Markdown (# Slide N).
+"""Export Beamer \\note{...} bodies to Markdown (## Slide N, N = frame number).
 
 Handles one-level nested braces. Comments are stripped first.
 
 Usage: export_notes.py <file.tex> [notes.md]
+       export_notes.py --selftest
 """
 
 from __future__ import annotations
@@ -26,9 +27,19 @@ def strip_comments(text: str) -> str:
     return "\n".join(lines)
 
 
-def extract_notes(text: str) -> list[str]:
+ESCAPES = {r"\#": "#", r"\%": "%", r"\&": "&", r"\_": "_", r"\$": "$", r"\{": "{", r"\}": "}"}
+
+
+def unescape(s: str) -> str:
+    for k, v in ESCAPES.items():
+        s = s.replace(k, v)
+    return s
+
+
+def extract_notes(text: str) -> list[tuple[int, str]]:
+    """Return (frame number, note) pairs; frames without notes are skipped, not renumbered."""
     src = strip_comments(text)
-    notes: list[str] = []
+    notes: list[tuple[int, str]] = []
     needle = r"\note"
     i = 0
     while True:
@@ -54,7 +65,8 @@ def extract_notes(text: str) -> list[str]:
             elif ch == "}":
                 depth -= 1
                 if depth == 0:
-                    notes.append(src[start:p].strip())
+                    frame = src.count(r"\begin{frame}", 0, j)
+                    notes.append((frame, unescape(src[start:p].strip())))
                     i = p + 1
                     break
             p += 1
@@ -63,19 +75,39 @@ def extract_notes(text: str) -> list[str]:
     return notes
 
 
-def to_markdown(notes: list[str]) -> str:
+def to_markdown(notes: list[tuple[int, str]]) -> str:
     if not notes:
         return "# Speaker notes\n\n(no \\note{} found)\n"
     parts = ["# Speaker notes", ""]
-    for n, body in enumerate(notes, start=1):
-        parts.append(f"# Slide {n}")
-        parts.append("")
+    last = None
+    for frame, body in notes:
+        if frame != last:  # two notes in one frame stay under one heading
+            parts.append(f"## Slide {frame}")
+            parts.append("")
+            last = frame
         parts.append(body)
         parts.append("")
     return "\n".join(parts)
 
 
+def selftest() -> int:
+    src = (
+        "\\begin{frame}\\titlepage\\note{open}\\end{frame}\n"
+        "\\begin{frame}{No note}x\\end{frame}\n"
+        "% \\note{commented out}\n"
+        "\\begin{frame}{R}\\note{PR \\#1 at 50\\% {nested}}\\note{second}\\end{frame}\n"
+    )
+    notes = extract_notes(src)
+    assert notes == [(1, "open"), (3, "PR #1 at 50% {nested}"), (3, "second")], notes
+    md = to_markdown(notes)
+    assert "## Slide 3" in md and "## Slide 2" not in md and md.count("## Slide 3") == 1
+    print("export_notes: selftest ok")
+    return 0
+
+
 def main(argv: list[str]) -> int:
+    if argv and argv[0] == "--selftest":
+        return selftest()
     if not argv or argv[0].startswith("-"):
         print("usage: export_notes.py <file.tex> [notes.md]", file=sys.stderr)
         return 2

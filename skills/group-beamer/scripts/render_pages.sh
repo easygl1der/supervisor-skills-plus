@@ -22,16 +22,22 @@ fi
 if python3 - <<'PY'
 import sys
 try:
-    import fitz  # PyMuPDF
+    import pymupdf  # noqa: F401
 except ImportError:
-    sys.exit(1)
+    try:
+        import fitz  # noqa: F401  older PyMuPDF
+    except ImportError:
+        sys.exit(1)
 sys.exit(0)
 PY
 then
   python3 - "$PDF" "$OUT" <<'PY'
 import sys
 from pathlib import Path
-import fitz
+try:
+    import pymupdf as fitz
+except ImportError:
+    import fitz  # older PyMuPDF
 
 pdf = sys.argv[1]
 out = Path(sys.argv[2])
