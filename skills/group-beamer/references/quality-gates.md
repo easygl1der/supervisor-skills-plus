@@ -23,8 +23,10 @@ the official `rstudio/tinytex` installer into `~/Library/TinyTeX`, then
 etoolbox`. Put `~/Library/TinyTeX/bin/universal-darwin` on `PATH` yourself;
 pass no argument to the installer script (its first positional argument is
 a folder for keeping the downloaded archive). Page rendering falls back to
-PyMuPDF when poppler's `pdftoppm` is missing; on older macOS, Homebrew may
-build poppler from source, which takes long.
+PyMuPDF when poppler's `pdftoppm` is missing. On macOS 13 Homebrew builds
+poppler from source and poppler 26.10 fails there (it needs a newer C++
+standard library than Xcode 15.2 provides), so use PyMuPDF
+(`python3 -m pip install pymupdf` in a virtual environment) on such machines.
 
 A warning is reported on the page whose `[N` shipout marker follows it in
 the log (TeX prints the marker after building the page).
