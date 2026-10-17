@@ -211,10 +211,12 @@ def author(name: str, oa_id: str, s2_id: str, since: str) -> list[dict]:
             recs += [from_crossref(it, (it.get("container-title") or [""])[0])
                      for it in crossref_items(f"orcid:{orcid},from-pub-date:{since}", 200)]
     if s2_id and S2_KEY:
-        d = s2get(f"author/{s2_id}/papers", {"fields": "title,externalIds,venue,publicationDate,authors", "limit": 500})
-        recs += [record((p.get("externalIds") or {}).get("DOI"), p.get("title") or "", p.get("venue") or "",
-                        p.get("publicationDate") or "", [x["name"] for x in p.get("authors", [])], "semanticscholar")
-                 for p in d.get("data", []) if (p.get("publicationDate") or "9999") >= since]
+        d = s2get(f"author/{s2_id}/papers", {"fields": "title,externalIds,venue,year,publicationDate,authors", "limit": 500})
+        for p in d.get("data", []):
+            issued = p.get("publicationDate") or str(p.get("year") or "")  # S2 often has a year but no date
+            if issued and issued >= since[:len(issued)]:
+                recs.append(record((p.get("externalIds") or {}).get("DOI"), p.get("title") or "", p.get("venue") or "",
+                                   issued, [x["name"] for x in p.get("authors", [])], "semanticscholar"))
     elif s2_id:
         print("intake: --s2-id ignored, SEMANTIC_SCHOLAR_API_KEY is not set", file=sys.stderr)
     return merge(recs)
