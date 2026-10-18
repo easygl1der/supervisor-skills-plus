@@ -11,6 +11,10 @@
 #   <target>-backup/<date>/ before linking.
 # - Old local skills that this library merged and retired are also moved to the
 #   backup folder (unless --no-backup-retired), so only one version is active.
+# - Links into this repo whose skill no longer exists (for example the names
+#   retired by ADR 0021) are removed.
+# - If ~/.claude/skills etc. are links into an agent-sync tree, use
+#   scripts/sync_agent_links.py instead (see INSTALL.md).
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -31,7 +35,7 @@ while [[ $# -gt 0 ]]; do
     --dry-run) DRY=1; shift ;;
     --uninstall) UNINSTALL=1; shift ;;
     --no-backup-retired) BACKUP_RETIRED=0; shift ;;
-    -h|--help) sed -n '2,15p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,19p' "$0"; exit 0 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
@@ -69,6 +73,11 @@ for t in "${TLIST[@]}"; do
       run mkdir -p "$backup"; run mv "$dest" "$backup/$name"; echo "  backed up existing $name"
     fi
     run ln -s "${skill_path%/}" "$dest"; echo "  linked $name"
+  done
+  for dest in "$dir"/*; do
+    if [[ -L "$dest" && "$(readlink "$dest")" == "$REPO/skills/"* && ! -e "$dest" ]]; then
+      run rm "$dest"; echo "  removed stale link $(basename "$dest")"
+    fi
   done
   if [[ $UNINSTALL -eq 0 && $BACKUP_RETIRED -eq 1 ]]; then
     for name in "${RETIRED[@]}"; do
