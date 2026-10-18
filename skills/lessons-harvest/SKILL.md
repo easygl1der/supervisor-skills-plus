@@ -41,7 +41,7 @@ library, and never states a rule without a source.
 
 - Handling comments on the current manuscript: `feedback-to-revision`.
 - Recording a decision for the current project: `research-records` (ADR).
-- Building a venue's style profile from exemplars: `style-mine` (this
+- Building a venue's style profile from exemplars: `sv-write-style-mine` (this
   skill calls it in the new-field flow and merges its proposals).
 - Looking up a rule: `research-core` directly.
 
@@ -71,7 +71,7 @@ change `docs/`):
 - `docs/STATUS.md` and `TODO.md` (parked items, risks, what was cut)
 - git history of the paper and research repos (to verify that lessons
   happened)
-- `revision_summary.md` rule candidates from `style-mine`
+- `revision_summary.md` rule candidates from `sv-write-style-mine`
 
 Expert notes, four kinds (all accepted, decision of 2026-10-13):
 
@@ -177,7 +177,7 @@ See: references/harvest-procedure.md
    to research-core's field table.
 3. Ask for 5 to 10 exemplar papers and any expert sources. Do not invent
    rules to fill headings.
-4. Run `style-mine` in Profile mode on the exemplars; it returns
+4. Run `sv-write-style-mine` in Profile mode on the exemplars; it returns
    `field-proposals.md` with rule lines citing each supporting exemplar
    (`lit:` keys) under a consensus threshold, Known disagreements and
    Unknown entries.
@@ -214,7 +214,7 @@ Report pass, fail, n/a or unknown with evidence for:
 ## Hand-offs
 
 - Owner review and merge of `learn/<source>`.
-- Filling a field or venue profile from exemplars: `style-mine`.
+- Filling a field or venue profile from exemplars: `sv-write-style-mine`.
 - Project-only lessons: `research-records` (ADR or STATUS note in the
   project).
 - Next project start: `research-supervisor` loads the updated profiles via

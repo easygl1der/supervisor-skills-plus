@@ -269,7 +269,7 @@ def main() -> int:
         s.add_argument("--state", required=True)
         s.add_argument("--round", type=int, required=True)
         s.add_argument("--check", required=True, help="check id, e.g. 1, 2, 3 or 1R (regression)")
-        s.add_argument("--rule", required=True, help="rule source, e.g. 'WR-19' or 'skill:deai-writing S2'")
+        s.add_argument("--rule", required=True, help="rule source, e.g. 'WR-19' or 'skill:sv-write-humanize-audit S2'")
         s.add_argument("--base")
         s.add_argument("--head", default="HEAD")
         s.add_argument("--terms")

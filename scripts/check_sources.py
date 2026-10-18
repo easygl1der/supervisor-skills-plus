@@ -33,6 +33,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = Path(os.environ.get("EVIDENCE_ARCHIVE", Path.home() / "Projects" / "supervisor-skills-msr-tpa"))
 LOCAL_SKILLS = Path.home() / ".claude" / "skills"
+# skill: citations are provenance and keep the name the rule came from; names
+# retired by ADR 0021 resolve to the folder that now holds that skill.
+RENAMED = {
+    "paper-writer": "sv-write-section", "intro-drafter": "sv-write-intro",
+    "tech-paper-template": "sv-write-skeleton", "benchmark-paper-template": "sv-write-skeleton",
+    "paper-polish": "sv-write-polish", "deai-writing": "sv-write", "style-mine": "sv-write-style-mine",
+}
 
 SRC_BLOCK = re.compile(r"\[src:\s*([^\]]+)\]")
 SRC_LINE = re.compile(r"^\s*-\s+Src:\s*(.+)$", re.M)
@@ -89,6 +96,7 @@ class Resolver:
             return "ok" if (ROOT / rest).exists() else f"missing upstream path {tok}"
         if kind == "skill":
             name = rest.split("/")[0]
+            name = RENAMED.get(name, name) if not (LOCAL_SKILLS / name).exists() else name
             for base in (LOCAL_SKILLS, ARCHIVE / "03-skills", ROOT / "skills"):
                 if (base / name).exists():
                     return "ok"

@@ -107,7 +107,7 @@ printed numbers not reproduced by the replication outputs.
 A number is verified when its script ran from a clean tree, the output was
 checked, and the row is in `docs/STATUS.md` "Verified numbers" (claim id,
 value, script, output file, code commit, data version, date). Only then does
-it enter the paper or the claim ledger (`paper-writer`). Update STATUS
+it enter the paper or the claim ledger (`sv-write-section`). Update STATUS
 through `research-records` (replace the row; never append a second value).
 [src: note:n08§5#17] (confirmed)
 

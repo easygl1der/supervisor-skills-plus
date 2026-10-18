@@ -54,8 +54,8 @@ field profile when one is loaded.
 
 ## When NOT to use this skill
 
-- The paper is still being structured. Use `tech-paper-template`,
-  `intro-drafter`, or `benchmark-paper-template` (separate plugin) first.
+- The paper is still being structured. Use `sv-write-skeleton`,
+  `sv-write-intro`, or `sv-write-skeleton` (separate plugin) first.
 - The user wants structural advice rather than review. Use the
   drafting skills instead.
 
@@ -475,7 +475,7 @@ This skill runs, and reports pass, fail, n/a or unknown with evidence:
 
 - Fixing findings raised as comments: `feedback-to-revision` (each finding
   becomes an `FB-AG-<nn>` item).
-- Language and style rounds after fixes: `check-loop`, `paper-polish`.
+- Language and style rounds after fixes: `check-loop`, `sv-write-polish`.
 - Artifact rebuild, anonymous mirror and number regeneration:
   `experiment-workflow`.
 - Recording the source-of-truth switch, the tag and the TODOs:

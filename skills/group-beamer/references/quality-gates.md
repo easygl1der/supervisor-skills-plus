@@ -1,7 +1,7 @@
 # Quality gates
 
 Table of contents: compile loop, log parser, lint, visual, claims,
-deai-writing, ship rule.
+sv-write-humanize-slides, ship rule.
 
 ## Compile-check loop (at most 4 rounds)
 
@@ -66,7 +66,7 @@ Title verb strength <= claim level:
 
 Causal verbs on a results slide without listed assumptions fail.
 
-## deai-writing
+## sv-write-humanize-slides
 
 `audit` with profile `slides` on the deck. `\note{}` with `academic`.
 Frame titles may be edited only to downgrade claim strength.

@@ -54,7 +54,7 @@ single invocable procedure.
 
 - The user wants paper prose drafted. That is legitimate under this
   plugin's evidence discipline and belongs to the drafting skills:
-  route to `paper-writer` (any section) or `intro-drafter`
+  route to `sv-write-section` (any section) or `sv-write-intro`
   (Introductions), whose rules forbid fabricated substance (every
   factual claim traces to the user's materials, verified retrieval,
   or field common knowledge). Remind the user that venue and school

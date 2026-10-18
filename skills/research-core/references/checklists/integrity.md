@@ -66,7 +66,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   story inconsistent.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, paper-writer, check-loop
+- Owner: experiment-workflow, sv-write-section, check-loop
 - Src: arc:10-requirements/DECISION-HINTS.md U1; arc:01-checklist/checklist.md C2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-06 Reporting rule written once and applied everywhere
@@ -138,7 +138,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Venues require it; undisclosed AI use in the method undermines the results.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, paper-writer, pre-submission-reviewer
+- Owner: experiment-workflow, sv-write-section, pre-submission-reviewer
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G9; note:n08§5#19
 
 ### IN-13 No hidden text aimed at reviewers or review tools

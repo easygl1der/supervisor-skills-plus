@@ -46,7 +46,7 @@ artifact steps, if any.
 ## When NOT to use this skill
 
 - Judging whether the study is worth doing: `idea-evaluator`.
-- Writing the method or results prose: `paper-writer` (it reads the claim
+- Writing the method or results prose: `sv-write-section` (it reads the claim
   ledger and the verified numbers this skill produces).
 - Recording a decision or updating STATUS in general: `research-records`
   (this skill calls it for ADRs and STATUS rows).
@@ -231,7 +231,7 @@ script output, the commit, the file and line. A tick without evidence is
 ## Hand-offs
 
 - ADRs, STATUS and TODO updates: `research-records`.
-- Method and results prose from verified numbers: `paper-writer`.
+- Method and results prose from verified numbers: `sv-write-section`.
 - Figures from the numbers file: `figure-designer`.
 - Design-time threats and data gaps: `idea-evaluator`; final threats,
   artifact and anonymity review: `pre-submission-reviewer`.

@@ -37,8 +37,8 @@ up front and back-filled.
 ## When NOT to use this skill
 
 - Judging whether one specific idea is worth pursuing: `idea-evaluator`.
-- Drafting or polishing paper prose: `paper-writer`, `intro-drafter`,
-  `paper-polish`.
+- Drafting or polishing paper prose: `sv-write-section`, `sv-write-intro`,
+  `sv-write-polish`.
 - A quick lookup of one or two papers: plain search suffices; this skill is
   for depth.
 
@@ -198,8 +198,8 @@ reference so readers can weigh evidence kinds.
 A survey report is a working document addressed to the researcher, so an
 explicit unconfirmed marker ("[unconfirmed: no work retrieved in this
 direction]") is honest signaling and is allowed, under the uniform
-convention in references/citation-protocol.md. Paper prose (paper-writer,
-intro-drafter) forbids all bracketed markers. The two regimes differ on
+convention in references/citation-protocol.md. Paper prose (sv-write-section,
+sv-write-intro) forbids all bracketed markers. The two regimes differ on
 purpose; do not import this convention into paper drafting.
 
 ## Output language
@@ -221,7 +221,7 @@ retrieval for some literature) are disclosed in a short note.
 ## Boundaries with sibling skills
 
 - Wants a verdict on one idea: `idea-evaluator`.
-- Wants prose written or polished: `paper-writer` / `paper-polish`.
+- Wants prose written or polished: `sv-write-section` / `sv-write-polish`.
 - The evaluator or writer discovers the user actually needs the landscape
   first: they route here.
 - A literature map needs more cards: `paper-quickread` per paper; a gap

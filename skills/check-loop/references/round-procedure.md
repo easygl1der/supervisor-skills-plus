@@ -39,7 +39,7 @@ are recorded, the oscillation guard, and the stop rules.
    - spans the user names as locked (an abstract already entered in a
      submission form, a paragraph an advisor signed off).
 5. **Inputs per check.** Claim ledger and numbers file
-   (`source_of_truth.numbers`); field profile; venue profile; style-mine
+   (`source_of_truth.numbers`); field profile; venue profile; sv-write-style-apply
    dynamic skill (`style.dynamic_skill`); overlays (`style.overlays`).
    Note any input that is missing; its items become `unknown`, not `pass`.
 6. **Authorization.** Ask once before round 1: "apply authorized edits" (the
@@ -53,7 +53,7 @@ re-run uses check `1R`.
 
 Fields: location (file:line and the first words), what is wrong, rule
 source (checklist id, profile rule with its `[src:]`, ADR number, or the
-`deai-writing` finding id and syndrome), rule status (confirmed or
+`sv-write-humanize-audit` finding id and syndrome), rule status (confirmed or
 candidate), edit class (`authorized`, `needs-author`, `report-only`),
 proposed edit, outcome (applied in commit X, deferred, blocked by guard,
 reverted by regression).
@@ -89,7 +89,7 @@ data, a new analysis or a decision is `needs-author`.
 
 ## 4. Check 2: venue and field style fit
 
-Run `style-mine` in check mode with the project's dynamic skill and the
+Run `sv-write-style-apply` in check mode with the project's dynamic skill and the
 venue profile. It reports deviations; the loop decides what to apply.
 
 - Structure and section order against the venue and field profile
@@ -109,14 +109,14 @@ opted in), `repeat` (raised in an earlier round: counts as a returning
 finding for the oscillation stop). Keep the JA id in the log row next to the
 CL id.
 
-If `style-mine` or the dynamic skill is not available, run the venue and
+If `sv-write-style-apply` or the dynamic skill is not available, run the venue and
 field profile items only and mark corpus-derived items `unknown`. Structural
 moves (reordering sections, merging subsections) are `needs-author` unless
 the user asked for them; check 2 applies wording-level fixes only.
 
 ## 5. Check 3: language and de-AI
 
-Run `deai-writing` in `audit` mode on the spans in scope, with the context
+Run `sv-write-humanize-audit` in `audit` mode on the spans in scope, with the context
 profile `academic` and the overlays from `style.overlays`. Take its finding
 list. Apply `authorized-if-run` findings that pass section 7; carry the
 others as residuals. Overlays and the venue profile decide punctuation;
@@ -224,5 +224,5 @@ or a hedge. [src: note:n06§2.6; note:n06§2.3] (confirmed)
   and re-applied. [src: note:n06§2.8] (confirmed)
 - A scope qualifier was trimmed and restored within about thirty hours with
   no reason stated for either edit. [src: note:n06§1.10] (candidate)
-- Upstream has no whole-manuscript loop with a round budget; `paper-polish`
+- Upstream has no whole-manuscript loop with a round budget; `sv-write-polish`
   stays single-pass. [src: note:n01§4.3] (confirmed)

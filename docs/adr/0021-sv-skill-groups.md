@@ -1,6 +1,6 @@
 # ADR 0021: 26 个 skill 重组为 12 个 `sv-` 组，组内用斜杠子命令细分
 
-Status: proposed
+Status: accepted
 Date: 2026-10-18
 Deciders: owner（2026-10-18 讨论中逐项决定），Claude Code（起草）
 
@@ -121,7 +121,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 7. 全局：`scripts/lint_skills.py` 与 `check_checklists.py` 的 skill 名单和新规则（行数上限、子命令必须带 `disable-model-invocation`）、research-core 中 `skill:<name>` 来源前缀、README 和 skills/README、llms.txt、CHANGELOG（附新旧名对照表）、`scripts/install.sh`（改为生成 agent-sync 链接，见“安装”）
 
 ## Consequences
-- agent 自动挑选时只看 12 个总入口；用户想精确时，可以点名约 50 个子命令中的任意一个。目录总数从 26 增到约 64，但只有 13 个是 agent 每轮都要看到的。
+- agent 自动挑选时只看 12 个总入口；用户想精确时，可以点名50 个子命令中的任意一个。目录总数从 26 增到63，但只有 13 个是 agent 每轮都要看到的。
 - 每个子命令 SKILL.md 很短，“选对了但没抓住重点”主要靠用户直接点名子命令解决，其次靠总入口的路由表加开头的一句报告。
 - 风险：总入口的路由表和子命令之间要保持一致。lint 要检查路由表里出现的每个子命令名都有对应目录，反之亦然。
 - Cursor 文档支持 `disable-model-invocation`，子命令在两个工具里都只能斜杠点名。实施第 1 步后仍要在 Cursor 里实测一次（文档与实际版本可能不一致）。research-core 的 `user-invocable: false` 在 Cursor 编辑器里可能不生效，最坏情况只是它出现在 `/` 菜单里，不影响自动挑选。
@@ -134,7 +134,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 - 各机器仓库的绝对路径不同：SG 是 `/Users/wriseai/Projects/supervisor-skills-plus`，MBA 是 `/Users/yitwah/Projects/supervisor-skills-plus`；MBA 上的 `~/agent-sync` 又链接到 `/Volumes/MacSSD/MacOffload/agent-sync`。所以直接指向本仓库的绝对或相对链接，总会在某台机器上断（`dbd969c` 删掉的 12 个坏链就是这样来的）。
 - 做法：
   - agent-sync 里有一个**每台机器自己建、被 gitignore 的中转链接** `external/supervisor-skills-plus`，指向这台机器的主 checkout。
-  - agent-sync **提交**约 64 个相对链接：`skills/<name> → ../external/supervisor-skills-plus/skills/<name>`。链接始终在 agent-sync 树内部，SG 和 MBA 上都能解析。
+  - agent-sync **提交**63 个相对链接：`skills/<name> → ../external/supervisor-skills-plus/skills/<name>`。链接始终在 agent-sync 树内部，SG 和 MBA 上都能解析。
 - 这样所有 live skill 都在 agent-sync 的 git 里，可见、可回滚，符合 agent-sync policy 的“live 目录只有一棵树”。
 - 本仓库提供一个脚本，按 `skills/` 当前的目录生成或清理 agent-sync 里的这批链接（新增、删除、改名都处理），owner 再在 agent-sync 里检查后提交。这样“两个仓库都要提交”只多出一步检查。原来的 `scripts/install.sh`（往 `~/.claude|codex|cursor/skills` 里直接建链接）改为调用这个脚本，或者删掉。
 - 链接指向的是主 checkout，用的永远是主 checkout 当前所在分支的版本；worktree 里的改动要合回 main、主 checkout 拉下来之后才会生效。

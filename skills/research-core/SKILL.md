@@ -39,7 +39,7 @@ Projects add a fourth layer of their own in the project repo (decisions in
 
 ## When NOT to use this skill
 
-- To draft, polish or review text: use `paper-writer`, `paper-polish`,
+- To draft, polish or review text: use `sv-write-section`, `sv-write-polish`,
   `check-loop` or `pre-submission-reviewer`, which load this skill themselves.
 - To learn new rules from a finished project or from expert notes: use
   `lessons-harvest`, which proposes edits to this skill.
@@ -70,7 +70,7 @@ See: references/core/precedence.md
 |---|---|
 | `references/core/claims-evidence.md` | Claim ledger, scope words, hedging, numbers with sources |
 | `references/core/body-text.md` | Anti-accretive body text, why before how, terms, definitions |
-| `references/core/deai.md` | Short contract for removing AI tells; the full method is in `deai-writing` |
+| `references/core/deai.md` | Short contract for removing AI tells; the full method is in the `sv-write-humanize-*` sub-commands |
 | `references/core/feedback-loop.md` | Comment IDs, one change per comment, verify the diff, never hide notes |
 | `references/core/figures.md` | Figure rules that hold in every field |
 | `references/core/records.md` | Records outside the paper, sources of truth, sync rules |
@@ -124,7 +124,7 @@ not a source.
 | File | Run by |
 |---|---|
 | `references/checklists/master.md` | research-supervisor, pre-submission-reviewer |
-| `references/checklists/writing.md` | paper-writer, intro-drafter, paper-polish, deai-writing, check-loop |
+| `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, check-loop |
 | `references/checklists/figures.md` | figure-designer, drawio-reconstruction |
 | `references/checklists/threats.md` | idea-evaluator, pre-submission-reviewer |
 | `references/checklists/double-blind.md` | pre-submission-reviewer, experiment-workflow |

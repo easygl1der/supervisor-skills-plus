@@ -25,7 +25,7 @@
 | 编程 | 数据结构操作（堆插入、哈希冲突、链表反转） | P4 / P1 | study |
 | 编程 | 并发/异步调用顺序 | 序列图 stepper（P1，泳道） | study |
 | 流程 | 实验管线（数据→训练→评估→消融） | P2 | experiment-workflow / research-bridge |
-| 流程 | 论文修改/投稿/rebuttal 流程 | P2 + P7 | paper-writing 系列 / style-mine |
+| 流程 | 论文修改/投稿/rebuttal 流程 | P2 + P7 | paper-writing 系列 / sv-write-style-mine |
 | 流程 | ACA（自动化学术流程）工作流 | P2 | research-supervisor |
 | 流程 | supervisor-skills 路由（按项目阶段推荐下一个 skill） | P2 | research-supervisor（README/DESIGN 图） |
 | 流程 | study 概念协议 + study-vault 落盘循环 | P2（**demo**） | study（SKILL 文档自带） |

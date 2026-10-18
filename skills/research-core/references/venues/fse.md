@@ -96,7 +96,7 @@ later, which the organizers announced. [src: note:n08§3]
   [src: arc:chat:group@2026-10-03T19:45; note:n08§5] (candidate)
 
 ## Style from exemplars
-Not yet filled by `style-mine` from accepted FSE papers. Until it is, use
+Not yet filled by `sv-write-style-mine` from accepted FSE papers. Until it is, use
 the SE field profile's typical structure, which was measured on one
 submission to this track, not on accepted papers. Contribution-list format
 at FSE: Unknown. [src: note:n06§3; note:n02§10]
@@ -116,7 +116,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: The limit is all-in; the evidence team lost track of it while cutting and refilling.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: pre-submission-reviewer, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:1on1@2026-09-22T05:02; note:n06§2.11
 
 ### FS-03 No appendix as padding
@@ -124,7 +124,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Senior co-authors expected reviewers to skip it and read padding as a rejection signal.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: paper-polish, style-mine, pre-submission-reviewer
+- Owner: sv-write-polish, sv-write-style-apply, pre-submission-reviewer
 - Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-04 Page shortfall filled by priority
@@ -132,7 +132,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Removing the appendix left the evidence paper a page short a day before the deadline.
 - Status: candidate
 - Scope: venue:fse
-- Owner: paper-polish, research-supervisor
+- Owner: sv-write-polish, research-supervisor
 - Src: arc:chat:group@2026-10-02T22:44; arc:msr:d0d4c03; note:n06§2.11
 
 ### FS-05 Template untouched
@@ -140,7 +140,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Format violations are a desk-reject cause; a local shrink came back after it was removed once.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: pre-submission-reviewer, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-01T09:23; note:n08§3
 
 ### FS-06 Figure descriptions
@@ -164,7 +164,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Required by the call; undisclosed AI help in gold construction was an open risk in the evidence project.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, paper-writer, pre-submission-reviewer
+- Owner: experiment-workflow, sv-write-section, pre-submission-reviewer
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; note:n08§3
 
 ### FS-09 Anonymous artifact mirror
@@ -212,7 +212,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Fabricated citations are a listed desk-reject cause.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, pre-submission-reviewer
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-09-29T11:44
 
 ## Changelog

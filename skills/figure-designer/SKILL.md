@@ -44,8 +44,8 @@ self-contained caption, honest axis ranges).
 
 - The user only wants generic plotting help (bar chart, line chart)
   outside a paper. Regular assistance suffices.
-- The paper is not yet structured; use `intro-drafter` or
-  `tech-paper-template` first to decide what figures the paper
+- The paper is not yet structured; use `sv-write-intro` or
+  `sv-write-skeleton` first to decide what figures the paper
   needs.
 - The user wants a review of an already-finished paper. Use
   `pre-submission-reviewer`.
@@ -283,8 +283,8 @@ the commit that regenerated the PDF. Vision-only items without an image are
 
 - Faithful replication of a sketch, reference image or AI mock-up, and
   icon sourcing: `drawio-reconstruction`.
-- Method text that must change to mirror the overview: `paper-writer`.
-- Introduction figure and its running example: `intro-drafter`.
+- Method text that must change to mirror the overview: `sv-write-section`.
+- Introduction figure and its running example: `sv-write-intro`.
 - Number traces that reach the analysis scripts: `experiment-workflow`
   and `check-loop`.
 - Senior or reviewer comments on figures: `feedback-to-revision`.

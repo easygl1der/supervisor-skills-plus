@@ -1,6 +1,6 @@
 # De-AI contract (short form)
 
-The full method, pattern catalog and modes are in the `deai-writing` skill.
+The full method, pattern catalog and modes are in the `sv-write-humanize-*` sub-commands (shared core: `sv-write/references/humanize/`).
 This file holds the contract every skill follows when it edits prose.
 
 1. Diagnose by intent, not by word list: ask what the sentence is trying to

@@ -50,7 +50,7 @@ deadline, and decisions referenced only by tracker ids lost their text
 
 ## When NOT to use this skill
 
-- Editing the manuscript: use `paper-writer`, `paper-polish`, `check-loop`.
+- Editing the manuscript: use `sv-write-section`, `sv-write-polish`, `check-loop`.
 - Tracking comments on the manuscript: use `feedback-to-revision` (it writes
   into `docs/feedback/` and `docs/guidance/` with this skill's conventions).
 - Logging experiment runs in detail: use `experiment-workflow`.

@@ -244,15 +244,15 @@ or unknown with evidence:
 - Journal or internal: a response draft skeleton in the chosen format,
   with guidance per comment, written to `docs/feedback/<round>-response.md`
   when the user asks for a file.
-- A list of claims narrowed and limitations added, for `paper-writer` or
-  `paper-polish`.
+- A list of claims narrowed and limitations added, for `sv-write-section` or
+  `sv-write-polish`.
 
 ## Hand-offs
 
 - Building or updating the response table, applying changes and verifying
   diffs: `feedback-to-revision`.
 - Writing the narrowed claims and limitations into the paper:
-  `paper-writer` (threats section), then `check-loop`.
+  `sv-write-section` (threats section), then `check-loop`.
 - New experiments a reviewer asked for: `experiment-workflow`.
 - Re-checking the revised paper before resubmission:
   `pre-submission-reviewer`.

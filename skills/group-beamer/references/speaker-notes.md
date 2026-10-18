@@ -15,7 +15,7 @@ in `\note{}` on each frame and export Markdown with `scripts/export_notes.py`.
 ## Voice
 
 Conversational. Keep the presenter's own judgment. Do not restock selling
-points that already sit on the slide. Audit notes with `deai-writing`
+points that already sit on the slide. Audit notes with `sv-write-humanize-slides`
 `academic`, not `slides`.
 
 ## Delivery (short)

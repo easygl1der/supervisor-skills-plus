@@ -34,7 +34,7 @@ Inputs missing: <e.g. no dynamic skill; no numbers file> (items depending on the
 | Round | Check | Finding id | Location | Finding | Rule source (status) | Edit class | Outcome | Commit | Diff stats |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 1 | CL-r1-c1-01 | sec/results.tex:12 "Type A issues close..." | pooled claim without scope | WR-19 (candidate, opted in) | authorized | applied | abc1234 | 1 file, +1 -1 |
-| 1 | 3 | CL-r1-c3-02 | sec/intro.tex:40 "It is worth noting..." | rationed phrase | skill:deai-writing S7 DA-07 (confirmed) | authorized | applied | def5678 | 1 file, +1 -1 |
+| 1 | 3 | CL-r1-c3-02 | sec/intro.tex:40 "It is worth noting..." | rationed phrase | skill:sv-write-humanize-audit S7 DA-07 (confirmed) | authorized | applied | def5678 | 1 file, +1 -1 |
 | 1 | 1R | CL-r1-c1R-01 | sec/results.tex:12 | check-3 edit removed the scope phrase | WR-19 | authorized | reverted by regression | 0a1b2c3 | 1 file, +1 -1 |
 
 ## Guard flags
@@ -71,7 +71,7 @@ counts; page count before and after if compiled>
 - One row per finding, applied or not. A finding the loop did not apply
   still gets a row with its outcome.
 - Rule source is the checklist id, the profile rule's `[src:]`, the ADR
-  number, or the `deai-writing` finding id with its syndrome. A row with no
+  number, or the `sv-write-humanize-audit` finding id with its syndrome. A row with no
   rule source is not allowed.
 - Diff stats come from `git diff --stat` on the commit, not from memory.
 - Paste the `span_guard.py report` table under the round table at the end;

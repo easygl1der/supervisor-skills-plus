@@ -43,7 +43,7 @@ were not in the diff (`note:n05`).
 - No comments exist and the user wants a review: use `pre-submission-reviewer`.
 - Writing the reviewer-facing rebuttal prose: build the table here, then use
   `rebuttal-guidance`.
-- Pure language polishing: use `paper-polish` or `check-loop`.
+- Pure language polishing: use `sv-write-polish` or `check-loop`.
 
 ## Step 0: Load context
 

@@ -216,7 +216,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Advisors asked for maintenance-and-evolution framing.
 - Status: candidate
 - Scope: field:se
-- Owner: intro-drafter, paper-writer
+- Owner: sv-write-intro, sv-write-section
 - Src: note:n05§1.1 FB-A-09; arc:CF-02@v2
 
 ### SE-02 Mining method essentials
@@ -224,7 +224,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Essential attributes of the published repository-mining standard.
 - Status: confirmed
 - Scope: field:se
-- Owner: experiment-workflow, paper-writer, pre-submission-reviewer
+- Owner: experiment-workflow, sv-write-section, pre-submission-reviewer
 - Src: lit:sigsoft-rm
 
 ### SE-03 Dual denominators
@@ -232,7 +232,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Closed is not fixed.
 - Status: candidate
 - Scope: field:se
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, check-loop
 - Src: note:n05§1.1 FB-A-05; arc:CF-30@v2; arc:TH-01@v2
 
 ### SE-04 Calendar time is not effort
@@ -240,7 +240,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Only tracker time was measured.
 - Status: confirmed
 - Scope: field:se
-- Owner: paper-polish, check-loop
+- Owner: sv-write-polish, check-loop
 - Src: arc:CF-29@v2; note:n02§8; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-05 Durations: censoring and import artifacts
@@ -256,7 +256,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: The residual is a finding.
 - Status: candidate
 - Scope: field:se
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, check-loop
 - Src: note:n02§8; note:n07§B.5
 
 ### SE-07 Repository labels kept apart
@@ -264,7 +264,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Readers confuse them and the counts differ.
 - Status: candidate
 - Scope: field:se
-- Owner: paper-polish, check-loop
+- Owner: sv-write-polish, check-loop
 - Src: arc:AH-06@v2
 
 ### SE-08 Codebook provenance
@@ -272,7 +272,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: An advisor asked where the taxonomies came from.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, paper-writer
+- Owner: experiment-workflow, sv-write-section
 - Src: arc:CF-26@v2; note:n05§1.5
 
 ### SE-09 Cross-domain baseline
@@ -280,7 +280,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Without a reference point readers cannot judge the numbers.
 - Status: candidate
 - Scope: field:se
-- Owner: idea-evaluator, paper-writer
+- Owner: idea-evaluator, sv-write-section
 - Src: arc:CF-28@v2; note:n05§1.5
 
 ### SE-10 Text-coded strategy and code size
@@ -296,7 +296,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: A pooled share can be one repository's share.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, paper-writer, check-loop
+- Owner: experiment-workflow, sv-write-section, check-loop
 - Src: note:n02§8; arc:msr:9c69675; arc:CF-16@v2
 
 ### SE-12 Finding paragraph shape
@@ -304,7 +304,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Readers come for results; the senior co-author asked for this layout.
 - Status: candidate
 - Scope: field:se
-- Owner: paper-writer, paper-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, check-loop
 - Src: arc:msr:0f96193; note:n06§2.4; skill:lecture-paper-revision
 
 ### SE-13 Results stay results
@@ -312,7 +312,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Resolves a contradiction between the former SE skills; keeps takeaways consistent.
 - Status: candidate
 - Scope: field:se
-- Owner: paper-writer, paper-polish
+- Owner: sv-write-section, sv-write-polish
 - Src: skill:se-paper-refinement; note:n02§11; arc:msr:9809b8c; note:n06§3
 
 ### SE-14 Implications by audience
@@ -320,7 +320,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Advisors asked what each audience should do differently.
 - Status: candidate
 - Scope: field:se
-- Owner: paper-writer, research-supervisor
+- Owner: sv-write-section, research-supervisor
 - Src: arc:msr:f141169; note:n06§1.8; note:n05§1.1 FB-A-08
 
 ### SE-15 Four threat categories
@@ -328,7 +328,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: The standard SE validity classification.
 - Status: confirmed
 - Scope: field:se
-- Owner: pre-submission-reviewer, paper-writer
+- Owner: pre-submission-reviewer, sv-write-section
 - Src: lit:wohlin2012; note:n06§1.9
 
 ### SE-16 SE figure conventions
@@ -344,7 +344,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Wrong or fabricated references are a desk-reject cause.
 - Status: confirmed
 - Scope: field:se
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, pre-submission-reviewer
 - Src: arc:chat:group@2026-09-29T11:44; arc:10-requirements/venue/fse-2027-requirements.md
 
 ### SE-18 No appendix as padding
@@ -352,7 +352,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Senior co-authors judged padding appendices a rejection risk.
 - Status: confirmed
 - Scope: field:se
-- Owner: style-mine, paper-polish, pre-submission-reviewer
+- Owner: sv-write-style-apply, sv-write-polish, pre-submission-reviewer
 - Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-19 Strongest counter-argument
@@ -375,7 +375,7 @@ here. [src: note:n02§11]
 - **Hedging**: hedge interpretations only (core rule).
 - **Contribution list**: two former skills want two to four numbered
   bullets; six MSR and journal exemplars use none; the evidence paper
-  itemized them. Decided per venue by `style-mine`.
+  itemized them. Decided per venue by `sv-write-style-mine`.
 - **Abstract length**: former rules say 150 to 200 or 150 to 250 words; the
   exemplar ran 190 to 270. The venue form limit decides.
 - **Headline numbers**: senior co-authors trimmed and restored exact numbers

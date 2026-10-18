@@ -6,7 +6,7 @@ Enforces the hard rules for SKILL.md structure:
  - description is 40..80 words, third person, contains at least one "Use when" clause
  - no em-dash in SKILL.md or references/*.md
  - no CJK characters in SKILL.md
- - every "See: references/X.md" pointer resolves
+ - every "See: references/X.md" and "See: ../<skill>/references/X.md" pointer resolves
  - no nested references (references/X.md may not link to references/Y.md)
  - references/*.md longer than 100 lines must have a table of contents in the first 20 lines
  - no Claude or Anthropic attribution strings
@@ -33,6 +33,8 @@ SKILL_ROOT = Path("skills")
 EM_DASH = "\u2014"
 CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]")
 REF_POINTER = re.compile(r"See:\s+references/([A-Za-z0-9_\-./]+\.md)")
+# Pointer into another skill's references (ADR 0021 groups share one folder).
+SIBLING_POINTER = re.compile(r"See:\s+\.\./([a-z0-9][a-z0-9\-]*)/references/([A-Za-z0-9_\-./]+\.md)")
 REF_LINK = re.compile(r"\[[^\]]+\]\((?:\./)?references/([A-Za-z0-9_\-./]+\.md)\)")
 BANNED_ATTRIB = [
     "Co-Authored-By: Claude",
@@ -114,6 +116,9 @@ def check_pointers(skill_dir: Path, body: str) -> list[str]:
         ref = skill_dir / "references" / target
         if not ref.exists():
             errors.append(f"pointer to missing reference: references/{target}")
+    for m in SIBLING_POINTER.finditer(body):
+        if not (skill_dir.parent / m.group(1) / "references" / m.group(2)).exists():
+            errors.append(f"pointer to missing reference: ../{m.group(1)}/references/{m.group(2)}")
     return errors
 
 

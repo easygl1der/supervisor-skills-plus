@@ -4,12 +4,12 @@
 1. What it produces
 2. Steps
 3. Rules
-4. Hand-off to style-mine
+4. Hand-off to sv-write-style-mine
 
 ## 1. What it produces
 
-One Paper Style Card in `style-mine`'s format (fields A to L in
-`skills/style-mine/references/style-card.md`), saved as `style-card.md` in
+One Paper Style Card in `sv-write-style-mine`'s format (fields A to L in
+`skills/sv-write-style-mine/references/style-card.md`), saved as `style-card.md` in
 the paper folder. There is no separate format for quickread: one style
 memory only. [src: user:2026-10-16] (confirmed)
 
@@ -44,8 +44,8 @@ reusable phrasing, venue signals) and the per-section dimensions follow
 existing paper-mining tools; the move labels follow Swales' CARS model.
 Details in `notes/10-reading-sources.md`. [src: lit:swales1990genre] (candidate; sub-move names from secondary summaries)
 
-## 4. Hand-off to style-mine
+## 4. Hand-off to sv-write-style-mine
 
 Tell the user the card's path and which venue or field corpus it could join.
-`style-mine` accumulate counts it only when 5 to 10 cards for that venue
+`sv-write-style-mine` accumulate counts it only when 5 to 10 cards for that venue
 exist and the consensus threshold is met.

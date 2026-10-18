@@ -37,9 +37,9 @@ REQUIRED = ["Check", "Status", "Scope", "Owner", "Src"]
 
 # Skills that DESIGN.md plans but that may not exist yet during Phase 4.
 PLANNED = {
-    "research-supervisor", "research-core", "experiment-workflow", "deai-writing",
+    "research-supervisor", "research-core", "experiment-workflow",
     "check-loop", "feedback-to-revision", "research-records", "lessons-harvest",
-    "style-mine", "paper-quickread", "study", "research-bridge", "proposal-writer",
+    "paper-quickread", "study", "research-bridge", "proposal-writer",
 }
 
 

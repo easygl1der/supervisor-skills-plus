@@ -47,8 +47,8 @@ Field and venue profiles add items with their own prefixes; load those whose
   can hide a missing result.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, check-loop, paper-polish
-- Src: up:skills/paper-writer/references/verification-checklist.md; arc:FP-07@v2; arc:01-checklist/checklist.md T1; note:n07§B.5
+- Owner: pre-submission-reviewer, check-loop, sv-write-polish
+- Src: up:skills/sv-write-section/references/verification-checklist.md; arc:FP-07@v2; arc:01-checklist/checklist.md T1; note:n07§B.5
 
 ### MA-03 No hidden unresolved notes
 - [ ] Check: No unresolved co-author or reviewer note was deleted, commented
@@ -70,7 +70,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   evidence project's final check.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, check-loop, paper-polish
+- Owner: pre-submission-reviewer, check-loop, sv-write-polish
 - Src: arc:01-checklist/checklist.md A5; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md; arc:@senior-a-comments:79-100; note:n07§B.5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### MA-05 Devil's-advocate pass

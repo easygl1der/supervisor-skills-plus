@@ -62,7 +62,7 @@ Run by: pre-submission-reviewer
   reintroduced shrinking in the evidence project.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: pre-submission-reviewer, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-01T09:20; arc:chat:group@2026-10-01T09:23; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G3; note:n08§5#10
 
 ### VS-06 No appendix as padding
@@ -72,7 +72,7 @@ Run by: pre-submission-reviewer
 - Why: Reviewers do not read padding appendices, and they cost pages.
 - Status: confirmed
 - Scope: core
-- Owner: paper-polish, pre-submission-reviewer
+- Owner: sv-write-polish, pre-submission-reviewer
 - Src: arc:chat:group@2026-10-01T08:47; arc:chat:group@2026-10-01T08:48; arc:chat:group@2026-10-01T09:26; arc:msr:464168f; note:n08§5#11; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-07 Figure descriptions match the layout
@@ -92,7 +92,7 @@ Run by: pre-submission-reviewer
 - Why: Each is visible in the PDF as a question mark or overrun line.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: pre-submission-reviewer, sv-write-polish
 - Src: arc:01-checklist/checklist.md G5; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H16
 
 ## 4. Submission form and upload

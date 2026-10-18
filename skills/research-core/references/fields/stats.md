@@ -177,7 +177,7 @@ method block states, in this order:
 - Why: Unverifiable high-level conditions can make a theorem trivial.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-writer, pre-submission-reviewer, check-loop
+- Owner: sv-write-section, pre-submission-reviewer, check-loop
 - Src: guide:AJS/joe-identification-strategy@932eb23; guide:AJS/aistats-writing-style@932eb23
 
 ### ST-02 Full asymptotic chain
@@ -187,7 +187,7 @@ method block states, in this order:
   justified.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, pre-submission-reviewer
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### ST-03 Favourable and stressing DGPs
@@ -214,7 +214,7 @@ method block states, in this order:
 - Why: Power of a size-distorted test is not meaningful.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, paper-writer, check-loop
+- Owner: experiment-workflow, sv-write-section, check-loop
 - Src: guide:AJS/joe-tables-figures@932eb23; guide:AJS/ecta-robustness@932eb23
 
 ### ST-06 Monte Carlo precision reported
@@ -232,7 +232,7 @@ method block states, in this order:
 - Why: Referees read and recompute simulation tables on their own.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, pre-submission-reviewer
 - Src: guide:AJS/ecta-tables-figures@932eb23; guide:AJS/joe-tables-figures@932eb23
 
 ### ST-08 Tuning sensitivity shown
@@ -261,7 +261,7 @@ method block states, in this order:
   statistics papers often fold this into the model definition or speak of
   identifiability and do not use the word for research design. Do not
   import the econometric section heading by default; decide per venue via
-  style-mine. [src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23] (candidate)
+  sv-write-style-mine. [src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23] (candidate)
 - How much empirical application is required: JBES expects a substantive
   application, the Journal of Econometrics treats it as an illustration, and
   AISTATS values a focused simulation over extra datasets.
@@ -274,7 +274,7 @@ method block states, in this order:
 - JASA, JRSSB, Annals of Statistics and Biometrika have no AJS skills.
   Their conventions (paper structure, length of simulation sections,
   theorem style, reproducibility requirements) need the 5 to 10 exemplar
-  route via style-mine (`lessons-harvest --new-field stats`).
+  route via sv-write-style-mine (`lessons-harvest --new-field stats`).
 - Bayesian methodology conventions (prior sensitivity, computation
   diagnostics): no source read.
 - Typical section lengths: not measured from exemplars.

@@ -418,7 +418,7 @@ For paper figures, run the `research-core` `figures` checklist items this skill 
 ## Hand-offs
 
 - Design decisions (paradigm, table or figure, AI-look removal, mirroring the method text): `figure-designer`.
-- Method text that must match the rebuilt overview: `paper-writer`.
+- Method text that must match the rebuilt overview: `sv-write-section`.
 - Values that need a script or ledger source: `experiment-workflow` and `check-loop`.
 - Redline comments from co-authors: `feedback-to-revision`.
 - Which draft or variant won and why: `research-records`.

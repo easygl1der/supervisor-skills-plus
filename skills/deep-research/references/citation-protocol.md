@@ -37,7 +37,7 @@ unconfirmed marker, for example "[unconfirmed: no work retrieved in this
 direction]". This is a research report convention, not a paper convention:
 survey reports are working materials addressed to the researcher, so an
 explicit unconfirmed marker is honest signaling there. Paper prose (the
-paper-writer and intro-drafter skills) forbids all such markers; the two
+sv-write-section and sv-write-intro skills) forbids all such markers; the two
 regimes are different products, and the difference is deliberate.
 
 ## Zero tolerance for invented citations

@@ -25,7 +25,7 @@
 The research-core rules on claim strength still apply: a planned analysis
 is never described with result words, and an expected effect is never
 written with a number the user has not measured.
-[src: up:skills/paper-writer/references/evidence-discipline.md] (confirmed)
+[src: up:skills/sv-write/references/evidence-discipline.md] (confirmed)
 
 ## 2. Sentence patterns
 

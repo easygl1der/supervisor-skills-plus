@@ -6,7 +6,7 @@ description: >-
   copied with sources, contributions tagged proved or empirical or
   conjectured, a claim-evidence table, limitations, and the link to the
   reader's own research. Optional --style also dissects the writing into a
-  Style Card for style-mine. Use when the user says quick read, 速读, 这篇论文讲什么,
+  Style Card for sv-write-style-mine. Use when the user says quick read, 速读, 这篇论文讲什么,
   5 分钟看懂, or hands over one paper.
 license: CC-BY-NC-SA-4.0
 ---
@@ -54,7 +54,7 @@ follows the user's language when the user writes in another.
   `study` (paper mode). It reuses this card if one exists.
 - Several papers, a survey or a related-work section: `deep-research`.
 - Reviewing the user's own manuscript: `pre-submission-reviewer`.
-- Building a venue's style profile from many exemplars: `style-mine`.
+- Building a venue's style profile from many exemplars: `sv-write-style-mine`.
 
 ## Step 0: Load context
 
@@ -143,9 +143,9 @@ added to its history instead).
 ### Optional: `--style`
 
 After the card, dissect the paper's writing into one Paper Style Card in
-`style-mine`'s format (fields A to L; CARS move tags; three to five
+`sv-write-style-mine`'s format (fields A to L; CARS move tags; three to five
 abstracted sentence templates; no copied sentences) and save it as
-`style-card.md` in the paper folder. It is a candidate for `style-mine`'s
+`style-card.md` in the paper folder. It is a candidate for `sv-write-style-mine`'s
 accumulate loop, never a rule by itself.
 
 See: references/style-mode.md
@@ -190,7 +190,7 @@ Report pass, fail or n/a with evidence:
 - Understand a concept, method or proof from this paper: `study` (paper
   mode, same folder).
 - The paper suggests something for the current project: `research-bridge`.
-- Style card into a venue profile: `style-mine` (accumulate).
+- Style card into a venue profile: `sv-write-style-mine` (accumulate).
 - Several cards into an evolution map and gap list: `deep-research`
   (literature-map mode).
 - Verifying a citation the card relies on: `deep-research`'s citation

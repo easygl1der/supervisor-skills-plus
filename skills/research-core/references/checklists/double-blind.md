@@ -30,7 +30,7 @@ Run by: pre-submission-reviewer, experiment-workflow
 - Why: Each of these reveals the authors indirectly.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: pre-submission-reviewer, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/checklist.md AT3
 
 ## 2. Links and the artifact

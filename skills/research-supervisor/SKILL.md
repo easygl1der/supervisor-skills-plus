@@ -50,7 +50,7 @@ on what the user asked for, before any stage logic:
 | map a body of literature, find gaps, plan next reads | `deep-research` (literature-map mode) |
 | "can I use this in my project?", a minimal validation experiment | `research-bridge` |
 | thesis proposal, research plan, grant application | `proposal-writer` |
-| a style profile from exemplar papers | `style-mine` |
+| a style profile from exemplar papers | `sv-write-style-mine` |
 | group-meeting slides, weekly report, paper talk | `group-beamer` |
 
 Priority: an explicit reading or learning intent wins over the stage table;
@@ -88,7 +88,7 @@ Then copy `research-core` `assets/templates/research.yaml` to the project
 root, fill it, and show the diff before writing. Hand the `docs/` set-up
 (STATUS, TODO, ADR 0001 for sources of truth, runs log, `.gitignore` for
 private material) to `research-records` Task 1. A field with no profile
-loads `_template.md`; offer `style-mine` to build one.
+loads `_template.md`; offer `sv-write-style-mine` to build one.
 
 ## Step 2: Session brief
 
@@ -127,12 +127,12 @@ brief showed (a blocker, a marker count, days to deadline).
 | idea | `idea-evaluator`, `deep-research`, `research-bridge` (an idea came from a paper or concept just studied) |
 | design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `research-records` (ADRs) |
 | experiments | `experiment-workflow`, `research-records`, `vibe-research-workflow` (agent coding habits) |
-| writing | `paper-writer`, `intro-drafter`, `tech-paper-template` (technique, AI/ML), `benchmark-paper-template` (benchmark, AI/ML), `style-mine` (venue or field profile missing), `deai-writing` |
+| writing | `sv-write` (routes to skeleton, intro, section, style and humanize sub-commands) |
 | figures | `figure-designer`, `drawio-reconstruction` |
-| internal-review | `feedback-to-revision`, `check-loop`, `paper-polish` |
+| internal-review | `feedback-to-revision`, `check-loop`, `sv-write-polish` |
 | submission | `pre-submission-reviewer`, `check-loop`, `experiment-workflow` (artifact, numbers check) |
 | rebuttal | `feedback-to-revision`, `rebuttal-guidance` |
-| camera-ready | `paper-polish`, `experiment-workflow` (de-anonymized artifact), `research-records` (tag the submitted version) |
+| camera-ready | `sv-write-polish`, `experiment-workflow` (de-anonymized artifact), `research-records` (tag the submitted version) |
 | project finished, or expert notes arrived | `lessons-harvest` |
 
 Overrides from the brief:

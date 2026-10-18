@@ -30,7 +30,7 @@ CJK via `ctex`. Not Marp, not PPTX.
 
 ## When NOT to use this skill
 
-- Manuscript prose: `paper-writer`, `deai-writing` (`academic`).
+- Manuscript prose: `sv-write-section`, `sv-write-humanize-paper` (`academic`).
 - A one-page paper card only: `paper-quickread`.
 - Understanding a paper before you can present it: `study`.
 - Figures that are not slides: `figure-designer`.
@@ -98,7 +98,7 @@ Critical slides every paper talk carries (`paper-talk.md`, `causal-slides.md`):
    (inspect pages in batches of 3). Fix spacing before font size. Check
    every box visually (Beamer hides overfull warnings inside blocks).
 5. Read-only review: visual, pedagogy, claims (narrow never strengthen;
-   title verb matches claim level), then `deai-writing` `audit` with the
+   title verb matches claim level), then `sv-write-humanize-slides` `audit` with the
    `slides` profile. Speaker notes (`\note{}`) use `academic`.
 6. Export notes with `scripts/export_notes.py`. Save through
    `research-records` Task 8: `docs/log/<date>-group-meeting.md` and
@@ -153,7 +153,7 @@ Report each item as pass, fail, n/a or unknown, with evidence (page,
   dropped.
 - Paper talk: paper card, ranked assumptions, reproducibility slide and a
   closing discussion question are present.
-- `deai-writing` `audit` with the `slides` profile ran; notes checked under
+- `sv-write-humanize-slides` `audit` with the `slides` profile ran; notes checked under
   `academic`.
 - Notes exported; deck and log saved through `research-records` Task 8.
 
@@ -177,9 +177,9 @@ exported `notes.md`.
 - `research-bridge`: link-to-project slide.
 - `figure-designer`: TikZ DAGs; Graphviz PDF only for large or changing graphs.
 - `research-records`: accumulation and last-week next steps.
-- `deai-writing`: `slides` profile on frames; `academic` on `\note{}`.
+- `sv-write-humanize-slides`: `slides` profile on frames; `academic` on `\note{}`.
 - `pre-submission-reviewer` devil's-advocate pass plus
   `research-core` `fields/causal.md` reviewer questions, as the substitute
   for a missing Critic checklist.
-- `style-mine`: later fill of `group-preferences.md` from past decks.
+- `sv-write-style-mine`: later fill of `group-preferences.md` from past decks.
 - `research-supervisor`: routes group-meeting slide requests here.

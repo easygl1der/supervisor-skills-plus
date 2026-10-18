@@ -112,7 +112,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: A parked result disappeared from the paper for a day unnoticed.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, paper-writer, check-loop
+- Owner: research-records, sv-write-section, check-loop
 - Src: arc:msr:7c705c9; arc:msr:5262231; note:n06§2.9; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 3. Feedback closure
@@ -182,7 +182,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Early cuts and late fills were not reconciled until pages ran short.
 - Status: candidate
 - Scope: core
-- Owner: feedback-to-revision, paper-polish
+- Owner: feedback-to-revision, sv-write-polish
 - Src: note:n05§6.8
 
 ## 4. Guidance and decisions

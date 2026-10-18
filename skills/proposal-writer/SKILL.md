@@ -57,9 +57,9 @@ It covers four genres, each with a section map and length budget in
   first. This skill assumes the core idea survived that check.
 - A literature survey on its own: `deep-research`.
 - Writing the paper or thesis chapters that report finished work:
-  `paper-writer` (`paper_type: thesis` for a dissertation).
+  `sv-write-section` (`paper_type: thesis` for a dissertation).
 - Polishing language only, or Chinese-to-English translation of a finished
-  draft: `paper-polish`.
+  draft: `sv-write-polish`.
 - Budgets, institutional forms, CV and biosketch formatting: outside scope;
   the skill only checks that the narrative and the stated resources agree.
 
@@ -172,7 +172,7 @@ Rules: a cited claim never goes beyond what the source supports (L3
 metadata supports citation-level statements only); a gap claim is written
 as "no work retrieved under these searches" and never as "no one has ever";
 a preliminary result is reported in past tense with its scope and source.
-[src: up:skills/paper-writer/references/evidence-discipline.md] (confirmed)
+[src: up:skills/sv-write/references/evidence-discipline.md] (confirmed)
 
 Notes from `paper-quickread` and `study` already carry locations (section,
 equation, table) and their reading coverage (for example "read to 4.1;
@@ -219,7 +219,7 @@ the reviewer looks for them.
   most PhD applications. Explanations to the user are in Chinese by
   default.
 - When the user has funded or approved exemplars from the same program or
-  department, hand them to `style-mine` (Dissect, then Apply) for the local
+  department, hand them to `sv-write-style-mine` (Dissect), then `sv-write-style-apply` for the local
   register; the facts stay from the ledger.
 - Field conventions (what counts as rigor, typical threats) come from the
   loaded field profile, not from this skill.
@@ -252,7 +252,7 @@ See: references/reviewer-lens.md
 
 ### Phase 7: Citations and delivery
 
-Verify citations with the `paper-writer` verification ladder (independent
+Verify citations with the `sv-write-section` verification ladder (independent
 check when there are three or more citations or the mode is Final). Check
 limits against the call sheet (pages, characters, required headings).
 Deliver the document plus a short note: limits met, open markers, and the
@@ -325,11 +325,11 @@ drafting. `skills/study/evals/proposal/` is a pointer only.
 - Feasibility, fatal flaws and capability match before committing:
   `idea-evaluator`.
 - Pilot runs that produce preliminary data: `experiment-workflow`.
-- Citation verification and, later, the paper itself: `paper-writer`.
-- Local register from funded exemplars: `style-mine`.
+- Citation verification and, later, the paper itself: `sv-write-section`.
+- Local register from funded exemplars: `sv-write-style-mine`.
 - Understanding a method the proposal depends on: `study`; hooking notes
   to the current project: `research-bridge`.
 - Scope and design decisions taken while writing (frozen RQ set, chosen
   data source): `research-records` as an ADR.
 - Language polish and AI-tell removal on the finished draft:
-  `paper-polish`, `deai-writing`.
+  `sv-write-polish`, `sv-write-humanize-letter`.

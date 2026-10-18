@@ -31,7 +31,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Reviewers look at figures before reading the text.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, paper-polish
+- Owner: figure-designer, sv-write-polish
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md; arc:@senior-a-comments:79; arc:MF-21@v2
 
 ### FG-03 Colour is never the only cue
@@ -69,7 +69,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Local shrinking can break the template rules and makes floats unreadable.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, paper-polish
+- Owner: figure-designer, sv-write-polish
 - Src: arc:chat:group@2026-10-01T09:20; arc:chat:group@2026-10-03T11:32; note:n07§A.8 FR9; note:n07§A.8 FR13; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Figure and text mirroring
@@ -81,7 +81,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A senior reviewer reads the overview and the method side by side.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, paper-writer
+- Owner: figure-designer, drawio-reconstruction, sv-write-section
 - Src: arc:chat:group@2026-09-29T11:42; arc:msr:9809b8c; arc:msr:b5c0045; arc:MF-01@v2; note:n07§A.8 FR1
 
 ### FG-08 Method text first, overview from the text
@@ -90,7 +90,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Drawing first produces boxes the method never describes.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-writer
+- Owner: figure-designer, sv-write-section
 - Src: arc:msr:0f96193; note:n07§A.8 FR2
 
 ### FG-09 One integrated overview
@@ -119,7 +119,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A figure for one number wastes space and attention.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-writer
+- Owner: figure-designer, sv-write-section
 - Src: arc:MF-05@v2; note:n07§A.8 FR6
 
 ### FG-12 A grid of numbers is a table
@@ -128,7 +128,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Tables and figures have different reading rules and numbering.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-polish
+- Owner: figure-designer, sv-write-polish
 - Src: arc:msr:0f96193; arc:msr:405bba7; note:n07§A.8 FR8
 
 ### FG-13 Text, then figure, then table
@@ -137,7 +137,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Readers take the finding from prose and the detail from tables.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-writer
+- Owner: figure-designer, sv-write-section
 - Src: arc:chat:1on1@2026-09-29T11:51; arc:MF-15@v2; arc:01-checklist/checklist.md TB5; note:n07§A.8 FR7
 
 ### FG-14 One figure per message
@@ -175,7 +175,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A concrete, failure-revealing example motivates faster than prose.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, intro-drafter
+- Owner: figure-designer, sv-write-intro
 - Src: arc:chat:1on1@2026-09-28T23:15; arc:ol:ba3f1ee; up:skills/pre-submission-reviewer/SKILL.md; note:n07§A.8 FR21
 
 ## 4. Data in figures
@@ -230,7 +230,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Reviewers read AI-styled figures the way they read AI-styled prose.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, deai-writing
+- Owner: figure-designer, drawio-reconstruction, sv-write-humanize-paper
 - Src: arc:msr:0f96193; arc:MF-04@v2; note:n07§A.8 FR5
 
 ### FG-23 Icons from licensed libraries

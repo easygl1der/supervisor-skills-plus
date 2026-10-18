@@ -21,7 +21,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Reviewers test generality claims against what was sampled.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, pre-submission-reviewer, paper-writer
+- Owner: idea-evaluator, pre-submission-reviewer, sv-write-section
 - Src: arc:CF-16@v2; arc:TH-02@v2; arc:TH-10@v2; arc:01-checklist/checklist.md C7; arc:@advisor-glimpse
 
 ### TH-02 Stratify before pooling
@@ -40,7 +40,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: A share of a handful of cases reads as a strong result without its count.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer
+- Owner: pre-submission-reviewer, sv-write-section
 - Src: arc:CF-15@v2; arc:TH-04@v2
 
 ### TH-04 Data gaps moved to threats early
@@ -61,7 +61,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Treating a weak measure as fact overstates every claim built on it.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer, check-loop
+- Owner: pre-submission-reviewer, sv-write-section, check-loop
 - Src: arc:CF-14@v2; arc:TH-05@v2; arc:01-checklist/checklist.md C3; arc:msr:643836a; note:n06§2.6; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### TH-06 Reference labels are not an oracle
@@ -80,7 +80,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Comparing unlike measures is a common reviewer objection.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer
+- Owner: pre-submission-reviewer, sv-write-section
 - Src: arc:CF-19@v2
 
 ## 3. Alternative explanations and selection
