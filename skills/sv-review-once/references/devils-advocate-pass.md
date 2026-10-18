@@ -13,7 +13,7 @@
 
 The five dimensions check whether the paper is well built. This pass asks
 whether its main claims survive a reader who wants them to fail. It only
-challenges; fixes go to the author or to `feedback-to-revision`. It runs
+challenges; fixes go to the author or to `sv-feedback-revise`. It runs
 after Steps 1 to 7a so it can use their findings, and it never repeats
 them: a typo or a missing citation is not a devil's-advocate finding.
 

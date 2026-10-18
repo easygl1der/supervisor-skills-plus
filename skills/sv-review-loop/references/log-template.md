@@ -1,7 +1,7 @@
 # Log template: docs/log/YYYY-MM-DD-check-loop.md
 
 Copy the block below into the project as `docs/log/<date>-check-loop.md`
-(the `research-core` `log-entry.md` layout with `Kind: check-loop`). Fill it
+(the `research-core` `log-entry.md` layout with `Kind: sv-review-loop`). Fill it
 while the loop runs, not afterwards. The span state file sits next to it as
 `<date>-check-loop.spans.json`.
 
@@ -12,9 +12,9 @@ while the loop runs, not afterwards. The span state file sits next to it as
 ## 1. Template
 
 ```markdown
-# YYYY-MM-DD check-loop
+# YYYY-MM-DD sv-review-loop
 
-Kind: check-loop
+Kind: sv-review-loop
 Participants: <roles; agent>
 Scope: <files or sections>
 Base commit: <sha> on <branch>        Final commit: <sha>

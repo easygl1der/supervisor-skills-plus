@@ -1,7 +1,7 @@
 ---
 name: lessons-harvest
 description: >-
-  Turns a project's feedback tables, guidance records, ADRs, check-loop logs,
+  Turns a project's feedback tables, guidance records, ADRs, sv-review-loop logs,
   STATUS and git history, plus expert notes from advisors, co-authors,
   reviewers, published guides and the owner, into sourced and deduplicated
   rule candidates for research-core. Classifies each target, applies the
@@ -18,7 +18,7 @@ license: CC-BY-NC-SA-4.0
 
 `research-core` should get better with every paper, assignment and new
 field. This skill is how it learns. At a milestone, it reads what a project
-recorded (feedback, guidance, decisions, check-loop findings, status, git
+recorded (feedback, guidance, decisions, sv-review-loop findings, status, git
 history) and what experts said, extracts lessons as general rules with
 sources, removes the ones the library already has, decides where each new
 rule belongs, and proposes the change for the owner to approve on a
@@ -39,7 +39,7 @@ library, and never states a rule without a source.
 
 ## When NOT to use this skill
 
-- Handling comments on the current manuscript: `feedback-to-revision`.
+- Handling comments on the current manuscript: `sv-feedback-revise`.
 - Recording a decision for the current project: `research-records` (ADR).
 - Building a venue's style profile from exemplars: `sv-write-style-mine` (this
   skill calls it in the new-field flow and merges its proposals).
@@ -67,7 +67,7 @@ change `docs/`):
 - `docs/feedback/*.md` response tables (FB ids, decisions, commits)
 - `docs/guidance/*.md` guidance records (G ids, interpretations, actions)
 - `docs/adr/*.md` decisions, including superseded ones
-- `docs/log/*.md`, especially check-loop round logs
+- `docs/log/*.md`, especially sv-review-loop round logs
 - `docs/STATUS.md` and `TODO.md` (parked items, risks, what was cut)
 - git history of the paper and research repos (to verify that lessons
   happened)

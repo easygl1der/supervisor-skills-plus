@@ -19,7 +19,7 @@ sources are in section 7 and inline.
 
 ## 2. One day before (T minus 24 h or earlier)
 
-1. **Read-only full check.** Run `pre-submission-reviewer` against a named
+1. **Read-only full check.** Run `sv-review-once` against a named
    commit and its PDF; every Blocker becomes a TODO with an owner the same
    day (MA-01). The evidence project's final check predicted the artifact
    identity leak; nobody owned that Blocker, and it was fixed only after

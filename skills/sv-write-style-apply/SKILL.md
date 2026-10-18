@@ -4,7 +4,7 @@ description: >-
   Applies a mined style profile to a manuscript without adding facts or
   changing technical content: section-by-section revision with diagnosis,
   revision and a per-paragraph log of rule candidates, or a report-only venue
-  and field fit check for check-loop round 2. Needs a dynamic writing skill
+  and field fit check for sv-review-loop round 2. Needs a dynamic writing skill
   from the sv-write-style-mine sub-command. Use when revising a paper for a target
   venue or asking whether a draft fits it.
 license: MIT
@@ -26,7 +26,7 @@ See: ../sv-write/references/faithfulness.md
 | Mode | Trigger | Section below |
 |---|---|---|
 | Revise | "revise my paper for <venue>" | Phase 2 |
-| Check | called by `check-loop`, or "does this fit the venue?" | Check mode |
+| Check | called by `sv-review-loop`, or "does this fit the venue?" | Check mode |
 
 ## Phase 2: Manuscript revision
 
@@ -41,16 +41,16 @@ the user agrees; otherwise output Markdown sections.
 
 See: references/revision-phase.md
 
-## Check mode (check-loop round 2)
+## Check mode (sv-review-loop round 2)
 
 Report-only. Inputs: target sections, the dynamic skill (or, if missing, the
 venue and field profiles with reduced coverage), ADRs and the term table,
-and the round number from `check-loop`. Check structure, lengths against
+and the round number from `sv-review-loop`. Check structure, lengths against
 budget, contribution format, results paragraph shape, tone, citation form
 and the P5 phrases. Each finding gets `JA-r<round>-<nn>`, a location, the
 rule it deviates from (`DS-nn` with support, or a profile rule with its
 source), observed vs expected, severity and status (`open`, `locked`,
-`advisory`, `repeat`). Never edit; return the report to `check-loop`, or
+`advisory`, `repeat`). Never edit; return the report to `sv-review-loop`, or
 write `docs/log/<date>-style-mine-check.md` when run alone.
 
 See: references/check-mode.md
@@ -59,6 +59,6 @@ See: references/check-mode.md
 ## Hand-offs
 
 - Rule candidates from the revision logs: `lessons-harvest`.
-- Multi-round checks and applying check findings: `check-loop`.
+- Multi-round checks and applying check findings: `sv-review-loop`.
 - AI tells beyond the P5 list: `sv-write-humanize-paper`.
 - Missing content found in diagnosis: `sv-write-section`, `sv-write-intro`.

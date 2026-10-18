@@ -3,7 +3,7 @@
 Items for prose: framing, structure, terms, numbers in sentences, hedging,
 citations and the de-AI pass. Each item turns a core rule into a check.
 
-Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, check-loop
+Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop
 
 ## Contents
 1. Before drafting
@@ -24,7 +24,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
   patched in later, if at all.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: up:skills/sv-write/references/evidence-discipline.md; skill:deai-paper-writing; note:n02§11.5; note:n07§A.1
 
 ### WR-02 Numbers and tables in the manuscript before prose
@@ -74,7 +74,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: A procedure without its reason reads as arbitrary.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, sv-write-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: arc:@senior-a-comments:33-50; arc:ol:5ecaf3f; arc:msr:0f96193; note:n06§2.1
 
 ### WR-07 Current content only, outward framing
@@ -84,7 +84,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Reviewers read one version; history belongs in `docs/`.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-section, sv-write-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: skill:anti-accretive-docs; arc:@senior-a-comments:54-75; arc:ol:5ecaf3f; arc:CF-05@v2
 
 ### WR-08 Results sections follow one shape
@@ -113,7 +113,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Repeated caveats dilute the findings and waste pages.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-polish, check-loop
+- Owner: sv-write-polish, sv-review-loop
 - Src: arc:@senior-a-comments:158-171; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H11
 
 ### WR-11 Page budget filled by priority
@@ -135,7 +135,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Synonym drift makes reviewers think two things are being measured.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, sv-write-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: arc:@senior-a-comments:1-3; arc:AH-01@v2; arc:01-checklist/checklist.md W10; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H19
 
 ### WR-13 Define before use
@@ -143,7 +143,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: A forward dependency forces the reader to guess.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: skill:writing-shape
 
 ### WR-14 Macros for repeated labels
@@ -161,7 +161,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Internal names mean nothing to reviewers.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-polish, check-loop
+- Owner: sv-write-polish, sv-review-loop
 - Src: arc:@advisor-glimpse; arc:ol:e03c20a
 
 ## 4. Numbers and claims
@@ -181,7 +181,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: A share without a denominator cannot be checked or compared.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:@senior-a-comments:38-43; note:n07§B.5
 
 ### WR-18 Hedge interpretations, not measurements
@@ -200,7 +200,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Unscoped claims are the first thing a reviewer attacks.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:msr:24d8c65; note:n06§2.6; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H2
 
 ### WR-20 Nothing claimed that was not measured
@@ -210,7 +210,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Reviewers check claims against the method section.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-section, check-loop, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-loop, sv-review-once
 - Src: arc:CF-12@v2; arc:01-checklist/checklist.md W9; arc:msr:9c69675; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### WR-21 Causal words need a causal design
@@ -219,7 +219,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: An observational study cannot carry causal language.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:msr:9c69675; note:n06§2.6
 
 ### WR-22 Results and implications kept apart
@@ -228,7 +228,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: New numbers in implications have no method behind them.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:01-checklist/checklist.md C6; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H4
 
 ### WR-23 Effect-size words match a stated scale
@@ -237,7 +237,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Unanchored adjectives overstate small effects.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:RS-02@v2; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H18
 
 ### WR-24 Novelty claims scoped and stated once
@@ -289,7 +289,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Fabricated or hallucinated citations are a desk-reject ground.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, sv-write-section, check-loop
+- Owner: sv-review-once, sv-write-section, sv-review-loop
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; up:skills/sv-write-section/references/verification-checklist.md; arc:01-checklist/checklist.md R3
 
 ### WR-29 References checked against an authoritative index
@@ -300,7 +300,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
   wrong reference can trigger a desk reject.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, sv-write-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-09-29T11:44; arc:chat:group@2026-10-03T19:18; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G4; note:n08§5#9
 
 ### WR-30 Bibliography matches the text both ways
@@ -309,7 +309,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Uncited entries and broken keys are visible formatting errors.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-polish, pre-submission-reviewer
+- Owner: sv-write-polish, sv-review-once
 - Src: up:skills/sv-write-section/references/verification-checklist.md; arc:01-checklist/checklist.md R5
 
 ## 7. Style and de-AI
@@ -323,7 +323,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
   protected content.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-humanize-paper, sv-write-polish, check-loop
+- Owner: sv-write-humanize-paper, sv-write-polish, sv-review-loop
 - Src: skill:deai-paper-writing; skill:avoid-ai-writing; skill:humanize-paper; arc:CF-23@v2; note:n02§11.4
 
 ### WR-32 Punctuation bans only from an overlay or venue
@@ -342,5 +342,5 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: These are the most visible traces of generated text.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-humanize-paper, sv-write-polish, check-loop
+- Owner: sv-write-humanize-paper, sv-write-polish, sv-review-loop
 - Src: up:skills/sv-write-section/references/verification-checklist.md

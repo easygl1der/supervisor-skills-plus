@@ -50,7 +50,7 @@ artifact steps, if any.
   ledger and the verified numbers this skill produces).
 - Recording a decision or updating STATUS in general: `research-records`
   (this skill calls it for ADRs and STATUS rows).
-- Full pre-submission review: `pre-submission-reviewer` (it reruns the
+- Full pre-submission review: `sv-review-once` (it reruns the
   `artifact`, `double-blind` and `integrity` checklists).
 
 ## Step 0: Load context
@@ -234,6 +234,6 @@ script output, the commit, the file and line. A tick without evidence is
 - Method and results prose from verified numbers: `sv-write-section`.
 - Figures from the numbers file: `figure-designer`.
 - Design-time threats and data gaps: `idea-evaluator`; final threats,
-  artifact and anonymity review: `pre-submission-reviewer`.
-- Expert advice on an experiment: `feedback-to-revision` guidance mode.
+  artifact and anonymity review: `sv-review-once`.
+- Expert advice on an experiment: `sv-feedback-revise` guidance mode.
 - After the project: `lessons-harvest`.

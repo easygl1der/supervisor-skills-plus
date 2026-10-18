@@ -40,7 +40,7 @@ Projects add a fourth layer of their own in the project repo (decisions in
 ## When NOT to use this skill
 
 - To draft, polish or review text: use `sv-write-section`, `sv-write-polish`,
-  `check-loop` or `pre-submission-reviewer`, which load this skill themselves.
+  `sv-review-loop` or `sv-review-once`, which load this skill themselves.
 - To learn new rules from a finished project or from expert notes: use
   `lessons-harvest`, which proposes edits to this skill.
 
@@ -123,15 +123,15 @@ not a source.
 
 | File | Run by |
 |---|---|
-| `references/checklists/master.md` | research-supervisor, pre-submission-reviewer |
-| `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, check-loop |
+| `references/checklists/master.md` | research-supervisor, sv-review-once |
+| `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop |
 | `references/checklists/figures.md` | figure-designer, drawio-reconstruction |
-| `references/checklists/threats.md` | idea-evaluator, pre-submission-reviewer |
-| `references/checklists/double-blind.md` | pre-submission-reviewer, experiment-workflow |
-| `references/checklists/artifact.md` | experiment-workflow, pre-submission-reviewer |
-| `references/checklists/venue-submission.md` | pre-submission-reviewer |
-| `references/checklists/integrity.md` | experiment-workflow, pre-submission-reviewer, check-loop |
-| `references/checklists/records.md` | research-records, research-supervisor, feedback-to-revision |
+| `references/checklists/threats.md` | idea-evaluator, sv-review-once |
+| `references/checklists/double-blind.md` | sv-review-once, experiment-workflow |
+| `references/checklists/artifact.md` | experiment-workflow, sv-review-once |
+| `references/checklists/venue-submission.md` | sv-review-once |
+| `references/checklists/integrity.md` | experiment-workflow, sv-review-once, sv-review-loop |
+| `references/checklists/records.md` | research-records, research-supervisor, sv-feedback-revise |
 
 See: references/checklists/master.md
 

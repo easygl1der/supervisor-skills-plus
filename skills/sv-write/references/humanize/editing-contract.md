@@ -187,7 +187,7 @@ Every run that edits ends with these four items, written from the delivered
 text, not from the plan:
 
 - **Editing passes:** number used and the limit (default: one pass plus at
-  most one corrective pass; `check-loop` sets its own round budget).
+  most one corrective pass; `sv-review-loop` sets its own round budget).
 - **Checks:** what ran and how: scripts (deterministic), model reading
   (model-only), or unavailable. This library ships no detector; say
   "model-only" unless the project provides one.
@@ -203,7 +203,7 @@ Report-only modes state "0 editing passes".
 
 Reviewer and co-author notes in the source (`\todo{}`, a senior's macro,
 `% note:` lines) are editing requests with an owner. Resolving them,
-recording Done notes and deciding who may close them is `feedback-to-revision`
+recording Done notes and deciding who may close them is `sv-feedback-revise`
 work. A de-AI pass leaves these markers in place and never hides them.
 [src: note:n02§3; note:n05§6] (confirmed)
 

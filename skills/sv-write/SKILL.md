@@ -41,7 +41,7 @@ asked for that sequence.
 | remove AI tone from a proposal, rebuttal letter or email | `sv-write-humanize-letter` |
 | de-AI audit only, gate check, report without edits | `sv-write-humanize-audit` |
 | dissect an exemplar, build a venue, field or author profile, find a journal's new papers, borrow methods | `sv-write-style-mine` |
-| revise my paper for a venue, does this fit the venue (check-loop round 2) | `sv-write-style-apply` |
+| revise my paper for a venue, does this fit the venue (sv-review-loop round 2) | `sv-write-style-apply` |
 
 ## Shared references
 
@@ -59,9 +59,9 @@ See: references/humanize/core.md
 
 ## Hand-offs outside this group
 
-- Multi-round checks after any writing step: `check-loop`.
-- Reviewer-style audit of a finished manuscript: `pre-submission-reviewer`.
-- Comments from co-authors, advisors or reviewers: `feedback-to-revision`.
+- Multi-round checks after any writing step: `sv-review-loop`.
+- Reviewer-style audit of a finished manuscript: `sv-review-once`.
+- Comments from co-authors, advisors or reviewers: `sv-feedback-revise`.
 - Whether the idea holds at all: `idea-evaluator`.
 - Figures: `figure-designer`.
 - Rule changes learned from writing work: `lessons-harvest`.

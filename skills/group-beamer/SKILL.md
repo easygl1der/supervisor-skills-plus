@@ -178,7 +178,7 @@ exported `notes.md`.
 - `figure-designer`: TikZ DAGs; Graphviz PDF only for large or changing graphs.
 - `research-records`: accumulation and last-week next steps.
 - `sv-write-humanize-slides`: `slides` profile on frames; `academic` on `\note{}`.
-- `pre-submission-reviewer` devil's-advocate pass plus
+- `sv-review-once` devil's-advocate pass plus
   `research-core` `fields/causal.md` reviewer questions, as the substitute
   for a missing Critic checklist.
 - `sv-write-style-mine`: later fill of `group-preferences.md` from past decks.

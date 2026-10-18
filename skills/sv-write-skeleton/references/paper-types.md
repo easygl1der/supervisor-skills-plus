@@ -26,7 +26,7 @@ the first planning decision.
   `idea-evaluator` framework is emphasised in the Introduction.
 
 Benchmark papers are a separate category; use
-`sv-write-skeleton` (separate plugin).
+`sv-write-skeleton` (benchmark route).
 
 ## 2. Technique Paper
 
@@ -99,7 +99,7 @@ neural architecture search) into agent-workflow design.
 Ask the following in order. First yes decides:
 
 1. Is the paper's primary contribution a benchmark? If yes, stop
-   and redirect to `sv-write-skeleton` (separate plugin).
+   and redirect to `sv-write-skeleton` (benchmark route).
 2. Is the paper's primary contribution a new problem formulation
    that the community has not studied? If yes, New Problem/Setting.
 3. Is the paper's primary contribution a technique transplanted

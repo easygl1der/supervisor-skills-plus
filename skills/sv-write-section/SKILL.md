@@ -54,9 +54,9 @@ See: ../sv-write/references/empirical-study-skeleton.md
 
 ## Hand-offs
 
-- After a draft: `check-loop`, offered at the end of every full-section
+- After a draft: `sv-review-loop`, offered at the end of every full-section
   delivery.
 - A light language pass: `sv-write-polish`; AI tone: `sv-write-humanize-paper`.
 - Venue style from exemplars: `sv-write-style-apply`.
-- Comments on the draft: `feedback-to-revision`.
-- The core claim may not hold: `pre-submission-reviewer` or `idea-evaluator`.
+- Comments on the draft: `sv-feedback-revise`.
+- The core claim may not hold: `sv-review-once` or `idea-evaluator`.

@@ -37,4 +37,4 @@ See: ../sv-write/references/ai-tone-guardrails.md
 - Report-only gate: `sv-write-humanize-audit`.
 - Claims beyond the evidence or a missing ledger: `sv-write-section`.
 - Grammar and fluency only: `sv-write-polish`.
-- Inline co-author notes: `feedback-to-revision`.
+- Inline co-author notes: `sv-feedback-revise`.

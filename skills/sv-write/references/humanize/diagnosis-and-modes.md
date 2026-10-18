@@ -304,7 +304,7 @@ that looks inconsistent with another becomes
 
 ## 9. Mode `audit` (scores and gate, no edits)
 
-Report-only. Used by `check-loop` round check 3 and before submission.
+Report-only. Used by `sv-review-loop` round check 3 and before submission.
 
 Score each axis 0 to 5 (5 = no trace). For any score of 3 or less, quote the
 two worst instances with locations.
@@ -337,7 +337,7 @@ Gate: PASS only if every axis is 4 or more and all five tests pass;
 otherwise FAIL with the smallest set of changes that would flip it, in
 priority order.
 
-Finding list (the part `check-loop` consumes): one row per finding.
+Finding list (the part `sv-review-loop` consumes): one row per finding.
 
 | Finding id | Location (file:line or section + first words) | Syndrome / pattern | Severity (P0 / P1 / P2) | Rule source | Proposed edit | Edit class |
 |---|---|---|---|---|---|---|

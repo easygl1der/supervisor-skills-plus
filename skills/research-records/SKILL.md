@@ -24,9 +24,9 @@ docs/
   STATUS.md     current state only; replace, never append
   TODO.md       actionable items with owners and IDs
   adr/          numbered decisions with alternatives; superseded, never edited
-  log/          dated notes: meetings, check-loop reports, runs of the day
-  feedback/     response tables (feedback-to-revision)
-  guidance/     expert guidance records (feedback-to-revision)
+  log/          dated notes: meetings, sv-review-loop reports, runs of the day
+  feedback/     response tables (sv-feedback-revise)
+  guidance/     expert guidance records (sv-feedback-guidance)
   runs.md       experiment runs (experiment-workflow)
   notes/        scratch explorations; must be promoted, decided or archived
 ```
@@ -50,8 +50,8 @@ deadline, and decisions referenced only by tracker ids lost their text
 
 ## When NOT to use this skill
 
-- Editing the manuscript: use `sv-write-section`, `sv-write-polish`, `check-loop`.
-- Tracking comments on the manuscript: use `feedback-to-revision` (it writes
+- Editing the manuscript: use `sv-write-section`, `sv-write-polish`, `sv-review-loop`.
+- Tracking comments on the manuscript: use `sv-feedback-revise` (it writes
   into `docs/feedback/` and `docs/guidance/` with this skill's conventions).
 - Logging experiment runs in detail: use `experiment-workflow`.
 
@@ -80,7 +80,7 @@ Load `research-core` (core rules in `references/core/records.md` and
    data version.
 3. Runs: ran, failed or partial, never deleted.
 4. Parked material, open reviewer markers, open guidance actions: refresh from
-   `feedback-to-revision` scripts (`list_markers.py`, `guidance_review.py`).
+   `sv-feedback` scripts (`list_markers.py`, `guidance_review.py`).
 5. Deadline: only from a dated official source.
 
 ## Task 3: Record a decision (ADR)

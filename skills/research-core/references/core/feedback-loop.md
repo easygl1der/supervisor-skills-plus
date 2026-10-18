@@ -1,6 +1,6 @@
 # Feedback-to-revision principles
 
-The procedure is in `feedback-to-revision`. These principles bind every
+The procedure is in `sv-feedback-revise`. These principles bind every
 skill that acts on comments.
 
 1. **Stable IDs.** Every comment gets an ID at intake (`FB-<origin>-<nn>`)

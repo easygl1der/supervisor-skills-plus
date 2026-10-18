@@ -1,6 +1,6 @@
 # <YYYY-MM-DD> <topic>
 
-Kind: meeting | check-loop | run | note
+Kind: meeting | sv-review-loop | run | note
 Participants: <roles>
 
 ## What happened

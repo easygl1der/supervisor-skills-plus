@@ -39,6 +39,8 @@ RENAMED = {
     "paper-writer": "sv-write-section", "intro-drafter": "sv-write-intro",
     "tech-paper-template": "sv-write-skeleton", "benchmark-paper-template": "sv-write-skeleton",
     "paper-polish": "sv-write-polish", "deai-writing": "sv-write", "style-mine": "sv-write-style-mine",
+    "pre-submission-reviewer": "sv-review-once", "check-loop": "sv-review-loop",
+    "feedback-to-revision": "sv-feedback", "rebuttal-guidance": "sv-feedback-rebuttal",
 }
 
 SRC_BLOCK = re.compile(r"\[src:\s*([^\]]+)\]")

@@ -28,7 +28,7 @@ notes and a before/after list for meaning-risk edits.
 
 Does not: Chinese-to-English rewriting (`sv-write-translate`), the full
 de-AI contract (`sv-write-humanize-paper`), redrafting a broken section
-(`sv-write-section`), repeated rounds (`check-loop`).
+(`sv-write-section`), repeated rounds (`sv-review-loop`).
 
 ## Load by need
 
@@ -53,7 +53,7 @@ See: ../sv-write/references/ai-tone-guardrails.md
 - Heavy AI tone, or a de-AI audit under the full contract:
   `sv-write-humanize-paper` or `sv-write-humanize-audit`.
 - The section needs redrafting: `sv-write-section`.
-- A claim the data may not support: `pre-submission-reviewer` or
+- A claim the data may not support: `sv-review-once` or
   `idea-evaluator`.
-- A re-check after these edits: `check-loop`.
-- Comments to work through: `feedback-to-revision`.
+- A re-check after these edits: `sv-review-loop`.
+- Comments to work through: `sv-feedback-revise`.

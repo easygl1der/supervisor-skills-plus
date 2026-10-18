@@ -12,7 +12,7 @@
 ## 1. Shared base: the response table
 
 Every format is rendered from the round's table in `docs/feedback/<round>.md`
-(built by `feedback-to-revision` from the research-core
+(built by `sv-feedback-revise` from the research-core
 `response-table.md` template). One row per comment:
 
 | Column | Used for |

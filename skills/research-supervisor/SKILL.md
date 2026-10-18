@@ -100,7 +100,7 @@ python scripts/session_brief.py <project_dir> [--paper-dir paper/]
 
 It reports the stage in `research.yaml` and the stage the signals suggest,
 blockers from `docs/STATUS.md`, overdue guidance actions and done-without-
-evidence actions (`feedback-to-revision` `guidance_review.py`), open,
+evidence actions (`sv-feedback` `guidance_review.py`), open,
 commented-out and hidden reviewer markers (`list_markers.py`), unverified
 feedback rows, the next deadline with its source, and records warnings.
 
@@ -129,16 +129,16 @@ brief showed (a blocker, a marker count, days to deadline).
 | experiments | `experiment-workflow`, `research-records`, `vibe-research-workflow` (agent coding habits) |
 | writing | `sv-write` (routes to skeleton, intro, section, style and humanize sub-commands) |
 | figures | `figure-designer`, `drawio-reconstruction` |
-| internal-review | `feedback-to-revision`, `check-loop`, `sv-write-polish` |
-| submission | `pre-submission-reviewer`, `check-loop`, `experiment-workflow` (artifact, numbers check) |
-| rebuttal | `feedback-to-revision`, `rebuttal-guidance` |
+| internal-review | `sv-feedback-revise`, `sv-review-loop`, `sv-write-polish` |
+| submission | `sv-review-once`, `sv-review-loop`, `experiment-workflow` (artifact, numbers check) |
+| rebuttal | `sv-feedback` (revise, then rebuttal) |
 | camera-ready | `sv-write-polish`, `experiment-workflow` (de-anonymized artifact), `research-records` (tag the submitted version) |
 | project finished, or expert notes arrived | `lessons-harvest` |
 
 Overrides from the brief:
-- Deadline within 7 days and no read-only full check yet: `pre-submission-reviewer`
+- Deadline within 7 days and no read-only full check yet: `sv-review-once`
   first, at least one day before the deadline.
-- Overdue guidance or unverified feedback: `feedback-to-revision`.
+- Overdue guidance or unverified feedback: `sv-feedback-guidance`, `sv-feedback-revise`.
 - Source of truth unnamed, STATUS stale, deadline without source:
   `research-records`.
 - Printed numbers without verified rows, or an agreement value without raw

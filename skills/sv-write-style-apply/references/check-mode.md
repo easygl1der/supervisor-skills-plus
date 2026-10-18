@@ -1,4 +1,4 @@
-# Check mode (check-loop round 2)
+# Check mode (sv-review-loop round 2)
 
 ## Contents
 1. Contract
@@ -13,10 +13,10 @@
 Check mode is **report-only**. It reads text and reports where the text
 deviates from the dynamic writing skill and the venue profile. It never
 edits files, never proposes replacement wording that adds facts, and never
-touches P1 content. `check-loop` decides which findings become edits and
+touches P1 content. `sv-review-loop` decides which findings become edits and
 applies them through its own authorized-edit step. [src: up:DESIGN.md]
 
-It runs as the second check of each check-loop round: research fit first,
+It runs as the second check of each sv-review-loop round: research fit first,
 then venue and field style fit (this mode), then language and de-AI.
 
 ## 2. Inputs
@@ -28,7 +28,7 @@ then venue and field style fit (this mode), then language and de-AI.
 - `research-core/references/venues/<venue>.md` and the field profile.
 - Locked decisions: `docs/adr/` and the project's term table. A finding that
   would flip a locked decision is reported as `locked`, not as a deviation.
-- From check-loop: the round number and the spans changed in the previous
+- From sv-review-loop: the round number and the spans changed in the previous
   round (to support its oscillation guard).
 
 ## 3. What is checked
@@ -88,12 +88,12 @@ Coverage: full | reduced (<reason>)
 <what was out of scope or had no rule>
 ```
 
-Return the report to `check-loop`, which records it in its round log.
+Return the report to `sv-review-loop`, which records it in its round log.
 
 ## 6. Standalone use
 
-Run outside check-loop when the user asks "does this section fit the
+Run outside sv-review-loop when the user asks "does this section fit the
 venue?". Write the report to `docs/log/<date>-style-mine-check.md` (use
 the research-core `log-entry.md` header) and make no edits. To act on the
 findings, use Phase 2 of this skill (one section at a time, with a revision
-log) or `check-loop`.
+log) or `sv-review-loop`.

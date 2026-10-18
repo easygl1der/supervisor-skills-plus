@@ -1,17 +1,22 @@
----
-name: pre-submission-reviewer
-description: >-
-  Runs a pre-submission review of a technical paper across five dimensions
-  (macro logic, writing details, English grammar, LaTeX formatting, figure
-  quality) with CRITICAL / MAJOR / MINOR severity, then runs the
-  research-core threats, double-blind, artifact, venue-submission and
-  integrity checklists, a devil's-advocate pass and a submission-day runbook. Use when
-  the user asks to 'review this paper', 'audit before submission', 'check
-  the draft', 'proofread', or one day to one week before a deadline.
-license: CC-BY-4.0
----
+<!-- Moved from skills/sv-review-once/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Pre-Submission Reviewer
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Core procedure
+- Severity taxonomy
+- Integrity gate
+- Output format
+- One day before the deadline
+- Submission day
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -54,8 +59,8 @@ field profile when one is loaded.
 
 ## When NOT to use this skill
 
-- The paper is still being structured. Use `sv-write-skeleton`,
-  `sv-write-intro`, or `sv-write-skeleton` (separate plugin) first.
+- The paper is still being structured. Use `sv-write-skeleton` or
+  `sv-write-intro` first.
 - The user wants structural advice rather than review. Use the
   drafting skills instead.
 
@@ -130,7 +135,7 @@ better-fitting venues.
 
 ### Step 1: Dimension 1 Macro logic review
 
-See: references/logic-and-structure.md for the Logic First rule,
+See also `logic-and-structure.md` for the Logic First rule,
 Self-contained rule, Leading Text rule, and Running Example rule.
 
 Check:
@@ -176,7 +181,7 @@ capability, skip these two checks and say so in the summary.
 
 ### Step 2: Dimension 2 Writing details review
 
-See: references/logic-and-structure.md for paragraph-level rules.
+See also `logic-and-structure.md` for paragraph-level rules.
 
 Check:
 
@@ -188,7 +193,7 @@ Check:
 
 ### Step 3: Dimension 3 English grammar review
 
-See: references/grammar-rules.md for the canonical list of errors
+See also `grammar-rules.md` for the canonical list of errors
 common to non-native English authors, with corrections and
 examples.
 
@@ -204,7 +209,7 @@ Check the usual suspects:
 
 ### Step 4: Dimension 4 LaTeX format review
 
-See: references/latex-rules.md for the canonical list of LaTeX-
+See also `latex-rules.md` for the canonical list of LaTeX-
 specific issues.
 
 Check:
@@ -220,7 +225,7 @@ Check:
 
 ### Step 5: Dimension 5 Figure quality review
 
-See: references/forbidden-patterns.md for chartjunk patterns and
+See also `forbidden-patterns.md` for chartjunk patterns and
 the full figure-quality checklist.
 
 For each figure:
@@ -235,7 +240,7 @@ For each figure:
 
 ### Step 6: Banned-vocabulary and em-dash scan
 
-See: references/forbidden-patterns.md for the banned-word list.
+See also `forbidden-patterns.md` for the banned-word list.
 
 Scan the full paper for:
 
@@ -254,7 +259,7 @@ more times.
 
 ### Step 7: Section-by-section review
 
-See: references/section-guides.md for the per-section writing
+See also `section-guides.md` for the per-section writing
 guides for Abstract, Introduction, Problem Formulation, Framework
 or Method, Experiments, Related Work, and Conclusion.
 
@@ -306,7 +311,7 @@ write the strongest counter-argument a hostile but fair reviewer could
 build from the paper's own numbers, tables and threats, and say where the
 paper answers it. This is MA-05 and, for SE, SE-19.
 
-See: references/devils-advocate-pass.md
+See also `devils-advocate-pass.md`
 
 ### Step 8: Integrity gate
 
@@ -359,7 +364,7 @@ Before emitting the review:
 4. **[inspection]** Severity assignments follow the taxonomy;
    nothing is marked CRITICAL for taste reasons.
 5. **[inspection]** Dimension 3 (grammar) findings cite the
-   specific grammar rule from `references/grammar-rules.md`.
+   specific grammar rule from `grammar-rules.md`.
 6. **[attestation]** Dimension 6 banned-vocabulary scan is run in
    full on the entire paper, not sampled. The skill attests the
    full scan; if the paper is extremely long, the skill states it
@@ -450,7 +455,7 @@ upload, one editor at a time, plain-text abstract, metadata already
 entered, anonymous mirror re-checked, and after the deadline the
 submitted version synced back and tagged.
 
-See: references/submission-day-runbook.md
+See also `submission-day-runbook.md`
 
 ## Checklist
 
@@ -462,7 +467,7 @@ This skill runs, and reports pass, fail, n/a or unknown with evidence:
 - field and venue additions whose `Scope` matches the project.
 
 `writing.md` and `figures.md` are covered by Dimensions 1 to 5 and by
-`check-loop`; cite their IDs when a dimension finding matches one.
+`sv-review-loop`; cite their IDs when a dimension finding matches one.
 
 ## Outputs
 
@@ -473,12 +478,12 @@ This skill runs, and reports pass, fail, n/a or unknown with evidence:
 
 ## Hand-offs
 
-- Fixing findings raised as comments: `feedback-to-revision` (each finding
+- Fixing findings raised as comments: `sv-feedback-revise` (each finding
   becomes an `FB-AG-<nn>` item).
-- Language and style rounds after fixes: `check-loop`, `sv-write-polish`.
+- Language and style rounds after fixes: `sv-review-loop`, `sv-write-polish`.
 - Artifact rebuild, anonymous mirror and number regeneration:
   `experiment-workflow`.
 - Recording the source-of-truth switch, the tag and the TODOs:
   `research-records`.
-- Reviewer reports after submission: `feedback-to-revision`, then
-  `rebuttal-guidance`.
+- Reviewer reports after submission: `sv-feedback-revise`, then
+  `sv-feedback-rebuttal`.

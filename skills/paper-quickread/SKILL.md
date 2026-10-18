@@ -53,7 +53,7 @@ follows the user's language when the user writes in another.
 - The user wants to understand a concept, method or proof in the paper:
   `study` (paper mode). It reuses this card if one exists.
 - Several papers, a survey or a related-work section: `deep-research`.
-- Reviewing the user's own manuscript: `pre-submission-reviewer`.
+- Reviewing the user's own manuscript: `sv-review-once`.
 - Building a venue's style profile from many exemplars: `sv-write-style-mine`.
 
 ## Step 0: Load context

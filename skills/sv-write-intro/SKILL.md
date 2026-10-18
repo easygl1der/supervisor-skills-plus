@@ -52,4 +52,4 @@ See: ../sv-write/references/citation-style.md
 - The rest of the paper or the claim ledger: `sv-write-section`.
 - Stiff prose afterwards: `sv-write-polish`; AI tone: `sv-write-humanize-paper`.
 - Contribution format from exemplars: `sv-write-style-apply`.
-- Multi-round checks: `check-loop`.
+- Multi-round checks: `sv-review-loop`.

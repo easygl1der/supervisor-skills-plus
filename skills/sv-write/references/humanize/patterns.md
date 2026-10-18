@@ -49,9 +49,9 @@ The library keeps one canonical list: `sv-write-polish`
 with this catalog; this file adds tiers, thresholds and the academic profile
 rather than a second list. [src: up:skills/sv-write/references/ai-tone-guardrails.md] (confirmed)
 
-The words that `pre-submission-reviewer` `references/forbidden-patterns.md`
+The words that `sv-review-once` `references/forbidden-patterns.md`
 section 2 flagged beyond the canonical list are now merged into it (Tier 2).
-[src: up:skills/pre-submission-reviewer/references/forbidden-patterns.md] (confirmed)
+[src: up:skills/sv-review-once/references/forbidden-patterns.md] (confirmed)
 
 That file's blanket em-dash ban is not adopted as a default: in the
 `academic` profile punctuation defers to the venue and overlays (section 8).

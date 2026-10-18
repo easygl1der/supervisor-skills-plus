@@ -55,7 +55,7 @@ palette was judged "too AI" in the group chat (`arc:chat:group@2026-10-02T22:28`
 - A draft or section reads as generated (by a model or by an author on
   autopilot) and should not.
 - Before an internal review or submission, as a report-only audit.
-- `check-loop` round check 3 calls this skill in `audit` mode.
+- `sv-review-loop` round check 3 calls this skill in `audit` mode.
 - Numbers in prose look like a lab notebook (decimals, p-values inline).
 
 ## When NOT to use this skill
@@ -63,9 +63,9 @@ palette was judged "too AI" in the group chat (`arc:chat:group@2026-10-02T22:28`
 - Grammar, fluency or a first language pass on one section: `sv-write-polish`.
 - Claims that do not match the evidence or a missing claim ledger:
   `sv-write-section` first; this skill reports such gaps, it does not fill them.
-- Resolving co-author or reviewer notes in the source: `feedback-to-revision`.
+- Resolving co-author or reviewer notes in the source: `sv-feedback-revise`.
 - Multi-round passes across research fit, venue fit and language:
-  `check-loop`, which calls this skill for the language part.
+  `sv-review-loop`, which calls this skill for the language part.
 - Judging whether someone used AI. The catalog gives signals, not proof.
 
 ## Step 0: Load context
@@ -154,9 +154,9 @@ named scope with minimal wording edits; a gate request runs `audit`. Run order
 for a whole paper: `diagnose`, `full` (or `section` on the worst sections),
 `numbers`, then `audit`.
 
-### `audit` mode and `check-loop`
+### `audit` mode and `sv-review-loop`
 
-`audit` never edits. Its finding list is the interface to `check-loop`: one
+`audit` never edits. Its finding list is the interface to `sv-review-loop`: one
 row per finding with id, location, syndrome or pattern, severity (P0, P1,
 P2), rule source, proposed edit and edit class:
 
@@ -165,7 +165,7 @@ P2), rule source, proposed edit and edit class:
 - `needs-author`: needs content, a decision, or touches a locked span;
 - `report-only`: judgment call, protected content, or out of scope.
 
-`check-loop` decides which `authorized-if-run` findings to apply in its round
+`sv-review-loop` decides which `authorized-if-run` findings to apply in its round
 and records them. Finding ids are `DA-<nn>` within one audit run.
 
 ## Pattern catalog and the academic profile
@@ -241,7 +241,7 @@ Report-only modes state 0 editing passes. [src: skill:avoid-ai-writing] (confirm
 ## Inline notes
 
 Notes such as `\todo{}` or a senior's comment macro are requests with an
-owner. Leave them in place and hand them to `feedback-to-revision`; never
+owner. Leave them in place and hand them to `sv-feedback-revise`; never
 hide or resolve them here.
 
 ## Checklist
@@ -271,15 +271,15 @@ Items with `Status: candidate` are advisory.
   verification block.
 - `audit`: scores, tests, gate, finding list with edit classes; no edits.
 - When run inside a project, a dated note in `docs/log/` if the user asks;
-  `check-loop` writes its own log.
+  `sv-review-loop` writes its own log.
 
 ## Hand-offs
 
-- Multi-round checking with research and venue fit: `check-loop`.
+- Multi-round checking with research and venue fit: `sv-review-loop`.
 - Claims beyond the evidence, a missing spine or ledger: `sv-write-section`.
 - Venue style deviations: `sv-write-style-apply` check mode.
 - Single-pass fluency and grammar: `sv-write-polish`.
-- Inline co-author and reviewer notes: `feedback-to-revision`.
+- Inline co-author and reviewer notes: `sv-feedback-revise`.
 - Figures that look generated: `figure-designer`.
 - Recurring tells across projects: `lessons-harvest` proposes catalog or
   profile changes.

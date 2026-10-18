@@ -161,7 +161,7 @@ method block states, in this order:
   implicit.
 - Status: candidate
 - Scope: field:ci
-- Owner: sv-write-section, pre-submission-reviewer, proposal-writer
+- Owner: sv-write-section, sv-review-once, proposal-writer
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ### CI-02 Identifying assumptions labelled and shown to bind
@@ -171,7 +171,7 @@ method block states, in this order:
   complaint at methods venues.
 - Status: candidate
 - Scope: field:ci
-- Owner: sv-write-section, pre-submission-reviewer, check-loop
+- Owner: sv-write-section, sv-review-once, sv-review-loop
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ### CI-03 Inference justified by a stated result
@@ -182,7 +182,7 @@ method block states, in this order:
   rejection reason.
 - Status: candidate
 - Scope: field:ci
-- Owner: pre-submission-reviewer, check-loop, experiment-workflow
+- Owner: sv-review-once, sv-review-loop, experiment-workflow
 - Src: guide:AJS/ecta-identification@932eb23
 
 ### CI-04 Weak or boundary identification handled
@@ -192,7 +192,7 @@ method block states, in this order:
 - Why: Pointwise asymptotics mislead in exactly these regimes.
 - Status: candidate
 - Scope: field:ci
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: experiment-workflow, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### CI-05 Sensitivity analysis for the weakest assumption
@@ -201,7 +201,7 @@ method block states, in this order:
 - Why: A design is only as credible as its least plausible assumption.
 - Status: candidate
 - Scope: field:ci
-- Owner: experiment-workflow, sv-write-section, pre-submission-reviewer
+- Owner: experiment-workflow, sv-write-section, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### CI-06 Claims limited to identified objects
@@ -210,7 +210,7 @@ method block states, in this order:
 - Why: Claims beyond the identified set are unsupported by the design.
 - Status: candidate
 - Scope: field:ci
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: guide:AJS/ecta-identification@932eb23
 
 ### CI-07 Quick-read method block complete

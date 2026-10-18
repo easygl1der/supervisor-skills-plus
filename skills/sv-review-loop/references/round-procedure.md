@@ -1,6 +1,6 @@
 # Round procedure
 
-The detailed procedure behind `check-loop`: setup, the three checks and the
+The detailed procedure behind `sv-review-loop`: setup, the three checks and the
 regression re-run, which findings the loop may apply on its own, how changes
 are recorded, the oscillation guard, and the stop rules.
 

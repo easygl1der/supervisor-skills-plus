@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Record the spans each check-loop round changed and flag reversions.
+"""Record the spans each sv-review-loop round changed and flag reversions.
 
 Usage:
     python span_guard.py check  <repo> --state FILE --round K --check C --rule R

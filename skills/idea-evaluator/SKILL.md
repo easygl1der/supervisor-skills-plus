@@ -44,14 +44,14 @@ writing begins.
 
 - The user has already implemented the idea and is writing the paper.
   Use `sv-write-intro`, `sv-write-skeleton`, or
-  `sv-write-skeleton` (separate plugin) instead.
+  `sv-write-skeleton` (benchmark route) instead.
 - The user explicitly wants brainstorming of new ideas from scratch.
   Use plain conversation; see handbook 2.3 for a disruptive-innovation
   playbook.
 - The user asks for review of an existing manuscript. Use
-  `pre-submission-reviewer`.
+  `sv-review-once`.
 - The user asks to evaluate a benchmark contribution specifically.
-  Use `sv-write-skeleton` (separate plugin) in targeted mode.
+  Use `sv-write-skeleton` (benchmark route) in targeted mode.
 
 ## Step 0: Load context
 

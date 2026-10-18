@@ -48,7 +48,7 @@ self-contained caption, honest axis ranges).
   `sv-write-skeleton` first to decide what figures the paper
   needs.
 - The user wants a review of an already-finished paper. Use
-  `pre-submission-reviewer`.
+  `sv-review-once`.
 
 ## Core procedure
 
@@ -286,7 +286,7 @@ the commit that regenerated the PDF. Vision-only items without an image are
 - Method text that must change to mirror the overview: `sv-write-section`.
 - Introduction figure and its running example: `sv-write-intro`.
 - Number traces that reach the analysis scripts: `experiment-workflow`
-  and `check-loop`.
-- Senior or reviewer comments on figures: `feedback-to-revision`.
+  and `sv-review-loop`.
+- Senior or reviewer comments on figures: `sv-feedback-revise`.
 - Draft decisions (which variant won and why): `research-records`.
-- Final pre-submission figure review: `pre-submission-reviewer`.
+- Final pre-submission figure review: `sv-review-once`.

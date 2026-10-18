@@ -196,7 +196,7 @@ data sentence. [src: skill:se-paper-refinement] (candidate)
   person-specific quotes and the source paper's vocabulary.
   [src: note:n02§11.2] (candidate)
 - "Fix every comment as requested, do not argue": comment triage belongs
-  to `feedback-to-revision`. [src: note:n02§11.8; note:n02§10] (candidate)
+  to `sv-feedback-revise`. [src: note:n02§11.8; note:n02§10] (candidate)
 - "Eliminate hedging" and "numbers first, interpretation second": both
   contradicted by the rules above. [src: note:n02§11.1] (confirmed)
 - Present-tense-only for findings: tense is unresolved for SE; the field

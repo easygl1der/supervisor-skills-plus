@@ -27,7 +27,7 @@ upstream notation rules. Core rules are not repeated here.
 4. Owner skill `sv-write-style-mine`, base rules `general_academic.md`.
 5. Upstream notation and equation rules:
    `handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md`,
-   `skills/pre-submission-reviewer/references/latex-rules.md`,
+   `skills/sv-review-once/references/latex-rules.md`,
    `skills/sv-write-section/references/verification-checklist.md`.
 6. Gap analysis of upstream for mathematics: `notes/01-upstream-map.md` §5.2.
 
@@ -38,7 +38,7 @@ upstream notation rules. Core rules are not repeated here.
 - For theory papers, the proofs play the role that experiments play
   elsewhere: review the proofs, and never call the evidence thin because
   there is no results table.
-  [src: up:skills/pre-submission-reviewer/SKILL.md] (confirmed)
+  [src: up:skills/sv-review-once/references/procedure.md] (confirmed)
 Other types (expository, survey, problem papers, computational
 mathematics) are Unknown.
 
@@ -141,7 +141,7 @@ Other figure conventions for mathematics papers are Unknown.
   `\label` and `\cref`; never use `\tag{}` for references.
   [src: skill:paper; skill:academic-author-team] (confirmed)
 - Every numbered equation is referenced in the text; otherwise use an
-  unnumbered environment. [src: up:skills/pre-submission-reviewer/references/latex-rules.md; skill:style-mine] (confirmed)
+  unnumbered environment. [src: up:skills/sv-review-once/references/latex-rules.md; skill:style-mine] (confirmed)
 - Use `\mathbf` for vectors and `\boldsymbol` for matrices (not `\bm`),
   `\mathbb{I}` for the indicator, `\mathbb{P}` and `\mathbb{E}` for
   probability and expectation, `n_1` and never Unicode subscripts, and no
@@ -155,7 +155,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A statement with hidden assumptions cannot be checked or reused.
 - Status: confirmed
 - Scope: field:mt
-- Owner: sv-write-section, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: skill:paper
 
 ### MT-02 No hidden proof obligations
@@ -164,7 +164,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: These phrases hide the gaps a referee will find.
 - Status: confirmed
 - Scope: field:mt
-- Owner: sv-write-polish, check-loop, pre-submission-reviewer
+- Owner: sv-write-polish, sv-review-loop, sv-review-once
 - Src: skill:paper
 
 ### MT-03 Proof review done and reported honestly
@@ -174,7 +174,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A review is not a proof check by machine.
 - Status: confirmed
 - Scope: field:mt
-- Owner: pre-submission-reviewer, check-loop
+- Owner: sv-review-once, sv-review-loop
 - Src: skill:proof-review-math
 
 ### MT-04 Notation consistent and introduced
@@ -183,7 +183,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: Symbol drift makes proofs hard to check.
 - Status: confirmed
 - Scope: field:mt
-- Owner: sv-write-section, sv-write-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: skill:paper; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
 
 ### MT-05 Equations referenced and labelled
@@ -192,8 +192,8 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: Unreferenced numbers clutter the page; tags break when sections move.
 - Status: confirmed
 - Scope: field:mt
-- Owner: sv-write-polish, pre-submission-reviewer
-- Src: up:skills/pre-submission-reviewer/references/latex-rules.md; skill:academic-author-team
+- Owner: sv-write-polish, sv-review-once
+- Src: up:skills/sv-review-once/references/latex-rules.md; skill:academic-author-team
 
 ### MT-06 Body and appendix split
 - [ ] Check: Long computations and proof expansions sit in the appendix; the
@@ -210,7 +210,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A wrong citation for a key lemma breaks the proof.
 - Status: confirmed
 - Scope: field:mt
-- Owner: sv-write-section, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: skill:paper; skill:theorem-search-math
 
 ### MT-08 Formal verification claims checked
@@ -219,7 +219,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A generated Lean candidate proves nothing until it compiles.
 - Status: confirmed
 - Scope: field:mt
-- Owner: check-loop, pre-submission-reviewer
+- Owner: sv-review-loop, sv-review-once
 - Src: skill:formalize-lean4
 
 ### MT-09 Paper compiles
@@ -228,7 +228,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: Done means a PDF, not a plan.
 - Status: confirmed
 - Scope: field:mt
-- Owner: check-loop
+- Owner: sv-review-loop
 - Src: skill:paper
 
 ## Known disagreements

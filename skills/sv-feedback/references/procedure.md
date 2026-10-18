@@ -1,17 +1,19 @@
----
-name: feedback-to-revision
-description: >-
-  Turns comments from advisors, co-authors, reviewers or agents into tracked
-  revisions: gives each comment an ID, triages it, applies one change per
-  comment with the ID in the commit, verifies the change against the actual
-  diff, and keeps a response table that becomes the rebuttal letter. Also
-  records expert guidance with actions and follow-up. Use when feedback
-  arrives as inline TeX notes, PDF annotations, chat, review reports or
-  meeting advice.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-feedback/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Feedback to Revision
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Mode A: Revision (comments on the manuscript)
+- Mode B: Guidance (expert advice on a paper or experiment)
+- Worked examples
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -40,10 +42,10 @@ were not in the diff (`note:n05`).
 
 ## When NOT to use this skill
 
-- No comments exist and the user wants a review: use `pre-submission-reviewer`.
+- No comments exist and the user wants a review: use `sv-review-once`.
 - Writing the reviewer-facing rebuttal prose: build the table here, then use
-  `rebuttal-guidance`.
-- Pure language polishing: use `sv-write-polish` or `check-loop`.
+  `sv-feedback-rebuttal`.
+- Pure language polishing: use `sv-write-polish` or `sv-review-loop`.
 
 ## Step 0: Load context
 
@@ -75,7 +77,7 @@ Core principles that bind every step: `research-core`
    commented-out notes, notes inside `\iffalse`, switched-off note display
    and parked blocks.
 
-See: references/intake-and-triage.md
+See also `intake-and-triage.md`
 
 ### A2. Triage
 
@@ -100,7 +102,7 @@ rule go to an ADR (`research-records`).
   removes X, so content is never lost in between.
 - Keep the diff minimal; preserve labels, references and protected content.
 
-See: references/apply-and-verify.md
+See also `apply-and-verify.md`
 
 ### A4. Marker lifecycle
 
@@ -130,7 +132,7 @@ Fill the response table: ID, short quote, decision (accept, partial,
 decline with reason, superseded by ID), change summary, location after the
 change (section and label), commit, verification status (`by diff` or
 `pending`). Report counts per status, open items with owners, page delta,
-and conflicts decided. This table feeds `rebuttal-guidance`.
+and conflicts decided. This table feeds `sv-feedback-rebuttal`.
 
 ## Mode B: Guidance (expert advice on a paper or experiment)
 
@@ -151,7 +153,7 @@ and conflicts decided. This table feeds `rebuttal-guidance`.
    actions and actions marked done without evidence. Update the **Follow-up
    check** table with the commit, run id or file that proves each action.
 
-See: references/guidance-mode.md
+See also `guidance-mode.md`
 
 ## Worked examples
 
@@ -160,7 +162,7 @@ inline note, a table mislabelled as a figure, a table reduced to two
 sentences, a procedural opener rewritten, a fast fix that broke a name, and
 an agent report whose fixes never landed.
 
-See: references/worked-examples.md
+See also `worked-examples.md`
 
 ## Checklist
 
@@ -180,7 +182,7 @@ or unknown with evidence.
 
 ## Hand-offs
 
-- Response letter prose: `rebuttal-guidance`.
-- Multi-round language and style checks after the changes: `check-loop`.
+- Response letter prose: `sv-feedback-rebuttal`.
+- Multi-round language and style checks after the changes: `sv-review-loop`.
 - ADRs, TODO and STATUS updates: `research-records`.
 - After the project: `lessons-harvest` reads the tables and guidance records.

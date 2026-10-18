@@ -162,7 +162,7 @@ strong if the technique is reusable. [src: note:n01§5.2] (candidate)
   "verified"; "formally verified" only for proofs that compiled in a proof
   assistant (MT-08). [src: skill:proof-review-math; skill:formalize-lean4] (confirmed)
 - The proofs are the evidence; never mark the idea thin because it has no
-  experiments. [src: up:skills/pre-submission-reviewer/SKILL.md] (confirmed)
+  experiments. [src: up:skills/sv-review-once/references/procedure.md] (confirmed)
 
 ### 4.3 Substitute scoring dimensions
 

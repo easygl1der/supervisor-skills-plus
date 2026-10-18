@@ -68,7 +68,7 @@ See also `skills/sv-write/references/evidence-discipline.md` and skills/sv-write
 - Benchmark papers: `sv-write-skeleton` (the flowchart differs).
 - Any non-Introduction section: `sv-write-section`.
 - Prose exists and needs polishing: `sv-write-polish`.
-- The user wants a submission-readiness verdict: `pre-submission-reviewer`.
+- The user wants a submission-readiness verdict: `sv-review-once`.
 
 ## Step 0: Load context
 
@@ -325,11 +325,11 @@ to the author outside the prose; the delivered Introduction stays clean.
 
 ## Hand-offs
 
-- After drafting: `check-loop` for the multi-round research-fit,
+- After drafting: `sv-review-loop` for the multi-round research-fit,
   venue-fit and language checks.
 - AI tone in the draft or in pasted text: `sv-write-humanize-paper`.
 - Comments on the Introduction from co-authors, advisors or reviewers:
-  `feedback-to-revision`.
+  `sv-feedback-revise`.
 - Contribution-list format or the venue's way of introducing a niche:
   `sv-write-style-mine`.
 - The rest of the paper, or the claim ledger the findings need:

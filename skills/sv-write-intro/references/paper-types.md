@@ -87,7 +87,7 @@ Ask the following in order. The first yes determines the type.
 2. Is the paper's main contribution a new method on an existing
    benchmark? If yes, Technique.
 3. Is the paper's main contribution a new benchmark? If yes, use
-   `sv-write-skeleton` (separate plugin) instead.
+   `sv-write-skeleton` (benchmark route) instead.
 4. Does the paper propose a method that is also a problem
    reformulation? See Mixed cases below.
 

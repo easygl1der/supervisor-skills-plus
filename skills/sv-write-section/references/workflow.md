@@ -370,12 +370,12 @@ case.
 - `sv-write-polish`: polishing existing prose, including Chinese-to-English.
 - `sv-write-skeleton`: the pre-writing logic skeleton.
 - `sv-write-skeleton`: planning benchmark papers.
-- `pre-submission-reviewer`: reviewer-style audit of the finished draft.
+- `sv-review-once`: reviewer-style audit of the finished draft.
 - `idea-evaluator`: whether the idea is worth pursuing at all.
 
 If drafting reveals that the problem is not "how to write it" but "does the
 core claim hold", say so plainly in the delivery note and point to
-`pre-submission-reviewer` or `idea-evaluator`. Never write a defense for a
+`sv-review-once` or `idea-evaluator`. Never write a defense for a
 claim the user's own data undermines.
 
 ## Checklist
@@ -409,10 +409,10 @@ note or to `docs/log/`; it never enters the manuscript.
 
 ## Hand-offs
 
-- After a draft: `check-loop` for the multi-round research-fit, venue-fit
+- After a draft: `sv-review-loop` for the multi-round research-fit, venue-fit
   and language checks; offer it at the end of every full-section delivery.
 - AI tone found in the draft or in co-authors' text: `sv-write-humanize-paper`.
 - Comments from co-authors, advisors or reviewers on the draft:
-  `feedback-to-revision`.
+  `sv-feedback-revise`.
 - A single light language pass: `sv-write-polish`.
 - Venue style from exemplar papers, contribution-list format: `sv-write-style-mine`.

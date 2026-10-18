@@ -224,7 +224,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Essential attributes of the published repository-mining standard.
 - Status: confirmed
 - Scope: field:se
-- Owner: experiment-workflow, sv-write-section, pre-submission-reviewer
+- Owner: experiment-workflow, sv-write-section, sv-review-once
 - Src: lit:sigsoft-rm
 
 ### SE-03 Dual denominators
@@ -232,7 +232,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Closed is not fixed.
 - Status: candidate
 - Scope: field:se
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: note:n05§1.1 FB-A-05; arc:CF-30@v2; arc:TH-01@v2
 
 ### SE-04 Calendar time is not effort
@@ -240,7 +240,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Only tracker time was measured.
 - Status: confirmed
 - Scope: field:se
-- Owner: sv-write-polish, check-loop
+- Owner: sv-write-polish, sv-review-loop
 - Src: arc:CF-29@v2; note:n02§8; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-05 Durations: censoring and import artifacts
@@ -248,7 +248,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Closed-item medians hide long-open work; imports create artificial closing times.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, research-records, pre-submission-reviewer
+- Owner: experiment-workflow, research-records, sv-review-once
 - Src: arc:TH-06@v2; arc:TH-02@v2; arc:msr:9c69675
 
 ### SE-06 Residual class reported
@@ -256,7 +256,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: The residual is a finding.
 - Status: candidate
 - Scope: field:se
-- Owner: sv-write-section, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: note:n02§8; note:n07§B.5
 
 ### SE-07 Repository labels kept apart
@@ -264,7 +264,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Readers confuse them and the counts differ.
 - Status: candidate
 - Scope: field:se
-- Owner: sv-write-polish, check-loop
+- Owner: sv-write-polish, sv-review-loop
 - Src: arc:AH-06@v2
 
 ### SE-08 Codebook provenance
@@ -288,7 +288,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Text-derived strategy says nothing about code size.
 - Status: confirmed
 - Scope: field:se
-- Owner: check-loop, pre-submission-reviewer
+- Owner: sv-review-loop, sv-review-once
 - Src: arc:CF-13@v2; note:n07§B.5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-11 Stratify before pooling
@@ -296,7 +296,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: A pooled share can be one repository's share.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, sv-write-section, check-loop
+- Owner: experiment-workflow, sv-write-section, sv-review-loop
 - Src: note:n02§8; arc:msr:9c69675; arc:CF-16@v2
 
 ### SE-12 Finding paragraph shape
@@ -304,7 +304,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Readers come for results; the senior co-author asked for this layout.
 - Status: candidate
 - Scope: field:se
-- Owner: sv-write-section, sv-write-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: arc:msr:0f96193; note:n06§2.4; skill:lecture-paper-revision
 
 ### SE-13 Results stay results
@@ -328,7 +328,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: The standard SE validity classification.
 - Status: confirmed
 - Scope: field:se
-- Owner: pre-submission-reviewer, sv-write-section
+- Owner: sv-review-once, sv-write-section
 - Src: lit:wohlin2012; note:n06§1.9
 
 ### SE-16 SE figure conventions
@@ -344,7 +344,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Wrong or fabricated references are a desk-reject cause.
 - Status: confirmed
 - Scope: field:se
-- Owner: sv-write-section, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: arc:chat:group@2026-09-29T11:44; arc:10-requirements/venue/fse-2027-requirements.md
 
 ### SE-18 No appendix as padding
@@ -352,7 +352,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Senior co-authors judged padding appendices a rejection risk.
 - Status: confirmed
 - Scope: field:se
-- Owner: sv-write-style-apply, sv-write-polish, pre-submission-reviewer
+- Owner: sv-write-style-apply, sv-write-polish, sv-review-once
 - Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### SE-19 Strongest counter-argument
@@ -360,7 +360,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Reviewers raise it otherwise.
 - Status: candidate
 - Scope: field:se
-- Owner: pre-submission-reviewer, idea-evaluator
+- Owner: sv-review-once, idea-evaluator
 - Src: skill:se-paper-reviewer
 
 ## Known disagreements

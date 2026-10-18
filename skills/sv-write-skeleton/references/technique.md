@@ -41,12 +41,12 @@ that); it operates at the logical-skeleton layer.
 
 ## When NOT to use this skill
 
-- The paper is a benchmark paper. Use `sv-write-skeleton` (separate plugin).
+- The paper is a benchmark paper. Use `sv-write-skeleton` (benchmark route).
 - The user needs an Introduction-specific paragraph outline. Use
   `sv-write-intro` (typically run this skill first, then
   `sv-write-intro`).
 - The user has a written draft and wants review feedback. Use
-  `pre-submission-reviewer`.
+  `sv-review-once`.
 - The idea itself is not yet vetted. Use `idea-evaluator` first.
 
 ## Core procedure
@@ -62,7 +62,7 @@ Problem/Setting, Our Goal is the contribution and the Key Idea
 justifies feasibility.
 
 If the user's inputs describe a benchmark, stop and redirect to
-`sv-write-skeleton` (separate plugin).
+`sv-write-skeleton` (benchmark route).
 
 ### Step 2: Fill the thinking template
 

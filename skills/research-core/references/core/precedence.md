@@ -86,7 +86,7 @@ A rule without a source goes to the profile's "Unknown" section instead.
 - Why: Readers come for the results; the senior co-author asked for this layout.
 - Status: confirmed
 - Scope: field:se
-- Owner: sv-write-section, sv-write-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: arc:msr:0f96193; note:n06§2.4
 ```
 

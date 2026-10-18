@@ -28,7 +28,7 @@ loops:
 |---|---|---|---|
 | **Dissect** | one exemplar paper, or a card from `paper-quickread --style` | a Paper Style Card (fields A to L) | `style-card.md` |
 | **Accumulate** | several cards for one venue or field | Style Profile; with 5 to 10 papers and k/n support, rule lines for a venue or field profile (status `candidate` until confirmed) | `style-profile.md`, `profile-output.md` |
-| **Apply** | target venue plus manuscript | `dynamic_writing_skill.md`, section-by-section revision, or a report-only check for `check-loop` | `skills/sv-write-style-apply/references/revision-phase.md`, `skills/sv-write-style-apply/references/check-mode.md` |
+| **Apply** | target venue plus manuscript | `dynamic_writing_skill.md`, section-by-section revision, or a report-only check for `sv-review-loop` | `skills/sv-write-style-apply/references/revision-phase.md`, `skills/sv-write-style-apply/references/check-mode.md` |
 
 A fourth mode borrows analysis methods from related work (method cards).
 
@@ -54,16 +54,16 @@ The six hard rules apply at all times and now live in `hard-rules.md`
   `lessons-harvest --new-field`).
 - Borrowing analysis methods from a related-work corpus to strengthen
   research questions or a measurement design.
-- Round 2 of `check-loop` (venue and field style fit).
+- Round 2 of `sv-review-loop` (venue and field style fit).
 
 ## When NOT to use this skill
 
 - Removing AI tells: `sv-write-humanize-paper` (this skill only applies its own P5 list).
 - Single-pass language polish: `sv-write-polish`.
 - Drafting missing content or arguments: `sv-write-section` or `sv-write-intro`.
-- Checking claims against evidence: `check-loop` round 1 and the
+- Checking claims against evidence: `sv-review-loop` round 1 and the
   `integrity` checklist.
-- Submission formatting and desk-reject checks: `pre-submission-reviewer`.
+- Submission formatting and desk-reject checks: `sv-review-once`.
 
 ## Modes
 
@@ -73,7 +73,7 @@ The six hard rules apply at all times and now live in `hard-rules.md`
 | Accumulate | Build | "learn the style of this venue" | cards, style profile, dynamic skill | Phase 1 |
 | Accumulate | Profile | "make a venue profile", `--new-field` | venue profile draft, field proposals | Profile output |
 | Apply | Revise | "revise my paper for <venue>" | revised sections, logs, rule candidates | Phase 2 |
-| Apply | Check | called by `check-loop`, or "does this fit the venue?" | report only | Check mode |
+| Apply | Check | called by `sv-review-loop`, or "does this fit the venue?" | report only | Check mode |
 | (methods) | Method card | "borrow methods from related work" | method cards, transfer matrix, brief | Methods-borrowing |
 
 Build runs before Revise, Profile and Check when no dynamic skill exists for
@@ -277,7 +277,7 @@ Run and report each item as pass, fail, n/a or unknown, with evidence (file
 and line, diff, or the card IDs):
 
 - From research-core `checklists/writing.md`: the items whose Owner list
-  includes `check-loop` that concern structure and framing (for example
+  includes `sv-review-loop` that concern structure and framing (for example
   WR-06 why before how, WR-07 current content only, WR-12 one name per
   concept, WR-22 results and implications kept apart), in Revise and Check
   modes.
@@ -308,16 +308,16 @@ and line, diff, or the card IDs):
   confirmed) and `conflicts.md`.
 - Method card mode: `method-cards/*.md`, `transfer-matrix.md`, and
   implementation briefs on request.
-- Check mode: a findings report (returned to `check-loop` or written to
+- Check mode: a findings report (returned to `sv-review-loop` or written to
   `docs/log/`).
 
 ## Hand-offs
 
 - Writing profile changes into research-core: `lessons-harvest`.
-- Multi-round checks and applying check-mode findings: `check-loop`.
+- Multi-round checks and applying check-mode findings: `sv-review-loop`.
 - AI-tell removal beyond P5: `sv-write-humanize-paper`.
 - Missing content or arguments found in diagnosis: `sv-write-section`,
   `sv-write-intro`.
 - Implementing a borrowed method: `experiment-workflow`; recording the
   design change: `research-records` (ADR).
-- Final formatting and submission checks: `pre-submission-reviewer`.
+- Final formatting and submission checks: `sv-review-once`.

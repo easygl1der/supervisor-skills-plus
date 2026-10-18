@@ -21,7 +21,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Raster plots and tiny labels are the most common figure complaints.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, pre-submission-reviewer
+- Owner: figure-designer, sv-review-once
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md; arc:CF-21@v2
 
 ### FG-02 Self-contained caption
@@ -59,7 +59,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A figure that uses other names than the text looks like a different study.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, check-loop
+- Owner: figure-designer, sv-review-loop
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md; note:n07§A.8 FR17; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md F6
 
 ### FG-06 No local font shrinking
@@ -165,7 +165,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A coded dimension that silently disappears looks like a hidden result.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, check-loop
+- Owner: figure-designer, sv-review-loop
 - Src: arc:01-checklist/checklist.md F5; note:n07§B.5; unverified (human origin in chat)
 
 ### FG-17 Introduction figure shows the problem
@@ -176,7 +176,7 @@ Run by: figure-designer, drawio-reconstruction
 - Status: candidate
 - Scope: core
 - Owner: figure-designer, sv-write-intro
-- Src: arc:chat:1on1@2026-09-28T23:15; arc:ol:ba3f1ee; up:skills/pre-submission-reviewer/SKILL.md; note:n07§A.8 FR21
+- Src: arc:chat:1on1@2026-09-28T23:15; arc:ol:ba3f1ee; up:skills/sv-review-once/references/procedure.md; note:n07§A.8 FR21
 
 ## 4. Data in figures
 
@@ -188,7 +188,7 @@ Run by: figure-designer, drawio-reconstruction
   reference image and was never traced to data.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, check-loop
+- Owner: figure-designer, drawio-reconstruction, sv-review-loop
 - Src: note:n07§A.1; arc:05-figures-tables/sources/drawio/overview-reference-replica/LAYOUT_FINGERPRINT.md; note:n07§A.8 FR3
 
 ### FG-19 Renderer, PDF and caption in sync
@@ -258,7 +258,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Both break a clean build from a fresh clone.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, pre-submission-reviewer
+- Owner: figure-designer, sv-review-once
 - Src: arc:MF-20@v2; arc:MF-23@v2; note:n07§B.5
 
 ### FG-26 Agent figure plans checked against latest feedback
@@ -268,5 +268,5 @@ Run by: figure-designer, drawio-reconstruction
   had just asked to remove.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, feedback-to-revision
+- Owner: figure-designer, drawio-reconstruction, sv-feedback-revise
 - Src: note:n07§A.8 FR20

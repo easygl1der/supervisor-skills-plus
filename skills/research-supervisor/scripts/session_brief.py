@@ -6,8 +6,8 @@ Usage:
 
 Prints: the stage from research.yaml and the stage the signals suggest;
 blockers from docs/STATUS.md; overdue guidance actions and unverified
-feedback (feedback-to-revision/scripts/guidance_review.py); open reviewer
-markers (feedback-to-revision/scripts/list_markers.py); the next deadline
+feedback (sv-feedback/scripts/guidance_review.py); open reviewer
+markers (sv-feedback/scripts/list_markers.py); the next deadline
 with its source; and records warnings (no source for the deadline, STATUS
 not updated in 14 days, no source of truth named).
 
@@ -27,8 +27,8 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve()
-F2R = [HERE.parents[2] / "feedback-to-revision" / "scripts",
-       Path.home() / ".claude" / "skills" / "feedback-to-revision" / "scripts"]
+F2R = [HERE.parents[2] / "sv-feedback" / "scripts",
+       Path.home() / ".claude" / "skills" / "sv-feedback" / "scripts"]
 
 
 def yaml_get(text: str, *path: str) -> str:
@@ -105,7 +105,7 @@ def main() -> int:
         unverified = [l for l in out.splitlines() if l.startswith("UNVERIFIED")]
         reviews = any(re.search(r"\bFB-R\d", l) for l in unverified)
     if not (lm and gr):
-        warn.append("feedback-to-revision scripts not found; markers and guidance not checked")
+        warn.append("sv-feedback scripts not found; markers and guidance not checked")
     fb = root / "docs" / "feedback"
     if fb.is_dir() and any(re.search(r"\|\s*FB-R\d", p.read_text()) for p in fb.glob("*.md")):
         reviews = True

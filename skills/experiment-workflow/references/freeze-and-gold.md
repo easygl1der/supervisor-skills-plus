@@ -163,4 +163,4 @@ L007 A "closing, see above" comment is not evidence of a fix. (2026-..; items: i
   model. [src: arc:04-comms/20260920-msritp-meeting/README.md; note:n08§5#27] (candidate)
 - When a data gap cannot be closed by more collection, move it to threats
   with its mechanism and stop chasing it (`idea-evaluator`,
-  `pre-submission-reviewer` threats items). [src: note:n08§5#25] (candidate)
+  `sv-review-once` threats items). [src: note:n08§5#25] (candidate)

@@ -4,7 +4,7 @@ Generic items for meeting a venue's formal rules and for the submission
 itself. The venue profile adds the venue's own facts (limits, template,
 required sections); this file checks that they were applied.
 
-Run by: pre-submission-reviewer
+Run by: sv-review-once
 
 ## Contents
 1. The official call
@@ -21,7 +21,7 @@ Run by: pre-submission-reviewer
 - Why: A remembered deadline in the evidence project differed from the call.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, research-supervisor, research-records
+- Owner: sv-review-once, research-supervisor, research-records
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:04-comms/20260920-msritp-meeting/README.md; note:n04§1.1; note:n08§5#32
 
 ### VS-02 Desk-reject causes checked one by one
@@ -30,7 +30,7 @@ Run by: pre-submission-reviewer
 - Why: Desk rejects end the submission before review.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md
 
 ### VS-03 Required sections present
@@ -39,7 +39,7 @@ Run by: pre-submission-reviewer
 - Why: A missing required section is a formatting failure.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/checklist.md G8; arc:01-checklist/checklist.md G9
 
 ## 2. Format
@@ -51,7 +51,7 @@ Run by: pre-submission-reviewer
 - Why: Over-length is a desk reject; source line counts do not tell.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:CF-24@v2; arc:01-checklist/checklist.md G2
 
 ### VS-05 Template and fonts untouched
@@ -62,7 +62,7 @@ Run by: pre-submission-reviewer
   reintroduced shrinking in the evidence project.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, sv-write-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-01T09:20; arc:chat:group@2026-10-01T09:23; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G3; note:n08§5#10
 
 ### VS-06 No appendix as padding
@@ -72,7 +72,7 @@ Run by: pre-submission-reviewer
 - Why: Reviewers do not read padding appendices, and they cost pages.
 - Status: confirmed
 - Scope: core
-- Owner: sv-write-polish, pre-submission-reviewer
+- Owner: sv-write-polish, sv-review-once
 - Src: arc:chat:group@2026-10-01T08:47; arc:chat:group@2026-10-01T08:48; arc:chat:group@2026-10-01T09:26; arc:msr:464168f; note:n08§5#11; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-07 Figure descriptions match the layout
@@ -81,7 +81,7 @@ Run by: pre-submission-reviewer
 - Why: A wrong description fails the accessibility check.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, pre-submission-reviewer
+- Owner: figure-designer, sv-review-once
 - Src: arc:MF-22@v2; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H15; note:n07§A.8 FR18
 
 ## 3. Build hygiene
@@ -92,7 +92,7 @@ Run by: pre-submission-reviewer
 - Why: Each is visible in the PDF as a question mark or overrun line.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, sv-write-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:01-checklist/checklist.md G5; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H16
 
 ## 4. Submission form and upload
@@ -104,7 +104,7 @@ Run by: pre-submission-reviewer
 - Why: Form problems found in the last hours compete with paper fixes.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, research-supervisor
+- Owner: sv-review-once, research-supervisor
 - Src: arc:chat:group@2026-10-01T21:05; arc:chat:group@2026-10-03T17:28; note:n08§5#31; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-10 Plain-text abstract in the form
@@ -113,7 +113,7 @@ Run by: pre-submission-reviewer
 - Why: Macros do not compile in the form and show as raw code.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:chat:group@2026-10-03T18:40; arc:chat:group@2026-10-03T18:43; note:n08§5#30; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-11 Early complete upload
@@ -122,5 +122,5 @@ Run by: pre-submission-reviewer
 - Why: Editors and submission systems go down near deadlines.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, research-supervisor
+- Owner: sv-review-once, research-supervisor
 - Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T19:59; note:n08§5#4; user:2026-10-13 (promoted: failure had a clear bad outcome)

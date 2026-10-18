@@ -49,10 +49,10 @@ said.
   `sv-write-section` (or `sv-write-intro` for Introductions).
 - The user wants the paper's logic skeleton planned. Use `sv-write-skeleton`.
 - The user wants a reviewer-style audit of the manuscript. Use
-  `pre-submission-reviewer`.
+  `sv-review-once`.
 - The user wants repeated rounds until the text passes (research fit, then
   venue fit, then language), or a whole-manuscript loop with a round
-  budget. Use `check-loop`. This skill stays a single pass.
+  budget. Use `sv-review-loop`. This skill stays a single pass.
 
 ## Step 0: Load context
 
@@ -102,7 +102,7 @@ A workable sequence; it is a method, not a ritual:
 
 This is one pass. When the author wants the text checked again after the
 edits, or wants research fit and venue fit checked before language, hand
-off to `check-loop`, which runs rounds with an oscillation guard and a
+off to `sv-review-loop`, which runs rounds with an oscillation guard and a
 round budget. Do not loop here.
 
 ## Field- and venue-aware pass
@@ -242,7 +242,7 @@ differently:
 2. **The core claim itself may not hold.** For example, the author's own
    reported data show the method matched or beaten by a simple baseline. Do not
    write a defense for it and do not invent an optimistic reading. State it
-   plainly and suggest a proper audit with `pre-submission-reviewer` (for a
+   plainly and suggest a proper audit with `sv-review-once` (for a
    manuscript) or `idea-evaluator` (for the underlying idea) before further
    polishing.
 
@@ -284,10 +284,10 @@ not forced.
 
 ## Hand-offs
 
-- Multi-round checking, or a re-check after these edits: `check-loop`.
+- Multi-round checking, or a re-check after these edits: `sv-review-loop`.
 - Heavy AI tone, or a de-AI audit under the full contract: `sv-write-humanize-paper`.
 - Comments from co-authors, advisors or reviewers to work through:
-  `feedback-to-revision`.
+  `sv-feedback-revise`.
 - A section that needs redrafting rather than polishing: `sv-write-section`.
-- A claim the data may not support: `pre-submission-reviewer` or
+- A claim the data may not support: `sv-review-once` or
   `idea-evaluator`.

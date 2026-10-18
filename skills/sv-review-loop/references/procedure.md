@@ -1,17 +1,24 @@
----
-name: check-loop
-description: >-
-  Runs a bounded multi-round check over a manuscript: research-writing fit
-  first (claims, scope, hedges, numbers, threats), then venue and field style
-  through sv-write-style-apply, then language through a de-AI audit, with a
-  regression re-run of the research check. Applies only authorized edits,
-  records each with its rule, blocks reversions and locked-decision flips,
-  and writes a dated round log. Use when a draft needs repeated checking
-  before review, submission or camera-ready.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-review-loop/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Check Loop
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Inputs
+- Setup
+- Why research fit runs first
+- Round procedure
+- Which edits the loop applies
+- Oscillation guard
+- Stop rules
+- Output: the round log
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -41,7 +48,7 @@ oscillation appears, or the budget runs out. Design: `DESIGN.md` section 6.
 
 - A full draft or a set of sections is ready for internal review,
   submission, a revision round or camera-ready.
-- After a batch of co-author or reviewer changes (`feedback-to-revision`),
+- After a batch of co-author or reviewer changes (`sv-feedback-revise`),
   to check that the fixes did not break other rules.
 - After the page count changed and text was cut or filled.
 - When the user asks for "a final pass", "check everything again" or
@@ -54,8 +61,8 @@ oscillation appears, or the budget runs out. Design: `DESIGN.md` section 6.
 - The draft has no claims yet or no evidence behind them: `sv-write-section`
   first.
 - Submission gates (anonymity, artifact, template, form fields):
-  `pre-submission-reviewer`.
-- Resolving specific comments: `feedback-to-revision`.
+  `sv-review-once`.
+- Resolving specific comments: `sv-feedback-revise`.
 
 ## Step 0: Load context
 
@@ -95,7 +102,7 @@ oscillation appears, or the budget runs out. Design: `DESIGN.md` section 6.
 3. Start `docs/log/<date>-check-loop.md` from the log template, and the span
    state file `docs/log/<date>-check-loop.spans.json`.
 
-See: references/log-template.md
+See also `log-template.md`
 
 ## Why research fit runs first
 
@@ -138,7 +145,7 @@ For round k = 1 .. `max_rounds`:
 
 Finding ids: `CL-r<k>-c<n>-<nn>`; the regression re-run uses `c1R`.
 
-See: references/round-procedure.md
+See also `round-procedure.md`
 
 ## Which edits the loop applies
 
@@ -210,7 +217,7 @@ Report each item as pass, fail, n/a or unknown with evidence (log row,
 commit, command output):
 
 - `writing.md`: WR-01, WR-06, WR-07, WR-10, WR-12, WR-13, WR-15 to WR-24,
-  WR-28, WR-31, WR-33 (the items owned by `check-loop`, plus the claim and
+  WR-28, WR-31, WR-33 (the items owned by `sv-review-loop`, plus the claim and
   number items check 1 runs).
 - `integrity.md`: IN-01 to IN-06, IN-13.
 - `threats.md`: TH-01, TH-02, TH-05, TH-08, TH-10, TH-11.
@@ -233,7 +240,7 @@ Items with `Status: candidate` are advisory unless the user opted in.
 - `needs-author` content gaps (missing evidence, missing spine): `sv-write-section`.
 - Rule conflicts and questioned locked decisions: `research-records` (ADR).
 - TODO and STATUS updates: `research-records`.
-- Remaining comments from people: `feedback-to-revision`.
+- Remaining comments from people: `sv-feedback-revise`.
 - Venue style rules missing from the profile: `sv-write-style-apply`.
-- Submission gates after the loop: `pre-submission-reviewer`.
+- Submission gates after the loop: `sv-review-once`.
 - Recurring findings across projects: `lessons-harvest` reads the logs.

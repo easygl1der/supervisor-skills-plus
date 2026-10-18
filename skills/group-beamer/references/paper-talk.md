@@ -38,5 +38,5 @@ conjectured). A slide may narrow a paper's claim; it may never strengthen it.
 ## Critique substitute
 
 There is no Critic attack checklist in this library. Use
-`pre-submission-reviewer` `devils-advocate-pass.md` plus
+`sv-review-once` `devils-advocate-pass.md` plus
 `research-core` `fields/causal.md` "What reviewers and advisors care about".

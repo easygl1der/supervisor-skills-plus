@@ -94,7 +94,7 @@ Split axes (below threshold, decided per paper):
 
 - **Checklist additions**: only for rules that a reader can check on the
   manuscript. Use the research-core item format with `Scope: venue:<name>`,
-  `Status: candidate`, `Owner: sv-write-style-mine, check-loop` (plus others that
+  `Status: candidate`, `Owner: sv-write-style-mine, sv-review-loop` (plus others that
   apply), and `Src:` listing the same `lit:` keys. Pick the next free ID with
   the venue's prefix (look up existing IDs first; `check_checklists.py`
   enforces uniqueness).

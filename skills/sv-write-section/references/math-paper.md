@@ -82,7 +82,7 @@ measured numbers. One row per statement:
   Markdown follow the active request. [src: skill:paper] (confirmed)
 - Label sections, theorems, equations, figures and appendices and refer with
   `\cref`; never use `\tag{}` for references; every numbered equation is
-  referenced. [src: skill:paper; up:skills/pre-submission-reviewer/references/latex-rules.md] (confirmed)
+  referenced. [src: skill:paper; up:skills/sv-review-once/references/latex-rules.md] (confirmed)
 - BibTeX lives in `references.bib`; citation metadata is never invented.
   While drafting, a missing entry may be a visible placeholder in the draft
   file only; it is cleared before Final mode, as sv-write-section's zero-tag rule

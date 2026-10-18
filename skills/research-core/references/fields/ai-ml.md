@@ -19,8 +19,8 @@ are not repeated here.
 1. Upstream handbook: `handbook-en/01_Preliminary/1.1`, `03_Paper_Writing/3.1`
    to `3.5`, `04_Scientific_Plotting/4.1` to `4.4`, `06_Case_Studies/6.1` to `6.3`.
 2. Upstream skills with references: sv-write-skeleton, benchmark-paper-
-   template, sv-write-intro, sv-write-section, pre-submission-reviewer,
-   figure-designer, idea-evaluator, rebuttal-guidance.
+   template, sv-write-intro, sv-write-section, sv-review-once,
+   figure-designer, idea-evaluator, sv-feedback-rebuttal.
 3. Owner skill `sv-write-style-mine`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
 4. Upstream map of AI/ML assumptions: `notes/01-upstream-map.md` §4 to §5.
 5. Exemplar papers analysed by the handbook case studies (Intro analyses
@@ -59,7 +59,7 @@ are not repeated here.
 - Method section runs overview, workflow, then components; complex
   components get their own subsection; subsections are ordered from the
   strongest novelty to the weakest. Known techniques get minimal space.
-  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/pre-submission-reviewer/references/section-guides.md] (confirmed)
+  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/sv-review-once/references/section-guides.md] (confirmed)
 - Experiments run setup, end-to-end comparison against all baselines,
   further comparisons (scalability, model size), ablation, then analysis.
   [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine] (confirmed)
@@ -82,7 +82,7 @@ are not repeated here.
   months against an active benchmark is a fatal flaw at idea stage.
   [src: up:skills/idea-evaluator/references/fatal-flaws.md; up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md] (confirmed)
 - Every proposed component is justified by an ablation (All, without A,
-  without B, without C). [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/pre-submission-reviewer/references/section-guides.md] (confirmed)
+  without B, without C). [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/sv-review-once/references/section-guides.md] (confirmed)
 - DB community: improvement thresholds of at least 50% in performance or
   10% in accuracy are treated as ideal. Do not apply these figures to ML
   venues. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
@@ -169,7 +169,7 @@ are not repeated here.
 - Why: Upstream rates every break in this chain as critical.
 - Status: confirmed
 - Scope: field:ml
-- Owner: sv-write-skeleton, sv-write-intro, pre-submission-reviewer
+- Owner: sv-write-skeleton, sv-write-intro, sv-review-once
 - Src: up:skills/sv-write-skeleton/references/technique.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
 
 ### ML-03 Current, fairly tuned baselines
@@ -178,7 +178,7 @@ are not repeated here.
 - Why: Weak or under-tuned baselines are a fatal flaw.
 - Status: confirmed
 - Scope: field:ml
-- Owner: idea-evaluator, experiment-workflow, pre-submission-reviewer
+- Owner: idea-evaluator, experiment-workflow, sv-review-once
 - Src: up:skills/idea-evaluator/references/fatal-flaws.md; up:skills/sv-write-skeleton/references/experiments.md
 
 ### ML-04 Implementation details for replication
@@ -187,7 +187,7 @@ are not repeated here.
 - Why: Missing hyperparameters block reproduction.
 - Status: confirmed
 - Scope: field:ml
-- Owner: experiment-workflow, sv-write-section, check-loop
+- Owner: experiment-workflow, sv-write-section, sv-review-loop
 - Src: skill:style-mine; up:skills/sv-write-skeleton/references/experiments.md
 
 ### ML-05 Variance reported
@@ -196,7 +196,7 @@ are not repeated here.
 - Why: Single runs cannot carry a comparison.
 - Status: confirmed
 - Scope: field:ml
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: experiment-workflow, sv-review-once
 - Src: up:skills/sv-write-skeleton/references/checklist.md
 
 ### ML-06 Motivated example figure
@@ -223,8 +223,8 @@ are not repeated here.
 - Why: Unverified rebuttal numbers become commitments.
 - Status: confirmed
 - Scope: field:ml
-- Owner: rebuttal-guidance
-- Src: up:skills/rebuttal-guidance/references/checklist.md
+- Owner: sv-feedback-rebuttal
+- Src: up:skills/sv-feedback-rebuttal/references/checklist.md
 
 ## Known disagreements
 - Number of contributions: three or four (handbook) versus at most three
