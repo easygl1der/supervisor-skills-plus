@@ -118,7 +118,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 4. sv-figure（含 drawio 原样迁入和 study kit 迁入，更新 ADR 0007–0011 中的路径）
 5. sv-study、sv-quickread
 6. sv-idea、sv-litreview、sv-proposal、sv-experiment、sv-slides
-7. 全局：`scripts/lint_skills.py` 与 `check_checklists.py` 的 skill 名单和新规则（行数上限、子命令必须带 `disable-model-invocation`）、research-core 中 `skill:<name>` 来源前缀、README 和 skills/README、llms.txt、CHANGELOG（附新旧名对照表）、`scripts/install.sh`（改为生成 agent-sync 链接，见“安装”）
+7. 全局：`scripts/lint_skills.py` 与 `check_checklists.py` 的 skill 名单和新规则（行数上限、子命令必须带 `disable-model-invocation`）、research-core 中 `skill:<name>` 来源前缀、README 和 skills/README、llms.txt、CHANGELOG（附新旧名对照表）、`scripts/install.sh`（保留，并清理失效链接）与新增的 `scripts/sync_agent_links.py`（见“安装”）
 
 ## Consequences
 - agent 自动挑选时只看 12 个总入口；用户想精确时，可以点名50 个子命令中的任意一个。目录总数从 26 增到63，但只有 13 个是 agent 每轮都要看到的。
@@ -137,7 +137,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
   - agent-sync 里有一个**每台机器自己建、被 gitignore 的中转链接** `external/supervisor-skills-plus`，指向这台机器的主 checkout。
   - agent-sync **提交**63 个相对链接：`skills/<name> → ../external/supervisor-skills-plus/skills/<name>`。链接始终在 agent-sync 树内部，SG 和 MBA 上都能解析。
 - 这样所有 live skill 都在 agent-sync 的 git 里，可见、可回滚，符合 agent-sync policy 的“live 目录只有一棵树”。
-- 本仓库提供一个脚本，按 `skills/` 当前的目录生成或清理 agent-sync 里的这批链接（新增、删除、改名都处理），owner 再在 agent-sync 里检查后提交。这样“两个仓库都要提交”只多出一步检查。原来的 `scripts/install.sh`（往 `~/.claude|codex|cursor/skills` 里直接建链接）改为调用这个脚本，或者删掉。
+- 本仓库提供 `scripts/sync_agent_links.py`：按 `skills/` 当前的目录规划或写入 agent-sync 里的这批链接（新增、删除、改名都处理；默认只打印计划，`--apply` 才写），owner 再在 agent-sync 里检查后提交。`scripts/install.sh` 保留给没有 agent-sync 的机器，并会删除指向本仓库但已不存在的旧链接。（实施第 7 步时落实，2026-10-19）
 - 链接指向的是主 checkout，用的永远是主 checkout 当前所在分支的版本；worktree 里的改动要合回 main、主 checkout 拉下来之后才会生效。
 - Mini 会随 agent-sync 拉到这批链接，但没有中转链接，所以全是坏链。实施时要先确认 Claude Code 和 Cursor 遇到坏链是静默跳过还是报错；如果报错，再在 Mini 上建一个空目录作为中转链接的目标，或者另想办法。
 - agent-sync 的 `agent-sync-policy` 要补一段说明：`external/` 里放什么、新机器怎么建中转链接。这段改动在 agent-sync 仓库里做，不属于本仓库。

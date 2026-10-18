@@ -1,11 +1,11 @@
-# style-mine
+# sv-write-style-mine (formerly style-mine)
 
 Builds a corpus-grounded, reviewable writing skill for one manuscript and one
 destination from exemplar papers, then revises the manuscript section by
 section without adding facts or changing technical content. In this library
 it also writes research-core venue profiles and field-profile proposals
 (with a consensus threshold), method cards for borrowing analysis methods,
-and a report-only check used by `check-loop`.
+and a report-only check used by `sv-review-loop` (now in `sv-write-style-apply`).
 ## Corpus intake
 
 Exemplar search is **skill-local** (`scripts/intake_search.py`, Crossref + OpenAlex, optional Semantic Scholar via `SEMANTIC_SCHOLAR_API_KEY`). Do not use Academic MCP for this path. See `references/intake.md`.

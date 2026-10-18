@@ -3,7 +3,7 @@ name: sv-quickread-style
 description: >-
   Writes the quick-read card and also dissects the paper's writing into one
   Paper Style Card (structure, rhetorical moves, sentence templates) in the
-  style-mine format, saved beside the card as a candidate for a venue
+  sv-write-style-mine format, saved beside the card as a candidate for a venue
   profile. One card never becomes a rule. Use when the user wants a paper
   read quickly and its writing style analysed for a target venue.
 license: CC-BY-NC-SA-4.0
