@@ -6,7 +6,7 @@
 
 # Supervisor-Skills: Ten years of PhD-advisor research experience, distilled into your AI co-advisor.
 
-> **Supervisor-Skills Plus (private fork).** Adds a field-aware research layer: `research-core` (rules, field and venue profiles, sourced checklists), nine new skills for experiments, feedback, records, checking and learning, a reading-and-learning layer (paper-quickread, study, research-bridge, deep-research literature map), proposal-writer, group-meeting Beamer decks (group-beamer), and handbook case 6.4. See [skills/README.en.md](skills/README.en.md#supervisor-skills-plus-additional-skills-private-fork), [INSTALL.md](INSTALL.md) and [DESIGN.md](DESIGN.md).
+> **Supervisor-Skills Plus (private fork).** Twelve skill groups (`sv-write`, `sv-figure`, `sv-study`, ...) on a shared `research-core` of rules, field and venue profiles and sourced checklists. Each group has one entry the agent can pick and slash-only sub-commands for precise requests, such as `/sv-write-polish` (ADR 0021). Install from a clone with [INSTALL.md](INSTALL.md); the guide is [skills/README.en.md](skills/README.en.md); the design is [DESIGN.md](DESIGN.md).
 
 
 > From idea conception to paper submission, covering the full research lifecycle.
@@ -136,17 +136,19 @@ Supervisor-Skills/
 ├── handbook-en/                       # 📖 English mirror of the handbook
 │
 ├── skills/                            # 🛠️ Executable AI Skills
-│   ├── idea-evaluator/
-│   ├── deep-research/
-│   ├── vibe-research-workflow/
-│   ├── tech-paper-template/
-│   ├── intro-drafter/
-│   ├── paper-writer/
-│   ├── benchmark-paper-template/
-│   ├── paper-polish/
-│   ├── pre-submission-reviewer/
-│   ├── figure-designer/
-│   └── drawio-reconstruction/
+│   ├── sv-supervisor/
+│   ├── sv-quickread/
+│   ├── sv-study/
+│   ├── sv-idea/
+│   ├── sv-litreview/
+│   ├── sv-proposal/
+│   ├── sv-experiment/
+│   ├── sv-write/
+│   ├── sv-figure/
+│   ├── sv-review/
+│   ├── sv-feedback/
+│   ├── sv-slides/
+│   └── research-core/
 │
 └── assets/                            # Image assets
 ```
@@ -172,19 +174,21 @@ The Chinese originals live at [`handbook/`](handbook/) with the same chapter str
 
 This is the core of the repository. The theoretical experience above is distilled into structured Prompt/Skill files. You can copy the content directly into any AI assistant (Claude, DeepSeek, Kimi, etc.).
 
-| Skill | Description | Link |
+| Group | What it covers | Link |
 |---|---|---|
-| **Idea Evaluator** | Feed in your idea, and the AI scores it on the "Higher / Faster / Stronger" five-dimension framework and the capability-matching table. | [Use skill](skills/idea-evaluator/SKILL.md) |
-| **Vibe Research Guide** | AI-assisted research across the full lifecycle: Vibe Coding / Vibe Figure / Vibe Writing. | [Use skill](skills/vibe-research-workflow/SKILL.md) |
-| **Introduction Drafter** | Based on the Introduction Flowchart thinking model, feed in your research motivation and receive six paragraphs of Introduction prose with retrieval-verified citations (outline mode on request). | [Use skill](skills/intro-drafter/SKILL.md) |
-| **Paper Writer** | Evidence-gated paper drafting from a single paragraph to a full manuscript: every factual claim traces to your materials or verified literature, citations pass an independent check, nothing is fabricated. | [Use skill](skills/paper-writer/SKILL.md) |
-| **Paper Polish** | Meaning-preserving language polishing: grammar, AI-tone removal, claim calibration, and Chinese-to-English rewriting at submission quality, with meaning-risk edits flagged for your confirmation. | [Use skill](skills/paper-polish/SKILL.md) |
-| **Deep Research** | Survey-grade literature investigation: multi-perspective search, per-citation verification, MECE synthesis with cross-comparison, delivered as a survey report that answers explicit research questions. | [Use skill](skills/deep-research/SKILL.md) |
-| **Tech Paper Template** | Based on the "Technical Full Paper thinking template", walks you through the full logical chain of your paper. | [Use skill](skills/tech-paper-template/SKILL.md) |
-| **Benchmark Paper Template** | Designed for Benchmark/Evaluation papers, helping you structure evaluation logic and experimental design. | [Use skill](skills/benchmark-paper-template/SKILL.md) |
-| **Pre-Submission Reviewer** | Reviewer's perspective at a top venue — runs a full review over your draft based on the writing checklist and common English grammar pitfalls. | [Use skill](skills/pre-submission-reviewer/SKILL.md) |
-| **Figure Design Advisor** | Tell the AI what you want to express; it returns professional drawing advice based on the motivated / overview / experimental figure paradigms. | [Use skill](skills/figure-designer/SKILL.md) |
-| **Draw.io Reconstruction** | Rebuild reference images, paper figures, architecture diagrams, slide diagrams, or UI screenshots into editable `.drawio` files with PNG previews and visual audits. | [Use skill](skills/drawio-reconstruction/SKILL.md) |
+| **sv-supervisor** | Session brief and routing, project start-up, STATUS / TODO / ADRs / logs, lessons into research-core | [Open](skills/sv-supervisor/SKILL.md) |
+| **sv-quickread** | Nine-section five-minute card of one paper; optional style card | [Open](skills/sv-quickread/SKILL.md) |
+| **sv-study** | Understanding-first study of a concept, paper or chapter, with restatement and diagnosis; bridge to the project | [Open](skills/sv-study/SKILL.md) |
+| **sv-idea** | Full idea evaluation (five dimensions, lifecycle, paradigm probe) or the fatal-flaws gate only | [Open](skills/sv-idea/SKILL.md) |
+| **sv-litreview** | Survey-grade literature review with verified citations, or a map of papers already read | [Open](skills/sv-litreview/SKILL.md) |
+| **sv-proposal** | Thesis proposals (kaiti), grant applications (NSFC, NSF, ERC, NIH), research statements | [Open](skills/sv-proposal/SKILL.md) |
+| **sv-experiment** | Frozen inputs, runs log, numbers traced into the paper, replication artifact | [Open](skills/sv-experiment/SKILL.md) |
+| **sv-write** | Skeleton, Introduction, sections, polish, Chinese-to-English, critique, de-AI for papers / reports / slides / letters, venue style | [Open](skills/sv-write/SKILL.md) |
+| **sv-figure** | Figure design, draw.io reconstruction, code plots, TikZ, HTML, posters, explanatory figures | [Open](skills/sv-figure/SKILL.md) |
+| **sv-review** | Read-only pre-submission audit, or a bounded multi-round check | [Open](skills/sv-review/SKILL.md) |
+| **sv-feedback** | Tracked revisions from comments, expert guidance records, rebuttal plans | [Open](skills/sv-feedback/SKILL.md) |
+| **sv-slides** | Beamer decks for group meetings: weekly report or paper talk | [Open](skills/sv-slides/SKILL.md) |
+| **research-core** | Shared rules, field and venue profiles, checklists, AI-collaboration rules, templates (not a command) | [Open](skills/research-core/SKILL.md) |
 
 ## Quick Start
 

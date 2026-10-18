@@ -64,5 +64,7 @@ Not bundled on purpose:
 - **yxnchen/sysu-beamer-template**: not vendored (licence conflict and
   university logos). `templates/sysu-like/` is an own colour look-alike.
 
+Since ADR 0021 (2026-10-18) the skills that came from upstream HKUSTDial/Supervisor-Skills are regrouped under `sv-` names and no longer synced from upstream; each moved file keeps its original licence in a `Moved from` header or in its frontmatter.
+
 The upstream Supervisor-Skills project (HKUSTDial) is CC BY-NC-SA 4.0; see
 `LICENSE` and `README.md`.

@@ -6,8 +6,56 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed (ADR 0021: skill groups)
+- The 26 skills are regrouped into twelve `sv-` groups plus `research-core`.
+  Each group has one auto-invocable entry `sv-<group>` that routes and says
+  which sub-command it chose, and slash-only sub-commands
+  `sv-<group>-<name>` (`disable-model-invocation: true`), 50 in all. Names
+  are identical in Claude Code and Cursor. Old SKILL.md bodies are kept
+  verbatim as `references/procedure.md` files with a `Moved from` header;
+  references duplicated across skills now live once per group.
+- Old to new names: `research-supervisor`, `research-records`,
+  `lessons-harvest` -> `sv-supervisor` (`-brief`, `-init`, `-records`,
+  `-harvest`); `paper-quickread` -> `sv-quickread` (`-card`, `-style`);
+  `study`, `research-bridge` -> `sv-study` (`-quick-explain`, `-paper`,
+  `-chapter`, `-visual-explain`, `-drill`, `-bridge`); `idea-evaluator` ->
+  `sv-idea` (`-evaluate`, `-fatal-flaws`); `deep-research` ->
+  `sv-litreview` (`-survey`, `-map`); `proposal-writer` -> `sv-proposal`
+  (`-kaiti`, `-grant`, `-statement`); `experiment-workflow` ->
+  `sv-experiment` (`-freeze`, `-runs`, `-numbers`, `-replication`);
+  `paper-writer`, `intro-drafter`, `tech-paper-template`,
+  `benchmark-paper-template`, `paper-polish`, `deai-writing`, `style-mine`
+  -> `sv-write` (`-skeleton`, `-intro`, `-section`, `-polish`,
+  `-translate`, `-critique`, `-humanize-paper`, `-humanize-report`,
+  `-humanize-slides`, `-humanize-letter`, `-humanize-audit`, `-style-mine`,
+  `-style-apply`); `figure-designer`, `drawio-reconstruction` and the study
+  visual kit -> `sv-figure` (`-design`, `-drawio`, `-plot`, `-tikz`,
+  `-html`, `-poster`, `-explain`); `pre-submission-reviewer`, `check-loop`
+  -> `sv-review` (`-once`, `-loop`); `feedback-to-revision`,
+  `rebuttal-guidance` -> `sv-feedback` (`-revise`, `-guidance`,
+  `-rebuttal`); `group-beamer` -> `sv-slides` (`-weekly`, `-talk`);
+  `vibe-research-workflow` -> `research-core`
+  `references/core/ai-collaboration.md` and `references/vibe/`.
+- `research-core` is hidden from the slash menu (`user-invocable: false`)
+  and stays model-invocable. The eleven always-visible descriptions are at
+  most 60 words.
+- `sv-figure-plot`, `sv-figure-html` and `sv-figure-poster` only combine
+  existing rule files; the poster sub-command says that no poster-specific
+  rules exist yet.
+- Skills are no longer synced from upstream HKUSTDial/Supervisor-Skills;
+  `handbook/` still follows upstream PhD.Skills.
+
 ### Added
-- `group-beamer`: Beamer decks for group meetings in two modes, `weekly-report`
+- `scripts/sync_agent_links.py`: plans (dry run by default) or applies the
+  committed relative links in an agent-sync tree plus a per-machine
+  `external/` link; never touches entries it did not create.
+- `scripts/lint_skills.py` group rules: entry descriptions at most 60 words
+  and bodies at most 120 lines; sub-commands slash-only, at most 100 lines
+  (`sv-figure-drawio` exempt), listed in their entry's routing table; every
+  routed name exists; `See: ../<skill>/references/...` pointers resolve.
+- `scripts/install.sh` removes links into this repo whose skill no longer
+  exists.
+- `group-beamer` (now `sv-slides`): Beamer decks for group meetings in two modes, `weekly-report`
   (with the `progress` variant; loads last week's next steps from the
   research-records log and marks them done / partial / dropped) and a critical
   `paper-talk` (paper card, ranked identifying assumptions, results without
