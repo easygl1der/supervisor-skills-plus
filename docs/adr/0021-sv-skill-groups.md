@@ -118,7 +118,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 4. sv-figure（含 drawio 原样迁入和 study kit 迁入，更新 ADR 0007–0011 中的路径）
 5. sv-study、sv-quickread
 6. sv-idea、sv-litreview、sv-proposal、sv-experiment、sv-slides
-7. 全局：`scripts/lint_skills.py` 与 `check_checklists.py` 的 skill 名单和新规则（行数上限、子命令必须带 `disable-model-invocation`）、research-core 中 `skill:<name>` 来源前缀、README 和 skills/README、llms.txt、CHANGELOG（附新旧名对照表）、`scripts/install.sh`
+7. 全局：`scripts/lint_skills.py` 与 `check_checklists.py` 的 skill 名单和新规则（行数上限、子命令必须带 `disable-model-invocation`）、research-core 中 `skill:<name>` 来源前缀、README 和 skills/README、llms.txt、CHANGELOG（附新旧名对照表）、`scripts/install.sh`（改为生成 agent-sync 链接，见“安装”）
 
 ## Consequences
 - agent 自动挑选时只看 12 个总入口；用户想精确时，可以点名约 50 个子命令中的任意一个。目录总数从 26 增到约 64，但只有 13 个是 agent 每轮都要看到的。
@@ -129,11 +129,20 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 - ADR 0001–0020 作为历史保留旧名，不改写。
 - 不留旧名的 pointer stub（同 ADR 0019 的理由）。
 
-## Open questions（实施第 7 步之前要定）
-- **安装方式。** 平铺的 `sv-*` 目录要进入 Claude Code 和 Cursor 的 skills 目录，而这个目录就是 `~/agent-sync/skills`。agent-sync 的规则是“live 目录只来自 agent-sync 树”，而 `dbd969c` 的提交说明写的是“由 supervisor-skills-plus 的 installer 按机器建链接”。两条路：
-  - (a) 由 `install.sh` 在 `~/agent-sync/skills` 下建链接，并在 agent-sync 的 `.gitignore` 里忽略 `sv-*` 和 `research-core`。
-  - (b) agent-sync 提交指向 `~/Projects/supervisor-skills-plus/skills/...` 的相对或固定路径链接。
-- **旧副本。** agent-sync 里的 journal-adapt、avoid-ai-writing 独立副本是否删除，由 owner 在 agent-sync 里决定。
+### 安装（owner 2026-10-18 选定）
+- 只装在 SG 和 MBA 上，Mini 不装。
+- 各机器仓库的绝对路径不同：SG 是 `/Users/wriseai/Projects/supervisor-skills-plus`，MBA 是 `/Users/yitwah/Projects/supervisor-skills-plus`；MBA 上的 `~/agent-sync` 又链接到 `/Volumes/MacSSD/MacOffload/agent-sync`。所以直接指向本仓库的绝对或相对链接，总会在某台机器上断（`dbd969c` 删掉的 12 个坏链就是这样来的）。
+- 做法：
+  - agent-sync 里有一个**每台机器自己建、被 gitignore 的中转链接** `external/supervisor-skills-plus`，指向这台机器的主 checkout。
+  - agent-sync **提交**约 64 个相对链接：`skills/<name> → ../external/supervisor-skills-plus/skills/<name>`。链接始终在 agent-sync 树内部，SG 和 MBA 上都能解析。
+- 这样所有 live skill 都在 agent-sync 的 git 里，可见、可回滚，符合 agent-sync policy 的“live 目录只有一棵树”。
+- 本仓库提供一个脚本，按 `skills/` 当前的目录生成或清理 agent-sync 里的这批链接（新增、删除、改名都处理），owner 再在 agent-sync 里检查后提交。这样“两个仓库都要提交”只多出一步检查。原来的 `scripts/install.sh`（往 `~/.claude|codex|cursor/skills` 里直接建链接）改为调用这个脚本，或者删掉。
+- 链接指向的是主 checkout，用的永远是主 checkout 当前所在分支的版本；worktree 里的改动要合回 main、主 checkout 拉下来之后才会生效。
+- Mini 会随 agent-sync 拉到这批链接，但没有中转链接，所以全是坏链。实施时要先确认 Claude Code 和 Cursor 遇到坏链是静默跳过还是报错；如果报错，再在 Mini 上建一个空目录作为中转链接的目标，或者另想办法。
+- agent-sync 的 `agent-sync-policy` 要补一段说明：`external/` 里放什么、新机器怎么建中转链接。这段改动在 agent-sync 仓库里做，不属于本仓库。
+
+### 旧副本
+agent-sync 里的 journal-adapt、avoid-ai-writing 独立副本是否删除，由 owner 在 agent-sync 里决定。
 
 ## Do not
 - 不使用 Claude Code plugin 的冒号命名空间（Option 2，两个工具里名字会不一致）。
