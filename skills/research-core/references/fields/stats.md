@@ -72,7 +72,7 @@ agree.
   proportionate. [src: guide:AJS/joe-data-analysis@932eb23; guide:AJS/jbes-data-analysis@932eb23] (candidate)
 
 ### Method block for quick reads
-When paper-quickread or study summarises a statistics paper on one page, the
+When sv-quickread or study summarises a statistics paper on one page, the
 method block states, in this order:
 - Model: the data-generating setting, the target parameter or functional,
   and the estimator or test. [src: guide:AJS/jbes-identification-strategy@932eb23] (candidate)
@@ -252,7 +252,7 @@ method block states, in this order:
   applies to their data.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-quickread, study
+- Owner: sv-quickread-card, sv-study
 - Src: guide:AJS/joe-identification-strategy@932eb23; guide:AJS/joe-data-analysis@932eb23
 
 ## Known disagreements

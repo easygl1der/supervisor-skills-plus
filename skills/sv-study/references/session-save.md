@@ -20,7 +20,7 @@ At the end of every session (or when the learner says "save"):
 4. `profile/misconceptions.md`: each misconception found, its level, and the
    correction that worked.
 5. `index.json`: one appended entry per new session or note
-   (`../paper-quickread/scripts/index_append.py`).
+   (`../sv-quickread/scripts/index_append.py`).
 6. Figures: `fig-<concept>-<type>.html` and `.png` next to the note that
    embeds them.
 
@@ -86,7 +86,7 @@ then the change is recorded in the round, not as a stacked correction.
 
 ## 4. Commit and push
 
-`python skills/study/scripts/vault.py save -m "study: <concept> (<date>)"`
+`python skills/sv-study/scripts/vault.py save -m "study: <concept> (<date>)"`
 stages the vault, commits, and pushes when a remote is configured. If the
 push fails (offline, no remote, authentication), the commit stays local and
 the script prints what to run later; it never discards changes.

@@ -52,7 +52,7 @@ figures:
   icon_libs: []                      # local icon library paths; see sv-figure-drawio
 
 reading:
-  dir: ""                            # optional: where paper-quickread / study write reading notes; default <project>/reading/
+  dir: ""                            # optional: where sv-quickread / study write reading notes; default <project>/reading/
 
 people:                              # roles only, no names
   - {role: senior-a, comment_macro: '\seniorA', agent_may_resolve: true}

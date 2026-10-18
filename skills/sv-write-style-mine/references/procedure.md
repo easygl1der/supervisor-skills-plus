@@ -26,7 +26,7 @@ loops:
 
 | Loop | Input | Output | Rules |
 |---|---|---|---|
-| **Dissect** | one exemplar paper, or a card from `paper-quickread --style` | a Paper Style Card (fields A to L) | `style-card.md` |
+| **Dissect** | one exemplar paper, or a card from `sv-quickread-style` | a Paper Style Card (fields A to L) | `style-card.md` |
 | **Accumulate** | several cards for one venue or field | Style Profile; with 5 to 10 papers and k/n support, rule lines for a venue or field profile (status `candidate` until confirmed) | `style-profile.md`, `profile-output.md` |
 | **Apply** | target venue plus manuscript | `dynamic_writing_skill.md`, section-by-section revision, or a report-only check for `sv-review-loop` | `skills/sv-write-style-apply/references/revision-phase.md`, `skills/sv-write-style-apply/references/check-mode.md` |
 
@@ -69,7 +69,7 @@ The six hard rules apply at all times and now live in `hard-rules.md`
 
 | Loop | Mode | Trigger | Writes | Section |
 |---|---|---|---|---|
-| Dissect | Card | "dissect this paper's style", a card from `paper-quickread --style` | one card | Phase 1, Step 3 |
+| Dissect | Card | "dissect this paper's style", a card from `sv-quickread-style` | one card | Phase 1, Step 3 |
 | Accumulate | Build | "learn the style of this venue" | cards, style profile, dynamic skill | Phase 1 |
 | Accumulate | Profile | "make a venue profile", `--new-field` | venue profile draft, field proposals | Profile output |
 | Apply | Revise | "revise my paper for <venue>" | revised sections, logs, rule candidates | Phase 2 |
@@ -79,9 +79,9 @@ The six hard rules apply at all times and now live in `hard-rules.md`
 Build runs before Revise, Profile and Check when no dynamic skill exists for
 the destination.
 
-### Cards arriving from paper-quickread
+### Cards arriving from sv-quickread
 
-`paper-quickread --style` dissects one paper while it is being read and
+`sv-quickread-style` dissects one paper while it is being read and
 writes a card in this skill's format to
 `<reading-dir>/papers/<paper>/style-card.md`. Accumulate treats it exactly
 like a card made here: file it under the venue or field corpus

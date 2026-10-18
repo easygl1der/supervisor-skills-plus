@@ -24,7 +24,7 @@ CONF = Path.home() / ".config" / "study" / "vault"
 DIRS = ["profile", "concepts", "sessions", "papers", "books", "style"]
 README = """# study-vault
 
-Private learning records used by the `study` skill (supervisor-skills-plus).
+Private learning records used by the `sv-study` skill (supervisor-skills-plus).
 Layout: profile/ (knowledge.yaml, sources.yaml, misconceptions.md), concepts/,
 sessions/, papers/, books/, style/, index.json (append-only).
 """
@@ -55,7 +55,7 @@ def init(path: Path) -> None:
             keep.touch()
     files = {
         "README.md": README,
-        "profile/knowledge.yaml": "# one entry per concept; see skills/study/references/learner-profile.md\n[]\n",
+        "profile/knowledge.yaml": "# one entry per concept; see skills/sv-study/references/learner-profile.md\n[]\n",
         "profile/sources.yaml": "# books, courses, papers studied: title, chapters done, notes\n[]\n",
         "profile/misconceptions.md": "# Misconceptions\n\n| Date | Concept | Misconception | Level | Correction that worked |\n|---|---|---|---|---|\n",
         "index.json": "[]\n",

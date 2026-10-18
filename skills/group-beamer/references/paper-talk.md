@@ -6,7 +6,7 @@ Keep the paper's order unless a readability reason is stated on the outline.
 
 ## Inputs
 
-The `paper-quickread` nine-section card when it exists; otherwise MinerU
+The `sv-quickread` nine-section card when it exists; otherwise MinerU
 markdown of the paper. Copy numbers with table or page. Harvest the paper's
 macros into a side `paper-macros.tex` when notation must compile unchanged.
 
@@ -24,7 +24,7 @@ macros into a side `paper-macros.tex` when notation must compile unchanged.
 7. Estimator and uncertainty, distinct from identification.
 8. Main results as numbers (no causal verb on this slide).
 9. Causal reading, sensitivity, what breaks under violation.
-10. Link to our project (`research-bridge` if a memo exists).
+10. Link to our project (`sv-study-bridge` if a memo exists).
 11. Reproducibility: rerun, or simulate an assumption violation.
 12. Optional replication segment (60 min slots): simulation of a violation
     plus a main-table match/mismatch column. Materials posted 24 h before.

@@ -66,7 +66,7 @@ apply, including the rule that causal language needs a causal design
   identification argument delivers. [src: guide:AJS/ecta-identification@932eb23] (candidate)
 
 ### Method block for quick reads
-When paper-quickread or study summarises a causal paper on one page, the
+When sv-quickread or study summarises a causal paper on one page, the
 method block states, in this order:
 - Identifying assumptions: each one by its label in the paper (exclusion,
   parallel trends, continuity at a cutoff, unconfoundedness, rank or
@@ -219,7 +219,7 @@ method block states, in this order:
 - Why: Without these five a summary cannot be checked against the paper.
 - Status: candidate
 - Scope: field:ci
-- Owner: paper-quickread, study
+- Owner: sv-quickread-card, sv-study
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ## Known disagreements

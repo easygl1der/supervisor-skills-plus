@@ -1,6 +1,6 @@
 # ADR 0012: Evals are kept as real outputs, not a JSON test harness
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner (SPEC test plan), Claude Code (eval set)
 
@@ -16,7 +16,7 @@ expected strings would test wording, not quality.
 3. Store complete real runs in the repo and check them with the skill scripts.
 
 ## Decision
-Option 3. `skills/study/evals/` holds: `reading/` (SDID paper: quickread,
+Option 3. `skills/sv-study/evals/` holds: `reading/` (SDID paper: quickread,
 method, insights, reflection, style card, figures; `index.json`; `lit-map/`),
 `study-vault/` (a sample vault: profile, concepts, sessions, and chapter 4 of
 a probabilistic ML textbook, PML1), `demo/` (an array-partition stepper with
@@ -35,5 +35,5 @@ by scripts with `--selftest` (`check_quickread.py`, `index_append.py`,
 - Do not store invented or hand-edited "expected" outputs as evals.
 
 ## Sources
-`skills/study/evals/` tree, `CHANGELOG.md` (eval runs line),
-`skills/study/evals/study-vault/books/murphy-pml1/ch04-statistics/notes.md` (licence line).
+`skills/sv-study/evals/` tree, `CHANGELOG.md` (eval runs line),
+`skills/sv-study/evals/study-vault/books/murphy-pml1/ch04-statistics/notes.md` (licence line).

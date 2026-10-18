@@ -24,7 +24,7 @@
 | 编程 | 算法执行（二分、排序、DFS/BFS、DP 填表） | P4（**demo**：二分） | study |
 | 编程 | 数据结构操作（堆插入、哈希冲突、链表反转） | P4 / P1 | study |
 | 编程 | 并发/异步调用顺序 | 序列图 stepper（P1，泳道） | study |
-| 流程 | 实验管线（数据→训练→评估→消融） | P2 | experiment-workflow / research-bridge |
+| 流程 | 实验管线（数据→训练→评估→消融） | P2 | experiment-workflow / sv-study-bridge |
 | 流程 | 论文修改/投稿/rebuttal 流程 | P2 + P7 | paper-writing 系列 / sv-write-style-mine |
 | 流程 | ACA（自动化学术流程）工作流 | P2 | sv-supervisor |
 | 流程 | supervisor-skills 路由（按项目阶段推荐下一个 skill） | P2 | sv-supervisor（README/DESIGN 图） |
@@ -35,10 +35,10 @@
 | ML | 梯度下降/学习率、训练循环 | P5 + P6（**demo**） | study |
 | ML | 注意力（Q·K → softmax → 加权 V） | P4 变体（矩阵逐格高亮）+ P9 | study |
 | ML | 前向/反向传播 | P9 + P1 | study |
-| 读论文 | 论文结构（问题→假设→方法→定理→实验→结论）一页图 | P1（逐节点出现）/ 静态 | paper-quickread |
-| 读论文 | 方法 pipeline 逐步 | P2 | paper-quickread / study paper-mode |
-| 读论文 | 和前人方法的差异（加了/删了哪条边） | P6 前后对比 | paper-quickread / deep-research |
-| 学以致用 | 新方法挂进我的项目管线（哪一步替换） | P6 前后对比 + P2 | research-bridge |
+| 读论文 | 论文结构（问题→假设→方法→定理→实验→结论）一页图 | P1（逐节点出现）/ 静态 | sv-quickread |
+| 读论文 | 方法 pipeline 逐步 | P2 | sv-quickread / study paper-mode |
+| 读论文 | 和前人方法的差异（加了/删了哪条边） | P6 前后对比 | sv-quickread / deep-research |
+| 学以致用 | 新方法挂进我的项目管线（哪一步替换） | P6 前后对比 + P2 | sv-study-bridge |
 | 综述 | 方法演变时间线 | P7（年份必须核对） | deep-research 文献地图 / proposal-writer |
 
 ## 使用规则

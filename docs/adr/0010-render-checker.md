@@ -32,4 +32,4 @@ and a look at the PNG before delivery.
 
 ## Sources
 `skills/sv-figure-explain/kit/render.mjs` (header, checks, exit codes),
-`skills/sv-figure-explain/references/visuals.md` §4 and §6, `skills/study/SKILL.md` §4 and checklist.
+`skills/sv-figure-explain/references/visuals.md` §4 and §6, `skills/sv-study/SKILL.md` §4 and checklist.

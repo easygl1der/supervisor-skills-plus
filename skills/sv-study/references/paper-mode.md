@@ -11,11 +11,11 @@
 
 ## 1. Files
 
-In the paper folder (shared with `paper-quickread`):
+In the paper folder (shared with `sv-quickread`):
 
 | File | Written | Purpose |
 |---|---|---|
-| `quickread.md` | if missing, by `paper-quickread` first | the nine-section card |
+| `quickread.md` | if missing, by `sv-quickread` first | the nine-section card |
 | `insights.md` | always | the 3 to 5 ideas that matter most |
 | `method.md` | when the paper has a method or proof worth reconstructing | derivation, step by step |
 | `qa.md` | only when the learner asks | self-check questions |

@@ -1,25 +1,25 @@
----
-name: paper-quickread
-description: >-
-  Produces a one-page, five-minute quick read of a single paper in nine
-  fixed sections: problem, core idea, field-specific method block, results
-  copied with sources, contributions tagged proved or empirical or
-  conjectured, a claim-evidence table, limitations, and the link to the
-  reader's own research. Optional --style also dissects the writing into a
-  Style Card for sv-write-style-mine. Use when the user says quick read, 速读, 这篇论文讲什么,
-  5 分钟看懂, or hands over one paper.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-quickread/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Paper Quickread
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Workflow
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
 One paper in, one page out, readable in five minutes. The page is a fixed
-nine-section card (`references/template-9.md`) so that cards from many
+nine-section card (`template-9.md`) so that cards from many
 papers line up for comparison and for the literature map of
 `deep-research`. It is not a substitute for understanding the paper: when
-the reader wants that, `study` takes the same folder and goes deeper.
+the reader wants that, `sv-study` takes the same folder and goes deeper.
 
 Three things make this card different from a generic summary:
 
@@ -51,7 +51,7 @@ follows the user's language when the user writes in another.
 ## When NOT to use this skill
 
 - The user wants to understand a concept, method or proof in the paper:
-  `study` (paper mode). It reuses this card if one exists.
+  `sv-study-paper`. It reuses this card if one exists.
 - Several papers, a survey or a related-work section: `deep-research`.
 - Reviewing the user's own manuscript: `sv-review-once`.
 - Building a venue's style profile from many exemplars: `sv-write-style-mine`.
@@ -68,7 +68,7 @@ follows the user's language when the user writes in another.
 3. Resolve the reading root (where outputs go):
    `research.yaml` `reading.dir` if set; else `<project>/reading/` when the
    working directory is a research project; else the study vault found by
-   `skills/study/scripts/vault.py where` (`$STUDY_VAULT`, then
+   `skills/sv-study/scripts/vault.py where` (`$STUDY_VAULT`, then
    `~/.config/study/vault`, then `~/study-vault`); else `./reading/`. Say
    which one was used.
 
@@ -93,7 +93,7 @@ Decide and write down, in one line each:
   position.
 - **Field**: causal, stats, math, SE, AI/ML, other (pick the field profile).
 - **Method block content** for that type and field
-  (`references/field-method-blocks.md`).
+  (`field-method-blocks.md`).
 - **Sections that are honestly not applicable**, for example no results
   table in a pure theory paper (section 5 then lists the main theorems with
   their numbers instead).
@@ -102,7 +102,7 @@ Decide and write down, in one line each:
 
 ### Step 3: Write the nine sections
 
-Follow `references/template-9.md`: section order, length budget per
+Follow `template-9.md`: section order, length budget per
 section, and what each must contain. Hard rules while writing:
 
 - Copy numbers, formulas and claims; give the location for each.
@@ -121,8 +121,8 @@ section, and what each must contain. Hard rules while writing:
 - Body text (outside tables) within the budget: target 700 Chinese
   characters or 450 English words; tables do not count.
 
-See: references/template-9.md
-See: references/field-method-blocks.md
+See also `template-9.md`
+See also `field-method-blocks.md`
 
 ### Step 4: Self-check
 
@@ -148,15 +148,15 @@ abstracted sentence templates; no copied sentences) and save it as
 `style-card.md` in the paper folder. It is a candidate for `sv-write-style-mine`'s
 accumulate loop, never a rule by itself.
 
-See: references/style-mode.md
+See also `style-mode.md`
 
 ### Visuals (optional)
 
 A paper-structure figure (question to assumptions to method to theorems or
 experiments to conclusions) or a before/after comparison with prior work
-helps when the user asks for it; use the `study` kit
-(`skills/study/kit/`, rules in `skills/study/references/visuals.md`,
-scenario list in `skills/study/references/visual-scenarios.md`) and embed
+helps when the user asks for it; use the `sv-study` kit
+(`skills/sv-figure-explain/kit/`, rules in `skills/sv-figure-explain/references/visuals.md`,
+scenario list in `skills/sv-figure-explain/references/visual-scenarios.md`) and embed
 the PNG. Not part of the default one page.
 
 ## Checklist
@@ -172,7 +172,7 @@ Report pass, fail or n/a with evidence:
 - Index entry appended, not rewritten.
 - With `--style`: card uses fields A to L, contains no copied sentence.
 - research-core checklist items owned by this skill (field profiles'
-  CI, ST and SE items with Owner `paper-quickread`).
+  CI, ST and SE items with Owner `sv-quickread`).
 
 ## Outputs
 
@@ -187,9 +187,9 @@ Report pass, fail or n/a with evidence:
 
 ## Hand-offs
 
-- Understand a concept, method or proof from this paper: `study` (paper
+- Understand a concept, method or proof from this paper: `sv-study` (paper
   mode, same folder).
-- The paper suggests something for the current project: `research-bridge`.
+- The paper suggests something for the current project: `sv-study-bridge`.
 - Style card into a venue profile: `sv-write-style-mine` (accumulate).
 - Several cards into an evolution map and gap list: `deep-research`
   (literature-map mode).

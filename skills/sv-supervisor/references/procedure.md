@@ -49,18 +49,18 @@ on what the user asked for, before any stage logic:
 
 | Request | Skill |
 |---|---|
-| a quick structured read of one paper; its writing style (`--style`) | `paper-quickread` |
-| understand a concept, a paper in depth, or a textbook chapter | `study` |
+| a quick structured read of one paper; its writing style (`--style`) | `sv-quickread` |
+| understand a concept, a paper in depth, or a textbook chapter | `sv-study` |
 | map a body of literature, find gaps, plan next reads | `deep-research` (literature-map mode) |
-| "can I use this in my project?", a minimal validation experiment | `research-bridge` |
+| "can I use this in my project?", a minimal validation experiment | `sv-study-bridge` |
 | thesis proposal, research plan, grant application | `proposal-writer` |
 | a style profile from exemplar papers | `sv-write-style-mine` |
 | group-meeting slides, weekly report, paper talk | `group-beamer` |
 
 Priority: an explicit reading or learning intent wins over the stage table;
 if a project exists, mention its stage in one line and continue with the
-routed skill. Usual chain: `paper-quickread` (triage) then `study`
-(understanding) then `research-bridge` (use in a project) then
+routed skill. Usual chain: `sv-quickread` (triage) then `sv-study`
+(understanding) then `sv-study-bridge` (use in a project) then
 `idea-evaluator` or `experiment-workflow`; several cards then
 `deep-research` literature-map; a plan then `proposal-writer`.
 [src: user:2026-10-16] (confirmed)
@@ -128,7 +128,7 @@ brief showed (a blocker, a marker count, days to deadline).
 | Stage | Skills (first choice first) |
 |---|---|
 | no `research.yaml` | `sv-supervisor-init`, then `sv-supervisor-records`; `research-core` is loaded by every skill |
-| idea | `idea-evaluator`, `deep-research`, `research-bridge` (an idea came from a paper or concept just studied) |
+| idea | `idea-evaluator`, `deep-research`, `sv-study-bridge` (an idea came from a paper or concept just studied) |
 | design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `sv-supervisor-records` (ADRs) |
 | experiments | `experiment-workflow`, `sv-supervisor-records`, `research-core` `core/ai-collaboration.md` (agent coding habits) |
 | writing | `sv-write` (routes to skeleton, intro, section, style and humanize sub-commands) |

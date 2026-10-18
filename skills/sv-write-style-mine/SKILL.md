@@ -24,7 +24,7 @@ and input check (MinerU only).
 
 | Mode | Trigger | Load |
 |---|---|---|
-| Card | "dissect this paper's style", a card from `paper-quickread --style` | `style-card.md` |
+| Card | "dissect this paper's style", a card from `sv-quickread-style` | `style-card.md` |
 | Build | "learn the style of this venue" | `style-card.md`, `style-profile.md`, `base_rules/<file>` the user picks |
 | Profile | "make a venue profile", `sv-supervisor-harvest --new-field` | `profile-output.md` (after Build and the human gate) |
 | Intake | "list this journal's new papers", "find this author's papers" | `intake.md`, `scripts/intake_search.py` |

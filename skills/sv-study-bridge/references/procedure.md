@@ -1,23 +1,25 @@
----
-name: research-bridge
-description: >-
-  Bridges something just read or learned (a quickread card, study notes, a
-  concept note) to the current research project: maps the source setting
-  onto the project, checks which assumptions transfer, gives a verdict on
-  whether and how to use it, and designs the cheapest validation experiment
-  with expected results and a kill criterion fixed in advance. Use when the
-  user asks whether a method just read fits the project, says
-  这个方法能用到我的项目吗, or 学以致用.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-study-bridge/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Research Bridge
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Workflow
+- Checklist
+- Outputs
+- Evals
+- Hand-offs
+- Sources
 
 ## Overview
 
 Reading and studying produce understanding; a project needs a decision.
-This skill turns one source (a paper card from `paper-quickread`, notes from
-`study`, a concept note in the study vault) into a one-page **bridge card**
+This skill turns one source (a paper card from `sv-quickread`, notes from
+`sv-study`, a concept note in the study vault) into a one-page **bridge card**
 for the current project:
 
 1. **Can it be used here?** A verdict from five: use as the main method,
@@ -29,7 +31,7 @@ for the current project:
    anything runs: data, metric, expected result, kill criterion.
 
 Three habits make the card worth more than a gut feeling
-(`references/transfer-checks.md`):
+(`transfer-checks.md`):
 
 - **Map relations, not surface features.** A source method works because of
   a structure (who is treated, what is compared, what is assumed); the
@@ -54,7 +56,7 @@ follows the user's language.
 
 ## When to use this skill
 
-- After `paper-quickread` or `study`: "can I use this in my project?",
+- After `sv-quickread` or `sv-study`: "can I use this in my project?",
   "how would this apply to my data?", or the same question in Chinese.
 - Choosing between a method the project uses now and one just read about.
 - A reviewer or advisor suggested a method and the user wants to know
@@ -65,8 +67,8 @@ follows the user's language.
 ## When NOT to use this skill
 
 - Understanding the method itself is still shaky (the learner profile says
-  "not studied" or the user cannot state its assumptions): `study` first.
-- No card or notes exist yet for the source: `paper-quickread` first. This
+  "not studied" or the user cannot state its assumptions): `sv-study` first.
+- No card or notes exist yet for the source: `sv-quickread` first. This
   skill does not read PDFs.
 - Judging whether a whole new research idea is worth a paper:
   `idea-evaluator`.
@@ -91,7 +93,7 @@ follows the user's language.
    declines or has no project yet, switch to **general mode**: the card
    lists the kinds of projects the source fits, its portable assumptions,
    and a test template, and writes no project-specific verdict.
-4. Resolve the reading root as `paper-quickread` does (`research.yaml`
+4. Resolve the reading root as `sv-quickread` does (`research.yaml`
    `reading.dir`, `<project>/reading/`, `$STUDY_VAULT`, `./reading/`) and
    say which one was used.
 
@@ -111,7 +113,7 @@ or extend the source's claims; open questions stay open (copy items marked
 "not checked" or "pending" as such).
 
 If the learner's `proficiency_ai` for the method is missing or below
-"can use", say so in one line and offer `study`; continue only if the user
+"can use", say so in one line and offer `sv-study`; continue only if the user
 wants to.
 
 ### Step 2: Pin the target
@@ -140,7 +142,7 @@ for a fix (an extension, a variant) is cited only after it is verified;
 otherwise the row says "variant to be checked" and the check goes to
 `deep-research`. Mark own reasoning as added (Chinese label in the card).
 
-See: references/transfer-checks.md
+See also `transfer-checks.md`
 
 ### Step 5: Verdict and how
 
@@ -171,7 +173,7 @@ could only confirm it. Write it pre-registration style:
 Numbers in the card come from the source or from the project's numbers
 file; never invent a value or an effect size.
 
-See: references/bridge-card.md
+See also `bridge-card.md`
 
 ### Step 7: Save
 
@@ -185,9 +187,9 @@ cannot write files, print the card.
 
 A before and after picture of the project pipeline with the new step
 highlighted helps when the user asks for it or the change touches more than
-two steps. Use the `study` kit (`skills/study/kit/`, rules in
-`skills/study/references/visuals.md`, pattern list in
-`skills/study/references/visual-scenarios.md`, row "learning applied":
+two steps. Use the `sv-study` kit (`skills/sv-figure-explain/kit/`, rules in
+`skills/sv-figure-explain/references/visuals.md`, pattern list in
+`skills/sv-figure-explain/references/visual-scenarios.md`, row "learning applied":
 small multiples plus a state-machine replay) and embed the PNG. Never
 required; the card stands without it.
 
@@ -227,9 +229,9 @@ table, verdict with how, validation test, hand-offs.
 
 Worked cards (real outputs, not stubs) live in `evals/`: project-mode
 SDID, general-mode MLE, and a non-estimator process bridge (notebook
-habit to `experiment-workflow`). `skills/study/evals/bridge/` is a
+habit to `experiment-workflow`). `skills/sv-study/evals/bridge/` is a
 pointer to those paths. Shared reading notes stay under
-`skills/study/evals/reading/`.
+`skills/sv-study/evals/reading/`.
 
 This skill does not compute Pearl-Bareinboim transport formulas or run
 do-calculus. The card checks assumptions at mapping level only.
@@ -243,8 +245,8 @@ do-calculus. The card checks assumptions at mapping level only.
 - Adopting or rejecting the method is decided: `sv-supervisor-records` (ADR
   with the rejected alternative; the card is the context).
 - An assumption or a variant needs literature: `deep-research`.
-- The method itself is not yet understood: `study`.
-- No card for the source yet: `paper-quickread`.
+- The method itself is not yet understood: `sv-study`.
+- No card for the source yet: `sv-quickread`.
 
 ## Sources
 

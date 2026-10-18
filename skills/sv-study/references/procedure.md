@@ -1,18 +1,19 @@
----
-name: study
-description: >-
-  Understanding-first study partner: works through a paper, a
-  textbook chapter or a single concept one idea at a time (motivation, plain
-  principle, example, links to what the learner knows, a picture), then has
-  the learner restate it, diagnoses the restatement as a mental model
-  (mechanism, conditions, boundaries) and corrects from the learner's own
-  associations. Keeps a learner profile in a separate study-vault repo. Use
-  when the user says 我想搞懂, explain this concept, study this paper or
-  chapter, or 精读.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/study/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Study
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Mode
+- Workflow
+- Why it works this way
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -22,7 +23,7 @@ when it breaks, and connect it to what they already use. Flashcards, quizzes
 and spaced review exist only as options.
 
 One concept at a time, each round follows the same protocol
-(`references/protocol.md`):
+(`protocol.md`):
 
 0. Locate: why this concept now, what the learner already knows.
 1. Plain principle in at most two sentences, no jargon.
@@ -50,15 +51,15 @@ session opener (`source-priority.md` §5); do not teach claims from
 
 - "I want to understand X", "explain X so that I really get it", a close reading of a
   paper, study chapter N of a textbook, prepare to use a method in research.
-- After `paper-quickread`, when the reader wants depth on one part.
+- After `sv-quickread`, when the reader wants depth on one part.
 - When the learner says a restatement or an explanation does not click.
 
 ## When NOT to use this skill
 
-- A five-minute overview of a paper: `paper-quickread`.
+- A five-minute overview of a paper: `sv-quickread`.
 - A literature survey or a map of many papers: `deep-research`.
-- Applying a learned method to the current project: `research-bridge`.
-- Exam-style drilling only: use the options in `references/options.md`, or
+- Applying a learned method to the current project: `sv-study-bridge`.
+- Exam-style drilling only: use the options in `options.md`, or
   a dedicated flashcard tool; this skill does not default to it.
 
 ## Step 0: Load context
@@ -73,7 +74,7 @@ session opener (`source-priority.md` §5); do not teach claims from
    otherwise fall back to `./reading/` and say so). Read
    `profile/knowledge.yaml`, `profile/misconceptions.md`, and the concept
    notes related to today's topic.
-3. Material: in **paper mode**, follow `references/source-priority.md`
+3. Material: in **paper mode**, follow `source-priority.md`
    (official PDF first; MinerU Markdown second; repo `summary.md`,
    `transcript.md`, `quickread.md` for orientation only). PDF text via
    `research-core` → `references/core/inputs-mineru.md`; stop if no route
@@ -81,8 +82,8 @@ session opener (`source-priority.md` §5); do not teach claims from
    are on record. **Concept/book** modes: user text or chapter PDF as
    today; summaries still cannot be sole evidence for numbers or theorems.
 
-See: references/learner-profile.md
-See: references/source-priority.md (paper mode)
+See also `learner-profile.md`
+See also `source-priority.md` (paper mode)
 
 ## Mode
 
@@ -90,16 +91,16 @@ Decide once at the start and say which mode you chose (`--mode` overrides):
 
 | Mode | Signals | Reference |
 |---|---|---|
-| paper | abstract and references, up to about 60 pages, arXiv or journal | `references/paper-mode.md` |
-| book | table of contents, chapters, "chapter N", lecture notes | `references/book-mode.md` |
+| paper | abstract and references, up to about 60 pages, arXiv or journal | `paper-mode.md` |
+| book | table of contents, chapters, "chapter N", lecture notes | `book-mode.md` |
 | concept | no material, only "I want to understand X" | protocol only; knowledge, web search, and the vault |
 
 Then assess, in three lines: material type and difficulty, the
 prerequisites it assumes (checked against `knowledge.yaml`), and which
 files this session will write.
 
-See: references/paper-mode.md
-See: references/book-mode.md
+See also `paper-mode.md`
+See also `book-mode.md`
 
 ## Workflow
 
@@ -114,14 +115,14 @@ lettered options otherwise. Ask less as the vault fills.
 
 ### 2. Run the protocol per concept
 
-See: references/protocol.md
+See also `protocol.md`
 
 The restatement (step 6) is the one place the learner must think. Skip it
 only when the learner says they want notes only, and record that.
 
 ### 3. Diagnose and correct
 
-See: references/diagnosis.md
+See also `diagnosis.md`
 
 Report per layer (for example: mechanism right, conditions 2 of 3,
 boundaries missing), then each point with its label: core right, partly
@@ -140,8 +141,7 @@ Run the render check, open the PNG and look at it, fix and rerender (at
 most three rounds). Numbers in figures need a source or the label
 "illustrative".
 
-See: ../sv-figure-explain/references/visuals.md
-See: ../sv-figure-explain/references/visual-scenarios.md
+See also `skills/sv-figure-explain/references/visuals.md` and `skills/sv-figure-explain/references/visual-scenarios.md`
 
 ### 5. Save
 
@@ -151,7 +151,7 @@ concept notes, update `knowledge.yaml` and `misconceptions.md`, and commit
 that cannot write files, print the finished Markdown for the learner to
 paste.
 
-See: references/session-save.md
+See also `session-save.md`
 
 ### Options (off by default)
 
@@ -159,7 +159,7 @@ Socratic dialogue throughout, Feynman explain-back, light self-test with
 confidence ratings, proof reconstruction with gaps for the learner, notes
 only, Anki export.
 
-See: references/options.md
+See also `options.md`
 
 ## Why it works this way
 
@@ -167,7 +167,7 @@ Each rule above rests on learning research, summarised with verified
 references: hint-first tutoring, self-explanation, conceptual change,
 bridging analogies, concreteness fading, dual coding.
 
-See: references/learning-science.md
+See also `learning-science.md`
 
 ## Checklist
 
@@ -186,8 +186,8 @@ Report pass, fail or n/a with evidence:
 - Vault updated: session file, concept notes appended (not duplicated),
   `knowledge.yaml` self and AI levels, misconceptions; commit made or the
   fallback Markdown printed.
-- `index.json` entries appended only (`../paper-quickread/scripts/index_append.py`).
-- Field profile checklist items whose Owner includes `study`.
+- `index.json` entries appended only (`../sv-quickread/scripts/index_append.py`).
+- Field profile checklist items whose Owner includes `sv-study`.
 
 ## Outputs
 
@@ -207,7 +207,7 @@ the concept notes and the profile.
 
 ## Hand-offs
 
-- A five-minute card first: `paper-quickread`.
-- The learned method could change the current project: `research-bridge`.
+- A five-minute card first: `sv-quickread`.
+- The learned method could change the current project: `sv-study-bridge`.
 - Several papers into an evolution map: `deep-research` literature-map mode.
 - A proof that needs formal checking: the owner's Lean skills, if installed.

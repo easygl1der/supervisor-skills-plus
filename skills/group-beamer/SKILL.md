@@ -31,8 +31,8 @@ CJK via `ctex`. Not Marp, not PPTX.
 ## When NOT to use this skill
 
 - Manuscript prose: `sv-write-section`, `sv-write-humanize-paper` (`academic`).
-- A one-page paper card only: `paper-quickread`.
-- Understanding a paper before you can present it: `study`.
+- A one-page paper card only: `sv-quickread`.
+- Understanding a paper before you can present it: `sv-study`.
 - Figures that are not slides: `sv-figure-design`.
 
 ## Modes
@@ -55,7 +55,7 @@ Critical slides every paper talk carries (`paper-talk.md`, `causal-slides.md`):
    causal reading and its assumptions go on the discussion slide.
 4. Claim against evidence, from the quickread tags (proved / empirical /
    conjectured). A slide may narrow a paper's claim, never strengthen it.
-5. Link to our project (from a `research-bridge` card when one exists).
+5. Link to our project (from a `sv-study-bridge` card when one exists).
 6. Reproducibility: rerun, or simulate under a violated assumption.
 7. A closing discussion question for the group, not a slogan.
 
@@ -81,7 +81,7 @@ Critical slides every paper talk carries (`paper-talk.md`, `causal-slides.md`):
    project field). Load `group-preferences.md` (may be an empty slot).
 3. Weekly: `docs/STATUS.md`, latest `docs/log/*-group-meeting.md` next
    steps, git log since the last meeting, Linear if enabled.
-4. Paper-talk: the `paper-quickread` card (or MinerU markdown). Never extract
+4. Paper-talk: the `sv-quickread` card (or MinerU markdown). Never extract
    a PDF with pypdf or ad hoc scripts.
 5. Theme: `moloch-cjk` unless the user names `simpleplus-cjk` or `sysu-like`.
 
@@ -123,7 +123,7 @@ Each meeting leaves a record that the next weekly report reads:
 4. With no prior log, slide 3 says so and the marks are skipped.
 5. Decks and notes stay under `docs/meetings/<date>/`; STATUS keeps only the
    current state. Paper talks are logged the same way, and their
-   link-to-project slide is a candidate input for `research-bridge`.
+   link-to-project slide is a candidate input for `sv-study-bridge`.
 
 See: references/weekly-report.md
 See: references/paper-talk.md
@@ -173,8 +173,8 @@ exported `notes.md`.
 
 ## Hand-offs
 
-- `paper-quickread`: card in for paper-talk.
-- `research-bridge`: link-to-project slide.
+- `sv-quickread`: card in for paper-talk.
+- `sv-study-bridge`: link-to-project slide.
 - `sv-figure-design`: TikZ DAGs; Graphviz PDF only for large or changing graphs.
 - `sv-supervisor-records`: accumulation and last-week next steps.
 - `sv-write-humanize-slides`: `slides` profile on frames; `academic` on `\note{}`.

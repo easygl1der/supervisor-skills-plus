@@ -1,6 +1,6 @@
 # ADR 0014: One question at a time; question tool when the environment has one
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner (SPEC D7, open question 7), Claude Code (wording per environment)
 
@@ -17,7 +17,7 @@ lose answers.
    available, lettered plain-text options otherwise.
 
 ## Decision
-Option 3. `skills/study/SKILL.md` §1: one short multiple-choice question per
+Option 3. `skills/sv-study/SKILL.md` §1: one short multiple-choice question per
 missing prerequisite (not studied / rusty / can use / can explain, plus where
 learned), using a question tool when present. `references/protocol.md` §3:
 one question per message, never two at the end. `references/learner-profile.md`
@@ -31,5 +31,5 @@ elsewhere. Questions get fewer as the vault fills.
 - Do not open with a test battery. Do not end a message with two questions.
 
 ## Sources
-`skills/study/SKILL.md` (defaults, §1), `skills/study/references/protocol.md` §3,
-`skills/study/references/learner-profile.md` (environments), SPEC D7 and open question 7.
+`skills/sv-study/SKILL.md` (defaults, §1), `skills/sv-study/references/protocol.md` §3,
+`skills/sv-study/references/learner-profile.md` (environments), SPEC D7 and open question 7.

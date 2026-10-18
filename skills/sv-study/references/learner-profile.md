@@ -18,7 +18,7 @@ and stay private. So they live in a private git repository, `study-vault`
 
 ## 2. Finding the vault
 
-`python skills/study/scripts/vault.py where` resolves, in order:
+`python skills/sv-study/scripts/vault.py where` resolves, in order:
 
 1. environment variable `STUDY_VAULT`;
 2. the path written in `~/.config/study/vault` (one line);
@@ -26,7 +26,7 @@ and stay private. So they live in a private git repository, `study-vault`
 4. otherwise `./reading/` in the current directory, with a warning that
    nothing will be shared across projects.
 
-First use: `python skills/study/scripts/vault.py init ~/study-vault` creates
+First use: `python skills/sv-study/scripts/vault.py init ~/study-vault` creates
 the layout below, an empty `knowledge.yaml`, a README and a git repository;
 then the learner adds a private remote
 (`gh repo create easygl1der/study-vault --private --source ~/study-vault --push`)
@@ -44,8 +44,8 @@ study-vault/
   sessions/<YYYY-MM-DD>_<concept>.md
   papers/<YYYY-MM-DD>_<firstauthor>_<short-title>/
   books/<book-slug>/progress.md, chNN-<slug>/
-  style/<venue>/cards/    optional: style cards from paper-quickread --style
-  index.json              append-only (paper-quickread/scripts/index_append.py)
+  style/<venue>/cards/    optional: style cards from sv-quickread --style
+  index.json              append-only (sv-quickread/scripts/index_append.py)
 ```
 
 Concept file names: English kebab-case after the prefix, for example

@@ -58,7 +58,7 @@ up front and back-filled.
 - **Survey** (default): the workflow below, from research questions
   outward to the literature.
 - **Literature map**: from what the user has read inward. Input is a batch
-  of `paper-quickread` cards and `study` notes found through the reading
+  of `sv-quickread` cards and `sv-study` notes found through the reading
   root's `index.json`; output is an evolution map (read versus cited-only
   nodes, typed edges, study-kit ELK figure), a comparison table with
   sources, an evidence-backed candidate gap list, and next reads by
@@ -224,6 +224,6 @@ retrieval for some literature) are disclosed in a short note.
 - Wants prose written or polished: `sv-write-section` / `sv-write-polish`.
 - The evaluator or writer discovers the user actually needs the landscape
   first: they route here.
-- A literature map needs more cards: `paper-quickread` per paper; a gap
-  from the map worth testing in the current project: `research-bridge`;
+- A literature map needs more cards: `sv-quickread` per paper; a gap
+  from the map worth testing in the current project: `sv-study-bridge`;
   a map feeding a proposal's background section: `proposal-writer`.

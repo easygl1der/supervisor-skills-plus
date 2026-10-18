@@ -33,5 +33,5 @@ derivations, algorithms, processes. GIF is an export of a stepper.
 - Do not use Manim. Do not use a stepper for unordered content.
 
 ## Sources
-`skills/sv-figure-explain/references/visuals.md` (intro, §1, §5), `skills/study/SKILL.md` §4,
+`skills/sv-figure-explain/references/visuals.md` (intro, §1, §5), `skills/sv-study/SKILL.md` §4,
 `skills/sv-figure-explain/kit/templates/`, SPEC D9, D10, D11, D12.

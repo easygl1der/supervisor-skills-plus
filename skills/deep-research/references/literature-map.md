@@ -16,8 +16,8 @@
 ## 1. What this mode is
 
 The survey mode searches outward from research questions. This mode works
-inward from what the user has already read: a batch of `paper-quickread`
-cards and `study` notes becomes (a) an evolution map that links papers by
+inward from what the user has already read: a batch of `sv-quickread`
+cards and `sv-study` notes becomes (a) an evolution map that links papers by
 problem, method and assumption, (b) a comparison table, (c) a gap list
 where every gap names the cards that show it, and (d) a short list of what
 to read next. It is the bridge between reading single papers and writing a
@@ -33,14 +33,14 @@ in the cards.
 
 ## 2. Inputs: finding the cards
 
-Resolve the reading root exactly as `paper-quickread` Step 0 does:
+Resolve the reading root exactly as `sv-quickread` Step 0 does:
 `research.yaml` `reading.dir`; else `<project>/reading/` inside a research
 project; else the study vault (`$STUDY_VAULT`, then `~/.config/study/vault`,
 then `~/study-vault`, as resolved by the study skill's `vault.py where`); else `./reading/`. Say which root was used.
 
 Read `<reading-root>/index.json`. It is append-only: several records may
 share an `id`; take every record per id (one per artifact: `quickread`,
-`study`, `style-card`), not only the latest, because each points to a
+`sv-study`, `style-card`), not only the latest, because each points to a
 different file. The user may restrict the batch by tag, field, date or an
 explicit list of ids; default is every `kind: paper` entry.
 
@@ -98,12 +98,12 @@ the comparison table and the gap list are read off these axes.
 
 ## 5. Step 3: the evolution map figure
 
-Follow `skills/study/references/visuals.md` (render loop, visual rules)
-and `skills/study/references/visual-scenarios.md` (P1 structure, P7
+Follow `skills/sv-figure-explain/references/visuals.md` (render loop, visual rules)
+and `skills/sv-figure-explain/references/visual-scenarios.md` (P1 structure, P7
 timeline).
 
 - Default up to about 20 nodes: copy the ELK template with
-  `python skills/study/scripts/newfig.py auto-dag-elk <map-dir>/fig-lit-map.html`
+  `python skills/sv-figure-explain/scripts/newfig.py auto-dag-elk <map-dir>/fig-lit-map.html`
   and edit only the data block. Make each edge's verb a borderless label
   node in the layout (edge A to label without arrowhead, label to B with
   arrowhead); ELK then reserves room for the text and labels stop sitting
@@ -117,7 +117,7 @@ timeline).
 - Not Mermaid by default, no Manim, no hand-placed coordinates beyond six
   nodes.
 
-Render with `skills/study/kit/render.sh fig-lit-map.html fig-lit-map.png`;
+Render with `skills/sv-figure-explain/kit/render.sh fig-lit-map.html fig-lit-map.png`;
 fix until the warning list is empty, then open the PNG and check arrow
 directions, label placement and that the caption states a conclusion
 ("图 1" plus one sentence). Embed the PNG in `map.md`; keep the HTML next
@@ -211,5 +211,5 @@ Checklist (pass, fail or n/a with evidence):
   no retrieval.
 - Every listed work has a citation-protocol grade.
 
-Example on real data: `skills/study/evals/reading/lit-map/map.md` (one read
+Example on real data: `skills/sv-study/evals/reading/lit-map/map.md` (one read
 card, so mostly cited-only nodes).

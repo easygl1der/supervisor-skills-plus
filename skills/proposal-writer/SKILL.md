@@ -46,7 +46,7 @@ It covers four genres, each with a section map and length budget in
   statement for the job market".
 - An idea has passed `idea-evaluator` and now needs to become a document
   that a committee will score.
-- Notes from `study`, `paper-quickread` or `deep-research` should be turned
+- Notes from `sv-study`, `sv-quickread` or `deep-research` should be turned
   into a literature gap and a plan.
 - An existing proposal draft needs a reviewer-lens audit or a restructure
   to a new call.
@@ -174,7 +174,7 @@ as "no work retrieved under these searches" and never as "no one has ever";
 a preliminary result is reported in past tense with its scope and source.
 [src: up:skills/sv-write/references/evidence-discipline.md] (confirmed)
 
-Notes from `paper-quickread` and `study` already carry locations (section,
+Notes from `sv-quickread` and `sv-study` already carry locations (section,
 equation, table) and their reading coverage (for example "read to 4.1;
 theorem conditions unchecked"). Copy both into the ledger. A statement
 about a part the notes did not cover is not a cited claim; it is a gap
@@ -200,7 +200,7 @@ See: references/timeline-risk.md
 Visuals are optional and often expected (a technical roadmap figure in a
 kaiti report or NSFC application; an aims diagram; a Gantt chart). Use the
 study kit's HTML-to-PNG pipeline and pick the pattern from
-`skills/study/references/visual-scenarios.md` (P7 timeline for the Gantt
+`skills/sv-figure-explain/references/visual-scenarios.md` (P7 timeline for the Gantt
 and the method lineage, P2 for the technical roadmap, P6 for "existing
 methods versus ours"). Dates and numbers on a figure come from the
 milestone table or carry "illustrative". Paper-grade figures go to
@@ -317,7 +317,7 @@ must not (ADR 0016).
 Worked draft and reviewer pass:
 `evals/2026-10-16_sdid-staggered-se/` (kaiti.md, review.md). The 2026-10-17
 note in kaiti.md is the example that novelty retrieval must run before
-drafting. `skills/study/evals/proposal/` is a pointer only.
+drafting. `skills/sv-study/evals/proposal/` is a pointer only.
 
 ## Hand-offs
 
@@ -327,8 +327,8 @@ drafting. `skills/study/evals/proposal/` is a pointer only.
 - Pilot runs that produce preliminary data: `experiment-workflow`.
 - Citation verification and, later, the paper itself: `sv-write-section`.
 - Local register from funded exemplars: `sv-write-style-mine`.
-- Understanding a method the proposal depends on: `study`; hooking notes
-  to the current project: `research-bridge`.
+- Understanding a method the proposal depends on: `sv-study`; hooking notes
+  to the current project: `sv-study-bridge`.
 - Scope and design decisions taken while writing (frozen RQ set, chosen
   data source): `sv-supervisor-records` as an ADR.
 - Language polish and AI-tell removal on the finished draft:

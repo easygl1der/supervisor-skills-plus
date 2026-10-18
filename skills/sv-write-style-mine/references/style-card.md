@@ -152,7 +152,7 @@ Research Settings*. Cambridge University Press.
   (for example `.style/fse/cards/fse_001.md`).
 - Without one: `<corpus_folder>/_style_cards/<paper_id>_style_card.md`, as in
   the original skill.
-- From `paper-quickread --style`: next to the quickread note
+- From `sv-quickread-style`: next to the quickread note
   (`<reading-dir>/papers/<paper>/style-card.md`); Accumulate copies it into
   the venue corpus when the venue is aggregated.
 

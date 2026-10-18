@@ -31,5 +31,5 @@ See: references/visual-scenarios.md
 
 ## Hand-offs
 
-- The learning session itself: `study`.
+- The learning session itself: `sv-study`.
 - Non-learning HTML figures: `sv-figure-html`.
