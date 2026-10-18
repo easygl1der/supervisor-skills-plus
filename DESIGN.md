@@ -28,7 +28,7 @@ One private, installable skill library that runs on every paper, assignment and 
 Principles, each grounded in what went wrong or right in the evidence:
 
 1. **Field-neutral core, field-specific profiles.** Upstream is tuned to AI/ML and DB writing (`[n01 §5.1]`); the local SE skills were overfitted to two specific papers and contradicted each other (`[n02 §11]`). Rules that hold everywhere live in one core; field and venue rules live in profiles; project rules live in the project repo.
-2. **Every rule has a source.** Rules from our project cite the archive; rules from literature cite the paper; rules with no source are marked `unsourced` and are not enforced as checklist items. The archive showed how quickly unsourced claims drift: checklist v2 provenance misattributes items (`CF-01@v2`, `CF-14@v2` "Who: Hao (乐绎华)") and an agent change report claimed 11 fixes that never landed (`[n05 §5.5]`).
+2. **Every rule has a source.** Rules from our project cite the archive; rules from literature cite the paper; rules with no source are marked `unsourced` and are not enforced as checklist items. The archive showed how quickly unsourced claims drift: checklist v2 provenance misattributes items (`CF-01@v2`, `CF-14@v2` "Who: Senior A (乐绎华)") and an agent change report claimed 11 fixes that never landed (`[n05 §5.5]`).
 3. **Evidence before prose.** Drafting starts from a claim ledger (claim, number, scope, source script). Missing in the local SE skills (`[n02 §11.5]`); its absence produced an untraceable agreement number in the paper (`[n04 §1.6]`, `FINAL-CHECKLIST-2026-10-02.md` B1).
 4. **Verify the diff, not the report.** Every "done" is checked against the actual diff, because commit subjects and agent reports misdescribed patches repeatedly (`msr:5262231` "add todo", `msr:815305e` "cursor-safety: checkpoint", REVISION-SUMMARY; `[n05 §5.5]`, `[n06 §0]`).
 5. **The paper holds only the newest correct content; history lives in `docs/`.** Anti-accretive body text; records in `docs/STATUS.md`, `docs/adr/`, `docs/log/`.
@@ -113,7 +113,7 @@ Cost: every other skill depends on `research-core` being installed. Upstream alr
 | File | Rule set | Main evidence |
 |---|---|---|
 | `claims-evidence.md` | Claim ledger; every claim has a number, scope and source (script + data/code SHA, or citation); hedge interpretations, never measured facts; "as the source describes" hedges for model-read data; novelty claims carry "to our knowledge"; speculation labelled untested | upstream `paper-writer/references/evidence-discipline.md`; humanize-paper rule; `[n06 §2.6]`; FINAL B1 |
-| `body-text.md` | Anti-accretive body text: the paper says what is true now, no revision narration, no "plan predicted" voice; why before how; define each concept before use; term table with rejected readings; macros for labels | anti-accretive-docs; `comments_hao.md:1-3`, §2.2, §2.3; `[n06 §2.1, §2.2, §2.8]`; writing-shape concept-grounding rule |
+| `body-text.md` | Anti-accretive body text: the paper says what is true now, no revision narration, no "plan predicted" voice; why before how; define each concept before use; term table with rejected readings; macros for labels | anti-accretive-docs; `comments_<A>.md:1-3`, §2.2, §2.3; `[n06 §2.1, §2.2, §2.8]`; writing-shape concept-grounding rule |
 | `deai.md` | Short summary of the de-AI contract and the S1–S7 diagnosis vocabulary; full method in `deai-writing` | `[n02 §10 De-AI]` |
 | `feedback-loop.md` | Feedback-to-revision principles: stable IDs, one change per comment, verify against diff, never hide an unresolved reviewer note, conflicts surfaced not resolved silently | `[n05 §6]` |
 | `figures.md` | Figure clarity rules that hold in every field (self-contained captions, dual encoding, names match text, one figure per message, vector, no AI-look markers, figure numbers from scripts) | upstream handbook 4.4; `[n07 A.8]` FR1–FR21 (general ones) |
@@ -192,7 +192,7 @@ Common step 0 for every skill except `research-core`: read `research.yaml` (if a
 
 ### 4.3 `idea-evaluator` (upstream, strengthened)
 - **Add:** an empirical-study route (RQ set, population and sampling frame, construct validity, data availability, threats foreseeable at design time), and a theory route (result + proof technique). Field profile supplies venue-fit criteria.
-- **Evidence:** the RQ framing and frozen-corpus decisions (`[n04 §5 S1–S2]`); the coverage-wall pivot showed a design-time threat that should have been flagged early (`04-comms/20260910-zhimin-d4d5-threats/README.md`).
+- **Evidence:** the RQ framing and frozen-corpus decisions (`[n04 §5 S1–S2]`); the coverage-wall pivot showed a design-time threat that should have been flagged early (`04-comms/20260910-<B>-d4d5-threats/README.md`).
 - **Checklist:** existing gate + `threats` design-time items.
 
 ### 4.4 `deep-research` (upstream)
@@ -223,8 +223,8 @@ No functional change. Field profiles feed its evidence standards; cite aris' "ar
 - **Evidence:** why-before-how and finding-first patterns (`[n06 §2.1, §2.4]`).
 
 ### 4.7 `intro-drafter` (upstream, strengthened)
-- **Add:** RQ-driven empirical intro pattern: context for an outsider → phenomenon figure → why this data source matters to the field → gap with cited assumptions → RQ blocks (bold question, one "…, so we…" why sentence, 2–3 findings) → one-sentence method → contributions → roadmap (`[n06 §3]` intro paragraph functions; `comments_hao.md` §2.1, §2.6; `CF-01@v2`, `CF-03@v2`).
-- **Evidence:** advisor readability check that internal jargon blocks outsiders (`04-comms/20260926-jimmy-advisor-paper-glimpse/README.md`).
+- **Add:** RQ-driven empirical intro pattern: context for an outsider → phenomenon figure → why this data source matters to the field → gap with cited assumptions → RQ blocks (bold question, one "…, so we…" why sentence, 2–3 findings) → one-sentence method → contributions → roadmap (`[n06 §3]` intro paragraph functions; `comments_<A>.md` §2.1, §2.6; `CF-01@v2`, `CF-03@v2`).
+- **Evidence:** advisor readability check that internal jargon blocks outsiders (`04-comms/20260926-<B>-advisor-paper-glimpse/README.md`).
 
 ### 4.8 `tech-paper-template`, `benchmark-paper-template` (upstream)
 Unchanged procedures; descriptions say "field: ai-ml/systems"; `research-supervisor` routes empirical SE, math and statistics papers elsewhere. Dedupe `paper-types.md` and `worked-examples.md` only if upstream does (avoid merge pain).
@@ -287,10 +287,10 @@ Unchanged procedures; descriptions say "field: ai-ml/systems"; `research-supervi
   - *Actions:* `G-<date>-<n>` items with owner, due date or milestone, done-criterion, and links to TODO and FB IDs.
   - *Decision:* accept, partial, or decline with reason (ADR when it sets a rule).
   - *Follow-up check:* status per action (open / done with commit or run id / dropped with reason).
-  `feedback-to-revision guidance-review` lists open and overdue actions and checks "done" claims against commits and runs. `research-supervisor` shows overdue guidance at session start; `lessons-harvest` reads these records. Evidence that this was missing: early meetings were only partly archived (`GAPS.md`; `[n04]`), the relayed advisor read an outdated version so one of seven points was already obsolete (`[n05 §5.1]`), and the decisive 09-10 threats pivot survived only because someone wrote `04-comms/20260910-zhimin-d4d5-threats/README.md` with decision, mechanism and "do not" list.
+  `feedback-to-revision guidance-review` lists open and overdue actions and checks "done" claims against commits and runs. `research-supervisor` shows overdue guidance at session start; `lessons-harvest` reads these records. Evidence that this was missing: early meetings were only partly archived (`GAPS.md`; `[n04]`), the relayed advisor read an outdated version so one of seven points was already obsolete (`[n05 §5.1]`), and the decisive 09-10 threats pivot survived only because someone wrote `04-comms/20260910-<B>-d4d5-threats/README.md` with decision, mechanism and "do not" list.
 - **Checklist:** `master` feedback items (all IDs closed or listed open; no hidden markers; no overdue guidance actions).
 - **Outputs:** `docs/feedback/<round>.md` table; commits.
-- **Evidence and examples (anonymized in the skill):** 111 requests across channels, 61% verified addressed, median latency 9.5 h (`[n05 §3]`); `\hao`/`\todo` protocol and its failures (`msr:9809b8c`, `msr:815305e`, `msr:ac172bd`, `msr:5776349`; `[n05 §5.2]`); six worked examples (`[n05 §4]`).
+- **Evidence and examples (anonymized in the skill):** 111 requests across channels, 61% verified addressed, median latency 9.5 h (`[n05 §3]`); `\noteA`/`\todo` protocol and its failures (`msr:9809b8c`, `msr:815305e`, `msr:ac172bd`, `msr:5776349`; `[n05 §5.2]`); six worked examples (`[n05 §4]`).
 
 ### 4.16 `pre-submission-reviewer` (upstream + se-paper-reviewer)
 - **Add sub-checklists** (§5): threats-to-validity, double-blind, artifact, venue-formatting/submission, integrity. A devil's-advocate pass (strongest counter-argument per claim) from se-paper-reviewer, with SE criteria from the field profile.
@@ -420,7 +420,7 @@ style:
   dynamic_skill: .style/fse/
   overlays: []                     # e.g. [no-semicolons]
 people:                            # roles only
-  - {role: senior-A, comment_macro: '\hao', agent_may_resolve: true}
+  - {role: senior-A, comment_macro: '\noteA', agent_may_resolve: true}
   - {role: student, comment_macro: '\todo', agent_may_resolve: false}
 check_loop: {max_rounds: 3}
 ```

@@ -1,6 +1,6 @@
 # 04 — Verified timeline and reconstructed research process
 
-Phase 2 evidence note. Archive: `~/Projects/supervisor-skills-msr-tpa` (HEAD `669b29a`). All paths below are relative to the archive root. Citation formats follow `03-archive-map.md` §4: `msr:<sha>` (paper repo), `ol:<sha>` (Overleaf git), `res:<sha>` (research repo), `chat:group@YYYY-MM-DDTHH:MM` (from `04-comms/20260929-1007-wechat-group/messages.jsonl`), `chat:group-raw@…` / `chat:1on1-raw@…` (timestamped raw exports under `04-comms/past-chat-group/raw/*/Chat History.txt` and `04-comms/past-chat-jimmy/raw/chat-history-merged.txt`).
+Phase 2 evidence note. Archive: `~/Projects/supervisor-skills-msr-tpa` (HEAD `669b29a`). All paths below are relative to the archive root. Citation formats follow `03-archive-map.md` §4: `msr:<sha>` (paper repo), `ol:<sha>` (Overleaf git), `res:<sha>` (research repo), `chat:group@YYYY-MM-DDTHH:MM` (from `04-comms/20260929-1007-wechat-group/messages.jsonl`), `chat:group-raw@…` / `chat:1on1-raw@…` (timestamped raw exports under `04-comms/past-chat-group/raw/*/Chat History.txt` and `04-comms/past-chat-<B>/raw/chat-history-merged.txt`).
 
 Roles: **Student** (first author), **Senior A** (writing organization, desk-reject red lines), **Senior B** (methods figure, page budget, paper-repo and Overleaf owner, advisor relay), **Advisor (relayed)**. Sections 1 to 4 (verification) may show commit author strings, because they are needed to check authorship. Sections 5 to 7 use roles only.
 
@@ -31,7 +31,7 @@ Verdict on `TIMELINE.md` "~2026-10-12 FSE 2027 投稿锚点": **CONTRADICTED**. 
 ### 1.2 The paper the team submitted is not the git snapshot `87bf139`
 
 - `msr:87bf139` (10-03 19:38, last paper-repo commit) is HEAD of `09-paper-snapshot/`. Its title is "What Breaks in Proof Assistants, and How Maintainers Fix It…" (`09-paper-snapshot/main.tex:116`).
-- `ol:a610d1d` (10-03 19:38, author string `leo-lihao` = Senior A, made on Overleaf): changes the title to "Maintaining Proof Assistants: An Empirical Study of Reported Bugs and Resolution Patterns" (`07-overleaf-history/patches-overleaf/20261003-1938_a610d1d.patch`).
+- `ol:a610d1d` (10-03 19:38, author string `<A-account>` = Senior A, made on Overleaf): changes the title to "Maintaining Proof Assistants: An Empirical Study of Reported Bugs and Resolution Patterns" (`07-overleaf-history/patches-overleaf/20261003-1938_a610d1d.patch`).
 - `ol:214cc0c` (10-03 19:39, `github-actions[bot]`, "Sync GitHub main @ 87bf139"): one minute later it reverts the title and removes Overleaf-side text from related work, RQ2 and RQ3 (+9/−29; `patches-overleaf/20261003-1939_214cc0c.patch`).
 - `chat:group@2026-10-03T19:41`–`19:42` Senior A: 「别用git了吧，感觉很多改动都没了」, 「页数越写越少」, 「我改了半天的东西都没了」. Then a rollback on Overleaf at 19:45–19:47.
 - The submission-site screenshot at 19:56 already shows the "Maintaining Proof Assistants…" title.
@@ -43,9 +43,9 @@ Verdict on `TIMELINE.md` "~2026-10-12 FSE 2027 投稿锚点": **CONTRADICTED**. 
 | Repo | First commit | Status |
 |---|---|---|
 | Research repo | `res:de95735` "Initial project snapshot", tsv time 2026-06-19 00:06 (offset not stated). TIMELINE_DRAFT §1 says 06-18 | **PARTIAL**: 06-18 holds only if the tsv time is UTC+8 and the claim uses UTC (that would be 06-18 16:06 UTC). The archive does not settle the offset |
-| Overleaf project | `ol:48f5713`, authored 2026-08-01 23:11 +0800 by `Zhimin Zhao` (= Senior B), ACM sample template. The git bridge committed it on 08-14 | **VERIFIED** as an empty shell: `11-mining-github-issue-audit/tree/docs/notes/20260814-overleaf-paper-backup.md` says it "currently holds the ACM `acmart` / sigconf sample template, not the paper text" |
+| Overleaf project | `ol:48f5713`, authored 2026-08-01 23:11 +0800 by `<B-name>` (= Senior B), ACM sample template. The git bridge committed it on 08-14 | **VERIFIED** as an empty shell: `11-mining-github-issue-audit/tree/docs/notes/20260814-overleaf-paper-backup.md` says it "currently holds the ACM `acmart` / sigconf sample template, not the paper text" |
 | First paper text on Overleaf | `ol:20a6d25` 08-14 13:29 (Student: "Add paper.tex skeleton … leave ACM templates untouched"); `ol:26ed99e` 08-17 | VERIFIED |
-| Paper collaboration repo | `msr:5e73a46` "Initial Overleaf Import", 2026-09-26 19:37:05 +0800, author `Zhmin Zhao` (= Senior B). Link posted at `chat:group-raw@2026-09-26T19:43` (「overleaf的github：…」「大家注意查收邮箱」) | **VERIFIED** |
+| Paper collaboration repo | `msr:5e73a46` "Initial Overleaf Import", 2026-09-26 19:37:05 +0800, author `<B-name>` (= Senior B). Link posted at `chat:group-raw@2026-09-26T19:43` (「overleaf的github：…」「大家注意查收邮箱」) | **VERIFIED** |
 | Overleaf→GitHub automation | `msr:c93ef1f` 09-29 12:44 "Add Overleaf sync workflow…", fixed by `msr:c3d1e70` 12:57. First bot push `ol:b0123f2` at 13:34 | VERIFIED |
 
 ### 1.4 Peak activity (computed from the tsvs)
@@ -82,8 +82,8 @@ Verdict on `TIMELINE.md` "Peak: 2026-09-29 → 10-03": **PARTIAL**. It holds for
 
 The final paper says two authors independently annotated all 582 gold issues with Cohen's κ = 0.74 (`09-paper-snapshot/sections/03-design.tex:97`, intro `:53`). In this archive:
 - The research-repo notes record one main annotator plus a sparse second one: "`codex` 576 issues; `yitwah` 24; overlap 18 (not an IRR sample)" (`11-*/tree/docs/notes/20260813-rq1-rq3-answer-plan.md:18`, `20260814-paper-writing-frame.md:19`). The formal IRR item is still "open" (`20260901-xuezhang-gap-and-d5.md:15`).
-- The 09-22 devil's-advocate critique lists the missing perspective "A second annotator. There is one gold file…" (`11-*/tree/docs/partner/zhimin-msr-tpa-paper/snapshot/notes/CRITIQUE-2026-09-22.md:59`).
-- The sentence with κ = 0.74 first enters the paper repo in `msr:393f596` (09-28 00:10 +0800, author `zhimin-z`, message "add").
+- The 09-22 devil's-advocate critique lists the missing perspective "A second annotator. There is one gold file…" (`11-*/tree/docs/partner/<B>-msr-tpa-paper/snapshot/notes/CRITIQUE-2026-09-22.md:59`).
+- The sentence with κ = 0.74 first enters the paper repo in `msr:393f596` (09-28 00:10 +0800, author `<B-account>`, message "add").
 - `chat:1on1-raw@2026-09-28T20:16`: the Student asks whether the two-human κ was ever computed (「那个数据好像我们没比较？」). Senior B replies at `20:17`: 「我这边儿对了，没事儿」.
 - The research-repo tsv has no commit for a second-annotator pass or a κ computation. The value appears in the research tree only in figure sources (`tree/docs/drawio/overview-variants/variants.yaml:16`).
 - Status: **NO EVIDENCE IN ARCHIVE** for the annotation pass or the computation. The only support is a chat assurance from Senior B. Before the case study cites "two-author κ" as an example of good practice, check it against the research repo or ask the user.
@@ -97,19 +97,19 @@ The final paper says two authors independently annotated all 582 gold issues wit
 | 06-18 → 07-14 project start and sampling: freeze of seven repos, stratified sample of 582 | VERIFIED (start date PARTIAL, see §1.3) | `res:de95735` (06-19 00:06); `res:4c60e71` 07-13 21:47 "Add constrained stratified sampling methodology"; `res:2700d27` 07-14 18:55 "Switch annotation queue to 582 issue sample"; `11-*/tree/docs/msr4itp_constrained_stratified_sampling_allocation_20260713.md` (N = 23,671; run `seven-repo-582-20260714`, seed 42, line 202; supersedes the 700-issue queue, line 5) |
 | 07-14 → 08-17 gold sample and annotation workbench; prompt locked | VERIFIED | `res:d3caaf2` 07-18 "Complete collaborative annotation workflow"; `res:43d9c10` 08-01 queue dashboard; `res:6bed599` 08-17 01:29 "Publish the locked LLM annotation prompt…" |
 | 08-01 empty Overleaf shell | VERIFIED | `ol:48f5713` (template); `tree/docs/notes/20260814-overleaf-paper-backup.md` |
-| 08-13 → 09-11 D4/D5 coverage wall → threats pivot | VERIFIED | `res:1549c50` 08-13 "…before PR-body backfill"; `res:7e707ad` 09-06 gap audit; `04-comms/20260910-zhimin-d4d5-threats/README.md` (screenshots 01–04 timed 09-10 22:19 to 09-11 00:24); `res:7998b24` 09-11 00:25 "Record advisor Threats decisions"; `res:8fe17c3` 09-11 22:35 "Record Li Hao's label-purpose rule" |
+| 08-13 → 09-11 D4/D5 coverage wall → threats pivot | VERIFIED | `res:1549c50` 08-13 "…before PR-body backfill"; `res:7e707ad` 09-06 gap audit; `04-comms/20260910-<B>-d4d5-threats/README.md` (screenshots 01–04 timed 09-10 22:19 to 09-11 00:24); `res:7998b24` 09-11 00:25 "Record advisor Threats decisions"; `res:8fe17c3` 09-11 22:35 "Record <A-name>'s label-purpose rule" |
 | 09-09 author block / corresponding author changed (Overleaf MCP) | VERIFIED | `ol:b2ad042`…`ol:0cab5cb` (7 commits, 13:58–14:39, author string `Overleaf MCP`), e.g. `ol:8bb3f44` "Mark … as corresponding author" |
 | 09-16 gold D4/D5 unknown standards; placeholder restore incident | VERIFIED | `ol:7b0c955` 00:20 "Gold D4: issue-local evidence only"; `ol:3ae9fd3` 00:35 swaps 119 lines for the literal `PLACEHOLDER` (`patches-overleaf/20260916-0035_3ae9fd3.patch:139`); restored by `ol:6cca5e3`, `ol:1ba123a`, `ol:c128ade` within 2 minutes |
 | 09-20 group meeting | VERIFIED | `04-comms/20260920-msritp-meeting/README.md` (22:29–23:07). Its outcome is visible in git the next day (`ol:8cf91a2` 09-21 15:51 "Retarget analysis plan: paper conclusions use freeze census N=23671") |
 | 09-22 page limit 18+4, pruning, "proof assistants" term | VERIFIED | `chat:1on1-raw@2026-09-22T05:02` (Senior B pastes the 18-page rule; 「18页可是包括appendix的」); `@13:03` 「先换模版，然后theorem provers改成proof assistants」. Executed the same day: `ol:dade33e` 13:09 "Switch the census draft to the FSE 2027 acmsmall review class", `ol:30f5bf0` 13:32 "Use proof assistant for our own wording" |
-| 09-26 paper repo "Initial Overleaf Import"; advisor glimpse | VERIFIED | `msr:5e73a46`; `chat:1on1-raw@2026-09-26T05:35` (Senior B relays the advisor's English notes verbatim; also `04-comms/20260926-jimmy-advisor-paper-glimpse/README.md` §2) |
-| 09-27 → 29 overview figure four panels → one; methodology rewrite; senior comments | VERIFIED | `chat:group-raw@2026-09-27T15:55` Senior B 「不如变成一张图」「四个图来表示一张图的内容…」; `chat:group-raw@2026-09-28T00:15` Senior A 「这个图的风格太AI了」; `msr:9809b8c` 09-29 11:35 "hao's comments" (12 files, +356/−414) |
+| 09-26 paper repo "Initial Overleaf Import"; advisor glimpse | VERIFIED | `msr:5e73a46`; `chat:1on1-raw@2026-09-26T05:35` (Senior B relays the advisor's English notes verbatim; also `04-comms/20260926-<B>-advisor-paper-glimpse/README.md` §2) |
+| 09-27 → 29 overview figure four panels → one; methodology rewrite; senior comments | VERIFIED | `chat:group-raw@2026-09-27T15:55` Senior B 「不如变成一张图」「四个图来表示一张图的内容…」; `chat:group-raw@2026-09-28T00:15` Senior A 「这个图的风格太AI了」; `msr:9809b8c` 09-29 11:35 "<A>'s comments" (12 files, +356/−414) |
 | 09-29 → 10-07 three-person revision week (384 msgs) | VERIFIED | `messages.jsonl` counts: 384; Student 170, Senior B 120, Senior A 94 |
 | 10-01 → 03 checklist, study-workflow final, RQ polish, abstract | VERIFIED | `msr:0c0dae0` 10-01 00:41 "Add writing checklist for FSE 2027 submission" … `msr:87bf139`; study-workflow: `msr:fd283fd`, `msr:9ef4a07`, `msr:55e1878`, `msr:b5c0045`, `msr:4c70db0` |
 | 10-04 late Overleaf updates; "⚠ no matching discussion in chat" | Commits VERIFIED; the "no chat" note is **CONTRADICTED** | `ol:ba3f1ee`, `ol:1499336`, `ol:3410f5e`, `ol:5661971` exist. Chat on 10-04: `02:06` 「还有18小时」, `08:46` 「我修改了一下稿子，提交了一个新版本」, `18:04` 「我提交了」. The ±2h cross-reference misses them because an `Update on Overleaf.` commit appears when the bridge is pulled and can bundle earlier edits |
 | ~10-12 FSE 2027 submission anchor | **CONTRADICTED** | §1.1 |
 | Commit density peak 09-29 → 10-03 | PARTIAL | §1.4 (Overleaf peak 09-21/22) |
-| Bridge "Hao methodology comments → `9809b8c`, `0f96193`, `9ef4a07`" | VERIFIED | `0f96193` adds 11 `\hao{}`/`\todo{}` lines (e.g. 「figure and text are not synced」 in 03-design); `chat:group@2026-10-02T07:46` Senior A 「我留了点comment在main branch」; `9ef4a07` 11:31 "refine methods and their figure based on hao's comments"; `chat:group@2026-10-02T11:07` Senior B 「我修改了，目前是对应上的了」 |
+| Bridge "Senior A methodology comments → `9809b8c`, `0f96193`, `9ef4a07`" | VERIFIED | `0f96193` adds 11 `\noteA{}`/`\todo{}` lines (e.g. 「figure and text are not synced」 in 03-design); `chat:group@2026-10-02T07:46` Senior A 「我留了点comment在main branch」; `9ef4a07` 11:31 "refine methods and their figure based on <A>'s comments"; `chat:group@2026-10-02T11:07` Senior B 「我修改了，目前是对应上的了」 |
 | Bridge "DBLP / desk reject" | VERIFIED | `chat:group@2026-09-29T11:44` Senior A (DBLP; 「查处一个错的引用直接desk reject」) → `msr:8df40d5` 12:50 "Add DBLP citation rules…". Earlier: 21 `ol:` "Correct BibTeX for … from the verified … record" commits on 09-22 13:17–13:29 |
 | Bridge "Git main is authoritative (group SUMMARY 09-29)" | PARTIAL / reversed | §1.5 |
 
@@ -129,7 +129,7 @@ The final paper says two authors independently annotated all 582 gold issues wit
 | §2 | Reopen timeline is 0 in the whole corpus, so no reopen proxy | **PARTIAL / later corrected** | `notes/20260814-paper-writing-frame.md:856` (0 reopens at the time). But `res:300d3a6` 09-14 "Record gold-sample reopen events that the original crawl omitted", and `ol:f54f954` 09-22 "Put reopen rate … in the appendix". The zero was a crawl gap |
 | §2 | Push main only to `origin` | VERIFIED | `res:a6672d7` 08-27; `11-*/remotes.txt` (two remotes) |
 | §2 | Prompt v1.0 → … → v1.4.13 | VERIFIED (endpoints) | `res:11aa5d9` v1.1.0 (09-06), `res:25ecb0d` v1.3.0 (09-18), `res:ffbf63a` v1.4.13 (09-20) |
-| §3 | 09-10 decision: coverage gap goes to threats; pivot to RQ2 | VERIFIED (via README transcription of screenshots) | `04-comms/20260910-zhimin-d4d5-threats/README.md` §1.2 (Senior B 22:37: 「就只能放到 threat of validity 里面吧」); §1.4 label-purpose rule (Senior A 00:24) |
+| §3 | 09-10 decision: coverage gap goes to threats; pivot to RQ2 | VERIFIED (via README transcription of screenshots) | `04-comms/20260910-<B>-d4d5-threats/README.md` §1.2 (Senior B 22:37: 「就只能放到 threat of validity 里面吧」); §1.4 label-purpose rule (Senior A 00:24) |
 | §3 | Cursor-Agent backfills on "09-05～06" | PARTIAL | The `Cursor Agent` commits are `res:56b9084`…`res:5f15595`, 09-07 01:48–02:31 |
 | §3 | Rejected paths (time-window commit matching, guessing `fixed`/`local-patch`, a dedicated solution prompt, new taxonomy classes, GraphQL re-crawl as review) | VERIFIED for 1, 2, 3, 5; NO EVIDENCE for 4 | (1, 2) 09-10 README §5 "不做"; (3) 09-20 meeting README §1.3; (5) `tree/docs/notes/gold-review/README.md:20` (browser page opens required, no GraphQL); (4) "use `other`, don't add a math subclass" has no primary source in the archive |
 | §3 | lean4#14576 post-freeze narrative; "Memory `memory/log/2026-09.md`" | NO EVIDENCE | memory files are not in the archive |
@@ -137,12 +137,12 @@ The final paper says two authors independently annotated all 582 gold issues wit
 | §4 | DEM-53: 66 red + 59 yellow worked through, not "zero unknown" | VERIFIED | `gold-review/GOAL.md` (acceptance criterion 1) |
 | §4 | 09-20 meeting: ~2,000 labelled → ~20k; RQ numbering fixed; write order numbers → skill → human edit | VERIFIED | meeting README §1 |
 | §4 | Hamilton 2000 dropped on 09-24 | VERIFIED | `ol:e03c20a` 09-24 17:20 "Drop Hamilton 2000 due-diligence from Design and Implications" |
-| §5.1 | Senior A's writing comments dated 09-22 | PARTIAL | The source cited (`memory/writing/…`) is not in the archive. `02-comments-hao/comments_hao.md` is undated. Edits matching it (term table, "motivate before mechanics", "lead results with the question", "leave exact counts in tables") appear as paired `ol:` commits on 09-22 16:47–16:52, and `ol:6247934` 21:28 says "Revise passages that still miss the writing comments", so the comments existed by 09-22 afternoon |
+| §5.1 | Senior A's writing comments dated 09-22 | PARTIAL | The source cited (`memory/writing/…`) is not in the archive. `02-comments-<A>/comments_<A>.md` is undated. Edits matching it (term table, "motivate before mechanics", "lead results with the question", "leave exact counts in tables") appear as paired `ol:` commits on 09-22 16:47–16:52, and `ol:6247934` 21:28 says "Revise passages that still miss the writing comments", so the comments existed by 09-22 afternoon |
 | §5.2 | Advisor glimpse 09-26 (relay) | VERIFIED | §2 row 09-26 |
 | §5.3 | 09-27/28 Senior A comments `9809b8c` land | PARTIAL | 09-28 23:35 in the author's offset, 09-29 11:35 +0800 |
 | §6 | 09-29: figure–text correspondence, DBLP, de-AI, merge table into figure; Overleaf vs git conflict | VERIFIED | `chat:group@2026-09-29T11:42–11:52` |
 | §6 | 10-01: checklist; appendix → replication; default font (else desk reject); compact D1–D7 table pointing to package | VERIFIED | `chat:group@2026-10-01T00:58`, `08:47`/`08:56` (「放上去充页数=直接reject」), `09:19`, `09:20`/`09:23`, `10:09` |
-| §6 | "10-01: Senior A commit `hao's comments`" | PARTIAL | `msr:0f96193` is 10-01 19:45 −0400 = 10-02 07:45 +0800 |
+| §6 | "10-01: Senior A commit `<A>'s comments`" | PARTIAL | `msr:0f96193` is 10-01 19:45 −0400 = 10-02 07:45 +0800 |
 | §6 | "10-01: Student methodology/RQ overhaul; stop tracking `local-refs`" | PARTIAL | `msr:c8adb43` 10-01 22:07 (untrack) VERIFIED; the overhaul `msr:9c69675` is 10-02 02:16 |
 | §6 | 10-02: anonymous mirror, page budget 18, "paper first, replication later", Senior B refines methods figure, Student merges B's figure | VERIFIED; merge date PARTIAL | `chat:group@2026-10-02T00:45`, `01:35` 「要保证 18 页不多不减」, `06:37`, `11:07`; merge is `msr:55e1878` 10-03 01:36 |
 | §6 | 10-03 densest day; one page short → expand implications/threats; "pages keep shrinking"; site login problem | VERIFIED | 175 msgs; `chat:group@2026-10-03T09:25` Senior B 「页数还是差一页，我打算扩写一下implication和threats」 → `msr:d0d4c03` 09:58 "expand threats+implications"; `19:41`; `19:59` |
@@ -153,7 +153,7 @@ The final paper says two authors independently annotated all 582 gold issues wit
 | §7 | Replication repo filled from 10-01; 10-05 DEM-295 done; 10-06 cleanup | PARTIAL | Chat confirms the 10-03 20:17–20:24 gap ("analysis code not all moved", 「数据没必要用github」→ figshare/S3) and the 10-06 cleanup. The replication repo itself is not in the archive (NO EVIDENCE for its commit dates) |
 | §9A | Research repo pushes almost all by the Student / Cursor Agent | VERIFIED | 71 commits: `yitwah` 65, `Yue Yihua` 1, `Cursor Agent` 5 |
 | §9A | origin/main stopped at 09-21 `b449e2c`, local ahead | NO EVIDENCE / PARTIAL | `b449e2c` is 09-22 03:13 in the tsv; there are no remote refs in the archive |
-| §9B | Contributors: yitwah ≈56, zhimin-z ≈52, Leo-LiHao ≈2 | PARTIAL | Local tsv: `yitwah` 56; `zhimin-z` 25 + `Zhmin Zhao` 22 = 47 (the 22 are mostly Overleaf merges carrying anyone's edits); `Hao Li` 2. On Overleaf `leo-lihao` has 2 commits, but one (`ol:ba3f1ee`) is the largest late rewrite |
+| §9B | Contributors: yitwah ≈56, <B-account> ≈52, <A-account> ≈2 | PARTIAL | Local tsv: `yitwah` 56; `<B-account>` 25 + `<B-name>` 22 = 47 (the 22 are mostly Overleaf merges carrying anyone's edits); `<A-name>` 2. On Overleaf `<A-account>` has 2 commits, but one (`ol:ba3f1ee`) is the largest late rewrite |
 | §9C | `main` is ~67 commits ahead of `overleaf-main` | NO EVIDENCE | no branch refs in the archive |
 
 ---
@@ -166,9 +166,9 @@ The final paper says two authors independently annotated all 582 gold issues wit
 |---|---|---|
 | Seven repos / 582 stratified, not a larger cohort / fourteen-repo taxonomy | VERIFIED | §3 rows §1 |
 | Issue-local D4/D5 evidence instead of re-crawling to zero | VERIFIED | `ol:7b0c955` 09-16; 09-10 README |
-| Gold used for validation only, not wired to RQ outputs; attributed to "Jimmy/Hao" | PARTIAL | The shift happened on Overleaf: `ol:b805c55` 09-20 "gold 582 is the quota contrast", `ol:1d20ee1` 09-21 "census, not gold", `ol:edafe5e` 09-21 "keep gold 582 as quota/kappa". Nothing in the archive attributes it to either senior |
+| Gold used for validation only, not wired to RQ outputs; attributed to "Senior B/Senior A" | PARTIAL | The shift happened on Overleaf: `ol:b805c55` 09-20 "gold 582 is the quota contrast", `ol:1d20ee1` 09-21 "census, not gold", `ol:edafe5e` 09-21 "keep gold 582 as quota/kappa". Nothing in the archive attributes it to either senior |
 | Single three-stage study-workflow, not four panels | VERIFIED | `chat:group-raw@2026-09-27T15:55` (Senior B), `chat:group-raw@2026-09-28T00:15` (Senior A, "too AI") |
-| Text → figure → table (C-035) | PARTIAL | The verbatim C-035 quote is a user relay **not found** in the export (`04-comms/past-chat-jimmy/raw/user-supplied-relays.md`, USR-001). Closest real message: `chat:1on1-raw@2026-09-29T11:51` Senior B 「很多表格其实没必要单独出现的」 |
+| Text → figure → table (C-035) | PARTIAL | The verbatim C-035 quote is a user relay **not found** in the export (`04-comms/past-chat-<B>/raw/user-supplied-relays.md`, USR-001). Closest real message: `chat:1on1-raw@2026-09-29T11:51` Senior B 「很多表格其实没必要单独出现的」 |
 | DBLP-only bib | VERIFIED | §2 bridge row; plus `chat:group@2026-10-03T19:18` (Senior A runs an agent citation audit before submission) |
 | Git `main` as SoT + Overleaf sync | CONTRADICTED (end state) | §1.5 |
 | κ played down into related work / threats instead of IRR as the main selling point | PARTIAL / CONTRADICTED | `ol:ee75959` 09-22 (held-out κ table replaced), `ol:ac81b3a` 09-24 (κ dropped from the related-work gold-check sentence). But the final paper reports two-author κ = 0.74 in Design and classifier κ in Threats (`09-paper-snapshot/sections/03-design.tex:97,110`, `08-threats.tex:12,20`); see §1.6 |
@@ -240,13 +240,13 @@ Each stage lists entry and exit criteria, artifacts, who did the work, and decis
 ### S7. External readability check (09-26)
 - **Entry:** a draft a senior outsider can skim.
 - **Work:** the Advisor (relayed) reads for a few minutes and returns questions on jargon, codebook provenance, an overlong §3.1, a missing ecosystem, a cross-domain baseline, and overall implications.
-- **Artifacts:** `04-comms/20260926-jimmy-advisor-paper-glimpse/README.md`.
+- **Artifacts:** `04-comms/20260926-<B>-advisor-paper-glimpse/README.md`.
 - **Who:** Advisor via Senior B.
 - **Exit:** list of reader-facing fixes (no new analysis demanded).
 
 ### S8. Collaborative revision in the paper repo (09-26 → 10-02)
 - **Entry:** Senior B imports the Overleaf project into a shared GitHub repo (`msr:5e73a46`).
-- **Work:** Senior B cleans the repo and rewrites framing; Senior A leaves inline `\hao{}`/`\todo{}` comment drops (`msr:9809b8c`, `msr:0f96193`) under a stated protocol; the Student merges, redraws figures, builds a checklist from chat history (`msr:0c0dae0`), and revises methods/RQs (`msr:9c69675`).
+- **Work:** Senior B cleans the repo and rewrites framing; Senior A leaves inline `\noteA{}`/`\todo{}` comment drops (`msr:9809b8c`, `msr:0f96193`) under a stated protocol; the Student merges, redraws figures, builds a checklist from chat history (`msr:0c0dae0`), and revises methods/RQs (`msr:9c69675`).
 - **Who:** all three. Senior A reviews in their evening, which is the Student's morning.
 - **Decisions:** one study-workflow figure whose boxes map 1:1 to methodology subsections (rejected: four panels, decorative AI styling). DBLP-verified references. No appendix (rejected: an appendix of label definitions, which Senior B had asked for on 09-28 and Senior A rejected on 10-01 as page-padding); a compact label table plus definitions in the replication package. Default venue fonts. Anonymous mirror instead of a personal project page.
 - **Exit:** figure–text correspondence confirmed by Senior B (`chat:group@2026-10-02T11:07`).
@@ -309,7 +309,7 @@ One line each, then citation and confidence (High = several primary sources agre
 | T15 | No appendix as page filler; a compact label table in the paper, full definitions in the replication package | `chat:group@2026-10-01T08:56`, `10:09`; `@2026-10-02T00:32` | High |
 | T16 | Each methodology figure box gets a same-named subsection, in order | `chat:group@2026-09-29T11:42`; `@2026-10-02T22:26` | High |
 | T17 | One integrated workflow figure, drafted with AI and finished by hand; plain palette | `chat:group-raw@2026-09-27T15:55`; `@2026-09-28T00:15`; `chat:group@2026-10-02T23:19` | High |
-| T18 | Lock a term table early and never switch names | `comments_hao.md` §1; `ol:4d393bd` 09-22 | High |
+| T18 | Lock a term table early and never switch names | `comments_<A>.md` §1; `ol:4d393bd` 09-22 | High |
 | T19 | Give the draft to an outside senior for a few-minute read and fix whatever they can't parse | advisor glimpse README §2 | Med |
 | T20 | Inline review protocol: senior comments as one macro, student actions as another that agents may not resolve | `msr:9809b8c` (`main.tex`) | Med |
 | T21 | Abstract shape: background, gap, study, 1–2 findings, recommendation, one sentence each, no macros | `chat:group@2026-10-03T19:18`, `18:36`–`18:43` | Med |

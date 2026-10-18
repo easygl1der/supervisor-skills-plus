@@ -1,6 +1,6 @@
 # 07 — Figure iterations and checklist evolution
 
-Phase 2 evidence note. Archive: `~/Projects/supervisor-skills-msr-tpa` (HEAD `669b29a`). All paths are relative to the archive root; all times Asia/Shanghai (UTC+8). Citation formats follow `03-archive-map.md` §4: `msr:<sha>` (paper repo, `07-overleaf-history/patches-msr-tpa/`), `ol:<sha>` (Overleaf git, `07-overleaf-history/patches-overleaf/`), `res:` (research repo), `chat:group@…` (`04-comms/20260929-1007-wechat-group/messages.jsonl`), `chat:group-raw@…` (`04-comms/past-chat-group/raw/*/Chat History.txt`, 09-22 → 09-29), `chat:1on1@…` (`04-comms/past-chat-jimmy/raw/chat-history-merged.txt`, ends 09-29 12:53), `<path>:<line>`.
+Phase 2 evidence note. Archive: `~/Projects/supervisor-skills-msr-tpa` (HEAD `669b29a`). All paths are relative to the archive root; all times Asia/Shanghai (UTC+8). Citation formats follow `03-archive-map.md` §4: `msr:<sha>` (paper repo, `07-overleaf-history/patches-msr-tpa/`), `ol:<sha>` (Overleaf git, `07-overleaf-history/patches-overleaf/`), `res:` (research repo), `chat:group@…` (`04-comms/20260929-1007-wechat-group/messages.jsonl`), `chat:group-raw@…` (`04-comms/past-chat-group/raw/*/Chat History.txt`, 09-22 → 09-29), `chat:1on1@…` (`04-comms/past-chat-<B>/raw/chat-history-merged.txt`, ends 09-29 12:53), `<path>:<line>`.
 
 Roles only: **Student** (first author), **Senior A** (writing organization, desk-reject red lines), **Senior B** (methods figure, page budget, repo owner), **Advisor (relayed)**. "Agent" = a coding/writing agent run by a human (Cursor, Codex, Claude); agent output is labelled as such. Private note: it contains dataset sizes and paper-identifying numbers; strip them before anything goes public.
 
@@ -44,7 +44,7 @@ Images were inspected directly (chat media, `final/*.png`, PDFs rendered locally
 | 11 | 09-29 11:35 | `msr:9809b8c` `\todo{the overview figure and the content in methodology is not synced … update the whole section and overview figure}`; `\todo{put this information in the overview figure and plot the link btw the data to each RQ, remove this table}` on the funnel table | Senior A | — | Chat 11:40–11:47: SAIL examples (subsections 5.1 / 5.1.1 match figure boxes); "新生常见问题，通常是没梳理清楚paper的methodology … 建议先整理好文字部分，再手工画出来"; "这个表可以拿掉，把信息放到methodology图里" |
 | 12 | 09-29 18:19 | `09-paper-snapshot/figures/study-workflow-UPDATE-PLAN.md` (in `msr:815305e`) + `05-figures-tables/METHODOLOGY-FIGURES-REVIEW.md`, `…ACTION-ITEMS.md` | Agent (Cursor) | Plan: phase colours, funnel with dropout branches, **11 key numbers incl. κ = 0.74**, long caption with κ values | Agent reading of checklist MF-01..MF-04. **Never executed**; it contradicts Senior A's "remove small AI text" of 09-28 |
 | 13 | 10-02 04:45 → 06:46 | `msr:9c4567c` (labels renamed to match prose: "Freeze export", "Enforce gate order", "Answer RQ1–RQ3"), `msr:5776349` (partly reverted), `msr:fd283fd` "Replace … with the latest reference-replica source" | Student | Three label flip-flops in two hours | Student's own text revision `msr:9c69675` (10-02 02:16) |
-| 14 | 10-02 07:45 | `msr:0f96193` `\hao{figure and text are not synced, e.g., you mention 'Build issue payloads' in the figure, where is the text? … redraw the figure from scratch to reflect the text}` | Senior A | — | A also asks B to fix it (`chat:group@2026-10-02T07:29`) |
+| 14 | 10-02 07:45 | `msr:0f96193` `\noteA{figure and text are not synced, e.g., you mention 'Build issue payloads' in the figure, where is the text? … redraw the figure from scratch to reflect the text}` | Senior A | — | A also asks B to fix it (`chat:group@2026-10-02T07:29`) |
 | 15 | 10-02 11:31 | `msr:9ef4a07` "refine methods and their figure based on [A]'s comments"; chat PDF 11:15 | Senior B | 12 → 10 steps (boxes "Build issue payloads" and "Freeze LLM setup" disappear; B's message names "phase 1 step 3 and phase 2 step 1"), icon spacing fixed, layout rebalanced, page 1454 × 664 | B 11:09: icons touching frames inconsistently; two steps not matching the design text |
 | 16 | 10-02 22:26–23:22 | Chat | Senior A, Senior B | A: "1-删除没有信息量的部分 2-图片依然和文字对不上 A. 图片三个大框，文字3.1 3.2却对应两个小块 B. 5 6 7 找不到对应文字 … C. 3.4 如果对应phase 3的话 8 和 9 在哪？"; "图片的底色和配色都简洁化，现在太AI了". B: "配色我试了半天，没发现更好的". A: "那就黑白灰蓝，或者draw.io的经典色". B (screenshot of draw.io's default palette): "那其实已经是了" | — |
 | 17 | 10-03 01:24 | `msr:fdc9ca6` "m" | Senior B | 9 steps; phase headings "1. Dataset construction / 2. Gold sample & classifier validation / 3. Issue labeling"; no analysis step | Item 16 |
@@ -108,7 +108,7 @@ D6/D7: `msr:3e7bab0` (10-02 00:25) commits 7 drafts (`d6d7_drafts/`: compact bar
 |---|---|---|---|---|
 | 09-26 | `msr:5e73a46` import | — | Four single-column figures: median TTC by category, TTC IQR, median TTC by ecosystem, local-patch share by category | — |
 | 09-27 22:42 | `msr:00406cd` (Overleaf update) | author unresolvable | `rq2/compare/`: the same boxplot in base R, ggplot2 and matplotlib, plus Q–Q plots | **Tool-comparison detour**; none of these reached the paper |
-| 09-28 15:15–16:43 | chat + `jimmy-main-pdf-comments/` (P-01..P-13) | Senior B | "很多图和表，可能得删减或者重置"; median-by-category tables deleted (P-06/P-07), low-information large figures folded (P-08/P-10) | B's annotated PDF |
+| 09-28 15:15–16:43 | chat + `<B>-main-pdf-comments/` (P-01..P-13) | Senior B | "很多图和表，可能得删减或者重置"; median-by-category tables deleted (P-06/P-07), low-information large figures folded (P-08/P-10) | B's annotated PDF |
 | 09-29 16:14 | `msr:7c705c9` | Student | Composite `fig:rq2-rq3-overview`: (a) a LaTeX `tabular` of median TTC (n) by category × ecosystem **inside a `figure*`**, with `\footnotesize` and `\tabcolsep 2pt`; (b) RQ3 stacked strategy bars | B's "fewer standalone tables" (`chat:1on1@2026-09-29T11:51`) |
 | 10-01 09:20–09:23 | chat | Senior B, Senior A | B: "文章字体恢复到fse默认的样子"; A: "这个算违反policy，会desk reject" | Local font shrinking (G3) |
 | 10-02 02:16 | `msr:9c69675` | Student | Kaplan–Meier curves rendered (`rq2_km.R`), parked as `%% PARKED`; import-time closures excluded | Censoring of open bugs |
@@ -182,7 +182,7 @@ Upstream gives design rules for a single figure (vector, ≥ 8 pt, colour-blind 
 |---|---|---|---|---|---|
 | 0 | 2026-09-29 | `10-requirements/paper-refs/CHECKLIST-DRAFT.md` (+ `SUMMARY.md` "Generated … 2026-09-29", `REFS.md`) | Student + agent | One-line checkboxes, IDs C/M/F/D/A/T/R + final, each tagged with a REFS id (H-Cx = Senior A comment lines, MG-10 = partner devil's-advocate review, CRITIQUE, B-x = BUILD) | 101 |
 | 1 | 2026-09-29 | `01-checklist/versions/FULL-PAPER-CHECKLIST.v1.md` | Student + agent (merge of paper-refs, group chat, 1:1 chat, Cursor summaries; "later source wins") | One-line checkboxes in 9 sections + U1–U5 + Superseded table; all unticked | 140 |
-| 2 | 2026-09-29 | `01-checklist/FULL-PAPER-CHECKLIST.md` "master v2" | Generated by `scripts/generate_checklist_v2.py` ("merges v1 + keyword provenance", `enriched/README.md`) from `enriched/{paper-refs,group-chat,jimmy-chat,cursor-history}.md` | Each item a block: What to check / Misreadings / Provenance (Who, Where, Quote) / Refs; IDs CF/MF/RS/RW/AH/TH/RP/CO/FP | 140 (texts identical to v1; 43 ticked: CF 6, MF 17, RS 11, RW 9) |
+| 2 | 2026-09-29 | `01-checklist/FULL-PAPER-CHECKLIST.md` "master v2" | Generated by `scripts/generate_checklist_v2.py` ("merges v1 + keyword provenance", `enriched/README.md`) from `enriched/{paper-refs,group-chat,<B>-chat,cursor-history}.md` | Each item a block: What to check / Misreadings / Provenance (Who, Where, Quote) / Refs; IDs CF/MF/RS/RW/AH/TH/RP/CO/FP | 140 (texts identical to v1; 43 ticked: CF 6, MF 17, RS 11, RW 9) |
 | 2a | 2026-09-29 | `05-figures-tables/METHODOLOGY-FIGURES-REVIEW.md`, `…ACTION-ITEMS.md`; `01-checklist/CHECKLIST-UPDATE-SUMMARY.md` | Agents | Verification passes over MF (17 ticked) and TH/RP ("can mark [x]", not applied in the archived v2) | — |
 | 3 | 2026-10-01 00:41 | paper-repo `checklist.md`, `msr:0c0dae0` (+415) | Student + agent | New format: G/W/C/A/R/AT/F/TB/T in 9 categories; each item: what, how to check, why, source, Blocker/High/Medium; snapshot pinned to `msr:f198041` | ≈ 77 |
 | 3a | 2026-10-01 00:58 | `04-comms/20260929-1007-wechat-group/media/checklist.md` | Student shares in group: "我根据历史聊天和我们的文件和我们敲定的东西，大概做了个 checklist" | State of `msr:f1c7df8` (10-01 00:51) | same |
@@ -214,7 +214,7 @@ v1/v2 files later travelled with `local-refs/` (tracked `msr:f1c7df8`, untracked
 
 ## B.3 Status at submission
 
-- **B1 — κ = 0.74 and "two authors independently annotate all 582 issues" untraceable.** First flagged by an agent on 09-28 (`02-comments-hao/adams-skill-revision-comments.md` C12 [P0]: dual coding "not found … [AUTHOR: where are <Senior B>'s labels and the 0.74 script?]"; C4: "Human–human per-dimension κ (the 0.74 breakdown) was not found"). Same evening the Student asked Senior B; reply "我这边儿对了，没事儿，你不用担心这个" (`chat:1on1@2026-09-28T20:16–20:17`). v2 RS-17 ("one consistent κ story", 0.76 vs 0.81) was ticked [x] anyway; `checklist.md` C2 then fixed 0.74 as "two authors labelling the gold sample", source "<Senior B> (κ verified by the authors)". FINAL B1 (10-02) re-raised it with `design_validity.json` "not computable: no pre-adjudication labels from two human annotators". The claim is still in `09-paper-snapshot/sections/03-design.tex:97` and intro `:53`; `ol:ba3f1ee` does not touch it. **No evidence of resolution**; no evidence of what the submitted PDF says (notes/04 §1.6, notes/08 §2.2). New here: the number's earliest appearance is Senior B's reference figure image of 09-27 17:36 (A.1 finding 1).
+- **B1 — κ = 0.74 and "two authors independently annotate all 582 issues" untraceable.** First flagged by an agent on 09-28 (`02-comments-<A>/adams-skill-revision-comments.md` C12 [P0]: dual coding "not found … [AUTHOR: where are <Senior B>'s labels and the 0.74 script?]"; C4: "Human–human per-dimension κ (the 0.74 breakdown) was not found"). Same evening the Student asked Senior B; reply "我这边儿对了，没事儿，你不用担心这个" (`chat:1on1@2026-09-28T20:16–20:17`). v2 RS-17 ("one consistent κ story", 0.76 vs 0.81) was ticked [x] anyway; `checklist.md` C2 then fixed 0.74 as "two authors labelling the gold sample", source "<Senior B> (κ verified by the authors)". FINAL B1 (10-02) re-raised it with `design_validity.json` "not computable: no pre-adjudication labels from two human annotators". The claim is still in `09-paper-snapshot/sections/03-design.tex:97` and intro `:53`; `ol:ba3f1ee` does not touch it. **No evidence of resolution**; no evidence of what the submitted PDF says (notes/04 §1.6, notes/08 §2.2). New here: the number's earliest appearance is Senior B's reference figure image of 09-27 17:36 (A.1 finding 1).
 - **B2 — replication `index.html` names all authors.** FINAL B2 (10-02, latent: mirror served an older clean page). Acted on only after Senior A's warning: "不用index html，readme完整就好 … 这个容易暴露双盲导致desk rejeck" (`chat:group@2026-10-06T05:09`); Senior B: put it in `.gitignore` (`09:44`); Student "搞定了" (`11:57`). **Fixed 10-06, three days after the deadline**, in the window before reviewers would open the artifact (notes/08 §2.7).
 - **Other FINAL items:** no record of item-by-item closure. Spot checks against `09-paper-snapshot` (`msr:87bf139`): H15 heatmap legibility addressed (`msr:94e651f`); F4/H15 composite split (`msr:405bba7`); H1 (two runs printed) still open (`03-design.tex:112`, `main.tex:171`, notes/08 §2.3); T1 markers: `%% PARKED` blocks remain (notes/06b). Final page count: NO EVIDENCE.
 - **checklist.md at its last commit (`msr:e0ea09b`):** ticked only G7, C5, TB3, T2, T3, T5, T8; every other item, including the Blockers G2, G3, G8, G10, R3, AT2, AT3, is unticked. Ticks were not used as the completion record in the final 48 h; FINAL's status table was.
@@ -222,27 +222,27 @@ v1/v2 files later travelled with `local-refs/` (tracked `msr:f1c7df8`, untracked
 
 ## B.4 Provenance audit (v2 "Who" lines and checklist.md "Source" lines)
 
-How v2 provenance was made: by keyword matching (`generate_checklist_v2.py`, `enriched/README.md`). 90 of 140 v2 items carry a Who label that pairs **Senior A's given name with the Student's Chinese name** in parentheses (counted from the `**Who:**` lines). The same conflation appears in the 1:1 chat summary header, which calls the Student's name the "导师" whose comments Senior B relays (`04-comms/past-chat-jimmy/SUMMARY.md:4`), and in v1 ("C-020 (<Senior A> via <Senior B>)"). The likely root: an agent-written summary mis-identified the relayed advisor and the Student. INFERRED.
+How v2 provenance was made: by keyword matching (`generate_checklist_v2.py`, `enriched/README.md`). 90 of 140 v2 items carry a Who label that pairs **Senior A's given name with the Student's Chinese name** in parentheses (counted from the `**Who:**` lines). The same conflation appears in the 1:1 chat summary header, which calls the Student's name the "导师" whose comments Senior B relays (`04-comms/past-chat-<B>/SUMMARY.md:4`), and in v1 ("C-020 (<Senior A> via <Senior B>)"). The likely root: an agent-written summary mis-identified the relayed advisor and the Student. INFERRED.
 
 Sample (44 rows covering 55 item IDs). Verdicts: **OK** (person and source verified), **WRONG-PERSON**, **AGENT→HUMAN** (agent output labelled as a senior's comment), **UNVERIFIED**, **TICKED-CONTRADICTED**.
 
 | ID | v2 Who / checklist.md Source | Verified source | Verdict |
 |---|---|---|---|
-| CF-01 | Senior-A-name (Student-name); group | Quote "Why should I care about issue trackers in proof assistant?" = `02-comments-hao/comments_hao.md:18` (Senior A). "RQs in intro" = Senior B, `chat:group-raw@2026-09-22T23:40` | WRONG-PERSON (label), content OK |
+| CF-01 | Senior-A-name (Student-name); group | Quote "Why should I care about issue trackers in proof assistant?" = `02-comments-<A>/comments_<A>.md:18` (Senior A). "RQs in intro" = Senior B, `chat:group-raw@2026-09-22T23:40` | WRONG-PERSON (label), content OK |
 | CF-03 | group | Senior B, `chat:group-raw@2026-09-22T23:40` ("最好在开头引出来") | OK (B, not A) |
-| CF-05/06 | Senior A label | `comments_hao.md` §2.3 (lines 54–75) | OK person, label string wrong |
-| CF-08 | Senior A label | `comments_hao.md` §2.4 (lines 79–100) | OK |
+| CF-05/06 | Senior A label | `comments_<A>.md` §2.3 (lines 54–75) | OK person, label string wrong |
+| CF-08 | Senior A label | `comments_<A>.md` §2.4 (lines 79–100) | OK |
 | CF-12 | Senior A label + partner DA | Partner devil's-advocate review MG-10 (`11-*/tree/docs/partner/…/da-review-2026-09-22.md`); severity wording first raised by the Student (`chat:1on1@2026-09-28T23:12`) | WRONG-PERSON |
 | CF-13 | Senior A label + partner DA | MG-10 C2 (DA review) | WRONG-PERSON (task-cited case) |
 | CF-14 | Senior A label + partner DA | MG-10 C1; κ gate rule is the research-repo protocol | WRONG-PERSON (task-cited case) |
 | CF-15 | Senior A label + partner DA | MG-10 M2 | WRONG-PERSON |
 | CF-16 | Senior A label | `CHECKLIST-DRAFT.md` C18 cites "CRITIQUE MAJOR 3" (`11-*/…/CRITIQUE-2026-09-22.md`) | WRONG-PERSON |
-| CF-17 | Senior A label | DA review m2; but "Contrary to the common intuition" is Senior A's suggested phrasing (`comments_hao.md:67`) | PARTIAL |
+| CF-17 | Senior A label | DA review m2; but "Contrary to the common intuition" is Senior A's suggested phrasing (`comments_<A>.md:67`) | PARTIAL |
 | CF-23 | Senior B | `chat:1on1@2026-09-29T00:24` (Student raised it, B: "需要去掉所有的分号和破折号") | OK |
 | CF-24 | Senior B | `chat:1on1@2026-09-22T05:02` (pasted rule); labelled "MSR", venue was FSE (checklist.md G2 corrected it) | OK, venue name stale |
-| CF-26..28 | Senior B; text "C-020 (<Senior A> via <Senior B>)" | Relayed advisor, `04-comms/20260926-jimmy-advisor-paper-glimpse/README.md` §2 | WRONG-PERSON |
+| CF-26..28 | Senior B; text "C-020 (<Senior A> via <Senior B>)" | Relayed advisor, `04-comms/20260926-<B>-advisor-paper-glimpse/README.md` §2 | WRONG-PERSON |
 | CF-29 | Student + agent; text "(<Senior A> C2 theme)" | `adams-skill-revision-comments.md` C2 (agent, 09-28) | AGENT→HUMAN |
-| CF-30 | Student + agent; text "(<Senior A> C3)" | Agent C3; denominator idea also in `comments_hao.md:40–43` | AGENT→HUMAN (partly A) |
+| CF-30 | Student + agent; text "(<Senior A> C3)" | Agent C3; denominator idea also in `comments_<A>.md:40–43` | AGENT→HUMAN (partly A) |
 | MF-01 | group | Senior A, `chat:group@2026-09-29T11:40–11:42`; `msr:9809b8c` | OK |
 | MF-02 | group | Senior A, `chat:group@2026-09-29T11:47`; todo in `msr:9809b8c` | OK; outcome: not drawn (A.1) |
 | MF-03 | B; group | Senior B, `chat:group-raw@2026-09-27T15:55` | OK |
@@ -250,8 +250,8 @@ Sample (44 rows covering 55 item IDs). Verdicts: **OK** (person and source verif
 | MF-05 | group | Senior B, `chat:group-raw@2026-09-22T21:29` | OK (B) |
 | MF-06 | Senior B | Agent brief `drawio-overview-brief.md`; 1:1 SUMMARY; not in raw chat | UNVERIFIED |
 | MF-07 | Senior B; agent | `chat:1on1@2026-09-28T23:15` | OK |
-| MF-09 | Senior A label | Not in `comments_hao.md` (no κ there); bar 0.65 from research repo (`overlay-high14-review.md`), print rule = author 10-02 (`msr:9c69675`) | WRONG-PERSON |
-| MF-14 | Senior B | `04-comms/past-chat-jimmy/raw/jimmy-main-pdf-comments/` (P-01..P-13) | OK |
+| MF-09 | Senior A label | Not in `comments_<A>.md` (no κ there); bar 0.65 from research repo (`overlay-high14-review.md`), print rule = author 10-02 (`msr:9c69675`) | WRONG-PERSON |
+| MF-14 | Senior B | `04-comms/past-chat-<B>/raw/<B>-main-pdf-comments/` (P-01..P-13) | OK |
 | MF-16 | Senior B, "C-035" | Verbatim relay not in export (USR-001, notes/04 §4); closest `chat:1on1@2026-09-29T11:51` | PARTIAL |
 | MF-18 | Senior B | `chat:1on1@2026-09-28T16:43` (Table 5/6 appendix); superseded by Senior A 10-01 | OK, superseded |
 | RS-07 | Student + agent | Cursor thread `257c0222` (`cursor-history-chat/MERGED-SUMMARY.md` row "show all strategies"); item says "(dim 3)" but strategy is D5 | TICKED-CONTRADICTED (final caption merges "other strategies") |
@@ -263,7 +263,7 @@ Sample (44 rows covering 55 item IDs). Verdicts: **OK** (person and source verif
 | RW-01 | group | Senior A, `chat:group@2026-09-29T11:30` + shared PC scan | OK |
 | RW-04 | Senior A label; group | Senior A, `chat:group@2026-09-29T11:44` (DBLP, desk reject) | OK person |
 | AH-02 | Senior A label; agent | Senior A, `chat:group@2026-09-29T12:26` ("标签这种最好让agent用宏") | OK person, wrong source file |
-| AH-04 | Senior A label | `comments_hao.md:3` | OK |
+| AH-04 | Senior A label | `comments_<A>.md:3` | OK |
 | RP-11 | Senior A label | `BUILD.md`; executed by agent (`CHECKLIST-UPDATE-SUMMARY.md` 42/42 cells) | WRONG-PERSON |
 | CO-01 | agent; group; Senior A label | Student's own practice `chat:group@2026-09-29T12:40`, never a group decision; reversed 10-03 | CONTRADICTED (end state) |
 | CO-02 | Senior B; Senior A label | Senior B, `chat:1on1@2026-09-29T11:10` | OK (B) |
@@ -271,7 +271,7 @@ Sample (44 rows covering 55 item IDs). Verdicts: **OK** (person and source verif
 | checklist.md C9 | "<Senior A>, C-020" | Relayed advisor | WRONG-PERSON |
 | checklist.md C2 | "<Senior B> (κ verified by the authors)" | Only a chat assurance | UNVERIFIED (load-bearing) |
 | checklist.md G10, AT1, AT4 | "<Senior B>, WeChat 2026-10-01 17:28", "2026-09-29 20:29 and 21:48" | Not in the group export and after the 1:1 export ends (09-29 12:53) | UNVERIFIED |
-| checklist.md W1–W4, W11 | "<Senior A> 2.2 … 2.8" | `comments_hao.md` §2.2–2.8 | OK |
+| checklist.md W1–W4, W11 | "<Senior A> 2.2 … 2.8" | `comments_<A>.md` §2.2–2.8 | OK |
 
 Tally by row (44): OK 21 (several with a wrong label string), WRONG-PERSON 10, AGENT→HUMAN 3, TICKED-CONTRADICTED 3, UNVERIFIED 3, PARTIAL 2, superseded/contradicted 2. Pattern: items that came from agent reviews (Adams-skill C1–C12, devil's-advocate MG-10, CRITIQUE) were relabelled as Senior A's, which inflates the senior's authority behind agent suggestions. The hand-written `checklist.md` is much better (W-items, G-items cite real lines), but two load-bearing sources are wrong or unverifiable (C2, C9).
 
@@ -290,14 +290,14 @@ Each row: generalized wording · original IDs (`v2` = FULL-PAPER-CHECKLIST v2, `
 ### writing
 | Generalized item | IDs | Provenance |
 |---|---|---|
-| Lock a term table; one name per concept; never switch | v2 AH-01, AH-04, FP-01; cl W10, TB4 | `comments_hao.md:1–3` |
-| Introduction answers the outsider question (why this artifact matters to the venue's audience) before methods | v2 CF-01; cl A2 | `comments_hao.md:8–29` |
+| Lock a term table; one name per concept; never switch | v2 AH-01, AH-04, FP-01; cl W10, TB4 | `comments_<A>.md:1–3` |
+| Introduction answers the outsider question (why this artifact matters to the venue's audience) before methods | v2 CF-01; cl A2 | `comments_<A>.md:8–29` |
 | State all RQs in full in the introduction | v2 CF-03; cl A2 | Senior B `chat:group-raw@2026-09-22T23:40` |
-| Why before how for every method choice | v2 MF-10, AH-07; cl W1 | `comments_hao.md:33–50` |
-| No "study plan"/execution framing; outward scientific framing | v2 CF-05, CF-06, AH-08; cl W11 | `comments_hao.md:54–75` |
-| Number diet: per results paragraph ≤ 1 proportion, 1 contrast, 1 effect, 1 implication; exact counts in tables | v2 CF-07, CF-08, AH-09; cl W3; FIN W3 | `comments_hao.md:79–100` |
-| Each RQ section: question → why → minimal method → 1–2 findings → implication; open with the substance | v2 CF-09, CF-10, AH-10, AH-11; cl W2 | `comments_hao.md:104–120, 141–157` |
-| State each caveat once, in methods or threats | v2 CF-11, AH-12; cl W4; FIN H11 | `comments_hao.md:158–171` |
+| Why before how for every method choice | v2 MF-10, AH-07; cl W1 | `comments_<A>.md:33–50` |
+| No "study plan"/execution framing; outward scientific framing | v2 CF-05, CF-06, AH-08; cl W11 | `comments_<A>.md:54–75` |
+| Number diet: per results paragraph ≤ 1 proportion, 1 contrast, 1 effect, 1 implication; exact counts in tables | v2 CF-07, CF-08, AH-09; cl W3; FIN W3 | `comments_<A>.md:79–100` |
+| Each RQ section: question → why → minimal method → 1–2 findings → implication; open with the substance | v2 CF-09, CF-10, AH-10, AH-11; cl W2 | `comments_<A>.md:104–120, 141–157` |
+| State each caveat once, in methods or threats | v2 CF-11, AH-12; cl W4; FIN H11 | `comments_<A>.md:158–171` |
 | Paragraphs build on each other (no listicle structure) | v2 CF-22; cl W7 | Senior B `chat:1on1@2026-09-28T23:14` |
 | De-AI pass on prose (no semicolons/em dashes per team rule, no tier-1 vocabulary, no templated paragraphs) | v2 CF-23, FP-06; cl G1, W11; FIN §3 | Senior B `chat:1on1@2026-09-29T00:24`; Senior A on AI style `chat:group-raw@2026-09-28T00:15` |
 | No claims about unmeasured constructs (e.g. severity when no severity was coded) | v2 CF-12; cl W9 | Student `chat:1on1@2026-09-28T23:12`; DA review (agent) |
@@ -310,7 +310,7 @@ Each row: generalized wording · original IDs (`v2` = FULL-PAPER-CHECKLIST v2, `
 | Uncited bib entries removed or commented; keys resolve | v2 RW-11; cl R5 | Senior B compile errors (per cl; unverified) |
 | Single term for each measure across abstract/intro/RQs (e.g. one name for fix size) | FIN H19 | Agent |
 | Label names via macros in prose; check spacing in the PDF | v2 AH-02, AH-03; cl W10 | Senior A `chat:group@2026-09-29T12:26`; Cursor thread 085dba30 (agent) |
-| Learn how venue papers introduce your niche domain from a named exemplar | v2 CF-04 | `comments_hao.md:4` |
+| Learn how venue papers introduce your niche domain from a named exemplar | v2 CF-04 | `comments_<A>.md:4` |
 
 ### figures
 FR1–FR21 above, plus:
@@ -323,7 +323,7 @@ FR1–FR21 above, plus:
 | Fewer standalone tables; text → figure → table; bold headline cells | v2 MF-15, MF-16; cl W8, TB1, TB5 | Senior B `chat:1on1@2026-09-29T11:51` |
 | Intro failure-mode figure exists and is legible | v2 MF-07; cl F1 | Senior B `chat:1on1@2026-09-28T23:15` |
 | Inverted bars; merged panels as a heatmap; colour scale in caption | v2 RS-12; cl F3 | Senior B 09-28 23:29–23:50 |
-| Captions state what is shown, the denominator and how to read colour, and do not repeat a table | v2 MF-21; cl F6, TB6 | `comments_hao.md:79` ("DO NOT repeat the numbers in the table"); Senior A |
+| Captions state what is shown, the denominator and how to read colour, and do not repeat a table | v2 MF-21; cl F6, TB6 | `comments_<A>.md:79` ("DO NOT repeat the numbers in the table"); Senior A |
 | No retired or superseded figure referenced; no figure needed for compile is git-ignored | v2 MF-20, MF-23, MF-24; cl F6 | `BUILD.md` (agent-checked) |
 | Regenerate figure PDFs whenever a renderer or its data changes | v2 RS-09, RP-11, RP-13; cl F6 | `BUILD.md`; Senior B `chat:1on1@2026-09-28T15:15` (data owner reruns) |
 | Senior review of the finished overview together with Methods | v2 CO-08; cl W6, F2 | Senior B `chat:1on1@2026-09-27T23:21` |
@@ -385,7 +385,7 @@ FR1–FR21 above, plus:
 | Sync filters keep non-manuscript files out of the shared editor | v2 CO-04 | `msr:c93ef1f` |
 | A senior's bulk edit is checked against earlier agreed requirements before merging | v2 CO-07 | Student `chat:group@2026-09-29T12:10` |
 | Agents commit only when the human asks; agents stay out of sections the human fenced off | v2 CO-05, CO-06 | Cursor threads (agent rules) |
-| Co-author annotations (PDF comments) are tracked item by item to closure | v2 MF-14; cl T10 | `jimmy-main-pdf-comments/` |
+| Co-author annotations (PDF comments) are tracked item by item to closure | v2 MF-14; cl T10 | `<B>-main-pdf-comments/` |
 | Senior comment drops are committed and their resolution is visible (separate macro for items only the student may resolve) | v2 AH-13; cl T1 note | `msr:9809b8c` protocol |
 | Requirement packs keep an explicit superseded table; latest wins | v2 CO-10, Superseded appendix | group/1:1 SUMMARY files |
 | Checklist provenance is written by hand from primary sources; machine-matched provenance is marked unverified | — (lesson from B.4) | This audit |
@@ -409,8 +409,8 @@ FR1–FR21 above, plus:
 ### field-SE-specific (MSR / issue mining)
 | Generalized item | IDs | Provenance |
 |---|---|---|
-| Motivate the study through SE maintenance/evolution uses (bug datasets, triage, repair benchmarks, mining validity) | v2 CF-02; cl A2 | `comments_hao.md:122–140` |
-| Closed ≠ fixed: report all-closed and fixed-only denominators, motivate both first, name the denominator wherever cited | v2 CF-30, TH-01, TH-11; cl C5 | `comments_hao.md:40–43`; author decision 10-01 |
+| Motivate the study through SE maintenance/evolution uses (bug datasets, triage, repair benchmarks, mining validity) | v2 CF-02; cl A2 | `comments_<A>.md:122–140` |
+| Closed ≠ fixed: report all-closed and fixed-only denominators, motivate both first, name the denominator wherever cited | v2 CF-30, TH-01, TH-11; cl C5 | `comments_<A>.md:40–43`; author decision 10-01 |
 | Time-to-close is calendar time, never effort/labour/cost | v2 CF-29; cl C4 | Agent C2 (Adams rule) |
 | Censoring of open issues acknowledged (KM or statement) | v2 TH-06 | Agent; `msr:9c69675` |
 | Tracker imports/migrations create artificial closing times; detect and set aside for duration analyses | cl W10 rule, C1; v2 TH-02 | `msr:9c69675`; Senior A term todo `msr:0f96193` |
