@@ -44,7 +44,7 @@ Nodes: definitions (def-), theorems and lemmas (thm-, lem-), methods
 labelled with a verb. Each node carries its section and equation number.
 Draw with `textbook-dag.html` (up to six nodes), `auto-dag-elk.html`
 (about 7 to 20), or Graphviz `dot` for a whole chapter or a map that is
-still changing (`visuals.md`). Put the reading order of the map in one
+still changing (`skills/sv-figure-explain/references/visuals.md`). Put the reading order of the map in one
 sentence under it.
 
 ## 4. Theorems and proofs

@@ -93,7 +93,7 @@ mkdir -p ~/.agents/skills
 ln -s /absolute/path/to/Supervisor-Skills/skills/drawio-reconstruction ~/.agents/skills/drawio-reconstruction
 ```
 
-Codex 也支持由 installer 或管理员管理的其他 skill 位置。本 skill 会根据实际安装目录定位辅助脚本，不依赖固定的 home 路径。之后让 Codex 对某张图或图片文件夹使用 `$drawio-reconstruction` 即可。如果新安装的 skill 没有出现，请重启 Codex。
+Codex 也支持由 installer 或管理员管理的其他 skill 位置。本 skill 会根据实际安装目录定位辅助脚本，不依赖固定的 home 路径。之后让 Codex 对某张图或图片文件夹使用 `$sv-figure-drawio` 即可。如果新安装的 skill 没有出现，请重启 Codex。
 
 ## 依赖要求
 

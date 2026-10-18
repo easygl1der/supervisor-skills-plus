@@ -280,7 +280,7 @@ Items with `Status: candidate` are advisory.
 - Venue style deviations: `sv-write-style-apply` check mode.
 - Single-pass fluency and grammar: `sv-write-polish`.
 - Inline co-author and reviewer notes: `sv-feedback-revise`.
-- Figures that look generated: `figure-designer`.
+- Figures that look generated: `sv-figure-design`.
 - Recurring tells across projects: `sv-supervisor-harvest` proposes catalog or
   profile changes.
 

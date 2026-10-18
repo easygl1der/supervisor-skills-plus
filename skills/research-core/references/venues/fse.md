@@ -148,7 +148,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: ACM accessibility metadata; a stale description misstated a panel layout.
 - Status: candidate
 - Scope: venue:fse
-- Owner: figure-designer, sv-review-once
+- Owner: sv-figure-design, sv-review-once
 - Src: note:n07§A.8 FR18
 
 ### FS-07 Data Availability section

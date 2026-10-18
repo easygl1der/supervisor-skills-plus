@@ -232,7 +232,7 @@ script output, the commit, the file and line. A tick without evidence is
 
 - ADRs, STATUS and TODO updates: `sv-supervisor-records`.
 - Method and results prose from verified numbers: `sv-write-section`.
-- Figures from the numbers file: `figure-designer`.
+- Figures from the numbers file: `sv-figure-design`.
 - Design-time threats and data gaps: `idea-evaluator`; final threats,
   artifact and anonymity review: `sv-review-once`.
 - Expert advice on an experiment: `sv-feedback-revise` guidance mode.

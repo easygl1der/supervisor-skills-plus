@@ -71,7 +71,7 @@ read on the date given. Re-read it when fetching; licences change.
 Fields with thin coverage: `causal` (row 20 only; draw causal DAGs as native
 nodes and arrows or with tikz-bayesnet), `math` (TikZ collections only;
 geometry and proof diagrams are normally drawn natively, see
-`figure-designer` render-and-inspect loop), `stats` (plots come from the
+`sv-figure-design` render-and-inspect loop), `stats` (plots come from the
 analysis scripts, not icon libraries).
 
 ## 3. Licence notes that change how an icon may be used

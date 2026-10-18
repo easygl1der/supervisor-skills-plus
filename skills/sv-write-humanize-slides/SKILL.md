@@ -30,4 +30,4 @@ See: ../sv-write/references/humanize/diagnosis-and-modes.md
 ## Hand-offs
 
 - Building or restructuring the deck: `group-beamer`.
-- Figures that look generated: `figure-designer`.
+- Figures that look generated: `sv-figure-design`.

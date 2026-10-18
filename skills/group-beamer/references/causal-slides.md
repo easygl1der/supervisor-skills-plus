@@ -49,4 +49,4 @@ paper's symbols and show the mapping once. Never mix both.
 ## DAGs
 
 TikZ; solid observed, dashed or hollow counterfactual. Reuse
-`figure-designer` outputs. Graphviz PDF only for large or changing graphs.
+`sv-figure-design` outputs. Graphviz PDF only for large or changing graphs.

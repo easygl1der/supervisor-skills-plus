@@ -31,7 +31,7 @@ Run by: experiment-workflow, sv-review-once, sv-review-loop
 - Why: A figure number copied from an image is not data.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, figure-designer, sv-review-loop
+- Owner: experiment-workflow, sv-figure-design, sv-review-loop
 - Src: note:n07§A.1; note:n07§A.8 FR3
 
 ### IN-03 Frozen-input identifiers printed consistently

@@ -336,7 +336,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Gold feeding RQ boxes misstates the method; one dominant group otherwise drives the pooled column.
 - Status: candidate
 - Scope: field:se
-- Owner: figure-designer, drawio-reconstruction
+- Owner: sv-figure-design, sv-figure-drawio
 - Src: note:n07§A.8 FR19; note:n07§A.8 FR12; arc:msr:9c69675
 
 ### SE-17 DBLP-checked bibliography

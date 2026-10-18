@@ -63,5 +63,5 @@ See: references/humanize/core.md
 - Reviewer-style audit of a finished manuscript: `sv-review-once`.
 - Comments from co-authors, advisors or reviewers: `sv-feedback-revise`.
 - Whether the idea holds at all: `idea-evaluator`.
-- Figures: `figure-designer`.
+- Figures: `sv-figure-design`.
 - Rule changes learned from writing work: `sv-supervisor-harvest`.

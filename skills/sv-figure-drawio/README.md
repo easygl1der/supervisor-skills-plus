@@ -92,7 +92,7 @@ mkdir -p ~/.agents/skills
 ln -s /absolute/path/to/Supervisor-Skills/skills/drawio-reconstruction ~/.agents/skills/drawio-reconstruction
 ```
 
-Codex also supports installer-managed and administrator-managed skill locations. The skill resolves helper scripts from its actual installed directory and does not require a fixed home-directory path. Then ask Codex to use `$drawio-reconstruction` for a diagram image or a folder of images. If a newly installed skill does not appear, restart Codex.
+Codex also supports installer-managed and administrator-managed skill locations. The skill resolves helper scripts from its actual installed directory and does not require a fixed home-directory path. Then ask Codex to use `$sv-figure-drawio` for a diagram image or a folder of images. If a newly installed skill does not appear, restart Codex.
 
 ## Requirements
 

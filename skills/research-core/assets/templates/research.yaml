@@ -49,7 +49,7 @@ style:
   overlays: []                       # e.g. [no-semicolons-no-dashes]
 
 figures:
-  icon_libs: []                      # local icon library paths; see drawio-reconstruction
+  icon_libs: []                      # local icon library paths; see sv-figure-drawio
 
 reading:
   dir: ""                            # optional: where paper-quickread / study write reading notes; default <project>/reading/

@@ -59,7 +59,7 @@ See: `source-priority.md` (conflicts, assigned-readings packs).
 - Fill missing steps between equations; mark every added step 补 and say
   which fact it uses.
 - For a proof: the chain of lemmas, the step that does the work, and which
-  assumption each step uses. Use `kit/templates/stepper-proof.html` when the
+  assumption each step uses. Use `skills/sv-figure-explain/kit/templates/stepper-proof.html` when the
   learner wants to see the derivation step by step.
 - For an algorithm: pseudocode copied from the paper, then a trace
   (`stepper-trace.html`) on a tiny input.

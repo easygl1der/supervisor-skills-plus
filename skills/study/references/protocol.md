@@ -16,7 +16,7 @@ locate -> plain principle -> motivation -> example -> links -> pictures
 ```
 
 A state diagram of this loop ships with the kit:
-`kit/templates/stepper.html` pattern P2; the rendered copy is
+`skills/sv-figure-explain/kit/templates/stepper.html` pattern P2; the rendered copy is
 `evals/study-loop.png`.
 
 The tutor talks in steps 1 to 5 and 7 to 8, but in small pieces; step 6 is
@@ -60,7 +60,7 @@ like the anchor and half like the target).
 
 **5. Pictures (usually two).** A motivation figure (scene cards or a
 four-panel comic) and a structure figure (DAG, dependency map, or the
-expert mental model as a mind map). Follow `visuals.md`; render, look,
+expert mental model as a mind map). Follow `skills/sv-figure-explain/references/visuals.md`; render, look,
 embed the PNG.
 
 **6. The learner restates (required).** Stop and ask, in one message:

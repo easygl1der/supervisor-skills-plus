@@ -280,5 +280,5 @@ used when it changed a finding.
 
 Figures carry tells too: a detail line under every box, gradient pastel
 frames, numbered badges, a palette chosen for decoration. Report them to
-`figure-designer`; this skill does not edit figures.
+`sv-figure-design`; this skill does not edit figures.
 [src: note:n07§A.8; arc:msr:0f96193; arc:chat:group@2026-10-02T22:28] (candidate)

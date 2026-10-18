@@ -132,15 +132,16 @@ counterexample.
 
 ### 4. Draw
 
-Default to HTML (SVG plus KaTeX) from `kit/templates/`, rendered to PNG with
-`kit/render.sh`; save both files and embed the PNG in the notes. Use a
+Hand the figure to `sv-figure-explain` (ADR 0021; it owns the kit). Default to
+HTML (SVG plus KaTeX) from `skills/sv-figure-explain/kit/templates/`, rendered to PNG with
+`skills/sv-figure-explain/kit/render.sh`; save both files and embed the PNG in the notes. Use a
 stepper only for content with an order (derivations, algorithms, processes).
 Run the render check, open the PNG and look at it, fix and rerender (at
 most three rounds). Numbers in figures need a source or the label
 "illustrative".
 
-See: references/visuals.md
-See: references/visual-scenarios.md
+See: ../sv-figure-explain/references/visuals.md
+See: ../sv-figure-explain/references/visual-scenarios.md
 
 ### 5. Save
 

@@ -1,6 +1,6 @@
 # ADR 0008: elkjs kept under EPL-2.0 and used as the default auto-layout
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18: the kit and visuals.md now live in skills/sv-figure-explain/)
 Date: 2026-10-16
 Deciders: Claude Code (licence check, layout test), owner (review)
 
@@ -25,12 +25,12 @@ Option 3. `templates/auto-dag-elk.html` is the default for more than six nodes;
 ## Consequences
 - EPL-2.0 is weak copyleft per file: changes to the bundle would have to be
   published under EPL. We do not change it.
-- `skills/study/kit/README.md` still says elkjs is MIT and needs correcting.
+- `skills/sv-figure-explain/kit/README.md` still says elkjs is MIT and needs correcting.
 
 ## Do not
 - Do not edit `elk.bundled.js`; replace it whole on upgrade.
 
 ## Sources
-`skills/study/kit/vendor/elk.bundled.js` (lines 18 to 26), `THIRD_PARTY.md`,
-`skills/study/references/visuals.md` §1 and §6,
+`skills/sv-figure-explain/kit/vendor/elk.bundled.js` (lines 18 to 26), `THIRD_PARTY.md`,
+`skills/sv-figure-explain/references/visuals.md` §1 and §6,
 SPEC "vendored ... 均 MIT" line, upstream `kieler/elkjs` LICENSE.md (read 2026-10-16).

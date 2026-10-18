@@ -78,7 +78,7 @@ See: references/core/precedence.md
 | `references/core/integrity.md` | Agreement numbers, frozen gold, pre-set bars, AI-use disclosure, traceable numbers |
 | `references/core/precedence.md` | What wins when rules conflict; how to cite sources |
 | `references/core/inputs-mineru.md` | PDF input only through MinerU; routes; stop on failure |
-| `references/core/ai-collaboration.md` | Human-in-charge rules for AI-assisted coding, figures and writing (formerly the `vibe-research-workflow` skill); phase guides and tool matrix in `references/vibe/` |
+| `references/core/ai-collaboration.md` | Human-in-charge rules for AI-assisted coding, figures and writing (formerly the `research-core` (`core/ai-collaboration.md`) skill); phase guides and tool matrix in `references/vibe/` |
 
 See: references/core/claims-evidence.md
 See: references/core/body-text.md
@@ -128,7 +128,7 @@ not a source.
 |---|---|
 | `references/checklists/master.md` | sv-supervisor, sv-review-once |
 | `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop |
-| `references/checklists/figures.md` | figure-designer, drawio-reconstruction |
+| `references/checklists/figures.md` | sv-figure-design, sv-figure-drawio |
 | `references/checklists/threats.md` | idea-evaluator, sv-review-once |
 | `references/checklists/double-blind.md` | sv-review-once, experiment-workflow |
 | `references/checklists/artifact.md` | experiment-workflow, sv-review-once |

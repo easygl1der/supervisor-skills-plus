@@ -1,6 +1,6 @@
 # ADR 0004: study is one skill with submodules in references/
 
-Status: accepted
+Status: accepted; partly superseded by ADR 0021 (the visual kit, visuals.md and visual-scenarios.md moved to sv-figure-explain)
 Date: 2026-10-16
 Deciders: owner (SPEC D3, D6), Claude Code (submodule split)
 

@@ -126,6 +126,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 - 风险：总入口的路由表和子命令之间要保持一致。lint 要检查路由表里出现的每个子命令名都有对应目录，反之亦然。
 - Cursor 文档支持 `disable-model-invocation`，子命令在两个工具里都只能斜杠点名。实施第 1 步后仍要在 Cursor 里实测一次（文档与实际版本可能不一致）。research-core 的 `user-invocable: false` 在 Cursor 编辑器里可能不生效，最坏情况只是它出现在 `/` 菜单里，不影响自动挑选。
 - ADR 0004 被部分取代：study 仍是一组，但讲解图工具包移到 sv-figure-explain。ADR 0007–0011 中 `skills/study/kit/` 的路径改为 `skills/sv-figure-explain/kit/`，决策本身不变。
+- 实施第 4 步时的两处说明（2026-10-18）：`sv-figure-drawio` 的 SKILL.md（424 行）按 owner 要求原样保留，只改了 name 和调用名，是 100 行上限的唯一例外；`sv-figure-plot`、`sv-figure-html`、`sv-figure-poster` 没有专门的来源内容，目前只组合已有的规则文件（tools.md、design-rules.md、kit、experimental-results.md），poster 明说暂无专门规则，后续由 `sv-supervisor-harvest` 补。
 - ADR 0001–0020 作为历史保留旧名，不改写。
 - 不留旧名的 pointer stub（同 ADR 0019 的理由）。
 

@@ -133,5 +133,5 @@ library and record the licence next to the figure source
 (`<figure>_icons/ATTRIBUTION.tsv`). The per-field registry (software logos,
 concept icon sets, neural-network block libraries such as
 NN-Models-drawio-library, TikZ diagram collections, scientific icon sets)
-and the local icon index script live in the `drawio-reconstruction` skill
+and the local icon index script live in the `sv-figure-drawio` skill
 (`references/icon-sources.md`, `scripts/icon_index.py`).

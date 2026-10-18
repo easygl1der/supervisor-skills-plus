@@ -53,5 +53,5 @@ skills/group-beamer/templates/*-pages/
 skills/group-beamer/templates/sysu-like/logos/*.png
 skills/group-beamer/templates/sysu-like/logos/*.pdf
 
-# study kit dependencies (npm i in skills/study/kit)
+# study kit dependencies (npm i in skills/sv-figure-explain/kit)
 node_modules/

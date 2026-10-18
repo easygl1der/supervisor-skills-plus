@@ -81,7 +81,7 @@ Run by: sv-review-once
 - Why: A wrong description fails the accessibility check.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, sv-review-once
+- Owner: sv-figure-design, sv-review-once
 - Src: arc:MF-22@v2; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H15; note:n07§A.8 FR18
 
 ## 3. Build hygiene

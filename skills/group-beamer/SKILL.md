@@ -33,7 +33,7 @@ CJK via `ctex`. Not Marp, not PPTX.
 - Manuscript prose: `sv-write-section`, `sv-write-humanize-paper` (`academic`).
 - A one-page paper card only: `paper-quickread`.
 - Understanding a paper before you can present it: `study`.
-- Figures that are not slides: `figure-designer`.
+- Figures that are not slides: `sv-figure-design`.
 
 ## Modes
 
@@ -175,7 +175,7 @@ exported `notes.md`.
 
 - `paper-quickread`: card in for paper-talk.
 - `research-bridge`: link-to-project slide.
-- `figure-designer`: TikZ DAGs; Graphviz PDF only for large or changing graphs.
+- `sv-figure-design`: TikZ DAGs; Graphviz PDF only for large or changing graphs.
 - `sv-supervisor-records`: accumulation and last-week next steps.
 - `sv-write-humanize-slides`: `slides` profile on frames; `academic` on `\note{}`.
 - `sv-review-once` devil's-advocate pass plus

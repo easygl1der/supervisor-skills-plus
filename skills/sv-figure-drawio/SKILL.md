@@ -1,6 +1,7 @@
 ---
-name: drawio-reconstruction
+name: sv-figure-drawio
 description: "Reconstructs reference images into high-fidelity, editable Draw.io files with rendered previews: native Draw.io elements carry text and structure, SVG covers simple icons that match the reference, and cropped or transparent PNGs preserve complex visuals. Use when the user wants a diagram image, research figure, architecture diagram, slide, UI screenshot, or image folder turned into `.drawio` XML; batch requests use a manifest with bounded parallelism when available and a full-fidelity serial fallback otherwise."
+disable-model-invocation: true
 ---
 
 # Draw.io Reconstruction
@@ -417,7 +418,7 @@ For paper figures, run the `research-core` `figures` checklist items this skill 
 
 ## Hand-offs
 
-- Design decisions (paradigm, table or figure, AI-look removal, mirroring the method text): `figure-designer`.
+- Design decisions (paradigm, table or figure, AI-look removal, mirroring the method text): `sv-figure-design`.
 - Method text that must match the rebuilt overview: `sv-write-section`.
 - Values that need a script or ledger source: `experiment-workflow` and `sv-review-loop`.
 - Redline comments from co-authors: `sv-feedback-revise`.

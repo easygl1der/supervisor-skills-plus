@@ -204,7 +204,7 @@ study kit's HTML-to-PNG pipeline and pick the pattern from
 and the method lineage, P2 for the technical roadmap, P6 for "existing
 methods versus ours"). Dates and numbers on a figure come from the
 milestone table or carry "illustrative". Paper-grade figures go to
-`figure-designer`.
+`sv-figure-design`.
 
 ### Phase 5: Draft in proposal register
 

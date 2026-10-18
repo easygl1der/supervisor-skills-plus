@@ -1,18 +1,18 @@
----
-name: figure-designer
-description: >-
-  Advises on the design of the three core figures in a technical paper:
-  the Motivated Example (Figure 1), the Solution Overview
-  (Methodology), and the Experimental Results figures. Recommends the
-  right design paradigm, layout, labelling, and tool for each figure
-  type, then runs a quality-control audit. Use when the user asks to
-  'design a figure', 'draw Figure 1', 'plot experiment results',
-  'choose the right chart type', 'which figure tool to use', or
-  'figure looks unprofessional'.
-license: CC-BY-4.0
----
+<!-- Moved from skills/sv-figure-design/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Figure Designer
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Core procedure
+- Integrity gate
+- Output format
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -84,8 +84,8 @@ palette) as "user must verify" in the final audit report.
 
 ### Step 2: Paradigm recommendation
 
-See: references/motivated-example.md, references/solution-overview.md,
-or references/experimental-results.md depending on figure type.
+See also `motivated-example.md`, solution-overview.md,
+or experimental-results.md depending on figure type.
 
 Each figure type has two to three canonical paradigms. Pick the one
 that fits the user's storytelling need, and explain why the other
@@ -107,7 +107,7 @@ could draw the first draft from the sketch alone.
 
 ### Step 5: Tool suggestion
 
-See: references/tools.md for the tool matrix and the decision
+See also `skills/sv-figure/references/tools.md` for the tool matrix and the decision
 heuristic.
 
 Default recommendations:
@@ -118,15 +118,15 @@ Default recommendations:
   `plot_utils.py` script.
 - LaTeX-integrated figures: TikZ or PGFPlots. Develop them in the
   render-and-inspect loop (standalone render, PNG inspection, review note)
-  with `scripts/render_tikz.py`.
+  with `skills/sv-figure-tikz/scripts/render_tikz.py`.
 - Diagrams that replicate a reference image or sketch: hand off to
-  `drawio-reconstruction`; icons come from its licensed icon registry.
+  `sv-figure-drawio`; icons come from its licensed icon registry.
 
-See: references/tikz-review.md
+See also `skills/sv-figure-tikz/references/tikz-review.md`
 
 ### Step 6: Universal rule audit
 
-See: references/design-rules.md for the full universal rule set.
+See also `skills/sv-figure/references/design-rules.md` for the full universal rule set.
 
 Verify every proposed or existing figure against:
 
@@ -143,7 +143,7 @@ Flag every violation with severity.
 
 ### Step 6b: Archive rules audit
 
-See: references/archive-figure-rules.md
+See also `skills/sv-figure/references/archive-figure-rules.md`
 
 Run FR1 to FR21 on top of the universal rules. Always:
 
@@ -264,7 +264,7 @@ items they must confirm before submission.
 
 Run the `research-core` `figures` checklist items this skill owns: FG-01 to
 FG-08, FG-10 to FG-22 and FG-24 to FG-26 (FG-09 and FG-23 are shared with
-`drawio-reconstruction`; run them when the figure is an overview or uses
+`sv-figure-drawio`; run them when the figure is an overview or uses
 icons). Report each item as pass, fail, n/a or unknown with evidence: the
 rendered PNG or PDF page inspected, the box-to-step table, the number trace,
 the commit that regenerated the PDF. Vision-only items without an image are
@@ -282,7 +282,7 @@ the commit that regenerated the PDF. Vision-only items without an image are
 ## Hand-offs
 
 - Faithful replication of a sketch, reference image or AI mock-up, and
-  icon sourcing: `drawio-reconstruction`.
+  icon sourcing: `sv-figure-drawio`.
 - Method text that must change to mirror the overview: `sv-write-section`.
 - Introduction figure and its running example: `sv-write-intro`.
 - Number traces that reach the analysis scripts: `experiment-workflow`

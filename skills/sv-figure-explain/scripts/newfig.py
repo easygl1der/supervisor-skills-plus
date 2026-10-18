@@ -6,7 +6,7 @@ Usage:
     python newfig.py --list
     python newfig.py --selftest
 
-Templates live in skills/study/kit/templates/ and load ../vendor/...; the copy
+Templates live in skills/sv-figure-explain/kit/templates/ and load ../vendor/...; the copy
 points to kit/vendor/ by a path relative to <out.html>, so figures can sit
 next to the notes that embed them (vault, paper folder, evals).
 Refuses to overwrite an existing file.

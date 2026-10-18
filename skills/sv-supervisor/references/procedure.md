@@ -132,7 +132,7 @@ brief showed (a blocker, a marker count, days to deadline).
 | design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `sv-supervisor-records` (ADRs) |
 | experiments | `experiment-workflow`, `sv-supervisor-records`, `research-core` `core/ai-collaboration.md` (agent coding habits) |
 | writing | `sv-write` (routes to skeleton, intro, section, style and humanize sub-commands) |
-| figures | `figure-designer`, `drawio-reconstruction` |
+| figures | `sv-figure-design`, `sv-figure-drawio` |
 | internal-review | `sv-feedback-revise`, `sv-review-loop`, `sv-write-polish` |
 | submission | `sv-review-once`, `sv-review-loop`, `experiment-workflow` (artifact, numbers check) |
 | rebuttal | `sv-feedback` (revise, then rebuttal) |

@@ -1,6 +1,6 @@
 # ADR 0010: Render checker with layout checks; a figure ships only at exit 0
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18: the kit and visuals.md now live in skills/sv-figure-explain/)
 Date: 2026-10-16
 Deciders: Claude Code (checks added after tests), owner (review)
 
@@ -15,7 +15,7 @@ link. Visual review alone missed some of these.
 3. Geometric checks in headless Chrome, plus looking at the PNG.
 
 ## Decision
-Option 3. `skills/study/kit/render.mjs` reports: text-box overlap (tight text
+Option 3. `skills/sv-figure-explain/kit/render.mjs` reports: text-box overlap (tight text
 bounds), overflow outside `#fig`, `text-on-line` (sampled stroke points inside
 a label box; occluded parts ignored via `elementsFromPoint`; opt out with
 `data-cross-ok`), `edge-through-node`, KaTeX errors, JS errors and unfilled
@@ -31,5 +31,5 @@ and a look at the PNG before delivery.
 - Do not deliver a figure with warnings.
 
 ## Sources
-`skills/study/kit/render.mjs` (header, checks, exit codes),
-`skills/study/references/visuals.md` §4 and §6, `skills/study/SKILL.md` §4 and checklist.
+`skills/sv-figure-explain/kit/render.mjs` (header, checks, exit codes),
+`skills/sv-figure-explain/references/visuals.md` §4 and §6, `skills/study/SKILL.md` §4 and checklist.

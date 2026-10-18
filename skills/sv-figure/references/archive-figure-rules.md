@@ -98,7 +98,7 @@ figures; the version that shipped was always the hand-edited native rebuild.
    Treat it as a layout idea only. List every number and every label in it
    as `UNVERIFIED` (FR3).
 2. **Native rebuild.** Rebuild in draw.io, TikZ or a plotting script
-   (`drawio-reconstruction` for faithful replication). Icons come from
+   (`sv-figure-drawio` for faithful replication). Icons come from
    licensed libraries, not traced (FG-23). Re-source every data value from
    the analysis scripts before it enters the figure or the text.
 3. **Human redline.** A human marks the screenshot: strike, keep, move.

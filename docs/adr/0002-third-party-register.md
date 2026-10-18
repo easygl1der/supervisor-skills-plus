@@ -1,11 +1,11 @@
 # ADR 0002: One root THIRD_PARTY.md for vendored code and borrowed ideas
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18: the kit and visuals.md now live in skills/sv-figure-explain/)
 Date: 2026-10-16
 Deciders: owner (SPEC change list), Claude Code (format, licence checks)
 
 ## Context
-The reading upgrade vendors JavaScript libraries into `skills/study/kit/vendor/`
+The reading upgrade vendors JavaScript libraries into `skills/sv-figure-explain/kit/vendor/`
 and adapts ideas from about fifteen public skill repositories
 (`notes/10-reading-sources.md` §14). Their licences differ (MIT, Apache-2.0,
 EPL-2.0, CC BY-SA 4.0, none). The repository itself is CC BY-NC-SA 4.0

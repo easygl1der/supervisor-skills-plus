@@ -12,7 +12,7 @@
 ## 1. The expert model in three layers
 
 Before asking for the restatement, write the expert model of the concept
-(it also becomes the mind map, `kit/templates/mind-map.html`):
+(it also becomes the mind map, `skills/sv-figure-explain/kit/templates/mind-map.html`):
 
 | Layer | Question | IV example |
 |---|---|---|

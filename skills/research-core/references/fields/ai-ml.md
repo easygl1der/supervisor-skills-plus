@@ -20,7 +20,7 @@ are not repeated here.
    to `3.5`, `04_Scientific_Plotting/4.1` to `4.4`, `06_Case_Studies/6.1` to `6.3`.
 2. Upstream skills with references: sv-write-skeleton, benchmark-paper-
    template, sv-write-intro, sv-write-section, sv-review-once,
-   figure-designer, idea-evaluator, sv-feedback-rebuttal.
+   sv-figure-design, idea-evaluator, sv-feedback-rebuttal.
 3. Owner skill `sv-write-style-mine`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
 4. Upstream map of AI/ML assumptions: `notes/01-upstream-map.md` §4 to §5.
 5. Exemplar papers analysed by the handbook case studies (Intro analyses
@@ -205,7 +205,7 @@ are not repeated here.
 - Why: It tells the reviewer the problem in 30 seconds.
 - Status: confirmed
 - Scope: field:ml
-- Owner: figure-designer, sv-write-intro
+- Owner: sv-figure-design, sv-write-intro
 - Src: up:handbook-en/04_Scientific_Plotting/4.1_motivated-example-figure.md; up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md
 
 ### ML-07 Honest results plots
@@ -214,7 +214,7 @@ are not repeated here.
 - Why: Misleading axes cost reviewer trust.
 - Status: confirmed
 - Scope: field:ml
-- Owner: figure-designer
+- Owner: sv-figure-design
 - Src: up:handbook-en/04_Scientific_Plotting/4.3_experimental-results-figure.md; up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md
 
 ### ML-08 Rebuttal claims verified
