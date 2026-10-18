@@ -41,7 +41,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 
 ### 工具限制（2026-10-18 查证）
 - Claude Code 的 `/X:Y` 是 plugin 命名空间。Cursor 的 skill 名只允许小写字母、数字、连字符，且必须等于目录名，不支持冒号。
-- 每个能被模型自动调用的 skill，name 和 description 每轮都在上下文里。Claude Code 用 frontmatter `disable-model-invocation: true` 让 skill 只能斜杠点名，从而不占这份列表；`user-invocable: false` 则相反（只给模型用，不出现在 `/` 菜单）。Cursor 文档确认支持 `user-invocable: false`，**是否支持 `disable-model-invocation` 未核实**。
+- 每个能被模型自动调用的 skill，name 和 description 每轮都在上下文里。Claude Code 用 frontmatter `disable-model-invocation: true` 让 skill 只能斜杠点名，从而不占这份列表；`user-invocable: false` 则相反（只给模型用，不出现在 `/` 菜单）。Cursor 的 Agent Skills 文档列出 `disable-model-invocation`（“只有通过 /skill-name 显式调用时才加载，agent 不会按上下文自动应用”），已于 2026-10-18 核实；`user-invocable: false` 只出现在 Cursor CLI 2026-07-06 的 changelog 里，Agent Skills 文档未列出。
 - 来源：https://code.claude.com/docs/en/skills.md 、https://www.cursor.com/docs/context/skills 、https://cursor.com/docs/cli/changelog.md
 
 ## Options considered
@@ -124,7 +124,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 - agent 自动挑选时只看 12 个总入口；用户想精确时，可以点名约 50 个子命令中的任意一个。目录总数从 26 增到约 64，但只有 13 个是 agent 每轮都要看到的。
 - 每个子命令 SKILL.md 很短，“选对了但没抓住重点”主要靠用户直接点名子命令解决，其次靠总入口的路由表加开头的一句报告。
 - 风险：总入口的路由表和子命令之间要保持一致。lint 要检查路由表里出现的每个子命令名都有对应目录，反之亦然。
-- 风险：如果 Cursor 不认 `disable-model-invocation`，在 Cursor 里约 50 个子命令都会出现在 agent 的自动挑选列表中。实施第 1 步之前先在 Cursor 里验证；不支持的话再定对策。
+- Cursor 文档支持 `disable-model-invocation`，子命令在两个工具里都只能斜杠点名。实施第 1 步后仍要在 Cursor 里实测一次（文档与实际版本可能不一致）。research-core 的 `user-invocable: false` 在 Cursor 编辑器里可能不生效，最坏情况只是它出现在 `/` 菜单里，不影响自动挑选。
 - ADR 0004 被部分取代：study 仍是一组，但讲解图工具包移到 sv-figure-explain。ADR 0007–0011 中 `skills/study/kit/` 的路径改为 `skills/sv-figure-explain/kit/`，决策本身不变。
 - ADR 0001–0020 作为历史保留旧名，不改写。
 - 不留旧名的 pointer stub（同 ADR 0019 的理由）。
