@@ -39,6 +39,15 @@ setup data;    sh "$PREREG" freeze docs/prereg/p.md data/raw.csv > /dev/null
 echo y > data/raw.csv; git commit -qam data
 expect FAIL "raw data changed"
 
+# a DATA failure in one registration must not stop the audit of the next
+setup two;     sh "$PREREG" freeze docs/prereg/p.md data/raw.csv > /dev/null
+echo y > data/raw.csv; git commit -qam data
+sed -n '/^```markdown/,/^```$/p' "$TEMPLATE" | sed '1d;$d' > docs/prereg/q.md
+sh "$PREREG" freeze docs/prereg/q.md > /dev/null
+if sh "$PREREG" audit > out.txt 2>&1; then echo "selftest: two: expected FAIL"; exit 1; fi
+grep -q '== prereg audit: docs/prereg/q.md ==' out.txt && grep -q '^RESULT: FAIL' out.txt \
+  || { echo "selftest: audit stopped after a DATA failure"; cat out.txt; exit 1; }
+
 cd "$TMP/clean"
 if sh "$PREREG" freeze docs/prereg/p.md > /dev/null 2>&1; then echo "selftest: refreeze accepted"; exit 1; fi
 echo "prereg selftest ok"

@@ -42,7 +42,9 @@
 # LICENSE-science-superpowers.txt). Local changes: PREREG_DIR is docs/prereg
 # and the default results paths add analysis/ (sv-experiment conventions);
 # rel_path uses `pwd -P`, so paths under a symlinked directory (macOS /var,
-# a linked project folder) resolve against git's physical repo root.
+# a linked project folder) resolve against git's physical repo root; two
+# `[ ] &&` statements became `if`, so a DATA failure no longer aborts the
+# audit under `set -e` before the other registrations and the RESULT line.
 
 set -eu
 
@@ -264,7 +266,7 @@ audit_one() {
                 nbad=$((nbad + 1))
             fi
         done
-        [ "$nbad" -eq 0 ] && pass "DATA: $nchecked frozen data checksum(s) verified"
+        if [ "$nbad" -eq 0 ]; then pass "DATA: $nchecked frozen data checksum(s) verified"; fi
     fi
 }
 
@@ -293,7 +295,7 @@ cmd_audit() {
 
     if [ -z "$files" ]; then
         for f in "$ROOT/$PREREG_DIR"/*.md; do
-            [ -f "$f" ] && files="$files ${f#"$ROOT"/}"
+            if [ -f "$f" ]; then files="$files ${f#"$ROOT"/}"; fi
         done
         [ -n "$files" ] || die "no pre-registrations found under $PREREG_DIR/ (pass files explicitly)"
     fi
