@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-supervisor/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/research-supervisor/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Research Supervisor
 
@@ -51,18 +51,18 @@ on what the user asked for, before any stage logic:
 |---|---|
 | a quick structured read of one paper; its writing style (`--style`) | `sv-quickread` |
 | understand a concept, a paper in depth, or a textbook chapter | `sv-study` |
-| map a body of literature, find gaps, plan next reads | `deep-research` (literature-map mode) |
+| map a body of literature, find gaps, plan next reads | `sv-litreview-map` |
 | "can I use this in my project?", a minimal validation experiment | `sv-study-bridge` |
-| thesis proposal, research plan, grant application | `proposal-writer` |
+| thesis proposal, research plan, grant application | `sv-proposal` |
 | a style profile from exemplar papers | `sv-write-style-mine` |
-| group-meeting slides, weekly report, paper talk | `group-beamer` |
+| group-meeting slides, weekly report, paper talk | `sv-slides` |
 
 Priority: an explicit reading or learning intent wins over the stage table;
 if a project exists, mention its stage in one line and continue with the
 routed skill. Usual chain: `sv-quickread` (triage) then `sv-study`
 (understanding) then `sv-study-bridge` (use in a project) then
-`idea-evaluator` or `experiment-workflow`; several cards then
-`deep-research` literature-map; a plan then `proposal-writer`.
+`sv-idea` or `sv-experiment`; several cards then
+`sv-litreview-map`; a plan then `sv-proposal`.
 [src: user:2026-10-16] (confirmed)
 
 ## Step 0: Load context
@@ -128,15 +128,15 @@ brief showed (a blocker, a marker count, days to deadline).
 | Stage | Skills (first choice first) |
 |---|---|
 | no `research.yaml` | `sv-supervisor-init`, then `sv-supervisor-records`; `research-core` is loaded by every skill |
-| idea | `idea-evaluator`, `deep-research`, `sv-study-bridge` (an idea came from a paper or concept just studied) |
-| design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `sv-supervisor-records` (ADRs) |
-| experiments | `experiment-workflow`, `sv-supervisor-records`, `research-core` `core/ai-collaboration.md` (agent coding habits) |
+| idea | `sv-idea`, `sv-litreview`, `sv-study-bridge` (an idea came from a paper or concept just studied) |
+| design | `sv-idea` (empirical or theory route), `sv-experiment` (freeze, sampling, gold), `sv-supervisor-records` (ADRs) |
+| experiments | `sv-experiment`, `sv-supervisor-records`, `research-core` `core/ai-collaboration.md` (agent coding habits) |
 | writing | `sv-write` (routes to skeleton, intro, section, style and humanize sub-commands) |
 | figures | `sv-figure-design`, `sv-figure-drawio` |
 | internal-review | `sv-feedback-revise`, `sv-review-loop`, `sv-write-polish` |
-| submission | `sv-review-once`, `sv-review-loop`, `experiment-workflow` (artifact, numbers check) |
+| submission | `sv-review-once`, `sv-review-loop`, `sv-experiment` (artifact, numbers check) |
 | rebuttal | `sv-feedback` (revise, then rebuttal) |
-| camera-ready | `sv-write-polish`, `experiment-workflow` (de-anonymized artifact), `sv-supervisor-records` (tag the submitted version) |
+| camera-ready | `sv-write-polish`, `sv-experiment` (de-anonymized artifact), `sv-supervisor-records` (tag the submitted version) |
 | project finished, or expert notes arrived | `sv-supervisor-harvest` |
 
 Overrides from the brief:
@@ -146,7 +146,7 @@ Overrides from the brief:
 - Source of truth unnamed, STATUS stale, deadline without source:
   `sv-supervisor-records`.
 - Printed numbers without verified rows, or an agreement value without raw
-  label sets: `experiment-workflow`.
+  label sets: `sv-experiment`.
 - Last 24 hours before the deadline: remind the team to use one editor at a
   time and one channel (`sv-supervisor-records`).
 

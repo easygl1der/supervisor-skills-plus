@@ -33,5 +33,5 @@ See: ../sv-write/references/humanize/diagnosis-and-modes.md
 ## Hand-offs
 
 - Rebuttal strategy and content: `sv-feedback-rebuttal`.
-- Proposal content: `proposal-writer`.
+- Proposal content: `sv-proposal`.
 - Point-by-point comment handling: `sv-feedback-revise`.

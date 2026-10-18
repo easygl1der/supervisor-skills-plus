@@ -231,7 +231,7 @@ Profiles decide whether a rule applies and how strictly.
 - **`docs`** (from upstream): project READMEs and `docs/` files. Clarity over
   voice.
 - **`technical-blog`** (from upstream): public write-ups of the work.
-- **`slides`** (new; Beamer decks from `group-beamer`): frame titles and
+- **`slides`** (new; Beamer decks from `sv-slides`): frame titles and
   frame bodies only; `\note{}` text is checked under `academic`. Terse
   fragments and bullets are expected and are not findings. What is checked:
   one hedge per claim (no stacked hedges, no unhedged causal claim); a selling

@@ -198,7 +198,7 @@ Run by: sv-figure-design, sv-figure-drawio
 - Why: Captions edited after the deadline no longer matched their figures.
 - Status: confirmed
 - Scope: core
-- Owner: sv-figure-design, experiment-workflow
+- Owner: sv-figure-design, sv-experiment
 - Src: arc:ol:ba3f1ee; arc:msr:836ee75; note:n07§A.8 FR14; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FG-20 Renderers run from the replication package
@@ -208,7 +208,7 @@ Run by: sv-figure-design, sv-figure-drawio
 - Why: A renderer that needs private files cannot be checked by artifact reviewers.
 - Status: confirmed
 - Scope: core
-- Owner: sv-figure-design, experiment-workflow
+- Owner: sv-figure-design, sv-experiment
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; note:n07§A.7; note:n07§A.8 FR16; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 5. Process and files

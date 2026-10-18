@@ -59,4 +59,4 @@ See: ../sv-write/references/empirical-study-skeleton.md
 - A light language pass: `sv-write-polish`; AI tone: `sv-write-humanize-paper`.
 - Venue style from exemplars: `sv-write-style-apply`.
 - Comments on the draft: `sv-feedback-revise`.
-- The core claim may not hold: `sv-review-once` or `idea-evaluator`.
+- The core claim may not hold: `sv-review-once` or `sv-idea`.

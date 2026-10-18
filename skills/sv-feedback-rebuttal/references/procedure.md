@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-feedback-rebuttal/references/procedure.md by ADR 0021 (2026-10-18); licence not declared in frontmatter (repository licence CC-BY-NC-SA-4.0). Section text unchanged; pointers updated. -->
+<!-- Moved from skills/rebuttal-guidance/SKILL.md by ADR 0021 (2026-10-18); licence not declared in frontmatter (repository licence CC-BY-NC-SA-4.0). Section text unchanged; pointers updated. -->
 
 # Rebuttal Guidance
 
@@ -54,7 +54,7 @@ here. [src: note:n03§5; arc:GAPS.md; note:n05§6] (confirmed)
 
 - User wants full rebuttal text copied verbatim → output guidance first; warn
   against blind LLM paste.
-- User asks to evaluate a research idea → use `idea-evaluator`.
+- User asks to evaluate a research idea → use `sv-idea`.
 - User asks for pre-submission paper review → use `sv-review-once`.
 - No review text provided → ask for it first.
 
@@ -257,6 +257,6 @@ or unknown with evidence:
   diffs: `sv-feedback-revise`.
 - Writing the narrowed claims and limitations into the paper:
   `sv-write-section` (threats section), then `sv-review-loop`.
-- New experiments a reviewer asked for: `experiment-workflow`.
+- New experiments a reviewer asked for: `sv-experiment`.
 - Re-checking the revised paper before resubmission:
   `sv-review-once`.

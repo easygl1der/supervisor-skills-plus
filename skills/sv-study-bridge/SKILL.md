@@ -28,6 +28,6 @@ See: references/bridge-card.md
 
 ## Hand-offs
 
-- Scoring the idea: `idea-evaluator`.
-- Freezing and running the test: `experiment-workflow`.
+- Scoring the idea: `sv-idea`.
+- Freezing and running the test: `sv-experiment`.
 - Recording the decision: `sv-supervisor-records`.

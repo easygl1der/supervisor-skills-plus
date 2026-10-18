@@ -43,4 +43,4 @@ no R-specific rules yet, so only the universal rules apply.
 ## Hand-offs
 
 - Design of the figure before plotting: `sv-figure-design`.
-- Numbers that do not trace to a run: `experiment-workflow`.
+- Numbers that do not trace to a run: `sv-experiment`.

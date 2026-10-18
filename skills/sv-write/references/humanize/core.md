@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write/references/humanize/core.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/deai-writing/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # De-AI Writing
 
@@ -182,7 +182,7 @@ senses are kept (robust statistics, test harness, software ecosystem, loss
 landscape), bold claim sentences and contribution lists pass where the field
 or venue profile prescribes them, hedging follows "interpretations, not
 measurements", and punctuation rules defer to venue and overlays. The
-`slides` profile is for Beamer decks (`group-beamer` calls `audit` with
+`slides` profile is for Beamer decks (`sv-slides` calls `audit` with
 it); speaker notes stay on `academic`.
 
 The canonical banned-word list is the shared

@@ -57,7 +57,7 @@ session opener (`source-priority.md` §5); do not teach claims from
 ## When NOT to use this skill
 
 - A five-minute overview of a paper: `sv-quickread`.
-- A literature survey or a map of many papers: `deep-research`.
+- A literature survey or a map of many papers: `sv-litreview`.
 - Applying a learned method to the current project: `sv-study-bridge`.
 - Exam-style drilling only: use the options in `options.md`, or
   a dedicated flashcard tool; this skill does not default to it.
@@ -209,5 +209,5 @@ the concept notes and the profile.
 
 - A five-minute card first: `sv-quickread`.
 - The learned method could change the current project: `sv-study-bridge`.
-- Several papers into an evolution map: `deep-research` literature-map mode.
+- Several papers into an evolution map: `sv-litreview-map`.
 - A proof that needs formal checking: the owner's Lean skills, if installed.

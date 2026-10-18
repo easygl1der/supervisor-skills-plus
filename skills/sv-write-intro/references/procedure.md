@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-intro/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/intro-drafter/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Introduction Drafter
 
@@ -291,7 +291,7 @@ through that skill's references when finer wording support is needed.
 - Prose in place but stiff: `sv-write-polish`.
 - Doubts that the idea itself can carry a top-venue paper: do not write
   that into the Introduction; put one line in the closing note and point to
-  `idea-evaluator`.
+  `sv-idea`.
 
 ## Output language
 

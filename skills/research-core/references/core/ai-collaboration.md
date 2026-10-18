@@ -1,4 +1,4 @@
-<!-- Moved from skills/research-core/references/core/ai-collaboration.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/vibe-research-workflow/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Vibe Research Workflow
 
@@ -63,7 +63,7 @@ single invocable procedure.
 - The user wants a code implementation done. This skill guides
   the process; it does not replace the implementation itself.
 - The user wants to evaluate research direction. Use
-  `idea-evaluator` (see handbook 2.3 for disruptive-innovation deep-dive).
+  `sv-idea` (see handbook 2.3 for disruptive-innovation deep-dive).
 
 ## Core procedure
 
@@ -172,7 +172,7 @@ block.
 - Checkpoint before destructive agent edits and read the diffstat after
   any agent write to a shared document: `sv-supervisor-records` (Task 4).
 - Runs log, frozen gold, prompt versions, numbers file and replication
-  artifact for agent-run experiments: `experiment-workflow`.
+  artifact for agent-run experiments: `sv-experiment`.
 - Where the project stands and which skill comes next: `sv-supervisor`.
 
 ## Output format

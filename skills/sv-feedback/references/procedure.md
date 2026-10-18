@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-feedback/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/feedback-to-revision/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Feedback to Revision
 

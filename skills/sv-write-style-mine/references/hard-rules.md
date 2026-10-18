@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-style-mine/references/procedure.md by ADR 0021 (2026-10-18); licence MIT. Section text unchanged. Shared by sv-write-style-mine and sv-write-style-apply. -->
+<!-- Moved from skills/style-mine/SKILL.md by ADR 0021 (2026-10-18); licence MIT. Section text unchanged. Shared by sv-write-style-mine and sv-write-style-apply. -->
 # Style hard rules
 
 ## Hard rules (apply at all times)

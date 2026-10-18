@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-polish/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged. Shared by sv-write-polish, sv-write-translate and sv-write-style-apply. -->
+<!-- Moved from skills/paper-polish/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged. Shared by sv-write-polish, sv-write-translate and sv-write-style-apply. -->
 # Faithfulness rules for editing existing prose
 
 ## Contents

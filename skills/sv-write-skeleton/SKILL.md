@@ -48,4 +48,4 @@ See: ../sv-write/references/empirical-study-skeleton.md
 
 - Skeleton passes: `sv-write-intro` for the Introduction, `sv-write-section`
   for the other sections.
-- The idea itself is unvetted: `idea-evaluator`.
+- The idea itself is unvetted: `sv-idea`.

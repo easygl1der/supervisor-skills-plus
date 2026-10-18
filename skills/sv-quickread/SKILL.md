@@ -29,5 +29,5 @@ See: references/procedure.md
 ## Hand-offs outside this group
 
 - Depth on one part of the paper: `sv-study-paper`.
-- Several papers, a map or a survey: `deep-research`.
+- Several papers, a map or a survey: `sv-litreview`.
 - Using it in the project: `sv-study-bridge`.

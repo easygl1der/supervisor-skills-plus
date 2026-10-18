@@ -43,6 +43,6 @@ See: references/archive-figure-rules.md
 
 ## Hand-offs outside this group
 
-- Numbers shown in a figure: `experiment-workflow` (traceable numbers).
+- Numbers shown in a figure: `sv-experiment` (traceable numbers).
 - Figure-related writing (captions in prose, results text): `sv-write`.
-- Slides: `group-beamer`.
+- Slides: `sv-slides`.

@@ -4,7 +4,7 @@ Items for threats to validity and for the limits of what the study can
 claim. Run at design time to flag threats early, and before submission to
 check that threats and results agree.
 
-Run by: idea-evaluator, sv-review-once
+Run by: sv-idea, sv-review-once
 
 ## Contents
 1. Scope and generality
@@ -21,7 +21,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: Reviewers test generality claims against what was sampled.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, sv-review-once, sv-write-section
+- Owner: sv-idea, sv-review-once, sv-write-section
 - Src: arc:CF-16@v2; arc:TH-02@v2; arc:TH-10@v2; arc:01-checklist/checklist.md C7; arc:@advisor-glimpse
 
 ### TH-02 Stratify before pooling
@@ -31,7 +31,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: Pooling across unequal groups can reverse a result.
 - Status: candidate
 - Scope: core
-- Owner: sv-review-once, experiment-workflow, sv-review-loop
+- Owner: sv-review-once, sv-experiment, sv-review-loop
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H2; arc:01-checklist/checklist.md W5; arc:msr:24d8c65
 
 ### TH-03 Small counts disclosed where used
@@ -49,7 +49,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: Chasing an unclosable gap cost weeks; stating its mechanism costs a paragraph.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, experiment-workflow, sv-supervisor-brief
+- Owner: sv-idea, sv-experiment, sv-supervisor-brief
 - Src: arc:@threats-pivot; note:n08§5#25
 
 ## 2. Measurement and reference data
@@ -71,7 +71,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: Errors in the reference set bound every accuracy figure.
 - Status: candidate
 - Scope: core
-- Owner: sv-review-once, experiment-workflow
+- Owner: sv-review-once, sv-experiment
 - Src: arc:TH-09@v2; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H13
 
 ### TH-07 Compared measures are comparable
@@ -92,7 +92,7 @@ Run by: idea-evaluator, sv-review-once
   shows the authors saw them.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, sv-review-once
+- Owner: sv-idea, sv-review-once
 - Src: arc:TH-07@v2; arc:TH-08@v2; unverified (source of the original items)
 
 ### TH-09 Selection effects of filtered subsets
@@ -101,7 +101,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: A filter can create the pattern it seems to reveal.
 - Status: candidate
 - Scope: core
-- Owner: sv-review-once, experiment-workflow
+- Owner: sv-review-once, sv-experiment
 - Src: arc:RS-16@v2; unverified (source of the original item)
 
 ### TH-10 Contradicting results kept
@@ -110,7 +110,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: Dropping inconvenient results is selective reporting.
 - Status: confirmed
 - Scope: core
-- Owner: sv-review-once, experiment-workflow, sv-review-loop
+- Owner: sv-review-once, sv-experiment, sv-review-loop
 - Src: arc:CF-18@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 4. Threats agree with results

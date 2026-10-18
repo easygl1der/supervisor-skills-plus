@@ -224,7 +224,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Essential attributes of the published repository-mining standard.
 - Status: confirmed
 - Scope: field:se
-- Owner: experiment-workflow, sv-write-section, sv-review-once
+- Owner: sv-experiment, sv-write-section, sv-review-once
 - Src: lit:sigsoft-rm
 
 ### SE-03 Dual denominators
@@ -248,7 +248,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Closed-item medians hide long-open work; imports create artificial closing times.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, sv-supervisor-records, sv-review-once
+- Owner: sv-experiment, sv-supervisor-records, sv-review-once
 - Src: arc:TH-06@v2; arc:TH-02@v2; arc:msr:9c69675
 
 ### SE-06 Residual class reported
@@ -272,7 +272,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: An advisor asked where the taxonomies came from.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, sv-write-section
+- Owner: sv-experiment, sv-write-section
 - Src: arc:CF-26@v2; note:n05§1.5
 
 ### SE-09 Cross-domain baseline
@@ -280,7 +280,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Without a reference point readers cannot judge the numbers.
 - Status: candidate
 - Scope: field:se
-- Owner: idea-evaluator, sv-write-section
+- Owner: sv-idea, sv-write-section
 - Src: arc:CF-28@v2; note:n05§1.5
 
 ### SE-10 Text-coded strategy and code size
@@ -296,7 +296,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: A pooled share can be one repository's share.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, sv-write-section, sv-review-loop
+- Owner: sv-experiment, sv-write-section, sv-review-loop
 - Src: note:n02§8; arc:msr:9c69675; arc:CF-16@v2
 
 ### SE-12 Finding paragraph shape
@@ -360,7 +360,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Reviewers raise it otherwise.
 - Status: candidate
 - Scope: field:se
-- Owner: sv-review-once, idea-evaluator
+- Owner: sv-review-once, sv-idea
 - Src: skill:se-paper-reviewer
 
 ## Known disagreements

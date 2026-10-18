@@ -420,6 +420,6 @@ For paper figures, run the `research-core` `figures` checklist items this skill 
 
 - Design decisions (paradigm, table or figure, AI-look removal, mirroring the method text): `sv-figure-design`.
 - Method text that must match the rebuilt overview: `sv-write-section`.
-- Values that need a script or ledger source: `experiment-workflow` and `sv-review-loop`.
+- Values that need a script or ledger source: `sv-experiment` and `sv-review-loop`.
 - Redline comments from co-authors: `sv-feedback-revise`.
 - Which draft or variant won and why: `sv-supervisor-records`.

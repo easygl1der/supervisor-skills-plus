@@ -156,7 +156,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Required by the call; the evidence draft first overclaimed what the package recomputed.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, sv-review-once
+- Owner: sv-experiment, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:msr:24d8c65
 
 ### FS-08 AI use in methods
@@ -164,7 +164,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Required by the call; undisclosed AI help in gold construction was an open risk in the evidence project.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, sv-write-section, sv-review-once
+- Owner: sv-experiment, sv-write-section, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; note:n08§3
 
 ### FS-09 Anonymous artifact mirror
@@ -172,7 +172,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Author-revealing URLs break the anonymity rules; a rendered project page nearly did after submission.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, sv-review-once
+- Owner: sv-experiment, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-02T00:45; arc:chat:group@2026-10-06T05:09
 
 ### FS-10 Third-person self-citation and preprint wording

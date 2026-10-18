@@ -389,7 +389,7 @@ some of these by hand; never write them on the author's behalf.
   model was involved.
 - **No pass can supply a missing argument.** If the draft does not know what
   was impossible before it, S4 cannot be fixed by rewriting. That is author
-  work (section 11), or `sv-write-section` and `idea-evaluator` work.
+  work (section 11), or `sv-write-section` and `sv-idea` work.
 
 ## 13. Per-field notes
 

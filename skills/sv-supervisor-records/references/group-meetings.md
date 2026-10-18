@@ -1,6 +1,6 @@
 # Group-meeting records
 
-`group-beamer` is the author of the deck. This skill only stores it.
+`sv-slides` is the author of the deck. This skill only stores it.
 
 ## Files
 

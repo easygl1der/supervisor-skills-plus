@@ -45,6 +45,8 @@ RENAMED = {
     "lessons-harvest": "sv-supervisor-harvest", "vibe-research-workflow": "research-core",
     "figure-designer": "sv-figure-design", "drawio-reconstruction": "sv-figure-drawio",
     "study": "sv-study", "paper-quickread": "sv-quickread", "research-bridge": "sv-study-bridge",
+    "idea-evaluator": "sv-idea", "deep-research": "sv-litreview", "proposal-writer": "sv-proposal",
+    "experiment-workflow": "sv-experiment", "group-beamer": "sv-slides",
 }
 
 SRC_BLOCK = re.compile(r"\[src:\s*([^\]]+)\]")

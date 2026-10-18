@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-section/references/workflow.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/paper-writer/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Paper Writer
 
@@ -66,7 +66,7 @@ see skills/sv-write/references/evidence-discipline.md.
   first, then return here for the prose.
 - Existing prose needs language polishing: `sv-write-polish`.
 - The logic skeleton is not settled: `sv-write-skeleton` first.
-- The idea itself is unvetted: `idea-evaluator`.
+- The idea itself is unvetted: `sv-idea`.
 
 ## Step 0: Load context
 
@@ -371,11 +371,11 @@ case.
 - `sv-write-skeleton`: the pre-writing logic skeleton.
 - `sv-write-skeleton`: planning benchmark papers.
 - `sv-review-once`: reviewer-style audit of the finished draft.
-- `idea-evaluator`: whether the idea is worth pursuing at all.
+- `sv-idea`: whether the idea is worth pursuing at all.
 
 If drafting reveals that the problem is not "how to write it" but "does the
 core claim hold", say so plainly in the delivery note and point to
-`sv-review-once` or `idea-evaluator`. Never write a defense for a
+`sv-review-once` or `sv-idea`. Never write a defense for a
 claim the user's own data undermines.
 
 ## Checklist

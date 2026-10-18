@@ -48,5 +48,5 @@ See: references/method-card.md
 
 - Apply a profile to a manuscript, or check venue fit: `sv-write-style-apply`.
 - Profile changes into research-core: `sv-supervisor-harvest`.
-- Implementing a borrowed method: `experiment-workflow`; recording the
+- Implementing a borrowed method: `sv-experiment`; recording the
   design change: `sv-supervisor-records`.

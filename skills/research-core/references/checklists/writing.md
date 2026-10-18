@@ -34,7 +34,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
   not in front of it.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-section, experiment-workflow
+- Owner: sv-write-section, sv-experiment
 - Src: arc:04-comms/20260920-msritp-meeting/README.md; note:n08§5#28
 
 ## 2. Framing and structure
@@ -65,7 +65,7 @@ Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-pap
 - Why: Venue readers expect a familiar on-ramp to an unfamiliar topic.
 - Status: candidate
 - Scope: core
-- Owner: sv-write-intro, deep-research
+- Owner: sv-write-intro, sv-litreview
 - Src: arc:@senior-a-comments:4; arc:CF-04@v2
 
 ### WR-06 Why before how

@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-skeleton/references/benchmark.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/benchmark-paper-template/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Benchmark Paper Template
 

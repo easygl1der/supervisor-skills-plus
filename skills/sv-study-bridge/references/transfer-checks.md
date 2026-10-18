@@ -129,7 +129,7 @@ Write both before running, in the card, with the date:
 Distinguishing tests of predictions from exploration that generates them
 is the core of preregistration; the card is a light, private version of
 that, not a registry entry. [src: lit:nosek2018] (confirmed) When the test
-becomes a real experiment, `experiment-workflow` writes the bar into the
+becomes a real experiment, `sv-experiment` writes the bar into the
 run script and records changes as ADRs.
 
 ## 6. Method shopping and the garden of forking paths

@@ -164,7 +164,7 @@ Procedure:
    listed as open items. They do not enter the text either.
 4. When the reference is a sketch or an AI image, do this before the first
    commit of the rebuilt figure.
-5. Hand the list to `sv-review-loop` or `experiment-workflow` for the number
+5. Hand the list to `sv-review-loop` or `sv-experiment` for the number
    trace.
 
 ## 8. What the evidence does not settle

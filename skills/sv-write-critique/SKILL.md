@@ -56,5 +56,5 @@ then asks for a fix.
 
 - Language findings: `sv-write-polish`.
 - Redraft findings: `sv-write-section` or `sv-write-intro`.
-- Claim findings: `sv-review-once` or `idea-evaluator`.
+- Claim findings: `sv-review-once` or `sv-idea`.
 - AI-texture findings: `sv-write-humanize-audit`.

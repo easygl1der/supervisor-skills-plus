@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-skeleton/references/technique.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/tech-paper-template/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Tech Paper Template
 
@@ -32,7 +32,7 @@ that); it operates at the logical-skeleton layer.
 
 - Early brainstorming of a paper project.
 - Weekly progress meeting with an advisor or collaborator.
-- Pre-drafting planning after `idea-evaluator` returns Strong Accept.
+- Pre-drafting planning after `sv-idea` returns Strong Accept.
 - The paper's logic chain feels incoherent and needs an audit.
 - The user asks for 'paper skeleton', 'paper logic chain', 'thinking
   template', or 'paper-structure planning'.
@@ -47,7 +47,7 @@ that); it operates at the logical-skeleton layer.
   `sv-write-intro`).
 - The user has a written draft and wants review feedback. Use
   `sv-review-once`.
-- The idea itself is not yet vetted. Use `idea-evaluator` first.
+- The idea itself is not yet vetted. Use `sv-idea` first.
 
 ## Core procedure
 

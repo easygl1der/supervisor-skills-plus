@@ -100,7 +100,7 @@ Run by: sv-supervisor-records, sv-supervisor, sv-feedback-revise
 - Why: A dashboard and its underlying data disagreed in the evidence project.
 - Status: confirmed
 - Scope: core
-- Owner: sv-supervisor-records, experiment-workflow
+- Owner: sv-supervisor-records, sv-experiment
 - Src: note:n08§5#24
 
 ## 2. Parked material

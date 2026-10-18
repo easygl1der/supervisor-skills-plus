@@ -1,7 +1,7 @@
 # Proposal evals moved
 
-The proposal-writer eval now lives under
-[`skills/proposal-writer/evals/`](../../../proposal-writer/evals/).
+The sv-proposal eval now lives under
+[`skills/sv-proposal/evals/`](../../../proposal-writer/evals/).
 
 - Kaiti draft + post-check note:
   [`2026-10-16_sdid-staggered-se/kaiti.md`](../../../proposal-writer/evals/2026-10-16_sdid-staggered-se/kaiti.md)

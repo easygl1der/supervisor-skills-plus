@@ -42,5 +42,5 @@ See: references/protocol.md
 ## Hand-offs outside this group
 
 - A five-minute card before studying: `sv-quickread`.
-- Many papers into a map: `deep-research` literature-map mode.
-- Testing a bridged idea: `idea-evaluator`, `experiment-workflow`.
+- Many papers into a map: `sv-litreview-map`.
+- Testing a bridged idea: `sv-idea`, `sv-experiment`.

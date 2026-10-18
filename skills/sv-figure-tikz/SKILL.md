@@ -27,4 +27,4 @@ See: ../sv-figure/references/tools.md
 ## Hand-offs
 
 - Design choices before drawing: `sv-figure-design`.
-- Beamer decks: `group-beamer`.
+- Beamer decks: `sv-slides`.

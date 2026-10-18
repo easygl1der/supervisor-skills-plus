@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-study-bridge/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/research-bridge/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Research Bridge
 
@@ -47,8 +47,8 @@ Three habits make the card worth more than a gut feeling
   of variants to try are fixed before the test runs, so a method is not
   kept because one of many tries looked good. [src: lit:nosek2018; lit:gelman2014] (confirmed)
 
-The skill does not score novelty or feasibility (`idea-evaluator`), run or
-freeze experiments (`experiment-workflow`), or write decision records
+The skill does not score novelty or feasibility (`sv-idea`), run or
+freeze experiments (`sv-experiment`), or write decision records
 (`sv-supervisor-records`). It prepares their inputs and hands off.
 
 Default output language is Chinese with technical terms in English; it
@@ -71,10 +71,10 @@ follows the user's language.
 - No card or notes exist yet for the source: `sv-quickread` first. This
   skill does not read PDFs.
 - Judging whether a whole new research idea is worth a paper:
-  `idea-evaluator`.
+  `sv-idea`.
 - Running, logging or freezing the validation experiment:
-  `experiment-workflow`.
-- Surveying many methods for the project: `deep-research`.
+  `sv-experiment`.
+- Surveying many methods for the project: `sv-litreview`.
 
 ## Step 0: Load context
 
@@ -140,7 +140,7 @@ would settle it, the consequence if it fails, and the fix (a variant, a
 different estimand, a robustness check, or drop the method). Literature
 for a fix (an extension, a variant) is cited only after it is verified;
 otherwise the row says "variant to be checked" and the check goes to
-`deep-research`. Mark own reasoning as added (Chinese label in the card).
+`sv-litreview`. Mark own reasoning as added (Chinese label in the card).
 
 See also `transfer-checks.md`
 
@@ -229,7 +229,7 @@ table, verdict with how, validation test, hand-offs.
 
 Worked cards (real outputs, not stubs) live in `evals/`: project-mode
 SDID, general-mode MLE, and a non-estimator process bridge (notebook
-habit to `experiment-workflow`). `skills/sv-study/evals/bridge/` is a
+habit to `sv-experiment`). `skills/sv-study/evals/bridge/` is a
 pointer to those paths. Shared reading notes stay under
 `skills/sv-study/evals/reading/`.
 
@@ -239,12 +239,12 @@ do-calculus. The card checks assumptions at mapping level only.
 ## Hand-offs
 
 - The bridge shapes a new idea or changes the paper's scope:
-  `idea-evaluator` (the card's mapping and transfer tables are its input).
-- The validation test is to be run: `experiment-workflow` (freeze data,
+  `sv-idea` (the card's mapping and transfer tables are its input).
+- The validation test is to be run: `sv-experiment` (freeze data,
   write the bar into the run script, log the run).
 - Adopting or rejecting the method is decided: `sv-supervisor-records` (ADR
   with the rejected alternative; the card is the context).
-- An assumption or a variant needs literature: `deep-research`.
+- An assumption or a variant needs literature: `sv-litreview`.
 - The method itself is not yet understood: `sv-study`.
 - No card for the source yet: `sv-quickread`.
 

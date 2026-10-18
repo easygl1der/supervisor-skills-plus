@@ -62,6 +62,6 @@ See: references/humanize/core.md
 - Multi-round checks after any writing step: `sv-review-loop`.
 - Reviewer-style audit of a finished manuscript: `sv-review-once`.
 - Comments from co-authors, advisors or reviewers: `sv-feedback-revise`.
-- Whether the idea holds at all: `idea-evaluator`.
+- Whether the idea holds at all: `sv-idea`.
 - Figures: `sv-figure-design`.
 - Rule changes learned from writing work: `sv-supervisor-harvest`.

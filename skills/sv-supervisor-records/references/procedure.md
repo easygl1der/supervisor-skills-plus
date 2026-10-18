@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-supervisor-records/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/research-records/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Research Records
 
@@ -34,7 +34,7 @@ docs/
   log/          dated notes: meetings, sv-review-loop reports, runs of the day
   feedback/     response tables (sv-feedback-revise)
   guidance/     expert guidance records (sv-feedback-guidance)
-  runs.md       experiment runs (experiment-workflow)
+  runs.md       experiment runs (sv-experiment)
   notes/        scratch explorations; must be promoted, decided or archived
 ```
 
@@ -60,7 +60,7 @@ deadline, and decisions referenced only by tracker ids lost their text
 - Editing the manuscript: use `sv-write-section`, `sv-write-polish`, `sv-review-loop`.
 - Tracking comments on the manuscript: use `sv-feedback-revise` (it writes
   into `docs/feedback/` and `docs/guidance/` with this skill's conventions).
-- Logging experiment runs in detail: use `experiment-workflow`.
+- Logging experiment runs in detail: use `sv-experiment`.
 
 ## Step 0: Load context
 
@@ -148,7 +148,7 @@ See also `linear-mirror.md`
 
 ## Task 8: Group-meeting decks
 
-When `group-beamer` finishes a meeting deck:
+When `sv-slides` finishes a meeting deck:
 
 1. Write `docs/log/<date>-group-meeting.md` from the research-core
    `group-meeting-log.md` template. The "Next steps" list is the input for

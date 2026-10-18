@@ -20,7 +20,7 @@ are not repeated here.
    to `3.5`, `04_Scientific_Plotting/4.1` to `4.4`, `06_Case_Studies/6.1` to `6.3`.
 2. Upstream skills with references: sv-write-skeleton, benchmark-paper-
    template, sv-write-intro, sv-write-section, sv-review-once,
-   sv-figure-design, idea-evaluator, sv-feedback-rebuttal.
+   sv-figure-design, sv-idea, sv-feedback-rebuttal.
 3. Owner skill `sv-write-style-mine`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
 4. Upstream map of AI/ML assumptions: `notes/01-upstream-map.md` §4 to §5.
 5. Exemplar papers analysed by the handbook case studies (Intro analyses
@@ -80,7 +80,7 @@ are not repeated here.
   [src: up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - Baselines must be strong and current; a baseline older than about twelve
   months against an active benchmark is a fatal flaw at idea stage.
-  [src: up:skills/idea-evaluator/references/fatal-flaws.md; up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md] (confirmed)
+  [src: up:skills/sv-idea/references/fatal-flaws.md; up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md] (confirmed)
 - Every proposed component is justified by an ablation (All, without A,
   without B, without C). [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/sv-review-once/references/section-guides.md] (confirmed)
 - DB community: improvement thresholds of at least 50% in performance or
@@ -178,8 +178,8 @@ are not repeated here.
 - Why: Weak or under-tuned baselines are a fatal flaw.
 - Status: confirmed
 - Scope: field:ml
-- Owner: idea-evaluator, experiment-workflow, sv-review-once
-- Src: up:skills/idea-evaluator/references/fatal-flaws.md; up:skills/sv-write-skeleton/references/experiments.md
+- Owner: sv-idea, sv-experiment, sv-review-once
+- Src: up:skills/sv-idea/references/fatal-flaws.md; up:skills/sv-write-skeleton/references/experiments.md
 
 ### ML-04 Implementation details for replication
 - [ ] Check: Datasets, metrics, optimizer, learning rate, hardware, seeds
@@ -187,7 +187,7 @@ are not repeated here.
 - Why: Missing hyperparameters block reproduction.
 - Status: confirmed
 - Scope: field:ml
-- Owner: experiment-workflow, sv-write-section, sv-review-loop
+- Owner: sv-experiment, sv-write-section, sv-review-loop
 - Src: skill:style-mine; up:skills/sv-write-skeleton/references/experiments.md
 
 ### ML-05 Variance reported
@@ -196,7 +196,7 @@ are not repeated here.
 - Why: Single runs cannot carry a comparison.
 - Status: confirmed
 - Scope: field:ml
-- Owner: experiment-workflow, sv-review-once
+- Owner: sv-experiment, sv-review-once
 - Src: up:skills/sv-write-skeleton/references/checklist.md
 
 ### ML-06 Motivated example figure

@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-figure-design/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/figure-designer/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Figure Designer
 
@@ -285,7 +285,7 @@ the commit that regenerated the PDF. Vision-only items without an image are
   icon sourcing: `sv-figure-drawio`.
 - Method text that must change to mirror the overview: `sv-write-section`.
 - Introduction figure and its running example: `sv-write-intro`.
-- Number traces that reach the analysis scripts: `experiment-workflow`
+- Number traces that reach the analysis scripts: `sv-experiment`
   and `sv-review-loop`.
 - Senior or reviewer comments on figures: `sv-feedback-revise`.
 - Draft decisions (which variant won and why): `sv-supervisor-records`.

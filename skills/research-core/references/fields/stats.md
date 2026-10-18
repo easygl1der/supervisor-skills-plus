@@ -196,7 +196,7 @@ method block states, in this order:
 - Why: A single favourable design proves nothing about usability.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, sv-review-once
+- Owner: sv-experiment, sv-review-once
 - Src: guide:AJS/ecta-robustness@932eb23; guide:AJS/joe-data-analysis@932eb23
 
 ### ST-04 Competitor on identical DGPs
@@ -205,7 +205,7 @@ method block states, in this order:
 - Why: Improvement is unquantified without the incumbent.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, sv-review-loop
+- Owner: sv-experiment, sv-review-loop
 - Src: guide:AJS/joe-data-analysis@932eb23; guide:AJS/jbes-data-analysis@932eb23
 
 ### ST-05 Size before power
@@ -214,7 +214,7 @@ method block states, in this order:
 - Why: Power of a size-distorted test is not meaningful.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, sv-write-section, sv-review-loop
+- Owner: sv-experiment, sv-write-section, sv-review-loop
 - Src: guide:AJS/joe-tables-figures@932eb23; guide:AJS/ecta-robustness@932eb23
 
 ### ST-06 Monte Carlo precision reported
@@ -223,7 +223,7 @@ method block states, in this order:
 - Why: Otherwise a size of 0.06 cannot be told apart from 0.05.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, sv-review-loop
+- Owner: sv-experiment, sv-review-loop
 - Src: guide:AJS/ecta-robustness@932eb23; guide:AJS/jbes-data-analysis@932eb23
 
 ### ST-07 Self-contained simulation tables
@@ -241,7 +241,7 @@ method block states, in this order:
 - Why: Cherry-picked tuning hides fragility.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, sv-review-once
+- Owner: sv-experiment, sv-review-once
 - Src: guide:AJS/ecta-robustness@932eb23; guide:AJS/joe-data-analysis@932eb23
 
 ### ST-09 Quick-read method block complete

@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-polish/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/paper-polish/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Paper Polish
 
@@ -243,7 +243,7 @@ differently:
    reported data show the method matched or beaten by a simple baseline. Do not
    write a defense for it and do not invent an optimistic reading. State it
    plainly and suggest a proper audit with `sv-review-once` (for a
-   manuscript) or `idea-evaluator` (for the underlying idea) before further
+   manuscript) or `sv-idea` (for the underlying idea) before further
    polishing.
 
 Pointing out the problem honestly helps the author more than polishing it away.
@@ -290,4 +290,4 @@ not forced.
   `sv-feedback-revise`.
 - A section that needs redrafting rather than polishing: `sv-write-section`.
 - A claim the data may not support: `sv-review-once` or
-  `idea-evaluator`.
+  `sv-idea`.

@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-write-style-mine/references/procedure.md by ADR 0021 (2026-10-18); licence MIT. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/style-mine/SKILL.md by ADR 0021 (2026-10-18); licence MIT. Section text unchanged; pointers updated. -->
 
 # Style Mine
 
@@ -318,6 +318,6 @@ and line, diff, or the card IDs):
 - AI-tell removal beyond P5: `sv-write-humanize-paper`.
 - Missing content or arguments found in diagnosis: `sv-write-section`,
   `sv-write-intro`.
-- Implementing a borrowed method: `experiment-workflow`; recording the
+- Implementing a borrowed method: `sv-experiment`; recording the
   design change: `sv-supervisor-records` (ADR).
 - Final formatting and submission checks: `sv-review-once`.

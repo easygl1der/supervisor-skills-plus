@@ -54,6 +54,6 @@ See: ../sv-write/references/ai-tone-guardrails.md
   `sv-write-humanize-paper` or `sv-write-humanize-audit`.
 - The section needs redrafting: `sv-write-section`.
 - A claim the data may not support: `sv-review-once` or
-  `idea-evaluator`.
+  `sv-idea`.
 - A re-check after these edits: `sv-review-loop`.
 - Comments to work through: `sv-feedback-revise`.

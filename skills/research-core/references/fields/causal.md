@@ -161,7 +161,7 @@ method block states, in this order:
   implicit.
 - Status: candidate
 - Scope: field:ci
-- Owner: sv-write-section, sv-review-once, proposal-writer
+- Owner: sv-write-section, sv-review-once, sv-proposal
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ### CI-02 Identifying assumptions labelled and shown to bind
@@ -182,7 +182,7 @@ method block states, in this order:
   rejection reason.
 - Status: candidate
 - Scope: field:ci
-- Owner: sv-review-once, sv-review-loop, experiment-workflow
+- Owner: sv-review-once, sv-review-loop, sv-experiment
 - Src: guide:AJS/ecta-identification@932eb23
 
 ### CI-04 Weak or boundary identification handled
@@ -192,7 +192,7 @@ method block states, in this order:
 - Why: Pointwise asymptotics mislead in exactly these regimes.
 - Status: candidate
 - Scope: field:ci
-- Owner: experiment-workflow, sv-review-once
+- Owner: sv-experiment, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### CI-05 Sensitivity analysis for the weakest assumption
@@ -201,7 +201,7 @@ method block states, in this order:
 - Why: A design is only as credible as its least plausible assumption.
 - Status: candidate
 - Scope: field:ci
-- Owner: experiment-workflow, sv-write-section, sv-review-once
+- Owner: sv-experiment, sv-write-section, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### CI-06 Claims limited to identified objects

@@ -23,7 +23,7 @@ the first planning decision.
 - **Cross-domain Technique Paper**: a Technique Paper whose
   contribution transplants an idea from one field to another. The
   Key Idea carries the narrative but the Broader dimension from the
-  `idea-evaluator` framework is emphasised in the Introduction.
+  `sv-idea` framework is emphasised in the Introduction.
 
 Benchmark papers are a separate category; use
 `sv-write-skeleton` (benchmark route).

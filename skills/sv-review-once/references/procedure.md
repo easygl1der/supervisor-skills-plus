@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-review-once/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/pre-submission-reviewer/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Pre-Submission Reviewer
 
@@ -482,7 +482,7 @@ This skill runs, and reports pass, fail, n/a or unknown with evidence:
   becomes an `FB-AG-<nn>` item).
 - Language and style rounds after fixes: `sv-review-loop`, `sv-write-polish`.
 - Artifact rebuild, anonymous mirror and number regeneration:
-  `experiment-workflow`.
+  `sv-experiment`.
 - Recording the source-of-truth switch, the tag and the TODOs:
   `sv-supervisor-records`.
 - Reviewer reports after submission: `sv-feedback-revise`, then

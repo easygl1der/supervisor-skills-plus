@@ -129,11 +129,11 @@ not a source.
 | `references/checklists/master.md` | sv-supervisor, sv-review-once |
 | `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop |
 | `references/checklists/figures.md` | sv-figure-design, sv-figure-drawio |
-| `references/checklists/threats.md` | idea-evaluator, sv-review-once |
-| `references/checklists/double-blind.md` | sv-review-once, experiment-workflow |
-| `references/checklists/artifact.md` | experiment-workflow, sv-review-once |
+| `references/checklists/threats.md` | sv-idea, sv-review-once |
+| `references/checklists/double-blind.md` | sv-review-once, sv-experiment |
+| `references/checklists/artifact.md` | sv-experiment, sv-review-once |
 | `references/checklists/venue-submission.md` | sv-review-once |
-| `references/checklists/integrity.md` | experiment-workflow, sv-review-once, sv-review-loop |
+| `references/checklists/integrity.md` | sv-experiment, sv-review-once, sv-review-loop |
 | `references/checklists/records.md` | sv-supervisor-records, sv-supervisor, sv-feedback-revise |
 
 See: references/checklists/master.md

@@ -1,4 +1,4 @@
-<!-- Moved from skills/sv-quickread/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
+<!-- Moved from skills/paper-quickread/SKILL.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Paper Quickread
 
@@ -18,7 +18,7 @@
 One paper in, one page out, readable in five minutes. The page is a fixed
 nine-section card (`template-9.md`) so that cards from many
 papers line up for comparison and for the literature map of
-`deep-research`. It is not a substitute for understanding the paper: when
+`sv-litreview`. It is not a substitute for understanding the paper: when
 the reader wants that, `sv-study` takes the same folder and goes deeper.
 
 Three things make this card different from a generic summary:
@@ -43,7 +43,7 @@ follows the user's language when the user writes in another.
 - The user gives one paper (PDF, arXiv link, DOI, Markdown) and wants to
   know what it says, quickly.
 - Triage: decide whether a paper is worth a deep read.
-- Building cards for a later literature map (`deep-research` literature-map
+- Building cards for a later literature map (`sv-litreview-map`
   mode reads them).
 - `--style`: the user also wants this paper's writing dissected (structure,
   rhetorical moves, sentence templates) for a target venue.
@@ -52,7 +52,7 @@ follows the user's language when the user writes in another.
 
 - The user wants to understand a concept, method or proof in the paper:
   `sv-study-paper`. It reuses this card if one exists.
-- Several papers, a survey or a related-work section: `deep-research`.
+- Several papers, a survey or a related-work section: `sv-litreview`.
 - Reviewing the user's own manuscript: `sv-review-once`.
 - Building a venue's style profile from many exemplars: `sv-write-style-mine`.
 
@@ -191,7 +191,7 @@ Report pass, fail or n/a with evidence:
   mode, same folder).
 - The paper suggests something for the current project: `sv-study-bridge`.
 - Style card into a venue profile: `sv-write-style-mine` (accumulate).
-- Several cards into an evolution map and gap list: `deep-research`
+- Several cards into an evolution map and gap list: `sv-litreview`
   (literature-map mode).
-- Verifying a citation the card relies on: `deep-research`'s citation
+- Verifying a citation the card relies on: `sv-litreview`'s citation
   protocol.

@@ -19,7 +19,7 @@ section 8. A `.tex` file with `\documentclass{beamer}` or `\begin{frame}`
 is inferred as slides.
 
 Load `core.md` and follow its Step 0. Default mode is `audit` (what
-`group-beamer` calls); `section` edits named frames when the user asks for
+`sv-slides` calls); `section` edits named frames when the user asks for
 edits.
 
 See: ../sv-write/references/humanize/core.md
@@ -29,5 +29,5 @@ See: ../sv-write/references/humanize/diagnosis-and-modes.md
 
 ## Hand-offs
 
-- Building or restructuring the deck: `group-beamer`.
+- Building or restructuring the deck: `sv-slides`.
 - Figures that look generated: `sv-figure-design`.
