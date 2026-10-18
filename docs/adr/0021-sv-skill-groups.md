@@ -67,7 +67,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 - 总入口的 SKILL.md 不超过 120 行，只放路由表、共享主循环和 hand-off。
 - 子命令的 SKILL.md 不超过 100 行，只写这一件事。
 - 一组共用的细节放在总入口的 `references/` 里，子命令用 `../sv-<组>/references/<file>.md` 引用，和现在引用 research-core 的方式一样。
-- description 不超过 60 词，第一句写唯一的任务。
+- 总入口（每轮都在 agent 上下文里）的 description 不超过 60 词；子命令沿用 40–80 词（它们不进入自动挑选列表）。第一句写唯一的任务。由 `scripts/lint_skills.py` 检查。（实施第 7 步时细化，2026-10-19）
 
 ### 分组与子命令（owner 逐组确认）
 | 总入口 | 子命令 | 来源 |

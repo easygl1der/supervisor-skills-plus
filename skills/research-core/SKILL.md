@@ -1,12 +1,11 @@
 ---
 name: research-core
 description: >-
-  Shared foundation for every research skill in this library: core rules that
-  hold in any field, field and venue profiles, checklists with sourced items,
-  and project templates such as research.yaml, STATUS.md and guidance records.
-  Use when another skill says to load research-core, when setting up a research
-  project, or when a rule, profile or checklist item needs to be looked up,
-  added or corrected.
+  Shared foundation loaded by every sv- skill: core rules that hold in any
+  field, field and venue profiles, sourced checklists, the AI-collaboration
+  rules, and project templates such as research.yaml and STATUS.md. Not a
+  slash command. Use when another skill says to load research-core, or when
+  a rule, profile or checklist item needs looking up or correcting.
 license: CC-BY-NC-SA-4.0
 user-invocable: false
 ---

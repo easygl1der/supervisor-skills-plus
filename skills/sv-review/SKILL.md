@@ -1,12 +1,12 @@
 ---
 name: sv-review
 description: >-
-  Entry point for reviewing a manuscript before it leaves the group: a
-  one-time pre-submission audit across five dimensions with research-core
-  sub-checklists, a devil's-advocate pass and a submission-day runbook, or a
-  bounded multi-round check of research fit, venue style and language with a
-  round log. Routes each request to one sv-review sub-command and says which.
-  Use when the user asks to review, audit, proofread or re-check a draft.
+  Entry point for reviewing a manuscript before it leaves the group: a read-
+  only pre-submission audit with sub-checklists and a submission-day
+  runbook, or a bounded multi-round check of research fit, venue style and
+  language with a round log. Routes to one sv-review sub-command and says
+  which. Use when the user asks to review, audit, proofread or re-check a
+  draft.
 license: CC-BY-NC-SA-4.0
 ---
 

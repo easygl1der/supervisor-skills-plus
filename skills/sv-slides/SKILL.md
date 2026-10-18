@@ -2,11 +2,10 @@
 name: sv-slides
 description: >-
   Entry point for LaTeX Beamer decks for math and statistics group meetings:
-  a 6 to 10 slide weekly report that loads last week's next steps, or a 12
-  to 18 slide critical paper talk with estimand, identification and
-  reproducibility slides. Compiles, lints, renders and exports notes.
-  Routes to one sv-slides sub-command and says which. Use when the user
-  needs group-meeting slides, a weekly report deck or a paper talk.
+  a weekly report that carries last week's next steps forward, or a critical
+  paper talk with estimand, identification and reproducibility slides,
+  compiled, linted and rendered. Routes to one sv-slides sub-command and
+  says which. Use when the user needs group-meeting slides.
 license: CC-BY-NC-SA-4.0
 ---
 

@@ -2,11 +2,10 @@
 name: sv-figure
 description: >-
   Entry point for every figure task: design advice for a paper's core
-  figures, reconstruction of a reference image as editable draw.io, plots
-  from code in Python or R, TikZ figures, HTML or SVG figures, posters, and
-  explanatory figures for learning. Routes each request to one sv-figure
-  sub-command and says which. Use when the user asks to design, draw, plot,
-  rebuild, review or explain anything visual.
+  figures, draw.io reconstruction of a reference image, plots from code,
+  TikZ, HTML or SVG figures, posters, and explanatory figures for learning.
+  Routes to one sv-figure sub-command and says which. Use when the user asks
+  to design, draw, plot or rebuild anything visual.
 license: CC-BY-NC-SA-4.0
 ---
 

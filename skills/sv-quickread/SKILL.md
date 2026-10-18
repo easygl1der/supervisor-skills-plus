@@ -1,12 +1,11 @@
 ---
 name: sv-quickread
 description: >-
-  Entry point for quick reads of a single paper: a one-page, five-minute
-  card in nine fixed sections with results copied with sources, graded
-  contributions and a claim-evidence table, and optionally a Style Card of
-  the paper's writing for venue profiles. Routes to one sv-quickread
-  sub-command and says which. Use when the user hands over one paper and
-  wants to know quickly what it says.
+  Entry point for quick reads of one paper: a one-page, five-minute card in
+  nine fixed sections with sourced results, graded contributions and a
+  claim-evidence table, optionally with a Style Card of its writing. Routes
+  to one sv-quickread sub-command and says which. Use when the user hands
+  over one paper and wants its gist quickly.
 license: CC-BY-NC-SA-4.0
 ---
 

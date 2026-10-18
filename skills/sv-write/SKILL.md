@@ -1,13 +1,12 @@
 ---
 name: sv-write
 description: >-
-  Entry point for all research writing: plans a paper skeleton, drafts an
-  Introduction or other sections, polishes or translates existing prose,
-  critiques a draft without editing, removes machine-written texture from
-  papers, reports, slides and letters, and mines or applies venue style.
-  Routes each request to one sv-write sub-command and says which. Use when
-  the user asks for help writing, revising, polishing, de-AI editing or
-  styling a paper or other research text.
+  Entry point for research writing: paper skeletons, Introductions and other
+  sections, polishing and Chinese-to-English rewriting, critique without
+  edits, de-AI editing of papers, reports, slides and letters, and mining or
+  applying venue style. Routes to one sv-write sub-command and says which.
+  Use when the user asks to write, revise, polish, de-AI or style research
+  text.
 license: CC-BY-NC-SA-4.0
 ---
 

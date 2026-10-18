@@ -1,13 +1,12 @@
 ---
 name: sv-supervisor
 description: >-
-  Entry point for running a research project: starts a project with an
-  interview that writes research.yaml and docs, gives a session brief with
-  stage, deadline and blockers and routes to the next skills, keeps STATUS,
-  TODO, decision records and logs, and harvests lessons into research-core.
-  Routes each request to one sv-supervisor sub-command and says which. Use
-  when starting a session or project, asking what to do next, or updating
-  project records.
+  Entry point for running a research project: a start-up interview that
+  writes research.yaml and docs, a session brief with stage, deadline,
+  blockers and next skills, project records (STATUS, TODO, decisions, logs),
+  and lessons harvested into research-core. Routes to one sv-supervisor sub-
+  command and says which. Use when starting a session or project, or
+  updating records.
 license: CC-BY-NC-SA-4.0
 ---
 

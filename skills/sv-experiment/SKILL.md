@@ -1,12 +1,11 @@
 ---
 name: sv-experiment
 description: >-
-  Entry point for the experiment side of a project so every printed number
-  can be traced: freezing corpus, samples and gold sets, model and prompt
-  versions with acceptance bars, a runs log, numbers checked into the paper,
-  and the replication artifact with data placement and anonymity checks.
-  Routes to one sv-experiment sub-command and says which. Use when setting
-  up, running, reporting or packaging experiments.
+  Entry point for experiments whose printed numbers must be traceable:
+  freezing corpus, samples, gold sets and model or prompt versions, the runs
+  log, numbers checked into the paper, and the replication artifact. Routes
+  to one sv-experiment sub-command and says which. Use when setting up,
+  running, reporting or packaging experiments.
 license: CC-BY-NC-SA-4.0
 ---
 

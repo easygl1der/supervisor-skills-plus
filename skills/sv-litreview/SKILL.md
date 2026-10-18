@@ -1,12 +1,11 @@
 ---
 name: sv-litreview
 description: >-
-  Entry point for literature work: a survey-grade investigation that freezes
-  research questions, searches from several adversarial angles, verifies
-  every citation and synthesizes a taxonomy with calibrated hedges, or a
-  literature map built from the cards and notes the user has already read.
-  Routes to one sv-litreview sub-command and says which. Use when the user
-  needs a literature survey, related work, or a map of what they read.
+  Entry point for literature work: a survey-grade investigation with frozen
+  questions, adversarial search, verified citations and a calibrated
+  synthesis, or a literature map built from the cards and notes already
+  read. Routes to one sv-litreview sub-command and says which. Use when the
+  user needs a survey, related work, or a map of their reading.
 license: CC-BY-NC-SA-4.0
 ---
 

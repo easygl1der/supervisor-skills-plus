@@ -1,13 +1,12 @@
 ---
 name: sv-study
 description: >-
-  Entry point for understanding-first study: explains a single concept,
-  works through a paper or a textbook chapter one idea at a time, has the
-  learner restate each idea and diagnoses the restatement, draws
-  explanatory figures, runs optional drills, and bridges what was learned to
-  the current project. Keeps a learner profile in the study vault. Routes to
-  one sv-study sub-command and says which. Use when the user wants to really
-  understand something.
+  Entry point for understanding-first study: explains a concept, works
+  through a paper or textbook chapter one idea at a time with the learner's
+  restatement and diagnosis, draws explanatory figures, runs optional
+  drills, and bridges learning to the project. Routes to one sv-study sub-
+  command and says which. Use when the user wants to really understand
+  something.
 license: CC-BY-NC-SA-4.0
 ---
 

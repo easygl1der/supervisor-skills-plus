@@ -2,11 +2,10 @@
 name: sv-proposal
 description: >-
   Entry point for research proposals: thesis proposals (kaiti reports),
-  grant applications such as NSFC, NSF, ERC and NIH, and research
-  statements or PhD research plans. Builds the proposal spine, evidence
-  ledger, timeline and risks before drafting, then runs a reviewer pass.
-  Routes to one sv-proposal sub-command and says which. Use when the user
-  needs a proposal, research plan, grant or research statement.
+  grant applications such as NSFC, NSF, ERC and NIH, and research statements
+  or PhD plans, built from a spine, evidence ledger, timeline and risks
+  before drafting. Routes to one sv-proposal sub-command and says which. Use
+  when the user needs a proposal, grant or research statement.
 license: CC-BY-NC-SA-4.0
 ---
 
