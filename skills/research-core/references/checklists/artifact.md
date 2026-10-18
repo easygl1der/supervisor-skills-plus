@@ -4,7 +4,7 @@ Items for the replication package: that it holds what the paper promises,
 builds from a clean clone, regenerates the printed numbers and is in place
 when reviewers look.
 
-Run by: experiment-workflow, pre-submission-reviewer
+Run by: sv-experiment, sv-review-once
 
 ## Contents
 1. Completeness
@@ -22,7 +22,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: Reviewers open the package to test exactly these promises.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; arc:01-checklist/checklist.md AT5; arc:chat:group@2026-10-03T20:20; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### AR-02 Analysis code moves to the package the same day
@@ -32,7 +32,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: Late analysis code was the part missing from the package at the deadline.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow
+- Owner: sv-experiment
 - Src: arc:chat:group@2026-10-03T20:21; arc:chat:group@2026-10-03T20:22; note:n08§5#16; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### AR-03 No secrets or frozen copies in the wrong repository
@@ -41,7 +41,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: Secrets leak with the artifact; data copies drift from the frozen version.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, research-records
+- Owner: sv-experiment, sv-supervisor-records
 - Src: arc:RP-04@v2; arc:FP-04@v2; arc:FP-05@v2; arc:01-checklist/checklist.md AT7; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Build and reproduction
@@ -52,7 +52,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: Hidden local state is found only by a fresh clone.
 - Status: candidate
 - Scope: core
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:RP-05@v2; arc:RP-06@v2; arc:01-checklist/checklist.md G5
 
 ### AR-05 Script output matches the manuscript
@@ -62,7 +62,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: A traceable number is only trusted once its script output was compared.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, check-loop
+- Owner: sv-experiment, sv-review-loop
 - Src: note:n08§5#17; arc:01-checklist/CHECKLIST-UPDATE-SUMMARY.md RP-11
 
 ## 3. Hosting and timing
@@ -73,7 +73,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: Code hosts reject or truncate large files; a manifest keeps them findable.
 - Status: candidate
 - Scope: core
-- Owner: experiment-workflow
+- Owner: sv-experiment
 - Src: arc:chat:group@2026-10-03T20:24; note:n08§5#39
 
 ### AR-07 Package not empty after the deadline
@@ -82,7 +82,7 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: Reviewers may open the link as soon as they are assigned.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, research-supervisor
+- Owner: sv-experiment, sv-supervisor-brief
 - Src: arc:chat:group@2026-10-03T23:16; arc:chat:group@2026-10-02T06:36; note:n08§5#15; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 4. Statements about the artifact
@@ -95,7 +95,7 @@ Run by: experiment-workflow, pre-submission-reviewer
   the package.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G8; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H1
 
 ### AR-09 Project page equals the paper
@@ -104,5 +104,5 @@ Run by: experiment-workflow, pre-submission-reviewer
 - Why: A stale page contradicts the paper reviewers are reading.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow
+- Owner: sv-experiment
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H8; arc:01-checklist/checklist.md AT6; user:2026-10-13 (promoted: failure had a clear bad outcome)

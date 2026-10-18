@@ -24,11 +24,11 @@ upstream notation rules. Core rules are not repeated here.
    owner's mathematical prose style, which `paper` loads before drafting.
 3. Owner skills `proof-review-math`, `theorem-search-math` and
    `formalize-lean4`: proof review, theorem retrieval and Lean checking.
-4. Owner skill `style-mine`, base rules `general_academic.md`.
+4. Owner skill `sv-write-style-mine`, base rules `general_academic.md`.
 5. Upstream notation and equation rules:
    `handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md`,
-   `skills/pre-submission-reviewer/references/latex-rules.md`,
-   `skills/paper-writer/references/verification-checklist.md`.
+   `skills/sv-review-once/references/latex-rules.md`,
+   `skills/sv-write-section/references/verification-checklist.md`.
 6. Gap analysis of upstream for mathematics: `notes/01-upstream-map.md` §5.2.
 
 ## Paper types
@@ -38,7 +38,7 @@ upstream notation rules. Core rules are not repeated here.
 - For theory papers, the proofs play the role that experiments play
   elsewhere: review the proofs, and never call the evidence thin because
   there is no results table.
-  [src: up:skills/pre-submission-reviewer/SKILL.md] (confirmed)
+  [src: up:skills/sv-review-once/references/procedure.md] (confirmed)
 Other types (expository, survey, problem papers, computational
 mathematics) are Unknown.
 
@@ -92,7 +92,7 @@ record. The concerns below come from the owner's proof-review workflow.
   add a notation table when more than six are in common use.
   [src: skill:paper; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - Symbol explanations after an equation use exactly the symbols the
-  equation uses. [src: up:skills/paper-writer/references/verification-checklist.md] (confirmed)
+  equation uses. [src: up:skills/sv-write-section/references/verification-checklist.md] (confirmed)
 - Final exposition is narrative prose linking definitions, statements,
   proofs and examples, not an outline-like list.
   [src: skill:academic-author-team] (confirmed)
@@ -141,7 +141,7 @@ Other figure conventions for mathematics papers are Unknown.
   `\label` and `\cref`; never use `\tag{}` for references.
   [src: skill:paper; skill:academic-author-team] (confirmed)
 - Every numbered equation is referenced in the text; otherwise use an
-  unnumbered environment. [src: up:skills/pre-submission-reviewer/references/latex-rules.md; skill:style-mine] (confirmed)
+  unnumbered environment. [src: up:skills/sv-review-once/references/latex-rules.md; skill:style-mine] (confirmed)
 - Use `\mathbf` for vectors and `\boldsymbol` for matrices (not `\bm`),
   `\mathbb{I}` for the indicator, `\mathbb{P}` and `\mathbb{E}` for
   probability and expectation, `n_1` and never Unicode subscripts, and no
@@ -155,7 +155,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A statement with hidden assumptions cannot be checked or reused.
 - Status: confirmed
 - Scope: field:mt
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: skill:paper
 
 ### MT-02 No hidden proof obligations
@@ -164,7 +164,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: These phrases hide the gaps a referee will find.
 - Status: confirmed
 - Scope: field:mt
-- Owner: paper-polish, check-loop, pre-submission-reviewer
+- Owner: sv-write-polish, sv-review-loop, sv-review-once
 - Src: skill:paper
 
 ### MT-03 Proof review done and reported honestly
@@ -174,7 +174,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A review is not a proof check by machine.
 - Status: confirmed
 - Scope: field:mt
-- Owner: pre-submission-reviewer, check-loop
+- Owner: sv-review-once, sv-review-loop
 - Src: skill:proof-review-math
 
 ### MT-04 Notation consistent and introduced
@@ -183,7 +183,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: Symbol drift makes proofs hard to check.
 - Status: confirmed
 - Scope: field:mt
-- Owner: paper-writer, paper-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: skill:paper; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
 
 ### MT-05 Equations referenced and labelled
@@ -192,8 +192,8 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: Unreferenced numbers clutter the page; tags break when sections move.
 - Status: confirmed
 - Scope: field:mt
-- Owner: paper-polish, pre-submission-reviewer
-- Src: up:skills/pre-submission-reviewer/references/latex-rules.md; skill:academic-author-team
+- Owner: sv-write-polish, sv-review-once
+- Src: up:skills/sv-review-once/references/latex-rules.md; skill:academic-author-team
 
 ### MT-06 Body and appendix split
 - [ ] Check: Long computations and proof expansions sit in the appendix; the
@@ -201,7 +201,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: The reader follows the argument without losing the thread.
 - Status: confirmed
 - Scope: field:mt
-- Owner: paper-writer
+- Owner: sv-write-section
 - Src: skill:academic-author-team
 
 ### MT-07 Cited results traced to sources
@@ -210,7 +210,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A wrong citation for a key lemma breaks the proof.
 - Status: confirmed
 - Scope: field:mt
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: skill:paper; skill:theorem-search-math
 
 ### MT-08 Formal verification claims checked
@@ -219,7 +219,7 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: A generated Lean candidate proves nothing until it compiles.
 - Status: confirmed
 - Scope: field:mt
-- Owner: check-loop, pre-submission-reviewer
+- Owner: sv-review-loop, sv-review-once
 - Src: skill:formalize-lean4
 
 ### MT-09 Paper compiles
@@ -228,18 +228,18 @@ Other figure conventions for mathematics papers are Unknown.
 - Why: Done means a PDF, not a plan.
 - Status: confirmed
 - Scope: field:mt
-- Owner: check-loop
+- Owner: sv-review-loop
 - Src: skill:paper
 
 ## Known disagreements
 - Math delimiters: the owner's `paper` skill uses `\(...\)` and `\[...\]`
-  in `.tex`, while upstream paper-writer prose delivery uses `$...$` and
+  in `.tex`, while upstream sv-write-section prose delivery uses `$...$` and
   `$$...$$`. In `.tex` the owner's convention applies; in Markdown follow the
-  active request. [src: skill:paper; skill:academic-author-team; up:skills/paper-writer/references/prose-delivery.md]
+  active request. [src: skill:paper; skill:academic-author-team; up:skills/sv-write/references/prose-delivery.md]
 - Missing citation data: `paper` allows a clear placeholder while drafting;
-  upstream paper-writer forbids placeholder tags. Placeholders may exist in
+  upstream sv-write-section forbids placeholder tags. Placeholders may exist in
   drafts only and are cleared before submission.
-  [src: skill:paper; up:skills/paper-writer/SKILL.md]
+  [src: skill:paper; up:skills/sv-write-section/references/workflow.md]
 
 ## Unknown
 - Exemplar papers: none supplied. Five to ten papers from the target
@@ -256,5 +256,5 @@ Other figure conventions for mathematics papers are Unknown.
 
 ## Changelog
 - 0.1 (2026-10-13): created from the owner's paper, style, proof-review,
-  theorem-search and formalization skills, style-mine general rules and
+  theorem-search and formalization skills, sv-write-style-mine general rules and
   upstream notation rules.

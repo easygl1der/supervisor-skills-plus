@@ -1,7 +1,7 @@
 # Figure rules for every field
 
 Field-specific figure rules live in the field profiles; the procedure lives
-in `figure-designer` and `drawio-reconstruction`.
+in `sv-figure-design` and `sv-figure-drawio`.
 
 ## Clarity
 - Vector output, readable text (close to body size), self-contained caption

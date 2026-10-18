@@ -4,7 +4,7 @@ Items that protect the claims a paper makes about its own data: where each
 number comes from, what agreement values mean, what was fixed before results
 were seen, and what AI did in the research.
 
-Run by: experiment-workflow, pre-submission-reviewer, check-loop
+Run by: sv-experiment, sv-review-once, sv-review-loop
 
 ## Contents
 1. Number traceability
@@ -22,7 +22,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   treat most harshly.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, check-loop, research-records
+- Owner: sv-experiment, sv-review-loop, sv-supervisor-records
 - Src: note:n08§5#17; arc:01-checklist/CHECKLIST-UPDATE-SUMMARY.md RP-11; arc:RP-12@v2
 
 ### IN-02 Numbers in figures follow the same rule
@@ -31,7 +31,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: A figure number copied from an image is not data.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, figure-designer, check-loop
+- Owner: sv-experiment, sv-figure-design, sv-review-loop
 - Src: note:n07§A.1; note:n07§A.8 FR3
 
 ### IN-03 Frozen-input identifiers printed consistently
@@ -41,7 +41,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Mismatched identifiers suggest results come from different data.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, check-loop
+- Owner: sv-experiment, sv-review-loop
 - Src: arc:RS-14@v2; arc:RP-07@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Agreement values
@@ -55,7 +55,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   computation record behind it.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, pre-submission-reviewer, check-loop
+- Owner: sv-experiment, sv-review-once, sv-review-loop
 - Src: arc:msr:393f596; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B1; arc:RS-17@v2; note:n04§1.6
 
 ### IN-05 Each agreement value named
@@ -66,7 +66,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   story inconsistent.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, paper-writer, check-loop
+- Owner: sv-experiment, sv-write-section, sv-review-loop
 - Src: arc:10-requirements/DECISION-HINTS.md U1; arc:01-checklist/checklist.md C2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-06 Reporting rule written once and applied everywhere
@@ -77,7 +77,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
   selective reporting.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, check-loop, research-records
+- Owner: sv-experiment, sv-review-loop, sv-supervisor-records
 - Src: arc:msr:9c69675; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H1; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 3. Fixed before results
@@ -89,7 +89,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Correcting the reference after seeing model output inflates agreement.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:11-mining-github-issue-audit/tree/docs/notes/gold-review/overlay-high14-review.md; arc:MF-08@v2; note:n08§5#20
 
 ### IN-08 Acceptance bars set before the run
@@ -98,7 +98,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: A bar chosen after the result is not a bar.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow
+- Owner: sv-experiment
 - Src: note:n08§5#21
 
 ### IN-09 Planned analyses, exploratory ones labelled
@@ -107,7 +107,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Unlabelled post-hoc analyses inflate false positives.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, idea-evaluator
+- Owner: sv-experiment, sv-idea
 - Src: arc:RS-01@v2; arc:RS-03@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-10 Prompt versions logged
@@ -117,7 +117,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Without a version log, the reported result cannot be tied to a prompt.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow
+- Owner: sv-experiment
 - Src: note:n08§5#22; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-11 Disagreements turned into numbered rules
@@ -126,7 +126,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Rules kept only in someone's head are lost when the annotator changes.
 - Status: candidate
 - Scope: core
-- Owner: experiment-workflow, research-records
+- Owner: sv-experiment, sv-supervisor-records
 - Src: arc:res:7e4a35c; note:n08§5#23
 
 ## 4. Disclosure and conduct
@@ -138,7 +138,7 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Venues require it; undisclosed AI use in the method undermines the results.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, paper-writer, pre-submission-reviewer
+- Owner: sv-experiment, sv-write-section, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G9; note:n08§5#19
 
 ### IN-13 No hidden text aimed at reviewers or review tools
@@ -147,5 +147,5 @@ Run by: experiment-workflow, pre-submission-reviewer, check-loop
 - Why: Prompt injection aimed at reviewers is prohibited conduct.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, check-loop
+- Owner: sv-review-once, sv-review-loop
 - Src: arc:10-requirements/venue/fse-2027-requirements.md

@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../../sv-figure-explain/kit/vendor/katex.min.css"><link rel="stylesheet" href="../../../sv-figure-explain/kit/vendor/ve/ve.css"><script src="../../../sv-figure-explain/kit/vendor/katex.min.js"></script><script src="../../../sv-figure-explain/kit/vendor/auto-render.min.js"></script><script src="../../../sv-figure-explain/kit/vendor/ve/stepper.js"></script>
+<!-- 模板：stepper-trace（stepper，改数据/SVG 即可）。parts 用 data-s="k"（第 k 步出现）或 data-s="0 k"（一直画、第 k 步点亮）；data-only="k" 只在第 k 步出现。说明写在 ol.ve-capsrc 或 window.CAPS。打开时显示全图。渲染：../render.sh x.html x.png --full --steps [--gif] -->
+<title>Lomuto partition trace</title></head><body><main id="fig">
+<div class="kicker">编程 · 代码执行追踪</div><h1>快速排序的划分：一趟扫描把数组分成「≤ 主元」和「&gt; 主元」两块</h1>
+<p class="lead">Lomuto 划分，主元取最后一个元素。<b>i</b> 是「≤ 主元」区的右端，<b>j</b> 是扫描指针；不变式：<span class="k lo">[lo, i]</span> 都 ≤ 主元，<span class="k hi">[i+1, j−1]</span> 都 &gt; 主元。下面每一步的数组状态都由脚本实际运行算法生成，不是手填的。</p>
+<style>.tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:1.25rem}.code{font:400 .9rem/1.9 var(--mono);background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.75rem 0;white-space:pre}
+.code div{padding:0 1rem}.code .hl{background:var(--accent-dim);box-shadow:inset 3px 0 var(--accent)}.arr{display:flex;gap:6px;margin:1.5rem 0 .5rem}.cell{flex:1;text-align:center;font:600 1rem/2.6rem var(--mono);background:var(--surface);border:1.5px solid var(--border-bright);border-radius:4px;transition:all .4s var(--ease)}
+.cell.out{opacity:.25}.cell.le{border-color:var(--ok);background:var(--ok-dim)}.cell.gt{border-color:var(--warn,#c47f17);background:var(--warn-dim,rgba(196,127,23,.12))}.cell.pv{border-style:dashed;border-color:var(--accent)}.cell.cmp{box-shadow:0 0 0 2px var(--accent)}.k{font:600 .8rem var(--mono);padding:0 .3rem;border-radius:3px}.k.lo{background:var(--ok-dim)}.k.hi{background:var(--warn-dim,rgba(196,127,23,.12))}.cell.mid{border-color:var(--accent);background:var(--accent-dim)}.cell.hit{border-color:var(--ok);background:var(--ok-dim);color:var(--ok)}.idx{display:flex;gap:6px}.idx span{flex:1;text-align:center;font:.75rem var(--mono);color:var(--text-dim)}
+.ptr{display:flex;gap:6px;height:1.4rem}.ptr span{flex:1;text-align:center;font:600 .75rem var(--mono);color:var(--accent)}.vars{display:flex;gap:1rem;margin-top:1rem}.vars div{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.3rem .7rem;font:600 .9rem var(--mono)}</style>
+<figure class="ve-steps" id="trace" data-steps="1"><div class="frame"><div class="tr">
+<div class="code" id="code"></div>
+<div><div class="idx" id="idx"></div><div class="arr" id="arr"></div><div class="ptr" id="ptr"></div><div class="vars" id="vars"></div></div></div></div>
+<figcaption><span class="fign">图 1</span> 执行追踪：每一步 = 一次比较（可能带一次交换）+ 它改变的状态。绿色 ≤ 主元，橙色 &gt; 主元，虚线框是主元。</figcaption></figure></main>
+<script>
+const L=['def partition(a, lo, hi):','    pivot = a[hi]','    i = lo - 1','    for j in range(lo, hi):','        if a[j] <= pivot:','            i += 1','            a[i], a[j] = a[j], a[i]','    a[i + 1], a[hi] = a[hi], a[i + 1]','    return i + 1'];
+const A0=[7,2,9,4,3,8,5];
+// run the algorithm and record a trace: the figure never shows a hand-typed state
+function trace(a0){const a=a0.slice(),hi=a.length-1,pv=a[hi],S=[];let i=-1;
+ S.push({l:2,a:a.slice(),i,j:null,c:`主元 pivot = a[${hi}] = ${pv}；i = −1，「≤ 主元」区还是空的。`});
+ for(let j=0;j<hi;j++){
+  if(a[j]<=pv){i++;const sw=i!==j;[a[i],a[j]]=[a[j],a[i]];
+   S.push({l:6,a:a.slice(),i,j,cmp:i,c:`a[${j}] = ${a[i]} ≤ ${pv} → i = ${i}，`+(sw?`交换 a[${i}] 与 a[${j}]，把它放进绿色区。`:`它已在绿色区末端，原地交换。`)});}
+  else S.push({l:4,a:a.slice(),i,j,cmp:j,c:`a[${j}] = ${a[j]} &gt; ${pv} → 不动，橙色区向右长一格。`});}
+ [a[i+1],a[hi]]=[a[hi],a[i+1]];
+ S.push({l:7,a:a.slice(),i,j:hi,done:i+1,c:`扫描结束：交换 a[${i+1}] 与 a[${hi}]，主元落到最终位置 ${i+1}，返回 ${i+1}。左边都 ≤ ${pv}，右边都 &gt; ${pv}。`});
+ return S;}
+const S=trace(A0);
+console.assert(S.at(-1).a.every((v,k,arr)=>k<S.at(-1).done?v<=5:k>S.at(-1).done?v>5:true),'partition invariant');
+document.getElementById('trace').dataset.steps=S.length;
+window.CAPS=S.map(s=>s.c);
+document.getElementById('idx').innerHTML=A0.map((_,i)=>`<span>${i}</span>`).join('');
+window.onStep=k=>{const s=S[k-1],hi=A0.length-1;document.getElementById('code').innerHTML=L.map((t,i)=>`<div class="${i==s.l?'hl':''}">${t.replace(/</g,'&lt;')}</div>`).join('');
+ document.getElementById('arr').innerHTML=s.a.map((v,x)=>{let c='';if(s.done!==undefined)c=x<s.done?'le':x>s.done?'gt':'pv';else if(x===hi)c='pv';else if(x<=s.i)c='le';else if(s.j!==null&&x<=s.j)c='gt';return `<div class="cell ${c} ${x===s.cmp?'cmp':''}">${v}</div>`}).join('');
+ document.getElementById('ptr').innerHTML=A0.map((_,x)=>`<span>${[x===s.i?'i':'',x===s.j&&s.done===undefined?'j':''].filter(Boolean).join('/')}</span>`).join('');
+ document.getElementById('vars').innerHTML=`<div>pivot = ${A0[hi]}</div><div>i = ${s.i}</div><div>j = ${s.done!==undefined?'（循环结束）':(s.j??'–')}</div>`;};
+</script>
+<script>renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:false}]});veInit();window.__READY=true</script></body></html>

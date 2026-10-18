@@ -1,122 +1,134 @@
 # Install and use Supervisor-Skills Plus
 
-One copy of this repo serves Claude Code, Codex and Cursor. Each skill folder
-is symlinked into the tools' skill folders, so `git pull` updates all three.
+One copy of this repo serves Claude Code, Codex and Cursor. The skills are
+linked, not copied, so `git pull` updates every tool. The library is twelve
+`sv-` groups plus `research-core` (ADR 0021); see
+[skills/README.en.md](skills/README.en.md).
 
 ## 1. Install
 
 ```bash
 git clone git@github.com:easygl1der/supervisor-skills-plus.git ~/Projects/supervisor-skills-plus
 cd ~/Projects/supervisor-skills-plus
+```
+
+### With an agent-sync tree (the owner's machines)
+
+When `~/.claude/skills`, `~/.codex/skills` and `~/.cursor/skills` are links
+into `~/agent-sync/skills`, do not run `install.sh`; it would write into the
+agent-sync tree. Instead:
+
+```bash
+python3 scripts/sync_agent_links.py            # dry run: prints the plan
+python3 scripts/sync_agent_links.py --apply    # writes the links
+cd ~/agent-sync && git status && git add skills .gitignore && git commit -m "link supervisor-skills-plus"
+```
+
+The script keeps one per-machine link that agent-sync ignores,
+`~/agent-sync/external/supervisor-skills-plus` (to this checkout), and one
+committed relative link per skill, `skills/<name> ->
+../external/supervisor-skills-plus/skills/<name>`. The committed links
+resolve on every machine whatever its home directory is. On another
+machine, clone this repo, `git pull` in agent-sync, and run the script with
+`--apply`: the skill links are already committed, so it only adds the
+external link.
+
+### Without agent-sync
+
+```bash
 scripts/install.sh --dry-run          # see what will happen
 scripts/install.sh                    # claude, codex and cursor
 scripts/install.sh --targets claude   # only Claude Code
 ```
 
-What the script does:
-
-- links every `skills/<name>` into `~/.claude/skills/`, `~/.codex/skills/`
-  and `~/.cursor/skills/`;
-- moves an existing folder with the same name to
-  `~/.<tool>/skills-backup/<date>/` before linking;
-- also moves the old local skills that this library merged (se-paper-*,
-  deai-paper-writing, avoid-ai-writing, humanize-paper, parse-pdf-comments,
-  collaborative-review-notes, drawio-figure-replication, tikz-diagram-review,
-  anti-accretive-docs, architecture-decision-records,
-  research-docs-linear-lifecycle, paper) to the backup folder, so agents do
-  not pick the old version. Skip this with `--no-backup-retired`.
+The script links every `skills/<name>` into the tools' skill folders, moves
+an existing folder of the same name to `~/.<tool>/skills-backup/<date>/`,
+removes links into this repo whose skill no longer exists (the 26 names
+retired by ADR 0021), and moves the older local skills this library merged
+(se-paper-*, deai-paper-writing, avoid-ai-writing, humanize-paper,
+parse-pdf-comments, collaborative-review-notes, drawio-figure-replication,
+tikz-diagram-review, anti-accretive-docs, architecture-decision-records,
+research-docs-linear-lifecycle, paper) to the backup folder; skip that with
+`--no-backup-retired`. `--uninstall` removes only links into this repo.
 
 Restart the agent tools afterwards.
 
-Uninstall: `scripts/install.sh --uninstall` removes only links that point
-into this repo. Restore old skills from the backup folder by moving them back.
-
-Optional dependencies:
+### Optional dependencies
 
 | For | Install |
 |---|---|
 | Repo checks (`scripts/lint_skills.py`) | `python3 -m pip install -r requirements-lint.txt` (PyYAML) |
-| PDF comment extraction (`feedback-to-revision`) | `python3 -m pip install pymupdf` |
-| Figure checks (`drawio-reconstruction`, `figure-designer`) | draw.io desktop or CLI; see each skill |
-| Group-meeting Beamer (`group-beamer`) | TeX Live or BasicTeX plus `tlmgr install latexmk moloch beamertheme-simpleplus ctex`; `brew install poppler` for `pdftoppm`. Do not install a full MacTeX tree from the skill. |
+| PDF comment extraction (`sv-feedback-revise`) | `python3 -m pip install pymupdf` |
+| draw.io reconstruction (`sv-figure-drawio`) | draw.io desktop or CLI; see the skill |
+| HTML figures (`sv-figure-explain`, `sv-figure-html`) | Node and Chrome; `npm i` once in `skills/sv-figure-explain/kit` |
+| Group-meeting Beamer (`sv-slides`) | TeX Live or BasicTeX plus `tlmgr install latexmk moloch beamertheme-simpleplus ctex`; `pymupdf` for page renders. Do not install a full MacTeX tree from the skill. |
 
-## 2. Update
+## 2. Use
+
+Describe the task and let the matching group route it, or call a
+sub-command directly: `/sv-write-polish`, `/sv-study-paper`,
+`/sv-figure-plot`. Only the twelve entries and `research-core` are in the
+agent's skill list; sub-commands run when named.
+
+| Stage | Groups |
+|---|---|
+| Start of a session, what next | `sv-supervisor` |
+| Reading and learning | `sv-quickread`, `sv-study`, `sv-litreview` |
+| Idea, design, proposal | `sv-idea`, `sv-litreview`, `sv-proposal` |
+| Experiments | `sv-experiment`, `sv-supervisor-records` |
+| Writing | `sv-write` |
+| Figures | `sv-figure` |
+| Feedback and reviews | `sv-feedback` |
+| Before submission | `sv-review` |
+| Group meetings | `sv-slides` |
+| After each paper | `sv-supervisor-harvest` |
+
+## 3. Start a new project
+
+1. In the project repo, run `/sv-supervisor-init`. It interviews you and
+   writes `research.yaml` (from
+   `skills/research-core/assets/templates/research.yaml`) and `docs/`
+   (STATUS, TODO, ADR 0001 for the sources of truth, logs, runs).
+2. Every skill reads `research.yaml` first and loads the core rules, the
+   field profile (`se`, `ai-ml`, `math`, `stats`, `causal`) and the venue
+   profile from `research-core`.
+3. `/sv-supervisor-brief` at the start of a session shows the stage,
+   blockers, open reviewer notes, overdue guidance and the next skills.
+
+## 4. Update
 
 ```bash
 cd ~/Projects/supervisor-skills-plus && git pull
 ```
 
-Links follow the repo, so nothing else is needed. Run `scripts/install.sh`
-again only when new skills were added.
+Links follow the repo. When skills were added, renamed or removed, rerun
+`scripts/sync_agent_links.py --apply` (agent-sync) or `scripts/install.sh`.
 
-## 3. Start a new project
+## 5. Keep the library growing
 
-1. In the project repo, ask the agent: "use research-supervisor to set up
-   this project". It interviews you and writes:
-   - `research.yaml` (field, venue, paper type, stage, repos, sources of
-     truth, data location, experiment backend, comment macros, check-loop
-     budget), from `skills/research-core/assets/templates/research.yaml`;
-   - `docs/STATUS.md`, `docs/TODO.md`, `docs/adr/` (ADR 0001 records the
-     sources of truth), `docs/log/`, `docs/runs.md`.
-2. Or copy the template by hand:
-   ```bash
-   cp ~/Projects/supervisor-skills-plus/skills/research-core/assets/templates/research.yaml .
-   ```
-   and fill in at least `field`, `venue`, `paper_type`, `stage`.
-3. Every skill reads `research.yaml` first and loads the core rules, the
-   field profile (`se`, `ai-ml`, `math`, `stats`, `causal`) and the venue
-   profile from `research-core`.
+After a submission, after reviews, or after expert advice, run
+`/sv-supervisor-harvest` in the project. It proposes rule changes for
+`research-core` on a `learn/<source>` branch, each with its source; you
+approve before merge.
 
-Typical flow:
+## 6. Upstream
 
-| Stage | Skills |
-|---|---|
-| Idea and design | idea-evaluator, deep-research |
-| Experiments | experiment-workflow, research-records |
-| Writing | paper-writer, intro-drafter, style-mine, check-loop |
-| Figures | figure-designer, drawio-reconstruction |
-| Feedback and guidance | feedback-to-revision |
-| Before submission | pre-submission-reviewer |
-| Reviews | feedback-to-revision, rebuttal-guidance |
-| After each paper | lessons-harvest |
+Since ADR 0021 the skills are maintained here and no longer synced from
+HKUSTDial/Supervisor-Skills. `handbook/` still follows upstream
+`HKUSTDial/PhD.Skills` (see CONTRIBUTING.md). Never push to `upstream`; its
+push URL is disabled in this clone.
 
-At any point: "use research-supervisor" shows the stage, blockers, open
-reviewer notes, overdue guidance actions and the next skills.
-
-## 4. Keep the library growing
-
-After a submission, after reviews, or when you get expert advice, run
-`lessons-harvest` in the project. It proposes new or updated rules for
-`research-core` on a `learn/<source>` branch in this repo, each with its
-source; you approve before merge. New fields start from
-`research-core/references/fields/_template.md`.
-
-## 5. Sync with upstream HKUSTDial/Supervisor-Skills
+## 7. Checks
 
 ```bash
-cd ~/Projects/supervisor-skills-plus
-git fetch upstream
-git checkout -b sync/upstream-$(date +%Y%m%d) main
-git merge upstream/main
-# resolve conflicts so that our additions survive; then:
-python scripts/lint_skills.py && python scripts/check_shared_sync.py \
-  && python scripts/check_checklists.py && python scripts/check_sources.py
-git checkout main && git merge --no-ff sync/upstream-$(date +%Y%m%d)
-git push origin main
-```
-
-Record each sync in `CHANGELOG.md`. Never push to `upstream`; its push URL
-is disabled in this clone.
-
-## 6. Checks
-
-```bash
-python scripts/lint_skills.py        # upstream skill conventions
-python scripts/check_shared_sync.py  # shared reference copies identical
+python scripts/lint_skills.py        # skill conventions and the sv- group rules
+python scripts/check_shared_sync.py  # duplicated reference copies (none at present)
 python scripts/check_checklists.py   # checklist item format and owners
 python scripts/check_sources.py      # every [src: ...] resolves
 ```
 
 `check_sources.py` resolves `arc:` citations against the private evidence
 archive (`$EVIDENCE_ARCHIVE` or `~/Projects/supervisor-skills-msr-tpa`) and
-skips them when it is absent.
+skips them when it is absent. `skill:` citations keep the name a rule came
+from; names retired by ADR 0021 resolve to their new folders, and a skill
+outside this library that is not installed locally is skipped, not failed.

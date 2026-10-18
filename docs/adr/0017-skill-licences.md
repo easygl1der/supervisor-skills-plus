@@ -1,6 +1,6 @@
 # ADR 0017: New skills use the repo licence; the owner's earlier skill stays MIT
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner
 
@@ -33,6 +33,6 @@ declare `license: MIT`, with the original notice in `skills/style-mine/README.md
   `THIRD_PARTY.md`.
 
 ## Sources
-`LICENSE`, `skills/research-bridge/SKILL.md`, `skills/proposal-writer/SKILL.md`,
+`LICENSE`, `skills/sv-study-bridge/SKILL.md`, `skills/sv-proposal/SKILL.md`,
 `skills/style-mine/SKILL.md`, `skills/style-mine/README.md`,
 `skills/journal-adapt/SKILL.md`, `CHANGELOG.md` (licence change), `THIRD_PARTY.md`.

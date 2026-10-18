@@ -4,7 +4,7 @@ Items for the records kept outside the paper: sources of truth, sync between
 editors, parked material, feedback and guidance closure, decisions, and the
 hygiene of checklists themselves.
 
-Run by: research-records, research-supervisor, feedback-to-revision
+Run by: sv-supervisor-records, sv-supervisor, sv-feedback-revise
 
 ## Contents
 1. Sources of truth and sync
@@ -23,7 +23,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
   times in eight days and build notes still named the old one.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, research-supervisor
+- Owner: sv-supervisor-records, sv-supervisor-brief
 - Src: note:n08§1.2; note:n04§1.5; note:n08§5#1
 
 ### RC-02 Every switch recorded
@@ -32,7 +32,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: An unrecorded switch sends edits to the wrong copy.
 - Status: confirmed
 - Scope: core
-- Owner: research-records
+- Owner: sv-supervisor-records
 - Src: note:n08§1.2; note:n04§1.5; arc:CO-01@v2
 
 ### RC-03 Sync never overwrites
@@ -42,7 +42,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
   before the deadline.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, vibe-research-workflow
+- Owner: sv-supervisor-records, research-core
 - Src: arc:ol:a610d1d; arc:ol:214cc0c; arc:chat:group@2026-10-03T19:42; note:n08§5#2
 
 ### RC-04 Pushing is not syncing
@@ -52,7 +52,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Co-authors kept editing a copy that the push had not updated.
 - Status: confirmed
 - Scope: core
-- Owner: research-records
+- Owner: sv-supervisor-records
 - Src: arc:CO-02@v2; arc:chat:1on1@2026-09-29T11:10; arc:CO-04@v2; arc:msr:c93ef1f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-05 Diffstat read after agent writes
@@ -62,7 +62,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Agent writes deleted hundreds of lines in one commit without notice.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, vibe-research-workflow, check-loop
+- Owner: sv-supervisor-records, research-core, sv-review-loop
 - Src: arc:ol:b2ad042; arc:ol:3ae9fd3; note:n08§5#5; note:n08§5#6
 
 ### RC-06 One editor in the last day
@@ -71,7 +71,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Parallel edits in the last hours caused a merge storm and lost edits.
 - Status: confirmed
 - Scope: core
-- Owner: research-supervisor, research-records
+- Owner: sv-supervisor-brief, sv-supervisor-records
 - Src: note:n08§1.3; note:n08§5#3; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-07 Senior bulk edits checked against agreed requirements
@@ -81,7 +81,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: A bulk edit can undo decisions made earlier with other co-authors.
 - Status: candidate
 - Scope: core
-- Owner: research-records, feedback-to-revision
+- Owner: sv-supervisor-records, sv-feedback-revise
 - Src: arc:CO-07@v2; note:n07§B.5
 
 ### RC-08 Agents act only where allowed
@@ -90,7 +90,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Unasked agent commits and closures hid work and notes.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, feedback-to-revision, check-loop
+- Owner: sv-supervisor-records, sv-feedback-revise, sv-review-loop
 - Src: arc:CO-05@v2; arc:CO-06@v2; arc:msr:9809b8c; note:n08§5#7; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-09 Dashboards are views
@@ -100,7 +100,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: A dashboard and its underlying data disagreed in the evidence project.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, experiment-workflow
+- Owner: sv-supervisor-records, sv-experiment
 - Src: note:n08§5#24
 
 ## 2. Parked material
@@ -112,7 +112,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: A parked result disappeared from the paper for a day unnoticed.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, paper-writer, check-loop
+- Owner: sv-supervisor-records, sv-write-section, sv-review-loop
 - Src: arc:msr:7c705c9; arc:msr:5262231; note:n06§2.9; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 3. Feedback closure
@@ -124,7 +124,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Comments without IDs cannot be tracked to closure.
 - Status: confirmed
 - Scope: core
-- Owner: feedback-to-revision, research-records
+- Owner: sv-feedback-revise, sv-supervisor-records
 - Src: note:n05§6.1; note:n05§6.5; arc:MF-14@v2
 
 ### RC-12 Closure verified in the diff on the merged branch
@@ -135,7 +135,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
   reverted verified fixes.
 - Status: confirmed
 - Scope: core
-- Owner: feedback-to-revision, check-loop
+- Owner: sv-feedback-revise, sv-review-loop
 - Src: arc:06-revision/REVISION-SUMMARY.md; arc:ol:214cc0c; note:n05§5.3; note:n05§5.5
 
 ### RC-13 Repeated comments reopen the earlier ID
@@ -144,7 +144,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: A repeat means the earlier closure was wrong.
 - Status: candidate
 - Scope: core
-- Owner: feedback-to-revision
+- Owner: sv-feedback-revise
 - Src: note:n05§6.9
 
 ### RC-14 Conflicting requests surfaced and decided
@@ -154,7 +154,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Silent resolution of conflicts re-opens them at the next review.
 - Status: confirmed
 - Scope: core
-- Owner: feedback-to-revision, research-records
+- Owner: sv-feedback-revise, sv-supervisor-records
 - Src: note:n05§5.4; note:n05§6.6
 
 ### RC-15 Agent comments labelled as such
@@ -163,7 +163,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Agent output labelled as a senior's comment inflated its authority.
 - Status: candidate
 - Scope: core
-- Owner: feedback-to-revision, research-records
+- Owner: sv-feedback-revise, sv-supervisor-records
 - Src: note:n05§6.10; note:n07§B.4
 
 ### RC-16 Response table complete
@@ -173,7 +173,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: The table is the trace reviewers and co-authors need.
 - Status: candidate
 - Scope: core
-- Owner: feedback-to-revision, rebuttal-guidance
+- Owner: sv-feedback-revise, sv-feedback-rebuttal
 - Src: note:n05§6.7
 
 ### RC-17 Page effect of each change tracked
@@ -182,7 +182,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Early cuts and late fills were not reconciled until pages ran short.
 - Status: candidate
 - Scope: core
-- Owner: feedback-to-revision, paper-polish
+- Owner: sv-feedback-revise, sv-write-polish
 - Src: note:n05§6.8
 
 ## 4. Guidance and decisions
@@ -194,7 +194,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Guidance without actions and follow-up is not acted on.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, research-supervisor
+- Owner: sv-supervisor-records, sv-supervisor-brief
 - Src: user:2026-10-13; arc:@threats-pivot
 
 ### RC-19 Decisions copied into the repository
@@ -204,7 +204,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Tracker content can be lost; a bare ticket id explains nothing.
 - Status: confirmed
 - Scope: core
-- Owner: research-records
+- Owner: sv-supervisor-records
 - Src: note:n08§5#33; note:n08§5#35
 
 ### RC-20 Open decisions in a register
@@ -213,7 +213,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Open decisions scattered across chats get decided by default.
 - Status: candidate
 - Scope: core
-- Owner: research-records, research-supervisor
+- Owner: sv-supervisor-records, sv-supervisor-brief
 - Src: arc:10-requirements/DECISION-HINTS.md; arc:01-checklist/checklist.md T2
 
 ### RC-21 Requirement summaries mark what is superseded
@@ -223,7 +223,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
   reversed again without anyone noticing.
 - Status: candidate
 - Scope: core
-- Owner: research-records, feedback-to-revision
+- Owner: sv-supervisor-records, sv-feedback-revise
 - Src: arc:04-comms/past-chat-group/SUMMARY.md; note:n07§B.2; note:n08§5#34
 
 ### RC-22 Transcripts are the meeting record
@@ -232,7 +232,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: Summaries drop and distort details.
 - Status: candidate
 - Scope: core
-- Owner: research-records
+- Owner: sv-supervisor-records
 - Src: arc:04-comms/20260920-msritp-meeting/README.md; note:n08§5#38
 
 ## 5. Checklist hygiene
@@ -244,7 +244,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
   paper, and verified items stayed unticked.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, check-loop, pre-submission-reviewer
+- Owner: sv-supervisor-records, sv-review-loop, sv-review-once
 - Src: note:n07§B.3; note:n07§B.4; arc:RS-17@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### RC-24 Checklist provenance verified by hand
@@ -255,7 +255,7 @@ Run by: research-records, research-supervisor, feedback-to-revision
   turned agent suggestions into a senior's comments.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, lessons-harvest, research-core
+- Owner: sv-supervisor-records, sv-supervisor-harvest, research-core
 - Src: note:n07§B.4; arc:01-checklist/enriched/README.md; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 6. After submission
@@ -266,5 +266,5 @@ Run by: research-records, research-supervisor, feedback-to-revision
 - Why: The repository otherwise ends before the submitted text.
 - Status: confirmed
 - Scope: core
-- Owner: research-records
+- Owner: sv-supervisor-records
 - Src: note:n08§1.2; note:n08§5#40; user:2026-10-13 (promoted: failure had a clear bad outcome)

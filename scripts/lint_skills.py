@@ -6,10 +6,15 @@ Enforces the hard rules for SKILL.md structure:
  - description is 40..80 words, third person, contains at least one "Use when" clause
  - no em-dash in SKILL.md or references/*.md
  - no CJK characters in SKILL.md
- - every "See: references/X.md" pointer resolves
+ - every "See: references/X.md" and "See: ../<skill>/references/X.md" pointer resolves
  - no nested references (references/X.md may not link to references/Y.md)
  - references/*.md longer than 100 lines must have a table of contents in the first 20 lines
  - no Claude or Anthropic attribution strings
+ - ADR 0021 groups: an entry `sv-<group>` is auto-invocable, its description
+   is at most 60 words and its body at most 120 lines; every sub-command
+   `sv-<group>-<name>` sets `disable-model-invocation: true`, has a body of
+   at most 100 lines (sv-figure-drawio excepted), and is named in its
+   entry's body; every `sv-<group>-...` name an entry mentions exists
 
 Exit 0 on clean, 1 on any violation. Prints one line per violation.
 """
@@ -33,6 +38,8 @@ SKILL_ROOT = Path("skills")
 EM_DASH = "\u2014"
 CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]")
 REF_POINTER = re.compile(r"See:\s+references/([A-Za-z0-9_\-./]+\.md)")
+# Pointer into another skill's references (ADR 0021 groups share one folder).
+SIBLING_POINTER = re.compile(r"See:\s+\.\./([a-z0-9][a-z0-9\-]*)/references/([A-Za-z0-9_\-./]+\.md)")
 REF_LINK = re.compile(r"\[[^\]]+\]\((?:\./)?references/([A-Za-z0-9_\-./]+\.md)\)")
 BANNED_ATTRIB = [
     "Co-Authored-By: Claude",
@@ -114,6 +121,9 @@ def check_pointers(skill_dir: Path, body: str) -> list[str]:
         ref = skill_dir / "references" / target
         if not ref.exists():
             errors.append(f"pointer to missing reference: references/{target}")
+    for m in SIBLING_POINTER.finditer(body):
+        if not (skill_dir.parent / m.group(1) / "references" / m.group(2)).exists():
+            errors.append(f"pointer to missing reference: ../{m.group(1)}/references/{m.group(2)}")
     return errors
 
 
@@ -202,6 +212,61 @@ def lint_skill(skill_dir: Path) -> list[str]:
     return errors
 
 
+# ADR 0021: drawio-reconstruction was kept verbatim at the owner's request.
+BODY_CAP_EXEMPT = {"sv-figure-drawio"}
+SV_NAME = re.compile(r"`(sv-[a-z0-9-]+)`")
+
+
+def read_skill(skill_dir: Path) -> tuple[dict[str, object], str] | None:
+    try:
+        return parse_frontmatter((skill_dir / "SKILL.md").read_text())
+    except (OSError, ValueError, UnicodeDecodeError):
+        return None  # lint_skill already reports these
+
+
+def lint_groups(skill_dirs: list[Path]) -> list[str]:
+    """Check the sv- group conventions of ADR 0021 across all skills."""
+    errors: list[str] = []
+    parsed = {d.name: read_skill(d) for d in skill_dirs if (d / "SKILL.md").exists()}
+    parsed = {k: v for k, v in parsed.items() if v is not None}
+    names = set(parsed)
+    sv = {n for n in names if n.startswith("sv-")}
+    # Structure decides the role, not the flag: an entry has no sv- parent.
+    entries = {n for n in sv if not any(n.startswith(p + "-") for p in sv if p != n)}
+
+    def entry_of(name: str) -> str | None:
+        owners = [e for e in entries if name.startswith(e + "-")]
+        return max(owners, key=len) if owners else None
+
+    for name in sorted(names):
+        if not name.startswith("sv-"):
+            continue
+        fm, body = parsed[name]
+        lines = len(body.splitlines())
+        where = f"skills/{name}/SKILL.md"
+        if name in entries:
+            if fm.get("disable-model-invocation"):
+                errors.append(f"{where}: group entry must stay auto-invocable (no disable-model-invocation)")
+            words = len(str(fm.get("description", "")).split())
+            if words > 60:
+                errors.append(f"{where}: entry description has {words} words; must be <= 60")
+            if lines > 120:
+                errors.append(f"{where}: entry body has {lines} lines; must be <= 120")
+            for m in SV_NAME.finditer(body):
+                ref = m.group(1)
+                if ref.startswith(name + "-") and ref not in names:
+                    errors.append(f"{where}: routes to missing sub-command {ref}")
+            continue
+        owner = entry_of(name)
+        if fm.get("disable-model-invocation") is not True:
+            errors.append(f"{where}: sub-command must set disable-model-invocation: true")
+        if lines > 100 and name not in BODY_CAP_EXEMPT:
+            errors.append(f"{where}: sub-command body has {lines} lines; must be <= 100")
+        if f"`{name}`" not in parsed[owner][1]:
+            errors.append(f"{where}: not named in the routing table of {owner}")
+    return errors
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parent.parent
     os.chdir(repo_root)
@@ -218,6 +283,7 @@ def main() -> int:
     all_errors: list[str] = []
     for skill_dir in skill_dirs:
         all_errors.extend(lint_skill(skill_dir))
+    all_errors.extend(lint_groups(skill_dirs))
 
     if all_errors:
         print(f"lint: {len(all_errors)} violation(s)")

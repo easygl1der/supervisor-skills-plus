@@ -44,15 +44,15 @@ records:
   linear: {enabled: false, team: "", project: ""}
 
 style:
-  exemplars: refs/exemplars/         # PDFs or extracted markdown for style-mine
-  dynamic_skill: ""                  # output folder of style-mine
+  exemplars: refs/exemplars/         # PDFs or extracted markdown for sv-write-style-mine
+  dynamic_skill: ""                  # output folder of sv-write-style-mine
   overlays: []                       # e.g. [no-semicolons-no-dashes]
 
 figures:
-  icon_libs: []                      # local icon library paths; see drawio-reconstruction
+  icon_libs: []                      # local icon library paths; see sv-figure-drawio
 
 reading:
-  dir: ""                            # optional: where paper-quickread / study write reading notes; default <project>/reading/
+  dir: ""                            # optional: where sv-quickread / study write reading notes; default <project>/reading/
 
 people:                              # roles only, no names
   - {role: senior-a, comment_macro: '\seniorA', agent_may_resolve: true}

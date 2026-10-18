@@ -63,7 +63,7 @@ settles it, do not copy those numbers; say the table could not be read.
 The fast no-token route returns Markdown only (no figure files) and merged
 Table 1 cells in the SDID test where precision mode did not; note that
 figures were not extracted, and rerun tables with precision mode when a
-token is available. [src: up:skills/study/evals/reading/papers/2026-10-16_arkhangelsky_sdid/quickread.md] (candidate) Report pages
+token is available. [src: up:skills/sv-study/evals/reading/papers/2026-10-16_arkhangelsky_sdid/quickread.md] (candidate) Report pages
 converted, route used and any damaged regions before using the text.
 Quote page, section, table, figure and equation labels from the original,
 not MinerU's internal numbering.

@@ -1,6 +1,6 @@
 # ADR 0006: Reading root resolution and an append-only index.json
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner (SPEC "index.json append only"), Claude Code (resolution order, seq/supersedes)
 
@@ -16,7 +16,7 @@ history and make git diffs noisy.
 3. A resolution order for the root; an index where records are only appended.
 
 ## Decision
-Option 3. `skills/paper-quickread/SKILL.md` resolves the reading root:
+Option 3. `skills/sv-quickread/SKILL.md` resolves the reading root:
 `research.yaml` `reading.dir`; else `<project>/reading/` in a research
 project; else the study vault in the same order as `study` (ADR 0005:
 `$STUDY_VAULT`, `~/.config/study/vault`, `~/study-vault`); else `./reading/`,
@@ -37,6 +37,6 @@ prefix is byte-identical after the write.
 - Do not modify or delete existing index records.
 
 ## Sources
-`skills/paper-quickread/SKILL.md` (reading root, index step),
-`skills/paper-quickread/scripts/index_append.py`,
-`skills/study/evals/reading/index.json` (two records, seq 1 and 2, supersedes 1).
+`skills/sv-quickread/SKILL.md` (reading root, index step),
+`skills/sv-quickread/scripts/index_append.py`,
+`skills/sv-study/evals/reading/index.json` (two records, seq 1 and 2, supersedes 1).

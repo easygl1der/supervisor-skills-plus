@@ -96,7 +96,7 @@ later, which the organizers announced. [src: note:n08§3]
   [src: arc:chat:group@2026-10-03T19:45; note:n08§5] (candidate)
 
 ## Style from exemplars
-Not yet filled by `style-mine` from accepted FSE papers. Until it is, use
+Not yet filled by `sv-write-style-mine` from accepted FSE papers. Until it is, use
 the SE field profile's typical structure, which was measured on one
 submission to this track, not on accepted papers. Contribution-list format
 at FSE: Unknown. [src: note:n06§3; note:n02§10]
@@ -108,7 +108,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Calls and dates change every cycle; a meeting once gave a wrong deadline.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: research-supervisor, research-records, pre-submission-reviewer
+- Owner: sv-supervisor-brief, sv-supervisor-records, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; note:n08§3
 
 ### FS-02 Page budget counted on the PDF
@@ -116,7 +116,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: The limit is all-in; the evidence team lost track of it while cutting and refilling.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:1on1@2026-09-22T05:02; note:n06§2.11
 
 ### FS-03 No appendix as padding
@@ -124,7 +124,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Senior co-authors expected reviewers to skip it and read padding as a rejection signal.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: paper-polish, style-mine, pre-submission-reviewer
+- Owner: sv-write-polish, sv-write-style-apply, sv-review-once
 - Src: arc:chat:group@2026-10-01T08:56; arc:chat:group@2026-10-02T01:51; arc:msr:464168f; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-04 Page shortfall filled by priority
@@ -132,7 +132,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Removing the appendix left the evidence paper a page short a day before the deadline.
 - Status: candidate
 - Scope: venue:fse
-- Owner: paper-polish, research-supervisor
+- Owner: sv-write-polish, sv-supervisor-brief
 - Src: arc:chat:group@2026-10-02T22:44; arc:msr:d0d4c03; note:n06§2.11
 
 ### FS-05 Template untouched
@@ -140,7 +140,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Format violations are a desk-reject cause; a local shrink came back after it was removed once.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-01T09:23; note:n08§3
 
 ### FS-06 Figure descriptions
@@ -148,7 +148,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: ACM accessibility metadata; a stale description misstated a panel layout.
 - Status: candidate
 - Scope: venue:fse
-- Owner: figure-designer, pre-submission-reviewer
+- Owner: sv-figure-design, sv-review-once
 - Src: note:n07§A.8 FR18
 
 ### FS-07 Data Availability section
@@ -156,7 +156,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Required by the call; the evidence draft first overclaimed what the package recomputed.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:msr:24d8c65
 
 ### FS-08 AI use in methods
@@ -164,7 +164,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Required by the call; undisclosed AI help in gold construction was an open risk in the evidence project.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, paper-writer, pre-submission-reviewer
+- Owner: sv-experiment, sv-write-section, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; note:n08§3
 
 ### FS-09 Anonymous artifact mirror
@@ -172,7 +172,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Author-revealing URLs break the anonymity rules; a rendered project page nearly did after submission.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-02T00:45; arc:chat:group@2026-10-06T05:09
 
 ### FS-10 Third-person self-citation and preprint wording
@@ -180,7 +180,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Stated anonymity rules.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md
 
 ### FS-11 Plain-text abstract in the form
@@ -188,7 +188,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Macros in the form abstract render as raw commands.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:chat:group@2026-10-03T18:37; arc:msr:4af1aff; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-12 Form metadata a day early
@@ -196,7 +196,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Conflict entry took hours on deadline day in the evidence project.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: research-supervisor, pre-submission-reviewer
+- Owner: sv-supervisor-brief, sv-review-once
 - Src: arc:chat:group@2026-10-03T17:28; note:n08§5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-13 Upload early
@@ -204,7 +204,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: The editor and the submission site both failed near the deadline.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: research-supervisor, pre-submission-reviewer
+- Owner: sv-supervisor-brief, sv-review-once
 - Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T23:18; note:n08§5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-14 Citations verified
@@ -212,7 +212,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Fabricated citations are a listed desk-reject cause.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-09-29T11:44
 
 ## Changelog

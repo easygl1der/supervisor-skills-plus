@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- 心智模型图：中心概念 + 三层（核心机制 / 成立条件 / 边界与推论）。status: ok(你答对) / fix(被纠正) / new(新补充) 用于诊断后重画。 -->
+<link rel="stylesheet" href="../../../../../sv-figure-explain/kit/vendor/katex.min.css"><link rel="stylesheet" href="../../../../../sv-figure-explain/kit/vendor/kit.css"><script src="../../../../../sv-figure-explain/kit/vendor/katex.min.js"></script><script src="../../../../../sv-figure-explain/kit/vendor/kit.js"></script>
+<style>#mm{position:relative;width:900px;height:520px}.c,.b,.l{position:absolute;transform:translate(-50%,-50%);text-align:center;border-radius:12px;box-sizing:border-box}
+.c{background:var(--ink);color:#fff;padding:14px 18px;font-size:20px;font-weight:700}.b{background:#fff;border:2.5px solid var(--k);padding:8px 12px;font-weight:700;font-size:16px;color:var(--k)}
+.l{background:#fff;border:1.5px solid #c9ced6;padding:6px 9px;font-size:13px;width:170px;text-wrap:balance}.l.miss{border:1.5px dashed #b8bdc5;color:#8a9099;background:#fafafa}.l.ok{border-color:var(--c3);background:#f0fdf4}.l.fix{border-color:var(--warn);background:#fef2f2}.l.new{border:1.5px dashed var(--c1);background:#eff6ff}
+svg{position:absolute;inset:0}.legend{font-size:12px;color:var(--muted);margin-top:4px}.legend span{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin:0 4px 0 12px}</style></head><body>
+<div id="fig"><div id="mm"><svg id="ln" width="900" height="520"></svg></div><div class="legend" id="lg"></div><div class="caption" id="cap"></div></div>
+<script>
+const CENTER='SDID（你的复述）';
+const CV=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const BRANCHES=[{t:'核心机制',k:CV('--c1'),leaves:[{t:'先拼一个和加州完全一样的对照',s:'fix'},{t:'再做一次 DID',s:'ok'},{t:'时间权重：加大处理后年份',s:'fix'}]},
+ {t:'成立条件',k:CV('--c2'),leaves:[{t:'不再需要平行趋势',s:'fix'}]},
+ {t:'边界与推论',k:CV('--c3'),leaves:[]}];
+// 图例文字：诊断前（画复述）可改成 ['说对了','要纠正','—']
+const LEGEND=['说对了','要纠正','—'];
+const CAPTION='图 1　你的复述画成心智模型：绿 = 说对了，红 = 要纠正，灰虚线 = 复述里没有（模拟复述）';
+const mm=document.getElementById('mm'),W=900,H=520,cx=W/2,cy=H/2;let svg='';const add=(cls,x,y,h,k)=>{const d=document.createElement('div');d.className=cls;d.style.left=x+'px';d.style.top=y+'px';if(k)d.style.setProperty('--k',k);d.innerHTML=tex(h);mm.appendChild(d);};
+add('c',cx,cy,CENTER);const angs=[-90,30,150].map(a=>a*Math.PI/180);
+BRANCHES.forEach((b,i)=>{const a=angs[i],bx=cx+150*Math.cos(a),by=cy+125*Math.sin(a);svg+=`<path d="M${cx},${cy} L${bx},${by}" stroke="${b.k}" stroke-width="4" fill="none"/>`;
+ if(!b.leaves.length)b.leaves=[{t:'（复述里没有）',s:'miss'}];const n=b.leaves.length;b.leaves.forEach((l,j)=>{const la=a+(j-(n-1)/2)*0.42*(i===0?1.5:1),lx=cx+330*Math.cos(la)*1.05,ly=cy+215*Math.sin(la);
+  svg+=`<path d="M${bx},${by} Q${(bx+lx)/2},${by} ${lx},${ly}" fill="none" stroke="${b.k}" stroke-width="2"/>`;add('l '+l.s,lx,ly,l.t);});add('b',bx,by,b.t,b.k);});
+document.getElementById('ln').innerHTML=svg;
+const sw=[['#f0fdf4','1px solid var(--c3)'],['#fef2f2','1px solid var(--warn)'],['#eff6ff','1px dashed var(--c1)']];
+document.getElementById('lg').innerHTML='图例'+LEGEND.map((t,i)=>t==='—'?'':`<span style="background:${sw[i][0]};border:${sw[i][1]}"></span>${t}`).join('');document.getElementById('cap').innerHTML=tex(CAPTION);window.__READY=true;
+</script></body></html>

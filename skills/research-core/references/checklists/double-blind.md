@@ -4,7 +4,7 @@ Items that keep author identity out of everything a reviewer can open: the
 PDF, the artifact, its mirror and its metadata. Items scoped
 `venue:double-anonymous` apply when `research.yaml` sets double-anonymous review.
 
-Run by: pre-submission-reviewer, experiment-workflow
+Run by: sv-review-once, sv-experiment
 
 ## Contents
 1. The paper
@@ -20,7 +20,7 @@ Run by: pre-submission-reviewer, experiment-workflow
 - Why: Breaking anonymity is a desk-reject ground at double-anonymous venues.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: pre-submission-reviewer
+- Owner: sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md
 
 ### DB-02 Self-citations, acknowledgements and preprints
@@ -30,7 +30,7 @@ Run by: pre-submission-reviewer, experiment-workflow
 - Why: Each of these reveals the authors indirectly.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/checklist.md AT3
 
 ## 2. Links and the artifact
@@ -41,7 +41,7 @@ Run by: pre-submission-reviewer, experiment-workflow
 - Why: A link to an author-revealing site breaks anonymity.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: pre-submission-reviewer, experiment-workflow
+- Owner: sv-review-once, sv-experiment
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-10-02T00:45; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md AT2
 
 ### DB-04 Identity search across everything a reviewer can open
@@ -53,7 +53,7 @@ Run by: pre-submission-reviewer, experiment-workflow
   authors and was found only after the deadline.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: pre-submission-reviewer, experiment-workflow
+- Owner: sv-review-once, sv-experiment
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B2; arc:chat:group@2026-10-06T05:09; note:n08§5#12
 
 ### DB-05 README rather than a rendered project page
@@ -62,7 +62,7 @@ Run by: pre-submission-reviewer, experiment-workflow
 - Why: Web pages carry names in templates and metadata that are easy to miss.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:chat:group@2026-10-06T05:09; note:n08§5#13; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### DB-06 Mirror refreshed and re-checked after every change
@@ -73,7 +73,7 @@ Run by: pre-submission-reviewer, experiment-workflow
   publish one.
 - Status: confirmed
 - Scope: venue:double-anonymous
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H8; arc:01-checklist/checklist.md AT2; note:n08§2.7; unverified (co-author origin of the item); user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### DB-07 Artifact name and citation are venue-neutral
@@ -82,7 +82,7 @@ Run by: pre-submission-reviewer, experiment-workflow
 - Why: A venue name in the artifact ties the preprint to the submission.
 - Status: candidate
 - Scope: venue:double-anonymous
-- Owner: experiment-workflow
+- Owner: sv-experiment
 - Src: arc:01-checklist/checklist.md AT4; unverified (chat source outside the archived exports)
 
 ## 3. Private material
@@ -95,5 +95,5 @@ Run by: pre-submission-reviewer, experiment-workflow
   people's work.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, experiment-workflow, pre-submission-reviewer
+- Owner: sv-supervisor-records, sv-experiment, sv-review-once
 - Src: arc:msr:f1c7df8; arc:msr:c8adb43; arc:01-checklist/checklist.md AT7; note:n08§5#8; user:2026-10-13 (promoted: failure had a clear bad outcome)

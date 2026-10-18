@@ -14,7 +14,7 @@ Before drafting or revising a section, list its claims in a ledger
 (`assets/templates/claim-ledger.md`): one row per claim with the exact
 number(s), the scope (population, subset, denominator), the source (script
 and output file, or citation) and the code/data commit. Prose is written from
-the ledger, not the other way round. [src: up:skills/paper-writer/references/evidence-discipline.md; skill:deai-paper-writing; note:n02§11.5] (confirmed)
+the ledger, not the other way round. [src: up:skills/sv-write/references/evidence-discipline.md; skill:deai-paper-writing; note:n02§11.5] (confirmed)
 
 Without a ledger, fluent prose arrives first and the numbers and scope are
 patched in later, if at all. In the evidence project an agreement value

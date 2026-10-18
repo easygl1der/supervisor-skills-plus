@@ -1,6 +1,6 @@
 # ADR 0016: proposal-writer keeps visible gap markers in Draft mode
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner, Claude Code (marker wording)
 
@@ -33,5 +33,5 @@ the sentence (check PW-11).
 - Do not resolve a marker with a citation that was not retrieved.
 
 ## Sources
-`skills/proposal-writer/SKILL.md` (Phase 5 "Draft markers", PW-11),
+`skills/sv-proposal/SKILL.md` (Phase 5 "Draft markers", PW-11),
 `skills/paper-writer/SKILL.md` (zero placeholder tags rule).

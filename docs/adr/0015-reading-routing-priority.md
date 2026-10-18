@@ -1,6 +1,6 @@
 # ADR 0015: Reading and learning requests route by intent, without research.yaml
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner (SPEC item 2), lead agent (routing text in progress)
 
@@ -26,7 +26,7 @@ Project-stage routing applies only when `research.yaml` exists.
 ## Consequences
 - Reading skills work in any directory.
 - The `deep-research` literature-map mode named here is not yet present in
-  `skills/deep-research/` in the working tree.
+  `skills/sv-litreview/` in the working tree.
 
 ## Do not
 - Do not run init for a reading or learning request.

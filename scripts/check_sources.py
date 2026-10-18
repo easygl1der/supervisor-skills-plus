@@ -7,6 +7,7 @@ each citation whose prefix can be resolved locally:
   note:nNN...            notes/NN-*.md exists
   up:<path>              <repo>/<path> exists
   skill:<name>           ~/.claude/skills/<name>, the archive's 03-skills/<name>,
+                         (a name outside this library that resolves nowhere is skipped),
                          or skills/<name> in this repo exists
   arc:msr:<sha>          a patch file *_<sha>.patch under patches-msr-tpa/
   arc:ol:<sha>           a patch file *_<sha>.patch under patches-overleaf/
@@ -33,6 +34,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = Path(os.environ.get("EVIDENCE_ARCHIVE", Path.home() / "Projects" / "supervisor-skills-msr-tpa"))
 LOCAL_SKILLS = Path.home() / ".claude" / "skills"
+# skill: citations are provenance and keep the name the rule came from; names
+# retired by ADR 0021 resolve to the folder that now holds that skill.
+RENAMED = {
+    "paper-writer": "sv-write-section", "intro-drafter": "sv-write-intro",
+    "tech-paper-template": "sv-write-skeleton", "benchmark-paper-template": "sv-write-skeleton",
+    "paper-polish": "sv-write-polish", "deai-writing": "sv-write", "style-mine": "sv-write-style-mine",
+    "pre-submission-reviewer": "sv-review-once", "check-loop": "sv-review-loop",
+    "feedback-to-revision": "sv-feedback", "rebuttal-guidance": "sv-feedback-rebuttal",
+    "research-supervisor": "sv-supervisor", "research-records": "sv-supervisor-records",
+    "lessons-harvest": "sv-supervisor-harvest", "vibe-research-workflow": "research-core",
+    "figure-designer": "sv-figure-design", "drawio-reconstruction": "sv-figure-drawio",
+    "study": "sv-study", "paper-quickread": "sv-quickread", "research-bridge": "sv-study-bridge",
+    "idea-evaluator": "sv-idea", "deep-research": "sv-litreview", "proposal-writer": "sv-proposal",
+    "experiment-workflow": "sv-experiment", "group-beamer": "sv-slides",
+}
 
 SRC_BLOCK = re.compile(r"\[src:\s*([^\]]+)\]")
 SRC_LINE = re.compile(r"^\s*-\s+Src:\s*(.+)$", re.M)
@@ -89,10 +105,15 @@ class Resolver:
             return "ok" if (ROOT / rest).exists() else f"missing upstream path {tok}"
         if kind == "skill":
             name = rest.split("/")[0]
+            name = RENAMED.get(name, name) if not (LOCAL_SKILLS / name).exists() else name
             for base in (LOCAL_SKILLS, ARCHIVE / "03-skills", ROOT / "skills"):
                 if (base / name).exists():
                     return "ok"
-            return f"unknown skill {tok}"
+            if name.startswith("sv-") or name == "research-core" or name in RENAMED:
+                return f"unknown skill {tok}"  # a name of this library must resolve
+            # Provenance from a skill outside this repo (the owner's local skills,
+            # which CI never has and which may since have moved): unverifiable here.
+            return "skip"
         if kind != "arc":
             return "skip"
         if not self.have_archive:

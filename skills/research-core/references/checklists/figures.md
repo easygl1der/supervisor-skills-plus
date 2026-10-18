@@ -4,7 +4,7 @@ Items for figures and tables in any field: clarity, figure and text
 mirroring, what belongs in a figure, where figure numbers come from, and how
 figures are produced. Field profiles add field-specific figure items.
 
-Run by: figure-designer, drawio-reconstruction
+Run by: sv-figure-design, sv-figure-drawio
 
 ## Contents
 1. Clarity
@@ -21,7 +21,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Raster plots and tiny labels are the most common figure complaints.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, pre-submission-reviewer
+- Owner: sv-figure-design, sv-review-once
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md; arc:CF-21@v2
 
 ### FG-02 Self-contained caption
@@ -31,7 +31,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Reviewers look at figures before reading the text.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, paper-polish
+- Owner: sv-figure-design, sv-write-polish
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md; arc:@senior-a-comments:79; arc:MF-21@v2
 
 ### FG-03 Colour is never the only cue
@@ -40,7 +40,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Colour-only figures fail for colour-blind readers and in greyscale print.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer
+- Owner: sv-figure-design
 - Src: skill:tikz-diagram-review; up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md
 
 ### FG-04 Axes, legends and ranges
@@ -49,7 +49,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A misleading axis is read as a misleading claim.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer
+- Owner: sv-figure-design
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md
 
 ### FG-05 Names match the text
@@ -59,7 +59,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A figure that uses other names than the text looks like a different study.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, check-loop
+- Owner: sv-figure-design, sv-review-loop
 - Src: up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md; note:n07§A.8 FR17; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md F6
 
 ### FG-06 No local font shrinking
@@ -69,7 +69,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Local shrinking can break the template rules and makes floats unreadable.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, paper-polish
+- Owner: sv-figure-design, sv-write-polish
 - Src: arc:chat:group@2026-10-01T09:20; arc:chat:group@2026-10-03T11:32; note:n07§A.8 FR9; note:n07§A.8 FR13; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Figure and text mirroring
@@ -81,7 +81,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A senior reviewer reads the overview and the method side by side.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, paper-writer
+- Owner: sv-figure-design, sv-figure-drawio, sv-write-section
 - Src: arc:chat:group@2026-09-29T11:42; arc:msr:9809b8c; arc:msr:b5c0045; arc:MF-01@v2; note:n07§A.8 FR1
 
 ### FG-08 Method text first, overview from the text
@@ -90,7 +90,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Drawing first produces boxes the method never describes.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-writer
+- Owner: sv-figure-design, sv-write-section
 - Src: arc:msr:0f96193; note:n07§A.8 FR2
 
 ### FG-09 One integrated overview
@@ -99,7 +99,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Panels hide the flow between steps.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction
+- Owner: sv-figure-design, sv-figure-drawio
 - Src: arc:MF-03@v2; note:n07§B.5
 
 ### FG-10 Overview reviewed with the method text
@@ -108,7 +108,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: The overview was the most revised figure in the evidence project.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, research-supervisor
+- Owner: sv-figure-design, sv-supervisor-brief
 - Src: arc:CO-08@v2; arc:chat:1on1@2026-09-27T23:21; note:n07§B.5
 
 ## 3. What goes in a figure
@@ -119,7 +119,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A figure for one number wastes space and attention.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-writer
+- Owner: sv-figure-design, sv-write-section
 - Src: arc:MF-05@v2; note:n07§A.8 FR6
 
 ### FG-12 A grid of numbers is a table
@@ -128,7 +128,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Tables and figures have different reading rules and numbering.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-polish
+- Owner: sv-figure-design, sv-write-polish
 - Src: arc:msr:0f96193; arc:msr:405bba7; note:n07§A.8 FR8
 
 ### FG-13 Text, then figure, then table
@@ -137,7 +137,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Readers take the finding from prose and the detail from tables.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, paper-writer
+- Owner: sv-figure-design, sv-write-section
 - Src: arc:chat:1on1@2026-09-29T11:51; arc:MF-15@v2; arc:01-checklist/checklist.md TB5; note:n07§A.8 FR7
 
 ### FG-14 One figure per message
@@ -146,7 +146,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Keeping both versions postpones a decision and costs space.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer
+- Owner: sv-figure-design
 - Src: arc:msr:9809b8c; arc:msr:47221f7; note:n07§A.8 FR10
 
 ### FG-15 The asked comparison is adjacent
@@ -156,7 +156,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Readers compare adjacent marks; distant comparisons are missed.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer
+- Owner: sv-figure-design
 - Src: arc:chat:1on1@2026-09-28T23:29; note:n07§A.8 FR11
 
 ### FG-16 Every measured dimension shown or scoped out
@@ -165,7 +165,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A coded dimension that silently disappears looks like a hidden result.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, check-loop
+- Owner: sv-figure-design, sv-review-loop
 - Src: arc:01-checklist/checklist.md F5; note:n07§B.5; unverified (human origin in chat)
 
 ### FG-17 Introduction figure shows the problem
@@ -175,8 +175,8 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A concrete, failure-revealing example motivates faster than prose.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, intro-drafter
-- Src: arc:chat:1on1@2026-09-28T23:15; arc:ol:ba3f1ee; up:skills/pre-submission-reviewer/SKILL.md; note:n07§A.8 FR21
+- Owner: sv-figure-design, sv-write-intro
+- Src: arc:chat:1on1@2026-09-28T23:15; arc:ol:ba3f1ee; up:skills/sv-review-once/references/procedure.md; note:n07§A.8 FR21
 
 ## 4. Data in figures
 
@@ -188,7 +188,7 @@ Run by: figure-designer, drawio-reconstruction
   reference image and was never traced to data.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, check-loop
+- Owner: sv-figure-design, sv-figure-drawio, sv-review-loop
 - Src: note:n07§A.1; arc:05-figures-tables/sources/drawio/overview-reference-replica/LAYOUT_FINGERPRINT.md; note:n07§A.8 FR3
 
 ### FG-19 Renderer, PDF and caption in sync
@@ -198,7 +198,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Captions edited after the deadline no longer matched their figures.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, experiment-workflow
+- Owner: sv-figure-design, sv-experiment
 - Src: arc:ol:ba3f1ee; arc:msr:836ee75; note:n07§A.8 FR14; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FG-20 Renderers run from the replication package
@@ -208,7 +208,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: A renderer that needs private files cannot be checked by artifact reviewers.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, experiment-workflow
+- Owner: sv-figure-design, sv-experiment
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H9; note:n07§A.7; note:n07§A.8 FR16; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 5. Process and files
@@ -220,7 +220,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: AI raster art carries invented numbers and an AI look.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction
+- Owner: sv-figure-design, sv-figure-drawio
 - Src: arc:msr:e4ebb61; arc:msr:b73f7df; note:n07§A.8 FR4
 
 ### FG-22 No AI-look markers
@@ -230,7 +230,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Reviewers read AI-styled figures the way they read AI-styled prose.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, deai-writing
+- Owner: sv-figure-design, sv-figure-drawio, sv-write-humanize-paper
 - Src: arc:msr:0f96193; arc:MF-04@v2; note:n07§A.8 FR5
 
 ### FG-23 Icons from licensed libraries
@@ -239,7 +239,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Traced icons carry unclear rights and an inconsistent look.
 - Status: confirmed
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction
+- Owner: sv-figure-design, sv-figure-drawio
 - Src: user:2026-10-13; arc:05-figures-tables/sources/drawio/overview-reference-replica/LAYOUT_FINGERPRINT.md
 
 ### FG-24 One source file per figure, drafts recorded
@@ -249,7 +249,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Draft fan-out without a record repeated decisions already made.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, research-records
+- Owner: sv-figure-design, sv-supervisor-records
 - Src: arc:msr:e0ea09b; note:n07§A.7; note:n07§A.8 FR15
 
 ### FG-25 No retired figures, nothing needed is ignored
@@ -258,7 +258,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Both break a clean build from a fresh clone.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, pre-submission-reviewer
+- Owner: sv-figure-design, sv-review-once
 - Src: arc:MF-20@v2; arc:MF-23@v2; note:n07§B.5
 
 ### FG-26 Agent figure plans checked against latest feedback
@@ -268,5 +268,5 @@ Run by: figure-designer, drawio-reconstruction
   had just asked to remove.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, drawio-reconstruction, feedback-to-revision
+- Owner: sv-figure-design, sv-figure-drawio, sv-feedback-revise
 - Src: note:n07§A.8 FR20

@@ -25,3 +25,4 @@ their `docs/adr/`). Format: `skills/research-core/assets/templates/adr-0000-temp
 | [0018](0018-style-intake-and-author-profiles.md) | Style intake through skill-local APIs; author profiles beside venue profiles | accepted | 2026-10-16 |
 | [0019](0019-remove-journal-adapt-stub.md) | Remove the journal-adapt pointer stub | accepted | 2026-10-17 |
 | [0020](0020-group-beamer.md) | group-beamer themes (installed Moloch, vendored SimplePlus, own SYSU-like), overlay ban, records | accepted | 2026-10-17 |
+| [0021](0021-sv-skill-groups.md) | Regroup 26 skills into 12 `sv-` groups with slash-only sub-commands; stop syncing upstream skills | accepted | 2026-10-18 |

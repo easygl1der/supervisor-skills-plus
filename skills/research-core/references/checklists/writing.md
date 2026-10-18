@@ -3,7 +3,7 @@
 Items for prose: framing, structure, terms, numbers in sentences, hedging,
 citations and the de-AI pass. Each item turns a core rule into a check.
 
-Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
+Run by: sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop
 
 ## Contents
 1. Before drafting
@@ -24,8 +24,8 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
   patched in later, if at all.
 - Status: confirmed
 - Scope: core
-- Owner: paper-writer, check-loop
-- Src: up:skills/paper-writer/references/evidence-discipline.md; skill:deai-paper-writing; note:n02§11.5; note:n07§A.1
+- Owner: sv-write-section, sv-review-loop
+- Src: up:skills/sv-write/references/evidence-discipline.md; skill:deai-paper-writing; note:n02§11.5; note:n07§A.1
 
 ### WR-02 Numbers and tables in the manuscript before prose
 - [ ] Check: The copyable numbers and tables a section needs are in the
@@ -34,7 +34,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
   not in front of it.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, experiment-workflow
+- Owner: sv-write-section, sv-experiment
 - Src: arc:04-comms/20260920-msritp-meeting/README.md; note:n08§5#28
 
 ## 2. Framing and structure
@@ -46,7 +46,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
   say why they should care.
 - Status: candidate
 - Scope: core
-- Owner: intro-drafter, paper-writer
+- Owner: sv-write-intro, sv-write-section
 - Src: arc:@senior-a-comments:8-29; arc:CF-01@v2; arc:01-checklist/checklist.md A2
 
 ### WR-04 Research questions in full in the introduction
@@ -55,7 +55,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Readers judge the paper against its questions; they need them early.
 - Status: candidate
 - Scope: core
-- Owner: intro-drafter, paper-writer
+- Owner: sv-write-intro, sv-write-section
 - Src: arc:CF-03@v2; arc:01-checklist/checklist.md A2; note:n07§B.5
 
 ### WR-05 Exemplar for introducing the niche
@@ -65,7 +65,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Venue readers expect a familiar on-ramp to an unfamiliar topic.
 - Status: candidate
 - Scope: core
-- Owner: intro-drafter, deep-research
+- Owner: sv-write-intro, sv-litreview
 - Src: arc:@senior-a-comments:4; arc:CF-04@v2
 
 ### WR-06 Why before how
@@ -74,7 +74,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: A procedure without its reason reads as arbitrary.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: arc:@senior-a-comments:33-50; arc:ol:5ecaf3f; arc:msr:0f96193; note:n06§2.1
 
 ### WR-07 Current content only, outward framing
@@ -84,7 +84,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Reviewers read one version; history belongs in `docs/`.
 - Status: confirmed
 - Scope: core
-- Owner: paper-writer, paper-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: skill:anti-accretive-docs; arc:@senior-a-comments:54-75; arc:ol:5ecaf3f; arc:CF-05@v2
 
 ### WR-08 Results sections follow one shape
@@ -94,7 +94,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: A fixed shape lets reviewers find the finding in seconds.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish
+- Owner: sv-write-section, sv-write-polish
 - Src: arc:@senior-a-comments:104-120; arc:@senior-a-comments:141-157; arc:01-checklist/checklist.md W2
 
 ### WR-09 Paragraphs build on each other
@@ -104,7 +104,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: A listicle structure reads as generated and hides the argument.
 - Status: candidate
 - Scope: core
-- Owner: paper-polish, deai-writing
+- Owner: sv-write-polish, sv-write-humanize-paper
 - Src: arc:CF-22@v2; arc:01-checklist/checklist.md W7; arc:msr:0f96193
 
 ### WR-10 Each caveat once
@@ -113,7 +113,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Repeated caveats dilute the findings and waste pages.
 - Status: candidate
 - Scope: core
-- Owner: paper-polish, check-loop
+- Owner: sv-write-polish, sv-review-loop
 - Src: arc:@senior-a-comments:158-171; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H11
 
 ### WR-11 Page budget filled by priority
@@ -123,7 +123,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Late fills went to low-value material when no priority was set.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish
+- Owner: sv-write-section, sv-write-polish
 - Src: arc:chat:group@2026-10-02T22:44; arc:msr:d0d4c03; note:n08§5#29
 
 ## 3. Terms
@@ -135,7 +135,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Synonym drift makes reviewers think two things are being measured.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish, check-loop
+- Owner: sv-write-section, sv-write-polish, sv-review-loop
 - Src: arc:@senior-a-comments:1-3; arc:AH-01@v2; arc:01-checklist/checklist.md W10; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H19
 
 ### WR-13 Define before use
@@ -143,7 +143,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: A forward dependency forces the reader to guess.
 - Status: confirmed
 - Scope: core
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: skill:writing-shape
 
 ### WR-14 Macros for repeated labels
@@ -152,7 +152,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Hand-typed labels drift; macro spacing bugs are only visible in the PDF.
 - Status: candidate
 - Scope: core
-- Owner: paper-polish, paper-writer
+- Owner: sv-write-polish, sv-write-section
 - Src: arc:chat:group@2026-09-29T12:26; arc:msr:c93ef1f; arc:AH-02@v2; note:n08§5#36
 
 ### WR-15 No internal jargon
@@ -161,7 +161,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Internal names mean nothing to reviewers.
 - Status: candidate
 - Scope: core
-- Owner: paper-polish, check-loop
+- Owner: sv-write-polish, sv-review-loop
 - Src: arc:@advisor-glimpse; arc:ol:e03c20a
 
 ## 4. Numbers and claims
@@ -172,7 +172,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Dense numbers hide the finding.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish
+- Owner: sv-write-section, sv-write-polish
 - Src: arc:@senior-a-comments:79-100; arc:CF-08@v2; arc:01-checklist/checklist.md W3; note:n06§2.3
 
 ### WR-17 Denominator named
@@ -181,7 +181,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: A share without a denominator cannot be checked or compared.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:@senior-a-comments:38-43; note:n07§B.5
 
 ### WR-18 Hedge interpretations, not measurements
@@ -190,8 +190,8 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Hedged facts sound unsure; unhedged interpretations overclaim.
 - Status: confirmed
 - Scope: core
-- Owner: paper-writer, paper-polish, deai-writing
-- Src: skill:humanize-paper; note:n02§10; up:skills/paper-writer/references/verification-checklist.md
+- Owner: sv-write-section, sv-write-polish, sv-write-humanize-paper
+- Src: skill:humanize-paper; note:n02§10; up:skills/sv-write-section/references/verification-checklist.md
 
 ### WR-19 Claims scoped to what was studied
 - [ ] Check: General claims carry scope words (which population, which
@@ -200,7 +200,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Unscoped claims are the first thing a reviewer attacks.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:msr:24d8c65; note:n06§2.6; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H2
 
 ### WR-20 Nothing claimed that was not measured
@@ -210,7 +210,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Reviewers check claims against the method section.
 - Status: confirmed
 - Scope: core
-- Owner: paper-writer, check-loop, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-loop, sv-review-once
 - Src: arc:CF-12@v2; arc:01-checklist/checklist.md W9; arc:msr:9c69675; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### WR-21 Causal words need a causal design
@@ -219,7 +219,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: An observational study cannot carry causal language.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:msr:9c69675; note:n06§2.6
 
 ### WR-22 Results and implications kept apart
@@ -228,7 +228,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: New numbers in implications have no method behind them.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:01-checklist/checklist.md C6; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H4
 
 ### WR-23 Effect-size words match a stated scale
@@ -237,7 +237,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Unanchored adjectives overstate small effects.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: arc:RS-02@v2; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H18
 
 ### WR-24 Novelty claims scoped and stated once
@@ -246,7 +246,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Absolute novelty claims invite a counterexample from a reviewer.
 - Status: candidate
 - Scope: core
-- Owner: intro-drafter, paper-writer
+- Owner: sv-write-intro, sv-write-section
 - Src: arc:msr:9c69675; arc:RW-01@v2; arc:CF-21@v2; arc:01-checklist/checklist.md A3
 
 ## 5. Abstract and conclusion
@@ -258,7 +258,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Reviewers decide on the abstract; a fixed shape keeps it complete.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish
+- Owner: sv-write-section, sv-write-polish
 - Src: arc:chat:group@2026-10-03T19:18; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
 
 ### WR-26 Conclusion answers the question
@@ -268,8 +268,8 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: The reader has read the paper; the conclusion adds the synthesis.
 - Status: confirmed
 - Scope: core
-- Owner: paper-writer, paper-polish
-- Src: up:skills/paper-writer/references/verification-checklist.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
+- Owner: sv-write-section, sv-write-polish
+- Src: up:skills/sv-write-section/references/verification-checklist.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
 
 ### WR-27 Conclusion length
 - [ ] Check: The conclusion is one paragraph, shorter than the abstract, about
@@ -277,7 +277,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: A long conclusion repeats results and costs pages.
 - Status: candidate
 - Scope: core
-- Owner: paper-writer, paper-polish
+- Owner: sv-write-section, sv-write-polish
 - Src: arc:01-checklist/checklist.md A4; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H7; skill:se-paper-writing; unverified (human origin of the rule)
 
 ## 6. Citations
@@ -289,8 +289,8 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Fabricated or hallucinated citations are a desk-reject ground.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer, check-loop
-- Src: arc:10-requirements/venue/fse-2027-requirements.md; up:skills/paper-writer/references/verification-checklist.md; arc:01-checklist/checklist.md R3
+- Owner: sv-review-once, sv-write-section, sv-review-loop
+- Src: arc:10-requirements/venue/fse-2027-requirements.md; up:skills/sv-write-section/references/verification-checklist.md; arc:01-checklist/checklist.md R3
 
 ### WR-29 References checked against an authoritative index
 - [ ] Check: Every bibliography entry was checked against an authoritative
@@ -300,7 +300,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
   wrong reference can trigger a desk reject.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, paper-polish
+- Owner: sv-review-once, sv-write-polish
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:chat:group@2026-09-29T11:44; arc:chat:group@2026-10-03T19:18; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md G4; note:n08§5#9
 
 ### WR-30 Bibliography matches the text both ways
@@ -309,8 +309,8 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: Uncited entries and broken keys are visible formatting errors.
 - Status: confirmed
 - Scope: core
-- Owner: paper-polish, pre-submission-reviewer
-- Src: up:skills/paper-writer/references/verification-checklist.md; arc:01-checklist/checklist.md R5
+- Owner: sv-write-polish, sv-review-once
+- Src: up:skills/sv-write-section/references/verification-checklist.md; arc:01-checklist/checklist.md R5
 
 ## 7. Style and de-AI
 
@@ -323,7 +323,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
   protected content.
 - Status: confirmed
 - Scope: core
-- Owner: deai-writing, paper-polish, check-loop
+- Owner: sv-write-humanize-paper, sv-write-polish, sv-review-loop
 - Src: skill:deai-paper-writing; skill:avoid-ai-writing; skill:humanize-paper; arc:CF-23@v2; note:n02§11.4
 
 ### WR-32 Punctuation bans only from an overlay or venue
@@ -332,7 +332,7 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: They are team or advisor preferences, not core rules.
 - Status: confirmed
 - Scope: core
-- Owner: deai-writing, paper-polish
+- Owner: sv-write-humanize-paper, sv-write-polish
 - Src: user:2026-10-13; note:n02§11.4
 
 ### WR-33 No scaffolding or process preambles
@@ -342,5 +342,5 @@ Run by: paper-writer, intro-drafter, paper-polish, deai-writing, check-loop
 - Why: These are the most visible traces of generated text.
 - Status: confirmed
 - Scope: core
-- Owner: deai-writing, paper-polish, check-loop
-- Src: up:skills/paper-writer/references/verification-checklist.md
+- Owner: sv-write-humanize-paper, sv-write-polish, sv-review-loop
+- Src: up:skills/sv-write-section/references/verification-checklist.md

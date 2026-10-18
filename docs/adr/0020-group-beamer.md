@@ -1,12 +1,12 @@
 # ADR 0020: group-beamer themes, overlays, and records
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-17
 Deciders: owner (open items in `docs/handoff/group-beamer-proposal.md`)
 
 ## Context
 The library had no Beamer skill for group meetings. Step 2 proposed
-`skills/group-beamer/` with Moloch, SimplePlus, a SYSU option, overlay
+`skills/sv-slides/` with Moloch, SimplePlus, a SYSU option, overlay
 policy, and research-records accumulation. TeX is already on this Mac
 (TeX Live 2026: latexmk, moloch, beamertheme-simpleplus, ctex; poppler
 `pdftoppm`). The repository licence is CC-BY-NC-SA-4.0; Moloch is

@@ -1,13 +1,13 @@
 ---
 name: research-core
 description: >-
-  Shared foundation for every research skill in this library: core rules that
-  hold in any field, field and venue profiles, checklists with sourced items,
-  and project templates such as research.yaml, STATUS.md and guidance records.
-  Use when another skill says to load research-core, when setting up a research
-  project, or when a rule, profile or checklist item needs to be looked up,
-  added or corrected.
+  Shared foundation loaded by every sv- skill: core rules that hold in any
+  field, field and venue profiles, sourced checklists, the AI-collaboration
+  rules, and project templates such as research.yaml and STATUS.md. Not a
+  slash command. Use when another skill says to load research-core, or when
+  a rule, profile or checklist item needs looking up or correcting.
 license: CC-BY-NC-SA-4.0
+user-invocable: false
 ---
 
 # Research Core
@@ -39,16 +39,16 @@ Projects add a fourth layer of their own in the project repo (decisions in
 
 ## When NOT to use this skill
 
-- To draft, polish or review text: use `paper-writer`, `paper-polish`,
-  `check-loop` or `pre-submission-reviewer`, which load this skill themselves.
+- To draft, polish or review text: use `sv-write-section`, `sv-write-polish`,
+  `sv-review-loop` or `sv-review-once`, which load this skill themselves.
 - To learn new rules from a finished project or from expert notes: use
-  `lessons-harvest`, which proposes edits to this skill.
+  `sv-supervisor-harvest`, which proposes edits to this skill.
 
 ## Step 0: Resolve the project context
 
 1. Find `research.yaml` at the project root. If it is missing, offer to create
    it from `assets/templates/research.yaml` (or hand off to
-   `research-supervisor`, which interviews the user).
+   `sv-supervisor`, which interviews the user).
 2. Read `field`, `venue`, `paper_type`, `stage`, `review`, `style.overlays`
    and `people`.
 3. Load, in this order:
@@ -70,13 +70,14 @@ See: references/core/precedence.md
 |---|---|
 | `references/core/claims-evidence.md` | Claim ledger, scope words, hedging, numbers with sources |
 | `references/core/body-text.md` | Anti-accretive body text, why before how, terms, definitions |
-| `references/core/deai.md` | Short contract for removing AI tells; the full method is in `deai-writing` |
+| `references/core/deai.md` | Short contract for removing AI tells; the full method is in the `sv-write-humanize-*` sub-commands |
 | `references/core/feedback-loop.md` | Comment IDs, one change per comment, verify the diff, never hide notes |
 | `references/core/figures.md` | Figure rules that hold in every field |
 | `references/core/records.md` | Records outside the paper, sources of truth, sync rules |
 | `references/core/integrity.md` | Agreement numbers, frozen gold, pre-set bars, AI-use disclosure, traceable numbers |
 | `references/core/precedence.md` | What wins when rules conflict; how to cite sources |
 | `references/core/inputs-mineru.md` | PDF input only through MinerU; routes; stop on failure |
+| `references/core/ai-collaboration.md` | Human-in-charge rules for AI-assisted coding, figures and writing (formerly the `research-core` (`core/ai-collaboration.md`) skill); phase guides and tool matrix in `references/vibe/` |
 
 See: references/core/claims-evidence.md
 See: references/core/body-text.md
@@ -86,6 +87,7 @@ See: references/core/figures.md
 See: references/core/records.md
 See: references/core/integrity.md
 See: references/core/inputs-mineru.md
+See: references/core/ai-collaboration.md
 
 ## Field profiles
 
@@ -123,15 +125,15 @@ not a source.
 
 | File | Run by |
 |---|---|
-| `references/checklists/master.md` | research-supervisor, pre-submission-reviewer |
-| `references/checklists/writing.md` | paper-writer, intro-drafter, paper-polish, deai-writing, check-loop |
-| `references/checklists/figures.md` | figure-designer, drawio-reconstruction |
-| `references/checklists/threats.md` | idea-evaluator, pre-submission-reviewer |
-| `references/checklists/double-blind.md` | pre-submission-reviewer, experiment-workflow |
-| `references/checklists/artifact.md` | experiment-workflow, pre-submission-reviewer |
-| `references/checklists/venue-submission.md` | pre-submission-reviewer |
-| `references/checklists/integrity.md` | experiment-workflow, pre-submission-reviewer, check-loop |
-| `references/checklists/records.md` | research-records, research-supervisor, feedback-to-revision |
+| `references/checklists/master.md` | sv-supervisor, sv-review-once |
+| `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop |
+| `references/checklists/figures.md` | sv-figure-design, sv-figure-drawio |
+| `references/checklists/threats.md` | sv-idea, sv-review-once |
+| `references/checklists/double-blind.md` | sv-review-once, sv-experiment |
+| `references/checklists/artifact.md` | sv-experiment, sv-review-once |
+| `references/checklists/venue-submission.md` | sv-review-once |
+| `references/checklists/integrity.md` | sv-experiment, sv-review-once, sv-review-loop |
+| `references/checklists/records.md` | sv-supervisor-records, sv-supervisor, sv-feedback-revise |
 
 See: references/checklists/master.md
 
@@ -169,7 +171,7 @@ one project.
   more projects, or when a published guide or the venue states them. Rules
   contradicted later become `deprecated` with the reason; they are not
   deleted.
-- `lessons-harvest` proposes changes on a `learn/<source>` branch; the user
+- `sv-supervisor-harvest` proposes changes on a `learn/<source>` branch; the user
   approves before merge.
 - After editing, run `python scripts/lint_skills.py` and
   `python scripts/check_checklists.py` from the repo root.

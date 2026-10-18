@@ -1,6 +1,6 @@
 # ADR 0009: HTML (SVG plus KaTeX) is the default diagram format
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18: the kit and visuals.md now live in skills/sv-figure-explain/)
 Date: 2026-10-16
 Deciders: owner (SPEC D9 to D12), Claude Code (template set)
 
@@ -33,5 +33,5 @@ derivations, algorithms, processes. GIF is an export of a stepper.
 - Do not use Manim. Do not use a stepper for unordered content.
 
 ## Sources
-`skills/study/references/visuals.md` (intro, §1, §5), `skills/study/SKILL.md` §4,
-`skills/study/kit/templates/`, SPEC D9, D10, D11, D12.
+`skills/sv-figure-explain/references/visuals.md` (intro, §1, §5), `skills/sv-study/SKILL.md` §4,
+`skills/sv-figure-explain/kit/templates/`, SPEC D9, D10, D11, D12.

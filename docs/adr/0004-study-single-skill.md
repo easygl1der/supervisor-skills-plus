@@ -1,6 +1,6 @@
 # ADR 0004: study is one skill with submodules in references/
 
-Status: accepted
+Status: accepted; partly superseded by ADR 0021 (the visual kit, visuals.md and visual-scenarios.md moved to sv-figure-explain) (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-16
 Deciders: owner (SPEC D3, D6), Claude Code (submodule split)
 
@@ -19,7 +19,7 @@ SKILL.md.
    loads on demand from `references/`.
 
 ## Decision
-Option 3. `skills/study/SKILL.md` detects paper or book mode itself and points
+Option 3. `skills/sv-study/SKILL.md` detects paper or book mode itself and points
 with `See:` lines to `references/protocol.md`, `diagnosis.md`,
 `learner-profile.md`, `session-save.md`, `paper-mode.md`, `book-mode.md`,
 `options.md` (socratic, feynman, self-test switches), `visuals.md`,
@@ -33,5 +33,5 @@ with `See:` lines to `references/protocol.md`, `diagnosis.md`,
 - Do not split a mode into its own skill; add a reference file instead.
 
 ## Sources
-`skills/study/SKILL.md`, `skills/study/references/`,
+`skills/sv-study/SKILL.md`, `skills/sv-study/references/`,
 `docs/handoff/supervisor-plus-reading-upgrade-SPEC.md` (D3, D6, item 5).

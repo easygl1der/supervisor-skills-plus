@@ -1,59 +1,32 @@
 # Supervisor-Skills
 
-> A PhD-level academic research methodology distilled into eleven structured skills, covering research discovery, idea evaluation, paper planning, drafting, polishing, figure design and reconstruction, pre-submission review, and AI-assisted research workflow. Usable as a standalone Chinese curriculum at `handbook/`, as an English mirror at `handbook-en/`, or as Agent Skills under `skills/`.
+> A PhD-level academic research methodology distilled into twelve skill groups, covering project records, reading and study, literature review, idea evaluation, proposals, experiments, drafting and polishing, figures, review, feedback and group-meeting slides. Usable as a standalone Chinese curriculum at `handbook/`, as an English mirror at `handbook-en/`, or as Agent Skills under `skills/`.
 
 Target audience: researchers writing papers for NeurIPS, ICML, ICLR, VLDB, SIGMOD, KDD, ACL, EMNLP, CVPR, and similar top venues.
 
 ## Install
 
-Paste the following prompt into your AI assistant:
-
-```
-Help me install every skill under the skills/ directory from https://github.com/HKUSTDial/Supervisor-Skills. Treat each directory containing SKILL.md as a separate skill; do not install the repository root as one skill. If you are Codex, use $skill-installer.
-```
-
-To install only Draw.io reconstruction:
-
-```
-Use $skill-installer to install https://github.com/HKUSTDial/Supervisor-Skills/tree/main/skills/drawio-reconstruction.
-```
+This fork installs from a local clone; see [INSTALL.md](INSTALL.md) (agent-sync links or `scripts/install.sh`).
 
 See [README.md](README.md) (Chinese) or [README.en.md](README.en.md) for full details.
 
-## Skills (v2.1.0)
+## Skills
 
-Eleven anchor skills under `skills/` cover the full paper lifecycle.
+Twelve groups (ADR 0021). Each `sv-<group>` entry routes to slash-only sub-commands `sv-<group>-<name>`; `research-core` holds the shared rules. Guide: [skills/README.en.md](skills/README.en.md).
 
-- [deep-research](skills/deep-research/SKILL.md): survey-grade literature investigation with multi-perspective search, per-citation verification, MECE synthesis, and a report that answers explicit research questions.
-- [idea-evaluator](skills/idea-evaluator/SKILL.md): scores a research idea on the five-dimension framework (Higher / Faster / Stronger / Cheaper / Broader) plus lifecycle-capability matching, fatal-flaws audit, and paradigm-shift probe; non-STEM ideas route to substitute frameworks.
-- [vibe-research-workflow](skills/vibe-research-workflow/SKILL.md): Vibe Coding, Vibe Figure, Vibe Writing tool choice and six behavioral rules for AI-assisted research.
-- [tech-paper-template](skills/tech-paper-template/SKILL.md): technical-paper thinking table with four self-consistency checks and Technique vs New Problem positioning.
-- [intro-drafter](skills/intro-drafter/SKILL.md): six paragraphs of Introduction prose from the six-paragraph flowchart, with retrieval-verified citations; outline mode on request.
-- [paper-writer](skills/paper-writer/SKILL.md): evidence-gated drafting of any paper section or a full manuscript; every claim traces to the author's materials or verified retrieval, citations pass an independent verification ladder.
-- [benchmark-paper-template](skills/benchmark-paper-template/SKILL.md): benchmark-paper five-pillar audit, six-part Introduction logic chain, Section 2-7 skeleton, and pre-submission checklist.
-- [paper-polish](skills/paper-polish/SKILL.md): meaning-preserving language polish, AI-tone removal, claim calibration, and Chinese-to-English rewriting, with meaning-risk edits flagged.
-- [figure-designer](skills/figure-designer/SKILL.md): paradigm selection and quality audit for motivated-example, solution-overview, and experimental-results figures.
-- [drawio-reconstruction](skills/drawio-reconstruction/SKILL.md): rebuilds reference images, paper figures, and screenshots into editable Draw.io files with PNG previews and visual audits.
-- [pre-submission-reviewer](skills/pre-submission-reviewer/SKILL.md): paradigm-aware reviewer self-check covering macro logic, writing detail, grammar, LaTeX format, and figure quality, with retrieval-grounded novelty and citation-completeness checks.
-
-Supervisor-Skills Plus (private fork) adds:
-
-- [research-supervisor](skills/research-supervisor/SKILL.md): project setup, stage detection, routing.
-- [research-core](skills/research-core/SKILL.md): core rules, field and venue profiles, sourced checklists, templates.
-- [experiment-workflow](skills/experiment-workflow/SKILL.md): freeze, gold, versions, runs, traceable numbers, replication artifact.
-- [style-mine](skills/style-mine/SKILL.md): style and venue profiles from exemplar papers.
-- [deai-writing](skills/deai-writing/SKILL.md): AI-tell removal by intent.
-- [check-loop](skills/check-loop/SKILL.md): bounded research-fit, style and language check loop.
-- [feedback-to-revision](skills/feedback-to-revision/SKILL.md): comment IDs, verified changes, response tables, expert guidance records.
-- [research-records](skills/research-records/SKILL.md): STATUS, ADRs, logs, sources of truth, sync guard.
-- [lessons-harvest](skills/lessons-harvest/SKILL.md): grows research-core from finished projects and expert notes.
-- [rebuttal-guidance](skills/rebuttal-guidance/SKILL.md): rebuttal and response letters (upstream skill, listed here for completeness).
-- [paper-quickread](skills/paper-quickread/SKILL.md): nine-section quick read of one paper; `--style` style card. No research.yaml needed.
-- [study](skills/study/SKILL.md): understanding-first study of papers, textbook chapters and concepts with restatement, diagnosis, a learner vault and an HTML visual kit. No research.yaml needed.
-- [research-bridge](skills/research-bridge/SKILL.md): from a studied paper or concept to the current project, with a minimal validation experiment.
-- [proposal-writer](skills/proposal-writer/SKILL.md): thesis proposals, research plans, grant applications.
-- deep-research literature-map mode: evolution map, comparison table and gaps from quick-read cards.
-- [group-beamer](skills/group-beamer/SKILL.md): Beamer decks for group meetings (weekly report or critical paper talk).
+- [sv-supervisor](skills/sv-supervisor/SKILL.md): session brief and routing, project start-up, records (STATUS, TODO, ADRs, logs), lessons into research-core.
+- [sv-quickread](skills/sv-quickread/SKILL.md): nine-section five-minute card of one paper; optional style card.
+- [sv-study](skills/sv-study/SKILL.md): understanding-first study of a concept, paper or chapter with restatement and diagnosis; figures, drills, bridge to the project.
+- [sv-idea](skills/sv-idea/SKILL.md): full idea evaluation or the fatal-flaws gate.
+- [sv-litreview](skills/sv-litreview/SKILL.md): survey-grade literature review with verified citations, or a map of papers already read.
+- [sv-proposal](skills/sv-proposal/SKILL.md): thesis proposals (kaiti), grant applications, research statements.
+- [sv-experiment](skills/sv-experiment/SKILL.md): frozen inputs, runs log, traceable numbers, replication artifact.
+- [sv-write](skills/sv-write/SKILL.md): skeleton, Introduction, sections, polish, Chinese-to-English, critique, de-AI by scenario, venue style.
+- [sv-figure](skills/sv-figure/SKILL.md): figure design, draw.io reconstruction, code plots, TikZ, HTML, posters, explanatory figures.
+- [sv-review](skills/sv-review/SKILL.md): read-only pre-submission audit or a bounded multi-round check.
+- [sv-feedback](skills/sv-feedback/SKILL.md): tracked revisions from comments, expert guidance records, rebuttal plans.
+- [sv-slides](skills/sv-slides/SKILL.md): Beamer decks for group meetings: weekly report or paper talk.
+- [research-core](skills/research-core/SKILL.md): core rules, field and venue profiles, sourced checklists, AI-collaboration rules, project templates.
 
 ## Reader curriculum
 

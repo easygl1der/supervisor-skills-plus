@@ -1,6 +1,8 @@
 # DESIGN: Supervisor-Skills Plus
 
 Status: draft v1 for discussion (Phase 3). Nothing here is implemented yet.
+Skill names below are the pre-ADR-0021 names; the current layout and the old-to-new map are in `docs/adr/0021-sv-skill-groups.md`.
+Skill names below are the pre-ADR-0021 names; the current layout and the old-to-new map are in `docs/adr/0021-sv-skill-groups.md`.
 Inputs: `notes/01`–`notes/08`. Evidence citations use the formats in `notes/03-archive-map.md` §4 (`msr:<sha>`, `ol:<sha>`, `res:<sha>`, `chat:group@<ts>`, `<file>:<line>`, `<ID>@v2`) plus `[nNN §x]` for a note section. Roles, never names: Student, Senior co-author A, Senior co-author B, Advisor (relayed).
 
 ## Contents

@@ -39,7 +39,7 @@ measured from exemplars.>
 
 ## Known disagreements
 <Where sources or venues disagree, and how it is decided (usually per venue
-via style-mine).>
+via sv-write-style-mine).>
 
 ## Unknown
 <Questions with no source yet. Do not guess.>

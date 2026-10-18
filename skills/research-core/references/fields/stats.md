@@ -72,7 +72,7 @@ agree.
   proportionate. [src: guide:AJS/joe-data-analysis@932eb23; guide:AJS/jbes-data-analysis@932eb23] (candidate)
 
 ### Method block for quick reads
-When paper-quickread or study summarises a statistics paper on one page, the
+When sv-quickread or study summarises a statistics paper on one page, the
 method block states, in this order:
 - Model: the data-generating setting, the target parameter or functional,
   and the estimator or test. [src: guide:AJS/jbes-identification-strategy@932eb23] (candidate)
@@ -177,7 +177,7 @@ method block states, in this order:
 - Why: Unverifiable high-level conditions can make a theorem trivial.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-writer, pre-submission-reviewer, check-loop
+- Owner: sv-write-section, sv-review-once, sv-review-loop
 - Src: guide:AJS/joe-identification-strategy@932eb23; guide:AJS/aistats-writing-style@932eb23
 
 ### ST-02 Full asymptotic chain
@@ -187,7 +187,7 @@ method block states, in this order:
   justified.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### ST-03 Favourable and stressing DGPs
@@ -196,7 +196,7 @@ method block states, in this order:
 - Why: A single favourable design proves nothing about usability.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: guide:AJS/ecta-robustness@932eb23; guide:AJS/joe-data-analysis@932eb23
 
 ### ST-04 Competitor on identical DGPs
@@ -205,7 +205,7 @@ method block states, in this order:
 - Why: Improvement is unquantified without the incumbent.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, check-loop
+- Owner: sv-experiment, sv-review-loop
 - Src: guide:AJS/joe-data-analysis@932eb23; guide:AJS/jbes-data-analysis@932eb23
 
 ### ST-05 Size before power
@@ -214,7 +214,7 @@ method block states, in this order:
 - Why: Power of a size-distorted test is not meaningful.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, paper-writer, check-loop
+- Owner: sv-experiment, sv-write-section, sv-review-loop
 - Src: guide:AJS/joe-tables-figures@932eb23; guide:AJS/ecta-robustness@932eb23
 
 ### ST-06 Monte Carlo precision reported
@@ -223,7 +223,7 @@ method block states, in this order:
 - Why: Otherwise a size of 0.06 cannot be told apart from 0.05.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, check-loop
+- Owner: sv-experiment, sv-review-loop
 - Src: guide:AJS/ecta-robustness@932eb23; guide:AJS/jbes-data-analysis@932eb23
 
 ### ST-07 Self-contained simulation tables
@@ -232,7 +232,7 @@ method block states, in this order:
 - Why: Referees read and recompute simulation tables on their own.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-writer, pre-submission-reviewer
+- Owner: sv-write-section, sv-review-once
 - Src: guide:AJS/ecta-tables-figures@932eb23; guide:AJS/joe-tables-figures@932eb23
 
 ### ST-08 Tuning sensitivity shown
@@ -241,7 +241,7 @@ method block states, in this order:
 - Why: Cherry-picked tuning hides fragility.
 - Status: candidate
 - Scope: field:st
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: guide:AJS/ecta-robustness@932eb23; guide:AJS/joe-data-analysis@932eb23
 
 ### ST-09 Quick-read method block complete
@@ -252,7 +252,7 @@ method block states, in this order:
   applies to their data.
 - Status: candidate
 - Scope: field:st
-- Owner: paper-quickread, study
+- Owner: sv-quickread-card, sv-study
 - Src: guide:AJS/joe-identification-strategy@932eb23; guide:AJS/joe-data-analysis@932eb23
 
 ## Known disagreements
@@ -261,7 +261,7 @@ method block states, in this order:
   statistics papers often fold this into the model definition or speak of
   identifiability and do not use the word for research design. Do not
   import the econometric section heading by default; decide per venue via
-  style-mine. [src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23] (candidate)
+  sv-write-style-mine. [src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23] (candidate)
 - How much empirical application is required: JBES expects a substantive
   application, the Journal of Econometrics treats it as an illustration, and
   AISTATS values a focused simulation over extra datasets.
@@ -274,7 +274,7 @@ method block states, in this order:
 - JASA, JRSSB, Annals of Statistics and Biometrika have no AJS skills.
   Their conventions (paper structure, length of simulation sections,
   theorem style, reproducibility requirements) need the 5 to 10 exemplar
-  route via style-mine (`lessons-harvest --new-field stats`).
+  route via sv-write-style-mine (`sv-supervisor-harvest --new-field stats`).
 - Bayesian methodology conventions (prior sensitivity, computation
   diagnostics): no source read.
 - Typical section lengths: not measured from exemplars.

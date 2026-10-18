@@ -18,10 +18,10 @@ are not repeated here.
 ## Sources
 1. Upstream handbook: `handbook-en/01_Preliminary/1.1`, `03_Paper_Writing/3.1`
    to `3.5`, `04_Scientific_Plotting/4.1` to `4.4`, `06_Case_Studies/6.1` to `6.3`.
-2. Upstream skills with references: tech-paper-template, benchmark-paper-
-   template, intro-drafter, paper-writer, pre-submission-reviewer,
-   figure-designer, idea-evaluator, rebuttal-guidance.
-3. Owner skill `style-mine`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
+2. Upstream skills with references: sv-write-skeleton, benchmark-paper-
+   template, sv-write-intro, sv-write-section, sv-review-once,
+   sv-figure-design, sv-idea, sv-feedback-rebuttal.
+3. Owner skill `sv-write-style-mine`, base rules `ml_cv_nlp.md` (ML/CV/NLP venues).
 4. Upstream map of AI/ML assumptions: `notes/01-upstream-map.md` §4 to §5.
 5. Exemplar papers analysed by the handbook case studies (Intro analyses
    only): Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026). Full
@@ -30,21 +30,21 @@ are not repeated here.
 ## Paper types
 - Technique paper: a new method for a known problem; the main axis is the
   key idea or mechanism and the goal takes one sentence.
-  [src: up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md; up:skills/tech-paper-template/SKILL.md] (confirmed)
+  [src: up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md; up:skills/sv-write-skeleton/references/technique.md] (confirmed)
 - New problem or new setting paper: the problem definition is itself a
   contribution; the key idea supports why the definition is reasonable.
   [src: up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md; up:handbook-en/06_Case_Studies/6.3_vldb2026-lead-analysis.md] (confirmed)
 - Benchmark or evaluation paper: the contribution is a gap in existing
   benchmarks, a construction pipeline, an evaluation framework and empirical
-  findings; route it to benchmark-paper-template, not the technique template.
-  [src: up:skills/benchmark-paper-template/SKILL.md; up:handbook-en/03_Paper_Writing/3.4_benchmark-paper-template.md] (confirmed)
+  findings; route it to sv-write-skeleton, not the technique template.
+  [src: up:skills/sv-write-skeleton/references/benchmark.md; up:handbook-en/03_Paper_Writing/3.4_benchmark-paper-template.md] (confirmed)
 
 ## Typical structure
 - Technique paper logic chain: background, at most three limitations of
   existing methods, key idea or goal, at most three challenges, one method
   module per challenge, three or four contributions each mapped to a
   section. Fix a broken link in the chain before drafting.
-  [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/tech-paper-template/SKILL.md] (confirmed)
+  [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/sv-write-skeleton/references/technique.md] (confirmed)
 - Abstract in five sentences: problem and significance, why it is unsolved,
   challenges of the problem (not of the method), method matched to the
   challenges, results on real datasets with concrete numbers and a code
@@ -53,20 +53,20 @@ are not repeated here.
   condensed limitations, challenges, method summary matched to the
   challenges, results with numbers, contributions matched to challenges.
   Paragraphs run about 100 to 250 words each.
-  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/intro-drafter/SKILL.md] (confirmed)
+  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/sv-write-intro/references/procedure.md] (confirmed)
 - Problem formulation goes words, then formal definition, then an example.
   A paper solves one problem. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - Method section runs overview, workflow, then components; complex
   components get their own subsection; subsections are ordered from the
   strongest novelty to the weakest. Known techniques get minimal space.
-  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/pre-submission-reviewer/references/section-guides.md] (confirmed)
+  [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; up:skills/sv-review-once/references/section-guides.md] (confirmed)
 - Experiments run setup, end-to-end comparison against all baselines,
   further comparisons (scalability, model size), ablation, then analysis.
   [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine] (confirmed)
 - Benchmark papers follow gap, benchmark, evaluation, insights,
   opportunities, with Figure 1 a running example, Table 1 a comparison with
   at least five benchmarks, and Figure 2 the construction pipeline.
-  [src: up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
+  [src: up:skills/sv-write-skeleton/references/checklist.md] (confirmed)
 - Related Work goes second to last when the paper can be read without it,
   and in Section 2 only when the method builds on that work.
   [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
@@ -80,9 +80,9 @@ are not repeated here.
   [src: up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - Baselines must be strong and current; a baseline older than about twelve
   months against an active benchmark is a fatal flaw at idea stage.
-  [src: up:skills/idea-evaluator/references/fatal-flaws.md; up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md] (confirmed)
+  [src: up:skills/sv-idea/references/fatal-flaws.md; up:handbook-en/01_Preliminary/1.1_how-to-evaluate-paper-quality.md] (confirmed)
 - Every proposed component is justified by an ablation (All, without A,
-  without B, without C). [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/pre-submission-reviewer/references/section-guides.md] (confirmed)
+  without B, without C). [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; up:skills/sv-review-once/references/section-guides.md] (confirmed)
 - DB community: improvement thresholds of at least 50% in performance or
   10% in accuracy are treated as ideal. Do not apply these figures to ML
   venues. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
@@ -92,7 +92,7 @@ are not repeated here.
   Conclusion in present perfect.
   [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - Without reported results, the Introduction never says "we achieved" or
-  "we demonstrated". [src: up:skills/intro-drafter/SKILL.md] (confirmed)
+  "we demonstrated". [src: up:skills/sv-write-intro/references/procedure.md] (confirmed)
 - Active voice with "we"; intuition before formalism; contributions as
   delivered facts, not intentions; justify non-obvious design choices
   ("we use X instead of Y because"). [src: skill:style-mine] (confirmed)
@@ -103,7 +103,7 @@ are not repeated here.
 ## Citation norms
 - Numeric citations by first appearance; a six-paragraph Introduction
   typically carries 15 to 25 verified references.
-  [src: up:skills/intro-drafter/SKILL.md] (confirmed)
+  [src: up:skills/sv-write-intro/references/procedure.md] (confirmed)
 - Cite the three to five most relevant papers per claim, not ten or more.
   [src: skill:style-mine] (confirmed)
 - DB community: take BibTeX from DBLP and use venue abbreviations (SIGMOD,
@@ -128,7 +128,7 @@ are not repeated here.
   [src: up:handbook-en/04_Scientific_Plotting/4.3_experimental-results-figure.md] (confirmed)
 - Main results table lists all baselines and all metrics with the best
   result in bold (benchmarks: best and second best marked).
-  [src: skill:style-mine; up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
+  [src: skill:style-mine; up:skills/sv-write-skeleton/references/checklist.md] (confirmed)
 
 ## Rigor and threats
 - Setup names at least three real datasets (DB-lab rule), the metrics, the
@@ -136,21 +136,21 @@ are not repeated here.
   hardware and seeds. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine] (confirmed)
 - Tune every baseline with the same effort and its best known
   configuration; document the effort.
-  [src: up:skills/benchmark-paper-template/references/experiments.md] (confirmed)
+  [src: up:skills/sv-write-skeleton/references/experiments.md] (confirmed)
 - Non-deterministic runs report mean and standard deviation over repeated
   runs, and the decoding temperature; add significance tests where they
-  apply. [src: up:skills/benchmark-paper-template/references/experiments.md; up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
+  apply. [src: up:skills/sv-write-skeleton/references/experiments.md; up:skills/sv-write-skeleton/references/checklist.md] (confirmed)
 - Report secondary metrics (latency, cost) beside accuracy, and say where
   the method fails. [src: skill:style-mine; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md] (confirmed)
 - LLM-as-judge scores are validated against human ratings before use.
-  [src: up:skills/benchmark-paper-template/references/benchmark-design.md] (confirmed)
+  [src: up:skills/sv-write-skeleton/references/benchmark-design.md] (confirmed)
 - Document how training and prompt contamination of evaluation data is
-  prevented. [src: up:skills/benchmark-paper-template/references/benchmark-design.md] (confirmed)
+  prevented. [src: up:skills/sv-write-skeleton/references/benchmark-design.md] (confirmed)
 - Benchmark papers state a licence, a datasheet, hosting, ethics and a
-  maintenance plan. [src: up:skills/benchmark-paper-template/references/checklist.md] (confirmed)
+  maintenance plan. [src: up:skills/sv-write-skeleton/references/checklist.md] (confirmed)
 - Effectiveness claims require results from real runs; planned numbers
   never appear as results (evidence gates D0 to D5).
-  [src: up:skills/paper-writer/references/evidence-discipline.md] (confirmed)
+  [src: up:skills/sv-write/references/evidence-discipline.md] (confirmed)
 
 ## Checklist additions
 
@@ -160,8 +160,8 @@ are not repeated here.
 - Why: Each type puts the contribution in a different place.
 - Status: confirmed
 - Scope: field:ml
-- Owner: tech-paper-template, intro-drafter, benchmark-paper-template
-- Src: up:skills/tech-paper-template/SKILL.md; up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md
+- Owner: sv-write-skeleton, sv-write-intro
+- Src: up:skills/sv-write-skeleton/references/technique.md; up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md
 
 ### ML-02 Challenge to module mapping
 - [ ] Check: Each stated challenge (at most three) maps to one method module
@@ -169,8 +169,8 @@ are not repeated here.
 - Why: Upstream rates every break in this chain as critical.
 - Status: confirmed
 - Scope: field:ml
-- Owner: tech-paper-template, intro-drafter, pre-submission-reviewer
-- Src: up:skills/tech-paper-template/SKILL.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
+- Owner: sv-write-skeleton, sv-write-intro, sv-review-once
+- Src: up:skills/sv-write-skeleton/references/technique.md; up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md
 
 ### ML-03 Current, fairly tuned baselines
 - [ ] Check: Baselines include the strongest recent result on each
@@ -178,8 +178,8 @@ are not repeated here.
 - Why: Weak or under-tuned baselines are a fatal flaw.
 - Status: confirmed
 - Scope: field:ml
-- Owner: idea-evaluator, experiment-workflow, pre-submission-reviewer
-- Src: up:skills/idea-evaluator/references/fatal-flaws.md; up:skills/benchmark-paper-template/references/experiments.md
+- Owner: sv-idea, sv-experiment, sv-review-once
+- Src: up:skills/sv-idea/references/fatal-flaws.md; up:skills/sv-write-skeleton/references/experiments.md
 
 ### ML-04 Implementation details for replication
 - [ ] Check: Datasets, metrics, optimizer, learning rate, hardware, seeds
@@ -187,8 +187,8 @@ are not repeated here.
 - Why: Missing hyperparameters block reproduction.
 - Status: confirmed
 - Scope: field:ml
-- Owner: experiment-workflow, paper-writer, check-loop
-- Src: skill:style-mine; up:skills/benchmark-paper-template/references/experiments.md
+- Owner: sv-experiment, sv-write-section, sv-review-loop
+- Src: skill:style-mine; up:skills/sv-write-skeleton/references/experiments.md
 
 ### ML-05 Variance reported
 - [ ] Check: Non-deterministic results show mean and standard deviation over
@@ -196,8 +196,8 @@ are not repeated here.
 - Why: Single runs cannot carry a comparison.
 - Status: confirmed
 - Scope: field:ml
-- Owner: experiment-workflow, pre-submission-reviewer
-- Src: up:skills/benchmark-paper-template/references/checklist.md
+- Owner: sv-experiment, sv-review-once
+- Src: up:skills/sv-write-skeleton/references/checklist.md
 
 ### ML-06 Motivated example figure
 - [ ] Check: Figure 1 shows a real running example and the failure of
@@ -205,7 +205,7 @@ are not repeated here.
 - Why: It tells the reviewer the problem in 30 seconds.
 - Status: confirmed
 - Scope: field:ml
-- Owner: figure-designer, intro-drafter
+- Owner: sv-figure-design, sv-write-intro
 - Src: up:handbook-en/04_Scientific_Plotting/4.1_motivated-example-figure.md; up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md
 
 ### ML-07 Honest results plots
@@ -214,7 +214,7 @@ are not repeated here.
 - Why: Misleading axes cost reviewer trust.
 - Status: confirmed
 - Scope: field:ml
-- Owner: figure-designer
+- Owner: sv-figure-design
 - Src: up:handbook-en/04_Scientific_Plotting/4.3_experimental-results-figure.md; up:handbook-en/04_Scientific_Plotting/4.4_plotting-checklist-and-tools.md
 
 ### ML-08 Rebuttal claims verified
@@ -223,25 +223,25 @@ are not repeated here.
 - Why: Unverified rebuttal numbers become commitments.
 - Status: confirmed
 - Scope: field:ml
-- Owner: rebuttal-guidance
-- Src: up:skills/rebuttal-guidance/references/checklist.md
+- Owner: sv-feedback-rebuttal
+- Src: up:skills/sv-feedback-rebuttal/references/checklist.md
 
 ## Known disagreements
 - Number of contributions: three or four (handbook) versus at most three
-  (style-mine ML rules) versus two to four (benchmark checklist). Decide
-  per venue via style-mine.
-  [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; skill:style-mine; up:skills/benchmark-paper-template/references/checklist.md]
+  (sv-write-style-mine ML rules) versus two to four (benchmark checklist). Decide
+  per venue via sv-write-style-mine.
+  [src: up:handbook-en/03_Paper_Writing/3.1_the-essentials-of-a-research-paper.md; skill:style-mine; up:skills/sv-write-skeleton/references/checklist.md]
 - Challenges paragraph: required in the DB-style Introduction, while the
   handbook notes that AI conferences often go straight to the method.
   [src: up:handbook-en/03_Paper_Writing/3.3_technical-paper-template.md]
 - "To the best of our knowledge": listed as an anti-pattern by
-  style-mine; the core novelty rule keeps "to our knowledge" once.
+  sv-write-style-mine; the core novelty rule keeps "to our knowledge" once.
   [src: skill:style-mine; arc:msr:9c69675]
 - Related Work position: second to last preferred (handbook) versus after
-  the Introduction or integrated, used consistently (style-mine).
+  the Introduction or integrated, used consistently (sv-write-style-mine).
   [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; skill:style-mine]
 - AI drafting: the handbook forbids LLM-generated content outright, while
-  paper-writer drafts prose under evidence rules. Follow the venue and the
+  sv-write-section drafts prose under evidence rules. Follow the venue and the
   team's ADR. [src: up:handbook-en/03_Paper_Writing/3.5_writing-details-and-checklist.md; note:n01§4.5]
 - Em-dash ban and banned vocabulary come from the DB-lab handbook; core
   applies punctuation bans only through an overlay or venue profile.
@@ -260,4 +260,4 @@ are not repeated here.
 
 ## Changelog
 - 0.1 (2026-10-13): created from upstream handbook and skills and the
-  style-mine ML base rules.
+  sv-write-style-mine ML base rules.

@@ -1,6 +1,6 @@
 # ADR 0011: explainer-page template is driven by one PAGE data block
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18: the kit and visuals.md now live in skills/sv-figure-explain/)
 Date: 2026-10-16
 Deciders: Claude Code (template design, adapted from visual-explainer)
 
@@ -15,7 +15,7 @@ invites broken markup and inconsistent style.
 3. A fixed template whose only edited part is a JSON-like data block.
 
 ## Decision
-Option 3. `skills/study/kit/templates/explainer-page.html` renders from
+Option 3. `skills/sv-figure-explain/kit/templates/explainer-page.html` renders from
 `const PAGE = {title, kicker, h1, lead, sections, remember}`. Each section has
 `h2`, a `figure` with `type` `svg` (hand SVG), `cards` (small multiples) or `dag`
 (drawDAG spec, `layout: 'elk'`), and a `caption` that may contain KaTeX. The
@@ -30,5 +30,5 @@ CARDS, PANELS, BRANCHES). Render with `render.sh --full --figures`.
 - Do not edit the template's layout or style code for a single page.
 
 ## Sources
-`skills/study/kit/templates/explainer-page.html` (header comment, `const PAGE`),
-`skills/study/references/visuals.md` §1 and §4 step 1.
+`skills/sv-figure-explain/kit/templates/explainer-page.html` (header comment, `const PAGE`),
+`skills/sv-figure-explain/references/visuals.md` §1 and §4 step 1.

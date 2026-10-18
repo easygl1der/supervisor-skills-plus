@@ -1,0 +1,25 @@
+%% beamerthemegroupsysu.sty
+%% Own look-alike using SYSU green RGB values only.
+%% Not a copy of yxnchen/sysu-beamer-template (licence conflict; logos are
+%% university marks). Optional logos: local untracked files under logos/.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemegroupsysu}[2026/10/17 sv-slides SYSU-like theme]
+\mode<presentation>
+\useoutertheme{split}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+\useinnertheme{rounded}
+\definecolor{sysugreen}{RGB}{0,88,38}
+\definecolor{sysugreendark}{RGB}{5,71,25}
+\setbeamercolor{structure}{fg=sysugreen}
+\setbeamercolor{palette primary}{bg=sysugreen,fg=white}
+\setbeamercolor{palette secondary}{bg=sysugreendark,fg=white}
+\setbeamercolor{palette tertiary}{bg=sysugreen,fg=white}
+\setbeamercolor{titlelike}{parent=structure}
+\setbeamercolor{block title}{bg=sysugreen,fg=white}
+\setbeamercolor{block body}{bg=sysugreen!8,fg=black}
+\IfFileExists{logos/sysu_logo.png}{%
+  \pgfdeclareimage[height=0.6cm]{groupsysu-logo}{logos/sysu_logo.png}%
+  \logo{\pgfuseimage{groupsysu-logo}}%
+}{}
+\mode<all>

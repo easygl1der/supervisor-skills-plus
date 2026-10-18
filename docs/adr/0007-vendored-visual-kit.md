@@ -1,6 +1,6 @@
 # ADR 0007: Visual kit fully vendored, no CDN
 
-Status: accepted
+Status: accepted (paths updated by ADR 0021 on 2026-10-18: the kit and visuals.md now live in skills/sv-figure-explain/)
 Date: 2026-10-16
 Deciders: owner (SPEC visual kit), Claude Code (file set)
 
@@ -12,7 +12,7 @@ fonts fail offline and change under the user.
 ## Options considered
 1. Load KaTeX, layout libraries and fonts from CDNs: small repo, breaks offline.
 2. Install through npm per user: heavier setup, still network-bound.
-3. Vendor the runtime files (about 3 MB) in `skills/study/kit/vendor/`.
+3. Vendor the runtime files (about 3 MB) in `skills/sv-figure-explain/kit/vendor/`.
 
 ## Decision
 Option 3. `vendor/` holds KaTeX (JS, CSS, auto-render, fonts), rough.js,
@@ -32,5 +32,5 @@ rendering; `node_modules/` is git-ignored.
 - Do not vendor GPL code (dagitty stays external).
 
 ## Sources
-`skills/study/kit/vendor/`, `skills/study/kit/README.md`, `skills/study/kit/package.json`,
-`.gitignore` (node_modules), `skills/study/references/visuals.md` §3 and §5, `THIRD_PARTY.md`.
+`skills/sv-figure-explain/kit/vendor/`, `skills/sv-figure-explain/kit/README.md`, `skills/sv-figure-explain/kit/package.json`,
+`.gitignore` (node_modules), `skills/sv-figure-explain/references/visuals.md` §3 and §5, `THIRD_PARTY.md`.

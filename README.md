@@ -6,7 +6,7 @@
 
 # Supervisor-Skills: 将博导十年科研经验，炼化为你的 AI 副导师。
 
-> **Supervisor-Skills Plus（私有 fork）**：新增按领域适配的研究层：`research-core`（规则、领域与会议 profile、带出处的 checklist），九个覆盖实验、意见、记录、检查与经验沉淀的新 skill，「读与学」一层（paper-quickread 快读、study 理解式学习、research-bridge 接回项目、deep-research 文献地图）、proposal-writer 与组会 Beamer（group-beamer），以及手册案例 6.4。见 [skills/README.md](skills/README.md)、[INSTALL.md](INSTALL.md) 和 [DESIGN.md](DESIGN.md)。
+> **Supervisor-Skills Plus（私有 fork）**：12 个 skill 组（`sv-write`、`sv-figure`、`sv-study` ……），共用 `research-core`（规则、领域与会议 profile、带出处的 checklist）。每组一个可被自动选中的总入口，加若干只能点名的子命令，例如 `/sv-write-polish`（ADR 0021）。从本地 clone 安装见 [INSTALL.md](INSTALL.md)，使用指南见 [skills/README.md](skills/README.md)，设计见 [DESIGN.md](DESIGN.md)。
 
 
 [English](README.en.md) · 中文
@@ -129,18 +129,19 @@ Supervisor-Skills/
 │       └── 6.4_实证软工论文投稿过程剖析.md
 │
 ├── skills/                            # 🛠️ 提炼出的可执行 AI Skills
-│   ├── idea-evaluator/                # 构思与调研阶段技能
-│   ├── deep-research/
-│   ├── vibe-research-workflow/
-│   ├── tech-paper-template/           # 写作阶段技能
-│   ├── intro-drafter/
-│   ├── paper-writer/
-│   ├── benchmark-paper-template/
-│   ├── paper-polish/                  # 自查与润色技能
-│   ├── pre-submission-reviewer/
-│   ├── figure-designer/
-│   ├── rebuttal-guidance/
-│   └── drawio-reconstruction/         # Draw.io 重建执行技能
+│   ├── sv-supervisor/
+│   ├── sv-quickread/
+│   ├── sv-study/
+│   ├── sv-idea/
+│   ├── sv-litreview/
+│   ├── sv-proposal/
+│   ├── sv-experiment/
+│   ├── sv-write/
+│   ├── sv-figure/
+│   ├── sv-review/
+│   ├── sv-feedback/
+│   ├── sv-slides/
+│   └── research-core/
 │
 └── assets/                            # 图片资源
 ```
@@ -164,20 +165,21 @@ Supervisor-Skills/
 
 这里是本仓库的核心卖点！我们将上述理论经验蒸馏成了结构化的 Prompt/Skill 文件。你可以直接复制这些内容，导入到你的 AI 助手中（Claude、DeepSeek、Kimi 等均可）。
 
-| 技能名称 | 功能描述 | 链接 |
+| 组 | 覆盖什么 | 链接 |
 |---|---|---|
-| **Idea Evaluator** | 输入你的 Idea，AI 将根据"更高更快更强"5维框架和能力匹配表进行客观评估与打分 | [使用技能](skills/idea-evaluator/SKILL.md) |
-| **Vibe Research Guide** | AI 辅助科研全流程指导：Vibe Coding / Vibe Figure / Vibe Writing | [使用技能](skills/vibe-research-workflow/SKILL.md) |
-| **Introduction Drafter** | 基于 Introduction 的 Flowchart 思考模型，输入研究动机，直接产出六段式 Intro 正文（引用经真实检索核验；也可只要大纲） | [使用技能](skills/intro-drafter/SKILL.md) |
-| **Paper Writer** | 证据门控的论文正文写作：从单段到整篇，每个事实性声明可溯源到你的材料或核验过的文献，引用经独立核查，绝不编造 | [使用技能](skills/paper-writer/SKILL.md) |
-| **Paper Polish** | 忠于原意的语言润色：改语法、去 AI 腔、把握措辞分寸、中文稿改写为投稿级英文，可能动到含义的改动逐条标出请你确认 | [使用技能](skills/paper-polish/SKILL.md) |
-| **Deep Research** | 综述级文献深度调研：多视角检索、逐条引用核验、MECE 分类综合与交叉对比，产出逐条回答研究问题的 survey 报告 | [使用技能](skills/deep-research/SKILL.md) |
-| **Tech Paper Template** | 基于"技术类Full Paper思考模板"，辅助你一步步梳理论文的完整逻辑链 | [使用技能](skills/tech-paper-template/SKILL.md) |
-| **Benchmark Paper Template** | 专为 Benchmark/Evaluation 类论文设计，辅助梳理评估逻辑和实验设计 | [使用技能](skills/benchmark-paper-template/SKILL.md) |
-| **Pre-Submission Reviewer** | 顶会审稿人视角！基于写作 Checklist 和英语语法易错点，对草稿进行全面审查 | [使用技能](skills/pre-submission-reviewer/SKILL.md) |
-| **Figure Design Advisor** | 告诉 AI 你想表达什么，它会根据动机图/总览图/实验图的设计范式给出专业作图建议 | [使用技能](skills/figure-designer/SKILL.md) |
-| **Draw.io Reconstruction** | 将参考图、论文图、架构图、幻灯片图或 UI 截图重建为可编辑 `.drawio` 文件，并导出 PNG 预览与视觉审计 | [使用技能](skills/drawio-reconstruction/SKILL.md) |
-| **Rebuttal Guidance** | 基于条件说服模型，识别审稿人心态（X）、匹配 rebuttal 策略（Y），为每条 Weakness/Question 生成可执行的回应指导，含 concern 分类、语气建议、证据指针与完整性检查 | [使用技能](skills/rebuttal-guidance/SKILL.md) |
+| **sv-supervisor** | 会话简报与路由、项目初始化、STATUS / TODO / ADR / 日志、经验沉淀进 research-core | [打开](skills/sv-supervisor/SKILL.md) |
+| **sv-quickread** | 一篇论文的九段式五分钟速读卡；可选风格卡 | [打开](skills/sv-quickread/SKILL.md) |
+| **sv-study** | 理解优先地学一个概念、一篇论文或一章教材：复述、诊断、纠正；接回项目 | [打开](skills/sv-study/SKILL.md) |
+| **sv-idea** | 完整的 idea 评估（五维、生命周期、范式探针），或只做致命缺陷早筛 | [打开](skills/sv-idea/SKILL.md) |
+| **sv-litreview** | 综述级文献调研、逐条核验引用；或已读文献地图 | [打开](skills/sv-litreview/SKILL.md) |
+| **sv-proposal** | 开题报告、基金申请（NSFC、NSF、ERC、NIH）、研究陈述 | [打开](skills/sv-proposal/SKILL.md) |
+| **sv-experiment** | 冻结输入、运行日志、数字可追溯进论文、复现包 | [打开](skills/sv-experiment/SKILL.md) |
+| **sv-write** | 骨架、Introduction、各节正文、润色、中译英、只挑毛病、按论文/报告/幻灯片/信件去 AI 味、期刊风格 | [打开](skills/sv-write/SKILL.md) |
+| **sv-figure** | 作图设计、draw.io 重建、代码画图、TikZ、HTML、海报、讲解图 | [打开](skills/sv-figure/SKILL.md) |
+| **sv-review** | 只读的投稿前终审，或有轮数上限的多轮检查 | [打开](skills/sv-review/SKILL.md) |
+| **sv-feedback** | 意见逐条修改并核实、专家指导记录、rebuttal 规划 | [打开](skills/sv-feedback/SKILL.md) |
+| **sv-slides** | 组会 Beamer：周报或论文讲解 | [打开](skills/sv-slides/SKILL.md) |
+| **research-core** | 共享规则、领域与会议 profile、checklist、AI 协作守则、模板（不是命令） | [打开](skills/research-core/SKILL.md) |
 
 ## 快速开始 (Quick Start)
 

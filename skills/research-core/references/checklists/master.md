@@ -4,7 +4,7 @@ Index of the eight topic checklists plus the gate items that cut across them.
 Run it before any submission or major hand-over; it does not replace the topic
 files, it decides whether the paper may ship.
 
-Run by: research-supervisor, pre-submission-reviewer
+Run by: sv-supervisor, sv-review-once
 
 ## Contents
 1. Topic checklists
@@ -36,7 +36,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   leak that later had to be fixed after the deadline; its Blockers had no owners.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, research-supervisor, check-loop
+- Owner: sv-review-once, sv-supervisor-brief, sv-review-loop
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B1; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B2; note:n08§5#37; note:n07§B.3; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### MA-02 No reviewer-visible markers
@@ -47,8 +47,8 @@ Field and venue profiles add items with their own prefixes; load those whose
   can hide a missing result.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, check-loop, paper-polish
-- Src: up:skills/paper-writer/references/verification-checklist.md; arc:FP-07@v2; arc:01-checklist/checklist.md T1; note:n07§B.5
+- Owner: sv-review-once, sv-review-loop, sv-write-polish
+- Src: up:skills/sv-write-section/references/verification-checklist.md; arc:FP-07@v2; arc:01-checklist/checklist.md T1; note:n07§B.5
 
 ### MA-03 No hidden unresolved notes
 - [ ] Check: No unresolved co-author or reviewer note was deleted, commented
@@ -58,7 +58,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   commented out notes that only the student was meant to close.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, feedback-to-revision, research-records
+- Owner: sv-review-once, sv-feedback-revise, sv-supervisor-records
 - Src: arc:msr:9809b8c; arc:msr:815305e; note:n05§5.2; note:n05§6.5
 
 ### MA-04 Same numbers and claims everywhere
@@ -70,7 +70,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   evidence project's final check.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, check-loop, paper-polish
+- Owner: sv-review-once, sv-review-loop, sv-write-polish
 - Src: arc:01-checklist/checklist.md A5; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md; arc:@senior-a-comments:79-100; note:n07§B.5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### MA-05 Devil's-advocate pass
@@ -81,7 +81,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   reviewers.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, research-supervisor
+- Owner: sv-review-once, sv-supervisor-brief
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md; arc:01-checklist/checklist.md T14; skill:se-paper-reviewer; note:n07§B.5
 
 ### MA-06 Open guidance actions closed
@@ -92,5 +92,5 @@ Field and venue profiles add items with their own prefixes; load those whose
   deadline.
 - Status: confirmed
 - Scope: core
-- Owner: research-supervisor, research-records
+- Owner: sv-supervisor-brief, sv-supervisor-records
 - Src: user:2026-10-13; arc:@threats-pivot

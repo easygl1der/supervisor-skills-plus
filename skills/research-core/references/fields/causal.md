@@ -66,7 +66,7 @@ apply, including the rule that causal language needs a causal design
   identification argument delivers. [src: guide:AJS/ecta-identification@932eb23] (candidate)
 
 ### Method block for quick reads
-When paper-quickread or study summarises a causal paper on one page, the
+When sv-quickread or study summarises a causal paper on one page, the
 method block states, in this order:
 - Identifying assumptions: each one by its label in the paper (exclusion,
   parallel trends, continuity at a cutoff, unconfoundedness, rank or
@@ -161,7 +161,7 @@ method block states, in this order:
   implicit.
 - Status: candidate
 - Scope: field:ci
-- Owner: paper-writer, pre-submission-reviewer, proposal-writer
+- Owner: sv-write-section, sv-review-once, sv-proposal
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ### CI-02 Identifying assumptions labelled and shown to bind
@@ -171,7 +171,7 @@ method block states, in this order:
   complaint at methods venues.
 - Status: candidate
 - Scope: field:ci
-- Owner: paper-writer, pre-submission-reviewer, check-loop
+- Owner: sv-write-section, sv-review-once, sv-review-loop
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ### CI-03 Inference justified by a stated result
@@ -182,7 +182,7 @@ method block states, in this order:
   rejection reason.
 - Status: candidate
 - Scope: field:ci
-- Owner: pre-submission-reviewer, check-loop, experiment-workflow
+- Owner: sv-review-once, sv-review-loop, sv-experiment
 - Src: guide:AJS/ecta-identification@932eb23
 
 ### CI-04 Weak or boundary identification handled
@@ -192,7 +192,7 @@ method block states, in this order:
 - Why: Pointwise asymptotics mislead in exactly these regimes.
 - Status: candidate
 - Scope: field:ci
-- Owner: experiment-workflow, pre-submission-reviewer
+- Owner: sv-experiment, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### CI-05 Sensitivity analysis for the weakest assumption
@@ -201,7 +201,7 @@ method block states, in this order:
 - Why: A design is only as credible as its least plausible assumption.
 - Status: candidate
 - Scope: field:ci
-- Owner: experiment-workflow, paper-writer, pre-submission-reviewer
+- Owner: sv-experiment, sv-write-section, sv-review-once
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23
 
 ### CI-06 Claims limited to identified objects
@@ -210,7 +210,7 @@ method block states, in this order:
 - Why: Claims beyond the identified set are unsupported by the design.
 - Status: candidate
 - Scope: field:ci
-- Owner: paper-writer, check-loop
+- Owner: sv-write-section, sv-review-loop
 - Src: guide:AJS/ecta-identification@932eb23
 
 ### CI-07 Quick-read method block complete
@@ -219,7 +219,7 @@ method block states, in this order:
 - Why: Without these five a summary cannot be checked against the paper.
 - Status: candidate
 - Scope: field:ci
-- Owner: paper-quickread, study
+- Owner: sv-quickread-card, sv-study
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ## Known disagreements
@@ -229,7 +229,7 @@ method block states, in this order:
   statistics and epidemiology the same idea is usually phrased through
   potential outcomes or causal graphs and stated assumptions such as
   positivity and consistency. AJS takes the econometric-theory reading.
-  Decide per venue via style-mine. [src: guide:AJS/ecta-identification@932eb23] (candidate)
+  Decide per venue via sv-write-style-mine. [src: guide:AJS/ecta-identification@932eb23] (candidate)
 - Econometrics guides expect a derived limiting distribution for any new
   estimator; many applied causal venues accept a cited estimator with a
   design argument. Decide per venue. [src: guide:AJS/ecta-identification@932eb23; guide:AJS/jbes-identification-strategy@932eb23] (candidate)
@@ -238,7 +238,7 @@ method block states, in this order:
 - Conventions at statistics, epidemiology and ML causal venues (JASA,
   Biometrika, American Journal of Epidemiology, CLeaR, causal tracks at ML
   conferences): no AJS skill read for these; needs 5 to 10 exemplar papers
-  via style-mine (`lessons-harvest --new-field causal`).
+  via sv-write-style-mine (`sv-supervisor-harvest --new-field causal`).
 - Whether causal graphs (DAGs) are expected in the target venues.
 - Typical section lengths: not measured from exemplars.
 

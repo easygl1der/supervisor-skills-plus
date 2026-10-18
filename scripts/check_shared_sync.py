@@ -23,24 +23,9 @@ from pathlib import Path
 SKILL_ROOT = Path("skills")
 
 # canonical (relative to SKILL_ROOT) -> list of copies (same)
-SHARED = {
-    "paper-polish/references/academic-phrasebank.md": [
-        "paper-writer/references/academic-phrasebank.md",
-    ],
-    "paper-polish/references/ai-tone-guardrails.md": [
-        "paper-writer/references/ai-tone-guardrails.md",
-        "deai-writing/references/ai-tone-guardrails.md",
-    ],
-    "paper-polish/references/section-conventions.md": [
-        "paper-writer/references/section-conventions.md",
-    ],
-    "paper-writer/references/evidence-discipline.md": [
-        "intro-drafter/references/evidence-discipline.md",
-    ],
-    "paper-writer/references/prose-delivery.md": [
-        "intro-drafter/references/prose-delivery.md",
-    ],
-}
+# ADR 0021 collapsed the sv-write copies into one shared folder; add pairs here
+# only if a reference is ever duplicated across skill folders again.
+SHARED: dict[str, list[str]] = {}
 
 
 def strip_header(text: str) -> str:

@@ -4,7 +4,7 @@ Items for threats to validity and for the limits of what the study can
 claim. Run at design time to flag threats early, and before submission to
 check that threats and results agree.
 
-Run by: idea-evaluator, pre-submission-reviewer
+Run by: sv-idea, sv-review-once
 
 ## Contents
 1. Scope and generality
@@ -21,7 +21,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Reviewers test generality claims against what was sampled.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, pre-submission-reviewer, paper-writer
+- Owner: sv-idea, sv-review-once, sv-write-section
 - Src: arc:CF-16@v2; arc:TH-02@v2; arc:TH-10@v2; arc:01-checklist/checklist.md C7; arc:@advisor-glimpse
 
 ### TH-02 Stratify before pooling
@@ -31,7 +31,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Pooling across unequal groups can reverse a result.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, experiment-workflow, check-loop
+- Owner: sv-review-once, sv-experiment, sv-review-loop
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H2; arc:01-checklist/checklist.md W5; arc:msr:24d8c65
 
 ### TH-03 Small counts disclosed where used
@@ -40,7 +40,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: A share of a handful of cases reads as a strong result without its count.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer
+- Owner: sv-review-once, sv-write-section
 - Src: arc:CF-15@v2; arc:TH-04@v2
 
 ### TH-04 Data gaps moved to threats early
@@ -49,7 +49,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Chasing an unclosable gap cost weeks; stating its mechanism costs a paragraph.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, experiment-workflow, research-supervisor
+- Owner: sv-idea, sv-experiment, sv-supervisor-brief
 - Src: arc:@threats-pivot; note:n08§5#25
 
 ## 2. Measurement and reference data
@@ -61,7 +61,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Treating a weak measure as fact overstates every claim built on it.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer, check-loop
+- Owner: sv-review-once, sv-write-section, sv-review-loop
 - Src: arc:CF-14@v2; arc:TH-05@v2; arc:01-checklist/checklist.md C3; arc:msr:643836a; note:n06§2.6; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### TH-06 Reference labels are not an oracle
@@ -71,7 +71,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Errors in the reference set bound every accuracy figure.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, experiment-workflow
+- Owner: sv-review-once, sv-experiment
 - Src: arc:TH-09@v2; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H13
 
 ### TH-07 Compared measures are comparable
@@ -80,7 +80,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Comparing unlike measures is a common reviewer objection.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, paper-writer
+- Owner: sv-review-once, sv-write-section
 - Src: arc:CF-19@v2
 
 ## 3. Alternative explanations and selection
@@ -92,7 +92,7 @@ Run by: idea-evaluator, pre-submission-reviewer
   shows the authors saw them.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, pre-submission-reviewer
+- Owner: sv-idea, sv-review-once
 - Src: arc:TH-07@v2; arc:TH-08@v2; unverified (source of the original items)
 
 ### TH-09 Selection effects of filtered subsets
@@ -101,7 +101,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: A filter can create the pattern it seems to reveal.
 - Status: candidate
 - Scope: core
-- Owner: pre-submission-reviewer, experiment-workflow
+- Owner: sv-review-once, sv-experiment
 - Src: arc:RS-16@v2; unverified (source of the original item)
 
 ### TH-10 Contradicting results kept
@@ -110,7 +110,7 @@ Run by: idea-evaluator, pre-submission-reviewer
 - Why: Dropping inconvenient results is selective reporting.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, experiment-workflow, check-loop
+- Owner: sv-review-once, sv-experiment, sv-review-loop
 - Src: arc:CF-18@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 4. Threats agree with results
@@ -122,5 +122,5 @@ Run by: idea-evaluator, pre-submission-reviewer
   to catch.
 - Status: confirmed
 - Scope: core
-- Owner: pre-submission-reviewer, check-loop
+- Owner: sv-review-once, sv-review-loop
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H12; user:2026-10-13 (promoted: failure had a clear bad outcome)
