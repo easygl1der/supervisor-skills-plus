@@ -9,7 +9,7 @@ ADR 0021 之后，本库按 12 个**组**组织。每组有一个总入口 `sv-<
 | 让 agent 自己挑 | 直接描述任务；对应的 `sv-<组>` 会路由，并告诉你选了哪个子命令 |
 | 精确指定 | `/sv-write-polish`、`/sv-study-paper`、`/sv-figure-plot` …… |
 
-Claude Code 和 Cursor 里名字完全一样。agent 的 skill 列表里只有 12 个总入口和 `research-core`；50 个子命令不进列表，所以拆得再细也不会让列表变挤。
+Claude Code 和 Cursor 里名字完全一样。agent 的 skill 列表里只有 12 个总入口和 `research-core`；51 个子命令不进列表，所以拆得再细也不会让列表变挤。
 
 ## 本文件的位置
 
@@ -31,7 +31,7 @@ Claude Code 和 Cursor 里名字完全一样。agent 的 skill 列表里只有 1
 | [`sv-idea`](sv-idea/SKILL.md) | `-evaluate` `-fatal-flaws` | 完整的 idea 评估，或只做致命缺陷早筛 |
 | [`sv-litreview`](sv-litreview/SKILL.md) | `-survey` `-map` | 综述级文献调研；已读文献地图 |
 | [`sv-proposal`](sv-proposal/SKILL.md) | `-kaiti` `-grant` `-statement` | 开题报告、基金申请、研究陈述 |
-| [`sv-experiment`](sv-experiment/SKILL.md) | `-freeze` `-runs` `-numbers` `-replication` | 冻结输入、运行日志、可追溯数字、复现包 |
+| [`sv-experiment`](sv-experiment/SKILL.md) | `-freeze` `-prereg` `-runs` `-numbers` `-replication` | 冻结输入、预注册确证性分析（git 可审计）、运行日志、可追溯数字、复现包 |
 | [`sv-write`](sv-write/SKILL.md) | `-skeleton` `-intro` `-section` `-polish` `-translate` `-critique` `-humanize-paper` `-humanize-report` `-humanize-slides` `-humanize-letter` `-humanize-audit` `-style-mine` `-style-apply` | 一切与文字有关的事：搭骨架、起草、润色、中译英、只挑毛病、按场景去 AI 味、期刊风格 |
 | [`sv-figure`](sv-figure/SKILL.md) | `-design` `-drawio` `-plot` `-tikz` `-html` `-poster` `-explain` | 各种图：设计建议、draw.io 重建、代码画图、TikZ、HTML、海报、讲解图 |
 | [`sv-review`](sv-review/SKILL.md) | `-once` `-loop` | 只读的投稿前终审；有轮数上限的多轮检查 |
@@ -43,7 +43,7 @@ Claude Code 和 Cursor 里名字完全一样。agent 的 skill 列表里只有 1
 
 **技术类或 Benchmark 论文**：`sv-idea-evaluate` → `sv-write-skeleton` → `sv-write-intro` → `sv-write-section` → `sv-figure-design` → `sv-write-polish` → `sv-review-loop` → `sv-review-once`。
 
-**任意领域的实证研究**：`sv-supervisor-init` → `sv-experiment-freeze` → `sv-experiment-runs` → `sv-experiment-numbers` → `sv-write-section`（实证骨架）→ `sv-figure-plot` → `sv-review-loop` → `sv-experiment-replication` → `sv-review-once`。
+**任意领域的实证研究**：`sv-supervisor-init` → `sv-experiment-freeze` → `sv-experiment-prereg` → `sv-experiment-runs` → `sv-experiment-numbers` → `sv-write-section`（实证骨架）→ `sv-figure-plot` → `sv-review-loop` → `sv-experiment-replication` → `sv-review-once`。
 
 **从阅读到研究**：`sv-quickread-card` → `sv-study-paper` → `sv-study-bridge` → `sv-idea-evaluate` 或 `sv-experiment-freeze`；多张卡片 → `sv-litreview-map`；形成计划 → `sv-proposal`。
 

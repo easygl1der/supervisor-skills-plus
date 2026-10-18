@@ -161,7 +161,7 @@ method block states, in this order:
   implicit.
 - Status: candidate
 - Scope: field:ci
-- Owner: sv-write-section, sv-review-once, sv-proposal
+- Owner: sv-write-section, sv-review-once, sv-proposal, sv-experiment-prereg
 - Src: guide:AJS/ecta-identification@932eb23; guide:AJS/joe-identification-strategy@932eb23
 
 ### CI-02 Identifying assumptions labelled and shown to bind

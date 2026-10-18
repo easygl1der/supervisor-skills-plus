@@ -19,3 +19,6 @@ Step 10, with `runs-and-numbers.md`. The check, from the repository root:
 
 See: ../sv-experiment/references/procedure.md
 See: ../sv-experiment/references/runs-and-numbers.md
+
+A number that supports a confirmatory claim needs a passing
+`sv-experiment-prereg` audit; otherwise it is reported as exploratory.

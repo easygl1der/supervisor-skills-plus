@@ -18,6 +18,7 @@ from the former `experiment-workflow`, is `references/procedure.md`
 | The user says | Sub-command |
 |---|---|
 | freeze the corpus, sample, gold set, annotation, acceptance bar, prompt or model version | `sv-experiment-freeze` |
+| pre-register, lock the hypotheses and analysis before seeing results, confirmatory or exploratory, audit a registration | `sv-experiment-prereg` |
 | log this run, runs log, state files | `sv-experiment-runs` |
 | numbers in the paper, check numbers, verified numbers, STATUS numbers | `sv-experiment-numbers` |
 | replication package, artifact, anonymous mirror, where data lives | `sv-experiment-replication` |
