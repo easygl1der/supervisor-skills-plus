@@ -230,7 +230,9 @@ def lint_groups(skill_dirs: list[Path]) -> list[str]:
     parsed = {d.name: read_skill(d) for d in skill_dirs if (d / "SKILL.md").exists()}
     parsed = {k: v for k, v in parsed.items() if v is not None}
     names = set(parsed)
-    entries = {n for n in names if n.startswith("sv-") and not parsed[n][0].get("disable-model-invocation")}
+    sv = {n for n in names if n.startswith("sv-")}
+    # Structure decides the role, not the flag: an entry has no sv- parent.
+    entries = {n for n in sv if not any(n.startswith(p + "-") for p in sv if p != n)}
 
     def entry_of(name: str) -> str | None:
         owners = [e for e in entries if name.startswith(e + "-")]
@@ -243,6 +245,8 @@ def lint_groups(skill_dirs: list[Path]) -> list[str]:
         lines = len(body.splitlines())
         where = f"skills/{name}/SKILL.md"
         if name in entries:
+            if fm.get("disable-model-invocation"):
+                errors.append(f"{where}: group entry must stay auto-invocable (no disable-model-invocation)")
             words = len(str(fm.get("description", "")).split())
             if words > 60:
                 errors.append(f"{where}: entry description has {words} words; must be <= 60")
@@ -254,9 +258,6 @@ def lint_groups(skill_dirs: list[Path]) -> list[str]:
                     errors.append(f"{where}: routes to missing sub-command {ref}")
             continue
         owner = entry_of(name)
-        if owner is None:
-            errors.append(f"{where}: sv- skill with disable-model-invocation has no entry sv-<group>")
-            continue
         if fm.get("disable-model-invocation") is not True:
             errors.append(f"{where}: sub-command must set disable-model-invocation: true")
         if lines > 100 and name not in BODY_CAP_EXEMPT:

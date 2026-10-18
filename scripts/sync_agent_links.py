@@ -49,10 +49,13 @@ def plan(agent_sync: Path, repo: Path) -> list[tuple[str, str]]:
     """Return (action, detail) pairs; actions: external, link, unlink, clash, ignore, ok."""
     steps: list[tuple[str, str]] = []
     ext = agent_sync / "external" / EXTERNAL
-    if not ext.is_symlink():
+    if ext.is_symlink():
+        if Path(os.readlink(ext)) != repo:
+            steps.append(("clash", f"{ext} points to {os.readlink(ext)}, not {repo}"))
+    elif ext.exists():
+        steps.append(("clash", f"{ext} exists and is not a link; left alone"))
+    else:
         steps.append(("external", f"{ext} -> {repo}"))
-    elif Path(os.readlink(ext)) != repo:
-        steps.append(("clash", f"{ext} points to {os.readlink(ext)}, not {repo}"))
     gi = agent_sync / ".gitignore"
     if "external/" not in (gi.read_text().split() if gi.exists() else []):
         steps.append(("ignore", "add 'external/' to .gitignore"))
@@ -121,6 +124,13 @@ def selftest() -> None:
         assert not (sync / "skills" / "old").is_symlink() and (sync / "skills" / "other").is_dir()
         assert "external/" in (sync / ".gitignore").read_text().split()
         assert {a for a, _ in plan(sync, repo)} == {"ok"}
+        # a real folder at external/<name> is a clash, never overwritten
+        (sync / "external" / EXTERNAL).unlink()
+        (sync / "external" / EXTERNAL).mkdir()
+        steps = plan(sync, repo)
+        assert any(a == "clash" and "not a link" in d for a, d in steps), steps
+        apply(sync, repo, steps)
+        assert (sync / "external" / EXTERNAL).is_dir() and not (sync / "external" / EXTERNAL).is_symlink()
     print("sync_agent_links selftest ok")
 
 
