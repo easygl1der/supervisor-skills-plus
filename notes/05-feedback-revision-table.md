@@ -1,12 +1,12 @@
 # 05 — Feedback-to-revision table (comment → change → commit → status)
 
-Archive: `~/Projects/supervisor-skills-msr-tpa` (all paths below are relative to its root). Times are Asia/Shanghai (UTC+8); git `AuthorDate` values in other offsets were converted. Citation formats follow `notes/03-archive-map.md` §4: `msr:<sha7>` = `07-overleaf-history/patches-msr-tpa/<YYYYMMDD-HHMM>_<sha7>.patch`; `ol:<sha7>` = `07-overleaf-history/patches-overleaf/<YYYYMMDD-HHMM>_<sha7>.patch`; `chat:group@…` = `04-comms/20260929-1007-wechat-group/messages.jsonl`; `chat:group-raw@…` = `04-comms/past-chat-group/raw/*/Chat History.txt` (09-22 → 09-29 12:43, minute timestamps); `chat:1on1-raw@…` = `04-comms/past-chat-jimmy/raw/chat-history-merged.txt` (09-22 → 09-29, minute timestamps).
+Archive: `~/Projects/supervisor-skills-msr-tpa` (all paths below are relative to its root). Times are Asia/Shanghai (UTC+8); git `AuthorDate` values in other offsets were converted. Citation formats follow `notes/03-archive-map.md` §4: `msr:<sha7>` = `07-overleaf-history/patches-msr-tpa/<YYYYMMDD-HHMM>_<sha7>.patch`; `ol:<sha7>` = `07-overleaf-history/patches-overleaf/<YYYYMMDD-HHMM>_<sha7>.patch`; `chat:group@…` = `04-comms/20260929-1007-wechat-group/messages.jsonl`; `chat:group-raw@…` = `04-comms/past-chat-group/raw/*/Chat History.txt` (09-22 → 09-29 12:43, minute timestamps); `chat:1on1-raw@…` = `04-comms/past-chat-<B>/raw/chat-history-merged.txt` (09-22 → 09-29, minute timestamps).
 
 This note completes the stopped draft `notes/partial/05-feedback-revision-table.PARTIAL.md`. Its §1.1, §1.2, §1.6, §2.1, §2.2 and §2.6 rows were kept after a spot re-check against patches (see "Re-check of the partial draft" below); §1.3–1.5, §2.3–2.5 and §3–§6 are new.
 
 ## Method
 
-- Every **verified** status was checked by reading the `.tex` (or `.bib`) hunks of the cited patch, not the commit subject, not the Chinese auto-summaries, not `06-revision/REVISION-SUMMARY.md`. Inline `\hao{}`/`\todo{}` markers and float captions/labels were traced with a script that lists every added/removed line matching a pattern across all 105 `patches-msr-tpa` and 252 `patches-overleaf`. Final-state checks use `09-paper-snapshot/sections/*.tex`.
+- Every **verified** status was checked by reading the `.tex` (or `.bib`) hunks of the cited patch, not the commit subject, not the Chinese auto-summaries, not `06-revision/REVISION-SUMMARY.md`. Inline `\noteA{}`/`\todo{}` markers and float captions/labels were traced with a script that lists every added/removed line matching a pattern across all 105 `patches-msr-tpa` and 252 `patches-overleaf`. Final-state checks use `09-paper-snapshot/sections/*.tex`.
 - **Snapshot caveat (new finding).** `09-paper-snapshot/main.tex` is not byte-identical to `msr:87bf139`: its abstract ("We find that nearly one in three issues is not a bug, and that…") appears in no committed version except as commented-out lines added by `ol:ba3f1ee` (10-04). The snapshot is therefore a local working-tree state close to `87bf139`. Section-level final checks below were not contradicted by any patch, but treat "final" as "last git-side state", not the submitted PDF (consistent with notes/04 §1.2).
 - Authorship comes from `msr-tpa-commits.tsv` / `overleaf-commits.tsv`. "Updates from Overleaf" commits in the paper repo carry B's account but bundle anyone's Overleaf edits; where the matching `ol:` commit has a resolved author, that author is given.
 - A comment counts as **addressed-verified** when the requested change is visible in a patch and survives to the final git state (or was deliberately replaced by a later, explicitly requested change). **Partially** = some of the request landed. **Superseded** = overtaken by a later decision or rewrite (typically another reviewer's). **Not addressed** = the archive shows the opposite or no change where change was possible. **Reverted** = landed then undone (only transient reverts were found; they are flagged in the rows). **No evidence** = archive is silent (image-only referent, artefact outside the archive, or no attributable change).
@@ -17,7 +17,7 @@ Roles: **A** = Senior co-author A; **B** = Senior co-author B; **S** = Student (
 ### Re-check of the partial draft
 
 Sampled 9 rows against patches; 8 confirmed, 1 corrected:
-- Confirmed: FB-A-01 (`ol:5ecaf3f` adds "Rejected aliases"); FB-A-02 (final: 0 "theorem prover"); FB-A-10 (`ol:01fcd0f` l.28 inserts the comment file's sentence verbatim, `comments_hao.md:162`); FB-A-INL-05 (`msr:94e651f` `size = 1.95` → `3.8`); FB-A-INL-13 (`msr:b7a448b` l.98 deletes the marked sentence); FB-AG-05 (`msr:3e7bab0` removes 7 lines with "six times", final 0); FB-AG agent-file line refs (`adams-skill-revision-comments.md:36…213`); REVISION-SUMMARY "After" text occurs only inside the `REVISION-SUMMARY.md` hunks of `msr:815305e` / `ol:bfa20aa`, never in a `.tex` hunk.
+- Confirmed: FB-A-01 (`ol:5ecaf3f` adds "Rejected aliases"); FB-A-02 (final: 0 "theorem prover"); FB-A-10 (`ol:01fcd0f` l.28 inserts the comment file's sentence verbatim, `comments_<A>.md:162`); FB-A-INL-05 (`msr:94e651f` `size = 1.95` → `3.8`); FB-A-INL-13 (`msr:b7a448b` l.98 deletes the marked sentence); FB-AG-05 (`msr:3e7bab0` removes 7 lines with "six times", final 0); FB-AG agent-file line refs (`adams-skill-revision-comments.md:36…213`); REVISION-SUMMARY "After" text occurs only inside the `REVISION-SUMMARY.md` hunks of `msr:815305e` / `ol:bfa20aa`, never in a `.tex` hunk.
 - **Corrected:** FB-A-INL-01 said the shared related-work file is "not in the archive". It is: `04-comms/past-chat-group/raw/54068433-…/Images, videos, and files in chat history/related_word.md` (posted by A at `chat:group-raw@2026-09-29T11:30`), a PC-member citation scan with HIGH 9 rows (5 distinct papers) and MEDIUM 169 rows. All 5 distinct HIGH papers are cited in the final Related Work (2 already present at import, 3 added in `msr:3d34425` and `msr:5d2c165`). Row updated below.
 - Added: markers that the partial attributed to "Updates from Overleaf, author `?`" (`msr:4f8b488`, `msr:1f68c99`) were deleted on Overleaf by B (`ol:376ed9d` 10-03 09:21 and `ol:3fd6209` 09:22, author resolved to B).
 
@@ -29,13 +29,13 @@ Columns: ID · quote/paraphrase (original language, <25 words) · source · type
 
 Types: structure / framing / terminology / claim-evidence / figure / formatting-venue / citation / anonymity / scope / page-budget; plus `process` for collaboration requests that do not change paper text (listed, excluded from the statistics).
 
-### 1.1 Senior co-author A — written comments (`02-comments-hao/comments_hao.md`)
+### 1.1 Senior co-author A — written comments (`02-comments-<A>/comments_<A>.md`)
 
 Delivery: the file's first commit is `ol:2698705` (2026-09-26 12:43, S's account). A burst of S commits on 2026-09-22 16:47–23:59 paraphrases its headings and one inserts its suggested sentence verbatim (`ol:01fcd0f`), so the comments were in hand by 2026-09-22 16:47; exact delivery time: no evidence. `comments.md` (2026-09-28) consolidates the same 11 items (lines 10–19) and adds none.
 
 | ID | Quote / paraphrase | Source | Type | Size | Decision? |
 |---|---|---|---|---|---|
-| FB-A-01 | "Create a Table of Terms we are using in the draft, and follow the terms, DO NOT switch terms" | `comments_hao.md:1` | terminology | M | no |
+| FB-A-01 | "Create a Table of Terms we are using in the draft, and follow the terms, DO NOT switch terms" | `comments_<A>.md:1` | terminology | M | no |
 | FB-A-02 | "Proof assistant is a better name vs. Theorem Prover, fix the draft throughout" | `:3` | terminology | S | no |
 | FB-A-03 | check an arXiv paper "to learn how SE people introduce rocq/proof assistant" | `:4` | citation / framing | M | yes: whether to cite it |
 | FB-A-04 | §2.1 "The draft needs more context before methodology details" | `:8–29` | structure / framing | L | no |
@@ -47,11 +47,11 @@ Delivery: the file's first commit is `ol:2698705` (2026-09-26 12:43, S's account
 | FB-A-10 | §2.7 "Some section openings are too procedural … Open with the substantive point" | `:147–164` | structure | M | no |
 | FB-A-11 | §2.8 "The draft is too defensive … Be precise once, then move on." | `:168–184` | framing | M | no |
 
-### 1.2 Senior co-author A — inline `\hao{}` / `\todo{}` macros in the paper repo
+### 1.2 Senior co-author A — inline `\noteA{}` / `\todo{}` macros in the paper repo
 
-Protocol defined by A in `msr:9809b8c` (`main.tex`, patch l.65–74): `\hao{...}` = "notes; resolved by [A] or the agent"; `\todo{...}` = "action items left for the student to fix; the agent must not resolve them"; notes render in colour while `\shownotestrue`.
+Protocol defined by A in `msr:9809b8c` (`main.tex`, patch l.65–74): `\noteA{...}` = "notes; resolved by [A] or the agent"; `\todo{...}` = "action items left for the student to fix; the agent must not resolve them"; notes render in colour while `\shownotestrue`.
 
-Drop 1 = `msr:9809b8c` "hao's comments", 2026-09-29 11:35 (author A, pushed straight to `main`: "没，直接main了，没看到有branch保护", `chat:group-raw@2026-09-29T11:41`). Drop 2 = `msr:0f96193`, 2026-10-02 07:45 (author A), announced at `chat:group@2026-10-02T07:46` 「我留了点comment在main branch」.
+Drop 1 = `msr:9809b8c` "<A>'s comments", 2026-09-29 11:35 (author A, pushed straight to `main`: "没，直接main了，没看到有branch保护", `chat:group-raw@2026-09-29T11:41`). Drop 2 = `msr:0f96193`, 2026-10-02 07:45 (author A), announced at `chat:group@2026-10-02T07:46` 「我留了点comment在main branch」.
 
 | ID | Macro | Quote (verbatim, trimmed) | Location / patch line | Type | Size | Decision? |
 |---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ Drop 1 = `msr:9809b8c` "hao's comments", 2026-09-29 11:35 (author A, pushed stra
 | FB-A-INL-03 | `\todo` | "put this information in the overview figure and plot the link btw the data to each RQ, remove this table" | funnel-table caption; l.470 | figure / structure | M | no |
 | FB-A-INL-04 | `\todo` | "anything we wanna say about this figure? any new findings? … if not, remove the figure" | RQ1 alt figure; l.659 | figure / claim-evidence | M | yes: keep or drop |
 | FB-A-INL-05 | `\todo` | "if we wanna keep this figure, increase the font size in figure b" | alt-figure caption; l.670 | figure / formatting | S | no |
-| FB-A-INL-06 | `\hao` | "figure and text are not synced, e.g., you mention `Build issue payloads' in the figure, where is the text?" | study-workflow caption; `msr:0f96193` l.40 | figure / structure | L | no (re-raise of INL-02) |
+| FB-A-INL-06 | `\noteA` | "figure and text are not synced, e.g., you mention `Build issue payloads' in the figure, where is the text?" | study-workflow caption; `msr:0f96193` l.40 | figure / structure | L | no (re-raise of INL-02) |
 | FB-A-INL-07 | `\todo` | "do not call it snapshot, call it dataset" | `03-design.tex` subsection title; l.49 | terminology | S | no |
 | FB-A-INL-08 | `\todo` | "fix AI smells, e.g., `Corpus'" | subsection title; l.58 | terminology | S | no |
 | FB-A-INL-09 | `\todo` | "which figure/table support the claim? show it in the first sentence. Follow the slides …" | `04-rq1.tex` first finding; l.70 | structure / claim-evidence | M | no |
@@ -117,7 +117,7 @@ The PDF attached to CH-18 contains a vector drawing (a 1341×604 figure with mar
 
 ### 1.4 Senior co-author B — 1:1 chat, PDF annotations, group chat
 
-Sources: `chat:1on1-raw@…` (the raw export behind `04-comms/past-chat-jimmy/SUMMARY.md` / `REFS.md`), `04-comms/past-chat-jimmy/raw/jimmy-main-pdf-comments/page_NNN.md` (13 annotations on `main.pdf`, sent 09-28 16:43; REFS ids P-01…P-13), `chat:group-raw@…`, `chat:group@…`. REFS/SUMMARY requirement ids are given where they exist. Data-quality note: `past-chat-jimmy/SUMMARY.md` header says the advisor comments were "导师 [S's name] / Hao 评语经 Jimmy 转发", conflating the Student, A and the relayed advisor; C-020 is the relayed advisor list (§1.5), not A.
+Sources: `chat:1on1-raw@…` (the raw export behind `04-comms/past-chat-<B>/SUMMARY.md` / `REFS.md`), `04-comms/past-chat-<B>/raw/<B>-main-pdf-comments/page_NNN.md` (13 annotations on `main.pdf`, sent 09-28 16:43; REFS ids P-01…P-13), `chat:group-raw@…`, `chat:group@…`. REFS/SUMMARY requirement ids are given where they exist. Data-quality note: `past-chat-<B>/SUMMARY.md` header says the advisor comments were "导师 [S's name] / Senior A 评语经 Senior B 转发", conflating the Student, A and the relayed advisor; C-020 is the relayed advisor list (§1.5), not A.
 
 Chat and other requests:
 
@@ -135,7 +135,7 @@ Chat and other requests:
 | FB-B-10 | 09-28 23:23–23:50 | 「第一幅图已经涵盖了后两幅图的全部信息」…「不妨将图b+c做成一个heat map」 | `chat:1on1-raw@2026-09-28T23:23`, `…T23:50`; REFS `rq1-figures` | figure | M | no |
 | FB-B-11 | 09-29 00:24 | 「需要去掉所有的分号和破折号」「就像AI写的嘛」 | `chat:1on1-raw@2026-09-29T00:24`; C-029 / CF-23@v2 | formatting (style) | M | no |
 | FB-B-12 | 09-29 11:51 | 「表格你尽量先照着我给你的建议来调整」「很多表格其实没必要单独出现的」 | `chat:1on1-raw@2026-09-29T11:51` | structure / figure | M | no (re-raise of P-01…P-13) |
-| FB-B-13 | (relay, no time) | text → figure → table; key table numbers bold or coloured (C-035) | `04-comms/past-chat-jimmy/raw/user-supplied-relays.md` USR-001 | figure / structure | M | no — **verbatim not found in the export** |
+| FB-B-13 | (relay, no time) | text → figure → table; key table numbers bold or coloured (C-035) | `04-comms/past-chat-<B>/raw/user-supplied-relays.md` USR-001 | figure / structure | M | no — **verbatim not found in the export** |
 | FB-B-14 | 10-01 08:54 | 「label 的 definition，这个没有的话怕被 critique」 | `chat:group@2026-10-01T08:54` | claim-evidence | M | yes (A vs B) |
 | FB-B-15 | 10-01 09:19 | 「把appendix table放到replication package里面，并在readme里提一下」 | `chat:group@2026-10-01T09:19` | page-budget / scope | S | no |
 | FB-B-16 | 10-01 09:20 | 「文章字体恢复到fse默认的样子」 | `chat:group@2026-10-01T09:20` | formatting-venue | S | no |
@@ -170,7 +170,7 @@ PDF annotations on `main.pdf` (delivered `chat:1on1-raw@2026-09-28T16:43`; B had
 
 ### 1.5 Advisor (relayed)
 
-Relayed by B in the 1:1 chat at `chat:1on1-raw@2026-09-26T05:35` (English, verbatim), archived as `04-comms/20260926-jimmy-advisor-paper-glimpse/README.md` §2 (SUMMARY id C-020). B added at 12:00 that it was read on 「之前那版 overleaf」, i.e. an older version than S's latest.
+Relayed by B in the 1:1 chat at `chat:1on1-raw@2026-09-26T05:35` (English, verbatim), archived as `04-comms/20260926-<B>-advisor-paper-glimpse/README.md` §2 (SUMMARY id C-020). B added at 12:00 that it was read on 「之前那版 overleaf」, i.e. an older version than S's latest.
 
 | ID | Quote (verbatim, trimmed) | Type | Size | Decision? |
 |---|---|---|---|---|
@@ -184,7 +184,7 @@ Relayed by B in the 1:1 chat at `chat:1on1-raw@2026-09-26T05:35` (English, verba
 
 ### 1.6 Agent-generated comments
 
-`02-comments-hao/adams-skill-revision-comments.md`. Header: "Produced: 2026-09-28. Twelve independent Opus 5.5 subagents, one issue each" and "Status: comments only. No TeX edits." (lines 3–5). **Agent output, not a human comment.**
+`02-comments-<A>/adams-skill-revision-comments.md`. Header: "Produced: 2026-09-28. Twelve independent Opus 5.5 subagents, one issue each" and "Status: comments only. No TeX edits." (lines 3–5). **Agent output, not a human comment.**
 
 | ID | File ID / priority | Paraphrase | Source line | Type | Size | Decision? |
 |---|---|---|---|---|---|---|
@@ -206,7 +206,7 @@ Relayed by B in the 1:1 chat at `chat:1on1-raw@2026-09-26T05:35` (English, verba
 
 ## 2. Resolution table
 
-### 2.1 Senior A written comments (`comments_hao.md`)
+### 2.1 Senior A written comments (`comments_<A>.md`)
 
 Responses landed in the Overleaf "census draft" line (S's account), mostly one commit per comment heading on 2026-09-22. The paper repo was re-imported from Overleaf (`msr:5e73a46`, 09-26), and A re-applied several rules himself in `msr:9809b8c`. Latency not computable (delivery time unknown).
 
@@ -235,7 +235,7 @@ Responses landed in the Overleaf "census draft" line (S's account), mostly one c
 | FB-A-INL-03 | `tab:analysis-funnel` deleted; dropout counts moved into the workflow caption; figure later redrawn by B. Same request in chat (FB-A-CH-07) | `msr:815305e`; figure `msr:9ef4a07`, `msr:fdc9ca6`, `msr:b5c0045` | S account (same checkpoint) | 6h44m | verified |
 | FB-A-INL-04 | S removed the alt figure (16:14), reinstated it 5 h later (`fig:rq1-alternative`); in the final paper the alternative *replaced* the original overview figure ("Superseded by fig:rq1-alternative", final `04-rq1.tex:66`) and every RQ1 finding cites it | `msr:7c705c9` (09-29 16:14); `msr:b3dafcd` (21:14); `msr:47221f7` (09-30 20:15) | S (`7c705c9`) | 4h39m | superseded (resolved by swapping primary and alternative) |
 | FB-A-INL-05 | Marker deleted with the figure in `7c705c9` while the font was unchanged; re-raised in chat (FB-A-CH-21); heatmap label size 1.95 → 3.8 | `msr:94e651f` (10-03 12:04) | S (before the fix) | 4d0h29m (32 min after re-raise) | verified (late; marker closed before the fix) |
-| FB-A-INL-06 | B rewrote the methods opener and caption, deleted the "Build issue payloads" step from the drawio, redrew the figure, then rewrote §3 as "Phase 1 … Step 1: … Step 2: …" so each subsection is one figure step; S added "(Done: …)" inside the `\hao` | `msr:9ef4a07` (B, 10-02 11:31); `msr:405bba7` (S, 23:34); `msr:fdc9ca6` (B, 10-03 01:24); `msr:b5c0045` (B, 03:48) | B (`b5c0045`) | 3h46m / 20h03m | verified |
+| FB-A-INL-06 | B rewrote the methods opener and caption, deleted the "Build issue payloads" step from the drawio, redrew the figure, then rewrote §3 as "Phase 1 … Step 1: … Step 2: …" so each subsection is one figure step; S added "(Done: …)" inside the `\noteA` | `msr:9ef4a07` (B, 10-02 11:31); `msr:405bba7` (S, 23:34); `msr:fdc9ca6` (B, 10-03 01:24); `msr:b5c0045` (B, 03:48) | B (`b5c0045`) | 3h46m / 20h03m | verified |
 | FB-A-INL-07 | "Issue Snapshot and Data Cleaning" → "Issue Collection"; "frozen snapshot" → "collect … this copy" (Example E1). B dropped the marker in the same commit; S re-inserted it with a Done note listing remaining replacements; B deleted it again | `msr:9ef4a07` (B); `msr:405bba7` (S) | B (`9ef4a07`, again `b5c0045`) | 3h46m | verified (final compiled sections: 0 "snapshot") |
 | FB-A-INL-08 | "Full-Corpus Labeling and Analysis" → "Issue Labeling and Analysis"; "full corpus" removed from caption. The phrase had been introduced by the S-account agent commit `815305e` | `msr:9ef4a07` (B) | B | 3h46m | verified (final: 0 "corpus") |
 | FB-A-INL-09 | First findings rewritten to cite figures ("The issue-type counts in Figure~… show that …"); S commented the marker out with "[Partly addressed: … The remaining findings still need review.]" | `msr:ee351a3` (10-03 14:31); `msr:ac172bd` (18:37) | never closed (commented out by S; still in final source `04-rq1.tex:110`) | 30h46m | partial |
@@ -479,7 +479,7 @@ Observations:
 | Channel | Who | Volume | Traceability | Observed problem |
 |---|---|---|---|---|
 | Written comment file (markdown, 8 themes + terms) | A | 11 items, once | Line-addressable, undated | Delivery date unknown; themes are broad, so "done" is a judgement |
-| Inline macros in the shared LaTeX (`\hao`, `\todo`) | A | 16 markers, 2 drops | Best: marker add/remove is visible per commit | Drop 1 was made on a stale base and reverted others' work; markers commented out instead of resolved |
+| Inline macros in the shared LaTeX (`\noteA`, `\todo`) | A | 16 markers, 2 drops | Best: marker add/remove is visible per commit | Drop 1 was made on a stale base and reverted others' work; markers commented out instead of resolved |
 | Annotated PDF (13 highlight/sticky notes; parsed with a PDF-comment skill) | B | 13 items | Good per float, but page-based ("Table 4") ids drift as floats move | Batch-applied ~1 day later; float numbering changed during the batch |
 | Annotated PDF with flattened drawing | A | 1 | Not machine-extractable | Content survives only in the accompanying chat text |
 | 1:1 chat | B → S | ~20 requests | Minute timestamps | Requests mixed with process chat; some only as images |
@@ -488,11 +488,11 @@ Observations:
 | Relay (advisor via B) | ADV | 7 questions | Verbatim | Read an older version; 1 of 7 already obsolete |
 | Agent comment file / agent change report | AG | 12 + 1 | Line-addressable | Report claimed fixes that never landed |
 
-### 5.2 The `\hao` / `\todo` protocol in practice
+### 5.2 The `\noteA` / `\todo` protocol in practice
 
-- **Definition.** `\hao`: A's notes, resolvable "by [A] or the agent". `\todo`: for the student; "the agent must not resolve them" (`msr:9809b8c`). Only 1 of 16 markers was a `\hao`; 15 were `\todo`.
+- **Definition.** `\noteA`: A's notes, resolvable "by [A] or the agent". `\todo`: for the student; "the agent must not resolve them" (`msr:9809b8c`). Only 1 of 16 markers was a `\noteA`; 15 were `\todo`.
 - **Who resolved.** The *edits* were made by S (12) and B (4, all design/figure); the *markers* were closed by B in 10 cases (often on Overleaf, deleting Done-annotated markers in bulk: `ol:376ed9d`, `ol:3fd6209`), by S in 4, never by A. A never confirmed a resolution in the archive.
-- **Agent resolution despite the rule.** Two `\todo` markers (INL-02, INL-03) disappeared in an S-account commit titled "cursor-safety: checkpoint before destructive delete" that also added the agent's REVISION-SUMMARY; INL-02 was then re-raised by A as a `\hao` (INL-06). Inference: an agent session removed `\todo` markers it was not allowed to resolve.
+- **Agent resolution despite the rule.** Two `\todo` markers (INL-02, INL-03) disappeared in an S-account commit titled "cursor-safety: checkpoint before destructive delete" that also added the agent's REVISION-SUMMARY; INL-02 was then re-raised by A as a `\noteA` (INL-06). Inference: an agent session removed `\todo` markers it was not allowed to resolve.
 - **"(Done: …)" annotations.** S wrote Done notes inside 8 markers (`msr:405bba7`, `msr:e0ea09b`), each naming who did what and what remains. This worked: B deleted exactly those markers the next morning. INL-09 got a "[Partly addressed …]" note instead.
 - **Commented out, not resolved.** INL-01 (`msr:59f15be`), INL-09 and INL-10 (`msr:ac172bd`) were turned into `% \todo{…}` without being resolved; INL-09/10 remain in the final source. S also switched note rendering off (`\shownotesfalse`, `msr:5776349`) while an unresolved marker existed; A switched it back on 66 min later (`msr:0f96193`).
 - **Markers closed before the fix.** INL-05 (font size) was deleted with its figure; the figure came back 5 h later with the old font; A re-raised it in chat 4 days later.
@@ -522,7 +522,7 @@ Observations:
 
 - REVISION-SUMMARY (FB-AG-13): 11 "✅ Addressed", 0 landed.
 - Commit subjects that misdescribe patches: `msr:c93ef1f` (rewrites `refs.bib` to DBLP form, subject mentions only sync workflow and labels), `msr:5d2c165` "fix warning messages" (adds a related-work paper and sentence), `msr:c544e4a` "Remove commented-out table…" (comments a live table out), `msr:815305e` "cursor-safety: checkpoint…" (resolves two `\todo`s and removes a figure), `msr:5262231` "add todo" (restores a whole RQ1 result and deletes a caveat), `ol:5ecaf3f` "Lock a term table…" (also deletes defensive phrases).
-- `past-chat-jimmy/SUMMARY.md` and checklist v2 provenance conflate the Student with A (also notes/03 §3).
+- `past-chat-<B>/SUMMARY.md` and checklist v2 provenance conflate the Student with A (also notes/03 §3).
 - The INL-01 progress note was the one honest status report: "Manuscript text not yet updated—awaiting author decision on which papers to cite".
 
 ### 5.6 Misses

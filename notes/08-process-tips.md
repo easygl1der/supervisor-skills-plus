@@ -1,6 +1,6 @@
 # 08 — Process tips: collaboration, experiments, venue hardening, records
 
-Phase 2 mining note. Evidence archive: `~/Projects/supervisor-skills-msr-tpa` (HEAD `669b29a`). All times Asia/Shanghai (UTC+8). Citation formats follow `03-archive-map.md` §4: `msr:<sha>` (paper repo, `07-overleaf-history/patches-msr-tpa/`), `ol:<sha>` (Overleaf git, `07-overleaf-history/patches-overleaf/`), `res:<sha>` (research repo, `11-mining-github-issue-audit/research-repo-commits.tsv`), `chat:group@YYYY-MM-DDTHH:MM` (`04-comms/20260929-1007-wechat-group/messages.jsonl`), `chat:1on1@YYYY-MM-DDTHH:MM` (`04-comms/past-chat-jimmy/raw/chat-history-merged.txt`), `<path>:<line>`.
+Phase 2 mining note. Evidence archive: `~/Projects/supervisor-skills-msr-tpa` (HEAD `669b29a`). All times Asia/Shanghai (UTC+8). Citation formats follow `03-archive-map.md` §4: `msr:<sha>` (paper repo, `07-overleaf-history/patches-msr-tpa/`), `ol:<sha>` (Overleaf git, `07-overleaf-history/patches-overleaf/`), `res:<sha>` (research repo, `11-mining-github-issue-audit/research-repo-commits.tsv`), `chat:group@YYYY-MM-DDTHH:MM` (`04-comms/20260929-1007-wechat-group/messages.jsonl`), `chat:1on1@YYYY-MM-DDTHH:MM` (`04-comms/past-chat-<B>/raw/chat-history-merged.txt`), `<path>:<line>`.
 
 Roles are used throughout, also in §1–§4: **Student** (first author), **Senior A** (writing organization, desk-reject red lines), **Senior B** (methods figure, page budget, owner of the paper repo and the Overleaf project), **Advisor (relayed)**. Repos are named by role: *research repo* (corpus, annotation, analysis), *paper repo* (GitHub LaTeX, created 09-26), *Overleaf project*, *replication repo* (+ anonymous mirror). Chat quotes are short and in the original language. `TIMELINE_DRAFT.md` is secondary; where it disagrees with primary sources, this note says so.
 
@@ -53,7 +53,7 @@ So the SoT flipped three times in eight days (Overleaf → GitHub `main` → Ove
 
 - Filtered file list in the sync script kept R/Python/CSV/drawio/PNG out of Overleaf (`msr:c93ef1f`; checklist `CO-04@v2`).
 - Safety checkpoints before agent-driven destructive edits: commits titled `cursor-safety: checkpoint before destructive delete` (`ol:5eecfa5`, `ol:1f99dde`, `msr:815305e`, `res:43a6245`) and `Baseline: snapshot of uncommitted main working tree before methodology/RQ revision` (`msr:3e7bab0`).
-- Senior A's comment protocol in `main.tex`: `\hao{}` notes may be resolved by him or the agent; `\todo{}` items are for the Student, and "the agent must not resolve them" (`msr:9809b8c`, 09-29 11:35; second drop `msr:0f96193`, 10-02 07:45, announced at `chat:group@2026-10-02T07:46`).
+- Senior A's comment protocol in `main.tex`: `\noteA{}` notes may be resolved by him or the agent; `\todo{}` items are for the Student, and "the agent must not resolve them" (`msr:9809b8c`, 09-29 11:35; second drop `msr:0f96193`, 10-02 07:45, announced at `chat:group@2026-10-02T07:46`).
 - Time-zone relay: Senior A in Canada asks for handoff ("我睡一觉起来接手？", `chat:group@2026-10-03T12:20`); Senior B checks "全push" before the handoff (`…T12:23`).
 
 ### 1.5 Lessons (collaboration)
@@ -93,7 +93,7 @@ So the SoT flipped three times in eight days (Overleaf → GitHub `main` → Ove
 
 ### 2.4 Coverage wall → threats (method decision)
 
-On 09-10 the Student reported >16% closed issues without a PR/commit; Senior B: put it in threats and move to RQ2; Senior A: give the mechanism (deleted branches, squashed commits) and decide by label purpose (unknown vs out of scope) (`04-comms/20260910-zhimin-d4d5-threats/README.md` §1–2; recorded in the research repo `res:7998b24`, `res:8fe17c3`). The README also records the "do not" list (no time-window commit matching as a main method, no guessing `local-patch`). Good example of a decision captured with rejected alternatives.
+On 09-10 the Student reported >16% closed issues without a PR/commit; Senior B: put it in threats and move to RQ2; Senior A: give the mechanism (deleted branches, squashed commits) and decide by label purpose (unknown vs out of scope) (`04-comms/20260910-<B>-d4d5-threats/README.md` §1–2; recorded in the research repo `res:7998b24`, `res:8fe17c3`). The README also records the "do not" list (no time-window commit matching as a main method, no guessing `local-patch`). Good example of a decision captured with rejected alternatives.
 
 ### 2.5 Where large data lived
 
@@ -167,19 +167,19 @@ Venue facts: `10-requirements/venue/fse-2027-requirements.md` (fetched 10-01 via
 |---|---|---|
 | Episodic comms READMEs (`04-comms/2026091…`, `…0920…`, `…0926…`) | Verbatim quotes + "what changed" + do/don't list; written by Student with an agent after the event | Good: the 09-10 README is a usable ADR (context, decision, rejected options, consequences). Coverage is episodic (gaps 2–3) |
 | Group chat full export (`20260929-1007-wechat-group`) | 384 msgs with minute timestamps, media | Best primary source; only from 09-29 11:41 |
-| Chat SUMMARY files with "Outdated / superseded" tables (`past-chat-group/SUMMARY.md`, `past-chat-jimmy/SUMMARY.md`) | Latest requirements override older ones | Useful pattern; date-level only; contains a role error (the 1:1 SUMMARY header calls the Student's name a "导师") |
+| Chat SUMMARY files with "Outdated / superseded" tables (`past-chat-group/SUMMARY.md`, `past-chat-<B>/SUMMARY.md`) | Latest requirements override older ones | Useful pattern; date-level only; contains a role error (the 1:1 SUMMARY header calls the Student's name a "导师") |
 | Cursor `MERGED-SUMMARY.md` ("later timestamp wins") | Agent-written requirement ledger, tags `[LATEST]/[OUTDATED]` | Useful; agent-written, verify |
 | Research repo dated notes `docs/notes/YYYYMMDD-*.md` | Incidents (199 vs 582), plans, audits | Good; partly untracked later (`res:e66ba6d`) |
 | Gold review `CHANGELOG.md` + `L###` lessons | Per-relabel log, KEEP reasons, prompt rules | Strong design; `prompt-lessons.jsonl` kept local-only |
 | Prompt pack README version log | κ per version, rollbacks | Strong |
 | Linear (DEM-xx) | Locks (model, gates, structure) referenced by id | IDs survive in code/TeX comments; ticket text lost from the archive |
-| TeX comments | "Linear lock …", "Kappa printing rule …", `\hao{}`/`\todo{}` protocol | Close to the text; deleted with refactors (`msr:33e0af9`) |
+| TeX comments | "Linear lock …", "Kappa printing rule …", `\noteA{}`/`\todo{}` protocol | Close to the text; deleted with refactors (`msr:33e0af9`) |
 | Paper-repo `checklist.md` (10-01) + v2 140-item checklist + `FINAL-CHECKLIST-2026-10-02.md` + `CHECKLIST-UPDATE-SUMMARY.md` | Author rules, decided items, open decisions, verification results | The final read-only check found real blockers (B1, B2) a day early; B2 was still acted on only after the senior's warning on 10-06; B1 has no evidence of resolution |
 | `DECISION-HINTS.md` (U1–U5) | Open policy questions with repo facts | Good "open decision" register |
 | Repo docs (`BUILD.md`) | SoT policy | **Stale**: never updated after the switch back to Overleaf |
 | ADR folder / `STATUS.md` | — | **No evidence** in any repo |
 
-What was lost (beyond `GAPS.md`): Linear ticket bodies; `prompt-lessons.jsonl`; `NUMBER-AUDIT-2026-10-02.md` and `DBLP-CHECK-2026-10-02.md`; the submitted PDF and its page count; who did what inside `Anonymous` Overleaf commits; the reason the κ bar moved from ≈0.7 to 0.65 beyond the overlay note; 09-27/28 group chat. `TIMELINE_DRAFT.md` errors found while verifying: it dates `hao's comments` to 10-01 (actual `msr:9809b8c` 09-29 and `msr:0f96193` 10-02).
+What was lost (beyond `GAPS.md`): Linear ticket bodies; `prompt-lessons.jsonl`; `NUMBER-AUDIT-2026-10-02.md` and `DBLP-CHECK-2026-10-02.md`; the submitted PDF and its page count; who did what inside `Anonymous` Overleaf commits; the reason the κ bar moved from ≈0.7 to 0.65 beyond the overlay note; 09-27/28 group chat. `TIMELINE_DRAFT.md` errors found while verifying: it dates `<A>'s comments` to 10-01 (actual `msr:9809b8c` 09-29 and `msr:0f96193` 10-02).
 
 ---
 
@@ -195,7 +195,7 @@ Roles only. Confidence: high = direct primary evidence of both problem and outco
 | 4 | Upload a complete PDF well before the deadline, then replace it. | `chat:group@2026-10-03T19:45`, `…T19:59` outage | high | G | PSR (submission) |
 | 5 | After any agent write to a shared doc, read the diffstat; large deletions mean a whole-file overwrite. | `ol:b2ad042` (−379), `ol:3ae9fd3` (−119) | high | G | REC / EXP |
 | 6 | Checkpoint-commit before agent-driven destructive edits. | `ol:5eecfa5`, `msr:815305e`, `msr:3e7bab0` | med | G | REC |
-| 7 | Mark comments the agent may resolve vs those only the student may resolve. | `msr:9809b8c` (`\hao{}` vs `\todo{}`) | med | G | F2R |
+| 7 | Mark comments the agent may resolve vs those only the student may resolve. | `msr:9809b8c` (`\noteA{}` vs `\todo{}`) | med | G | F2R |
 | 8 | Keep private chats, PDFs and notes out of the shared paper repo (gitignore from day one). | `msr:f1c7df8` → `msr:c8adb43`; `res:e66ba6d` | med | G | REC / PSR-DB |
 | 9 | Verify every reference against DBLP (or the publisher) and keep the audit output. | `chat:group@2026-09-29T11:44`; `…10-03T19:18`; FINAL G4 | high | SE | PSR (citations) |
 | 10 | Never change the template font, margins or local font size; check again after each late edit. | `chat:group@2026-10-01T09:20–09:23`; FINAL G3 regression | high | SE | PSR / POL |
@@ -213,7 +213,7 @@ Roles only. Confidence: high = direct primary evidence of both problem and outco
 | 22 | Version the prompt with per-version agreement, rollbacks and a one-line reason. | prompt pack README v1.4.x log | high | SE | EXP |
 | 23 | Turn each annotation disagreement into a numbered rule (trap → prompt rule) and keep the rule file in the repo. | gold `CHANGELOG.md` L001–L025; `res:7e4a35c` (kept local) | med | SE | EXP / REC |
 | 24 | Treat dashboards as views; the authoritative state is the file you can diff (DB export / state JSON). | `20260812-review-status-199-vs-582.md` | high | G | EXP |
-| 25 | When a data gap cannot be closed by more crawling, move it to threats with its mechanism and stop chasing it. | `20260910-zhimin-d4d5-threats/README.md` | high | SE | PSR-T / F2R |
+| 25 | When a data gap cannot be closed by more crawling, move it to threats with its mechanism and stop chasing it. | `20260910-<B>-d4d5-threats/README.md` | high | SE | PSR-T / F2R |
 | 26 | Decide unknown-vs-out-of-scope coding by the label's purpose, and write that rule in the approach. | same README §1.4 | med | SE | EXP |
 | 27 | Keep method (prompt, κ) separate from RQ numbering; an RQ needing only statistics gets a script, not an LLM. | `20260920-msritp-meeting/README.md` §1.3–1.4 | med | SE | EXP |
 | 28 | Put copyable numbers and tables into the manuscript before drafting prose with a writing skill. | same README §1.5 | med | G | EXP / POL |
@@ -222,7 +222,7 @@ Roles only. Confidence: high = direct primary evidence of both problem and outco
 | 31 | Do PC conflicts, topics and author metadata a day early; the senior with the institutional knowledge enters conflicts. | `chat:group@2026-10-01T21:05`, `…10-03T17:28–18:32` | med | SE | PSR (submission) |
 | 32 | Re-fetch the venue call into a dated requirements file; do not trust a deadline heard in a meeting. | `20260920-msritp-meeting` "12 号" vs `fse-2027-requirements.md` | med | G | PSR / REC |
 | 33 | Record each decision with rejected alternatives and a "do not" list, close to where it is used. | `20260910-…/README.md` §5; ADR folder: no evidence | med | G | REC (ADR) |
-| 34 | Keep requirement summaries with an explicit "superseded by" table; latest wins. | `past-chat-group/SUMMARY.md`, `past-chat-jimmy/SUMMARY.md` | med | G | F2R / REC |
+| 34 | Keep requirement summaries with an explicit "superseded by" table; latest wins. | `past-chat-group/SUMMARY.md`, `past-chat-<B>/SUMMARY.md` | med | G | F2R / REC |
 | 35 | Do not cite ticket ids alone; copy the decision text into the repo, since tracker content may be lost. | DEM-xx ids in code/TeX, bodies absent | med | G | REC |
 | 36 | Use labels via macros so one edit propagates; then check spacing in the PDF. | `chat:group@2026-09-29T12:26`; Cursor `085dba30` (`\xspace` bug) | med | G | POL |
 | 37 | Run a read-only pre-submission check one day early and act on its blockers immediately. | FINAL B2 predicted the 10-05/06 index.html issue | high | G | PSR |

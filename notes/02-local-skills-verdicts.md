@@ -222,8 +222,8 @@ Conventions:
 
 - **Path:** `~/.claude/skills/humanize-paper/`.
 - **Size:** SKILL.md 38 lines (4.4 KB). 0 references. `disable-model-invocation: true` (:9).
-- **What it actually does.** It is a short principles prompt for a single in-place editing pass over a LaTeX or Markdown manuscript "Hao is an author of" (:14). The steps are:
-  1. **Resolve the author's inline comments first.** Treat `\h{...}`, `\hao{...}`, `% hao:`, and `% TODO` as editing instructions. Address the intent rather than only the marked phrase, apply the fix everywhere the issue recurs (including abstract and intro), keep one name per object, then remove the markers and check for leftovers (:20-22).
+- **What it actually does.** It is a short principles prompt for a single in-place editing pass over a LaTeX or Markdown manuscript "Senior A is an author of" (:14). The steps are:
+  1. **Resolve the author's inline comments first.** Treat `\h{...}`, `\noteA{...}`, `% <A>:`, and `% TODO` as editing instructions. Address the intent rather than only the marked phrase, apply the fix everywhere the issue recurs (including abstract and intro), keep one name per object, then remove the markers and check for leftovers (:20-22).
   2. **Apply five principles** (:24-30):
      - Williams' *Style*: characters as subjects, actions as verbs, stress at the sentence end; one point per paragraph stated early.
      - "De-AI by intent, not by checklist": cut contrast scaffolding, cleft openers, semicolons and stacked colons, adjective triads, dramatizing adverbs, figurative idioms; vary sentence length.
@@ -243,12 +243,12 @@ Conventions:
   - "Preserve the voice, including its plainness" (:29).
   - Minimal-diff mechanics (:34).
 - **Weaknesses:**
-  - It is tied to a named third party ("Hao", :14, :20, :28-29, :38) and his macros.
+  - It is tied to a named third party ("Senior A", :14, :20, :28-29, :38) and his macros.
   - It depends on a missing sibling skill (`humanize-review`, :30).
   - Its bans have no thresholds or examples, so outcomes vary with the model.
   - "semicolons and stacked colons" are listed as AI tells (:27). The same blanket ban appears in se-paper-* and contributes to the monotone output described in section 9.
 - **Overlap.** Upstream paper-polish (polish faithful to meaning, AI-tone removal, calibration). Locally deai-paper-writing, avoid-ai-writing, se-paper-refinement §1, and the inline-comment workflow of collaborative-review-notes.
-- **License:** **(d).** No license or source. It was written for a specific author ("Hao"), so it was probably copied from that person's skill set; confirm before redistributing.
+- **License:** **(d).** No license or source. It was written for a specific author ("Senior A"), so it was probably copied from that person's skill set; confirm before redistributing.
 - **Verdict:** **MERGE INTO the unified de-AI skill** (principles 1, 3, 4, 5 become `core/` voice and calibration rules). The inline-comment protocol goes to the new feedback-to-revision skill.
   - Reason: it adds no unique detection; its value is the short set of principles and the comment-resolution step, both of which fit better elsewhere.
 
@@ -645,7 +645,7 @@ Conventions:
 | se-paper-reviewer | MERGE | pre-submission-reviewer (devil's-advocate pass) + SE challenges in `fields/se.md` | (d), with internal evidence of an unnamed external suite |
 | avoid-ai-writing | MERGE | unified de-AI skill: general pattern catalog + editing contract | (a) MIT, Conor Bronsdon, github.com/conorbronsdon/avoid-ai-writing |
 | deai-paper-writing | MERGE (as core) | unified de-AI skill: S1–S7, tasks A–E, guardrails | (d) |
-| humanize-paper | MERGE | de-AI `core/` principles; inline-comment step to feedback-to-revision | (d), written for "Hao" |
+| humanize-paper | MERGE | de-AI `core/` principles; inline-comment step to feedback-to-revision | (d), written for "Senior A" |
 | parse-pdf-comments | KEEP as tool + STRENGTHEN | feedback-to-revision `scripts/` | (d), foreign path |
 | collaborative-review-notes | MERGE | feedback-to-revision ledger format | (d) |
 | lecture-paper-revision | REFERENCE-ONLY (paraphrase rules) | `fields/se.md` + `checklists/` with provenance | (c) lecture deck, no license |
@@ -677,7 +677,7 @@ Conventions:
 4. lecture-paper-revision: `reference.md` is a lecture transcription; paraphrase with credit only.
 5. nn-models-drawio-library: the library is absent and its license unknown.
 6. se-paper-reviewer: it was extracted from an unnamed external reviewer suite.
-7. humanize-paper: it was written for a third party ("Hao").
+7. humanize-paper: it was written for a third party ("Senior A").
 8. Privacy: se-paper-refinement quotes named advisors verbatim.
 
 MIT (avoid-ai-writing) and Apache-2.0 (linear, drawio-architecture, drawio-flowchart) are fine with attribution. Keep avoid-ai-writing's own "adapted from" credits.

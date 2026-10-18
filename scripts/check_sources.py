@@ -26,6 +26,7 @@ Exit 0 when no resolvable citation failed, 1 otherwise.
 """
 from __future__ import annotations
 
+import json
 import os
 import re
 import sys
@@ -52,13 +53,11 @@ RENAMED = {
 
 SRC_BLOCK = re.compile(r"\[src:\s*([^\]]+)\]")
 SRC_LINE = re.compile(r"^\s*-\s+Src:\s*(.+)$", re.M)
-# Role-based aliases for archive paths whose real names contain people's names.
-ALIASES = {
-    "@senior-a-comments": "02-comments-hao/comments_hao.md",
-    "@advisor-glimpse": "04-comms/20260926-jimmy-advisor-paper-glimpse/README.md",
-    "@threats-pivot": "04-comms/20260910-zhimin-d4d5-threats/README.md",
-    "@senior-b-1on1": "04-comms/past-chat-jimmy/raw",
-}
+# Role aliases for archive paths whose real names contain people's names. The
+# map itself names people, so it lives in the gitignored private/ folder:
+# private/archive-aliases.json, {"@alias": "archive/relative/path"}.
+ALIAS_FILE = ROOT / "private" / "archive-aliases.json"
+ALIASES = json.loads(ALIAS_FILE.read_text()) if ALIAS_FILE.exists() else {}
 TOKEN = re.compile(r"(arc|note|up|skill):[^\s;,)]+")
 
 

@@ -8,7 +8,7 @@ This note maps what exists, how trustworthy each source is, how to cite it, and 
 ## 1. Privacy and anonymization rules for anything derived from here
 
 - The archive names real people (co-authors, a relayed advisor), a real Overleaf project id, real GitHub accounts, a real anonymous-mirror URL, and the paper's real title. None of these may appear in public-facing files of `supervisor-skills-plus` (skills, checklists, handbook case 6.4).
-- Reusable material uses roles: **Student** (first author, implementation and most writing), **Senior co-author A** (writing organization, desk-reject red lines; the archive's "Hao"), **Senior co-author B** (methods figure, page budget, repo hub; the archive's "Jimmy/zhimin"), **Advisor (relayed)**. Mapping stays in `private/CASE.md` (gitignored).
+- Reusable material uses roles: **Student** (first author, implementation and most writing), **Senior co-author A** (writing organization, desk-reject red lines; the archive's "Senior A"), **Senior co-author B** (methods figure, page budget, repo hub; the archive's "Senior B"), **Advisor (relayed)**. Mapping stays in `private/CASE.md` (gitignored).
 - Paper specifics are generalized: "proof-assistant issue trackers" may stay as the domain only in the anonymized case study if the user approves; otherwise "a niche software ecosystem". Decide in Phase 3 (open question).
 - WeChat images (`04-comms/**/media`, `assets`, `raw`) are never copied into the skill repo.
 
@@ -38,18 +38,18 @@ Pointer README to HKUSTDial/Supervisor-Skills. No content. Not needed now that t
 |---|---:|---|
 | `versions/FULL-PAPER-CHECKLIST.v1.md` | 248 | v1 one-line checklist (backup) |
 | `FULL-PAPER-CHECKLIST.md` (= `versions/FULL-PAPER-CHECKLIST.md`, identical) | 3891 | **Master v2 (2026-09-29)**, 140 items, each `### <ID>` block has *What to check / Misreadings to avoid / Provenance (Who, Where, Quote) / Refs*. Prefixes: CF 30 (content & framing), MF 24 (methodology & figures), RS 19 (RQs & stats), RW 13 (related work & citations), AH 13 (advisor), TH 11 (threats), RP 13 (repro), CO 10 (collaboration), FP 7 (final pass), plus U1–U5 unresolved conflicts and a Superseded appendix. Tags `[LATEST]/[OUTDATED]/[PAPER-FOLLOW]/[OK]` |
-| `enriched/{group-chat,jimmy-chat,paper-refs,cursor-history}.md` + README | 663/755/2260/631 | Source packs used to generate v2. IDs **GC-01…GC-16** (group chat), **J-01…J-35** (1:1 chat; J-35 = C-035 "text → figure → table"), cursor thread IDs |
+| `enriched/{group-chat,<B>-chat,paper-refs,cursor-history}.md` + README | 663/755/2260/631 | Source packs used to generate v2. IDs **GC-01…GC-16** (group chat), **J-01…J-35** (1:1 chat; J-35 = C-035 "text → figure → table"), cursor thread IDs |
 | `checklist.md` (= `checklist-from-paper-repo.md`, identical) | 443 | The paper-repo `checklist.md` (FSE submission writing checklist, G/T/W/A section IDs; referenced by `03-skills/README.md`) |
 | `FINAL-CHECKLIST-2026-10-02.md` | 273 | Final read-only pre-submission check: blockers, item status, avoid-ai-writing audit, Adams rhetoric pass, cross-section consistency, devil's-advocate review |
 | `CHECKLIST-UPDATE-SUMMARY.md` | 139 | 2026-09-29 verification of TH-01…TH-11 and RP-01…RP-11 |
 
-Data-quality note: the v2 provenance lines are machine-generated. Example: `CF-01` provenance reads "Who: Hao (乐绎华)", but 乐绎华 is the student, not Hao (`FULL-PAPER-CHECKLIST.md` ~line 50). Re-verify every provenance before reusing an item.
+Data-quality note: the v2 provenance lines are machine-generated. Example: `CF-01` provenance reads "Who: Senior A (乐绎华)", but 乐绎华 is the student, not Senior A (`FULL-PAPER-CHECKLIST.md` ~line 50). Re-verify every provenance before reusing an item.
 
-### `02-comments-hao/` (3 files; identical copies under `10-requirements/hao/`) — the senior co-author's written comments. Feeds notes/05 (feedback-to-revision table).
+### `02-comments-<A>/` (3 files; identical copies under `10-requirements/<A>/`) — the senior co-author's written comments. Feeds notes/05 (feedback-to-revision table).
 
 | File | Lines | What |
 |---|---:|---|
-| `comments_hao.md` | 185 | Original comments (terms table; "proof assistant" not "theorem prover"; §2.1–2.8 writing/organization: context before methodology, why before how, no study-plan narrative, no number laundry lists, Q→why→method→result→implication per RQ, SE motivation, substance-first openings, one caveat not many) |
+| `comments_<A>.md` | 185 | Original comments (terms table; "proof assistant" not "theorem prover"; §2.1–2.8 writing/organization: context before methodology, why before how, no study-plan narrative, no number laundry lists, Q→why→method→result→implication per RQ, SE motivation, substance-first openings, one caveat not many) |
 | `comments.md` | 250 | Consolidated actionable revision checklist (2026-09-28) derived from the above + prior Overleaf tree |
 | `adams-skill-revision-comments.md` | 256 | 2026-09-28 agent-generated comments (12 subagents, one issue each) applying the Adams/SAIL skill; P0/P1/P2 priorities; `[AUTHOR]` = needs fact check. **Agent output, not a human comment** |
 
@@ -62,10 +62,10 @@ Data-quality note: the v2 provenance lines are machine-generated. Example: `CF-0
 |---|---|---|---|
 | `20260929-1007-wechat-group/` | 09-29 11:41 → 10-07 12:11 | 3-person group chat: `messages.jsonl` (384 msgs, fields speaker/ts/text/media/sources), `transcript.md` (1602 lines), `media/` (48 files incl. a shared `checklist.md` and `study-workflow.pdf`) | **Minute timestamps.** Best citable chat source |
 | `past-chat-group/` | 09-22 → 09-29 | Earlier group export: `SUMMARY.md` (requirements + "superseded" tables), `REFS.md`, assets (2 overview drawio versions, FSE PC related-work scan), `raw/` (18) | SUMMARY is date-level only |
-| `past-chat-jimmy/` | 09-22 → 09-29 | Student ↔ senior co-author B 1:1: `SUMMARY.md` (C-0xx requirement IDs), `REFS.md`, `raw/` (47: merged chat text, `jimmy-main-pdf-comments/` PDF annotation extracts, `parse-pdf-comments` output, `user-supplied-relays.md`) | Raw text has timestamps; SUMMARY date-level |
-| `20260926-jimmy-advisor-paper-glimpse/` | 09-26 | Relayed advisor reading notes (readability of internal jargon, Dx provenance, §3.1 overkill, missing Isabelle, cross-domain baseline) + `stackoverflow-baseline-candidate.md` | Second-hand (relay) |
+| `past-chat-<B>/` | 09-22 → 09-29 | Student ↔ senior co-author B 1:1: `SUMMARY.md` (C-0xx requirement IDs), `REFS.md`, `raw/` (47: merged chat text, `<B>-main-pdf-comments/` PDF annotation extracts, `parse-pdf-comments` output, `user-supplied-relays.md`) | Raw text has timestamps; SUMMARY date-level |
+| `20260926-<B>-advisor-paper-glimpse/` | 09-26 | Relayed advisor reading notes (readability of internal jargon, Dx provenance, §3.1 overkill, missing Isabelle, cross-domain baseline) + `stackoverflow-baseline-candidate.md` | Second-hand (relay) |
 | `20260920-msritp-meeting/` | 09-20 | Meeting notes: RQ numbering locked, writing order (numbers into Overleaf → paper skill → human edit) | Notes, single source |
-| `20260910-zhimin-d4d5-threats/` | 09-10/11 | Coverage wall → "put it in threats, pivot to RQ2" decision, label-purpose rule; screenshots | Notes + screenshots |
+| `20260910-<B>-d4d5-threats/` | 09-10/11 | Coverage wall → "put it in threats, pivot to RQ2" decision, label-purpose rule; screenshots | Notes + screenshots |
 | `cursor-history-chat/` | 09-27 → 09-29 | 41–42 Cursor agent session summaries (`*/SUMMARY.md`, `INDEX.md`, `MERGED-SUMMARY.md`) | Agent-written summaries |
 
 `PAST-CHAT-INDEX.md` is the paper repo's `local-refs/past-chat/README.md` (paths inside it are relative to that repo, not this archive).
@@ -78,7 +78,7 @@ Data-quality note: the v2 provenance lines are machine-generated. Example: `CF-0
 - `METHODOLOGY-FIGURES-REVIEW.md`, `METHODOLOGY-FIGURES-ACTION-ITEMS.md`, `fse-2027-requirements.md`.
 
 ### `06-revision/` (2 files)
-`REVISION-SUMMARY.md` (508 lines): before/after LaTeX for the design-section revision driven by `comments_hao.md` §2.x. Good source for comment → change pairs (verify against patches). `BUILD.md`: build instructions.
+`REVISION-SUMMARY.md` (508 lines): before/after LaTeX for the design-section revision driven by `comments_<A>.md` §2.x. Good source for comment → change pairs (verify against patches). `BUILD.md`: build instructions.
 
 ### `07-overleaf-history/` (375 files) — the strongest evidence. Feeds notes/04, 05, 06.
 
@@ -93,7 +93,7 @@ Data-quality note: the v2 provenance lines are machine-generated. Example: `CF-0
 
 Caveats: Chinese one-line summaries are auto-generated from subject + touched files (must verify against the patch). Author `?` = unresolvable (Overleaf anonymous or merges made by B's account). ±2h chat proximity is correlation, not causation. Chat coverage starts 09-29 11:41, so earlier commits have no chat link.
 
-Notable find for the feedback skill: commit `9809b8c` ("hao's comments", 2026-09-29 11:35) adds a reviewing protocol to `main.tex`: `\hao{...}` = senior's notes, "resolved by Hao or the agent"; `\todo{...}` = "action items left for the student to fix; the agent must not resolve them" (`patches-msr-tpa/20260929-1135_9809b8c.patch`). Second comment drop: `0f96193` (2026-10-02 07:45); response commit `9ef4a07` ("refine methods and their figure based on hao's comments").
+Notable find for the feedback skill: commit `9809b8c` ("<A>'s comments", 2026-09-29 11:35) adds a reviewing protocol to `main.tex`: `\noteA{...}` = senior's notes, "resolved by Senior A or the agent"; `\todo{...}` = "action items left for the student to fix; the agent must not resolve them" (`patches-msr-tpa/20260929-1135_9809b8c.patch`). Second comment drop: `0f96193` (2026-10-02 07:45); response commit `9ef4a07` ("refine methods and their figure based on <A>'s comments").
 
 ### `08-inventory/` (1 file)
 Pointers to live repos not vendored: research repo, paper repo, Overleaf checkout, replication repo (`msr-tpa-replication` + anonymous mirror), box export, skills hub.
@@ -102,7 +102,7 @@ Pointers to live repos not vendored: research repo, paper repo, Overleaf checkou
 `main.tex` (title at line 116), `main.pdf`, `sections/01-introduction … 09-conclusion, A-terms, A-appendix`, `refs.bib`, `codebook-labels.tex`, `figures/` (incl. `study-workflow-UPDATE-PLAN.md`, `enhance_intro_failure_modes.py`), `VERSION_LIST.md` (all 105 commits one per line), copies of `REVISION-SUMMARY.md` and `BUILD.md`. Feeds notes/06 (final state of each section) and the anonymized case study.
 
 ### `10-requirements/` (12 files)
-`hao/` (copies of 02), `jimmy-zhimin/{jimmy-chat,group-chat}-SUMMARY.md`, `advisor-glimpse/` (copy of 04 glimpse), `paper-refs/{REFS,SUMMARY,CHECKLIST-DRAFT}.md` (every requirement → source path/line), `venue/fse-2027-requirements.md` (page limits 18+4, acmart `acmsmall,screen,review,anonymous`, anonymization rules, Data Availability section, AI-use policy, desk-reject causes; fetched 2026-10-01 via a model extraction, items marked CONFIRM), `DECISION-HINTS.md` (U1–U5: κ numbers, RQ2 figures, Overleaf, gold, method borrow).
+`<A>/` (copies of 02), `<B>/{<B>-chat,group-chat}-SUMMARY.md`, `advisor-glimpse/` (copy of 04 glimpse), `paper-refs/{REFS,SUMMARY,CHECKLIST-DRAFT}.md` (every requirement → source path/line), `venue/fse-2027-requirements.md` (page limits 18+4, acmart `acmsmall,screen,review,anonymous`, anonymization rules, Data Availability section, AI-use policy, desk-reject causes; fetched 2026-10-01 via a model extraction, items marked CONFIRM), `DECISION-HINTS.md` (U1–U5: κ numbers, RQ2 figures, Overleaf, gold, method borrow).
 
 ### `11-mining-github-issue-audit/` (585 files) — research repo audit (no data/DB).
 `FILE_MANIFEST.tsv` (~13.7k files, bytes, mtime), `DIR_STATS.md`, `research-repo-commits.tsv` (research repo git log, needed to verify TIMELINE §1–§4), `remotes.txt`, `tree/` (all text files ≤1 MB: `docs/` incl. the 2026-07-08 research plan, sampling allocation, protocol, writing, partner notes, drawio, figure-generation; `prompts/`, `scripts/`, `analysis/`, `schemas/`, `sql/`, `collaboration/`). Feeds notes/04 (experiment phase) and the experiment/records design (H, G).
@@ -116,7 +116,7 @@ Pointers to live repos not vendored: research repo, paper repo, Overleaf checkou
 | Research-repo commit | `res:<sha7>` + `11-mining-github-issue-audit/research-repo-commits.tsv` | `res:de95735` |
 | Group chat message | `chat:group@YYYY-MM-DDTHH:MM` (from `messages.jsonl`) | `chat:group@2026-10-03T18:27` |
 | Pre-09-29 chat | `chat:<group|1on1>-summary:<req id>` + SUMMARY path (date-level) | `C-035` |
-| Comment file | `<path>:<line>` | `02-comments-hao/comments_hao.md:12` |
+| Comment file | `<path>:<line>` | `02-comments-<A>/comments_<A>.md:12` |
 | Checklist item | `<ID>@<version>` | `CF-23@v2` |
 
 In public files the source label stays (e.g. `msr:9809b8c`) but the private archive path is the resolver; no names.
@@ -147,7 +147,7 @@ In public files the source label stays (e.g. `msr:9809b8c`) but the private arch
 | Note | Primary sources |
 |---|---|
 | 04 timeline & process verification | `TIMELINE*.md`, `research-repo-commits.tsv`, `msr-tpa-commits.tsv`, `overleaf-commits.tsv`, `04-comms/*/README.md` |
-| 05 feedback-to-revision table | `02-comments-hao/*`, `msr:9809b8c`, `msr:0f96193`, `msr:9ef4a07`, `06-revision/REVISION-SUMMARY.md`, `past-chat-jimmy/raw/jimmy-main-pdf-comments`, group `messages.jsonl`, `*-CHAT-XREF.md` |
+| 05 feedback-to-revision table | `02-comments-<A>/*`, `msr:9809b8c`, `msr:0f96193`, `msr:9ef4a07`, `06-revision/REVISION-SUMMARY.md`, `past-chat-<B>/raw/<B>-main-pdf-comments`, group `messages.jsonl`, `*-CHAT-XREF.md` |
 | 06 section evolution | `*-SECTION-EVOLUTION.md`, `key-section-diffs/`, patches, `09-paper-snapshot/sections/` |
 | 07 figure iterations + checklist diffs | `05-figures-tables/**`, `01-checklist/versions/`, `FINAL-CHECKLIST-2026-10-02.md` |
 | 08 process tips | `PROCESS.md` detours (verified), group chat, `20260910-*`, `20260920-*`, venue requirements |
