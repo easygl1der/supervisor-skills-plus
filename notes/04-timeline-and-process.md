@@ -31,7 +31,7 @@ Verdict on `TIMELINE.md` "~2026-10-12 FSE 2027 投稿锚点": **CONTRADICTED**. 
 ### 1.2 The paper the team submitted is not the git snapshot `87bf139`
 
 - `msr:87bf139` (10-03 19:38, last paper-repo commit) is HEAD of `09-paper-snapshot/`. Its title is "What Breaks in Proof Assistants, and How Maintainers Fix It…" (`09-paper-snapshot/main.tex:116`).
-- `ol:a610d1d` (10-03 19:38, author string `leo-lihao` = Senior A, made on Overleaf): changes the title to "Maintaining Proof Assistants: An Empirical Study of Reported Bugs and Resolution Patterns" (`07-overleaf-history/patches-overleaf/20261003-1938_a610d1d.patch`).
+- `ol:a610d1d` (10-03 19:38, author string `<A-account>` = Senior A, made on Overleaf): changes the title to "Maintaining Proof Assistants: An Empirical Study of Reported Bugs and Resolution Patterns" (`07-overleaf-history/patches-overleaf/20261003-1938_a610d1d.patch`).
 - `ol:214cc0c` (10-03 19:39, `github-actions[bot]`, "Sync GitHub main @ 87bf139"): one minute later it reverts the title and removes Overleaf-side text from related work, RQ2 and RQ3 (+9/−29; `patches-overleaf/20261003-1939_214cc0c.patch`).
 - `chat:group@2026-10-03T19:41`–`19:42` Senior A: 「别用git了吧，感觉很多改动都没了」, 「页数越写越少」, 「我改了半天的东西都没了」. Then a rollback on Overleaf at 19:45–19:47.
 - The submission-site screenshot at 19:56 already shows the "Maintaining Proof Assistants…" title.
@@ -43,7 +43,7 @@ Verdict on `TIMELINE.md` "~2026-10-12 FSE 2027 投稿锚点": **CONTRADICTED**. 
 | Repo | First commit | Status |
 |---|---|---|
 | Research repo | `res:de95735` "Initial project snapshot", tsv time 2026-06-19 00:06 (offset not stated). TIMELINE_DRAFT §1 says 06-18 | **PARTIAL**: 06-18 holds only if the tsv time is UTC+8 and the claim uses UTC (that would be 06-18 16:06 UTC). The archive does not settle the offset |
-| Overleaf project | `ol:48f5713`, authored 2026-08-01 23:11 +0800 by `Zhimin Zhao` (= Senior B), ACM sample template. The git bridge committed it on 08-14 | **VERIFIED** as an empty shell: `11-mining-github-issue-audit/tree/docs/notes/20260814-overleaf-paper-backup.md` says it "currently holds the ACM `acmart` / sigconf sample template, not the paper text" |
+| Overleaf project | `ol:48f5713`, authored 2026-08-01 23:11 +0800 by `<B-name>` (= Senior B), ACM sample template. The git bridge committed it on 08-14 | **VERIFIED** as an empty shell: `11-mining-github-issue-audit/tree/docs/notes/20260814-overleaf-paper-backup.md` says it "currently holds the ACM `acmart` / sigconf sample template, not the paper text" |
 | First paper text on Overleaf | `ol:20a6d25` 08-14 13:29 (Student: "Add paper.tex skeleton … leave ACM templates untouched"); `ol:26ed99e` 08-17 | VERIFIED |
 | Paper collaboration repo | `msr:5e73a46` "Initial Overleaf Import", 2026-09-26 19:37:05 +0800, author `<B-name>` (= Senior B). Link posted at `chat:group-raw@2026-09-26T19:43` (「overleaf的github：…」「大家注意查收邮箱」) | **VERIFIED** |
 | Overleaf→GitHub automation | `msr:c93ef1f` 09-29 12:44 "Add Overleaf sync workflow…", fixed by `msr:c3d1e70` 12:57. First bot push `ol:b0123f2` at 13:34 | VERIFIED |
@@ -97,7 +97,7 @@ The final paper says two authors independently annotated all 582 gold issues wit
 | 06-18 → 07-14 project start and sampling: freeze of seven repos, stratified sample of 582 | VERIFIED (start date PARTIAL, see §1.3) | `res:de95735` (06-19 00:06); `res:4c60e71` 07-13 21:47 "Add constrained stratified sampling methodology"; `res:2700d27` 07-14 18:55 "Switch annotation queue to 582 issue sample"; `11-*/tree/docs/msr4itp_constrained_stratified_sampling_allocation_20260713.md` (N = 23,671; run `seven-repo-582-20260714`, seed 42, line 202; supersedes the 700-issue queue, line 5) |
 | 07-14 → 08-17 gold sample and annotation workbench; prompt locked | VERIFIED | `res:d3caaf2` 07-18 "Complete collaborative annotation workflow"; `res:43d9c10` 08-01 queue dashboard; `res:6bed599` 08-17 01:29 "Publish the locked LLM annotation prompt…" |
 | 08-01 empty Overleaf shell | VERIFIED | `ol:48f5713` (template); `tree/docs/notes/20260814-overleaf-paper-backup.md` |
-| 08-13 → 09-11 D4/D5 coverage wall → threats pivot | VERIFIED | `res:1549c50` 08-13 "…before PR-body backfill"; `res:7e707ad` 09-06 gap audit; `04-comms/20260910-<B>-d4d5-threats/README.md` (screenshots 01–04 timed 09-10 22:19 to 09-11 00:24); `res:7998b24` 09-11 00:25 "Record advisor Threats decisions"; `res:8fe17c3` 09-11 22:35 "Record Li Senior A's label-purpose rule" |
+| 08-13 → 09-11 D4/D5 coverage wall → threats pivot | VERIFIED | `res:1549c50` 08-13 "…before PR-body backfill"; `res:7e707ad` 09-06 gap audit; `04-comms/20260910-<B>-d4d5-threats/README.md` (screenshots 01–04 timed 09-10 22:19 to 09-11 00:24); `res:7998b24` 09-11 00:25 "Record advisor Threats decisions"; `res:8fe17c3` 09-11 22:35 "Record <A-name>'s label-purpose rule" |
 | 09-09 author block / corresponding author changed (Overleaf MCP) | VERIFIED | `ol:b2ad042`…`ol:0cab5cb` (7 commits, 13:58–14:39, author string `Overleaf MCP`), e.g. `ol:8bb3f44` "Mark … as corresponding author" |
 | 09-16 gold D4/D5 unknown standards; placeholder restore incident | VERIFIED | `ol:7b0c955` 00:20 "Gold D4: issue-local evidence only"; `ol:3ae9fd3` 00:35 swaps 119 lines for the literal `PLACEHOLDER` (`patches-overleaf/20260916-0035_3ae9fd3.patch:139`); restored by `ol:6cca5e3`, `ol:1ba123a`, `ol:c128ade` within 2 minutes |
 | 09-20 group meeting | VERIFIED | `04-comms/20260920-msritp-meeting/README.md` (22:29–23:07). Its outcome is visible in git the next day (`ol:8cf91a2` 09-21 15:51 "Retarget analysis plan: paper conclusions use freeze census N=23671") |
@@ -153,7 +153,7 @@ The final paper says two authors independently annotated all 582 gold issues wit
 | §7 | Replication repo filled from 10-01; 10-05 DEM-295 done; 10-06 cleanup | PARTIAL | Chat confirms the 10-03 20:17–20:24 gap ("analysis code not all moved", 「数据没必要用github」→ figshare/S3) and the 10-06 cleanup. The replication repo itself is not in the archive (NO EVIDENCE for its commit dates) |
 | §9A | Research repo pushes almost all by the Student / Cursor Agent | VERIFIED | 71 commits: `yitwah` 65, `Yue Yihua` 1, `Cursor Agent` 5 |
 | §9A | origin/main stopped at 09-21 `b449e2c`, local ahead | NO EVIDENCE / PARTIAL | `b449e2c` is 09-22 03:13 in the tsv; there are no remote refs in the archive |
-| §9B | Contributors: yitwah ≈56, <B-account> ≈52, <A-account> ≈2 | PARTIAL | Local tsv: `yitwah` 56; `<B-account>` 25 + `<B-name>` 22 = 47 (the 22 are mostly Overleaf merges carrying anyone's edits); `Senior A Li` 2. On Overleaf `leo-lihao` has 2 commits, but one (`ol:ba3f1ee`) is the largest late rewrite |
+| §9B | Contributors: yitwah ≈56, <B-account> ≈52, <A-account> ≈2 | PARTIAL | Local tsv: `yitwah` 56; `<B-account>` 25 + `<B-name>` 22 = 47 (the 22 are mostly Overleaf merges carrying anyone's edits); `<A-name>` 2. On Overleaf `<A-account>` has 2 commits, but one (`ol:ba3f1ee`) is the largest late rewrite |
 | §9C | `main` is ~67 commits ahead of `overleaf-main` | NO EVIDENCE | no branch refs in the archive |
 
 ---

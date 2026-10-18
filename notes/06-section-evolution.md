@@ -180,7 +180,7 @@ Post-snapshot delta (`ol:ba3f1ee`): figure width and caption scoped to "kernel-b
 | When | Commit | Role | One line |
 |---|---|---|---|
 | 09-22 21:18 | `ol:1df2367` | Student | "Related Work" → "Background and Related Work"; three subsections each opening "X matters because…" |
-| 09-23/24 | `ol:ac81b3a`, `ol:59236e2` | Student | Rewritten around "the unit is the filed ticket"; κ removed from Section 2 by author decision (09-23, recorded in `notes/da-review-related-work.md`); "Polish … for SE motivation and Lihao prose constraints"; drops numbers (12,079 failures, 123 repositories) |
+| 09-23/24 | `ol:ac81b3a`, `ol:59236e2` | Student | Rewritten around "the unit is the filed ticket"; κ removed from Section 2 by author decision (09-23, recorded in `notes/da-review-related-work.md`); "Polish … for SE motivation and <A> prose constraints"; drops numbers (12,079 failures, 123 repositories) |
 | 09-27/28 | `msr:f141169`, `msr:393f596`, `msr:bd086a7` | B | Background on components; "Breakage events" vs "Issue reports" bold pseudo-terms; added "Time-to-Close and Resolution Status" and "The Missing Tracker Perspective" subsections |
 | 09-29 11:35 | `msr:9809b8c` | A | Deletes the time-to-close subsection and the gap subsection; removes bold pseudo-terms; "Author et al.~\cite" → `\citet`; section renamed "Components of a Proof Assistant"; `\todo{include more papers, see the file I shared}` |
 | 09-29 15:56 / 22:17 | `msr:84b9197`, `msr:3d34425` | Student | Appends an agent "Progress:" note to the todo; adds one sentence listing three verification-tool bug studies |
