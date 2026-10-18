@@ -46,6 +46,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `handbook/` still follows upstream PhD.Skills.
 
 ### Added
+- `sv-experiment-prereg`: pre-registration of confirmatory analyses (estimand,
+  hypotheses, exact primary analysis, decision rule, stopping, multiplicity)
+  frozen as a git commit, with an audit (FROZEN, STAMP, INTEGRITY,
+  CHRONOLOGY, DATA) before any confirmatory claim; unregistered analyses are
+  exploratory. Vendors `prereg.sh` from K-Dense-AI/science-superpowers (MIT).
+  Implements research-core IN-09 and, for causal work, CI-01. Chosen from the
+  survey in `docs/plans/2026-10-19-hot-skills-research.md`.
 - `scripts/sync_agent_links.py`: plans (dry run by default) or applies the
   committed relative links in an agent-sync tree plus a per-machine
   `external/` link; never touches entries it did not create.

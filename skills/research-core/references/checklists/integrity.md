@@ -107,7 +107,7 @@ Run by: sv-experiment, sv-review-once, sv-review-loop
 - Why: Unlabelled post-hoc analyses inflate false positives.
 - Status: confirmed
 - Scope: core
-- Owner: sv-experiment, sv-idea
+- Owner: sv-experiment, sv-experiment-prereg, sv-idea
 - Src: arc:RS-01@v2; arc:RS-03@v2; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### IN-10 Prompt versions logged

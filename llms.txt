@@ -20,7 +20,7 @@ Twelve groups (ADR 0021). Each `sv-<group>` entry routes to slash-only sub-comma
 - [sv-idea](skills/sv-idea/SKILL.md): full idea evaluation or the fatal-flaws gate.
 - [sv-litreview](skills/sv-litreview/SKILL.md): survey-grade literature review with verified citations, or a map of papers already read.
 - [sv-proposal](skills/sv-proposal/SKILL.md): thesis proposals (kaiti), grant applications, research statements.
-- [sv-experiment](skills/sv-experiment/SKILL.md): frozen inputs, runs log, traceable numbers, replication artifact.
+- [sv-experiment](skills/sv-experiment/SKILL.md): frozen inputs, pre-registered confirmatory analyses with a git audit, runs log, traceable numbers, replication artifact.
 - [sv-write](skills/sv-write/SKILL.md): skeleton, Introduction, sections, polish, Chinese-to-English, critique, de-AI by scenario, venue style.
 - [sv-figure](skills/sv-figure/SKILL.md): figure design, draw.io reconstruction, code plots, TikZ, HTML, posters, explanatory figures.
 - [sv-review](skills/sv-review/SKILL.md): read-only pre-submission audit or a bounded multi-round check.

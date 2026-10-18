@@ -14,7 +14,7 @@ group loads.
 | choose exactly | `/sv-write-polish`, `/sv-study-paper`, `/sv-figure-plot`, ... |
 
 Names are the same in Claude Code and Cursor. Only the 12 entries and
-`research-core` sit in the agent's skill list; the 50 sub-commands do not,
+`research-core` sit in the agent's skill list; the 51 sub-commands do not,
 so adding precision does not crowd the list.
 
 ## Where this file sits
@@ -37,7 +37,7 @@ so adding precision does not crowd the list.
 | [`sv-idea`](sv-idea/SKILL.md) | `-evaluate` `-fatal-flaws` | Full idea evaluation, or the early fatal-flaws gate only |
 | [`sv-litreview`](sv-litreview/SKILL.md) | `-survey` `-map` | Survey-grade literature review; map of what you have read |
 | [`sv-proposal`](sv-proposal/SKILL.md) | `-kaiti` `-grant` `-statement` | Thesis proposal, grant application, research statement |
-| [`sv-experiment`](sv-experiment/SKILL.md) | `-freeze` `-runs` `-numbers` `-replication` | Frozen inputs, runs log, traceable numbers, replication artifact |
+| [`sv-experiment`](sv-experiment/SKILL.md) | `-freeze` `-prereg` `-runs` `-numbers` `-replication` | Frozen inputs, pre-registered confirmatory analyses with a git audit, runs log, traceable numbers, replication artifact |
 | [`sv-write`](sv-write/SKILL.md) | `-skeleton` `-intro` `-section` `-polish` `-translate` `-critique` `-humanize-paper` `-humanize-report` `-humanize-slides` `-humanize-letter` `-humanize-audit` `-style-mine` `-style-apply` | Everything about prose: plan, draft, polish, translate, critique, de-AI by scenario, venue style |
 | [`sv-figure`](sv-figure/SKILL.md) | `-design` `-drawio` `-plot` `-tikz` `-html` `-poster` `-explain` | Every kind of figure, from design advice to draw.io reconstruction and code plots |
 | [`sv-review`](sv-review/SKILL.md) | `-once` `-loop` | Read-only pre-submission audit; bounded multi-round check |
@@ -52,7 +52,7 @@ so adding precision does not crowd the list.
 `sv-write-polish` → `sv-review-loop` → `sv-review-once`.
 
 **Empirical study, any field.** `sv-supervisor-init` → `sv-experiment-freeze`
-→ `sv-experiment-runs` → `sv-experiment-numbers` → `sv-write-section`
+→ `sv-experiment-prereg` → `sv-experiment-runs` → `sv-experiment-numbers` → `sv-write-section`
 (empirical skeleton) → `sv-figure-plot` → `sv-review-loop` →
 `sv-experiment-replication` → `sv-review-once`.
 
