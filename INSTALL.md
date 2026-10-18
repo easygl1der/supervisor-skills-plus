@@ -130,4 +130,5 @@ python scripts/check_sources.py      # every [src: ...] resolves
 `check_sources.py` resolves `arc:` citations against the private evidence
 archive (`$EVIDENCE_ARCHIVE` or `~/Projects/supervisor-skills-msr-tpa`) and
 skips them when it is absent. `skill:` citations keep the name a rule came
-from; names retired by ADR 0021 resolve to their new folders.
+from; names retired by ADR 0021 resolve to their new folders, and a skill
+outside this library that is not installed locally is skipped, not failed.

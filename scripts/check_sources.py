@@ -7,6 +7,7 @@ each citation whose prefix can be resolved locally:
   note:nNN...            notes/NN-*.md exists
   up:<path>              <repo>/<path> exists
   skill:<name>           ~/.claude/skills/<name>, the archive's 03-skills/<name>,
+                         (a name outside this library that resolves nowhere is skipped),
                          or skills/<name> in this repo exists
   arc:msr:<sha>          a patch file *_<sha>.patch under patches-msr-tpa/
   arc:ol:<sha>           a patch file *_<sha>.patch under patches-overleaf/
@@ -108,7 +109,11 @@ class Resolver:
             for base in (LOCAL_SKILLS, ARCHIVE / "03-skills", ROOT / "skills"):
                 if (base / name).exists():
                     return "ok"
-            return f"unknown skill {tok}"
+            if name.startswith("sv-") or name == "research-core" or name in RENAMED:
+                return f"unknown skill {tok}"  # a name of this library must resolve
+            # Provenance from a skill outside this repo (the owner's local skills,
+            # which CI never has and which may since have moved): unverifiable here.
+            return "skip"
         if kind != "arc":
             return "skip"
         if not self.have_archive:
