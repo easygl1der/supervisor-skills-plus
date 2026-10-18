@@ -38,5 +38,5 @@ See: references/procedure.md
 ## Hand-offs outside this group
 
 - Re-checking the manuscript after the changes: `sv-review-loop`.
-- ADRs, TODO and STATUS: `research-records`.
-- After the project: `lessons-harvest` reads the tables and records.
+- ADRs, TODO and STATUS: `sv-supervisor-records`.
+- After the project: `sv-supervisor-harvest` reads the tables and records.

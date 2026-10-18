@@ -39,7 +39,7 @@ Which points became rules, which were project-only, which were declined.
 - Paraphrase; quotes under 25 words.
 - Raw notes stay in the private project repo (`docs/guidance/`); this folder
   holds only what generalizes.
-- `lessons-harvest` writes these digests and the rule candidates they produce.
+- `sv-supervisor-harvest` writes these digests and the rule candidates they produce.
 
 No digests yet. The first evidence project's guidance is cited directly from
 the private archive in the core files and the SE profile.

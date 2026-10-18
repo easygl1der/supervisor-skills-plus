@@ -281,7 +281,7 @@ Items with `Status: candidate` are advisory.
 - Single-pass fluency and grammar: `sv-write-polish`.
 - Inline co-author and reviewer notes: `sv-feedback-revise`.
 - Figures that look generated: `figure-designer`.
-- Recurring tells across projects: `lessons-harvest` proposes catalog or
+- Recurring tells across projects: `sv-supervisor-harvest` proposes catalog or
   profile changes.
 
 ## Credits

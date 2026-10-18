@@ -94,7 +94,7 @@ Section summary at the end of each log:
 |---|---|---|---|---|---|
 ```
 
-Rule candidates are inputs for `lessons-harvest`, which dedupes them against
+Rule candidates are inputs for `sv-supervisor-harvest`, which dedupes them against
 research-core and proposes where they go. They are never written into
 research-core by this phase.
 

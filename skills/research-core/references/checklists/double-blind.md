@@ -95,5 +95,5 @@ Run by: sv-review-once, experiment-workflow
   people's work.
 - Status: confirmed
 - Scope: core
-- Owner: research-records, experiment-workflow, sv-review-once
+- Owner: sv-supervisor-records, experiment-workflow, sv-review-once
 - Src: arc:msr:f1c7df8; arc:msr:c8adb43; arc:01-checklist/checklist.md AT7; note:n08§5#8; user:2026-10-13 (promoted: failure had a clear bad outcome)

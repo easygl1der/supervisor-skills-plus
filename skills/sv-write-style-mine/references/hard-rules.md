@@ -17,7 +17,7 @@
    exemplars by `lit:` key and its support count; patterns below the
    threshold are never stated as rules.
 6. **Research-core is changed only through review.** Venue profiles and
-   field proposals are shown as a diff and handed to `lessons-harvest`;
+   field proposals are shown as a diff and handed to `sv-supervisor-harvest`;
    nothing is merged without the owner's approval. Scheduled runs may
    append to the intake queue but never edit cards into rules, profiles
    into `confirmed`, or any skill file.

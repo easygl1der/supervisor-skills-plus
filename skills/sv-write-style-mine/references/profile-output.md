@@ -6,7 +6,7 @@
 3. Venue profile (research-core format)
 4. Field-profile proposals
 5. Status and lifecycle
-6. Hand-off to lessons-harvest
+6. Hand-off to sv-supervisor-harvest
 7. Worked layout (placeholders only)
 
 This mode turns the Style Profile into research-core files. The method comes
@@ -143,9 +143,9 @@ Rules follow the research-core lifecycle (`core/precedence.md`, section 5):
   the owner decides whether the old rule becomes
   `(deprecated: <reason>)`.
 
-## 6. Hand-off to lessons-harvest
+## 6. Hand-off to sv-supervisor-harvest
 
-Writing into research-core goes through `lessons-harvest`: it dedupes
+Writing into research-core goes through `sv-supervisor-harvest`: it dedupes
 against existing rules, shows the diff, bumps the profile Version and
 Changelog, adds a repo CHANGELOG line, and commits on a `learn/<source>`
 branch for the owner to merge. When the user asks sv-write-style-mine to write the

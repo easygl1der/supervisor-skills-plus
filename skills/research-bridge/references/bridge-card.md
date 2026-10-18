@@ -83,7 +83,7 @@ verdict: <one of five>
 - 预算：约 N 小时，复用 ...
 
 ## 6. 交接
-- idea-evaluator / experiment-workflow / research-records / deep-research / study：各一句，说清交什么
+- idea-evaluator / experiment-workflow / sv-supervisor-records / deep-research / study：各一句，说清交什么
 ```
 
 ## 3. Template differences in general mode

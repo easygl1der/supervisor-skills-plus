@@ -38,7 +38,7 @@ Start with the helper script, which lists candidate items from feedback,
 guidance and ADR files with possible duplicates:
 
 ```
-python skills/lessons-harvest/scripts/find_rule_candidates.py <project_dir> [--min-score 0.35] [--json]
+python skills/sv-supervisor-harvest/scripts/find_rule_candidates.py <project_dir> [--min-score 0.35] [--json]
 ```
 
 Logs, STATUS, git history and expert notes are read by hand.
@@ -211,7 +211,7 @@ Anonymization:
 
 ## 10. New-field flow
 
-`lessons-harvest --new-field <name>`:
+`sv-supervisor-harvest --new-field <name>`:
 
 1. Choose the field code (two letters, unused by other profiles).
 2. Copy `references/fields/_template.md` to `references/fields/<name>.md`;

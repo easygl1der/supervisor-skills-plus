@@ -36,5 +36,5 @@ See: ../sv-write/references/humanize/patterns.md
 
 ## Hand-offs
 
-- Project records themselves (what STATUS should say): `research-records`.
+- Project records themselves (what STATUS should say): `sv-supervisor-records`.
 - A paper-style text: `sv-write-humanize-paper`.

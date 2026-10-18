@@ -50,7 +50,7 @@ For each point write:
   example "the method figure and text are not synced" means a reviewer cannot
   map each step to a box).
 - **Scope**: this paragraph, this paper, or every paper (a candidate rule for
-  `lessons-harvest`).
+  `sv-supervisor-harvest`).
 - **Confidence**: high when they said it explicitly, low when inferred.
 - **To clarify**: what to ask them next time.
 
@@ -62,7 +62,7 @@ For each point write:
 - Link actions to `TODO.md`, to FB IDs when they touch the manuscript, and to
   run ids when they touch experiments.
 - `scripts/guidance_review.py <project_dir>` lists open and overdue actions
-  and done actions without evidence. `research-supervisor` runs it at the
+  and done actions without evidence. `sv-supervisor` runs it at the
   start of a session.
 - Close an action only with evidence: a commit, a run id, a file, or the
   expert's confirmation (record when and how).

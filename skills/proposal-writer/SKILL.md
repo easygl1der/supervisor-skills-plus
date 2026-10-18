@@ -88,7 +88,7 @@ Then collect the proposal facts in one message, skipping any already known:
    previous drafts, reviewer comments from an earlier round.
 
 Without `research.yaml`, ask for the field in the same message, or hand off
-to `research-supervisor`.
+to `sv-supervisor`.
 
 ## Precedence
 
@@ -330,6 +330,6 @@ drafting. `skills/study/evals/proposal/` is a pointer only.
 - Understanding a method the proposal depends on: `study`; hooking notes
   to the current project: `research-bridge`.
 - Scope and design decisions taken while writing (frozen RQ set, chosen
-  data source): `research-records` as an ADR.
+  data source): `sv-supervisor-records` as an ADR.
 - Language polish and AI-tell removal on the finished draft:
   `sv-write-polish`, `sv-write-humanize-letter`.

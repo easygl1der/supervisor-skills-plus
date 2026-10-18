@@ -26,8 +26,8 @@
 | 编程 | 并发/异步调用顺序 | 序列图 stepper（P1，泳道） | study |
 | 流程 | 实验管线（数据→训练→评估→消融） | P2 | experiment-workflow / research-bridge |
 | 流程 | 论文修改/投稿/rebuttal 流程 | P2 + P7 | paper-writing 系列 / sv-write-style-mine |
-| 流程 | ACA（自动化学术流程）工作流 | P2 | research-supervisor |
-| 流程 | supervisor-skills 路由（按项目阶段推荐下一个 skill） | P2 | research-supervisor（README/DESIGN 图） |
+| 流程 | ACA（自动化学术流程）工作流 | P2 | sv-supervisor |
+| 流程 | supervisor-skills 路由（按项目阶段推荐下一个 skill） | P2 | sv-supervisor（README/DESIGN 图） |
 | 流程 | study 概念协议 + study-vault 落盘循环 | P2（**demo**） | study（SKILL 文档自带） |
 | 流程 | 多 agent / bot 路由（谁接什么消息、何时交接） | P2 + P9 | 文档用（非 skill 运行时） |
 | 数学/统计 | OLS 无偏、CLT、Delta 方法、MLE 渐近正态 | P3（**demo**：OLS） | study（book-mode / paper-mode 的 method.md） |

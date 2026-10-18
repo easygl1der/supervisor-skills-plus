@@ -123,7 +123,7 @@ the individual figure design decision.
 
 Typical sequence:
 
-1. `vibe-research-workflow` (this skill, figure-mode): plan the
+1. `research-core` `core/ai-collaboration.md` (figure mode): plan the
    figure-production session.
 2. `figure-designer`: for each figure, decide paradigm, layout,
    labelling, tool, and run the audit.

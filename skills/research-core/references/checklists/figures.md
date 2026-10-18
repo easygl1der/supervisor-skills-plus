@@ -108,7 +108,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: The overview was the most revised figure in the evidence project.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, research-supervisor
+- Owner: figure-designer, sv-supervisor-brief
 - Src: arc:CO-08@v2; arc:chat:1on1@2026-09-27T23:21; note:n07§B.5
 
 ## 3. What goes in a figure
@@ -249,7 +249,7 @@ Run by: figure-designer, drawio-reconstruction
 - Why: Draft fan-out without a record repeated decisions already made.
 - Status: candidate
 - Scope: core
-- Owner: figure-designer, research-records
+- Owner: figure-designer, sv-supervisor-records
 - Src: arc:msr:e0ea09b; note:n07§A.7; note:n07§A.8 FR15
 
 ### FG-25 No retired figures, nothing needed is ignored

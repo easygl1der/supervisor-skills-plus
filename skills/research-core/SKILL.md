@@ -8,6 +8,7 @@ description: >-
   project, or when a rule, profile or checklist item needs to be looked up,
   added or corrected.
 license: CC-BY-NC-SA-4.0
+user-invocable: false
 ---
 
 # Research Core
@@ -42,13 +43,13 @@ Projects add a fourth layer of their own in the project repo (decisions in
 - To draft, polish or review text: use `sv-write-section`, `sv-write-polish`,
   `sv-review-loop` or `sv-review-once`, which load this skill themselves.
 - To learn new rules from a finished project or from expert notes: use
-  `lessons-harvest`, which proposes edits to this skill.
+  `sv-supervisor-harvest`, which proposes edits to this skill.
 
 ## Step 0: Resolve the project context
 
 1. Find `research.yaml` at the project root. If it is missing, offer to create
    it from `assets/templates/research.yaml` (or hand off to
-   `research-supervisor`, which interviews the user).
+   `sv-supervisor`, which interviews the user).
 2. Read `field`, `venue`, `paper_type`, `stage`, `review`, `style.overlays`
    and `people`.
 3. Load, in this order:
@@ -77,6 +78,7 @@ See: references/core/precedence.md
 | `references/core/integrity.md` | Agreement numbers, frozen gold, pre-set bars, AI-use disclosure, traceable numbers |
 | `references/core/precedence.md` | What wins when rules conflict; how to cite sources |
 | `references/core/inputs-mineru.md` | PDF input only through MinerU; routes; stop on failure |
+| `references/core/ai-collaboration.md` | Human-in-charge rules for AI-assisted coding, figures and writing (formerly the `vibe-research-workflow` skill); phase guides and tool matrix in `references/vibe/` |
 
 See: references/core/claims-evidence.md
 See: references/core/body-text.md
@@ -86,6 +88,7 @@ See: references/core/figures.md
 See: references/core/records.md
 See: references/core/integrity.md
 See: references/core/inputs-mineru.md
+See: references/core/ai-collaboration.md
 
 ## Field profiles
 
@@ -123,7 +126,7 @@ not a source.
 
 | File | Run by |
 |---|---|
-| `references/checklists/master.md` | research-supervisor, sv-review-once |
+| `references/checklists/master.md` | sv-supervisor, sv-review-once |
 | `references/checklists/writing.md` | sv-write-section, sv-write-intro, sv-write-polish, sv-write-humanize-paper, sv-review-loop |
 | `references/checklists/figures.md` | figure-designer, drawio-reconstruction |
 | `references/checklists/threats.md` | idea-evaluator, sv-review-once |
@@ -131,7 +134,7 @@ not a source.
 | `references/checklists/artifact.md` | experiment-workflow, sv-review-once |
 | `references/checklists/venue-submission.md` | sv-review-once |
 | `references/checklists/integrity.md` | experiment-workflow, sv-review-once, sv-review-loop |
-| `references/checklists/records.md` | research-records, research-supervisor, sv-feedback-revise |
+| `references/checklists/records.md` | sv-supervisor-records, sv-supervisor, sv-feedback-revise |
 
 See: references/checklists/master.md
 
@@ -169,7 +172,7 @@ one project.
   more projects, or when a published guide or the venue states them. Rules
   contradicted later become `deprecated` with the reason; they are not
   deleted.
-- `lessons-harvest` proposes changes on a `learn/<source>` branch; the user
+- `sv-supervisor-harvest` proposes changes on a `learn/<source>` branch; the user
   approves before merge.
 - After editing, run `python scripts/lint_skills.py` and
   `python scripts/check_checklists.py` from the repo root.

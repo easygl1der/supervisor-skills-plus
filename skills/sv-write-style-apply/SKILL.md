@@ -34,7 +34,7 @@ Load only the dynamic skill and the manuscript. For each section: Round 1
 diagnosis (problem type, severity, rule, venue match score 1 to 5), Round 2
 revision under P1 to P5 with no new content, Round 3 a per-paragraph log
 with a "Rule candidate" field. Collect rule candidates in
-`revision_summary.md`; they feed `lessons-harvest`.
+`revision_summary.md`; they feed `sv-supervisor-harvest`.
 
 LaTeX sources in a git repo may be edited in place with a minimal diff when
 the user agrees; otherwise output Markdown sections.
@@ -58,7 +58,7 @@ See: references/check-mode.md
 
 ## Hand-offs
 
-- Rule candidates from the revision logs: `lessons-harvest`.
+- Rule candidates from the revision logs: `sv-supervisor-harvest`.
 - Multi-round checks and applying check findings: `sv-review-loop`.
 - AI tells beyond the P5 list: `sv-write-humanize-paper`.
 - Missing content found in diagnosis: `sv-write-section`, `sv-write-intro`.

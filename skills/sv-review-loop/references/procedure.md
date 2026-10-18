@@ -96,7 +96,7 @@ oscillation appears, or the budget runs out. Design: `DESIGN.md` section 6.
 
 1. Create a branch `check-loop/<date>` from the paper's source of truth and
    note the base commit. If the paper is co-edited on Overleaf, pull first;
-   push back only through `research-records` `scripts/sync_guard.py`.
+   push back only through `sv-supervisor-records` `scripts/sync_guard.py`.
 2. Write the locked list into the log, and save the term table as a
    tab-separated terms file for the span guard.
 3. Start `docs/log/<date>-check-loop.md` from the log template, and the span
@@ -238,9 +238,9 @@ Items with `Status: candidate` are advisory unless the user opted in.
 ## Hand-offs
 
 - `needs-author` content gaps (missing evidence, missing spine): `sv-write-section`.
-- Rule conflicts and questioned locked decisions: `research-records` (ADR).
-- TODO and STATUS updates: `research-records`.
+- Rule conflicts and questioned locked decisions: `sv-supervisor-records` (ADR).
+- TODO and STATUS updates: `sv-supervisor-records`.
 - Remaining comments from people: `sv-feedback-revise`.
 - Venue style rules missing from the profile: `sv-write-style-apply`.
 - Submission gates after the loop: `sv-review-once`.
-- Recurring findings across projects: `lessons-harvest` reads the logs.
+- Recurring findings across projects: `sv-supervisor-harvest` reads the logs.

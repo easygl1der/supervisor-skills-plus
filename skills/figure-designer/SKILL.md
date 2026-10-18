@@ -288,5 +288,5 @@ the commit that regenerated the PDF. Vision-only items without an image are
 - Number traces that reach the analysis scripts: `experiment-workflow`
   and `sv-review-loop`.
 - Senior or reviewer comments on figures: `sv-feedback-revise`.
-- Draft decisions (which variant won and why): `research-records`.
+- Draft decisions (which variant won and why): `sv-supervisor-records`.
 - Final pre-submission figure review: `sv-review-once`.

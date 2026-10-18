@@ -26,7 +26,7 @@ and input check (MinerU only).
 |---|---|---|
 | Card | "dissect this paper's style", a card from `paper-quickread --style` | `style-card.md` |
 | Build | "learn the style of this venue" | `style-card.md`, `style-profile.md`, `base_rules/<file>` the user picks |
-| Profile | "make a venue profile", `lessons-harvest --new-field` | `profile-output.md` (after Build and the human gate) |
+| Profile | "make a venue profile", `sv-supervisor-harvest --new-field` | `profile-output.md` (after Build and the human gate) |
 | Intake | "list this journal's new papers", "find this author's papers" | `intake.md`, `scripts/intake_search.py` |
 | Author profile | "build a profile of this author's style" | `author-profile.md` |
 | Method card | "borrow methods from related work" | `method-card.md` |
@@ -47,6 +47,6 @@ See: references/method-card.md
 ## Hand-offs
 
 - Apply a profile to a manuscript, or check venue fit: `sv-write-style-apply`.
-- Profile changes into research-core: `lessons-harvest`.
+- Profile changes into research-core: `sv-supervisor-harvest`.
 - Implementing a borrowed method: `experiment-workflow`; recording the
-  design change: `research-records`.
+  design change: `sv-supervisor-records`.

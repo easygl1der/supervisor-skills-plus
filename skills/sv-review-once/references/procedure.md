@@ -80,7 +80,7 @@ From `research.yaml` read `field`, `paper_type`, `venue`, `deadline`
 PDF under review; every finding refers to that version.
 
 If `research.yaml` is missing, ask for field, venue and deadline source,
-or hand off to `research-supervisor`. A deadline without an official
+or hand off to `sv-supervisor`. A deadline without an official
 source is reported as a finding (VS-01).
 
 ## Core procedure
@@ -484,6 +484,6 @@ This skill runs, and reports pass, fail, n/a or unknown with evidence:
 - Artifact rebuild, anonymous mirror and number regeneration:
   `experiment-workflow`.
 - Recording the source-of-truth switch, the tag and the TODOs:
-  `research-records`.
+  `sv-supervisor-records`.
 - Reviewer reports after submission: `sv-feedback-revise`, then
   `sv-feedback-rebuttal`.

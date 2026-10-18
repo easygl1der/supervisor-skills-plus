@@ -49,7 +49,7 @@ Run by: idea-evaluator, sv-review-once
 - Why: Chasing an unclosable gap cost weeks; stating its mechanism costs a paragraph.
 - Status: candidate
 - Scope: core
-- Owner: idea-evaluator, experiment-workflow, research-supervisor
+- Owner: idea-evaluator, experiment-workflow, sv-supervisor-brief
 - Src: arc:@threats-pivot; note:n08§5#25
 
 ## 2. Measurement and reference data

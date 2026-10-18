@@ -1,17 +1,21 @@
----
-name: research-supervisor
-description: >-
-  Optional entry point for a research project: starts new projects with an
-  interview that writes research.yaml and the docs files, works out the
-  current stage from research.yaml and repository signals, shows blockers,
-  overdue guidance, open reviewer markers and the next deadline with its
-  source, then routes to one to three skills with reasons. Never does the
-  work itself. Use when starting a session, starting a project, or asking
-  what to do next.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-supervisor/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Research Supervisor
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Reading and learning: route by intent
+- Step 0: Load context
+- Step 1: Init (only when `research.yaml` is missing)
+- Step 2: Session brief
+- Step 3: Route
+- Step 4: Hand off
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -87,7 +91,7 @@ Ask, one short block at a time, and accept "unknown" for any answer:
 Then copy `research-core` `assets/templates/research.yaml` to the project
 root, fill it, and show the diff before writing. Hand the `docs/` set-up
 (STATUS, TODO, ADR 0001 for sources of truth, runs log, `.gitignore` for
-private material) to `research-records` Task 1. A field with no profile
+private material) to `sv-supervisor-records` Task 1. A field with no profile
 loads `_template.md`; offer `sv-write-style-mine` to build one.
 
 ## Step 2: Session brief
@@ -123,28 +127,28 @@ brief showed (a blocker, a marker count, days to deadline).
 
 | Stage | Skills (first choice first) |
 |---|---|
-| no `research.yaml` | `research-supervisor` init, then `research-records`; `research-core` is loaded by every skill |
+| no `research.yaml` | `sv-supervisor-init`, then `sv-supervisor-records`; `research-core` is loaded by every skill |
 | idea | `idea-evaluator`, `deep-research`, `research-bridge` (an idea came from a paper or concept just studied) |
-| design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `research-records` (ADRs) |
-| experiments | `experiment-workflow`, `research-records`, `vibe-research-workflow` (agent coding habits) |
+| design | `idea-evaluator` (empirical or theory route), `experiment-workflow` (freeze, sampling, gold), `sv-supervisor-records` (ADRs) |
+| experiments | `experiment-workflow`, `sv-supervisor-records`, `research-core` `core/ai-collaboration.md` (agent coding habits) |
 | writing | `sv-write` (routes to skeleton, intro, section, style and humanize sub-commands) |
 | figures | `figure-designer`, `drawio-reconstruction` |
 | internal-review | `sv-feedback-revise`, `sv-review-loop`, `sv-write-polish` |
 | submission | `sv-review-once`, `sv-review-loop`, `experiment-workflow` (artifact, numbers check) |
 | rebuttal | `sv-feedback` (revise, then rebuttal) |
-| camera-ready | `sv-write-polish`, `experiment-workflow` (de-anonymized artifact), `research-records` (tag the submitted version) |
-| project finished, or expert notes arrived | `lessons-harvest` |
+| camera-ready | `sv-write-polish`, `experiment-workflow` (de-anonymized artifact), `sv-supervisor-records` (tag the submitted version) |
+| project finished, or expert notes arrived | `sv-supervisor-harvest` |
 
 Overrides from the brief:
 - Deadline within 7 days and no read-only full check yet: `sv-review-once`
   first, at least one day before the deadline.
 - Overdue guidance or unverified feedback: `sv-feedback-guidance`, `sv-feedback-revise`.
 - Source of truth unnamed, STATUS stale, deadline without source:
-  `research-records`.
+  `sv-supervisor-records`.
 - Printed numbers without verified rows, or an agreement value without raw
   label sets: `experiment-workflow`.
 - Last 24 hours before the deadline: remind the team to use one editor at a
-  time and one channel (`research-records`).
+  time and one channel (`sv-supervisor-records`).
 
 ## Step 4: Hand off
 
@@ -167,11 +171,11 @@ brief's output line, the file).
 ## Outputs
 
 - At init: `research.yaml` (after the user approves the diff) and a hand-off
-  to `research-records` for `docs/`.
+  to `sv-supervisor-records` for `docs/`.
 - Each session: the brief (stage, deadline and source, blockers, overdue
   guidance, markers, warnings) and the routing decision with reasons.
 
 ## Hand-offs
 
 Every row of the routing table. Records changes always go through
-`research-records`; this skill does not edit `docs/`.
+`sv-supervisor-records`; this skill does not edit `docs/`.

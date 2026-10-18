@@ -94,4 +94,4 @@ never silently resolved:
 
 Conflicts stay in `authors/<slug>/conflicts.md`; a resolution that should
 hold for every manuscript is recorded as an ADR in the project
-(`research-records`).
+(`sv-supervisor-records`).

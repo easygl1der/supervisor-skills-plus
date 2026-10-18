@@ -70,7 +70,7 @@ def main() -> int:
     today = dt.date.fromisoformat(a.today) if a.today else dt.date.today()
     ry = root / "research.yaml"
     if not ry.exists():
-        print("research.yaml: MISSING -> run research-supervisor init")
+        print("research.yaml: MISSING -> run sv-supervisor init")
         return 0
     y = ry.read_text()
     stage = yaml_get(y, "stage") or "unset"
@@ -139,7 +139,7 @@ def main() -> int:
     if sec:
         blockers = [l.strip() for l in sec.group(1).splitlines() if l.strip().startswith("-") and "<blocker>" not in l]
     if not status.exists():
-        warn.append("docs/STATUS.md missing -> research-records Task 1")
+        warn.append("docs/STATUS.md missing -> sv-supervisor-records Task 1")
     else:
         lu = re.search(r"Last updated:\s*(\d{4}-\d{2}-\d{2})", st)
         if not lu or (today - dt.date.fromisoformat(lu.group(1))).days > 14:

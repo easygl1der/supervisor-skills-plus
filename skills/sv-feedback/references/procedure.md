@@ -89,7 +89,7 @@ sync) from text revisions.
 Show the triage table. Ask the author to decide every item marked
 needs-decision and every conflict. For a conflict, present both positions
 and one compromise; record the decision and its owner. Decisions that set a
-rule go to an ADR (`research-records`).
+rule go to an ADR (`sv-supervisor-records`).
 
 ### A3. Apply one change per comment
 
@@ -184,5 +184,5 @@ or unknown with evidence.
 
 - Response letter prose: `sv-feedback-rebuttal`.
 - Multi-round language and style checks after the changes: `sv-review-loop`.
-- ADRs, TODO and STATUS updates: `research-records`.
-- After the project: `lessons-harvest` reads the tables and guidance records.
+- ADRs, TODO and STATUS updates: `sv-supervisor-records`.
+- After the project: `sv-supervisor-harvest` reads the tables and guidance records.

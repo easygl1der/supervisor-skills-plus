@@ -1,6 +1,6 @@
 # Records outside the paper
 
-The procedure is in `research-records`. Layout of a project's `docs/`:
+The procedure is in `sv-supervisor-records`. Layout of a project's `docs/`:
 `STATUS.md` (current state only), `TODO.md`, `adr/`, `log/`, `feedback/`,
 `guidance/`, `runs.md`.
 

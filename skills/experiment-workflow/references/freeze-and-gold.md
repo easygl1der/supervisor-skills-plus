@@ -12,7 +12,7 @@
 
 ## 1. Freeze the corpus
 
-Write an ADR (through `research-records`) before any analysis touches the
+Write an ADR (through `sv-supervisor-records`) before any analysis touches the
 data. It records:
 
 - snapshot identifier (crawl id, export file name, database dump hash);

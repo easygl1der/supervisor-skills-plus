@@ -5,7 +5,7 @@ description: >-
   modes: a 6 to 10 slide weekly report that loads last week's next steps,
   and a 12 to 18 slide critical paper talk with estimand, identification,
   and reproducibility slides. Compiles with latexmk and XeLaTeX, lints
-  overlays and density, and stores decks through research-records. Use when
+  overlays and density, and stores decks through sv-supervisor-records. Use when
   preparing a group meeting, weekly progress slides, or a paper presentation.
 license: CC-BY-NC-SA-4.0
 ---
@@ -101,14 +101,14 @@ Critical slides every paper talk carries (`paper-talk.md`, `causal-slides.md`):
    title verb matches claim level), then `sv-write-humanize-slides` `audit` with the
    `slides` profile. Speaker notes (`\note{}`) use `academic`.
 6. Export notes with `scripts/export_notes.py`. Save through
-   `research-records` Task 8: `docs/log/<date>-group-meeting.md` and
+   `sv-supervisor-records` Task 8: `docs/log/<date>-group-meeting.md` and
    `docs/meetings/<date>/` (`.tex`, PDF, notes).
 
 ## Accumulation across meetings
 
 Each meeting leaves a record that the next weekly report reads:
 
-1. After the meeting, `research-records` writes
+1. After the meeting, `sv-supervisor-records` writes
    `docs/log/<date>-group-meeting.md` from the research-core
    `group-meeting-log.md` template: mode, audience, what happened, decisions
    (linked ADRs) and the Next steps table (item, owner, date, kill
@@ -155,12 +155,12 @@ Report each item as pass, fail, n/a or unknown, with evidence (page,
   closing discussion question are present.
 - `sv-write-humanize-slides` `audit` with the `slides` profile ran; notes checked under
   `academic`.
-- Notes exported; deck and log saved through `research-records` Task 8.
+- Notes exported; deck and log saved through `sv-supervisor-records` Task 8.
 
 ## Evals
 
 Real runs, compiled and checked: `evals/2026-10-17-weekly/` (Chinese,
-advisor, with the research-records meeting log) and
+advisor, with the sv-supervisor-records meeting log) and
 `evals/2026-10-17-paper-talk-sdid/` (English, peer, SDID; numbers checked
 against the paper's tables). Each has `slides.tex`, `slides.pdf` and the
 exported `notes.md`.
@@ -169,17 +169,17 @@ exported `notes.md`.
 
 - Approved outline, then a compiling `.tex` and PDF.
 - Exported `notes.md`.
-- research-records log plus `docs/meetings/<date>/`.
+- sv-supervisor-records log plus `docs/meetings/<date>/`.
 
 ## Hand-offs
 
 - `paper-quickread`: card in for paper-talk.
 - `research-bridge`: link-to-project slide.
 - `figure-designer`: TikZ DAGs; Graphviz PDF only for large or changing graphs.
-- `research-records`: accumulation and last-week next steps.
+- `sv-supervisor-records`: accumulation and last-week next steps.
 - `sv-write-humanize-slides`: `slides` profile on frames; `academic` on `\note{}`.
 - `sv-review-once` devil's-advocate pass plus
   `research-core` `fields/causal.md` reviewer questions, as the substitute
   for a missing Critic checklist.
 - `sv-write-style-mine`: later fill of `group-preferences.md` from past decks.
-- `research-supervisor`: routes group-meeting slide requests here.
+- `sv-supervisor`: routes group-meeting slide requests here.

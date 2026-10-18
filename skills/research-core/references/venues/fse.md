@@ -108,7 +108,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Calls and dates change every cycle; a meeting once gave a wrong deadline.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: research-supervisor, research-records, sv-review-once
+- Owner: sv-supervisor-brief, sv-supervisor-records, sv-review-once
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; note:n08§3
 
 ### FS-02 Page budget counted on the PDF
@@ -132,7 +132,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Removing the appendix left the evidence paper a page short a day before the deadline.
 - Status: candidate
 - Scope: venue:fse
-- Owner: sv-write-polish, research-supervisor
+- Owner: sv-write-polish, sv-supervisor-brief
 - Src: arc:chat:group@2026-10-02T22:44; arc:msr:d0d4c03; note:n06§2.11
 
 ### FS-05 Template untouched
@@ -196,7 +196,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: Conflict entry took hours on deadline day in the evidence project.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: research-supervisor, sv-review-once
+- Owner: sv-supervisor-brief, sv-review-once
 - Src: arc:chat:group@2026-10-03T17:28; note:n08§5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-13 Upload early
@@ -204,7 +204,7 @@ at FSE: Unknown. [src: note:n06§3; note:n02§10]
 - Why: The editor and the submission site both failed near the deadline.
 - Status: confirmed
 - Scope: venue:fse
-- Owner: research-supervisor, sv-review-once
+- Owner: sv-supervisor-brief, sv-review-once
 - Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T23:18; note:n08§5; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### FS-14 Citations verified

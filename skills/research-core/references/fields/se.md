@@ -248,7 +248,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Closed-item medians hide long-open work; imports create artificial closing times.
 - Status: candidate
 - Scope: field:se
-- Owner: experiment-workflow, research-records, sv-review-once
+- Owner: experiment-workflow, sv-supervisor-records, sv-review-once
 - Src: arc:TH-06@v2; arc:TH-02@v2; arc:msr:9c69675
 
 ### SE-06 Residual class reported
@@ -320,7 +320,7 @@ reference, not targets. [src: note:n06§3] (candidate)
 - Why: Advisors asked what each audience should do differently.
 - Status: candidate
 - Scope: field:se
-- Owner: sv-write-section, research-supervisor
+- Owner: sv-write-section, sv-supervisor-brief
 - Src: arc:msr:f141169; note:n06§1.8; note:n05§1.1 FB-A-08
 
 ### SE-15 Four threat categories

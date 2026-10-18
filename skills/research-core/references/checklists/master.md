@@ -4,7 +4,7 @@ Index of the eight topic checklists plus the gate items that cut across them.
 Run it before any submission or major hand-over; it does not replace the topic
 files, it decides whether the paper may ship.
 
-Run by: research-supervisor, sv-review-once
+Run by: sv-supervisor, sv-review-once
 
 ## Contents
 1. Topic checklists
@@ -36,7 +36,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   leak that later had to be fixed after the deadline; its Blockers had no owners.
 - Status: confirmed
 - Scope: core
-- Owner: sv-review-once, research-supervisor, sv-review-loop
+- Owner: sv-review-once, sv-supervisor-brief, sv-review-loop
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B1; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md B2; note:n08§5#37; note:n07§B.3; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### MA-02 No reviewer-visible markers
@@ -58,7 +58,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   commented out notes that only the student was meant to close.
 - Status: confirmed
 - Scope: core
-- Owner: sv-review-once, sv-feedback-revise, research-records
+- Owner: sv-review-once, sv-feedback-revise, sv-supervisor-records
 - Src: arc:msr:9809b8c; arc:msr:815305e; note:n05§5.2; note:n05§6.5
 
 ### MA-04 Same numbers and claims everywhere
@@ -81,7 +81,7 @@ Field and venue profiles add items with their own prefixes; load those whose
   reviewers.
 - Status: candidate
 - Scope: core
-- Owner: sv-review-once, research-supervisor
+- Owner: sv-review-once, sv-supervisor-brief
 - Src: arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md; arc:01-checklist/checklist.md T14; skill:se-paper-reviewer; note:n07§B.5
 
 ### MA-06 Open guidance actions closed
@@ -92,5 +92,5 @@ Field and venue profiles add items with their own prefixes; load those whose
   deadline.
 - Status: confirmed
 - Scope: core
-- Owner: research-supervisor, research-records
+- Owner: sv-supervisor-brief, sv-supervisor-records
 - Src: user:2026-10-13; arc:@threats-pivot

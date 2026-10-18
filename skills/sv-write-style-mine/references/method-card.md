@@ -108,7 +108,7 @@ Only when the user asks to implement a Tier 1 or Tier 2 item:
 
 Wait for confirmation before editing TeX or running anything. Analysis work
 goes to `experiment-workflow` (runs log, number traceability); a design
-change gets an ADR via `research-records`.
+change gets an ADR via `sv-supervisor-records`.
 
 ## 6. Phase D: optional prose hand-off
 

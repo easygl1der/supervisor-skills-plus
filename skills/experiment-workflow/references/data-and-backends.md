@@ -26,7 +26,7 @@ data host instead. No Git LFS use is evidenced in its project repositories.
 
 Make the private-material ignore rules on day one: chat exports, other
 people's papers and personal notes never enter the shared repositories
-(`research-records` Task 1). [src: note:n08§5#8] (confirmed)
+(`sv-supervisor-records` Task 1). [src: note:n08§5#8] (confirmed)
 
 ## 2. The data manifest
 

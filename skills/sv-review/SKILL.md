@@ -34,4 +34,4 @@ rule-authorized edits, records them in a round log, and stops on a budget.
 
 - Comments to resolve, or a response letter: `sv-feedback`.
 - Drafting, polishing or de-AI editing: `sv-write`.
-- Recording decisions and TODOs from the review: `research-records`.
+- Recording decisions and TODOs from the review: `sv-supervisor-records`.

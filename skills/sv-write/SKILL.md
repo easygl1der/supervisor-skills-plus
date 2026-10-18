@@ -64,4 +64,4 @@ See: references/humanize/core.md
 - Comments from co-authors, advisors or reviewers: `sv-feedback-revise`.
 - Whether the idea holds at all: `idea-evaluator`.
 - Figures: `figure-designer`.
-- Rule changes learned from writing work: `lessons-harvest`.
+- Rule changes learned from writing work: `sv-supervisor-harvest`.

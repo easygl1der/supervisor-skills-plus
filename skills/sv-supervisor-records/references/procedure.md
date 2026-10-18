@@ -1,16 +1,23 @@
----
-name: research-records
-description: >-
-  Keeps a research project's records outside the paper: STATUS.md with the
-  current state only, TODO.md, numbered decision records, dated logs, and the
-  sources of truth for paper, data and numbers. Rewrites docs without
-  accretion, guards syncs between git and co-edited copies, and mirrors items
-  to Linear when enabled. Use when starting a project, recording a decision,
-  updating status, switching where the paper is edited, or cleaning docs.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-supervisor-records/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Research Records
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Task 1: Initialize
+- Task 2: Update status (replace, never append)
+- Task 3: Record a decision (ADR)
+- Task 4: Sources of truth and syncs
+- Task 5: Notes lifecycle
+- Task 6: De-accrete docs
+- Task 7: Linear mirror (optional)
+- Task 8: Group-meeting decks
+- Checklist
+- Outputs
 
 ## Overview
 
@@ -94,7 +101,7 @@ Load `research-core` (core rules in `references/core/records.md` and
 5. If a living doc (STATUS, README, codebook) still describes the old world,
    rewrite it now (Task 6).
 
-See: references/adr.md
+See also `adr.md`
 
 ## Task 4: Sources of truth and syncs
 
@@ -111,7 +118,7 @@ See: references/adr.md
 5. After a deadline: bring the submitted version back into git and tag it
    (`submitted-<venue>-<date>`), with the uploaded PDF's hash in STATUS.
 
-See: references/sources-and-sync.md
+See also `sources-and-sync.md`
 
 ## Task 5: Notes lifecycle
 
@@ -128,7 +135,7 @@ Rewrite living docs so they state current facts without editing narration
 would a reader who never saw the old version notice a gap? History belongs
 in ADRs, logs and git. Keep load-bearing commands and safety constraints.
 
-See: references/anti-accretion.md
+See also `anti-accretion.md`
 
 ## Task 7: Linear mirror (optional)
 
@@ -137,7 +144,7 @@ blocker; the issue description links to the `docs/` file, ADR and note; status
 flows from files to Linear, never the reverse; no reports pasted into Linear.
 Use the Linear MCP when available.
 
-See: references/linear-mirror.md
+See also `linear-mirror.md`
 
 ## Task 8: Group-meeting decks
 
@@ -150,7 +157,7 @@ When `group-beamer` finishes a meeting deck:
 2. Store `.tex`, PDF and exported notes under `docs/meetings/<date>/`.
 3. Do not invent next steps that were not on the approved outline.
 
-See: references/group-meetings.md
+See also `group-meetings.md`
 
 ## Checklist
 

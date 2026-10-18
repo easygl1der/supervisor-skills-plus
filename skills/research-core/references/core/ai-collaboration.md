@@ -1,18 +1,16 @@
----
-name: vibe-research-workflow
-description: >-
-  Guides AI-assisted research across three sub-flows, Vibe Coding,
-  Vibe Figure, and Vibe Writing, with behavioural rules that keep the
-  user in charge of academic judgment while delegating mechanical
-  work to AI. Recommends the right tool (Cursor, Claude Code, Codex,
-  Figma, Gemini) for the current stage. Use when the user asks 'how
-  to use AI for research', 'Vibe Coding tips', 'AI-assisted writing
-  workflow', 'which AI tool for this', or starts an AI-assisted work
-  session.
-license: CC-BY-4.0
----
+<!-- Moved from skills/research-core/references/core/ai-collaboration.md by ADR 0021 (2026-10-18); licence CC-BY-4.0. Section text unchanged; pointers updated. -->
 
 # Vibe Research Workflow
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Core procedure
+- Integrity gate
+- Records and experiments
+- Output format
 
 ## Overview
 
@@ -76,7 +74,7 @@ mixed.
 
 ### Step 2: Behavioural rules recap
 
-See: references/behavior-guidelines.md for the full six-rule set.
+See also `../vibe/behavior-guidelines.md` for the full six-rule set.
 
 State the six rules succinctly at the start of the session:
 
@@ -103,11 +101,11 @@ gate.
 
 ### Step 3: Phase-specific procedure
 
-For Vibe Coding, see: references/vibe-coding.md.
+For Vibe Coding, see: ../vibe/vibe-coding.md.
 
-For Vibe Figure, see: references/vibe-figure.md.
+For Vibe Figure, see: ../vibe/vibe-figure.md.
 
-For Vibe Writing, see: references/vibe-writing.md.
+For Vibe Writing, see: ../vibe/vibe-writing.md.
 
 Each phase has its own core techniques (Plan Mode, Small Steps,
 Clear Requirements for coding; four-step figure workflow; red-line
@@ -115,7 +113,7 @@ rules for writing).
 
 ### Step 4: Tool selection
 
-See: references/tool-selection.md for the tool matrix.
+See also `../vibe/tool-selection.md` for the tool matrix.
 
 Match tool to phase:
 
@@ -172,10 +170,10 @@ block.
 ## Records and experiments
 
 - Checkpoint before destructive agent edits and read the diffstat after
-  any agent write to a shared document: `research-records` (Task 4).
+  any agent write to a shared document: `sv-supervisor-records` (Task 4).
 - Runs log, frozen gold, prompt versions, numbers file and replication
   artifact for agent-run experiments: `experiment-workflow`.
-- Where the project stands and which skill comes next: `research-supervisor`.
+- Where the project stands and which skill comes next: `sv-supervisor`.
 
 ## Output format
 
@@ -184,7 +182,7 @@ block.
 - Secondary phases: <list>
 
 ### 2. Behavioural rules recap
-- Rule 1-6 (see references/behavior-guidelines.md): acknowledged
+- Rule 1-6 (see ../vibe/behavior-guidelines.md): acknowledged
 
 ### 3. Workflow plan
 | Time block | Phase | Activity | Tool | User check |
@@ -199,7 +197,7 @@ block.
 | Writing | ... | ... | ... |
 
 ### 5. Red-line reminders
-- ... (from references/vibe-writing.md)
+- ... (from ../vibe/vibe-writing.md)
 
 ### 6. Integrity gate plan
 - Verification points: ...

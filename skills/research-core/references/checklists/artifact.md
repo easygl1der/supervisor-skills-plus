@@ -41,7 +41,7 @@ Run by: experiment-workflow, sv-review-once
 - Why: Secrets leak with the artifact; data copies drift from the frozen version.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, research-records
+- Owner: experiment-workflow, sv-supervisor-records
 - Src: arc:RP-04@v2; arc:FP-04@v2; arc:FP-05@v2; arc:01-checklist/checklist.md AT7; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 2. Build and reproduction
@@ -82,7 +82,7 @@ Run by: experiment-workflow, sv-review-once
 - Why: Reviewers may open the link as soon as they are assigned.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, research-supervisor
+- Owner: experiment-workflow, sv-supervisor-brief
 - Src: arc:chat:group@2026-10-03T23:16; arc:chat:group@2026-10-02T06:36; note:n08§5#15; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 4. Statements about the artifact

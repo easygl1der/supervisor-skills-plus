@@ -98,7 +98,7 @@ sources are in section 7 and inline.
    editor at a time, replace the PDF, re-run the cheap checks.
    [src: note:n08§3] (candidate)
 5. **Open items to TODO.** Anything skipped today goes to `docs/TODO.md`
-   with an owner; lessons go to `lessons-harvest` later.
+   with an owner; lessons go to `sv-supervisor-harvest` later.
 
 ## 6. Runbook record template
 

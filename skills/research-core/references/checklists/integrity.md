@@ -22,7 +22,7 @@ Run by: experiment-workflow, sv-review-once, sv-review-loop
   treat most harshly.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, sv-review-loop, research-records
+- Owner: experiment-workflow, sv-review-loop, sv-supervisor-records
 - Src: note:n08§5#17; arc:01-checklist/CHECKLIST-UPDATE-SUMMARY.md RP-11; arc:RP-12@v2
 
 ### IN-02 Numbers in figures follow the same rule
@@ -77,7 +77,7 @@ Run by: experiment-workflow, sv-review-once, sv-review-loop
   selective reporting.
 - Status: confirmed
 - Scope: core
-- Owner: experiment-workflow, sv-review-loop, research-records
+- Owner: experiment-workflow, sv-review-loop, sv-supervisor-records
 - Src: arc:msr:9c69675; arc:01-checklist/FINAL-CHECKLIST-2026-10-02.md H1; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ## 3. Fixed before results
@@ -126,7 +126,7 @@ Run by: experiment-workflow, sv-review-once, sv-review-loop
 - Why: Rules kept only in someone's head are lost when the annotator changes.
 - Status: candidate
 - Scope: core
-- Owner: experiment-workflow, research-records
+- Owner: experiment-workflow, sv-supervisor-records
 - Src: arc:res:7e4a35c; note:n08§5#23
 
 ## 4. Disclosure and conduct

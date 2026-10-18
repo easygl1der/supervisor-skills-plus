@@ -106,5 +106,5 @@ carries `filter` (`keyword_hit` or `no_hit`, which the owner changes to
 
 A scheduled run may only append to the queue. Cards, author profiles and
 venue profiles in the vault are drafts until the owner confirms them; rules
-reach this skill's files or `research-core` only through `lessons-harvest`
+reach this skill's files or `research-core` only through `sv-supervisor-harvest`
 after that confirmation (hard rule 6). No job edits skill files on a timer.

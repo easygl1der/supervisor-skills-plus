@@ -63,7 +63,7 @@ criteria), the venue profile when `venue` is set, and the checklist
 `subfield`, `paper_type`, `venue`, `deadline` and `stage`.
 
 Without `research.yaml`, ask for the field and the intended paper type, or
-hand off to `research-supervisor`.
+hand off to `sv-supervisor`.
 
 Route by `paper_type` (or by the method classification in Step 1):
 
@@ -393,7 +393,7 @@ settle them.
 - Data collection, sampling runs and frozen references:
   `experiment-workflow`.
 - Recording design decisions with rejected alternatives:
-  `research-records`.
+  `sv-supervisor-records`.
 - Paper structure once the idea is accepted: `sv-write-skeleton` or
   `sv-write-skeleton` for AI/ML and systems papers; `sv-write-section`
   with the field profile for empirical studies and theory papers.

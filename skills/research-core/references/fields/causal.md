@@ -238,7 +238,7 @@ method block states, in this order:
 - Conventions at statistics, epidemiology and ML causal venues (JASA,
   Biometrika, American Journal of Epidemiology, CLeaR, causal tracks at ML
   conferences): no AJS skill read for these; needs 5 to 10 exemplar papers
-  via sv-write-style-mine (`lessons-harvest --new-field causal`).
+  via sv-write-style-mine (`sv-supervisor-harvest --new-field causal`).
 - Whether causal graphs (DAGs) are expected in the target venues.
 - Typical section lengths: not measured from exemplars.
 

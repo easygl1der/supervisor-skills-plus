@@ -33,7 +33,7 @@ loops:
 A fourth mode borrows analysis methods from related work (method cards).
 
 Cards are evidence, not rules: a single card never changes a profile.
-Profiles reach `research-core` only through `lessons-harvest` and the
+Profiles reach `research-core` only through `sv-supervisor-harvest` and the
 owner's approval. The core promise holds in every loop: this skill never
 adds facts and never changes technical content.
 
@@ -51,7 +51,7 @@ The six hard rules apply at all times and now live in `hard-rules.md`
 - Adapting a manuscript to a target journal or conference.
 - Building or refreshing `venues/<venue>.md` "Style from exemplars", or
   filling a new or stub field profile from exemplar papers (often called by
-  `lessons-harvest --new-field`).
+  `sv-supervisor-harvest --new-field`).
 - Borrowing analysis methods from a related-work corpus to strengthen
   research questions or a measurement design.
 - Round 2 of `sv-review-loop` (venue and field style fit).
@@ -246,7 +246,7 @@ After the human gate:
 6. **Lifecycle.** Exemplar rules enter as `candidate`; they become
    `confirmed` when a second independent corpus or project agrees, the call
    or a published guide states them, or the owner decides (`user:<date>`).
-7. **Hand-off.** Show the diff, then hand both files to `lessons-harvest`,
+7. **Hand-off.** Show the diff, then hand both files to `sv-supervisor-harvest`,
    which bumps Version and Changelog and commits on `learn/<source>`.
 
 See also `profile-output.md`
@@ -313,11 +313,11 @@ and line, diff, or the card IDs):
 
 ## Hand-offs
 
-- Writing profile changes into research-core: `lessons-harvest`.
+- Writing profile changes into research-core: `sv-supervisor-harvest`.
 - Multi-round checks and applying check-mode findings: `sv-review-loop`.
 - AI-tell removal beyond P5: `sv-write-humanize-paper`.
 - Missing content or arguments found in diagnosis: `sv-write-section`,
   `sv-write-intro`.
 - Implementing a borrowed method: `experiment-workflow`; recording the
-  design change: `research-records` (ADR).
+  design change: `sv-supervisor-records` (ADR).
 - Final formatting and submission checks: `sv-review-once`.

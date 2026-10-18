@@ -28,7 +28,7 @@ are recorded, the oscillation guard, and the stop rules.
 3. **Branch and base.** Work on a branch `check-loop/<date>` from the
    paper's source of truth (`source_of_truth.paper`). Record the base commit
    in the log. If the paper is co-edited on Overleaf, pull first and run
-   `research-records` `sync_guard.py` before pushing back; never copy over.
+   `sv-supervisor-records` `sync_guard.py` before pushing back; never copy over.
 4. **Locked list.** Build it before round 1 and paste it into the log:
    - accepted ADRs in `docs/adr/` that fix wording, numbers printed,
      section layout or reporting rules (for example which agreement values
@@ -194,7 +194,7 @@ stop reason in the log:
 
 Report every residual with its id, rule, edit class and the reason it was
 not applied. `needs-author` residuals become TODO items with the CL id
-(`research-records`).
+(`sv-supervisor-records`).
 
 ## 11. Why the order is research, venue, language
 

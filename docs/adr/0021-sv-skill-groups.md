@@ -61,7 +61,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 ### 触发
 - **总入口**（12 个，加 research-core 共 13 个目录）：允许模型自动调用。正文开头是一张路由表，左列是用户可能怎么说，右列是对应的子命令；动手之前先说一句“按 sv-x-y 处理”，路由错了用户可以当场纠正。
 - **子命令**：`disable-model-invocation: true`，只能斜杠点名，不占 agent 的自动挑选列表。
-- **research-core**：`disable-model-invocation: true` 加 `user-invocable: false`，只作为其他 skill 按路径读取的文件库。
+- **research-core**：只设 `user-invocable: false`（不出现在 `/` 菜单）。不设 `disable-model-invocation`，因为每个 skill 都写着“加载 research-core”，agent 需要能自动调用它；它也是 13 个 agent 每轮可见的目录之一。（实施第 3 步时修正，2026-10-18）
 
 ### 体量
 - 总入口的 SKILL.md 不超过 120 行，只放路由表、共享主循环和 hand-off。

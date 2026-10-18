@@ -47,7 +47,7 @@ Three habits make the card worth more than a gut feeling
 
 The skill does not score novelty or feasibility (`idea-evaluator`), run or
 freeze experiments (`experiment-workflow`), or write decision records
-(`research-records`). It prepares their inputs and hands off.
+(`sv-supervisor-records`). It prepares their inputs and hands off.
 
 Default output language is Chinese with technical terms in English; it
 follows the user's language.
@@ -176,7 +176,7 @@ See: references/bridge-card.md
 ### Step 7: Save
 
 With a project: `docs/notes/YYYYMMDD-bridge-<slug>.md` with
-`status: scratch`, following the `research-records` notes lifecycle. In
+`status: scratch`, following the `sv-supervisor-records` notes lifecycle. In
 general mode: `bridge.md` in the source's paper folder (or next to the
 concept note). Link back to the source files. In an environment that
 cannot write files, print the card.
@@ -240,7 +240,7 @@ do-calculus. The card checks assumptions at mapping level only.
   `idea-evaluator` (the card's mapping and transfer tables are its input).
 - The validation test is to be run: `experiment-workflow` (freeze data,
   write the bar into the run script, log the run).
-- Adopting or rejecting the method is decided: `research-records` (ADR
+- Adopting or rejecting the method is decided: `sv-supervisor-records` (ADR
   with the rejected alternative; the card is the context).
 - An assumption or a variant needs literature: `deep-research`.
 - The method itself is not yet understood: `study`.

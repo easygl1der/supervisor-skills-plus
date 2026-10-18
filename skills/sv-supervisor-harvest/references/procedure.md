@@ -1,18 +1,19 @@
----
-name: lessons-harvest
-description: >-
-  Turns a project's feedback tables, guidance records, ADRs, sv-review-loop logs,
-  STATUS and git history, plus expert notes from advisors, co-authors,
-  reviewers, published guides and the owner, into sourced and deduplicated
-  rule candidates for research-core. Classifies each target, applies the
-  candidate, confirmed, deprecated lifecycle, writes anonymized expert
-  digests, and proposes the diff on a learn branch. Use when a paper is
-  submitted, reviews or grades arrive, expert notes come in, or a new field
-  needs a profile.
-license: CC-BY-NC-SA-4.0
----
+<!-- Moved from skills/sv-supervisor-harvest/references/procedure.md by ADR 0021 (2026-10-18); licence CC-BY-NC-SA-4.0. Section text unchanged; pointers updated. -->
 
 # Lessons Harvest
+
+## Contents
+
+- Overview
+- When to use this skill
+- When NOT to use this skill
+- Step 0: Load context
+- Inputs
+- Procedure
+- New field: `--new-field <name>`
+- Checklist
+- Outputs
+- Hand-offs
 
 ## Overview
 
@@ -40,7 +41,7 @@ library, and never states a rule without a source.
 ## When NOT to use this skill
 
 - Handling comments on the current manuscript: `sv-feedback-revise`.
-- Recording a decision for the current project: `research-records` (ADR).
+- Recording a decision for the current project: `sv-supervisor-records` (ADR).
 - Building a venue's style profile from exemplars: `sv-write-style-mine` (this
   skill calls it in the new-field flow and merges its proposals).
 - Looking up a rule: `research-core` directly.
@@ -87,7 +88,7 @@ Expert notes, four kinds (all accepted, decision of 2026-10-13):
 Run the helper on the project:
 
 ```
-python skills/lessons-harvest/scripts/find_rule_candidates.py <project_dir>
+python skills/sv-supervisor-harvest/scripts/find_rule_candidates.py <project_dir>
 ```
 
 It prints each candidate item from `docs/feedback/`, `docs/guidance/` and
@@ -167,7 +168,7 @@ line and Changelog on its first harvest; add one line to the repo
 `CHANGELOG.md` under `## [Unreleased]`. Do not merge: the owner reviews and
 merges.
 
-See: references/harvest-procedure.md
+See also `harvest-procedure.md`
 
 ## New field: `--new-field <name>`
 
@@ -215,7 +216,7 @@ Report pass, fail, n/a or unknown with evidence for:
 
 - Owner review and merge of `learn/<source>`.
 - Filling a field or venue profile from exemplars: `sv-write-style-mine`.
-- Project-only lessons: `research-records` (ADR or STATUS note in the
+- Project-only lessons: `sv-supervisor-records` (ADR or STATUS note in the
   project).
-- Next project start: `research-supervisor` loads the updated profiles via
+- Next project start: `sv-supervisor` loads the updated profiles via
   `research-core`.

@@ -274,7 +274,7 @@ method block states, in this order:
 - JASA, JRSSB, Annals of Statistics and Biometrika have no AJS skills.
   Their conventions (paper structure, length of simulation sections,
   theorem style, reproducibility requirements) need the 5 to 10 exemplar
-  route via sv-write-style-mine (`lessons-harvest --new-field stats`).
+  route via sv-write-style-mine (`sv-supervisor-harvest --new-field stats`).
 - Bayesian methodology conventions (prior sensitivity, computation
   diagnostics): no source read.
 - Typical section lengths: not measured from exemplars.

@@ -29,4 +29,4 @@ See: ../sv-feedback/references/guidance-mode.md
 ## Hand-offs
 
 - Actions that change the manuscript: `sv-feedback-revise`.
-- Decisions that set a rule: `research-records` (ADR).
+- Decisions that set a rule: `sv-supervisor-records` (ADR).

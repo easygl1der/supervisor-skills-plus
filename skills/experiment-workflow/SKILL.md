@@ -48,7 +48,7 @@ artifact steps, if any.
 - Judging whether the study is worth doing: `idea-evaluator`.
 - Writing the method or results prose: `sv-write-section` (it reads the claim
   ledger and the verified numbers this skill produces).
-- Recording a decision or updating STATUS in general: `research-records`
+- Recording a decision or updating STATUS in general: `sv-supervisor-records`
   (this skill calls it for ADRs and STATUS rows).
 - Full pre-submission review: `sv-review-once` (it reruns the
   `artifact`, `double-blind` and `integrity` checklists).
@@ -62,7 +62,7 @@ artifact steps, if any.
 2. Read `research.yaml`: `experiments` (backend, notebook, runs_log), `data`
    (location, manifest, lfs_patterns), `repos.research`, `repos.artifact`,
    `source_of_truth.numbers`, `review.double_blind`, `stage`.
-3. If `research.yaml` is missing, offer `research-supervisor` init. If
+3. If `research.yaml` is missing, offer `sv-supervisor-init`. If
    `docs/runs.md` is missing, copy `research-core`
    `assets/templates/runs-log.md`.
 
@@ -70,7 +70,7 @@ artifact steps, if any.
 
 Record the corpus snapshot id, time window and cutoff, population count and
 how it was counted, and the selection criteria in an ADR (draft it, show it,
-write it after approval, through `research-records`). Never extend the
+write it after approval, through `sv-supervisor-records`). Never extend the
 corpus silently; an extension is a new ADR and every printed identifier is
 updated in the same pass.
 
@@ -196,7 +196,7 @@ See: references/replication-artifact.md
 A number is verified when its script ran from a clean tree and its output
 was checked. Write the row in `docs/STATUS.md` "Verified numbers" (claim id,
 value, script, output file, code commit, data version, date) through
-`research-records`. Only then does it go into the claim ledger and the
+`sv-supervisor-records`. Only then does it go into the claim ledger and the
 paper.
 
 ## Checklist
@@ -230,10 +230,10 @@ script output, the commit, the file and line. A tick without evidence is
 
 ## Hand-offs
 
-- ADRs, STATUS and TODO updates: `research-records`.
+- ADRs, STATUS and TODO updates: `sv-supervisor-records`.
 - Method and results prose from verified numbers: `sv-write-section`.
 - Figures from the numbers file: `figure-designer`.
 - Design-time threats and data gaps: `idea-evaluator`; final threats,
   artifact and anonymity review: `sv-review-once`.
 - Expert advice on an experiment: `sv-feedback-revise` guidance mode.
-- After the project: `lessons-harvest`.
+- After the project: `sv-supervisor-harvest`.

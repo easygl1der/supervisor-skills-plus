@@ -21,7 +21,7 @@ Run by: sv-review-once
 - Why: A remembered deadline in the evidence project differed from the call.
 - Status: confirmed
 - Scope: core
-- Owner: sv-review-once, research-supervisor, research-records
+- Owner: sv-review-once, sv-supervisor-brief, sv-supervisor-records
 - Src: arc:10-requirements/venue/fse-2027-requirements.md; arc:04-comms/20260920-msritp-meeting/README.md; note:n04§1.1; note:n08§5#32
 
 ### VS-02 Desk-reject causes checked one by one
@@ -104,7 +104,7 @@ Run by: sv-review-once
 - Why: Form problems found in the last hours compete with paper fixes.
 - Status: confirmed
 - Scope: core
-- Owner: sv-review-once, research-supervisor
+- Owner: sv-review-once, sv-supervisor-brief
 - Src: arc:chat:group@2026-10-01T21:05; arc:chat:group@2026-10-03T17:28; note:n08§5#31; user:2026-10-13 (promoted: failure had a clear bad outcome)
 
 ### VS-10 Plain-text abstract in the form
@@ -122,5 +122,5 @@ Run by: sv-review-once
 - Why: Editors and submission systems go down near deadlines.
 - Status: confirmed
 - Scope: core
-- Owner: sv-review-once, research-supervisor
+- Owner: sv-review-once, sv-supervisor-brief
 - Src: arc:chat:group@2026-10-03T19:45; arc:chat:group@2026-10-03T19:59; note:n08§5#4; user:2026-10-13 (promoted: failure had a clear bad outcome)
