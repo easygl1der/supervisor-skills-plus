@@ -150,9 +150,14 @@ Supervisor-Skills Plus, private fork of HKUSTDial/Supervisor-Skills.
 
 ### Upstream sync
 
-- Forked from upstream `main` at `5f9432d` (2026-10-12). Upstream branch
-  `chore/sync-drawio-reconstruction` deliberately not merged (hard-coded
-  `~/.codex` paths); revisit when upstream merges it.
+- Forked from upstream `main` at `5f9432d` (2026-10-12).
+- `sv-figure-drawio` takes upstream branch `chore/sync-drawio-reconstruction`
+  (`090587e`, still unmerged upstream as PR #13): separate fresh producer and
+  reviewer agents, icon and reconstruction repair loops,
+  `validate_review_result.py`, contract tests and four new example cases.
+  The hard-coded `~/.codex` helper paths are replaced with `$SKILL_DIR`; the
+  fork's name, `disable-model-invocation`, Step 0 and layout/icon-sourcing
+  steps are kept.
 
 ### Added
 

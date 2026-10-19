@@ -265,7 +265,7 @@ Unchanged procedures; descriptions say "field: ai-ml/systems"; `research-supervi
   3. web search for an icon repository or set when nothing local fits; clone into a cache (`~/.cache/supervisor-skills/icons/`), index it, and add it to the registry;
   4. only then draw a simple native shape.
   Every used icon gets a row in `<figure>_icons/ATTRIBUTION.tsv` (source repo, path, licence as read from the repo at fetch time, author, retrieval date); licences are read from the source, never assumed. The archive's replica already kept `SVG_ASSETS.md` provenance (`05-figures-tables/sources/drawio/overview-reference-replica/`).
-- **Upstream branch `chore/sync-drawio-reconstruction`:** producer/reviewer separation with hashed PASS/FIX ledgers is valuable but regresses to hard-coded `~/.codex` paths (`[n01 §6]`). Wait for upstream to merge it; open question Q6.
+- **Upstream branch `chore/sync-drawio-reconstruction`:** producer/reviewer separation with hashed PASS/FIX ledgers is valuable but regresses to hard-coded `~/.codex` paths (`[n01 §6]`). Taken into `sv-figure-drawio` on 2026-10-20 with those paths replaced by `$SKILL_DIR`; Q6 closed.
 
 ### 4.15 `feedback-to-revision` (new)
 - **Inputs:** comments from any channel: inline TeX macros (protocol from `research.yaml`), PDF annotations (vendored `extract_pdf_comments.py` from parse-pdf-comments), chat text, comment files, reviewer reports, agent comments; current paper source; `research.yaml` people roles.
@@ -475,6 +475,6 @@ Decided by Claude (user delegated: "trust yourself"), reversible:
 - **Q1** `research-core` skill holds core, fields, venues, checklists, templates (not root folders).
 - **Q2** Check-loop order: research fit → venue/field fit → language.
 - **Q4** Punctuation bans (no semicolons, em-dashes) are an optional overlay, not an SE default.
-- **Q6** Do not merge the unmerged upstream drawio branch; take it when upstream merges it, then fix its hard-coded paths.
+- **Q6** (closed 2026-10-20) Upstream drawio branch taken ahead of upstream, with its hard-coded paths replaced by `$SKILL_DIR`.
 - **Q7** `tech-paper-template` and `benchmark-paper-template` stay AI/ML-flavoured; descriptions say so.
 - **Q8** Records are local-first; Linear is an optional mirror.
