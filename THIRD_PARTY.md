@@ -48,7 +48,17 @@ text; their locations follow the borrow list in `notes/10-reading-sources.md` §
 | Estimand/identification/estimation split (paraphrase) | `skills/sv-slides/references/causal-slides.md` | Petersen and van der Laan, Epidemiology 2014; Lundberg et al., ASR 2021 | publisher copyright | the authors and publishers | 2026-10-17 |
 | Results vs causal-reading slide split (paraphrase) | `skills/sv-slides/references/causal-slides.md` | Hernan, AJPH 2018, "The C-Word" | (c) APHA | Miguel A. Hernan | 2026-10-17 |
 
-`research-bridge` borrows no code or text; it only cites literature.
+This repository is Yihua Yue's (`easygl1der`) skill library, licensed
+CC BY-NC-SA 4.0 (`LICENSE`). It is not a product of HKUST(GZ) DIAL.
+
+**Included curriculum (attribution required).** `handbook/` and
+`handbook-en/` (except the library's own chapter 6.4) come from
+HKUSTDial/PhD.Skills and were bundled with HKUSTDial/Supervisor-Skills,
+CC BY-NC-SA 4.0, copyright Yuyu Luo (methodology) and contributors. Some
+`sv-*` procedures still cite those chapters (`up:handbook-en/...`). Skills
+are maintained in this repo and are not synced from that project.
+
+`sv-study-bridge` borrows no code or text; it only cites literature.
 
 Not bundled on purpose:
 
@@ -65,7 +75,6 @@ Not bundled on purpose:
 - **yxnchen/sysu-beamer-template**: not vendored (licence conflict and
   university logos). `templates/sysu-like/` is an own colour look-alike.
 
-Since ADR 0021 (2026-10-18) the skills that came from upstream HKUSTDial/Supervisor-Skills are regrouped under `sv-` names and no longer synced from upstream; each moved file keeps its original licence in a `Moved from` header or in its frontmatter.
-
-The upstream Supervisor-Skills project (HKUSTDial) is CC BY-NC-SA 4.0; see
-`LICENSE` and `README.md`.
+Files moved by ADR 0021 keep their original licence in a `Moved from`
+header or in skill frontmatter. See `LICENSE` for the ShareAlike terms that
+apply to the handbook material.

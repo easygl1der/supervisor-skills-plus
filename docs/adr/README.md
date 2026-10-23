@@ -1,7 +1,12 @@
 # Repository decision records
 
-Decisions about this skill library itself (projects keep their own ADRs in
-their `docs/adr/`). Format: `skills/research-core/assets/templates/adr-0000-template.md`.
+Decisions about **this** skill library (Yihua Yue / `easygl1der`). Projects
+keep their own ADRs in their `docs/adr/`. Format:
+`skills/research-core/assets/templates/adr-0000-template.md`.
+
+Older ADRs may still use pre-ADR-0021 skill names and may mention the
+source curriculum this library cites; they are not a product page for
+that curriculum.
 
 | ADR | Title | Status | Date |
 |---|---|---|---|

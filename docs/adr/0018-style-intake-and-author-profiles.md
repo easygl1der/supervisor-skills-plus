@@ -8,7 +8,8 @@ Deciders: owner
 Causal style mining needs exemplars from the top-4 statistics journals (JASA,
 JRSS-B, Annals of Statistics, Biometrika) and from one author's publications.
 The Academic MCP was not reliably reachable from every tool and covers these
-journals poorly through dblp (`docs/plans/2026-10-17-causal-style-mining-investigation.md` §2.1).
+journals poorly through dblp (investigation note, 2026-10-17; the plan file
+was later removed as unused).
 `style-mine` accumulated venue and field profiles only; an author's habits had
 no file of their own.
 

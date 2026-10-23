@@ -32,7 +32,7 @@ format come from ML conference reviews on OpenReview (ICLR, NeurIPS, ICML,
 EMNLP). Steps 3 and 4 are therefore ML-venue specific. For other venues
 (SE conferences, journals, internal review) skip the cluster statistics,
 keep Steps 1, 2, 5 and 6, and use the venue-neutral formats below. This
-fork has no reviewer-report evidence of its own yet: the evidence project
+library has no reviewer-report evidence of its own yet: the evidence project
 had not received reviews, so no SE-specific rebuttal advice is claimed
 here. [src: note:n03§5; arc:GAPS.md; note:n05§6] (confirmed)
 

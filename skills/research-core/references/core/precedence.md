@@ -42,7 +42,7 @@ record the choice in an ADR. [src: note:n05§5.4; note:n02§11.1]
 | `arc:<path>[:line]` | Any file in the archive | `arc:@senior-a-comments:40-43` |
 | `arc:<ID>@v2` | Item in the archived master checklist v2 | `arc:CF-23@v2` |
 | `note:nNN§x` | Evidence note in this repo, `notes/NN-*.md` | `note:n06§2.4` |
-| `up:<path>` | Upstream Supervisor-Skills file in this repo | `up:skills/sv-write/references/ai-tone-guardrails.md` |
+| `up:<path>` | A file in this repo (handbook chapter, note, or skill reference) | `up:skills/sv-write/references/ai-tone-guardrails.md` |
 | `skill:<name>` | A former local skill merged into this library | `skill:se-paper-refinement` |
 | `lit:<key>` | Published work, full reference in the file's Sources section | `lit:wohlin2012` |
 | `venue:<url>@<date>` | Official venue page with fetch date | |

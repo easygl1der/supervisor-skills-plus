@@ -33,5 +33,6 @@ Material deliberately not bundled (dagitty, GPL-2.0) is listed too.
 - Do not paste text from repositories that have no licence file.
 
 ## Sources
-`THIRD_PARTY.md`, `LICENSE`, `notes/10-reading-sources.md`,
-`docs/handoff/supervisor-plus-reading-upgrade-SPEC.md` (change list, D19).
+`THIRD_PARTY.md`, `LICENSE`, `notes/10-reading-sources.md`.
+The 2026-10-16 reading-upgrade SPEC (D19) was a working note and was later
+removed; this ADR is the surviving decision.

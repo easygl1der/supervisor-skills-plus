@@ -6,6 +6,19 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed (identity: this library, not an upstream product page)
+- Root docs present the repo as Yihua Yue / `easygl1der`'s `sv-*` skill
+  library. HKUSTDial / SuperY / 港科广 marketing, WeChat QR codes, and
+  install prompts that pointed at `HKUSTDial/Supervisor-Skills` are gone.
+  Required attribution for the included handbook curriculum and vendored
+  third-party code stays in `LICENSE`, `THIRD_PARTY.md`, and
+  `handbook/README.md`.
+- Removed unused bulk that no skill loaded: `docs/handoff/` archives
+  except the three files cited as `up:docs/handoff/...`, `docs/plans/`,
+  `notes/09-implementation-conventions.md` (durable bits folded into
+  `CONTRIBUTING.md`), the unused companion lecture PDF, unused WeChat
+  images, and unused `.webp` duplicates under `assets/`.
+
 ### Changed (ADR 0021: skill groups)
 - The 26 skills are regrouped into twelve `sv-` groups plus `research-core`.
   Each group has one auto-invocable entry `sv-<group>` that routes and says
@@ -42,8 +55,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `sv-figure-plot`, `sv-figure-html` and `sv-figure-poster` only combine
   existing rule files; the poster sub-command says that no poster-specific
   rules exist yet.
-- Skills are no longer synced from upstream HKUSTDial/Supervisor-Skills;
-  `handbook/` still follows upstream PhD.Skills.
+- Skills are maintained in this repository (not synced from another org).
+  `handbook/` remains as cited source curriculum (see `handbook/README.md`).
 
 ### Added
 - `sv-experiment-prereg`: pre-registration of confirmatory analyses (estimand,
@@ -51,8 +64,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   frozen as a git commit, with an audit (FROZEN, STAMP, INTEGRITY,
   CHRONOLOGY, DATA) before any confirmatory claim; unregistered analyses are
   exploratory. Vendors `prereg.sh` from K-Dense-AI/science-superpowers (MIT).
-  Implements research-core IN-09 and, for causal work, CI-01. Chosen from the
-  survey in `docs/plans/2026-10-19-hot-skills-research.md`.
+  Implements research-core IN-09 and, for causal work, CI-01. Chosen after a
+  2026-10-19 survey of external hot skills (the survey file was later removed).
 - `scripts/sync_agent_links.py`: plans (dry run by default) or applies the
   committed relative links in an agent-sync tree plus a per-machine
   `external/` link; never touches entries it did not create.
@@ -93,16 +106,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   unchanged): process/pipeline common breaks; a non-estimator bridge eval
   (`evals/general-process/`); `references/zh-kaiti-register.md` for Chinese
   kaiti sentence frames; Evals sections and ADR 0016 cross-links.
-- Plan for causal style mining and top-4 stats journal monitoring:
-  `docs/plans/2026-10-17-causal-style-mining-and-monitor.md`, Claude session
-  prompt `docs/plans/2026-10-17-causal-style-mining-and-monitor-CLAUDE.md`,
-  and handoff pointer `docs/handoff/causal-style-mining-plan-2026-10-17.md`.
-  Follow-up investigation
-  `docs/plans/2026-10-17-causal-style-mining-investigation.md`: ranked intake
+- Plan for causal style mining and top-4 stats journal monitoring (working
+  notes later removed from the tree; ADR 0018 remains): ranked intake
   (Crossref + OpenAlex recommended; Apify not default), external style-skill
-  borrow list, and Liu corpus discovery via `hanzhong-liu-research`
-  `publications.json` (no invented paper list). Promote gate unchanged.
-  No skill rewrites; no daily auto-merge into research-core.
+  borrow list. Promote gate unchanged. No skill rewrites; no daily auto-merge
+  into research-core.
 
 - Reading-and-learning layer that works without `research.yaml`:
   `paper-quickread` (nine-section quick read, `--style` style card,

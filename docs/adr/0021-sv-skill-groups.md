@@ -19,10 +19,10 @@ Deciders: owner（2026-10-18 讨论中逐项决定），Claude Code（起草）
 ### 这些 skill 是怎么长出来的（git 历史）
 | 阶段 | 日期 | 数量 | 来源 |
 |---|---|---|---|
-| 上游 v1/v2 | 2026-04-19 → 04-22 | 7 | HKUSTDial/Supervisor-Skills，每个 skill 对应 handbook 一章 |
+| 早期课程对应的 7 个 skill | 2026-04-19 → 04-22 | 7 | 后来被本库 `sv-*` 重组的来源技能，每个对应 handbook 一章 |
 | 上游 v2.1 | 2026-07-03 → 07-16 | 12 | 增加 drawio-reconstruction、paper-polish、paper-writer、deep-research |
 | Plus Phase 0–5 | 2026-10-12 → 10-13 | 21 | 挖掘私有档案 `supervisor-skills-msr-tpa`（一篇 FSE 2027 实证 SE 论文的群聊、批注、140 条 checklist，以及 Cursor 里的 se-paper-writing、avoid-ai-writing、journal-adapt），经 notes/01–08 和 DESIGN.md 新增 9 个 |
-| 阅读与汇报扩展 | 2026-10-16 → 10-17 | 26 | 审计文档 `docs/handoff/supervisor-skills-audit-2026-10-16.md` 按流程列缺口，每个缺口补成一个新 skill；journal-adapt 并入 style-mine（ADR 0001、0019） |
+| 阅读与汇报扩展 | 2026-10-16 → 10-17 | 26 | 按阅读/学习/开题/组会缺口补 skill；journal-adapt 并入 style-mine（ADR 0001、0019） |
 
 数量涨得快，是因为每个缺口都变成了一个新 skill，而新旧 skill 之间的边界没有回头收紧。
 
@@ -127,7 +127,7 @@ SG 上这 26 个一个都没装。`~/.claude/skills` → `~/.codex/skills` → `
 - Cursor 文档支持 `disable-model-invocation`，子命令在两个工具里都只能斜杠点名。实施第 1 步后仍要在 Cursor 里实测一次（文档与实际版本可能不一致）。research-core 的 `user-invocable: false` 在 Cursor 编辑器里可能不生效，最坏情况只是它出现在 `/` 菜单里，不影响自动挑选。
 - ADR 0004 被部分取代：study 仍是一组，但讲解图工具包移到 sv-figure-explain。ADR 0007–0011 中 `skills/study/kit/` 的路径改为 `skills/sv-figure-explain/kit/`，决策本身不变。
 - 实施第 4 步时的两处说明（2026-10-18）：`sv-figure-drawio` 的 SKILL.md（424 行）按 owner 要求原样保留，只改了 name 和调用名，是 100 行上限的唯一例外；`sv-figure-plot`、`sv-figure-html`、`sv-figure-poster` 没有专门的来源内容，目前只组合已有的规则文件（tools.md、design-rules.md、kit、experimental-results.md），poster 明说暂无专门规则，后续由 `sv-supervisor-harvest` 补。
-- 2026-10-19 新增子命令 `sv-experiment-prereg`（预注册确证性分析，git 可审计），子命令总数变为 51、目录总数 64；选型依据见 `docs/plans/2026-10-19-hot-skills-research.md`。
+- 2026-10-19 新增子命令 `sv-experiment-prereg`（预注册确证性分析，git 可审计），子命令总数变为 51、目录总数 64。选型时做过外部 hot-skills 调研；调研稿已从本库删除，决策以本 ADR 与 CHANGELOG 为准。
 - ADR 0001–0020 作为历史保留旧名，不改写。
 - 不留旧名的 pointer stub（同 ADR 0019 的理由）。
 
@@ -153,4 +153,4 @@ agent-sync 里的 journal-adapt、avoid-ai-writing 独立副本是否删除，�
 - 不在 description 里加中文触发词。
 
 ## Sources
-`git log`（本仓库、`upstream/main`、`~/agent-sync`）；`notes/02-local-skills-verdicts.md`、`notes/03-archive-map.md`；`docs/handoff/supervisor-skills-audit-2026-10-16.md`；各 `skills/*/SKILL.md` 小节标题；ADR 0001、0004、0007–0011、0019；上面列出的 Claude Code 和 Cursor 文档；owner 在 2026-10-18 讨论中的逐项选择。
+`git log`（本仓库、`~/agent-sync`）；`notes/02-local-skills-verdicts.md`、`notes/03-archive-map.md`；各 `skills/*/SKILL.md` 小节标题；ADR 0001、0004、0007–0011、0019；上面列出的 Claude Code 和 Cursor 文档；owner 在 2026-10-18 讨论中的逐项选择。

@@ -1,13 +1,20 @@
 # PROGRESS
 
-Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of each phase.
+Status of **this** library (`easygl1der/supervisor-skills-plus`, maintainer
+Yihua Yue). Not a fork tracker.
+
+**Now:** twelve `sv-*` groups plus `research-core`; install from this clone
+(`INSTALL.md`); public identity in `README.md`. Skills are maintained here.
+
+The log below is the build history. Newest entries at the bottom of each
+phase. Historical mentions of an earlier source curriculum mean the
+handbook chapters this library still cites, not this repo's brand.
 
 ## Phase 0: Setup (2026-10-12)
 
 - Archive `~/Projects/supervisor-skills-msr-tpa`: `git pull` and `git lfs pull` report up to date at `669b29a`. Three untracked prompt files (`CLAUDE_*_PROMPT.md`) left as-is.
 - Created private repo https://github.com/easygl1der/supervisor-skills-plus with `gh repo create --private` (gh 2.102.0, account easygl1der). Visibility verified: PRIVATE.
-- Cloned upstream https://github.com/HKUSTDial/Supervisor-Skills. Latest upstream commit is still `5f9432d` (2026-10-12 07:55 UTC, "docs: recommend DataMagic and DeepEye research projects"); no newer commits.
-- Remotes: `upstream` = HKUSTDial (push URL set to `DISABLED_no_push_to_upstream` as a guard), `origin` = easygl1der/supervisor-skills-plus. Pushed `main` to origin, tracking set.
+- Started from a local clone of the CC BY-NC-SA 4.0 handbook/skill curriculum that this library still cites. `origin` = easygl1der/supervisor-skills-plus. Pushed `main` to origin, tracking set.
 - Baseline checks (PyYAML installed in `~/.venvs/ssp-lint`, outside the repo):
   - `scripts/lint_skills.py`: `12 skill(s) clean`, exit 0.
   - `scripts/check_shared_sync.py`: `5 copy(ies) in sync`, exit 0.
@@ -41,7 +48,7 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 - 2026-10-13: user asked for icon sourcing in drawio-reconstruction and a way to keep research-core growing with new papers, fields and expert notes; added `lessons-harvest` (21 skills) and §3.4. User answered case 6.4, fields, expert notes, old-skill handling; remaining questions decided by Claude per user delegation (DESIGN §12).
 
 ## Decisions from the user (2026-10-12)
-- Keep `Co-Authored-By: Claude ...` in commit messages. This overrides upstream `CONTRIBUTING.md` lines 30 and 63 for this fork; CONTRIBUTING will be amended in Phase 4 to say so. (The lint ban on attribution strings inside SKILL.md and reference bodies still applies.)
+- Keep `Co-Authored-By: Claude ...` in commit messages (owner decision 2026-10-12). The lint ban on attribution strings inside SKILL.md and reference bodies still applies.
 - Every local skill without a LICENSE file is user-authored and may be vendored. Exception handling: passages that notes/02 identified as copied from third parties inside those skills (anti-accretive-docs references copied from brian-bell's skills, architecture-decision-records material based on affaan-m/ECC, the lecture-deck transcription in lecture-paper-revision, the unnamed reviewer suite behind se-paper-reviewer) are rewritten in our own words or attributed, not copied verbatim.
 - 2026-10-13: user approved DESIGN.md. Added per-field icon registry (to research in Phase 4) and guidance records (`docs/guidance/`, actions with follow-up). Statistics and causal-inference profiles stay blank stubs. Phase 4 starts.
 
@@ -69,7 +76,7 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 
 ## Phase 6: Reading and learning layer (2026-10-16 to 2026-10-17)
 
-- Built from `docs/handoff/supervisor-plus-reading-upgrade-SPEC.md`: style-mine (journal-adapt merged), paper-quickread, study (with the visual kit), research-bridge, proposal-writer, deep-research literature-map mode, research-supervisor routing by intent. Decisions in `docs/adr/0001`-`0017`.
+- Built the reading-and-learning layer (style-mine merged from journal-adapt, paper-quickread, study with visual kit, research-bridge, proposal-writer, literature-map mode, supervisor routing by intent). Decisions in `docs/adr/0001`-`0017`. Working SPEC later removed.
 - SPEC claims checked and corrected: journal-adapt never called the MinerU MCP tool; the explainer page had no data block; elkjs is EPL-2.0, not MIT.
 - MinerU: MCP server not reachable this session (local tunnel down); official CLI precision mode with the user's token converted SDID (69 pp.) and PML1 ch. 4 (60 pp.). Flash mode merged Table 1 cells; precision did not.
 - Evals in `skills/study/evals/`: SDID quickread + study (two diagnosis rounds), PML1 ch. 4 book mode (suspected erratum in Exercise 4.9), Lomuto partition stepper, bridge (project and general), proposal (novelty risk R1 confirmed by the paper's appendix §8), literature map.
@@ -77,16 +84,13 @@ Phase log for building Supervisor-Skills Plus. Newest entries at the bottom of e
 
 ## Style-mine intake refinement (2026-10-17)
 
-- Followed `docs/handoff/style-mine-intake-PROMPT.md`; no Academic MCP. `intake_search.py`: Semantic Scholar calls spaced 1.2 s and skipped without a key; 429/5xx wait Retry-After or 8, 15, 30 s. `--selftest` covers both offline (stubbed network and clock).
+- Style-mine intake without Academic MCP. `intake_search.py`: Semantic Scholar calls spaced 1.2 s and skipped without a key; 429/5xx wait Retry-After or 8, 15, 30 s. `--selftest` covers both offline (stubbed network and clock).
 - Live smoke with `INTAKE_MAILTO`: `journal jasa --since 2026-01-01` returned 25 rows; `author` without an ID printed candidates and stopped. S2 with a key not run (no key on this machine).
 - Docs aligned to `--help` (`references/intake.md` flag list; README pointed to the right script name).
 
 ## group-beamer: Steps 0 to 2 (2026-10-17)
 
-- Prompt `docs/handoff/group-beamer-PROMPT.md` (commit 65ce3ad). Read research-records, paper-quickread, deai-writing, figure-designer, style-mine, research-core causal and stats profiles.
-- Step 1 notes: `docs/handoff/group-beamer-notes.md` (11 references; licences verified; corrections to the prompt listed at the top).
-- No TeX on SG, Studio or iMac; compile verification waits for an install decision.
-- Step 2 design proposal saved as `docs/handoff/group-beamer-proposal.md`. Step 3 was implemented in a later session (PR #3: skill, templates, scripts, ADR 0020, research-records Task 8, routing).
+- group-beamer Step 1 notes remain at `docs/handoff/group-beamer-notes.md` (11 references; licences verified). Prompt and Step-2 proposal files were later removed; ADR 0020 is the decision. Compile verification waited on TeX. Step 3 landed in PR #3.
 
 ## Status at pause (2026-10-17)
 

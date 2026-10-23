@@ -1,4 +1,4 @@
-# Install and use Supervisor-Skills Plus
+# Install and use this skill library
 
 One copy of this repo serves Claude Code, Codex and Cursor. The skills are
 linked, not copied, so `git pull` updates every tool. The library is twelve
@@ -111,14 +111,7 @@ After a submission, after reviews, or after expert advice, run
 `research-core` on a `learn/<source>` branch, each with its source; you
 approve before merge.
 
-## 6. Upstream
-
-Since ADR 0021 the skills are maintained here and no longer synced from
-HKUSTDial/Supervisor-Skills. `handbook/` still follows upstream
-`HKUSTDial/PhD.Skills` (see CONTRIBUTING.md). Never push to `upstream`; its
-push URL is disabled in this clone.
-
-## 7. Checks
+## 6. Checks
 
 ```bash
 python scripts/lint_skills.py        # skill conventions and the sv- group rules
@@ -132,3 +125,5 @@ archive (`$EVIDENCE_ARCHIVE` or `~/Projects/supervisor-skills-msr-tpa`) and
 skips them when it is absent. `skill:` citations keep the name a rule came
 from; names retired by ADR 0021 resolve to their new folders, and a skill
 outside this library that is not installed locally is skipped, not failed.
+`up:` citations resolve to files in this repo (handbook chapters, notes,
+skill references).

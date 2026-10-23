@@ -2,7 +2,7 @@
 
 Status: accepted (paths updated by ADR 0021 on 2026-10-18)
 Date: 2026-10-17
-Deciders: owner (open items in `docs/handoff/group-beamer-proposal.md`)
+Deciders: owner (2026-10-17; proposal note later removed, decision is this ADR)
 
 ## Context
 The library had no Beamer skill for group meetings. Step 2 proposed
@@ -49,5 +49,6 @@ Meeting artefacts go through research-records Task 8.
 - Do not install a full MacTeX tree to satisfy this skill.
 
 ## Sources
-`docs/handoff/group-beamer-PROMPT.md`, `group-beamer-proposal.md`,
-`group-beamer-notes.md`; owner decisions 2026-10-17.
+`docs/handoff/group-beamer-notes.md` (still cited by skills); owner
+decisions 2026-10-17. The Step-1 prompt and Step-2 proposal files were
+removed as unused.

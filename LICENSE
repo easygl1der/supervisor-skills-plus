@@ -1,6 +1,17 @@
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
-Copyright (c) 2026 Yuyu Luo (methodology) and contributors.
+Copyright (c) 2026 Yihua Yue (this skill library: `sv-*` groups, `research-core`,
+install scripts, and documentation written for this repository).
+
+Portions of the included handbook curriculum (`handbook/`, `handbook-en/`) and
+some skill procedures were originally published by Yuyu Luo and contributors
+as HKUSTDial/Supervisor-Skills and HKUSTDial/PhD.Skills under CC BY-NC-SA 4.0.
+Those portions remain attributed to their authors. This repository is an
+independent work and is not affiliated with, endorsed by, or a product of
+HKUST(GZ) DIAL.
+
+Vendored third-party code (MIT, EPL-2.0, Unlicense, and others) keeps its own
+licence; see THIRD_PARTY.md.
 
 You are free to:
 

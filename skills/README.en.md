@@ -21,8 +21,8 @@ so adding precision does not crowd the list.
 
 | Entry point | For |
 |---|---|
-| [`../README.en.md`](../README.en.md) | Why the project exists, the handbook, installation |
-| [`../handbook/`](../handbook/) / [`../handbook-en/`](../handbook-en/) | The methodology the skills are distilled from |
+| [`../README.en.md`](../README.en.md) | Who maintains this library, what to install |
+| [`../handbook/`](../handbook/) / [`../handbook-en/`](../handbook-en/) | Source curriculum that skills still cite (not this repo's brand) |
 | **This file** | Which group and sub-command fits a task |
 | `SKILL.md` in each folder | The executable spec for the agent |
 | [`../docs/adr/0021-sv-skill-groups.md`](../docs/adr/0021-sv-skill-groups.md) | Why the library is grouped this way, and the old-to-new name map |

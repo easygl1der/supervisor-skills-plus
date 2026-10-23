@@ -1,8 +1,15 @@
-# DESIGN: Supervisor-Skills Plus
+# DESIGN (historical)
 
-Status: draft v1 for discussion (Phase 3). Nothing here is implemented yet.
-Skill names below are the pre-ADR-0021 names; the current layout and the old-to-new map are in `docs/adr/0021-sv-skill-groups.md`.
-Skill names below are the pre-ADR-0021 names; the current layout and the old-to-new map are in `docs/adr/0021-sv-skill-groups.md`.
+This file is the 2026-10 design for **this library** (now twelve `sv-*`
+groups plus `research-core`, owned by Yihua Yue / `easygl1der`). Skills still
+cite it (`up:DESIGN.md`). It is **not** a fork announcement.
+
+Current layout and the old-to-new name map: `docs/adr/0021-sv-skill-groups.md`.
+Identity and install: `README.md`, `INSTALL.md`. Names below are the
+pre-ADR-0021 names.
+
+Status when written: draft v1 for discussion (Phase 3); the tree described
+here has since been implemented and regrouped.
 Inputs: `notes/01`–`notes/08`. Evidence citations use the formats in `notes/03-archive-map.md` §4 (`msr:<sha>`, `ol:<sha>`, `res:<sha>`, `chat:group@<ts>`, `<file>:<line>`, `<ID>@v2`) plus `[nNN §x]` for a note section. Roles, never names: Student, Senior co-author A, Senior co-author B, Advisor (relayed).
 
 ## Contents
@@ -23,7 +30,7 @@ Inputs: `notes/01`–`notes/08`. Evidence citations use the formats in `notes/03
 
 ## 1. Goals and design principles
 
-One private, installable skill library that runs on every paper, assignment and experiment, in any of the user's fields (SE/MSR, ML, mathematics, statistics, causal inference, others).
+One installable skill library that runs on every paper, assignment and experiment, in any of the user's fields (SE/MSR, ML, mathematics, statistics, causal inference, others).
 
 Principles, each grounded in what went wrong or right in the evidence:
 
@@ -34,7 +41,7 @@ Principles, each grounded in what went wrong or right in the evidence:
 5. **The paper holds only the newest correct content; history lives in `docs/`.** Anti-accretive body text; records in `docs/STATUS.md`, `docs/adr/`, `docs/log/`.
 6. **Checklists are the backbone, and every skill ends by running its checklist.** The project's best moment was a read-only pre-submission check one day early that predicted the anonymity leak (`FINAL-CHECKLIST-2026-10-02.md` B2); its worst was not acting on it (`[n08 §3]`).
 7. **Bounded loops.** Every iterative skill has a round budget and stop reasons. Different editors undid each other's edits in this project (numbers trimmed then restored, hedges deleted then restored, "snapshot" vs "dataset" flipping; `[n06 §2.3, §2.6, §2.8]`).
-8. **Follow upstream conventions** so upstream merges stay cheap: `skills/<name>/SKILL.md` + `references/`, lint rules, Conventional Commits, Keep a Changelog, bilingual handbook (`[n01 §2]`).
+8. **Keep skill conventions stable:** `skills/<name>/SKILL.md` + `references/`, lint rules, Conventional Commits, Keep a Changelog, bilingual handbook that skills cite (`[n01 §2]`).
 
 ## 2. Final skill tree and folder structure
 
