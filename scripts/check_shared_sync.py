@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared-reference sync checker for Supervisor-Skills.
+"""Shared-reference sync checker for this skill library.
 
 Some reference files are shared across skills. Because every skill
 directory must stay self-contained (a user may copy a single skill

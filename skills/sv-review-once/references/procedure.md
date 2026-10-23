@@ -36,7 +36,7 @@ The output is not a rewrite. It is a prioritised list of findings
 with severity tags; the author decides which to fix. CRITICAL items
 should block submission until addressed.
 
-This fork adds four things on top of the five dimensions: Step 0 loads
+This library adds four things on top of the five dimensions: Step 0 loads
 `research-core` (field and venue profiles, checklists); Step 7a runs the
 research-core sub-checklists (threats, double-blind, artifact,
 venue-submission, integrity) by item ID; Step 7b runs a devil's-advocate

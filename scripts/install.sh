@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install Supervisor-Skills Plus by symlinking each skill into agent skill folders.
+# Install this skill library by symlinking each skill into agent skill folders.
 #
 # Usage:
 #   scripts/install.sh [--targets claude,codex,cursor] [--dry-run] [--no-backup-retired]

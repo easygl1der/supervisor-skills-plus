@@ -1,12 +1,12 @@
-# Supervisor-Skills
+# sv-skills (easygl1der/supervisor-skills-plus)
 
-> A PhD-level academic research methodology distilled into twelve skill groups, covering project records, reading and study, literature review, idea evaluation, proposals, experiments, drafting and polishing, figures, review, feedback and group-meeting slides. Usable as a standalone Chinese curriculum at `handbook/`, as an English mirror at `handbook-en/`, or as Agent Skills under `skills/`.
+> Yihua Yue's academic research skill library: twelve `sv-*` groups covering project records, reading and study, literature review, idea evaluation, proposals, experiments, drafting and polishing, figures, review, feedback and group-meeting slides, plus `research-core` (shared rules). Installable as Agent Skills under `skills/`. A cited Chinese curriculum lives at `handbook/`, with an English mirror at `handbook-en/`.
 
-Target audience: researchers writing papers for NeurIPS, ICML, ICLR, VLDB, SIGMOD, KDD, ACL, EMNLP, CVPR, and similar top venues.
+Target audience: researchers writing papers (SE/MSR, ML, mathematics, statistics, causal inference, and related venues).
 
 ## Install
 
-This fork installs from a local clone; see [INSTALL.md](INSTALL.md) (agent-sync links or `scripts/install.sh`).
+Clone this repository and follow [INSTALL.md](INSTALL.md) (agent-sync links or `scripts/install.sh`).
 
 See [README.md](README.md) (Chinese) or [README.en.md](README.en.md) for full details.
 
@@ -28,19 +28,20 @@ Twelve groups (ADR 0021). Each `sv-<group>` entry routes to slash-only sub-comma
 - [sv-slides](skills/sv-slides/SKILL.md): Beamer decks for group meetings: weekly report or paper talk.
 - [research-core](skills/research-core/SKILL.md): core rules, field and venue profiles, sourced checklists, AI-collaboration rules, project templates.
 
-## Reader curriculum
+## Reader curriculum (cited source material)
 
-The original Chinese curriculum by the methodology author lives at `handbook/`. An English mirror lives at `handbook-en/`. Both are organized into six chapters.
+`handbook/` and `handbook-en/` are included because skills still cite them. They are not this project's brand. Provenance: [handbook/README.md](handbook/README.md), [THIRD_PARTY.md](THIRD_PARTY.md).
 
 - `handbook/01_Preliminary/` — evaluating paper quality from a reviewer's perspective.
 - `handbook/02_Idea_Generation/` — idea lifecycle, five-dimension thinking, disruptive innovation.
 - `handbook/03_Paper_Writing/` — paper lifecycle, Introduction flowchart, technical and benchmark templates, writing checklist.
 - `handbook/04_Scientific_Plotting/` — motivated, overview, experimental figures and a drawing checklist.
 - `handbook/05_Vibe_Research/` — AI-assisted research workflow and practitioner notes.
-- `handbook/06_Case_Studies/` — Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026) Introduction analyses, plus 6.4, an anonymized process case of an empirical SE paper under deadline.
+- `handbook/06_Case_Studies/` — Alpha-SQL (ICML 2025), AFlow (ICLR 2025), LEAD (VLDB 2026) Introduction analyses, plus 6.4, an anonymized process case.
 
 ## Supporting documentation
 
-- [Contributing guide](CONTRIBUTING.md): how to contribute.
-- [Changelog](CHANGELOG.md): version history.
-- [License](LICENSE): CC BY-NC-SA 4.0.
+- [Contributing guide](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+- [License](LICENSE): CC BY-NC-SA 4.0
+- [Third-party material](THIRD_PARTY.md)

@@ -1,9 +1,12 @@
-# 01 Upstream map: HKUSTDial/Supervisor-Skills
+# 01 Source map (included handbook and early skill procedures)
 
-Read-only survey of the upstream skill library, written for the merge-design phase.
-Repo root: `/Users/wriseai/Projects/supervisor-skills-plus` (branch `design`, whose only
-commit beyond upstream `main` is `bfbfea1`, adding `PROGRESS.md`). All paths below are
-relative to that root. Upstream `main` HEAD = `5f9432d` (2026-10-12).
+This note is **provenance** for rules that still cite the included curriculum
+(`up:handbook-en/...`). It is not a claim that this repository is
+HKUSTDial/Supervisor-Skills.
+
+Read-only survey written during the 2026-10 merge-design phase.
+All paths below are relative to this repo root as it existed then
+(source curriculum HEAD `5f9432d`, 2026-10-12).
 
 Everything here was read in full except binaries (PNG/JPG/WebP/PDF) and the three
 `.drawio` example XML files (see section 3.3). Where something is absent it is stated.

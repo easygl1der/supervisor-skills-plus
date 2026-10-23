@@ -15,8 +15,8 @@ Claude Code 和 Cursor 里名字完全一样。agent 的 skill 列表里只有 1
 
 | 入口 | 给谁看 |
 |---|---|
-| [`../README.md`](../README.md) | 项目缘起、手册、安装 |
-| [`../handbook/`](../handbook/) / [`../handbook-en/`](../handbook-en/) | skill 背后的方法论 |
+| [`../README.md`](../README.md) | 本库是谁的、装什么、怎么装 |
+| [`../handbook/`](../handbook/) / [`../handbook-en/`](../handbook-en/) | 技能仍在引用的来源课程（不是本库品牌） |
 | **本文件** | 某个任务该用哪个组、哪个子命令 |
 | 各目录的 `SKILL.md` | 给 agent 执行的规格 |
 | [`../docs/adr/0021-sv-skill-groups.md`](../docs/adr/0021-sv-skill-groups.md) | 为什么这样分组，以及新旧名字对照 |

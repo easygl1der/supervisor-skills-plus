@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Structural linter for Supervisor-Skills SKILL.md files.
+"""Structural linter for this library's SKILL.md files.
 
 Enforces the hard rules for SKILL.md structure:
  - SKILL.md body (after frontmatter) is at most 500 lines

@@ -33,5 +33,6 @@ with `See:` lines to `references/protocol.md`, `diagnosis.md`,
 - Do not split a mode into its own skill; add a reference file instead.
 
 ## Sources
-`skills/sv-study/SKILL.md`, `skills/sv-study/references/`,
-`docs/handoff/supervisor-plus-reading-upgrade-SPEC.md` (D3, D6, item 5).
+`skills/sv-study/SKILL.md`, `skills/sv-study/references/`.
+The 2026-10-16 reading-upgrade SPEC (D3, D6) was a working note and was later
+removed; this ADR is the surviving decision.

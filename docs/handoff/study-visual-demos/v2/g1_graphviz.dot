@@ -1,5 +1,0 @@
-digraph G{rankdir=TB;bgcolor="#fafafa";fontname="Noto Sans CJK SC";label="混杂结构（Graphviz）";labelloc=t;fontsize=22;
-node[shape=box,style="rounded,filled",fontname="Noto Sans CJK SC",fontsize=18,penwidth=2,margin="0.3,0.15"];edge[fontname="Noto Sans CJK SC",fontsize=14,penwidth=2];
-X[label="💰 收入\n混杂因素",fillcolor="#ffe082",color="#f9a825"];
-subgraph cluster_a{label="可观测";style="dashed";color="#90a4ae";T[label="☕ 喝咖啡\n处理 T",fillcolor="#d7ccc8",color="#6d4c41"];Y[label="🧓 长寿\n结果 Y",fillcolor="#c8e6c9",color="#2e7d32"];{rank=same;T;Y}}
-X->T[label="买得起"];X->Y[label="医疗好"];T->Y[label="相关≠因果",style=dashed,color="#d32f2f",fontcolor="#d32f2f"];}
