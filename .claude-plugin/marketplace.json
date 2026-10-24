@@ -1,0 +1,12 @@
+{
+  "name": "supervisor-skills-plus",
+  "owner": { "name": "Yihua Yue", "url": "https://github.com/easygl1der" },
+  "plugins": [
+    {
+      "name": "sv-skills",
+      "source": "./",
+      "description": "Yihua Yue's academic research skill library: 12 sv-* skill groups (study, litreview, idea, experiment, write, figure, slides, review, feedback, proposal, quickread, supervisor) plus research-core.",
+      "version": "3.1.0"
+    }
+  ]
+}

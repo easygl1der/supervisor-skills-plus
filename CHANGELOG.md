@@ -6,6 +6,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added (plugin packaging, version 3.1.0)
+- Repo is installable as the `sv-skills` plugin: root `plugin.json` (Agent
+  Plugins), `.cursor-plugin/plugin.json`, `.claude-plugin/plugin.json` and a
+  one-plugin `.claude-plugin/marketplace.json`. Skills stay in `skills/`
+  with ADR 0021 flat names. INSTALL.md documents Claude, Cursor and Codex.
+
 ### Changed (identity: this library, not an upstream product page)
 - Root docs present the repo as Yihua Yue / `easygl1der`'s `sv-*` skill
   library. HKUSTDial / SuperY / 港科广 marketing, WeChat QR codes, and
