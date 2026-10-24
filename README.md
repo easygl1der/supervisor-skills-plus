@@ -76,3 +76,7 @@ Help me install the skills from https://github.com/easygl1der/supervisor-skills-
 ## License
 
 本仓库采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)。第三方代码与手册出处见 [THIRD_PARTY.md](THIRD_PARTY.md) 与 [LICENSE](LICENSE)。
+
+## Plugin
+
+`/plugin install sv-skills --marketplace easygl1der/supervisor-skills-plus` (Claude Code); Cursor and Codex: see [INSTALL.md](INSTALL.md).

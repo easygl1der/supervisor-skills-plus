@@ -7,6 +7,31 @@ linked, not copied, so `git pull` updates every tool. The library is twelve
 
 ## 1. Install
 
+### As a plugin (Claude Code, Cursor)
+
+The repo is a plugin named `sv-skills` (manifests: `plugin.json`,
+`.cursor-plugin/plugin.json`, `.claude-plugin/plugin.json` and
+`.claude-plugin/marketplace.json`). Skill names stay flat (`sv-study`,
+`sv-study-paper`, ...); Claude Code may show them prefixed with the plugin
+name.
+
+- **Claude Code** (2.1.275+):
+  `/plugin install sv-skills --marketplace easygl1der/supervisor-skills-plus`
+  (older: `/plugin marketplace add easygl1der/supervisor-skills-plus`, then
+  `/plugin install sv-skills@supervisor-skills-plus`).
+- **Cursor**: Customize > Plugins > import from GitHub, enter
+  `https://github.com/easygl1der/supervisor-skills-plus`. Cursor reads
+  `.cursor-plugin/plugin.json`.
+- **Codex / GPT**: no plugin import; use the symlink path below
+  (`scripts/install.sh --targets codex`, or `sync_agent_links.py`).
+- Other agents that read Agent Plugins (agent-plugins.org) use the root
+  `plugin.json`.
+
+Do not combine plugin install with the symlink install in the same tool:
+you would get every skill twice.
+
+### As symlinks (all tools)
+
 ```bash
 git clone git@github.com:easygl1der/supervisor-skills-plus.git ~/Projects/supervisor-skills-plus
 cd ~/Projects/supervisor-skills-plus
