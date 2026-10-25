@@ -1,0 +1,22 @@
+{
+  "name": "sv-skills",
+  "version": "3.1.0",
+  "description": "Yihua Yue's academic research skill library: 12 sv-* skill groups (study, litreview, idea, experiment, write, figure, slides, review, feedback, proposal, quickread, supervisor) plus research-core.",
+  "author": {
+    "name": "Yihua Yue"
+  },
+  "homepage": "https://github.com/easygl1der/supervisor-skills-plus",
+  "repository": "https://github.com/easygl1der/supervisor-skills-plus",
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "research",
+    "academic",
+    "skills",
+    "sv"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SV Skills",
+    "shortDescription": "Academic research skill library (sv-*)"
+  }
+}

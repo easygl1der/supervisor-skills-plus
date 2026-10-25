@@ -3,11 +3,16 @@
 
 agent-sync keeps one live skills tree, `<agent-sync>/skills/`, which
 ~/.codex, ~/.claude and ~/.cursor point at. This script keeps one relative
-link per skill there:
+link to the whole repo there, which Claude Code loads as the plugin
+`sv-skills@skills-dir` (Codex skips folders with a .claude-plugin/ and uses
+the Codex plugin instead, see INSTALL.md):
 
-    <agent-sync>/skills/<name> -> ../external/supervisor-skills-plus/skills/<name>
+    <agent-sync>/skills/sv-skills -> ../external/supervisor-skills-plus
 
-and one per-machine link that agent-sync ignores:
+It removes the older per-skill links (`skills/<name> -> ../external/
+supervisor-skills-plus/skills/<name>`), which would load every skill twice
+next to the plugin. It also keeps one per-machine link that agent-sync
+ignores:
 
     <agent-sync>/external/supervisor-skills-plus -> <this repo's main checkout>
 
@@ -34,6 +39,7 @@ from pathlib import Path
 
 EXTERNAL = "supervisor-skills-plus"
 PREFIX = f"../external/{EXTERNAL}/skills/"
+PLUGIN, PLUGIN_TARGET = "sv-skills", f"../external/{EXTERNAL}"
 
 
 def main_checkout(start: Path) -> Path:
@@ -60,19 +66,17 @@ def plan(agent_sync: Path, repo: Path) -> list[tuple[str, str]]:
     if "external/" not in (gi.read_text().split() if gi.exists() else []):
         steps.append(("ignore", "add 'external/' to .gitignore"))
 
-    wanted = sorted(p.name for p in (repo / "skills").iterdir() if (p / "SKILL.md").exists())
     live = agent_sync / "skills"
-    for name in wanted:
-        dest, target = live / name, PREFIX + name
-        if dest.is_symlink() and os.readlink(dest) == target:
-            steps.append(("ok", name))
-        elif dest.exists() or dest.is_symlink():
-            steps.append(("clash", f"{dest} exists and is not our link; left alone"))
-        else:
-            steps.append(("link", f"{name} -> {target}"))
+    dest = live / PLUGIN
+    if dest.is_symlink() and os.readlink(dest) == PLUGIN_TARGET:
+        steps.append(("ok", PLUGIN))
+    elif dest.exists() or dest.is_symlink():
+        steps.append(("clash", f"{dest} exists and is not our link; left alone"))
+    else:
+        steps.append(("link", f"{PLUGIN} -> {PLUGIN_TARGET}"))
     for dest in sorted(live.iterdir()) if live.is_dir() else []:
-        if dest.is_symlink() and os.readlink(dest).startswith(PREFIX) and dest.name not in wanted:
-            steps.append(("unlink", f"{dest.name} (no longer in this library)"))
+        if dest.is_symlink() and os.readlink(dest).startswith(PREFIX):
+            steps.append(("unlink", f"{dest.name} (per-skill link; the plugin link replaces it)"))
     return steps
 
 
@@ -87,8 +91,8 @@ def apply(agent_sync: Path, repo: Path, steps: list[tuple[str, str]]) -> None:
             gi.write_text(text + ("" if text.endswith("\n") or not text else "\n")
                           + "# per-machine links to other repos (supervisor-skills-plus ADR 0021)\nexternal/\n")
         elif action == "link":
-            name = detail.split(" ", 1)[0]
-            (agent_sync / "skills" / name).symlink_to(PREFIX + name)
+            name, target = detail.split(" -> ", 1)
+            (agent_sync / "skills" / name).symlink_to(target)
         elif action == "unlink":
             (agent_sync / "skills" / detail.split(" ", 1)[0]).unlink()
 
@@ -117,11 +121,13 @@ def selftest() -> None:
         (sync / "skills").mkdir(parents=True)
         (sync / "skills" / "other").mkdir()
         (sync / "skills" / "old").symlink_to(PREFIX + "old")
+        (sync / "skills" / "sv-a").symlink_to(PREFIX + "sv-a")
         steps = plan(sync, repo)
-        assert ("unlink", "old (no longer in this library)") in steps, steps
+        assert ("unlink", "old (per-skill link; the plugin link replaces it)") in steps, steps
         apply(sync, repo, steps)
-        assert (sync / "skills" / "sv-a-b" / "SKILL.md").read_text() == "x"
-        assert not (sync / "skills" / "old").is_symlink() and (sync / "skills" / "other").is_dir()
+        assert (sync / "skills" / PLUGIN / "skills" / "sv-a-b" / "SKILL.md").read_text() == "x"
+        assert not (sync / "skills" / "old").is_symlink() and not (sync / "skills" / "sv-a").is_symlink()
+        assert (sync / "skills" / "other").is_dir()
         assert "external/" in (sync / ".gitignore").read_text().split()
         assert {a for a, _ in plan(sync, repo)} == {"ok"}
         # a real folder at external/<name> is a clash, never overwritten

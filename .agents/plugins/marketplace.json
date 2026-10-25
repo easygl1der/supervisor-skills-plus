@@ -1,0 +1,20 @@
+{
+  "name": "supervisor-skills-plus",
+  "interface": {
+    "displayName": "Supervisor Skills Plus"
+  },
+  "plugins": [
+    {
+      "name": "sv-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -10,10 +10,11 @@ linked, not copied, so `git pull` updates every tool. The library is twelve
 ### As a plugin (Claude Code, Cursor)
 
 The repo is a plugin named `sv-skills` (manifests: `plugin.json`,
-`.cursor-plugin/plugin.json`, `.claude-plugin/plugin.json` and
-`.claude-plugin/marketplace.json`). Skill names stay flat (`sv-study`,
-`sv-study-paper`, ...); Claude Code may show them prefixed with the plugin
-name.
+`.cursor-plugin/plugin.json`, `.claude-plugin/plugin.json`,
+`.claude-plugin/marketplace.json`, `.codex-plugin/plugin.json` and
+`.agents/plugins/marketplace.json`). Skill names stay flat (`sv-study`,
+`sv-study-paper`, ...); Claude Code and Codex show them prefixed with the
+plugin name (`sv-skills:sv-study`).
 
 - **Claude Code** (2.1.275+):
   `/plugin install sv-skills --marketplace easygl1der/supervisor-skills-plus`
@@ -22,8 +23,12 @@ name.
 - **Cursor**: Customize > Plugins > import from GitHub, enter
   `https://github.com/easygl1der/supervisor-skills-plus`. Cursor reads
   `.cursor-plugin/plugin.json`.
-- **Codex / GPT**: no plugin import; use the symlink path below
-  (`scripts/install.sh --targets codex`, or `sync_agent_links.py`).
+- **Codex**: `codex plugin marketplace add ~/Projects/supervisor-skills-plus`
+  (or `easygl1der/supervisor-skills-plus`), then
+  `codex plugin add sv-skills@supervisor-skills-plus`. Codex installs a copy;
+  after `git pull` here, run `codex plugin marketplace upgrade` to refresh it.
+  Codex skips skill folders inside a directory that has `.claude-plugin/` or
+  `.cursor-plugin/`, so symlinks into this repo do not load in Codex.
 - Other agents that read Agent Plugins (agent-plugins.org) use the root
   `plugin.json`.
 
@@ -51,12 +56,14 @@ cd ~/agent-sync && git status && git add skills .gitignore && git commit -m "lin
 
 The script keeps one per-machine link that agent-sync ignores,
 `~/agent-sync/external/supervisor-skills-plus` (to this checkout), and one
-committed relative link per skill, `skills/<name> ->
-../external/supervisor-skills-plus/skills/<name>`. The committed links
-resolve on every machine whatever its home directory is. On another
-machine, clone this repo, `git pull` in agent-sync, and run the script with
-`--apply`: the skill links are already committed, so it only adds the
-external link.
+committed relative link to the whole repo, `skills/sv-skills ->
+../external/supervisor-skills-plus`, which Claude Code loads as the plugin
+`sv-skills@skills-dir`. It removes the older per-skill links, which would
+load every skill twice. The committed link resolves on every machine
+whatever its home directory is. On another machine, clone this repo,
+`git pull` in agent-sync, and run the script with `--apply`: the plugin link
+is already committed, so it only adds the external link. Codex still needs
+the Codex plugin install above.
 
 ### Without agent-sync
 
