@@ -3,9 +3,8 @@
 
 agent-sync keeps one live skills tree, `<agent-sync>/skills/`, which
 ~/.codex, ~/.claude and ~/.cursor point at. This script keeps one relative
-link to the whole repo there, which Claude Code loads as the plugin
-`sv-skills@skills-dir` (Codex skips folders with a .claude-plugin/ and uses
-the Codex plugin instead, see INSTALL.md):
+link to the whole repo there, which Claude Code (`sv-skills@skills-dir`) and
+Codex (`sv-skills:*`) both load as a plugin:
 
     <agent-sync>/skills/sv-skills -> ../external/supervisor-skills-plus
 

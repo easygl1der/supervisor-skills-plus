@@ -62,8 +62,9 @@ committed relative link to the whole repo, `skills/sv-skills ->
 load every skill twice. The committed link resolves on every machine
 whatever its home directory is. On another machine, clone this repo,
 `git pull` in agent-sync, and run the script with `--apply`: the plugin link
-is already committed, so it only adds the external link. Codex still needs
-the Codex plugin install above.
+is already committed, so it only adds the external link. Codex loads the
+same link as the plugin `sv-skills:*`, so do not also run the Codex plugin
+install on these machines: every skill would show twice.
 
 ### Without agent-sync
 

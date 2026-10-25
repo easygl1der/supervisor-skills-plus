@@ -13,11 +13,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   with ADR 0021 flat names. INSTALL.md documents Claude, Cursor and Codex.
 - Codex plugin: `.codex-plugin/plugin.json` and a local marketplace at
   `.agents/plugins/marketplace.json` (`codex plugin add
-  sv-skills@supervisor-skills-plus`). Codex skips skills under a folder with
-  `.claude-plugin/`, so the old symlinks never loaded there.
+  sv-skills@supervisor-skills-plus`) for machines without agent-sync. Codex
+  skips skills under a folder with `.claude-plugin/`, so the old per-skill
+  symlinks never loaded there.
 - `scripts/sync_agent_links.py` now keeps one agent-sync link to the repo
-  (`skills/sv-skills`, loaded by Claude Code as a skills-dir plugin) and
-  removes the per-skill links.
+  (`skills/sv-skills`), which Claude Code and Codex both load as the
+  `sv-skills` plugin, and removes the per-skill links.
 
 ### Changed (identity: this library, not an upstream product page)
 - Root docs present the repo as Yihua Yue / `easygl1der`'s `sv-*` skill
